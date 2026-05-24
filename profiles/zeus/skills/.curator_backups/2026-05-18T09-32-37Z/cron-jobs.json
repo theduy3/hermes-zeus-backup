@@ -1,0 +1,55 @@
+{
+  "jobs": [
+    {
+      "id": "e6711b998b07",
+      "name": "Daily Morning Briefing",
+      "prompt": "You are preparing Zeus's Daily Briefing for Duy at 5:15AM PST (13:15 UTC).\n\nFIRST, read Catthew's latest family briefing output from the most recent file in /home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/ to extract household tasks, events, and family items for today.\n\nThen read the latest Daily note from /vault/Daily/ \u2014 find today's date (2026-05-18) and if it doesn't exist, read the most recent one. Extract the task sections from it (Overdue, Due Today, This Week, Next Week, Later/No Date).\n\nThen fetch fresh data: stocks, weather, headlines, horoscope.\n\nKeep it COMPACT \u2014 one screen, no scrolling. Follow this structure:\n\n## 1. HEADER\n\"# \ud83d\udcc5 [Day], [YYYY-MM-DD] \u00b7 W[week] \u00b7 Victoria: [age]\"\nMoon phase icon + name. One relevant quote (\u22641 line).\n\n## 2. FROM CATTHEW\nSummarize Catthew's household briefing in 2-3 bullet points \u2014 today's family events, upcoming items, standing chores/errands.\n\n## 3. TASKS (from Daily note)\n- \u26a0\ufe0f Overdue \u2014 list from the Daily note's Overdue section (max 5)\n- \ud83d\udccc Today \u2014 list from Due Today section\n- \ud83d\udcc5 This Week \u2014 list from This Week section\nUse the same format as the Daily note (wiki-links). Skip Later/No Date.\n\n## 4. STOCKS (compact \u2014 only tickers that moved >2%, plus VIX/TNX)\nFormat as single line per ticker: `TICKER $price (chg%)` \u2014 no table, no columns.\nMax 8 tickers. Skip 52W range, P/E, market cap, target.\n\n## 5. HEADLINES\nMerge Morning Brew + finance into 5-6 one-line bullets. No sources, no dates.\n\n## 6. WEATHER\nSingle compact section \u2014 3 cities \u00d7 today+tomorrow only:\n`City | Today Hi/Lo Cond | Tomorrow Hi/Lo Cond`\n\n## 7. HOROSCOPE\nSagittarius: 1-2 sentences max.\n\n## 8. FOOTER\n\"Generated [HH:MM] \u00b7 Catthew ran at 5AM PST\"\n\nNo earnings section. Tone: tight, informative, scannable.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 13 * * *",
+        "display": "15 13 * * *"
+      },
+      "schedule_display": "15 13 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-13T21:51:54.763482+00:00",
+      "next_run_at": "2026-05-18T13:15:00+00:00",
+      "last_run_at": "2026-05-17T14:07:34.440490+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-05-18T07:25:10.970961+00:00"
+}

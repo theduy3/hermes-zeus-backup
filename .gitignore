@@ -1,0 +1,73 @@
+# === Secrets (NEVER commit) ===
+.env
+.env.*
+auth.json
+auth.lock
+auth/
+*.pem
+*.key
+*.crt
+credentials/
+.git-credentials
+.netrc
+
+# === Runtime state (re-creatable) ===
+*.db
+*.db-wal
+*.db-shm
+*.lock
+*.pid
+state-snapshots/
+checkpoints/
+.update_check
+.hermes_history
+gateway.lock
+gateway.pid
+gateway_state.json
+
+# === Logs / sessions ===
+logs/
+sessions/
+audio_cache/
+image_cache/
+pastes/
+
+# === Caches ===
+cache/
+.cache/
+*_cache.json
+models_dev_cache.json
+ollama_cloud_models_cache.json
+tmp/
+
+# === Binaries (re-installable) ===
+node/
+
+# === Cloned upstream repo (has own .git, 1.5G) ===
+hermes-agent/
+
+# === Cron output (noisy, re-creatable) ===
+cron/output/
+
+# === Syncthing internals ===
+.stfolder/
+.stignore
+*.sync-conflict-*
+*.syncthing.*.tmp
+
+# === Python / Node ===
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Timestamped backups (re-creatable; auth.json.bak held live creds — leak fixed 2026-05-24) ===
+*.bak
+*.bak.*
+*.bak-*
+*.after-sync

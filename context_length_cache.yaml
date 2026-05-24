@@ -1,0 +1,8 @@
+context_lengths:
+  gpt-5.1-codex-mini@https://chatgpt.com/backend-api/codex: 272000
+  gpt-5.4-mini@https://chatgpt.com/backend-api/codex: 272000
+  gpt-5.4-mini@https://chatgpt.com/backend-api/codex/: 272000
+  gpt-5.4-nano@https://chatgpt.com/backend-api/codex: 272000
+  gpt-5.4@https://chatgpt.com/backend-api/codex: 272000
+  gpt-5.5@https://chatgpt.com/backend-api/codex: 272000
+  gpt-5.5@https://chatgpt.com/backend-api/codex/: 272000

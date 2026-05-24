@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/Users/theduy/.hermes/logs/curator/20260518-085840",
+  "last_run_at": "2026-05-18T08:58:40.634930+00:00",
+  "last_run_duration_seconds": 0.518765,
+  "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
+  "last_run_summary_shown_at": "2026-05-18T08:58:40.634930+00:00",
+  "paused": false,
+  "run_count": 2
+}

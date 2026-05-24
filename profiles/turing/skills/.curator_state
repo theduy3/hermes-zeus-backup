@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/profiles/turing/logs/curator/20260518-091844",
+  "last_run_at": "2026-05-18T09:18:44.596145+00:00",
+  "last_run_duration_seconds": 0.96287,
+  "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
+  "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
+  "paused": false,
+  "run_count": 2
+}

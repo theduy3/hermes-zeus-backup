@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260518-084930",
+  "last_run_at": "2026-05-18T08:49:30.221256+00:00",
+  "last_run_duration_seconds": 44.943074,
+  "last_run_summary": "auto: no changes; llm: ## Curator Pass Results\n\nThere is exactly **one** agent-created skill in the collection: `wellness-transformation`. With a single skill, there are no prefix clusters to form, no siblings to merge, and no consolidation opportunities to pursu…",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 2
+}

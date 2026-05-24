@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-05-24T07:03:04.130518",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "8446251233",
+        "name": "theduy",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-5249331607",
+        "name": "Catthew the Butler",
+        "type": "group",
+        "thread_id": null
+      }
+    ],
+    "discord": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "msgraph_webhook": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": [],
+    "yuanbao": [],
+    "google_chat": [],
+    "irc": [],
+    "line": [],
+    "simplex": [],
+    "teams": []
+  }
+}

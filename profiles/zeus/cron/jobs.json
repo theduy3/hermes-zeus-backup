@@ -1,0 +1,156 @@
+{
+  "jobs": [
+    {
+      "id": "e6711b998b07",
+      "name": "Daily Morning Briefing - Info Only",
+      "prompt": "You are preparing Zeus's Daily Morning Briefing \u2014 INFO ONLY for Duy at 6:15AM Eastern during the Quebec/East Coast trip.\n\nThis briefing must NOT include task lists, checkbox tasks, reminders, overdue items, or action lists. Keep it as useful morning information only.\n\nUse current Eastern date (America/Toronto) for \u201ctoday\u201d during the Quebec/East Coast trip. Treat Montreal/Laval/Quebec City appointments as Eastern Time. If the Daily note clearly shows Duy has returned to Pacific Time, flag the timezone switch-back to Hermes Orchestrator. When copying anything from Obsidian/Catthew, strip Obsidian/Markdown markup into clean plaintext: `[[Page]]` -> `Page`; `[[Page|label]]` -> `label`; remove `#tag`, `==highlight==`, `**bold**`, and extra brackets.\n\nFIRST, read Catthew's latest family briefing output from the most recent file in /home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/ and extract only non-task info: family events, appointments, visits, context, and upcoming timing. Do not include chores, grocery lists, or errands unless they are time-sensitive appointments.\n\nThen read the latest Daily note from /vault/Daily/ for today's Pacific date; if today's note doesn't exist, read the most recent one. Extract only calendar/context information, not tasks.\n\nThen fetch fresh data: stocks, weather, headlines, horoscope.\n\nFor headline research, delegate three parallel sub-agent tasks and combine their results into one clean briefing section:\n1. Delegate: top 2 AI/ML stories from the past 24h with source links.\n2. Delegate: top 2 crypto stories from the past 24h with source links.\n3. Delegate: top 2 space exploration stories from the past 24h with source links.\nEach sub-agent should use web/current sources, return exactly 2 concise bullets with links, and avoid old/stale stories. Combine results under clear subsection headers with emoji and source links.\n\nKeep it COMPACT \u2014 one screen if possible, but include the delegated headline section. Follow this structure:\n\n## 1. HEADER\n\"# \ud83d\udcc5 [Day], [YYYY-MM-DD] \u00b7 W[week] \u00b7 Victoria: [age]\"\nMoon phase icon + name. One relevant quote (\u22641 line).\n\n## 2. FAMILY / SCHEDULE CONTEXT\n2-3 bullets max from Catthew + Daily note. Events/timing only; no task/reminder wording.\n\n## 3. STOCKS\nCompact \u2014 only tickers that moved >2%, plus VIX/TNX.\nFormat one line per ticker: `TICKER $price (chg%)`.\nMax 8 tickers. No table.\n\n## 4. HEADLINES\nStart with 2-3 one-line general/finance bullets from Morning Brew + finance. Then add delegated research results as subsections:\n- \ud83e\udd16 AI/ML \u2014 exactly 2 bullets with source links\n- \u20bf Crypto \u2014 exactly 2 bullets with source links\n- \ud83d\ude80 Space \u2014 exactly 2 bullets with source links\nKeep every bullet one line. Include links for delegated stories.\n\n## 5. WEATHER\nSingle compact section \u2014 3 cities \u00d7 today+tomorrow only:\n`City | Today Hi/Lo Cond | Tomorrow Hi/Lo Cond`\n\n## 6. HOROSCOPE\nSagittarius: 1-2 sentences max.\n\n## 7. FOOTER\n\"Generated [HH:MM] \u00b7 Info only\"\n\nNo earnings section. No task section. No checkboxes. Tone: tight, informative, scannable.\n",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 3 * * *",
+        "display": "15 3 * * *"
+      },
+      "schedule_display": "15 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 10
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-13T21:51:54.763482+00:00",
+      "next_run_at": "2026-05-24T03:15:00-07:00",
+      "last_run_at": "2026-05-23T03:17:44.040207-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "memory",
+        "skills",
+        "terminal",
+        "file",
+        "delegation"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "a4c95c76c429",
+      "name": "Weekly Finance-Investment Knowledge Trade",
+      "prompt": "You are Zeus coordinating the weekly knowledge trade between Duy's Finance Advisor profile (`finance`) and Investment Strategist profile (`charles`). This job is intended for every Saturday at 11:00 PM Pacific.\n\nDo not schedule any new cron jobs.\n\nGoal: have Finance Advisor and Investment Strategist exchange useful context, then send Duy a compact summary.\n\nSteps:\n1. Ask Finance Advisor for a weekly finance/admin summary by running a one-shot Hermes command via terminal:\n   `hermes --profile finance chat -q \"Weekly knowledge trade for Duy. Summarize finance/admin context the Investment Strategist should know: upcoming payments, credit card actions, tax/debt/insurance deadlines, cash constraints, risk limits, and any finance tasks due soon. Keep it concise, factual, no investment advice.\"`\n2. Ask Investment Strategist for a weekly investment summary by running:\n   `hermes --profile charles chat -q \"Weekly knowledge trade for Duy. Summarize investment/portfolio context the Finance Advisor should know: portfolio allocation concerns, planned trades/rebalances, cash needs, risk exposures, watchlist items, and upcoming investment decisions. Keep it concise. Include disclaimer only if giving analysis.\"`\n3. Send Finance Advisor's summary to Investment Strategist with:\n   `hermes --profile charles chat -q \"Finance Advisor weekly context for Duy: [PASTE FINANCE SUMMARY]. Incorporate this into your context for future portfolio/investment guidance. Reply with only key implications for investment planning.\"`\n4. Send Investment Strategist's summary to Finance Advisor with:\n   `hermes --profile finance chat -q \"Investment Strategist weekly context for Duy: [PASTE INVESTMENT SUMMARY]. Incorporate this into your context for future finance/admin reminders. Reply with only key implications for cashflow, deadlines, or admin tasks.\"`\n5. Final message to Duy: compact bullets only:\n   - `\ud83d\udcb0 Finance shared:` top 2-3 items\n   - `\ud83d\udcc8 Investment shared:` top 2-3 items\n   - `\ud83d\udd01 Cross-agent implications:` top 2-3 action-relevant implications\n   - `\u26a0\ufe0f Needs Duy:` only if a decision/action is needed\n\nKeep final under 12 bullets. No tables. No raw logs.",
+      "skills": [
+        "cron-job-patterns"
+      ],
+      "skill": "cron-job-patterns",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * 6",
+        "display": "0 23 * * 6"
+      },
+      "schedule_display": "0 23 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-19T23:42:10.623487-07:00",
+      "next_run_at": "2026-05-30T23:00:00-07:00",
+      "last_run_at": "2026-05-23T23:04:11.097185-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Forbidden: user is deactivated",
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "memory",
+        "skills"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "b83af24484d0",
+      "name": "Daily Morning Briefing - Tasks Only",
+      "prompt": "You are preparing Zeus's Daily Morning Briefing \u2014 TASKS ONLY for Duy at 6:17AM Eastern during the Quebec/East Coast trip.\n\nThis message must contain only actionable tasks/reminders. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse current Eastern date (America/Toronto) for \u201ctoday\u201d during the Quebec/East Coast trip. Treat Montreal/Laval/Quebec City appointments as Eastern Time. Keep all task text readable: strip Obsidian/Markdown markup and output clean plaintext. Examples: `[[Victoria music class]]` -> `Victoria music class`; `[[Page|label]]` -> `label`; remove `#tag`, `==highlight==`, `**bold**`, and extra brackets.\n\nOutput task/reminder items as Telegram-readable checkbox lines using `\u2610 Task text` \u2014 not raw Obsidian `- [ ]` syntax.\n\nSteps:\n1. Read Catthew's latest family briefing output from the most recent file in /home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/ and extract household/family tasks, chores, errands, groceries, and time-sensitive reminders for today/upcoming.\n2. Read the latest Daily note from /vault/Daily/ for today's Pacific date; if today's note doesn't exist, read the most recent one. Extract task sections: Overdue, Due Today, This Week. Skip Later/No Date.\n3. Travel/timezone trigger: while reading Catthew + Daily note, detect any upcoming/current trip to Quebec, Montreal, Laval, Quebec City, East Coast, Eastern Time, YUL/YQB, or related flight/hotel/travel wording. If detected, trigger Hermes Orchestrator (default profile) to switch trip-sensitive scheduling/briefings from Pacific to Eastern Time for the trip window, and to switch back after return if a return date is visible. If Duy appears back in Vancouver/BC/Pacific with no active Quebec/East Coast trip context, trigger Hermes Orchestrator to switch Zeus briefing schedules and timezone context back to Pacific Time. Use terminal:\n   `hermes --profile default chat -q \"Duy has an upcoming/current Quebec/East Coast trip detected: [clean trip details + dates if known]. Please update Hermes Orchestrator timezone context for trip-sensitive scheduling/briefings to Eastern Time during the trip, and plan switch-back after return. Keep Duy informed only if action is needed.\"`\n   Do this only once per distinct detected trip.\n4. Check Finance Advisor tasks/reminders: read /home/hermes/.hermes/profiles/finance/cron/jobs.json and include enabled scheduled finance jobs whose next_run_at/run_at date is today in Pacific time, plus overdue enabled one-shot jobs that have not completed.\n5. Check Investment Strategist tasks/reminders: read /home/hermes/.hermes/profiles/charles/cron/jobs.json if it exists and include enabled scheduled investment/portfolio jobs due today in Pacific time, plus overdue enabled one-shot jobs that have not completed. If file missing/no due items, omit.\n\nFormat exactly:\n# \u2705 Tasks \u2014 [Day], [YYYY-MM-DD]\n\n\u26a0\ufe0f Overdue\n\u2610 item\n\n\ud83d\udccc Today\n\u2610 item\n\n\ud83c\udfe0 Family / Catthew\n\u2610 item\n\n\ud83d\udcb0 Finance Today\n\u2610 item\n\n\ud83d\udcc8 Investment Today\n\u2610 item\n\n\ud83d\udd52 Timezone\n\u2610 item\n\n\ud83d\udcc5 This Week\n\u2610 item\n\nRules:\n- Omit any section with no items.\n- Every item line must start with `\u2610 `.\n- Keep under one screen if possible; max 5 Overdue, max 8 Today, max 5 This Week.\n- Clean plaintext only; no raw Obsidian brackets/wiki-links.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "17 3 * * *",
+        "display": "17 3 * * *"
+      },
+      "schedule_display": "17 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:28:03.704476-07:00",
+      "next_run_at": "2026-05-24T03:17:00-07:00",
+      "last_run_at": "2026-05-23T03:20:52.802348-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-05-23T23:04:11.098007-07:00"
+}

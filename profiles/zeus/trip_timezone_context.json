@@ -1,0 +1,22 @@
+{
+  "active": true,
+  "created_at": "2026-05-21T13:21:11Z",
+  "trip": "Quebec/East Coast detected from Daily 2026-05-21: Laval/QC and Quebec/QC weather plus salon visit at 6508 Beaubien Est Montreal at 3:00PM",
+  "timezone_during_trip": "America/Toronto",
+  "return_date": null,
+  "jobs_changed": [
+    {
+      "id": "e6711b998b07",
+      "name": "Daily Morning Briefing - Info Only",
+      "original_schedule": "15 6 * * *",
+      "trip_schedule": "15 3 * * *"
+    },
+    {
+      "id": "b83af24484d0",
+      "name": "Daily Morning Briefing - Tasks Only",
+      "original_schedule": "17 6 * * *",
+      "trip_schedule": "17 3 * * *"
+    }
+  ],
+  "switch_back_plan": "When Daily/Catthew context shows Duy returned to Vancouver/BC/Pacific or a return date has passed, restore original schedules, change prompts back to Pacific date/time, set active=false, and remove/replace the temporary memory entry."
+}

@@ -1,0 +1,425 @@
+{
+  "jobs": [
+    {
+      "id": "092874f2406b",
+      "name": "Thor - Weekly Trip Schedule Check",
+      "prompt": "The user (theduy) travels to Quebec and Montreal once a month for about a week for business. Ask them: is there any trip coming up this week or next week? If yes, adapt the weekly training/nutrition plan to travel mode: hotel room bodyweight workouts (3 days), restaurant-based nutrition (protein-first, never-miss-twice rule), and pack list reminder (whey, resistance band, lacrosse ball). If no trip, just a brief check-in. Keep it short \u2014 they're on mobile. Also remind them: the full travel protocol is ready whenever they need it.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 1",
+        "display": "0 16 * * 1"
+      },
+      "schedule_display": "0 16 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T12:38:19.751325+00:00",
+      "next_run_at": "2026-05-18T16:00:00+00:00",
+      "last_run_at": "2026-05-11T16:05:42.954751+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "caabc02dabc9",
+      "name": "\ud83d\udca7 Water Reminder - Morning",
+      "prompt": "Remind theduy to drink water. Short, encouraging. Rotate between: \"\ud83d\udca7 500ml \u2014 you're at 1 of 6 today\", \"Water break. 1 glass now.\", \"Hydration check. Sip something.\" Keep it brief \u2014 mobile friendly. Also, if they're traveling adapt tone to travel mode.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * *",
+        "display": "0 16 * * *"
+      },
+      "schedule_display": "0 16 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T12:53:18.568357+00:00",
+      "next_run_at": "2026-05-18T16:00:00+00:00",
+      "last_run_at": "2026-05-17T16:01:02.289269+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "b76341d71354",
+      "name": "\ud83d\udca7 Water Reminder - Midday",
+      "prompt": "Remind theduy to drink water. Midday check-in. Keep it brief. Rotate: \"Midday hydration check \ud83d\udca7\", \"Another glass. Your body's working.\", \"Water + lunch = winning.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "display": "0 19 * * *"
+      },
+      "schedule_display": "0 19 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T12:53:28.759162+00:00",
+      "next_run_at": "2026-05-18T19:00:00+00:00",
+      "last_run_at": "2026-05-17T19:05:47.255308+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "2e5b3af69398",
+      "name": "\ud83d\udca7 Water Reminder - Afternoon",
+      "prompt": "Remind theduy to drink water. Afternoon reminder. Brief: \"Afternoon water check. Slow sips.\", \"Don't forget water. Your gut needs it.\", \"\ud83d\udca7 Glass down. Keep going.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "display": "0 22 * * *"
+      },
+      "schedule_display": "0 22 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T12:53:36.036225+00:00",
+      "next_run_at": "2026-05-18T22:00:00+00:00",
+      "last_run_at": "2026-05-17T22:04:56.719812+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "0dd08e4e07da",
+      "name": "\ud83d\udca7 Water Reminder - Evening",
+      "prompt": "Remind theduy to drink water. Evening. Brief: \"Last water push. Finish strong.\", \"Evening hydration. Not too much before bed.\", \"\ud83d\udca7 One more glass. Your body earned it.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 1 * * *",
+        "display": "0 1 * * *"
+      },
+      "schedule_display": "0 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T12:53:43.651359+00:00",
+      "next_run_at": "2026-05-19T01:00:00+00:00",
+      "last_run_at": "2026-05-18T01:01:10.461718+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "b7db2ca9de46",
+      "name": "\ud83d\udec1 Sitz Bath - Morning",
+      "prompt": "Remind theduy to do a sitz bath. 10-15 min warm water. Brief: \"\ud83d\udec1 Sitz bath time. 10-15 min warm water. Let it heal.\", \"Morning sitz bath. Relax the area, increase blood flow.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * *",
+        "display": "0 17 * * *"
+      },
+      "schedule_display": "0 17 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T13:02:43.159219+00:00",
+      "next_run_at": "2026-05-18T17:00:00+00:00",
+      "last_run_at": "2026-05-17T17:02:47.363521+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "7c74587c2e68",
+      "name": "\ud83d\udec1 Sitz Bath - Evening",
+      "prompt": "Remind theduy to do a sitz bath. Evening session. Brief: \"\ud83d\udec1 Evening sitz bath. Last one today.\", \"10 min warm water. End the day right.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T13:02:50.382696+00:00",
+      "next_run_at": "2026-05-19T03:00:00+00:00",
+      "last_run_at": "2026-05-18T03:00:29.069083+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "2616b50dddac",
+      "name": "\ud83e\uddd8 Meditation - Morning",
+      "prompt": "Remind theduy to meditate. Current phase: starting at 20 min, gradually working up to 60 min over time. Brief and grounding. Rotate between: \"\ud83e\uddd8 20 minutes. Just breathe.\", \"Morning sit. The day can wait.\", \"Cushion time. 20 min.\", \"Stillness first. Everything else second.\" Remind them: phone away, timer set, no goal except showing up.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 14 * * *",
+        "display": "0 14 * * *"
+      },
+      "schedule_display": "0 14 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T13:06:21.288962+00:00",
+      "next_run_at": "2026-05-18T14:00:00+00:00",
+      "last_run_at": "2026-05-17T14:00:42.567144+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "9a296fe6c2aa",
+      "name": "\ud83d\udccf Weekly Measurements",
+      "prompt": "Sunday check-in. Ask theduy for his measurements and weekly metrics. Keep it brief:\n\nCurrent focus metrics:\n- Waist at navel (primary)\n- Hips at widest point\n- Chest at nipple line\n- Arms flexed at midpoint\n\nAlso ask for:\n- Weekly average weight\n- Sleep quality 1-5\n- Stress 1-10\n- Protein \u2265 150g: how many days this week\n- Workouts completed: X/3 gym, X/3 home\n\nCompare to previous week if you have context. Celebrate progress, flag declines neutrally. No judgment \u2014 data, not moralizing.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * 0",
+        "display": "0 17 * * 0"
+      },
+      "schedule_display": "0 17 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T18:51:13.738516+00:00",
+      "next_run_at": "2026-05-24T17:00:00+00:00",
+      "last_run_at": "2026-05-17T17:04:31.881997+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "4ab656b26552",
+      "name": "\ud83e\udd64 Protein Drink - 12PM",
+      "prompt": "Remind theduy to have his protein drink. Keep it brief and encouraging. Rotate between messages like: \"\ud83e\udd64 Protein time \u2014 50g to crush. Go!\", \"10AM protein check-in. Get those 50g in. \ud83d\udcaa\", \"Protein shake o'clock. 50g toward your 150g target.\", \"Don't skip the protein window. 50g now. \ud83e\udd64\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "display": "0 19 * * *"
+      },
+      "schedule_display": "0 19 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 5
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-13T16:54:07.561293+00:00",
+      "next_run_at": "2026-05-18T19:00:00+00:00",
+      "last_run_at": "2026-05-17T19:00:46.330710+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-05-18T03:00:29.069712+00:00"
+}

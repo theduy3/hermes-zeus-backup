@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-05-24T07:02:27.418483",
+  "platforms": {
+    "discord": [
+      {
+        "id": "1503992934956007537",
+        "name": "general",
+        "guild": "Ongles Rivieres",
+        "type": "channel"
+      }
+    ],
+    "telegram": [
+      {
+        "id": "8446251233",
+        "name": "theduy",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "msgraph_webhook": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": [],
+    "yuanbao": [],
+    "google_chat": [],
+    "irc": [],
+    "line": [],
+    "simplex": [],
+    "teams": []
+  }
+}

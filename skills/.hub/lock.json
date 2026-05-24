@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "installed": {
+    "telegram": {
+      "source": "clawhub",
+      "identifier": "telegram",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:986329c2dae22fa3",
+      "install_path": "telegram",
+      "files": [
+        "references/telegram-bot-api.md",
+        "references/telegram-commands-playbook.md",
+        "references/telegram-request-templates.md",
+        "references/telegram-update-routing.md",
+        "SKILL.md",
+        "_meta.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-04-12T05:42:20.270143+00:00",
+      "updated_at": "2026-04-12T05:42:20.270170+00:00"
+    }
+  }
+}

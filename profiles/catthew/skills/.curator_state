@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/profiles/catthew/logs/curator/20260518-092247",
+  "last_run_at": "2026-05-18T09:22:47.456807+00:00",
+  "last_run_duration_seconds": 0.99941,
+  "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
+  "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
+  "paused": false,
+  "run_count": 2
+}

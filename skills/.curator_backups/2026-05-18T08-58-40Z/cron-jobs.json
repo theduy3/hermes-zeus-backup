@@ -1,0 +1,209 @@
+{
+  "jobs": [
+    {
+      "id": "e83470683a90",
+      "name": "daily-hermes-health-check",
+      "prompt": "Run 'hermes status --all' and 'hermes doctor'. Summarize any warnings, failed services, missing credentials, or broken gateways in 5 bullets max. If everything looks healthy, say so briefly.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 45
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T01:40:25.907256-04:00",
+      "next_run_at": "2026-05-18T09:00:00-07:00",
+      "last_run_at": "2026-05-17T09:01:29.693548-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Unauthorized"
+    },
+    {
+      "id": "c9c38ab77915",
+      "name": "weekday-hermes-recap",
+      "prompt": "Review today's Hermes session history and recent activity. Return: 1) up to 8 bullets on what got done today, 2) any failures or blockers, 3) the top 3 next actions for tomorrow. Keep it concise.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 1-5",
+        "display": "0 18 * * 1-5"
+      },
+      "schedule_display": "0 18 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 31
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:39:10.585624-04:00",
+      "next_run_at": "2026-05-18T18:00:00-07:00",
+      "last_run_at": "2026-05-15T18:04:16.822864-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Unauthorized"
+    },
+    {
+      "id": "8f310c8f4baf",
+      "name": "weekly-hermes-ops-review",
+      "prompt": "Audit Hermes operational health for the week: gateways, MCP servers, cron jobs, and obvious configuration drift. Return a concise weekly ops report with only action-worthy findings.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 9 * * 1",
+        "display": "15 9 * * 1"
+      },
+      "schedule_display": "15 9 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 6
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:39:10.805996-04:00",
+      "next_run_at": "2026-05-18T09:15:00+00:00",
+      "last_run_at": "2026-05-11T16:21:09.908407+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": null
+    },
+    {
+      "id": "67d44bd30291",
+      "name": "weekday-hermes-vault-summary",
+      "prompt": "Write a daily Hermes operations summary note to the local container (NOT the read-only vault).\n\nRequirements:\n- Target path: /home/hermes/.hermes/daily-summaries/\n- Create parent directory if needed\n- Create or overwrite today's note at: /home/hermes/.hermes/daily-summaries/Hermes Daily Summary YYYY-MM-DD.md (use today's local date)\n- Before writing, check that the path is writable. If it cannot be created/written due to permissions, report the exact error and do not claim success.\n- The note must be valid Obsidian markdown with frontmatter:\n  tags: [hermes, daily, operations, automation]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  sources:\n    - \"[[Hermes Agent Setup and Operations]]\"\n    - \"[[Hermes Operations Dashboard]]\"\n  wiki_status: complete\n- Content sections:\n  1. Summary\n  2. What Ran Today\n  3. Health Signals\n  4. Next Actions\n  5. Related Notes\n- Use concise bullets.\n- Base the note on current live state by checking Hermes status, doctor, cron list, mcp list, and gateway status.\n- After writing the note, verify it by reading the first few lines, then return a short confirmation including the file path written.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 18 * * 1-5",
+        "display": "10 18 * * 1-5"
+      },
+      "schedule_display": "10 18 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 32
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:57:22.586188-04:00",
+      "next_run_at": "2026-05-18T18:10:00+00:00",
+      "last_run_at": "2026-05-15T18:14:25.045239+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": null
+    },
+    {
+      "id": "067ad023e2d9",
+      "name": "ensure-telegram-profile-gateways",
+      "prompt": "Check Hermes Telegram profile gateways for profiles maily, charlesbourg, 3r, and ss on this host. Use terminal commands to inspect `hermes -p <profile> gateway status` for each. For any profile that is not running, start it with a tracked background process using `hermes -p <profile> gateway run`. After starting any missing gateways, verify status again and summarize which were already running vs restarted. Do not create or modify any additional cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 2,
+        "display": "every 2m"
+      },
+      "schedule_display": "every 2m",
+      "repeat": {
+        "times": null,
+        "completed": 12022
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-24T03:31:55.186592+00:00",
+      "next_run_at": "2026-05-18T01:59:40.544730-07:00",
+      "last_run_at": "2026-05-18T01:57:40.544730-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null
+    },
+    {
+      "id": "12e5ce30563d",
+      "name": "nightly-hermes-github-backup",
+      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync \u2014 push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n\u2500\u2500 SELF-CHECK: IS IT MIDNIGHT CENTRAL? \u2500\u2500\n\nThis cron fires at 05:00 UTC. During CDT (UTC-5, summer), midnight Central = 05:00 UTC \u2014 fire immediately. During CST (UTC-6, winter), midnight Central = 06:00 UTC \u2014 we're one hour early. Do this check first:\n\n1. Determine the current hour in America/Chicago timezone. Use `python3` if available, otherwise `TZ=America/Chicago date +%H`.\n2. If the hour is 0 (midnight) \u2192 proceed to the sync steps below.\n3. If the hour is 23 (11pm Central \u2014 we're an hour early during CST) \u2192 sleep 3600 seconds (1 hour), then proceed.\n4. For any other hour, exit silently with a note that the schedule may need adjustment.\n\n\u2500\u2500 SYNC STEPS \u2500\u2500\n\nOnce midnight Central is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) \u2014 must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message \u2014 include a timestamp (America/Chicago) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n\u2500\u2500 FAILURE HANDLING \u2500\u2500\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n\u2500\u2500 IMPORTANT \u2500\u2500\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` \u2014 if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 5 * * *",
+        "display": "0 5 * * *"
+      },
+      "schedule_display": "0 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 8
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T09:23:56.400293+00:00",
+      "next_run_at": "2026-05-18T05:00:00-07:00",
+      "last_run_at": "2026-05-17T05:55:01.280092-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Unauthorized",
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-05-18T01:57:40.545028-07:00"
+}
