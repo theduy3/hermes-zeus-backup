@@ -46,6 +46,17 @@ will fail with "Permission denied." **Workaround:** archive ingested source file
 `Notes/` instead (with `type: article|reflection` and `ingested: YYYY-MM-DD` in
 frontmatter). Note the `Sources/` blockage in the final summary.
 
+When using this workaround, prevent repeat ingestion by either moving the Inbox source
+out of `Inbox/` if allowed, or patching only its frontmatter to add `ingested: YYYY-MM-DD`.
+Keep the original body unchanged. A reliable pattern is:
+1. Create/update the wiki page(s) in `Notes/`.
+2. Create a source archive page in `Notes/` using a collision-safe title such as
+   `<Source Title> Source.md`, with `tags: [source]`, `type`, `source`, `created`, and
+   `ingested` frontmatter plus a `## Pages Updated` section.
+3. Patch the original Inbox file's frontmatter with the same normalized source metadata
+   and `ingested: YYYY-MM-DD` so the Step 1 filter skips it next run.
+4. Mention in the final summary that archival used the Notes fallback instead of Sources/.
+
 ### Infrastructure files may be root-owned
 `System/wiki-index.md`, `System/wiki-log.md`, and several `MOCs/*.md` files can be
 owned by `root` with restrictive permissions (`600` or `644`). When this happens:
@@ -56,9 +67,9 @@ owned by `root` with restrictive permissions (`600` or `644`). When this happens
 
 **Detection:** run `ls -la /vault/System/` and `ls -la /vault/MOCs/` early in the run.
 If any infrastructure files are `root root`, note which ones. `search_files` and
-- If any infrastructure files are `root root`, note which ones. `search_files` and `search_files(target='files')` still work for discovery.
-- See `references/root-owned-infrastructure.md` for exact error signatures, detection steps, and the required `chown` fix command.
-required `chown` fix command.
+`search_files(target='files')` still work for discovery. See
+`references/root-owned-infrastructure.md` for exact error signatures, detection steps,
+and the required `chown` fix command.
 
 **Adaptation:** when infrastructure files are root-owned, skip Steps 3 (wiki-index,
 wiki-log) and Step 2d (MOC updates). Report all blocked files in the summary with the

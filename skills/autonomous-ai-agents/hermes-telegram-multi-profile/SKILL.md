@@ -63,6 +63,8 @@ Use this when a user wants separate Hermes Telegram bots for different companies
 
 17. **multi-agent-context plugin can point at `/root` in a non-root container.** If default gateway logs show `multi-agent-context: [tg] DB read/write failed: unable to open database file`, inspect the plugin's Telegram DB default or set `MULTI_AGENT_TG_DB_PATH=/home/hermes/.hermes/data/multi_agent_tg_shared.db`. Ensure the parent directory exists and is writable, then restart the gateway. A robust plugin fix is to derive the default path from `os.path.expanduser("~")` and `os.makedirs(parent, exist_ok=True)` before `sqlite3.connect()`.
 
+18. **Profile model auth is separate from gateway/platform health.** `hermes profile list` and `hermes gateway status` can show every profile running while `hermes -p <profile> chat -q ...` fails because that profile's `auth.json` still contains a stale or rate-limited OpenAI Codex credential. When a known-good credential exists in another profile, copy the known-good `auth.json` into each profile with timestamped backups, then verify with both `hermes -p <profile> auth list openai-codex` and an actual `hermes -p <profile> chat -Q -q "Reply exactly: OK-<profile>"` smoke test. Full recipe: `references/profile-codex-auth-sync.md`.
+
 ## Recommended macOS workflow
 
 ### 1. Create profiles

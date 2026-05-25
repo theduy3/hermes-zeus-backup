@@ -137,10 +137,6 @@
       1778565357580488582,
       5285
     ],
-    "devops/cron-job-patterns/SKILL.md": [
-      1779329488178970982,
-      4728
-    ],
     "devops/hermes-github-backup-restore/SKILL.md": [
       1778645250053587590,
       3639
@@ -322,8 +318,8 @@
       8996
     ],
     "note-taking/obsidian/SKILL.md": [
-      1779445543549641618,
-      10893
+      1779324643057586281,
+      10003
     ],
     "productivity/airtable/SKILL.md": [
       1778490391621044058,
@@ -1116,19 +1112,6 @@
         "macos",
         "windows"
       ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "cron-job-patterns",
-      "category": "devops",
-      "frontmatter_name": "cron-job-patterns",
-      "description": "Patterns for setting up cron jobs in Hermes — timezone ha...",
-      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

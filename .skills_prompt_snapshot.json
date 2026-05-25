@@ -42,8 +42,8 @@
       6010
     ],
     "autonomous-ai-agents/hermes-telegram-multi-profile/SKILL.md": [
-      1779381715664956521,
-      27045
+      1779650433538985432,
+      27683
     ],
     "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
       1779252798243558402,
@@ -52,10 +52,6 @@
     "autonomous-ai-agents/opencode/SKILL.md": [
       1778565357577168485,
       7259
-    ],
-    "autonomous-ai-agents/paperclip-company-setup/SKILL.md": [
-      1779491230160957730,
-      15448
     ],
     "creative/architecture-diagram/SKILL.md": [
       1778565357577307152,
@@ -144,6 +140,10 @@
     "devops/hermes-github-backup-restore/SKILL.md": [
       1778821438285230488,
       8512
+    ],
+    "devops/hermes-operations-troubleshooting/SKILL.md": [
+      1779642939058341442,
+      4597
     ],
     "devops/kanban-orchestrator/SKILL.md": [
       1778644994278224367,
@@ -458,16 +458,16 @@
       2462
     ],
     "tonight/SKILL.md": [
-      1779343405819028360,
-      2144
+      1779671038492787097,
+      2918
     ],
     "wiki-ingest/SKILL.md": [
-      1779397429717662743,
-      4756
+      1779634985520598146,
+      5403
     ],
     "wiki-lint/SKILL.md": [
-      1779491629410434960,
-      3450
+      1779613490800418709,
+      3802
     ],
     "yuanbao/SKILL.md": [
       1778490391625044033,
@@ -771,19 +771,6 @@
         "macos",
         "windows"
       ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "paperclip-company-setup",
-      "category": "autonomous-ai-agents",
-      "frontmatter_name": "paperclip-company-setup",
-      "description": "Set up Paperclip companies as portable markdown packages,...",
-      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -1153,6 +1140,19 @@
       "category": "devops",
       "frontmatter_name": "hermes-github-backup-restore",
       "description": "Restore Hermes Agent from a GitHub backup after VPS corru...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-operations-troubleshooting",
+      "category": "devops",
+      "frontmatter_name": "hermes-operations-troubleshooting",
+      "description": "Troubleshoot Hermes operational issues in live deployment...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

@@ -113,6 +113,7 @@ The user only wants food, water, measurements, and activity data recorded when t
 - Cron job water/sitz bath/meditation pings are **nudges**, not tracked events. Don't record them as intake.
 - If the user says "Log my morning breakfast" but already described it earlier in the conversation, don't re-ask for details — use what was already provided.
 - When logging, include time, item, and estimated protein. Keep a running daily total.
+- For voice-message food/water logs, first echo a clear **"What I heard"** list before or alongside totals so the user can catch transcription errors. If any phrase is ambiguous (e.g., "three 50 grams" could mean 350g or 3×50g), state the interpretation explicitly in the assumptions.
 
 ### Log File Convention
 
@@ -201,3 +202,4 @@ One meal per week, not one day. Rules:
 - **Planks are home-only** unless the user explicitly wants them in the gym
 - When a user requests a "today plan," give only that day's schedule — not the full week
 - **Don't re-ask for information already provided.** If the user says "I already gave it to you" or "look back at what I said," scan the conversation before asking again. This wastes patience.
+- **Voice logs need a transcript echo.** Before finalizing a voice-message intake log, write a concise "What I heard" list of foods/water and any assumptions; do not only give totals. This is especially important for speech-to-text ambiguities around quantities.

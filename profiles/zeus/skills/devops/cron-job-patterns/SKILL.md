@@ -63,11 +63,13 @@ When chaining Job A → Job B:
 2. Job B runs 15 min later and reads A's output
 3. Gap is intentional — ensures A's output file exists before B tries to read it
 
-For morning-briefing prompts that include Obsidian tasks, explicitly require clean, user-readable output:
+For briefing prompts that include Obsidian or cross-profile tasks, explicitly require clean, user-readable output:
 - Strip wiki-link brackets: `[[Page]]` → `Page`, `[[Page|label]]` → `label`
 - Strip markdown/Obsidian markup such as `#tags`, `==highlight==`, and bold/italic markers
 - Do not preserve raw brackets or internal note syntax in Telegram briefings; legibility beats note fidelity
 - If the user wants task/reminder items as checkboxes, use Telegram-readable checkbox lines like `☐ Task text`; do **not** emit raw Obsidian `- [ ]` syntax in Telegram unless the destination is an actual vault note
+- For evening task-prep/checklist jobs, number every actionable checkbox globally with a bracket ID at the end of the line: `☐ Task text [1]`, `☐ Task text [2]`. Do not restart numbering by section. This lets Duy reply quickly with completed numbers like `done 1 3`.
+- Filter out routine daily/baseline reminders from specialist profiles; they are not tasks. Include only concrete one-off actions, deadlines, appointments, bills, errands, decisions, or exceptions/escalations. For Thor/wellness especially, exclude ordinary hydration, daily meditation, sitz bath, protein target, sleep routine, and generic exercise unless tied to a special situation, appointment, travel adjustment, symptom escalation, or explicit user request.
 
 ### Split Morning Briefings
 
@@ -81,10 +83,26 @@ Use `enabled_toolsets` to restrict tools per job:
 - `["web", "memory", "skills", "terminal", "file"]` - typical for briefing-type jobs
 - Fewer tools = fewer input tokens per run
 
+## Testing Cron Jobs Safely
+
+When the user asks to test a cron job immediately:
+
+1. Use `cronjob(action="run", job_id=...)` or `hermes --profile <profile> cron run <job_id>` to queue it for the next scheduler tick.
+2. Verify with `cronjob(action="list")` or `hermes --profile <profile> cron list`; `next_run_at` should move to an immediate timestamp.
+3. Wait for the scheduler tick or run `hermes --profile <profile> cron tick` only when no other tick is already running.
+4. Confirm completion by checking both:
+   - `last_run_at` / `last_status` changed for the job, and
+   - a new file appeared under `~/.hermes/profiles/<profile>/cron/output/<job_id>/`.
+5. If `next_run_at` stays in the past while `.tick.lock` is fresh and specialist subprocesses are still running, the job is in progress — wait and inspect processes/logs. Do **not** remove `.tick.lock` unless it is clearly stale and the user explicitly approves clearing it.
+
+For cross-profile aggregation jobs, avoid unnecessary nested `hermes --profile ... chat -q` calls unless the job truly needs live reasoning from those profiles; reading their `cron/jobs.json` is faster and less likely to exceed the scheduler window.
+
 ## Pitfalls
 
 - **Cron prompts must be self-contained** — no conversation context, no memory of previous turns
 - **Cross-profile context requires filesystem** — context_from is single-profile only
 - **Always `cronjob action=list` before remove/update** — never guess job IDs
 - **State file is the source of truth** — for non-current profiles, edit their jobs.json directly
+- **Cron `run` queues for next tick, it does not synchronously finish** — verify `last_run_at`, output files, and delivery status before telling the user the test succeeded
+- **Do not clear `.tick.lock` casually** — a fresh lock can mean the scheduler is actively running the job; only clear stale locks with explicit user approval
 - **Can't use `clarify` in cron** — make reasonable default choices; the job runs autonomously

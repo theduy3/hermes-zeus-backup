@@ -1,9 +1,8 @@
 model:
-  default: deepseek-v4-pro
-  provider: deepseek
-  auxiliary: deepseek-v4-pro
+  default: gpt-5.5
+  provider: openai-codex
+  auxiliary: gpt-5.5
   max_output_tokens: 8192
-  base_url: https://api.deepseek.com/v1
 providers: {}
 fallback_providers: '[]'
 credential_pool_strategies:

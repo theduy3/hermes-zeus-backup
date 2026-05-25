@@ -181,9 +181,9 @@ auxiliary:
     timeout: 120
     extra_body: {}
   session_search:
-    provider: deepseek
-    model: deepseek-v4-pro
-    base_url: https://api.deepseek.com/v1
+    provider: auto
+    model: ''
+    base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}

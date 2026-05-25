@@ -1,6 +1,6 @@
 For Obsidian, the user wants all newly created notes to go to /Users/theduy/theduyvault/Inbox by default.
 §
-User wants tasks created in Obsidian tasks, not Apple Reminders; task items should be written in checkbox format.
+Tasks: Obsidian uses `- [ ] Task`; chat confirmations use `☐ Task (1)` numbering; not Apple Reminders.
 §
 User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
 §

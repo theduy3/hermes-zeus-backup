@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T07:02:27.143956",
+  "updated_at": "2026-05-25T04:59:31.587701",
   "platforms": {
     "discord": [
       {
@@ -37,6 +37,7 @@
     "google_chat": [],
     "irc": [],
     "line": [],
+    "ntfy": [],
     "simplex": [],
     "teams": []
   }

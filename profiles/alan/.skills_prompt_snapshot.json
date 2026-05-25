@@ -34,8 +34,8 @@
       4333
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1778490391613044108,
-      45630
+      1779342583620223660,
+      46167
     ],
     "autonomous-ai-agents/hermes-discord-local-setup/SKILL.md": [
       1778644994273579807,
@@ -44,6 +44,10 @@
     "autonomous-ai-agents/hermes-telegram-multi-profile/SKILL.md": [
       1778644994273736433,
       11109
+    ],
+    "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
+      1779252798243558402,
+      12774
     ],
     "autonomous-ai-agents/opencode/SKILL.md": [
       1778565357577168485,
@@ -61,6 +65,10 @@
       1778565357577592154,
       14864
     ],
+    "creative/baoyu-article-illustrator/SKILL.md": [
+      1779252798243558402,
+      10131
+    ],
     "creative/baoyu-comic/SKILL.md": [
       1778565357577745237,
       14621
@@ -74,8 +82,8 @@
       19859
     ],
     "creative/comfyui/SKILL.md": [
-      1777843113894575243,
-      23856
+      1778787422952912100,
+      24287
     ],
     "creative/creative-ideation/SKILL.md": [
       1778565357578383615,
@@ -138,8 +146,8 @@
       14105
     ],
     "devops/kanban-worker/SKILL.md": [
-      1778490391617044083,
-      10030
+      1779252798259558301,
+      10500
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -310,15 +318,15 @@
       8996
     ],
     "note-taking/obsidian/SKILL.md": [
-      1778644994305997020,
-      7433
+      1779324642597589188,
+      10003
     ],
     "productivity/airtable/SKILL.md": [
       1778490391621044058,
       11302
     ],
     "productivity/google-workspace/SKILL.md": [
-      1778565357587117317,
+      1778490391621044058,
       13411
     ],
     "productivity/linear/SKILL.md": [
@@ -326,7 +334,7 @@
       14782
     ],
     "productivity/maps/SKILL.md": [
-      1778565357587843987,
+      1778490391625044033,
       6726
     ],
     "productivity/nano-pdf/SKILL.md": [
@@ -334,11 +342,11 @@
       1414
     ],
     "productivity/notion/SKILL.md": [
-      1778565357588120988,
-      5236
+      1778906847017550913,
+      14597
     ],
     "productivity/ocr-and-documents/SKILL.md": [
-      1778565357588254530,
+      1778490391625044033,
       5280
     ],
     "productivity/powerpoint/SKILL.md": [
@@ -358,7 +366,7 @@
       20059
     ],
     "research/arxiv/SKILL.md": [
-      1778565357588927533,
+      1778490391625044033,
       10085
     ],
     "research/blogwatcher/SKILL.md": [
@@ -370,7 +378,7 @@
       20113
     ],
     "research/polymarket/SKILL.md": [
-      1778565357589312243,
+      1778490391625044033,
       2985
     ],
     "research/research-paper-writing/SKILL.md": [
@@ -542,7 +550,7 @@
       114
     ],
     "productivity/ocr-and-documents/DESCRIPTION.md": [
-      1775843805145356032,
+      1776960632000000000,
       147
     ],
     "research/DESCRIPTION.md": [
@@ -725,6 +733,19 @@
       }
     },
     {
+      "skill_name": "kanban-codex-lane",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "kanban-codex-lane",
+      "description": "Use when a Hermes Kanban worker wants to run Codex CLI as...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "opencode",
       "category": "autonomous-ai-agents",
       "frontmatter_name": "opencode",
@@ -780,6 +801,23 @@
       "category": "creative",
       "frontmatter_name": "ascii-video",
       "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "baoyu-article-illustrator",
+      "category": "creative",
+      "frontmatter_name": "baoyu-article-illustrator",
+      "description": "Article illustrations: type × style × palette consistency.",
       "platforms": [
         "linux",
         "macos",
@@ -1869,7 +1907,7 @@
       "skill_name": "notion",
       "category": "productivity",
       "frontmatter_name": "notion",
-      "description": "Notion API via curl: pages, databases, blocks, search.",
+      "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
       "platforms": [
         "linux",
         "macos",

@@ -32,10 +32,12 @@ high-inbound-link pages).
 - When the run touches root-owned infrastructure or notes, follow the exact replace
   recipe in `references/root-owned-workflow.md` instead of retrying in-place writes.
 - Batch ordering and orphan filtering details live in `references/batch-and-orphan-filtering.md`.
+- For an efficient sequential implementation pattern (Python scanner/editor, index regeneration, log append, and exact verification checks), see `references/automation-and-verification-pattern.md`.
 
 ## Verification checklist
-- Re-read any page you enhanced to confirm the frontmatter still parses and the new links are present.
-- After regenerating the index, verify `updated` and `page_count` in the header and spot-check new entries.
+- Re-read all 20 enhanced pages, not just a sample, and confirm frontmatter still parses, `updated` is the run date, `wiki_status` is appropriate, and new links are present.
+- After regenerating the index, verify `updated` and `page_count` in the header and confirm all 20 batch titles have index rows.
+- Verify exactly one wiki-log entry was appended for the run.
 - Keep the run bounded to 20 pages; log the remainder as pending work rather than silently expanding scope.
 
 ## Pitfall: Root-owned files block writes
