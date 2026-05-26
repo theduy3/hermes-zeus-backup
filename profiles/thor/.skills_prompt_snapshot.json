@@ -401,6 +401,10 @@
       1778644994242565183,
       7618
     ],
+    "software-development/hermes-s6-container-supervision/SKILL.md": [
+      1779743766085236865,
+      11474
+    ],
     "software-development/node-inspect-debugger/SKILL.md": [
       1778644994242711725,
       10929
@@ -442,8 +446,8 @@
       1696
     ],
     "wellness/wellness-transformation/SKILL.md": [
-      1779681294347982518,
-      11527
+      1779685921938741753,
+      11710
     ],
     "workspace-dispatch/SKILL.md": [
       1778644960026936140,
@@ -2143,6 +2147,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-s6-container-supervision",
+      "category": "software-development",
+      "frontmatter_name": "hermes-s6-container-supervision",
+      "description": "Modify, debug, or extend the s6-overlay supervision tree ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

@@ -11,3 +11,7 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 Travel points as of 2026-05-23 from Finance Advisor: Family Aeroplan 65,928; Porter VIPorter acct 5590019622 74,936; Avios 74,467; Marriott Bonvoy 158,606; TD Rewards 39,540; CIBC Aventura 90,931; Amex MR 0; Scene+ 0. Total 504,408.
 §
 Upcoming trip: Okanagan Camping Trip 2026 — Jun 22–24 Monk Park campsite #56; Jun 24–26 Kelowna wine tour, staying at DoubleTree by Hilton West Kelowna.
+§
+Hotels.ca reward night value: CA$254.67.
+§
+Marriott Bonvoy free night certificates: 2 nights worth up to 35,000 points each; expire 2027-05-07.

@@ -14,6 +14,6 @@ Intermittent fasting: 11AM–6PM eating window (17:7), starting May 19, 2026. Wa
 §
 Weight tracking: CSV at ~/.hermes/profiles/thor/logs/weight-log.csv, graph script at scripts/weight_graph.py. User wants graph regenerated and shown every time they update weight. Historical records: May 11=77.0, May 15=75.4, May 19=75.6 kg.
 §
-Thor cron scheduling: user expects reminder labels/times to match the visible Pacific clock time on their phone (PDT/PST as applicable). When user is in Quebec, switch wellness reminders to Eastern time if requested.
+Thor cron: reminder labels/times should match visible Pacific phone time (or Eastern when in Quebec if requested). No weekly trip-check cron; Quebec trips are tracked in Zeus and forwarded to Thor for travel-mode planning.
 §
 For Thor hydration logs, when user says “glass” or “cup” of water, count it as 500ml unless they specify another amount.

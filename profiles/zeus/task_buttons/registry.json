@@ -1,0 +1,270 @@
+{
+  "1acb1718a59a1297": {
+    "id": "1acb1718a59a1297",
+    "date": "2026-05-25",
+    "title": "TEST — Daily individual task button workflow. Tap ✅ Done to verify logging.",
+    "text": "TEST — Daily individual task button workflow. Tap ✅ Done to verify logging.",
+    "source": "Zeus test",
+    "file_path": "",
+    "status": "done",
+    "message_id": 188,
+    "done_at": "2026-05-25T18:52:32.015308+00:00",
+    "done_by": "8446251233"
+  },
+  "e1522f65d5c6e8a5": {
+    "id": "e1522f65d5c6e8a5",
+    "date": "2026-05-25-diagnostic",
+    "title": "DIAGNOSTIC — individual task button test sent at 18:56:15 UTC",
+    "text": "DIAGNOSTIC — individual task button test sent at 18:56:15 UTC",
+    "source": "Zeus diagnostic",
+    "file_path": "",
+    "status": "done",
+    "message_id": 196,
+    "done_at": "2026-05-25T18:58:14.524943+00:00",
+    "done_by": "8446251233"
+  },
+  "19e12601a9c5ef67": {
+    "id": "19e12601a9c5ef67",
+    "date": "2026-05-25",
+    "title": "Collapse Baby Crib and Move Cabinet",
+    "text": "Collapse Baby Crib and Move Cabinet",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/collapse-baby-crib-build-cabinet.md",
+    "status": "sent",
+    "message_id": 197
+  },
+  "bae06d629dc082f4": {
+    "id": "bae06d629dc082f4",
+    "date": "2026-05-25",
+    "title": "Apply For ESTA",
+    "text": "Apply For ESTA",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/apply-for-esta.md",
+    "status": "deleted",
+    "message_id": 229
+  },
+  "c618ca0bbc053200": {
+    "id": "c618ca0bbc053200",
+    "date": "2026-05-25",
+    "title": "Book Session With Mary Spa",
+    "text": "Book Session With Mary Spa",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/book-session-with-mary-spa.md",
+    "status": "done",
+    "message_id": 230,
+    "done_at": "2026-05-25T23:23:04.544086+00:00",
+    "done_by": "8446251233"
+  },
+  "f38050613bccbecc": {
+    "id": "f38050613bccbecc",
+    "date": "2026-05-25",
+    "title": "Pay TD 1st Class 7243 (due on the 1st)",
+    "text": "Pay TD 1st Class 7243 (due on the 1st)",
+    "source": "Obsidian overdue 2026-05-24",
+    "file_path": "/vault/Tasks/tasks/pay-td-1st-class-7243-due-on-the-1st.md",
+    "status": "sent",
+    "message_id": 237
+  },
+  "2c05b22032ed9984": {
+    "id": "2c05b22032ed9984",
+    "date": "2026-05-25",
+    "title": "Set up Wylios Discord employee agent command center",
+    "text": "Set up Wylios Discord employee agent command center",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/set-up-wylios-discord-employee-agent-command-center.md",
+    "status": "sent",
+    "message_id": 244
+  },
+  "65afdbea1682bf81": {
+    "id": "65afdbea1682bf81",
+    "date": "2026-05-25",
+    "title": "Send Chelsea Birthday Video",
+    "text": "Send Chelsea Birthday Video",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/send-chelsea-birthday-video.md",
+    "status": "done",
+    "message_id": 245,
+    "done_at": "2026-05-26T00:00:50.488182+00:00",
+    "done_by": "8446251233"
+  },
+  "edac11f38f472e33": {
+    "id": "edac11f38f472e33",
+    "date": "2026-05-25",
+    "title": "Resolve SalonX perf RPC test targeting drift",
+    "text": "Resolve SalonX perf RPC test targeting drift",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/resolve-salonx-live-supabase-rpc-schema-drift.md",
+    "status": "sent",
+    "message_id": 246
+  },
+  "947f77f6c2f12c5a": {
+    "id": "947f77f6c2f12c5a",
+    "date": "2026-05-25",
+    "title": "Provide Wylios Discord credentials",
+    "text": "Provide Wylios Discord credentials",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/provide-wylios-discord-credentials.md",
+    "status": "sent",
+    "message_id": 247
+  },
+  "ff540a34adddba77": {
+    "id": "ff540a34adddba77",
+    "date": "2026-05-25",
+    "title": "Prepare SalonX first outreach batch from Quebec prospects",
+    "text": "Prepare SalonX first outreach batch from Quebec prospects",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/prepare-salonx-first-outreach-batch-from-quebec-prospects.md",
+    "status": "sent",
+    "message_id": 248
+  },
+  "0b552955c62314db": {
+    "id": "0b552955c62314db",
+    "date": "2026-05-25",
+    "title": "Pay CIBC Aeroplan 6929 (due date on the 29th)",
+    "text": "Pay CIBC Aeroplan 6929 (due date on the 29th)",
+    "source": "Obsidian overdue 2026-05-22",
+    "file_path": "/vault/Tasks/tasks/pay-cibc-aeroplan-6929-due-date-on-the-29th.md",
+    "status": "sent",
+    "message_id": 249
+  },
+  "559494db549dbb2a": {
+    "id": "559494db549dbb2a",
+    "date": "2026-05-25",
+    "title": "Visit MacGILLYCUDDY'S",
+    "text": "Visit MacGILLYCUDDY'S",
+    "source": "Obsidian overdue 2026-05-21",
+    "file_path": "/vault/Tasks/tasks/visit-macgillycuddys.md",
+    "status": "sent",
+    "message_id": 250
+  },
+  "221e23075b3e4f2f": {
+    "id": "221e23075b3e4f2f",
+    "date": "2026-05-25",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian overdue 2026-03-04",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 251
+  },
+  "60bb7d9d7f017ebc": {
+    "id": "60bb7d9d7f017ebc",
+    "date": "2026-05-25",
+    "title": "Estimate the Reorder Level with Total Bill",
+    "text": "Estimate the Reorder Level with Total Bill",
+    "source": "Obsidian overdue 2026-02-23",
+    "file_path": "/vault/Tasks/tasks/estimate-reorder-level-with-total-bill.md",
+    "status": "sent",
+    "message_id": 252
+  },
+  "6186fa00202683a8": {
+    "id": "6186fa00202683a8",
+    "date": "2026-05-25",
+    "title": "Set Up Nail Box for Photos",
+    "text": "Set Up Nail Box for Photos",
+    "source": "Obsidian overdue 2026-02-22",
+    "file_path": "/vault/Tasks/tasks/set-up-nail-box-for-photos.md",
+    "status": "sent",
+    "message_id": 253
+  },
+  "6183a9264f48891e": {
+    "id": "6183a9264f48891e",
+    "date": "2026-05-25",
+    "title": "KPI Tip",
+    "text": "KPI Tip",
+    "source": "Obsidian overdue 2026-02-20",
+    "file_path": "/vault/Tasks/tasks/kpi-tip.md",
+    "status": "sent",
+    "message_id": 254
+  },
+  "a19ebbd60aacce8e": {
+    "id": "a19ebbd60aacce8e",
+    "date": "2026-05-25",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian overdue 2026-02-17",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 255
+  },
+  "345d9a55448db6cc": {
+    "id": "345d9a55448db6cc",
+    "date": "2026-05-25",
+    "title": "Set Up Pre-authorized Payment of SS Rent",
+    "text": "Set Up Pre-authorized Payment of SS Rent",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-ss-rent.md",
+    "status": "sent",
+    "message_id": 256
+  },
+  "c41ed122ea09403a": {
+    "id": "c41ed122ea09403a",
+    "date": "2026-05-25",
+    "title": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "text": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-laviestella-taxes-strata.md",
+    "status": "sent",
+    "message_id": 257
+  },
+  "156417d0090240c7": {
+    "id": "156417d0090240c7",
+    "date": "2026-05-25",
+    "title": "Portfolio Update",
+    "text": "Portfolio Update",
+    "source": "Obsidian overdue 2026-02-07",
+    "file_path": "/vault/Tasks/tasks/portfolio-update.md",
+    "status": "sent",
+    "message_id": 258
+  },
+  "15de30f3e0d16581": {
+    "id": "15de30f3e0d16581",
+    "date": "2026-05-25",
+    "title": "One Stock Learning",
+    "text": "One Stock Learning",
+    "source": "Obsidian overdue 2026-02-07",
+    "file_path": "/vault/Tasks/tasks/one-stock-learning.md",
+    "status": "sent",
+    "message_id": 259
+  },
+  "7ed38638e2080584": {
+    "id": "7ed38638e2080584",
+    "date": "2026-05-25",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 260
+  },
+  "e2515fc2657a3ad9": {
+    "id": "e2515fc2657a3ad9",
+    "date": "2026-05-25",
+    "title": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "text": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/create-satisfaction-survey-form-fluentcrm.md",
+    "status": "sent",
+    "message_id": 261
+  },
+  "4d0c8d55e3e54ef9": {
+    "id": "4d0c8d55e3e54ef9",
+    "date": "2026-05-25",
+    "title": "Weekly Review",
+    "text": "Weekly Review",
+    "source": "Obsidian overdue 2026-02-04",
+    "file_path": "/vault/Tasks/tasks/weekly-review.md",
+    "status": "sent",
+    "message_id": 262
+  },
+  "6a63a8e4bee71469": {
+    "id": "6a63a8e4bee71469",
+    "date": "2026-05-25",
+    "title": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "text": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "source": "Obsidian overdue 2026-02-04",
+    "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
+    "status": "sent",
+    "message_id": 263
+  }
+}

@@ -1,48 +1,6 @@
 {
   "jobs": [
     {
-      "id": "092874f2406b",
-      "name": "Thor - Weekly Trip Schedule Check",
-      "prompt": "The user (theduy) travels to Quebec and Montreal once a month for about a week for business. Ask them: is there any trip coming up this week or next week? If yes, adapt the weekly training/nutrition plan to travel mode: hotel room bodyweight workouts (3 days), restaurant-based nutrition (protein-first, never-miss-twice rule), and pack list reminder (whey, resistance band, lacrosse ball). If no trip, just a brief check-in. Keep it short \u2014 they're on mobile. Also remind them: the full travel protocol is ready whenever they need it.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 16 * * 1",
-        "display": "0 16 * * 1"
-      },
-      "schedule_display": "0 16 * * 1",
-      "repeat": {
-        "times": null,
-        "completed": 2
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-05-11T12:38:19.751325+00:00",
-      "next_run_at": "2026-05-25T16:00:00+00:00",
-      "last_run_at": "2026-05-18T16:06:02.451302+00:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "8446251233",
-        "chat_name": "theduy",
-        "thread_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null
-    },
-    {
       "id": "caabc02dabc9",
       "name": "\ud83d\udca7 Water - 7AM Pacific",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 500ml \u2014 1/6'.",
@@ -51,8 +9,8 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_water_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -62,18 +20,18 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:18.568357+00:00",
-      "next_run_at": "2026-05-25T07:00:00-07:00",
-      "last_run_at": "2026-05-24T07:00:51.679691-07:00",
+      "next_run_at": "2026-05-26T07:00:00-07:00",
+      "last_run_at": "2026-05-25T11:18:27.482682-07:00",
       "last_status": "ok",
       "last_error": null,
-      "last_delivery_error": "delivery error: Telegram send failed: Forbidden: user is deactivated",
+      "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -93,8 +51,8 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_water_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -104,17 +62,17 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:28.759162+00:00",
-      "next_run_at": "2026-05-25T10:00:00-07:00",
-      "last_run_at": "2026-05-24T10:01:02.516072-07:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 429: The usage limit has been reached",
+      "next_run_at": "2026-05-26T10:00:00-07:00",
+      "last_run_at": "2026-05-25T10:00:14.443033-07:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -135,8 +93,8 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_water_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -146,15 +104,15 @@
       "schedule_display": "0 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:36.036225+00:00",
-      "next_run_at": "2026-05-25T13:00:00-07:00",
-      "last_run_at": "2026-05-24T13:00:42.429052-07:00",
+      "next_run_at": "2026-05-26T13:00:00-07:00",
+      "last_run_at": "2026-05-25T13:00:33.112839-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -177,8 +135,8 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_water_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -188,15 +146,15 @@
       "schedule_display": "0 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:43.651359+00:00",
-      "next_run_at": "2026-05-24T22:00:00-07:00",
-      "last_run_at": "2026-05-23T22:00:28.256233-07:00",
+      "next_run_at": "2026-05-25T22:00:00-07:00",
+      "last_run_at": "2026-05-24T22:00:28.130615-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -230,15 +188,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:43.159219+00:00",
-      "next_run_at": "2026-05-25T09:00:00-07:00",
-      "last_run_at": "2026-05-24T09:01:00.438068-07:00",
+      "next_run_at": "2026-05-26T09:00:00-07:00",
+      "last_run_at": "2026-05-25T09:01:03.959622-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -272,15 +230,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:50.382696+00:00",
-      "next_run_at": "2026-05-25T21:00:00-07:00",
-      "last_run_at": "2026-05-24T21:00:23.046873-07:00",
+      "next_run_at": "2026-05-26T21:00:00-07:00",
+      "last_run_at": "2026-05-25T21:00:46.256244-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -314,15 +272,15 @@
       "schedule_display": "15 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:06:21.288962+00:00",
-      "next_run_at": "2026-05-25T07:15:00-07:00",
-      "last_run_at": "2026-05-24T07:16:02.435954-07:00",
+      "next_run_at": "2026-05-26T07:15:00-07:00",
+      "last_run_at": "2026-05-25T07:15:57.460463-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -380,33 +338,33 @@
     },
     {
       "id": "4ab656b26552",
-      "name": "\ud83e\udd64 Protein Drink - 12PM Pacific",
+      "name": "\ud83e\udd64 Protein Drink - 2PM Pacific",
       "prompt": "Remind theduy to have his protein drink. Keep it brief and encouraging. Rotate between messages like: \"\ud83e\udd64 Protein time \u2014 50g to crush. Go!\", \"10AM protein check-in. Get those 50g in. \ud83d\udcaa\", \"Protein shake o'clock. 50g toward your 150g target.\", \"Don't skip the protein window. 50g now. \ud83e\udd64\"",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_protein_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
-        "expr": "0 12 * * *",
-        "display": "0 12 * * *"
+        "expr": "0 14 * * *",
+        "display": "0 14 * * *"
       },
-      "schedule_display": "0 12 * * *",
+      "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T16:54:07.561293+00:00",
-      "next_run_at": "2026-05-25T12:00:00-07:00",
-      "last_run_at": "2026-05-24T12:00:38.478039-07:00",
+      "next_run_at": "2026-05-26T14:00:00-07:00",
+      "last_run_at": "2026-05-25T14:00:33.811531-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -429,8 +387,8 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_water_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -440,15 +398,15 @@
       "schedule_display": "0 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:09.360396+00:00",
-      "next_run_at": "2026-05-25T16:00:00-07:00",
-      "last_run_at": "2026-05-24T16:00:48.428806-07:00",
+      "next_run_at": "2026-05-26T16:00:00-07:00",
+      "last_run_at": "2026-05-25T16:00:35.861881-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -471,8 +429,8 @@
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "send_water_button.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -482,15 +440,15 @@
       "schedule_display": "0 19 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:10.364301+00:00",
-      "next_run_at": "2026-05-25T19:00:00-07:00",
-      "last_run_at": "2026-05-24T19:00:15.921979-07:00",
+      "next_run_at": "2026-05-26T19:00:00-07:00",
+      "last_run_at": "2026-05-25T19:00:37.866014-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -524,15 +482,15 @@
       "schedule_display": "15 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:17:08.711093+00:00",
-      "next_run_at": "2026-05-24T22:15:00-07:00",
-      "last_run_at": "2026-05-23T22:15:32.754436-07:00",
+      "next_run_at": "2026-05-25T22:15:00-07:00",
+      "last_run_at": "2026-05-24T22:15:34.910361-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -547,5 +505,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-05-24T21:00:23.047468-07:00"
+  "updated_at": "2026-05-25T21:00:46.256944-07:00"
 }

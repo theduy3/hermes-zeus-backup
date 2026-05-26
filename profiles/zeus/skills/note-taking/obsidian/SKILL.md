@@ -176,6 +176,26 @@ If a task update was accidentally written outside the vault (for example `/home/
 
 Use Python (`pathlib`, `re`, `shutil.move`) for this cleanup; avoid shell `mv` because task titles and paths can contain spaces/special characters.
 
+### Telegram inline Done buttons from Obsidian tasks
+
+When the user wants Thor-style inline buttons for Obsidian tasks, prefer a script-only cron that scans `/vault/Tasks/tasks/*.md` directly and sends one Telegram card per due/overdue pending task. The button callback should resolve a registry entry back to the source Markdown file and update its YAML frontmatter to `status: completed`. Do not rely on an LLM-generated sidecar like `today_tasks.json` unless the user explicitly wants a curated staging layer. Detailed pattern: `references/telegram-task-buttons.md`.
+
+### Telegram task card drip from Obsidian tasks
+
+When the user wants one actionable Telegram card per Obsidian task, read `/vault/Tasks/tasks/*.md` directly and use the vault task files as the source of truth. Avoid requiring an upstream briefing/sidecar job unless the user explicitly wants curated LLM output.
+
+Recommended filtering:
+- Include `status: pending` and `status: in_progress` tasks.
+- Exclude `completed`, `done`, `cancelled`, and `canceled`.
+- Include only tasks with `due_date <= today`.
+- Order by user preference: due today first, then overdue tasks newest-first.
+
+Recommended sender shape:
+- Script-only cron (`no_agent=True`) that sends at most one card per run.
+- Drip schedule example: `*/10 8-23 * * *` = every 10 minutes from 8AM through 11:50PM local scheduler time.
+- Maintain a registry keyed by task/date/file path so already-sent or done task cards are not resent.
+- Done buttons should update the original Markdown frontmatter to `status: completed`, not just log completion elsewhere.
+
 ### Efficient batch query (many tasks → categorized lists)
 
 Don't `cat` files one-by-one. Use `execute_code` to batch-parse frontmatter from all task files at once:

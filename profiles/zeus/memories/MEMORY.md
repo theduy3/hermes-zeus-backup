@@ -10,7 +10,7 @@ All Hermes profiles use deepseek-v4-pro via deepseek provider (api.deepseek.com,
 §
 Profiles: Telegram default(orch), zeus, alan, mira, turing, thor, finance, charles, catthew; Discord 3r/charlesbourg/maily/ss. Catthew/finance/Charles/Thor report to Zeus; finance+Charles trade knowledge weekly Sat 11PM Pacific.
 §
-Pipeline: Catthew briefs family group 6:00AM Pacific; Zeus Daily Info 6:15. Zeus task prep b83af24484d0 runs daily 9:00PM Pacific, pulling Obsidian+Catthew+finance+charles+Thor tasks; checkbox lines end with IDs like [1]; routine daily baseline items are excluded.
+Zeus task prep b83af24484d0 runs daily 9PM Pacific: pull Obsidian+Catthew+finance+charles+Thor; exclude routine baseline items; checkbox lines end [1]. Today/overdue tasks become individual Telegram ✅ Done-button cards via ab4de922b388; keep sidecar today-only.
 §
 If Duy has an upcoming/current trip to Quebec/East Coast, Zeus should trigger Hermes Orchestrator (default profile) to switch timezone context from Pacific to Eastern for trip-sensitive scheduling/briefings, then switch back after return.
 §

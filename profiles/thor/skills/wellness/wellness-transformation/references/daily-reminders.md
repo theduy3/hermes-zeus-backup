@@ -20,9 +20,9 @@ Cron schedules are interpreted in Pacific local clock time by the scheduler. Nam
   - Job ID: `b76341d71354`
   - Schedule: `0 10 * * *`
 
-- 🥤 Protein Drink - 12PM Pacific
+- 🥤 Protein Drink - 2PM Pacific
   - Job ID: `4ab656b26552`
-  - Schedule: `0 12 * * *`
+  - Schedule: `0 14 * * *`
 
 - 💧 Water - 1PM Pacific
   - Job ID: `2e5b3af69398`
@@ -55,14 +55,11 @@ Cron schedules are interpreted in Pacific local clock time by the scheduler. Nam
   - Schedule: `0 17 * * 0`
   - Current meaning: Sunday 5PM if interpreted as Pacific local; verify with user if this should be Sunday morning.
 
-- 🧳 Weekly Trip Schedule Check
-  - Job ID: `092874f2406b`
-  - Schedule: `0 16 * * 1`
-  - Current meaning: Monday 4PM if interpreted as Pacific local; verify with user if this should be Monday morning.
-
 ## Notes
 
 - Water reminders target 3L/day: 6 × 500ml.
+- Water reminder cron jobs run `send_water_button.py` with `no_agent=true`, sending a Telegram inline “✅ Log 500ml” button. Button callbacks use `wl:water:500` and `log_water_button.py` to update the daily hydration total.
+- Protein reminder runs `send_protein_button.py` with `no_agent=true`, sending a Telegram inline “✅ Log protein drink” button. Button callbacks use `wl:protein:50` and `log_protein_button.py` to add a 50g protein drink to the food log and daily totals.
 - Sitz baths: 10–15 min warm water.
 - Meditation: start at 20 min, ramp toward 60 min over time.
-- Intake logging: user must explicitly say “Log” or “Log this.” Cron pings are nudges only, not tracked unless user confirms logging.
+- Intake logging: user must explicitly say “Log” / “Log this” or tap a Telegram Log button. Cron pings are nudges only, not tracked unless user confirms logging.

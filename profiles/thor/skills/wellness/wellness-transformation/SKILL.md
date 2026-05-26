@@ -127,7 +127,7 @@ One file per month. Each day is an `## MMM DD, YYYY (Day)` section containing:
 
 - **Body Measurements** — waist, hips, chest, arms, waist-to-hip ratio (when provided)
 - **Food Log** — table: Time | Item | Cal | Protein | Carbs | Fat
-- **Hydration** — each 500ml round with time of day, running total vs 3,000ml target
+- **Hydration** — each 500ml round with time of day, running total vs 3,000ml target. If the user says “glass” or “cup” of water, count it as 500ml unless they specify another amount; keep the displayed label if useful (e.g., `Water — 2 glasses | 1,000ml`).
 - **Activity** — steps, distance, move minutes, heart points (when user shares screenshot or numbers)
 - **Daily totals** — running cal/protein consumed + remaining vs 1,950/150g targets
 

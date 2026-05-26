@@ -95,7 +95,28 @@ When the user asks to test a cron job immediately:
    - a new file appeared under `~/.hermes/profiles/<profile>/cron/output/<job_id>/`.
 5. If `next_run_at` stays in the past while `.tick.lock` is fresh and specialist subprocesses are still running, the job is in progress — wait and inspect processes/logs. Do **not** remove `.tick.lock` unless it is clearly stale and the user explicitly approves clearing it.
 
-For cross-profile aggregation jobs, avoid unnecessary nested `hermes --profile ... chat -q` calls unless the job truly needs live reasoning from those profiles; reading their `cron/jobs.json` is faster and less likely to exceed the scheduler window.
+For cross-profile aggregation jobs, avoid unnecessary nested `hermes --profile ... chat -q` calls unless the job truly needs live reasoning from those profiles; reading their `cron/jobs.json` is faster and less likely to exceed the scheduler window. If a pipeline feeds a downstream script-only job (for example, writing a JSON sidecar that a later job sends as Telegram buttons), prefer deterministic filesystem aggregation over live specialist chats — a hung child profile can prevent the sidecar from being generated, making the downstream job appear to “work” while sending nothing useful.
+
+### Telegram Task Button Drips
+
+When the user wants individual Telegram task cards with Done buttons, prefer a script-only drip job. See `references/telegram-task-button-drip.md` for the full pattern.
+
+Key defaults for Duy/Zeus:
+- Read `/vault/Tasks/tasks/*.md` directly instead of relying on a briefing sidecar.
+- Send at most 1 card per run.
+- Use `*/10 8-23 * * *` for every 10 minutes from 8:00AM through 11:50PM local/Pacific scheduler time.
+- Order cards: due today first, then overdue tasks newest-first.
+- The Done callback should mark the original Obsidian task file `status: completed` and edit the Telegram message.
+
+### Testing Script-Only Follow-Up Jobs
+
+When a `no_agent=True` follow-up job reads a sidecar file and sends messages/buttons:
+
+1. Verify the sidecar exists and is non-empty before running the follow-up job.
+2. Check the script’s duplicate-suppression state (registry/cache files). A successful run may send nothing if every item is already marked `sent` or `done`.
+3. For a visibility test, write a fresh unique diagnostic item to the sidecar, run the script directly once, and verify the registry records a new `message_id`.
+4. If the user says they do not see the real items, regenerate the upstream sidecar from source data (not just a diagnostic item), then run the follow-up script again.
+5. If the upstream cron hangs behind `.tick.lock`, inspect running child processes first. Do not clear the lock unless it is stale and the user approves.
 
 ## Pitfalls
 

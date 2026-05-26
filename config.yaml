@@ -3,6 +3,7 @@ model:
   provider: openai-codex
   auxiliary: gpt-5.5
   max_output_tokens: 8192
+  base_url: https://chatgpt.com/backend-api/codex
 providers: {}
 fallback_providers: '[]'
 credential_pool_strategies:
@@ -257,6 +258,11 @@ display:
   compact: false
   personality: kawaii
   resume_display: full
+  resume_exchanges: 10
+  resume_max_user_chars: 300
+  resume_max_assistant_chars: 200
+  resume_max_assistant_lines: 3
+  resume_skip_tool_only: true
   busy_input_mode: interrupt
   tui_auto_resume_recent: false
   bell_on_complete: false
@@ -476,11 +482,16 @@ model_catalog:
   providers: {}
 network:
   force_ipv4: false
+gateway:
+  media_delivery_allow_dirs: []
+  trust_recent_files: true
+  trust_recent_files_seconds: 600
 sessions:
   auto_prune: false
   retention_days: 90
   vacuum_after_prune: true
   min_interval_hours: 24
+  write_json_snapshots: false
 onboarding:
   seen:
     tool_progress_prompt: true
@@ -498,7 +509,18 @@ x_search:
   model: grok-4.20-reasoning
   timeout_seconds: 180
   retries: 2
-_config_version: 23
+secrets:
+  bitwarden:
+    enabled: false
+    access_token_env: BWS_ACCESS_TOKEN
+    project_id: ''
+    cache_ttl_seconds: 300
+    override_existing: true
+    auto_install: true
+    server_url: ''
+paste_collapse_threshold: 5
+paste_collapse_threshold_fallback: 0
+_config_version: 24
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -525,7 +547,22 @@ platform_toolsets:
   - vision
   - web
   telegram:
-  - hermes-telegram
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
   whatsapp:
   - hermes-whatsapp
   slack:
@@ -540,6 +577,8 @@ approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 known_plugin_toolsets:
   cli:
+  - spotify
+  telegram:
   - spotify
 plugins:
   enabled:

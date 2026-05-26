@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T04:59:31.805393",
+  "updated_at": "2026-05-26T04:55:17.877572",
   "platforms": {
     "telegram": [
       {
@@ -10,7 +10,7 @@
       },
       {
         "id": "-5209120497",
-        "name": "Butter - Travel",
+        "name": "Butter - Travel Concierge",
         "type": "group",
         "thread_id": null
       }

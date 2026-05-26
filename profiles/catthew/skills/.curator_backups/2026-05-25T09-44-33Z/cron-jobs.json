@@ -1,0 +1,348 @@
+{
+  "jobs": [
+    {
+      "id": "c729ba85e251",
+      "name": "Daily Morning Briefing",
+      "prompt": "You are Catthew, the family butler. Deliver a warm, proper morning briefing for the household (Sir, Madam, and Victoria) at 5AM PST.\n\nCheck your family memory for saved events, tasks, groceries, chores, and preferences. Read these files if they exist:\n- /home/hermes/.hermes/profiles/catthew/grocery-list.md\n- /home/hermes/.hermes/profiles/catthew/tasks.md\n- /home/hermes/.hermes/profiles/catthew/chores.md\n\nStructure the briefing as follows:\n\n1. **Date & greeting** \u2014 \"Good morning, sir. Madam. It's [day], [date].\"\n2. **Today's events** \u2014 any scheduled items for today. Victoria's recurring music class is every Wednesday at 10:30 AM. Flag it when today is Wednesday.\n3. **Grocery list** \u2014 any pending items from the grocery list\n4. **Pending tasks & chores** \u2014 what's due today or overdue\n5. **Upcoming** \u2014 anything in the next 2-3 days worth noting\n6. **Closing** \u2014 \"Is there anything you'd like me to add to the list today?\"\n\nBe warm but concise. If there's nothing scheduled, say so cheerfully. Never invent events. Use \"sir\" and \"madam\" naturally. Address Victoria as \"the young miss.\" Sign off with \"At your service.\"\n\nAfter delivering the briefing, clean up any past one-off events from memory that have passed.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 9
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-16T15:23:06.162831+00:00",
+      "next_run_at": "2026-05-25T07:00:00-07:00",
+      "last_run_at": "2026-05-24T07:00:51.675936-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Peer_id_invalid",
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "e21904777c66",
+      "name": "Jeanette Zumba class reminder",
+      "prompt": "Send this exact reminder to the household: \u201cReminder: Jeanette\u2019s Zumba class at Roundhouse is tonight from 7:00\u20138:00 PM.\u201d This reminder is for the Tuesday Zumba class series running May 19, 2026 through June 30, 2026. Only send it if today's date in America/Vancouver is between May 26, 2026 and June 30, 2026 inclusive; otherwise do nothing.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 2",
+        "display": "0 18 * * 2"
+      },
+      "schedule_display": "0 18 * * 2",
+      "repeat": {
+        "times": 6,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T00:12:21.266980-07:00",
+      "next_run_at": "2026-05-26T18:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "816c77690c7e",
+      "name": "Jeanette and David Sculpt & Core reminder - July",
+      "prompt": "Send this exact reminder to the household: \u201cReminder: Jeanette and David\u2019s Sculpt & Core class is tonight from 7:00\u20138:00 PM with Valentina Petrovic.\u201d",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 9,16,23,30 7 *",
+        "display": "0 18 9,16,23,30 7 *"
+      },
+      "schedule_display": "0 18 9,16,23,30 7 *",
+      "repeat": {
+        "times": 4,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:39:20.406427-07:00",
+      "next_run_at": "2026-07-09T18:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "04b02140bfe8",
+      "name": "Jeanette and David Sculpt & Core reminder - August",
+      "prompt": "Send this exact reminder to the household: \u201cReminder: Jeanette and David\u2019s Sculpt & Core class is tonight from 7:00\u20138:00 PM with Valentina Petrovic.\u201d",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 6,13,20,27 8 *",
+        "display": "0 18 6,13,20,27 8 *"
+      },
+      "schedule_display": "0 18 6,13,20,27 8 *",
+      "repeat": {
+        "times": 4,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:39:39.643326-07:00",
+      "next_run_at": "2026-08-06T18:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "a02e52721326",
+      "name": "Renew Kitty NEXUS card",
+      "prompt": "Reminder for the household: Kitty's NEXUS membership expires on May 12, 2031 \u2014 six months from now. Renewal window opened May 12, 2030. Tell sir and madam to renew Kitty's NEXUS card. Keep it concise and warm.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2030-11-12T09:00:00-08:00",
+        "display": "once at 2030-11-12 09:00"
+      },
+      "schedule_display": "once at 2030-11-12 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-22T11:18:21.500790-07:00",
+      "next_run_at": "2030-11-12T09:00:00-08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "9b2eef94dc7e",
+      "name": "Renew Victoria NEXUS card",
+      "prompt": "Reminder for the household: Victoria's NEXUS membership expires on June 3, 2031 \u2014 six months from now. Renewal window opened June 3, 2030. Tell sir and madam to renew Victoria's NEXUS card for the young miss. Keep it concise and warm.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2030-12-03T09:00:00-08:00",
+        "display": "once at 2030-12-03 09:00"
+      },
+      "schedule_display": "once at 2030-12-03 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-22T11:19:01.581170-07:00",
+      "next_run_at": "2030-12-03T09:00:00-08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "8f8773070596",
+      "name": "Renew Sir NEXUS card",
+      "prompt": "Reminder for the household: Sir's NEXUS membership expires on December 21, 2028 \u2014 six months from now. Renewal window opened December 22, 2027. Tell sir to renew his NEXUS card. Keep it concise and warm.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2028-06-21T09:00:00-07:00",
+        "display": "once at 2028-06-21 09:00"
+      },
+      "schedule_display": "once at 2028-06-21 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-22T11:19:39.925589-07:00",
+      "next_run_at": "2028-06-21T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "42425e57c0e4",
+      "name": "remind-collapse-crib-build-move-cabinet",
+      "prompt": "You are Catthew, the family butler. Remind Sir warmly and concisely: \"Reminder for today: collapse the baby crib, build the cabinet, and move the current cabinet from the dining room to the master bedroom.\" Mention that the task is also recorded in the household task list. Do not ask questions.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-05-25T09:00:00-07:00",
+        "display": "once at 2026-05-25 09:00"
+      },
+      "schedule_display": "once at 2026-05-25 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-24T20:56:25.483478-07:00",
+      "next_run_at": "2026-05-25T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-05-24T20:56:25.484260-07:00"
+}

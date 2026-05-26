@@ -30,13 +30,13 @@
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-14T15:31:05.512101+00:00",
-    "last_used_at": "2026-05-21T00:41:44.567960+00:00",
-    "last_viewed_at": "2026-05-21T00:41:44.564494+00:00",
+    "last_used_at": "2026-05-25T18:27:28.230707+00:00",
+    "last_viewed_at": "2026-05-25T18:27:28.227921+00:00",
     "patch_count": 21,
     "pinned": false,
     "state": "active",
-    "use_count": 249,
-    "view_count": 249
+    "use_count": 251,
+    "view_count": 251
   },
   "hermes-discord-local-setup": {
     "archived_at": null,
@@ -76,6 +76,19 @@
     "state": "active",
     "use_count": 53,
     "view_count": 53
+  },
+  "household-task-briefings": {
+    "archived_at": null,
+    "created_at": "2026-05-25T18:28:29.147554+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-05-25T18:28:38.788922+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
   },
   "obsidian-csv-import-ingest": {
     "archived_at": null,

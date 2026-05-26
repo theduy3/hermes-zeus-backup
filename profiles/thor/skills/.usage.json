@@ -17,13 +17,13 @@
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-11T10:13:11.810892+00:00",
-    "last_used_at": "2026-05-20T14:58:36.820923+00:00",
-    "last_viewed_at": "2026-05-20T14:58:36.817253+00:00",
+    "last_used_at": "2026-05-25T19:10:17.918707+00:00",
+    "last_viewed_at": "2026-05-25T19:10:17.913916+00:00",
     "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 15,
-    "view_count": 15
+    "use_count": 18,
+    "view_count": 18
   },
   "hermes-telegram-multi-profile": {
     "archived_at": null,
@@ -42,13 +42,13 @@
     "archived_at": null,
     "created_at": "2026-05-11T12:39:56.907363+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-05-25T03:54:54.355090+00:00",
-    "last_used_at": "2026-05-25T04:21:36.415299+00:00",
-    "last_viewed_at": "2026-05-25T04:21:36.413135+00:00",
-    "patch_count": 36,
+    "last_patched_at": "2026-05-25T19:13:14.591388+00:00",
+    "last_used_at": "2026-05-25T22:58:43.383655+00:00",
+    "last_viewed_at": "2026-05-25T22:58:43.381982+00:00",
+    "patch_count": 41,
     "pinned": false,
     "state": "active",
-    "use_count": 39,
-    "view_count": 39
+    "use_count": 50,
+    "view_count": 50
   }
 }

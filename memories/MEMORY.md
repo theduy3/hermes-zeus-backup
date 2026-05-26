@@ -4,7 +4,7 @@ On this macOS environment, remindctl is not installed. Apple Reminders can be ma
 §
 GitHub backup: repo theduy3/hermes-zeus-backup, cron 12e5ce30563d at 15:00 UTC (8AM PDT). .gitignore: .env, auth.json, logs/, sessions/, cron/output/, cache/, hermes-agent/, venv/, node_modules/. Recovery: clone into ~/.hermes/ + restore .env with DEEPSEEK_API_KEY.
 §
-Zeus daily briefing jobs: e6711b998b07 info-only, b83af24484d0 tasks-only. Current Quebec/East Coast trip active as of 2026-05-22 daily note; no return date visible. Use Eastern Time for trip-sensitive scheduling/briefings during this trip; switch back to Pacific once a return date/return evidence is visible.
+Zeus daily briefing jobs: e6711b998b07 info-only, b83af24484d0 tasks-only. Confirmed Montreal/Quebec trip June 8-15, 2026: use Eastern Time for trip-sensitive scheduling/briefings during Montreal window June 9 through return day June 15; switch back to Pacific after return to Vancouver on June 15.
 §
 Thor wellness Telegram bot profile: token starts 8788503747, profile name "thor", focused on physical health, mental health, and diet/nutrition. SOUL.md set up with evidence-based, warm-but-grounded tone.
 §
