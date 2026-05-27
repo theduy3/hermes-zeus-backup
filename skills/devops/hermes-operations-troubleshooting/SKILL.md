@@ -84,6 +84,38 @@ PY
 - Do not print bot tokens. Redact token values and lengths only if needed.
 - Do not capture a transient Unauthorized incident as a permanent claim that Telegram is broken.
 
+## Cron job API failure workflow
+
+When cron jobs report `last_status=error` due to an API call failure (delivery was fine but the job itself errored):
+
+1. Read `~/.hermes/logs/errors.log` for the job ID mentioned in the error (e.g. `cron_c9c38ab77915_20260526_180057`).
+2. Follow the session ID into `~/.hermes/logs/agent.log` to see the full conversation turn and API call attempt logs.
+3. Trace the error type and summary:
+   - `error_type=TypeError` + `Non-retryable client error` = classified as local validation error (TypeError/ValueError not subclassing UnicodeEncodeError/json.JSONDecodeError/ssl.SSLError). This bypasses retries. Check if the source is a provider response parsing issue.
+   - `error_type=ReadError` + `Broken pipe` = provider connection was killed by stale-call detector. Usually a high-traffic backlog or slow model.
+   - `error_type=RateLimitError` + HTTP 429 = usage limit reached. Check `resets_at` timestamp.
+4. For Codex-reserved API errors (chatgpt.com/backend-api/codex), view the full response path:
+   - `_interruptible_api_call` (`agent/chat_completion_helpers.py`) runs the API call in a background thread.
+   - `_run_codex_stream` (`agent/codex_runtime.py`) handles the streaming response with retry + fallback.
+   - `_run_codex_create_stream_fallback` (`agent/codex_runtime.py`) is the fallback when the primary stream fails.
+   - `_normalize_codex_response` (`agent/codex_responses_adapter.py`) normalizes the raw response.
+5. Verify the fix by running the job immediately with `cronjob action=run job_id=<id>` and checking `last_status`.
+
+## Useful commands for API-tracing
+
+```bash
+# Find all cron errors in the last N hours
+grep "Job.*failed:" /home/hermes/.hermes/logs/errors.log
+
+# Follow a specific job's trace through logs
+grep "cron_<job_id>" /home/hermes/.hermes/logs/errors.log
+grep "cron_<job_id>" /home/hermes/.hermes/logs/agent.log | grep -E "(API call failed|Non-retryable|conversation turn)"
+
+# Run a job immediately to verify fix
+# Use cronjob tool action=run with the job_id
+```
+
 ## References
 
 - `references/telegram-cron-unauthorized.md` — resolved incident pattern: valid token, working direct send, successful cron test, stale Unauthorized state cleared.
+- `references/codex-stream-typeerror.md` — Codex stream TypeError from malformed SSE frame: root cause, fix, and affected code paths.

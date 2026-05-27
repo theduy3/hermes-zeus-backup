@@ -82,13 +82,13 @@
     "created_at": "2026-05-25T18:28:29.147554+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-05-25T18:28:38.788922+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-05-26T19:13:54.314495+00:00",
+    "last_viewed_at": "2026-05-26T19:13:54.312007+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "obsidian-csv-import-ingest": {
     "archived_at": null,

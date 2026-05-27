@@ -77,6 +77,8 @@ When a user says the morning briefing is too dense or wants tasks separated, spl
 1. **Info-only job** (e.g. 6:15AM): family/schedule context, stocks, headlines, weather, horoscope. Explicitly forbid task lists, checkboxes, overdue items, and reminders.
 2. **Tasks-only job** (e.g. 2 minutes later): Obsidian tasks, Catthew tasks, finance advisor reminders, investment strategist reminders, timezone triggers. Every actionable line should be `☐ item`; omit empty sections.
 
+If Duy says to remove stocks/news/horoscope and focus on personal life, convert the morning briefing into a **personal tasks/life-admin briefing** instead of an info briefing: exclude stocks, market data, news/headlines, AI/crypto/space, horoscope, quotes, moon phase, and generic filler; gather Catthew + Daily notes + Obsidian tasks + task-button registry + dated cross-profile reminders; output compact `Today`, `Next 7 Days`, optional `Waiting / Watch`, optional `Done / Cleared` sections.
+
 Keep the gap short but nonzero so Telegram receives two readable messages. See `references/zeus-morning-briefing-split.md` for a concrete prompt pattern.
 
 Use `enabled_toolsets` to restrict tools per job:

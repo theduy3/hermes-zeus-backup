@@ -1,16 +1,16 @@
 Vault in Docker: ro at /vault/. Cron workers need bind mounts in docker-compose.yml. Cron jobs toolsets ["web","memory","skills","terminal","file"].
 §
-Hermes backup: repo theduy3/hermes-zeus-backup; cron 12e5ce30563d daily 15:00 UTC. Excludes secrets/logs/sessions/cache/venv/node_modules. Recovery: clone to ~/.hermes/ and restore .env DEEPSEEK_API_KEY.
+Hermes backup: repo theduy3/hermes-zeus-backup; cron 12e5ce30563d daily 15:00 UTC. Excludes secrets/logs/sessions/cache/venv/node_modules. Recovery: clone to ~/.hermes/ and restore .env + auth.json (openai-codex OAuth).
 §
-Zeus daily briefing (e6711b998b07) runs at 6:15AM Pacific local cron (currently 13:15 UTC during PDT) after Catthew's family briefing. Catthew posts to group chat, Zeus reads Catthew's output then delivers personal briefing via Telegram.
+Zeus morning briefing e6711b998b07 runs 6:15AM Pacific local cron after Catthew; personal-life/tasks only. Exclude stocks, news/headlines, horoscope, generic filler; use Catthew+Daily+Obsidian+task registry+profile reminders.
 §
 theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CHARLESBOURG/MAILY/RIVIERES/SS), Business HoldCo, Business Projects, Personal, FAMILY TRUST, Education, Job, Archive, Projects. Sort loose files here.
 §
-All Hermes profiles use deepseek-v4-pro via deepseek provider (api.deepseek.com, NOT openrouter). Config: model.provider=deepseek, model.base_url=https://api.deepseek.com, providers.deepseek={api_base:https://api.deepseek.com, env_key:DEEPSEEK_API_KEY}. When cloning profiles, model config may inherit openrouter settings — must fix to deepseek after clone.
+All Hermes profiles use the openai-codex provider (OAuth via ~/.hermes/auth.json), model gpt-5.5 - NOT deepseek or openrouter. Config: model.provider=openai-codex, model.default=gpt-5.5, providers:{} (no base_url). DeepSeek fully removed 2026-05-24. When cloning a profile, verify model.provider=openai-codex (may inherit stale settings).
 §
 Profiles: Telegram default(orch), zeus, alan, mira, turing, thor, finance, charles, catthew; Discord 3r/charlesbourg/maily/ss. Catthew/finance/Charles/Thor report to Zeus; finance+Charles trade knowledge weekly Sat 11PM Pacific.
 §
-Zeus task prep b83af24484d0 runs daily 9PM Pacific: pull Obsidian+Catthew+finance+charles+Thor; exclude routine baseline items; checkbox lines end [1]. Today/overdue tasks become individual Telegram ✅ Done-button cards via ab4de922b388; keep sidecar today-only.
+Zeus task prep b83af24484d0 daily 9PM Pacific: pull Obsidian+Catthew+finance+charles+Thor; exclude routine baseline. Due/overdue tasks become Telegram ✅ cards via ab4de922b388. Recurring Obsidian tasks auto-roll after 2 days pending: visible due date + next day, then next recurrence.
 §
 If Duy has an upcoming/current trip to Quebec/East Coast, Zeus should trigger Hermes Orchestrator (default profile) to switch timezone context from Pacific to Eastern for trip-sensitive scheduling/briefings, then switch back after return.
 §

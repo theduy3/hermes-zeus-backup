@@ -17,7 +17,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 BASE = pathlib.Path("/home/hermes/.hermes/profiles/zeus/task_buttons")
@@ -92,6 +92,50 @@ def title_from_body(path: pathlib.Path, body: str) -> str:
     return path.stem.replace("-", " ").strip().title()
 
 
+def add_months(d: date, months: int) -> date:
+    month_index = d.month - 1 + months
+    year = d.year + month_index // 12
+    month = month_index % 12 + 1
+    month_lengths = [31, 29 if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    return date(year, month, min(d.day, month_lengths[month - 1]))
+
+
+def next_recurring_due(due: date, recurrence: str, today: date, grace_days: int = 2) -> date:
+    """Roll stale recurring tasks forward after a short grace window.
+
+    A pending recurring task remains visible on its due date and the next day.
+    Once it is 2+ days old, it disappears and advances to the next scheduled
+    occurrence so it can reappear later.
+    """
+    recurrence = recurrence.strip().lower()
+    if not recurrence or due > today - timedelta(days=grace_days):
+        return due
+    if recurrence == "daily":
+        step = lambda x: x + timedelta(days=1)
+    elif recurrence == "weekly":
+        step = lambda x: x + timedelta(days=7)
+    elif recurrence in {"bi-weekly", "biweekly", "fortnightly"}:
+        step = lambda x: x + timedelta(days=14)
+    elif recurrence == "monthly":
+        step = lambda x: add_months(x, 1)
+    elif recurrence == "quarterly":
+        step = lambda x: add_months(x, 3)
+    elif recurrence in {"annually", "annual", "yearly"}:
+        step = lambda x: add_months(x, 12)
+    else:
+        return due
+    while due <= today - timedelta(days=grace_days):
+        due = step(due)
+    return due
+
+
+def update_due_date(path: pathlib.Path, old_due: date, new_due: date) -> None:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    updated = re.sub(r"(?m)^due_date:\s*" + re.escape(old_due.isoformat()) + r"\s*$", f"due_date: {new_due.isoformat()}", text, count=1)
+    if updated != text:
+        path.write_text(updated, encoding="utf-8")
+
+
 def load_vault_tasks(today: date) -> list[dict]:
     if not VAULT_TASKS.exists():
         return []
@@ -116,6 +160,14 @@ def load_vault_tasks(today: date) -> list[dict]:
             continue
         if due > today:
             continue
+        recurrence = (fm.get("recurrence") or "").strip()
+        if recurrence:
+            next_due = next_recurring_due(due, recurrence, today)
+            if next_due != due:
+                update_due_date(path, due, next_due)
+                due = next_due
+            if due > today:
+                continue
         title = title_from_body(path, body)
         tasks.append({
             "title": title,

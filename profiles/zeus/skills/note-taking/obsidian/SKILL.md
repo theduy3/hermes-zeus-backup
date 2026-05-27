@@ -149,6 +149,16 @@ Obsidian links notes with `[[Note Name]]` syntax. When creating notes, use these
 
 ## Task format and querying
 
+### Telegram task-card reply maintenance
+
+When Duy replies to a Telegram task card and asks to delete, reschedule, or change it:
+1. Treat the replied card title as authoritative; search `/vault/Tasks/` by exact title first, then by filename keywords if needed.
+2. Read the matched task file before editing, to verify title and current `due_date`/`status`.
+3. For deletion requests, remove the matched file from `/vault/Tasks/tasks/` and verify it no longer exists.
+4. For due-date moves, patch only the `due_date:` frontmatter line and read back the file to verify the new ISO date.
+5. If the task has `recurrence:`, also keep `/vault/Tasks/recurring-tasks.md` consistent when manually advancing or changing the next due date.
+6. Reply tersely with the completed action only; do not explain the mechanics unless asked.
+
 Tasks live in `Tasks/tasks/` as individual `.md` files with YAML frontmatter:
 
 ```yaml
@@ -189,6 +199,13 @@ Recommended filtering:
 - Exclude `completed`, `done`, `cancelled`, and `canceled`.
 - Include only tasks with `due_date <= today`.
 - Order by user preference: due today first, then overdue tasks newest-first.
+
+Recurring-task grace behavior:
+- If the user says a task is recurring and should disappear even when not marked done, implement that in the task-button/drip script, not by marking it completed.
+- For tasks with `recurrence:` in frontmatter, keep them visible on the due date and for a short grace window (Duy's requested default: 2 days). After that, advance `due_date` to the next scheduled occurrence while leaving `status: pending`.
+- Supported recurrence intervals should include `daily`, `weekly`, `bi-weekly`/`biweekly`, `monthly`, `quarterly`, and `annually`/`yearly`; month/year advances must clamp invalid dates to the last valid day of the target month.
+- Also update `/vault/Tasks/recurring-tasks.md` for the matching row's Due Date when manually advancing a recurring task, so the table remains consistent with the individual task file.
+- Verify by importing/running the script logic against a known date and confirming the recurring task is no longer in the visible task list and its next `due_date` is correct.
 
 Recommended sender shape:
 - Script-only cron (`no_agent=True`) that sends at most one card per run.

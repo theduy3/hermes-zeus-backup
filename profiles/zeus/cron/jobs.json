@@ -2,8 +2,8 @@
   "jobs": [
     {
       "id": "e6711b998b07",
-      "name": "Daily Morning Briefing - Info Only",
-      "prompt": "You are preparing Zeus's Daily Morning Briefing \u2014 INFO ONLY for Duy at 6:15AM Eastern during the Quebec/East Coast trip.\n\nThis briefing must NOT include task lists, checkbox tasks, reminders, overdue items, or action lists. Keep it as useful morning information only.\n\nUse current Eastern date (America/Toronto) for \u201ctoday\u201d during the Quebec/East Coast trip. Treat Montreal/Laval/Quebec City appointments as Eastern Time. If the Daily note clearly shows Duy has returned to Pacific Time, flag the timezone switch-back to Hermes Orchestrator. When copying anything from Obsidian/Catthew, strip Obsidian/Markdown markup into clean plaintext: `[[Page]]` -> `Page`; `[[Page|label]]` -> `label`; remove `#tag`, `==highlight==`, `**bold**`, and extra brackets.\n\nFIRST, read Catthew's latest family briefing output from the most recent file in /home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/ and extract only non-task info: family events, appointments, visits, context, and upcoming timing. Do not include chores, grocery lists, or errands unless they are time-sensitive appointments.\n\nThen read the latest Daily note from /vault/Daily/ for today's Pacific date; if today's note doesn't exist, read the most recent one. Extract only calendar/context information, not tasks.\n\nThen fetch fresh data: stocks, weather, headlines, horoscope.\n\nFor headline research, delegate three parallel sub-agent tasks and combine their results into one clean briefing section:\n1. Delegate: top 2 AI/ML stories from the past 24h with source links.\n2. Delegate: top 2 crypto stories from the past 24h with source links.\n3. Delegate: top 2 space exploration stories from the past 24h with source links.\nEach sub-agent should use web/current sources, return exactly 2 concise bullets with links, and avoid old/stale stories. Combine results under clear subsection headers with emoji and source links.\n\nKeep it COMPACT \u2014 one screen if possible, but include the delegated headline section. Follow this structure:\n\n## 1. HEADER\n\"# \ud83d\udcc5 [Day], [YYYY-MM-DD] \u00b7 W[week] \u00b7 Victoria: [age]\"\nMoon phase icon + name. One relevant quote (\u22641 line).\n\n## 2. FAMILY / SCHEDULE CONTEXT\n2-3 bullets max from Catthew + Daily note. Events/timing only; no task/reminder wording.\n\n## 3. STOCKS\nCompact \u2014 only tickers that moved >2%, plus VIX/TNX.\nFormat one line per ticker: `TICKER $price (chg%)`.\nMax 8 tickers. No table.\n\n## 4. HEADLINES\nStart with 2-3 one-line general/finance bullets from Morning Brew + finance. Then add delegated research results as subsections:\n- \ud83e\udd16 AI/ML \u2014 exactly 2 bullets with source links\n- \u20bf Crypto \u2014 exactly 2 bullets with source links\n- \ud83d\ude80 Space \u2014 exactly 2 bullets with source links\nKeep every bullet one line. Include links for delegated stories.\n\n## 5. WEATHER\nSingle compact section \u2014 3 cities \u00d7 today+tomorrow only:\n`City | Today Hi/Lo Cond | Tomorrow Hi/Lo Cond`\n\n## 6. HOROSCOPE\nSagittarius: 1-2 sentences max.\n\n## 7. FOOTER\n\"Generated [HH:MM] \u00b7 Info only\"\n\nNo earnings section. No task section. No checkboxes. Tone: tight, informative, scannable.\n",
+      "name": "Daily Morning Briefing - Personal Tasks",
+      "prompt": "You are preparing Zeus's Daily Morning Briefing for Duy.\n\nPurpose: keep Duy on top of his personal life for today and the next few days.\n\nDO NOT include stocks, market data, news headlines, AI/crypto/space headlines, horoscope, quote, moon phase, or filler. Do not delegate headline research. Do not include generic commentary.\n\nUse current Pacific date/time (America/Vancouver) for \u201ctoday,\u201d \u201ctomorrow,\u201d and date grouping unless an active Quebec/East Coast trip is clearly detected from Daily notes or Catthew output; if trip is active, use Eastern Time for trip-sensitive family/calendar items and clearly label timezone only when it affects timing.\n\nBefore writing, gather:\n1. Catthew: read the latest family briefing output from the most recent file in `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/`. Extract family schedule, Victoria items, appointments, visitors, deadlines, household context, and time-sensitive family tasks.\n2. Daily note: read `/vault/Daily/` for today\u2019s date if available; otherwise read the most recent readable Daily note. Extract personal schedule, errands, commitments, and context only.\n3. Obsidian tasks: read `/vault/Tasks/tasks/*.md` directly. Include pending/in_progress tasks with `due_date <= today`, plus tasks due in the next 7 days. Exclude completed/done/cancelled/canceled. Recurring tasks may have `recurrence`; treat them as normal tasks, but avoid overemphasizing stale recurring items that have already auto-rolled forward.\n4. Task button registry: read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `status: done` as completed, `sent` as already sent but not done, `deleted` as dismissed. Use it to avoid telling Duy a done/deleted task is still pending.\n5. Cross-profile reminders: inspect enabled one-shot or dated reminders from `/home/hermes/.hermes/profiles/finance/cron/jobs.json`, `/home/hermes/.hermes/profiles/charles/cron/jobs.json`, `/home/hermes/.hermes/profiles/thor/cron/jobs.json`, and `/home/hermes/.hermes/profiles/catthew/cron/jobs.json` when those files exist. Include only concrete one-off deadlines, appointments, bills, family actions, admin tasks, or exceptions due today/overdue/next 7 days. Exclude routine baseline wellness reminders, recurring habits, generic daily reminders, and non-actionable system jobs.\n\nClean all copied text for Telegram readability: strip Obsidian/Markdown markup. `[[Page]]` -> `Page`; `[[Page|label]]` -> `label`; remove #tags, ==highlight==, **bold**, raw brackets, and internal paths unless the path is necessary for debugging.\n\nOutput format:\n\n# \ud83d\udcc5 [Day], [YYYY-MM-DD]\n\n## Today\n- 3-7 bullets max, ordered by importance/time.\n- Use `\u2610` only for actionable tasks Duy needs to do.\n- Include appointments with exact time first.\n\n## Next 7 Days\n- 3-7 bullets max.\n- Include date/day labels.\n- Focus on deadlines, bills, appointments, family obligations, and prep items.\n\n## Waiting / Watch\n- Optional. 0-4 bullets only if there are unresolved sent-but-not-done cards, blocked items, or things Duy should monitor.\n\n## Done / Cleared\n- Optional. Include only if registry shows meaningful completions since yesterday or tasks were dismissed/deleted.\n\nRules:\n- Compact enough for one Telegram screen when possible.\n- No empty sections.\n- No stock/news/horoscope/weather unless weather directly affects a listed appointment/errand.\n- No long explanations.\n- End with `Generated [HH:MM] \u00b7 Personal tasks`.\n",
       "skills": [
         "obsidian"
       ],
@@ -22,15 +22,15 @@
       "schedule_display": "15 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-05-26T03:15:00-07:00",
-      "last_run_at": "2026-05-25T03:21:08.321741-07:00",
+      "next_run_at": "2026-05-27T03:15:00-07:00",
+      "last_run_at": "2026-05-26T03:18:57.222773-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -42,12 +42,10 @@
         "thread_id": null
       },
       "enabled_toolsets": [
-        "web",
         "memory",
         "skills",
         "terminal",
-        "file",
-        "delegation"
+        "file"
       ],
       "workdir": null
     },
@@ -123,17 +121,17 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-05-26T21:00:00-07:00",
-      "last_run_at": "2026-05-25T21:04:32.922737-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-05-27T21:00:00-07:00",
+      "last_run_at": "2026-05-26T21:00:49.625496-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: 'NoneType' object is not iterable",
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -172,15 +170,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 38
+        "completed": 134
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-25T11:44:10.692069-07:00",
-      "next_run_at": "2026-05-25T22:00:00-07:00",
-      "last_run_at": "2026-05-25T21:50:33.596181-07:00",
+      "next_run_at": "2026-05-26T22:00:00-07:00",
+      "last_run_at": "2026-05-26T21:50:50.301480-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -199,5 +197,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-05-25T21:50:33.596868-07:00"
+  "updated_at": "2026-05-26T21:50:50.302158-07:00"
 }

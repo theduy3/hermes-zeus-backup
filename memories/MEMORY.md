@@ -2,7 +2,7 @@ Vault /vault/ writable (ext4 rw, hermes:hermes). ALL profiles: default write tar
 §
 On this macOS environment, remindctl is not installed. Apple Reminders can be managed via osascript/AppleScript as a fallback.
 §
-GitHub backup: repo theduy3/hermes-zeus-backup, cron 12e5ce30563d at 15:00 UTC (8AM PDT). .gitignore: .env, auth.json, logs/, sessions/, cron/output/, cache/, hermes-agent/, venv/, node_modules/. Recovery: clone into ~/.hermes/ + restore .env with DEEPSEEK_API_KEY.
+GitHub backup: repo theduy3/hermes-zeus-backup, cron 12e5ce30563d at 15:00 UTC (8AM PDT). .gitignore: .env, auth.json, logs/, sessions/, cron/output/, cache/, hermes-agent/, venv/, node_modules/. Recovery: clone into ~/.hermes/ + restore .env + auth.json (openai-codex OAuth).
 §
 Zeus daily briefing jobs: e6711b998b07 info-only, b83af24484d0 tasks-only. Confirmed Montreal/Quebec trip June 8-15, 2026: use Eastern Time for trip-sensitive scheduling/briefings during Montreal window June 9 through return day June 15; switch back to Pacific after return to Vancouver on June 15.
 §

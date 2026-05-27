@@ -1,4 +1,5 @@
 context_lengths:
+  deepseek/deepseek-v4-flash:free@https://inference-api.nousresearch.com/v1: 1048576
   gpt-5.1-codex-mini@https://chatgpt.com/backend-api/codex: 272000
   gpt-5.4-mini@https://chatgpt.com/backend-api/codex: 272000
   gpt-5.4-mini@https://chatgpt.com/backend-api/codex/: 272000
@@ -6,3 +7,4 @@ context_lengths:
   gpt-5.4@https://chatgpt.com/backend-api/codex: 272000
   gpt-5.5@https://chatgpt.com/backend-api/codex: 272000
   gpt-5.5@https://chatgpt.com/backend-api/codex/: 272000
+  nvidia/nemotron-3-super-120b-a12b@https://inference-api.nousresearch.com/v1: 1000000

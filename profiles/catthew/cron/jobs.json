@@ -20,15 +20,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-05-26T07:00:00-07:00",
-      "last_run_at": "2026-05-25T07:01:10.900689-07:00",
+      "next_run_at": "2026-05-27T07:00:00-07:00",
+      "last_run_at": "2026-05-26T07:00:42.548939-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -62,17 +62,17 @@
       "schedule_display": "0 18 * * 2",
       "repeat": {
         "times": 6,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T00:12:21.266980-07:00",
-      "next_run_at": "2026-05-26T18:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-06-02T18:00:00-07:00",
+      "last_run_at": "2026-05-26T18:00:26.303253-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: 'NoneType' object is not iterable",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -299,7 +299,50 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "f7126127a6b7",
+      "name": "Fresh Prep package drop reminder",
+      "prompt": "You are Catthew, the family butler. Send a brief, warm household reminder: \u201cGood morning, madam and sir. Fresh Prep has a package drop today.\u201d Do not mention cron jobs or scheduling metadata.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-05-28T07:00:00-07:00",
+        "display": "once at 2026-05-28 07:00"
+      },
+      "schedule_display": "once at 2026-05-28 07:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-26T12:14:16.309514-07:00",
+      "next_run_at": "2026-05-28T07:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-05-25T20:35:23.936567-07:00"
+  "updated_at": "2026-05-26T18:00:26.303962-07:00"
 }

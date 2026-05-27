@@ -72,8 +72,10 @@
     "text": "Set up Wylios Discord employee agent command center",
     "source": "Obsidian overdue 2026-05-22",
     "file_path": "/vault/Tasks/tasks/set-up-wylios-discord-employee-agent-command-center.md",
-    "status": "sent",
-    "message_id": 244
+    "status": "done",
+    "message_id": 244,
+    "done_at": "2026-05-26T05:22:19.765325+00:00",
+    "done_by": "8446251233"
   },
   "65afdbea1682bf81": {
     "id": "65afdbea1682bf81",
@@ -104,8 +106,10 @@
     "text": "Provide Wylios Discord credentials",
     "source": "Obsidian overdue 2026-05-22",
     "file_path": "/vault/Tasks/tasks/provide-wylios-discord-credentials.md",
-    "status": "sent",
-    "message_id": 247
+    "status": "done",
+    "message_id": 247,
+    "done_at": "2026-05-26T05:22:27.275919+00:00",
+    "done_by": "8446251233"
   },
   "ff540a34adddba77": {
     "id": "ff540a34adddba77",
@@ -124,8 +128,10 @@
     "text": "Pay CIBC Aeroplan 6929 (due date on the 29th)",
     "source": "Obsidian overdue 2026-05-22",
     "file_path": "/vault/Tasks/tasks/pay-cibc-aeroplan-6929-due-date-on-the-29th.md",
-    "status": "sent",
-    "message_id": 249
+    "status": "done",
+    "message_id": 249,
+    "done_at": "2026-05-26T05:22:40.660074+00:00",
+    "done_by": "8446251233"
   },
   "559494db549dbb2a": {
     "id": "559494db549dbb2a",
@@ -266,5 +272,129 @@
     "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
     "status": "sent",
     "message_id": 263
+  },
+  "ff02ca1fe954151c": {
+    "id": "ff02ca1fe954151c",
+    "date": "2026-05-26",
+    "title": "Pay RBC Avion 7760 (due date on the 3rd)",
+    "text": "Pay RBC Avion 7760 (due date on the 3rd)",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/pay-rbc-avion-7760-due-date-on-the-3rd.md",
+    "status": "done",
+    "message_id": 283,
+    "done_at": "2026-05-26T15:01:27.630978+00:00",
+    "done_by": "8446251233"
+  },
+  "e8107e3dbb1b8078": {
+    "id": "e8107e3dbb1b8078",
+    "date": "2026-05-26",
+    "title": "Collapse Baby Crib and Move Cabinet",
+    "text": "Collapse Baby Crib and Move Cabinet",
+    "source": "Obsidian overdue 2026-05-25",
+    "file_path": "/vault/Tasks/tasks/collapse-baby-crib-build-cabinet.md",
+    "status": "sent",
+    "message_id": 284
+  },
+  "5c529f43fd3abee1": {
+    "id": "5c529f43fd3abee1",
+    "date": "2026-05-26",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian overdue 2026-03-04",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 285
+  },
+  "d199e9d5796f1f4d": {
+    "id": "d199e9d5796f1f4d",
+    "date": "2026-05-26",
+    "title": "Estimate the Reorder Level with Total Bill",
+    "text": "Estimate the Reorder Level with Total Bill",
+    "source": "Obsidian overdue 2026-02-23",
+    "file_path": "/vault/Tasks/tasks/estimate-reorder-level-with-total-bill.md",
+    "status": "sent",
+    "message_id": 286
+  },
+  "72666813809a84f2": {
+    "id": "72666813809a84f2",
+    "date": "2026-05-26",
+    "title": "Set Up Nail Box for Photos",
+    "text": "Set Up Nail Box for Photos",
+    "source": "Obsidian overdue 2026-02-22",
+    "file_path": "/vault/Tasks/tasks/set-up-nail-box-for-photos.md",
+    "status": "sent",
+    "message_id": 287
+  },
+  "51ac4be36c152301": {
+    "id": "51ac4be36c152301",
+    "date": "2026-05-26",
+    "title": "KPI Tip",
+    "text": "KPI Tip",
+    "source": "Obsidian overdue 2026-02-20",
+    "file_path": "/vault/Tasks/tasks/kpi-tip.md",
+    "status": "done",
+    "message_id": 288,
+    "done_at": "2026-05-26T16:59:21.022110+00:00",
+    "done_by": "8446251233"
+  },
+  "cf49a88200d7a9c4": {
+    "id": "cf49a88200d7a9c4",
+    "date": "2026-05-26",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian overdue 2026-02-17",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 289
+  },
+  "d363d35c07d5b429": {
+    "id": "d363d35c07d5b429",
+    "date": "2026-05-26",
+    "title": "Set Up Pre-authorized Payment of SS Rent",
+    "text": "Set Up Pre-authorized Payment of SS Rent",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-ss-rent.md",
+    "status": "sent",
+    "message_id": 290
+  },
+  "b5cd0d3fd442a6bc": {
+    "id": "b5cd0d3fd442a6bc",
+    "date": "2026-05-26",
+    "title": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "text": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-laviestella-taxes-strata.md",
+    "status": "sent",
+    "message_id": 291
+  },
+  "04e3b5c16b8345bb": {
+    "id": "04e3b5c16b8345bb",
+    "date": "2026-05-26",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 295
+  },
+  "9a56748c79619631": {
+    "id": "9a56748c79619631",
+    "date": "2026-05-26",
+    "title": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "text": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/create-satisfaction-survey-form-fluentcrm.md",
+    "status": "sent",
+    "message_id": 296
+  },
+  "8272d19ef61a9857": {
+    "id": "8272d19ef61a9857",
+    "date": "2026-05-26",
+    "title": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "text": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "source": "Obsidian overdue 2026-02-04",
+    "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
+    "status": "sent",
+    "message_id": 297
   }
 }

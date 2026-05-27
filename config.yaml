@@ -432,6 +432,7 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
+- delete in root path
 - stop/restart hermes gateway (kills running agents)
 quick_commands: {}
 hooks: {}
@@ -520,6 +521,7 @@ secrets:
     server_url: ''
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
+paste_collapse_char_threshold: 2000
 _config_version: 24
 session_reset:
   mode: both

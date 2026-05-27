@@ -17,8 +17,10 @@ prompts, no questions.
 1. **Process notes first.** Follow `/vault/.claude/skills/process/SKILL.md` (same
    adaptations as the `process` skill: vault at `/vault`, helpers at
    `python3 /vault/System/scripts/...`, skip the wiki-ingest hop).
-2. **Then write the digest.** Follow `/vault/.claude/skills/tonight/SKILL.md` for the
-   evening digest content and format.
+2. **Always write the digest.** Follow `/vault/.claude/skills/tonight/SKILL.md` for the
+   evening digest content and format, but override its stale "no notes -> stop" rule:
+   even when `/process` finds 0 notes, still create `/vault/Daily/<YYYY-MM-DD>-tonight.md`
+   with a short "No notes processed" digest and verification details.
 
 ## Runtime adaptations (this environment)
 - Vault is at **`/vault`**. Write the digest to

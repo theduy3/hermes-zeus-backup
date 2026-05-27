@@ -1,0 +1,53 @@
+{
+  "jobs": [
+    {
+      "id": "9c1917ef0d11",
+      "name": "Weekly points/cards/rewards briefing",
+      "prompt": "Every Saturday at 8:00 AM Pacific, produce a concise weekly briefing for the user about travel points, credit cards status, and free rewards.\n\nContext known as of 2026-05-23:\n- Family Aeroplan: 65,928\n- Porter VIPorter acct 5590019622: 74,936\n- Avios: 74,467\n- Marriott Bonvoy: 158,606\n- TD Rewards: 39,540\n- CIBC Aventura: 90,931\n- Amex MR: 0\n- Scene+: 0\n- Total: 504,408 points\n- Hotels.ca reward night value: CA$254.67\n- Marriott Bonvoy free night certificates: 2 nights worth up to 35,000 points each, expiring 2027-05-07\n- Upcoming trip: Okanagan Camping Trip 2026 \u2014 Jun 22\u201324 Monk Park campsite #56; Jun 24\u201326 Kelowna wine tour, staying at DoubleTree by Hilton West Kelowna.\n\nTask:\n1. Start with a one-line dashboard: total points, estimated CAD value range if enough data, expiring/urgent rewards, and required actions.\n2. List loyalty balances by program. If no live updated balances are available, say \u201clast known\u201d and use the context above.\n3. List free rewards/certificates/credits known, with expiry dates and best-use recommendation.\n4. List credit-card status and lifecycle reminders if known from memory/session context; if unknown, include a short \u201cmissing info to track\u201d checklist asking for card name, open date, annual-fee date, minimum-spend deadline/progress, credits, and renewal/cancel/downgrade plan.\n5. Flag upcoming redemption opportunities relevant to the known Okanagan trip and current balances.\n6. Give 3\u20135 concrete next actions for this week.\n\nStyle: terse, numbers-first, Telegram-friendly bullets. Do not use tables. Do not recommend carrying balances or paying interest. Clearly label assumptions and uncertainty. Do not make transfers, bookings, applications, cancellations, or redemptions; only recommend next actions.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 6",
+        "display": "0 8 * * 6"
+      },
+      "schedule_display": "0 8 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-26T08:03:29.330752-07:00",
+      "next_run_at": "2026-05-30T08:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5209120497",
+        "chat_name": "Butter - Travel Concierge",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory",
+        "terminal",
+        "file",
+        "skills"
+      ],
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-05-26T08:03:29.331590-07:00"
+}

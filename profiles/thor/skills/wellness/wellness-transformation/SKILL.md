@@ -164,7 +164,16 @@ For users adding meditation to a wellness stack:
 
 ## Daily Reminder Infrastructure
 
-Maintain a `references/daily-reminders.md` with all active cron job IDs, times, and purposes. When the user adds or removes a daily practice, update this reference and the corresponding cron jobs in sync.
+Maintain a `references/daily-reminders.md` with all active cron job IDs, times, purposes, and button callback conventions. When the user adds or removes a daily practice, update this reference and the corresponding cron jobs in sync.
+
+### Reminder Button UX
+
+For Thor Telegram wellness reminders, prefer the compact Water-log pattern:
+- One short check-in line (e.g., `💧 Water check`, `🧘 Meditation check`)
+- One inline button with an explicit logging action (e.g., `✅ Log 500ml`, `✅ Log 20 min`)
+- `no_agent=true` cron job runs a `send_<habit>_button.py` script that sends directly via Telegram Bot API and prints nothing on success
+- Button callback uses the stable `wl:<kind>:<amount>` convention and dispatches to `log_<habit>_button.py`
+- After editing a reminder script, run a syntax check and trigger the cron job once so the user can verify the button format
 
 ## Reference Files
 

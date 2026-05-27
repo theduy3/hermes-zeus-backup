@@ -61,5 +61,6 @@ Cron schedules are interpreted in Pacific local clock time by the scheduler. Nam
 - Water reminder cron jobs run `send_water_button.py` with `no_agent=true`, sending a Telegram inline “✅ Log 500ml” button. Button callbacks use `wl:water:500` and `log_water_button.py` to update the daily hydration total.
 - Protein reminder runs `send_protein_button.py` with `no_agent=true`, sending a Telegram inline “✅ Log protein drink” button. Button callbacks use `wl:protein:50` and `log_protein_button.py` to add a 50g protein drink to the food log and daily totals.
 - Sitz baths: 10–15 min warm water.
+- Meditation reminders run `send_meditation_button.py` with `no_agent=true`, using the compact water-log style: message `🧘 Meditation check` plus inline button `✅ Log 20 min`. Button callbacks use `wl:meditation:20` and `log_meditation_button.py` to write to the monthly meditation log.
 - Meditation: start at 20 min, ramp toward 60 min over time.
 - Intake logging: user must explicitly say “Log” / “Log this” or tap a Telegram Log button. Cron pings are nudges only, not tracked unless user confirms logging.
