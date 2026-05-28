@@ -157,9 +157,9 @@ Fiber ramp (20→30g over 2 weeks), 3L water minimum, 2 kiwis + 2-3 prunes + 1-2
 
 For users adding meditation to a wellness stack:
 - Start with breath awareness at the nostrils — one technique, no complexity
-- Beginner: 20 min, ramp to 60 min over 16 weeks (see `references/meditation-progression.md`)
-- Add body scanning or noting at the 30-minute threshold
-- Never add duration after a missed day — drop back to 20 min
+- Current beginner target: 10 min daily, keep it easy enough to do consistently (see `references/meditation-progression.md`)
+- Add body scanning or noting only after the base habit is stable and sessions lengthen
+- Never add duration after a missed day — return to the current easy target
 - Set a daily cron reminder at a fixed morning time
 
 ## Daily Reminder Infrastructure
@@ -174,6 +174,8 @@ For Thor Telegram wellness reminders, prefer the compact Water-log pattern:
 - `no_agent=true` cron job runs a `send_<habit>_button.py` script that sends directly via Telegram Bot API and prints nothing on success
 - Button callback uses the stable `wl:<kind>:<amount>` convention and dispatches to `log_<habit>_button.py`
 - After editing a reminder script, run a syntax check and trigger the cron job once so the user can verify the button format
+- When the same habit needs different copy/media by time of day, keep the shared sender generic and add thin wrapper scripts (e.g., `send_morning_meditation_button.py`, `send_evening_meditation_button.py`) that set `THOR_MEDITATION_REMINDER_TEXT` / `THOR_MEDITATION_MINUTES` before running the base sender. Then update each cron job to the appropriate wrapper script instead of hardcoding time-specific text in the generic sender.
+- If the user adds a link to a recurring reminder, update **all requested variants** (morning + evening, etc.) and record the link/button details in `references/daily-reminders.md` so later changes don't silently drop it.
 
 ## Reference Files
 

@@ -96,6 +96,7 @@ When the user asks to test a cron job immediately:
    - `last_run_at` / `last_status` changed for the job, and
    - a new file appeared under `~/.hermes/profiles/<profile>/cron/output/<job_id>/`.
 5. If `next_run_at` stays in the past while `.tick.lock` is fresh and specialist subprocesses are still running, the job is in progress — wait and inspect processes/logs. Do **not** remove `.tick.lock` unless it is clearly stale and the user explicitly approves clearing it.
+6. If `hermes --profile <profile> cron tick` returns with no output and the job still has the same `last_run_at` / `last_status`, treat that as **not rerun yet**. Check `hermes --profile <profile> cron status`, `.tick.lock` mtime, and running Hermes/agent processes. Tell the user the job is queued/blocked rather than implying success. Ask before clearing a fresh lock or restarting the gateway.
 
 For cross-profile aggregation jobs, avoid unnecessary nested `hermes --profile ... chat -q` calls unless the job truly needs live reasoning from those profiles; reading their `cron/jobs.json` is faster and less likely to exceed the scheduler window. If a pipeline feeds a downstream script-only job (for example, writing a JSON sidecar that a later job sends as Telegram buttons), prefer deterministic filesystem aggregation over live specialist chats — a hung child profile can prevent the sidecar from being generated, making the downstream job appear to “work” while sending nothing useful.
 

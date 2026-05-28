@@ -42,7 +42,8 @@ def main() -> int:
         "text": TEXT,
         "reply_markup": json.dumps({
             "inline_keyboard": [[
-                {"text": "✅ Done", "callback_data": f"wl:sitz:{MINUTES}"}
+                {"text": "✅ Done", "callback_data": f"wl:sitz:{MINUTES}"},
+                {"text": "More", "callback_data": f"wlm:sitz:{MINUTES}"},
             ]]
         }),
     }

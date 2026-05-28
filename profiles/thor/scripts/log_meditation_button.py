@@ -13,9 +13,9 @@ def hermes_home() -> Path:
 
 def main() -> int:
     try:
-        minutes = int(sys.argv[1]) if len(sys.argv) > 1 else 20
+        minutes = int(sys.argv[1]) if len(sys.argv) > 1 else 10
     except ValueError:
-        minutes = 20
+        minutes = 10
     now = datetime.now(ZoneInfo("America/Vancouver"))
     time_label = now.strftime("%-I:%M %p PT")
     home = hermes_home()

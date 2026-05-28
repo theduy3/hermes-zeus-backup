@@ -41,7 +41,8 @@ def main() -> int:
         "text": TEXT,
         "reply_markup": json.dumps({
             "inline_keyboard": [[
-                {"text": "✅ Log 500ml", "callback_data": "wl:water:500"}
+                {"text": "✅ Log 500ml", "callback_data": "wl:water:500"},
+                {"text": "More", "callback_data": "wlm:water:500"},
             ]]
         }),
     }

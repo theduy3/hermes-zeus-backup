@@ -1,6 +1,6 @@
 For Obsidian, the user wants all newly created notes to go to /Users/theduy/theduyvault/Inbox by default.
 §
-Tasks: Obsidian `- [ ]`; chat `☐ Task (1)`. Separate reminders only for tasks with specific times.
+Tasks: Obsidian `- [ ]`; Done cards; timed only; upcoming 7d; task reminders → family TG group, not DM.
 §
 User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
 §

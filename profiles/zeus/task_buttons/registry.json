@@ -396,5 +396,139 @@
     "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
     "status": "sent",
     "message_id": 297
+  },
+  "a1c153da6ac8ab4e": {
+    "id": "a1c153da6ac8ab4e",
+    "date": "2026-05-27",
+    "title": "Build Cabinet",
+    "text": "Build Cabinet",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/build-cabinet.md",
+    "status": "sent",
+    "message_id": 317
+  },
+  "ee294d7091e29af2": {
+    "id": "ee294d7091e29af2",
+    "date": "2026-05-27",
+    "title": "Pay TD Aeroplan Biz 9716 (due on the 30th)",
+    "text": "Pay TD Aeroplan Biz 9716 (due on the 30th)",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/pay-td-aeroplan-biz-9716-due-on-the-30th.md",
+    "status": "done",
+    "message_id": 318,
+    "done_at": "2026-05-27T16:33:37.869539+00:00",
+    "done_by": "8446251233"
+  },
+  "fd4c4f1f64d530e6": {
+    "id": "fd4c4f1f64d530e6",
+    "date": "2026-05-27",
+    "title": "Weekly Review",
+    "text": "Weekly Review",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/weekly-review.md",
+    "status": "sent",
+    "message_id": 319
+  },
+  "a5964f934e62f56d": {
+    "id": "a5964f934e62f56d",
+    "date": "2026-05-27",
+    "title": "Pay RBC Avion 7760 (due date on the 3rd)",
+    "text": "Pay RBC Avion 7760 (due date on the 3rd)",
+    "source": "Obsidian overdue 2026-05-26",
+    "file_path": "/vault/Tasks/tasks/pay-rbc-avion-7760-due-date-on-the-3rd.md",
+    "status": "done",
+    "message_id": 320,
+    "done_at": "2026-05-27T16:33:33.264440+00:00",
+    "done_by": "8446251233"
+  },
+  "e594542d36af4007": {
+    "id": "e594542d36af4007",
+    "date": "2026-05-27",
+    "title": "Collapse Baby Crib and Move Cabinet",
+    "text": "Collapse Baby Crib and Move Cabinet",
+    "source": "Obsidian overdue 2026-05-25",
+    "file_path": "/vault/Tasks/tasks/collapse-baby-crib-build-cabinet.md",
+    "status": "sent",
+    "message_id": 321
+  },
+  "227f9e0fbfc47d92": {
+    "id": "227f9e0fbfc47d92",
+    "date": "2026-05-27",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian overdue 2026-03-04",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 322
+  },
+  "b44c2c5de0bc32a7": {
+    "id": "b44c2c5de0bc32a7",
+    "date": "2026-05-27",
+    "title": "Set Up Nail Box for Photos",
+    "text": "Set Up Nail Box for Photos",
+    "source": "Obsidian overdue 2026-02-22",
+    "file_path": "/vault/Tasks/tasks/set-up-nail-box-for-photos.md",
+    "status": "sent",
+    "message_id": 323
+  },
+  "660b5fde967ed6da": {
+    "id": "660b5fde967ed6da",
+    "date": "2026-05-27",
+    "title": "KPI Tip",
+    "text": "KPI Tip",
+    "source": "Obsidian overdue 2026-02-20",
+    "file_path": "/vault/Tasks/tasks/kpi-tip.md",
+    "status": "sent",
+    "message_id": 324
+  },
+  "fd1440872b69a99c": {
+    "id": "fd1440872b69a99c",
+    "date": "2026-05-27",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian overdue 2026-02-17",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 325
+  },
+  "7174a9f689b98d17": {
+    "id": "7174a9f689b98d17",
+    "date": "2026-05-27",
+    "title": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "text": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-laviestella-taxes-strata.md",
+    "status": "sent",
+    "message_id": 328
+  },
+  "ebf5c3624006f597": {
+    "id": "ebf5c3624006f597",
+    "date": "2026-05-27",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 329
+  },
+  "19cb44de0574b2b8": {
+    "id": "19cb44de0574b2b8",
+    "date": "2026-05-27",
+    "title": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "text": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/create-satisfaction-survey-form-fluentcrm.md",
+    "status": "sent",
+    "message_id": 330
+  },
+  "558a3ab6c69a516a": {
+    "id": "558a3ab6c69a516a",
+    "date": "2026-05-27",
+    "title": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "text": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "source": "Obsidian overdue 2026-02-04",
+    "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
+    "status": "sent",
+    "message_id": 331
   }
 }

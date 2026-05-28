@@ -3,7 +3,7 @@
   "created_at": "2026-05-21T13:21:11Z",
   "trip": "Quebec/East Coast detected from Daily 2026-05-21: Laval/QC and Quebec/QC weather plus salon visit at 6508 Beaubien Est Montreal at 3:00PM",
   "timezone_during_trip": "America/Toronto",
-  "return_date": null,
+  "return_date": "2026-06-15",
   "jobs_changed": [
     {
       "id": "e6711b998b07",

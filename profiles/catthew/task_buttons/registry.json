@@ -1,0 +1,55 @@
+{
+  "9ead9fe08bc81032": {
+    "id": "9ead9fe08bc81032",
+    "date": "2026-05-27",
+    "title": "Victoria: Music class every Wednesday, 10:30 AM",
+    "text": "Victoria: Music class every Wednesday, 10:30 AM",
+    "source": "Household event today",
+    "due_date": "2026-05-27",
+    "line": 5,
+    "kind": "event",
+    "status": "canceled",
+    "message_id": 367,
+    "canceled_reason": "Canceled for today by Sir"
+  },
+  "3fc29c61089c1a63": {
+    "id": "3fc29c61089c1a63",
+    "date": "2026-05-27",
+    "title": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-05-27",
+    "line": 6,
+    "kind": "event",
+    "status": "done",
+    "message_id": 368,
+    "done_at": "2026-05-27T22:28:27.114002+00:00",
+    "done_by": "8446251233"
+  },
+  "80065777b72daa8a": {
+    "id": "80065777b72daa8a",
+    "date": "2026-05-27",
+    "title": "Finish the gift wrapping",
+    "text": "Finish the gift wrapping",
+    "source": "Household task",
+    "due_date": "2026-05-27",
+    "line": 4,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 369
+  },
+  "28976beb01ceea9b": {
+    "id": "28976beb01ceea9b",
+    "date": "2026-05-27",
+    "title": "Madam beauty session at Mary’s at 3:15 PM",
+    "text": "Madam beauty session at Mary’s at 3:15 PM",
+    "source": "Household task",
+    "due_date": "2026-05-27",
+    "line": 5,
+    "kind": "task",
+    "status": "done",
+    "message_id": 390,
+    "done_at": "2026-05-28T03:42:53.501064+00:00",
+    "done_by": "8446251233"
+  }
+}

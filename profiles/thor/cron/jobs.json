@@ -20,15 +20,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:18.568357+00:00",
-      "next_run_at": "2026-05-27T07:00:00-07:00",
-      "last_run_at": "2026-05-26T07:00:30.204576-07:00",
+      "next_run_at": "2026-05-28T07:00:00-07:00",
+      "last_run_at": "2026-05-27T07:00:45.318783-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -62,15 +62,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:28.759162+00:00",
-      "next_run_at": "2026-05-27T10:00:00-07:00",
-      "last_run_at": "2026-05-26T10:01:01.634030-07:00",
+      "next_run_at": "2026-05-28T10:00:00-07:00",
+      "last_run_at": "2026-05-27T10:00:54.152483-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -104,15 +104,15 @@
       "schedule_display": "0 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:36.036225+00:00",
-      "next_run_at": "2026-05-27T13:00:00-07:00",
-      "last_run_at": "2026-05-26T13:00:23.424240-07:00",
+      "next_run_at": "2026-05-28T13:00:00-07:00",
+      "last_run_at": "2026-05-27T13:00:58.754983-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -146,15 +146,15 @@
       "schedule_display": "0 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:43.651359+00:00",
-      "next_run_at": "2026-05-26T22:00:00-07:00",
-      "last_run_at": "2026-05-25T22:01:06.960430-07:00",
+      "next_run_at": "2026-05-27T22:00:00-07:00",
+      "last_run_at": "2026-05-26T22:00:35.602985-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -188,15 +188,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:43.159219+00:00",
-      "next_run_at": "2026-05-27T09:00:00-07:00",
-      "last_run_at": "2026-05-26T09:00:40.893956-07:00",
+      "next_run_at": "2026-05-28T09:00:00-07:00",
+      "last_run_at": "2026-05-27T09:00:06.854344-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -230,15 +230,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:50.382696+00:00",
-      "next_run_at": "2026-05-27T21:00:00-07:00",
-      "last_run_at": "2026-05-26T21:01:14.855611-07:00",
+      "next_run_at": "2026-05-28T21:00:00-07:00",
+      "last_run_at": "2026-05-27T21:00:50.221197-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -255,13 +255,13 @@
     {
       "id": "2616b50dddac",
       "name": "\ud83e\uddd8 Meditation - 7:15AM Pacific",
-      "prompt": "Send a Thor meditation reminder with a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
+      "prompt": "Send Thor morning meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "send_meditation_button.py",
+      "script": "send_morning_meditation_button.py",
       "no_agent": true,
       "context_from": null,
       "schedule": {
@@ -272,15 +272,15 @@
       "schedule_display": "15 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:06:21.288962+00:00",
-      "next_run_at": "2026-05-27T07:15:00-07:00",
-      "last_run_at": "2026-05-26T08:05:19.709438-07:00",
+      "next_run_at": "2026-05-28T07:15:00-07:00",
+      "last_run_at": "2026-05-27T07:16:05.858661-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -356,15 +356,15 @@
       "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T16:54:07.561293+00:00",
-      "next_run_at": "2026-05-27T14:00:00-07:00",
-      "last_run_at": "2026-05-26T14:00:44.181627-07:00",
+      "next_run_at": "2026-05-28T14:00:00-07:00",
+      "last_run_at": "2026-05-27T14:01:19.493741-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -398,15 +398,15 @@
       "schedule_display": "0 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:09.360396+00:00",
-      "next_run_at": "2026-05-27T16:00:00-07:00",
-      "last_run_at": "2026-05-26T16:00:45.082210-07:00",
+      "next_run_at": "2026-05-28T16:00:00-07:00",
+      "last_run_at": "2026-05-27T16:01:00.930793-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -440,15 +440,15 @@
       "schedule_display": "0 19 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:10.364301+00:00",
-      "next_run_at": "2026-05-27T19:00:00-07:00",
-      "last_run_at": "2026-05-26T19:00:53.841821-07:00",
+      "next_run_at": "2026-05-28T19:00:00-07:00",
+      "last_run_at": "2026-05-27T19:00:24.180512-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -465,13 +465,13 @@
     {
       "id": "3e512762661c",
       "name": "\ud83e\uddd8 Meditation - 10:15PM Pacific",
-      "prompt": "Send a Thor evening meditation reminder with a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
+      "prompt": "Send Thor evening meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "send_meditation_button.py",
+      "script": "send_evening_meditation_button.py",
       "no_agent": true,
       "context_from": null,
       "schedule": {
@@ -482,15 +482,15 @@
       "schedule_display": "15 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:17:08.711093+00:00",
-      "next_run_at": "2026-05-26T22:15:00-07:00",
-      "last_run_at": "2026-05-26T08:06:20.175786-07:00",
+      "next_run_at": "2026-05-27T22:15:00-07:00",
+      "last_run_at": "2026-05-26T22:15:42.760763-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -503,7 +503,93 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "5d9328231c7d",
+      "name": "\ud83c\udfc3 Exercise - 3PM Pacific",
+      "prompt": "Send Thor daily 3PM exercise reminder with the YouTube exercise link. The script handles direct Telegram delivery and stays silent on success.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "send_exercise_link.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 15 * * *",
+        "display": "0 15 * * *"
+      },
+      "schedule_display": "0 15 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-27T11:16:49.565000-07:00",
+      "next_run_at": "2026-05-28T15:00:00-07:00",
+      "last_run_at": "2026-05-27T15:00:40.204850-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "b20602062ff4",
+      "name": "\ud83e\uddd8 Evening Stretch - 9PM Pacific",
+      "prompt": "Send Thor daily 9PM evening stretch reminder with the YouTube guide link. The script handles direct Telegram delivery and stays silent on success.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "send_evening_stretch_link.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "display": "0 21 * * *"
+      },
+      "schedule_display": "0 21 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-27T19:44:23.439951-07:00",
+      "next_run_at": "2026-05-28T21:00:00-07:00",
+      "last_run_at": "2026-05-27T21:00:50.128951-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-05-26T21:01:14.859400-07:00"
+  "updated_at": "2026-05-27T21:00:50.221693-07:00"
 }

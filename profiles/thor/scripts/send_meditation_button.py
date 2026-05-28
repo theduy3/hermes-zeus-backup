@@ -13,7 +13,7 @@ from pathlib import Path
 
 CHAT_ID = os.environ.get("THOR_TELEGRAM_CHAT_ID", "8446251233")
 TEXT = os.environ.get("THOR_MEDITATION_REMINDER_TEXT", "🧘 Meditation check")
-MINUTES = os.environ.get("THOR_MEDITATION_MINUTES", "20")
+MINUTES = os.environ.get("THOR_MEDITATION_MINUTES", "10")
 
 
 def load_env(path: Path) -> None:
@@ -42,7 +42,8 @@ def main() -> int:
         "text": TEXT,
         "reply_markup": json.dumps({
             "inline_keyboard": [[
-                {"text": f"✅ Log {MINUTES} min", "callback_data": f"wl:meditation:{MINUTES}"}
+                {"text": f"✅ Log {MINUTES} min", "callback_data": f"wl:meditation:{MINUTES}"},
+                {"text": "More", "callback_data": f"wlm:meditation:{MINUTES}"},
             ]]
         }),
     }

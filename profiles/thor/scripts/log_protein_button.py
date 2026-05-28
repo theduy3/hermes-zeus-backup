@@ -2,7 +2,7 @@
 """Log a protein drink button click into Thor's monthly food log."""
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -100,19 +100,33 @@ def upsert_protein(section: str, time_label: str, protein_g: int, calories_add: 
     return section, new_calories, new_protein, water
 
 
+def parse_log_datetime(raw: str | None) -> datetime:
+    """Return the reminder message datetime in PT, falling back to now."""
+    tz = ZoneInfo("America/Vancouver")
+    if raw:
+        try:
+            dt = datetime.fromisoformat(raw)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(tz)
+        except ValueError:
+            pass
+    return datetime.now(tz)
+
+
 def main() -> int:
     try:
         protein_g = int(sys.argv[1]) if len(sys.argv) > 1 else 50
     except ValueError:
         protein_g = 50
     calories_add = int(round(protein_g * 5)) if protein_g else DEFAULT_CALORIES
-    now = datetime.now(ZoneInfo("America/Vancouver"))
-    time_label = now.strftime("%-I:%M %p PT")
+    log_dt = parse_log_datetime(sys.argv[2] if len(sys.argv) > 2 else None)
+    time_label = log_dt.strftime("%-I:%M %p PT")
     home = hermes_home()
-    log_path = home / "logs" / f"food-log-{now:%Y-%m}.md"
+    log_path = home / "logs" / f"food-log-{log_dt:%Y-%m}.md"
     log_path.parent.mkdir(parents=True, exist_ok=True)
-    text = log_path.read_text(encoding="utf-8") if log_path.exists() else f"# Thor Food & Measurement Log — {now:%B %Y}\n"
-    header = day_header(now)
+    text = log_path.read_text(encoding="utf-8") if log_path.exists() else f"# Thor Food & Measurement Log — {log_dt:%B %Y}\n"
+    header = day_header(log_dt)
     found = split_section(text, header)
     if found is None:
         section = (

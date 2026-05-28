@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@agentmemory/mcp": "^0.9.22"
+  }
+}

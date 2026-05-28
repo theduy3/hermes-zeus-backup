@@ -22,15 +22,15 @@
       "schedule_display": "15 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-05-27T03:15:00-07:00",
-      "last_run_at": "2026-05-26T03:18:57.222773-07:00",
+      "next_run_at": "2026-05-28T03:15:00-07:00",
+      "last_run_at": "2026-05-27T03:17:37.463751-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -121,17 +121,17 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-05-27T21:00:00-07:00",
-      "last_run_at": "2026-05-26T21:00:49.625496-07:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: 'NoneType' object is not iterable",
+      "next_run_at": "2026-05-28T21:00:00-07:00",
+      "last_run_at": "2026-05-27T21:02:22.421575-07:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -170,15 +170,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 134
+        "completed": 230
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-25T11:44:10.692069-07:00",
-      "next_run_at": "2026-05-26T22:00:00-07:00",
-      "last_run_at": "2026-05-26T21:50:50.301480-07:00",
+      "next_run_at": "2026-05-27T22:00:00-07:00",
+      "last_run_at": "2026-05-27T21:50:22.972947-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -197,5 +197,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-05-26T21:50:50.302158-07:00"
+  "updated_at": "2026-05-27T21:50:22.973479-07:00"
 }

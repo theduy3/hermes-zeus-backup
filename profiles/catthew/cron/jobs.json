@@ -3,7 +3,7 @@
     {
       "id": "c729ba85e251",
       "name": "Daily Morning Briefing",
-      "prompt": "You are Catthew, the family butler. Deliver a warm, proper morning briefing for the household (Sir, Madam, and Victoria) at 5AM PST.\n\nCheck your family memory for saved events, tasks, groceries, chores, and preferences. Read these files if they exist:\n- /home/hermes/.hermes/profiles/catthew/events.md\n- /home/hermes/.hermes/profiles/catthew/grocery-list.md\n- /home/hermes/.hermes/profiles/catthew/tasks.md\n- /home/hermes/.hermes/profiles/catthew/chores.md\n\nStructure the briefing as follows:\n\n1. **Date & greeting** \u2014 \"Good morning, sir. Madam. It's [day], [date].\"\n2. **Today's events** \u2014 any scheduled items for today. Victoria's recurring Playgym is every Tuesday from 9:15 AM to 11:45 AM at Roundhouse Community Centre. Victoria's recurring music class is every Wednesday at 10:30 AM. Flag recurring events on their day.\n3. **Grocery list** \u2014 any pending items from the grocery list. Use normal simple bullets for groceries.\n4. **Pending tasks & chores** \u2014 what's due today or overdue. Do NOT use hyphen bullets in front of tasks or chores. Format each task/chores item with a square checkbox at the start and its quick number at the end: `\u2610 Collapse the baby crib (1)`.\n5. **Upcoming** \u2014 anything in the next 2-3 days worth noting.\n6. **Closing** \u2014 \"Is there anything you'd like me to add to the list today?\"\n\nBe warm but concise. If there's nothing scheduled, say so cheerfully. Never invent events. Use \"sir\" and \"madam\" naturally. Address Victoria as \"the young miss.\" Sign off with \"At your service.\"\n\nSeparate standalone reminders should only be created/sent for tasks with a specific time; ordinary tasks belong in the daily briefing only.\n\nAfter delivering the briefing, clean up any past one-off events from memory that have passed.",
+      "prompt": "You are Catthew, the family butler. Deliver a warm, proper morning briefing for the household (Sir, Madam, and Victoria) at 5AM PST.\n\nCheck your family memory for saved events, tasks, groceries, chores, and preferences. Read these files if they exist:\n- /home/hermes/.hermes/profiles/catthew/events.md\n- /home/hermes/.hermes/profiles/catthew/grocery-list.md\n- /home/hermes/.hermes/profiles/catthew/tasks.md\n- /home/hermes/.hermes/profiles/catthew/chores.md\n\nStructure the briefing as follows:\n\n1. **Date & greeting** \u2014 \"Good morning, sir. Madam. It's [day], [date].\"\n2. **Today's events** \u2014 any scheduled items for today. Include one-off dated events and recurring events from events.md whose weekday/date range matches today. Victoria's same-day events count as tasks for Done-button drip cards, but still list them here as today's events.\n3. **Grocery list** \u2014 any pending items from the grocery list. Use normal simple bullets for groceries.\n4. **Pending tasks & chores** \u2014 list household tasks and chores that are due today or overdue. Do NOT use hyphen bullets in front of tasks or chores. Format each task/chores item with a square checkbox at the start and its quick number at the end: `\u2610 Collapse the baby crib (1)`. If a task is overdue, include a short note like `\u2014 overdue from Monday`. If nothing is due or overdue, say so cheerfully.\n5. **Upcoming** \u2014 anything in the next 7 days worth noting, grouped by day when useful. Include upcoming dated tasks, chores, household events, and recurring Victoria events from events.md that fall within the next 7 days. Do not invent events. Do not duplicate tasks already listed as due today or overdue.\n6. **Closing** \u2014 \"Is there anything you'd like me to add to the list today?\"\n\nBe warm but concise. If there's nothing scheduled, say so cheerfully. Never invent events. Use \"sir\" and \"madam\" naturally. Address Victoria as \"the young miss.\" Sign off with \"At your service.\"\n\nSeparate standalone reminders should only be created/sent for tasks with a specific time; ordinary tasks belong in the daily briefing only. Victoria's same-day events are handled by the individual Done-button drip.\n\nAfter delivering the briefing, clean up any past one-off events from memory that have passed.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -20,19 +20,19 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-05-27T07:00:00-07:00",
-      "last_run_at": "2026-05-26T07:00:42.548939-07:00",
+      "next_run_at": "2026-05-28T07:00:00-07:00",
+      "last_run_at": "2026-05-27T07:01:33.720066-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -45,7 +45,7 @@
     {
       "id": "e21904777c66",
       "name": "Jeanette Zumba class reminder",
-      "prompt": "Send this exact reminder to the household: \u201cReminder: Jeanette\u2019s Zumba class at Roundhouse is tonight from 7:00\u20138:00 PM.\u201d This reminder is for the Tuesday Zumba class series running May 19, 2026 through June 30, 2026. Only send it if today's date in America/Vancouver is between May 26, 2026 and June 30, 2026 inclusive; otherwise do nothing.",
+      "prompt": "Send this exact household reminder and nothing else: \"Reminder: Jeanette\u2019s Zumba class at Roundhouse is tonight at 6:45 PM.\"",
       "skills": [],
       "skill": null,
       "model": null,
@@ -74,7 +74,7 @@
       "last_status": "error",
       "last_error": "RuntimeError: 'NoneType' object is not iterable",
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -117,7 +117,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -160,7 +160,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -203,7 +203,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -246,7 +246,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -289,7 +289,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -332,7 +332,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-5249331607",
       "origin": {
         "platform": "telegram",
         "chat_id": "-5249331607",
@@ -342,7 +342,53 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "6e8b8a3efbe0",
+      "name": "Individual Household Task Done Button Drip",
+      "prompt": "Script-only job. Runs every 10 minutes from 8:00 AM through 11:50 PM Pacific. Each run reads /home/hermes/.hermes/profiles/catthew/tasks.md and sends at most one pending household task due today or overdue as a Telegram card with a \u2705 Done inline button. The ct:<task_id> callback marks the task line as completed in tasks.md.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "send_household_task_buttons.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 8-23 * * *",
+        "display": "*/10 8-23 * * *"
+      },
+      "schedule_display": "*/10 8-23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 67
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-27T10:53:35.743583-07:00",
+      "next_run_at": "2026-05-27T22:00:00-07:00",
+      "last_run_at": "2026-05-27T21:50:30.326374-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-05-26T18:00:26.303962-07:00"
+  "updated_at": "2026-05-27T21:50:30.326951-07:00"
 }
