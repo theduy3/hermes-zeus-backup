@@ -35,6 +35,17 @@ Use this skill whenever Sir asks Catthew to add, display, revise, schedule, or s
    - If Sir corrects the Daily Morning Briefing format, update the `Daily Morning Briefing` cron prompt, then verify the cron job content reflects the correction.
    - Keep the prompt concise and explicit about grocery vs task formatting.
 
+## Recurring household routines/checks
+
+Use this when Sir asks to “create this routine,” “every Sunday,” or similar recurring household checks.
+
+- If the routine content is missing, ask for the routine name, time, and task list before scheduling.
+- If Sir provides enough intent and cadence, create a self-contained cron job rather than merely describing the plan.
+- Interpret household recurring checks in Pacific time unless Sir says otherwise; verify the `next_run_at` in the cron response before confirming.
+- Cron prompts must be self-contained because future runs have no chat context. Include the target source, decision criteria, desired output format, and “do not create or modify cron jobs.”
+- For store/app sale checks that may be blocked by Cloudflare or app-only access, instruct the cron job to try the official website first, then web search, and report `Active / Not active / Unable to verify` with source URLs.
+- Session reference: `references/recurring-sale-checks.md` captures the Save-On-Foods “1.49 Day Tuesday” pattern.
+
 ## Daily Morning Briefing formatting
 
 Preferred sections:

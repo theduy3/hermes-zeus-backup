@@ -51,5 +51,81 @@
     "message_id": 390,
     "done_at": "2026-05-28T03:42:53.501064+00:00",
     "done_by": "8446251233"
+  },
+  "df4aa2a1aa9d33f0": {
+    "id": "df4aa2a1aa9d33f0",
+    "date": "2026-05-28",
+    "title": "Victoria: Playgym every Thursday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Thursday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-05-28",
+    "line": 7,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 407
+  },
+  "1263a583cb8f811f": {
+    "id": "1263a583cb8f811f",
+    "date": "2026-05-28",
+    "title": "Build the cabinet",
+    "text": "Build the cabinet",
+    "source": "Household task",
+    "due_date": "2026-05-28",
+    "line": 10,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 408
+  },
+  "8d8c292ef988001d": {
+    "id": "8d8c292ef988001d",
+    "date": "2026-05-28",
+    "title": "Collapse the baby crib",
+    "text": "Collapse the baby crib",
+    "source": "Household task",
+    "due_date": "2026-05-28",
+    "line": 8,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 409
+  },
+  "59c20c7cc2f2d91b": {
+    "id": "59c20c7cc2f2d91b",
+    "date": "2026-05-28",
+    "title": "Iron and alter baby's dress",
+    "text": "Iron and alter baby's dress",
+    "source": "Household task",
+    "due_date": "2026-05-28",
+    "line": 11,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 410
+  },
+  "d75e674e634a0512": {
+    "id": "d75e674e634a0512",
+    "date": "2026-05-28",
+    "title": "Move the current cabinet from the dining room to the master bedroom",
+    "text": "Move the current cabinet from the dining room to the master bedroom",
+    "source": "Household task",
+    "due_date": "2026-05-28",
+    "line": 9,
+    "kind": "task",
+    "status": "done",
+    "message_id": 411,
+    "done_at": "2026-05-28T20:03:54.313977+00:00",
+    "done_by": "8446251233"
+  },
+  "39d156cc582a2218": {
+    "id": "39d156cc582a2218",
+    "date": "2026-05-28",
+    "title": "Finish the gift wrapping",
+    "text": "Finish the gift wrapping",
+    "source": "Household task overdue 2026-05-27",
+    "due_date": "2026-05-27",
+    "line": 4,
+    "kind": "task",
+    "status": "done",
+    "message_id": 412,
+    "done_at": "2026-05-28T20:03:52.409051+00:00",
+    "done_by": "8446251233"
   }
 }
