@@ -28,6 +28,7 @@ Use this skill whenever Sir asks Catthew to add, display, revise, schedule, or s
 4. **Task delivery preference.**
    - Send household task reminders and task-containing briefings to the family Telegram group (`telegram:-5249331607`, “Catthew - the Butler”), not Sir’s private DM.
    - List today and overdue household tasks inside the Daily Morning Briefing under **Pending tasks & chores**.
+   - Include Google Calendar events in the daily agenda when Google Workspace auth is connected/available; do not rely only on local `events.md` if calendar access exists.
    - If individual Telegram Done-button cards are also enabled, treat them as supplemental; do not remove today/overdue tasks from the briefing.
    - Create or keep a separate reminder only when Sir gives a specific time/date-time, e.g. “9 AM,” “tonight at 6,” or “May 25 at 9:00.”
 

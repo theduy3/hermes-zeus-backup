@@ -32,6 +32,12 @@ update MOCs, archive to Sources/, update `wiki-index.md` + `wiki-log.md`).
 - **No subagents/Task tool.** Process sources **sequentially**, one at a time.
 - **Search/dedup:** there is no qmd here. Use `rg` over `/vault/Notes` and
   `/vault/System/wiki-index.md` to check whether a page already exists before creating.
+- **Markdown sniffing for odd filenames:** Inbox captures may be Markdown even when the
+  filename has no `.md` suffix (or has a long title fragment that `os.path.splitext`
+  treats as an extension). Before treating a non-`.md` Inbox item as binary/OCR input,
+  read/sniff the first bytes when possible. If it starts with YAML frontmatter (`---`) or
+  otherwise contains Markdown text from a web capture, process it as a normal Markdown
+  source and archive/move the original out of Inbox after creating the source archive.
 - Enforce the **200-byte UTF-8 filename cap** for all basenames (5-byte reserve for
   collision suffixes), per the canonical command.
 - Use the **terminal** tool (`rg`, `mv`, `ls`), the **file** tool (read/write/edit
@@ -77,12 +83,22 @@ exact `chown` command needed. Still create wiki pages in `Notes/` (usually writa
 
 ### Terminal approval in headless cron
 Terminal commands that touch files outside the working directory, delete files, or run
-Python scripts may be flagged for **approval** (`pending_approval: true`). In a
-headless cron job there is no user to approve — these commands may silently fail,
+### Terminal approval in headless cron
+Terminal commands that touch files outside the working directory, delete files, or run Python scripts may be flagged for **approval** (`pending_approval: true`). In a headless cron job there is no user to approve — these commands may silently fail,
 partially execute, or have unpredictable results. **Prefer `write_file` and `patch`
 tools over terminal for all file creation and editing.** Use terminal only for
 read-only operations (`ls`, `stat`, `rg` searches). Avoid `rm` — if you must remove a
-file, use `patch` with `replace_all` to empty it, or leave it and note it in the
+file, use `patch` with `replace_all` to empty it, or leave it and note it in the summary.
+
+### Root-owned Inbox markdown sources
+Markdown captures in `Inbox/` can be owned by `root:root` while the `Inbox/` directory itself is writable by `hermes`. In that case, patching frontmatter may fail or be undesirable, but a directory-level `rename`/move can still work because moving depends on directory permissions, not file ownership. Safe pattern after creating the source archive page in `Notes/`:
+1. Create `Notes/<Source Title> Source.md` with `ingested: YYYY-MM-DD` and `## Pages Updated`.
+2. Move the root-owned Inbox original to `Notes/Archived Inbox Originals/` (collision-safe basename) to prevent repeat ingestion while preserving raw content.
+3. Verify `Inbox/` is empty or contains only unprocessed files that intentionally remain.
+4. Mention the Notes fallback and original-preservation location in the final summary.
+
+### Metadata-only URL captures
+If an Inbox source contains only a URL and remote fetch/extraction is unavailable or times out in headless cron, do not fabricate a wiki page from the title alone. Create a metadata-only source archive in `Notes/` with `Pages Updated: None`, move/archive the original out of `Inbox/`, and report that no wiki page was created because the source body was unavailable.
 summary.
 
 ### read_file tool degrades on permission-denied files
@@ -92,3 +108,6 @@ still exists on disk (`os.path.exists` returns True). **Fallback:** use
 `search_files(target='content')` to grep the file, or `execute_code` with
 `os.path.exists` + `os.path.getsize` to confirm presence. Do not retry `read_file`
 more than twice on the same path — switch to the fallback.
+
+### Verify infrastructure edits by searching exact new artifacts
+After updating `System/wiki-index.md`, `System/wiki-log.md`, or MOCs, verify with an exact search for the new page/source title, not just by trusting a write succeeded. When patching index rows, do not assume the row's tag/type text from memory; first inspect the actual neighboring row or use an exact old_string from the current file. If the exact artifact is missing after a broad rewrite, patch it in with a small targeted replacement and verify again.

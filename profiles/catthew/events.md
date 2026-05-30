@@ -7,6 +7,9 @@
 - Victoria: Playgym every Thursday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27
 - Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27
 
+## One-off
+- 2026-05-29 12:00 PM–1:00 PM: Dolsang pick up, 3930 Pine St., Burnaby. Calendar/account: jeanetteleemba@gmail.com. Invitee: duynt1989@gmail.com. Reminder: 10 minutes before.
+
 ## Notes
 - Parent and Tot Gym pricing: drop-in fee $4.00; 10-visit pass $33.00.
 - Dates are subject to change without notice.

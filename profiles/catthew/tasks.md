@@ -5,7 +5,7 @@
 - [x] Madam beauty session at Mary’s at 3:15 PM
 
 ## Thu, May 28
-- [ ] Collapse the baby crib
+- [x] Collapse the baby crib
 - [x] Move the current cabinet from the dining room to the master bedroom
-- [ ] Build the cabinet
-- [ ] Iron and alter baby's dress
+- [x] Build the cabinet
+- [x] Iron and alter baby's dress

@@ -83,16 +83,12 @@ def upsert_water(section: str, time_label: str, amount: int) -> tuple[str, int, 
 
 
 def parse_log_datetime(raw: str | None) -> datetime:
-    """Return the reminder message datetime in PT, falling back to now."""
+    """Return the actual click time in PT.
+
+    The gateway may pass the reminder message timestamp for older buttons, but
+    delayed clicks should count for the day the user pressed the button.
+    """
     tz = ZoneInfo("America/Vancouver")
-    if raw:
-        try:
-            dt = datetime.fromisoformat(raw)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt.astimezone(tz)
-        except ValueError:
-            pass
     return datetime.now(tz)
 
 

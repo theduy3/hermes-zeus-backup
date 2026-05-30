@@ -61,8 +61,10 @@
     "due_date": "2026-05-28",
     "line": 7,
     "kind": "event",
-    "status": "sent",
-    "message_id": 407
+    "status": "done",
+    "message_id": 407,
+    "done_at": "2026-05-29T14:47:31.541048+00:00",
+    "done_by": "8446251233"
   },
   "1263a583cb8f811f": {
     "id": "1263a583cb8f811f",
@@ -73,8 +75,10 @@
     "due_date": "2026-05-28",
     "line": 10,
     "kind": "task",
-    "status": "sent",
-    "message_id": 408
+    "status": "done",
+    "message_id": 408,
+    "done_at": "2026-05-29T14:47:34.077179+00:00",
+    "done_by": "8446251233"
   },
   "8d8c292ef988001d": {
     "id": "8d8c292ef988001d",
@@ -85,8 +89,10 @@
     "due_date": "2026-05-28",
     "line": 8,
     "kind": "task",
-    "status": "sent",
-    "message_id": 409
+    "status": "done",
+    "message_id": 409,
+    "done_at": "2026-05-29T14:47:35.265547+00:00",
+    "done_by": "8446251233"
   },
   "59c20c7cc2f2d91b": {
     "id": "59c20c7cc2f2d91b",
@@ -97,8 +103,10 @@
     "due_date": "2026-05-28",
     "line": 11,
     "kind": "task",
-    "status": "sent",
-    "message_id": 410
+    "status": "done",
+    "message_id": 410,
+    "done_at": "2026-05-29T14:47:38.969915+00:00",
+    "done_by": "8446251233"
   },
   "d75e674e634a0512": {
     "id": "d75e674e634a0512",
