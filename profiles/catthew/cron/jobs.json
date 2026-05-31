@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-05-30T07:00:00-07:00",
-      "last_run_at": "2026-05-29T07:00:49.574278-07:00",
+      "next_run_at": "2026-05-31T07:00:00-07:00",
+      "last_run_at": "2026-05-30T07:00:52.040869-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -327,15 +327,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 259
+        "completed": 354
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-05-29T22:10:00-07:00",
-      "last_run_at": "2026-05-29T22:00:00.882587-07:00",
+      "next_run_at": "2026-05-30T22:00:00-07:00",
+      "last_run_at": "2026-05-30T21:50:07.807947-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -398,7 +398,93 @@
       ],
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "60557a28e2de",
+      "name": "Adavid The Victor departure reminder",
+      "prompt": "Household reminder for Adavid: It is time to head to The Victor with the packed items: flowers, gifts, and Korean deco. Do not create or modify cron jobs. Keep the reminder concise and suitable for the family Telegram group.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-05-31T10:30:00-07:00",
+        "display": "once at 2026-05-31 10:30"
+      },
+      "schedule_display": "once at 2026-05-31 10:30",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-30T21:27:02.585895-07:00",
+      "next_run_at": "2026-05-31T10:30:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "81c40ab1e74f",
+      "name": "Jeanette head out to event reminder",
+      "prompt": "Household reminder for Jeanette: It is time to head out now. Dad will pick up Jeanette and Victoria. Bring the baby food for the event: fruit, pancake, and \ub5a1\ubee5. When arriving at the venue, remember to set up the dolsang. Do not create or modify cron jobs. Keep the reminder concise and suitable for the family Telegram group.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-05-31T11:45:00-07:00",
+        "display": "once at 2026-05-31 11:45"
+      },
+      "schedule_display": "once at 2026-05-31 11:45",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-30T21:29:09.349135-07:00",
+      "next_run_at": "2026-05-31T11:45:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-05-29T22:00:00.883278-07:00"
+  "updated_at": "2026-05-30T21:50:07.808585-07:00"
 }

@@ -135,5 +135,17 @@
     "message_id": 412,
     "done_at": "2026-05-28T20:03:52.409051+00:00",
     "done_by": "8446251233"
+  },
+  "e89bc24c7ec5ae4d": {
+    "id": "e89bc24c7ec5ae4d",
+    "date": "2026-05-30",
+    "title": "Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-05-30",
+    "line": 8,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 418
   }
 }

@@ -209,7 +209,7 @@ One meal per week, not one day. Rules:
 - For IF users, ensure protein targets are achievable in the eating window (two meals = ~75g each)
 - Shoulder limitations aren't always overhead — verify ROM with the user for each exercise class
 - **Never log cron job responses as intake** unless the user explicitly says "Log." Cron pings are nudges, not tracked events. Only record food/water when commanded.
-- **Audit wellness button date bugs actively.** If the user says water/food logs were marked for yesterday/today incorrectly, inspect the actual daily log and callback/audit trail before answering. Delayed clicks on old reminder buttons should count for the day the user pressed the button, not the original reminder message date. Correct the affected day totals and patch the button handler/script so the same date drift cannot recur.
+- **Audit wellness button/manual date bugs actively.** If the user says water/food logs were marked for yesterday/today incorrectly, inspect the actual daily log and callback/audit trail before answering. If the user says they are “completing” a specific prior date, log/correct entries under that date even if the current clock has rolled past midnight. Delayed clicks on old reminder buttons should count for the day the user pressed the button, not the original reminder message date. Correct the affected day totals and patch the button handler/script so the same date drift cannot recur.
 - Respect gym time limits — never suggest extending sessions beyond the user's stated ceiling
 - **Planks are home-only** unless the user explicitly wants them in the gym
 - When a user requests a "today plan," give only that day's schedule — not the full week

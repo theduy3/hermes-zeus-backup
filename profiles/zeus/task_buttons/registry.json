@@ -746,5 +746,117 @@
     "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
     "status": "sent",
     "message_id": 360
+  },
+  "f765e8bd57a87307": {
+    "id": "f765e8bd57a87307",
+    "date": "2026-05-30",
+    "title": "One Stock Learning",
+    "text": "One Stock Learning",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/one-stock-learning.md",
+    "status": "sent",
+    "message_id": 363
+  },
+  "59c86eed9c03bfff": {
+    "id": "59c86eed9c03bfff",
+    "date": "2026-05-30",
+    "title": "Portfolio Update",
+    "text": "Portfolio Update",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/portfolio-update.md",
+    "status": "sent",
+    "message_id": 364
+  },
+  "ac5d30f3ee896785": {
+    "id": "ac5d30f3ee896785",
+    "date": "2026-05-30",
+    "title": "Check Clover Software Plan Pricing",
+    "text": "Check Clover Software Plan Pricing",
+    "source": "Obsidian overdue 2026-05-29",
+    "file_path": "/vault/Tasks/tasks/check-clover-software-plan-pricing.md",
+    "status": "sent",
+    "message_id": 365
+  },
+  "39030250de3f6300": {
+    "id": "39030250de3f6300",
+    "date": "2026-05-30",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian overdue 2026-03-04",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 366
+  },
+  "df7b6ccdf2059a9f": {
+    "id": "df7b6ccdf2059a9f",
+    "date": "2026-05-30",
+    "title": "Set Up Nail Box for Photos",
+    "text": "Set Up Nail Box for Photos",
+    "source": "Obsidian overdue 2026-02-22",
+    "file_path": "/vault/Tasks/tasks/set-up-nail-box-for-photos.md",
+    "status": "sent",
+    "message_id": 367
+  },
+  "a85f2c6490ccfa05": {
+    "id": "a85f2c6490ccfa05",
+    "date": "2026-05-30",
+    "title": "KPI Tip",
+    "text": "KPI Tip",
+    "source": "Obsidian overdue 2026-02-20",
+    "file_path": "/vault/Tasks/tasks/kpi-tip.md",
+    "status": "done",
+    "message_id": 368,
+    "done_at": "2026-05-30T20:05:26.298425+00:00",
+    "done_by": "8446251233"
+  },
+  "271674c1b4728020": {
+    "id": "271674c1b4728020",
+    "date": "2026-05-30",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian overdue 2026-02-17",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 369
+  },
+  "5aa2b14927af11ae": {
+    "id": "5aa2b14927af11ae",
+    "date": "2026-05-30",
+    "title": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "text": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-laviestella-taxes-strata.md",
+    "status": "sent",
+    "message_id": 370
+  },
+  "cb5f1e7e1f0aaa6d": {
+    "id": "cb5f1e7e1f0aaa6d",
+    "date": "2026-05-30",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 371
+  },
+  "9212cb69f2c54807": {
+    "id": "9212cb69f2c54807",
+    "date": "2026-05-30",
+    "title": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "text": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/create-satisfaction-survey-form-fluentcrm.md",
+    "status": "sent",
+    "message_id": 372
+  },
+  "ab17b853ec1f9e4f": {
+    "id": "ab17b853ec1f9e4f",
+    "date": "2026-05-30",
+    "title": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "text": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "source": "Obsidian overdue 2026-02-04",
+    "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
+    "status": "sent",
+    "message_id": 373
   }
 }
