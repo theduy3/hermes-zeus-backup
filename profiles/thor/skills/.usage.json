@@ -43,12 +43,12 @@
     "created_at": "2026-05-11T12:39:56.907363+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-05-30T07:33:37.713606+00:00",
-    "last_used_at": "2026-05-30T07:32:29.075072+00:00",
-    "last_viewed_at": "2026-05-30T07:32:29.072301+00:00",
+    "last_used_at": "2026-06-01T00:00:59.911765+00:00",
+    "last_viewed_at": "2026-06-01T00:00:59.907185+00:00",
     "patch_count": 53,
     "pinned": false,
     "state": "active",
-    "use_count": 62,
-    "view_count": 62
+    "use_count": 63,
+    "view_count": 63
   }
 }

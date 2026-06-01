@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@agentmemory/mcp": "^0.9.22"
+    "@agentmemory/mcp": "^0.9.24"
   }
 }

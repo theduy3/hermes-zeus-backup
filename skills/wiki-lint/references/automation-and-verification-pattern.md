@@ -16,6 +16,8 @@ Use this when the run needs to enhance exactly 20 pages without subagents and wi
    - preserve existing content; only add/fix frontmatter, `updated`, `wiki_status`, and natural Related links
    - add a compact `## Related` section when the page has no natural place for links
    - keep status `complete` for short reference pages that are structurally complete; don't automatically demote solely because word count is low
+   - **never downgrade `wiki_status` during lint** unless the existing status is invalid/missing; leave existing `complete`/`draft` intact or promote when clearly warranted. If the page body is unexpectedly tiny but the index/status says it was complete before, treat it as a suspicious sparse page and avoid destructive recategorization.
+   - Related links must be semantically defensible from the page title/body/tags. Do not use a generic high-inbound fallback that links unrelated pages just to satisfy the 2-link rule; if no same-domain candidate is available, prefer a relevant MOC or leave the page counted as low-outbound for a future human/ingest pass.
 5. Regenerate `/vault/System/wiki-index.md` from the current Notes frontmatter and append exactly one `/vault/System/wiki-log.md` entry.
 
 ## Frontmatter pitfalls
@@ -32,3 +34,5 @@ Use this when the run needs to enhance exactly 20 pages without subagents and wi
 - Confirm index header starts with the run date and correct `page_count`.
 - Confirm the wiki log contains exactly one new `## [YYYY-MM-DD] lint | Wiki health check` entry for the run.
 - Report both the rolling refresh remainder and the structural/linking issue remainder separately.
+- After editing the log, rerun the verification script/checks; a final log patch still counts as an infrastructure mutation and must not invalidate the “exactly one entry” assertion.
+- Include post-run structural counts in the log when available, not only pre-run issue counts, so the next scheduled pass can distinguish fixed issues from bounded-scope backlog.

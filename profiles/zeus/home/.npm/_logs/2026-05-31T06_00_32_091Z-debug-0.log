@@ -1,0 +1,503 @@
+0 verbose cli /home/hermes/.hermes/node/bin/node /home/hermes/.hermes/node/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.9.7
+2 info using node@v22.22.2
+3 silly config load:file:/home/hermes/.hermes/node/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/hermes/.hermes/projects/.npmrc
+5 silly config load:file:/home/hermes/.hermes/profiles/zeus/home/.npmrc
+6 silly config load:file:/home/hermes/.hermes/node/etc/npmrc
+7 verbose title npm exec @agentmemory/mcp
+8 verbose argv "exec" "--yes" "--" "@agentmemory/mcp"
+9 verbose logfile logs-max:10 dir:/home/hermes/.hermes/profiles/zeus/home/.npm/_logs/2026-05-31T06_00_32_091Z-
+10 verbose logfile /home/hermes/.hermes/profiles/zeus/home/.npm/_logs/2026-05-31T06_00_32_091Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 http fetch GET 200 https://registry.npmjs.org/@agentmemory%2fmcp 183ms (cache updated)
+14 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+15 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+16 silly idealTree buildDeps
+17 silly fetch manifest @agentmemory/mcp@0.9.24
+18 silly packumentCache full:https://registry.npmjs.org/@agentmemory%2fmcp cache-miss
+19 http fetch GET 200 https://registry.npmjs.org/@agentmemory%2fmcp 203ms (cache updated)
+20 silly packumentCache full:https://registry.npmjs.org/@agentmemory%2fmcp set size:undefined disposed:false
+21 silly placeDep ROOT @agentmemory/mcp@0.9.24 REPLACE for:  want: 0.9.24
+22 silly reify mark retired [
+22 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@agentmemory/mcp',
+22 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/.bin/agentmemory-mcp'
+22 silly reify ]
+23 silly reify moves {
+23 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@agentmemory/mcp': '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@agentmemory/.mcp-SsDS8dli',
+23 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/.bin/agentmemory-mcp': '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/.bin/.agentmemory-mcp-CbTROoL5'
+23 silly reify }
+24 silly audit bulk request {
+24 silly audit   '@agentmemory/agentmemory': [ '0.9.22' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-darwin-arm64': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-darwin-x64': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-linux-arm64': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-linux-arm64-musl': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-linux-x64': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-linux-x64-musl': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-win32-arm64': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/claude-agent-sdk-win32-x64': [ '0.3.152' ],
+24 silly audit   '@anthropic-ai/sdk': [ '0.93.0' ],
+24 silly audit   '@babel/runtime': [ '7.29.7' ],
+24 silly audit   '@clack/core': [ '1.3.1' ],
+24 silly audit   '@clack/prompts': [ '1.4.0' ],
+24 silly audit   '@emnapi/core': [ '1.10.0' ],
+24 silly audit   '@emnapi/runtime': [ '1.10.0' ],
+24 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+24 silly audit   '@hono/node-server': [ '1.19.14' ],
+24 silly audit   '@huggingface/jinja': [ '0.2.2' ],
+24 silly audit   '@modelcontextprotocol/sdk': [ '1.29.0' ],
+24 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+24 silly audit   '@node-rs/jieba': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-android-arm-eabi': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-android-arm64': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-darwin-arm64': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-darwin-x64': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-freebsd-x64': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-linux-arm-gnueabihf': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-linux-arm64-gnu': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-linux-arm64-musl': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-linux-x64-gnu': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-linux-x64-musl': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-wasm32-wasi': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-win32-arm64-msvc': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-win32-ia32-msvc': [ '2.0.1' ],
+24 silly audit   '@node-rs/jieba-win32-x64-msvc': [ '2.0.1' ],
+24 silly audit   '@opentelemetry/api': [ '1.9.1' ],
+24 silly audit   '@opentelemetry/api-logs': [ '0.57.2' ],
+24 silly audit   '@opentelemetry/context-async-hooks': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/core': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/semantic-conventions': [ '1.28.0', '1.41.1' ],
+24 silly audit   '@opentelemetry/instrumentation': [ '0.57.2' ],
+24 silly audit   '@opentelemetry/otlp-transformer': [ '0.57.2' ],
+24 silly audit   '@opentelemetry/propagator-b3': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/propagator-jaeger': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/resources': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/sdk-logs': [ '0.57.2' ],
+24 silly audit   '@opentelemetry/sdk-metrics': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/sdk-trace-base': [ '1.30.1' ],
+24 silly audit   '@opentelemetry/sdk-trace-node': [ '1.30.1' ],
+24 silly audit   '@protobufjs/aspromise': [ '1.1.2' ],
+24 silly audit   '@protobufjs/base64': [ '1.1.2' ],
+24 silly audit   '@protobufjs/codegen': [ '2.0.5' ],
+24 silly audit   '@protobufjs/eventemitter': [ '1.1.1' ],
+24 silly audit   '@protobufjs/fetch': [ '1.1.1' ],
+24 silly audit   '@protobufjs/float': [ '1.0.2' ],
+24 silly audit   '@protobufjs/inquire': [ '1.1.2' ],
+24 silly audit   '@protobufjs/path': [ '1.1.2' ],
+24 silly audit   '@protobufjs/pool': [ '1.1.0' ],
+24 silly audit   '@protobufjs/utf8': [ '1.1.1' ],
+24 silly audit   '@tybys/wasm-util': [ '0.10.2' ],
+24 silly audit   '@types/long': [ '4.0.2' ],
+24 silly audit   '@types/node': [ '25.9.1' ],
+24 silly audit   '@types/shimmer': [ '1.2.0' ],
+24 silly audit   '@xenova/transformers': [ '2.17.2' ],
+24 silly audit   flatbuffers: [ '1.12.0', '25.9.23' ],
+24 silly audit   long: [ '4.0.0', '5.3.2' ],
+24 silly audit   'onnxruntime-common': [ '1.14.0', '1.26.0' ],
+24 silly audit   'onnxruntime-node': [ '1.14.0', '1.26.0' ],
+24 silly audit   'onnxruntime-web': [ '1.14.0', '1.26.0' ],
+24 silly audit   accepts: [ '2.0.0' ],
+24 silly audit   acorn: [ '8.16.0' ],
+24 silly audit   'acorn-import-attributes': [ '1.9.5' ],
+24 silly audit   'adm-zip': [ '0.5.17' ],
+24 silly audit   ajv: [ '8.20.0' ],
+24 silly audit   'ajv-formats': [ '3.0.1' ],
+24 silly audit   b4a: [ '1.8.1' ],
+24 silly audit   'bare-events': [ '2.8.3' ],
+24 silly audit   'bare-fs': [ '4.7.1' ],
+24 silly audit   'bare-os': [ '3.9.1' ],
+24 silly audit   'bare-path': [ '3.0.0' ],
+24 silly audit   'bare-stream': [ '2.13.1' ],
+24 silly audit   'bare-url': [ '2.4.3' ],
+24 silly audit   'base64-js': [ '1.5.1' ],
+24 silly audit   bl: [ '4.1.0' ],
+24 silly audit   'body-parser': [ '2.2.2' ],
+24 silly audit   buffer: [ '5.7.1' ],
+24 silly audit   bytes: [ '3.1.2' ],
+24 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+24 silly audit   'call-bound': [ '1.0.4' ],
+24 silly audit   chownr: [ '1.1.4' ],
+24 silly audit   'cjs-module-lexer': [ '1.4.3' ],
+24 silly audit   color: [ '4.2.3' ],
+24 silly audit   'color-convert': [ '2.0.1' ],
+24 silly audit   'color-name': [ '1.1.4' ],
+24 silly audit   'color-string': [ '1.9.1' ],
+24 silly audit   'content-disposition': [ '1.1.0' ],
+24 silly audit   'content-type': [ '1.0.5', '2.0.0' ],
+24 silly audit   cookie: [ '0.7.2' ],
+24 silly audit   'cookie-signature': [ '1.2.2' ],
+24 silly audit   cors: [ '2.8.6' ],
+24 silly audit   'cross-spawn': [ '7.0.6' ],
+24 silly audit   debug: [ '4.4.3' ],
+24 silly audit   'decompress-response': [ '6.0.0' ],
+24 silly audit   'deep-extend': [ '0.6.0' ],
+24 silly audit   'define-data-property': [ '1.1.4' ],
+24 silly audit   'define-properties': [ '1.2.1' ],
+24 silly audit   depd: [ '2.0.0' ],
+24 silly audit   'detect-libc': [ '2.1.2' ],
+24 silly audit   dotenv: [ '17.4.2' ],
+24 silly audit   'dunder-proto': [ '1.0.1' ],
+24 silly audit   'ee-first': [ '1.1.1' ],
+24 silly audit   encodeurl: [ '2.0.0' ],
+24 silly audit   'end-of-stream': [ '1.4.5' ],
+24 silly audit   'es-define-property': [ '1.0.1' ],
+24 silly audit   'es-errors': [ '1.3.0' ],
+24 silly audit   'es-object-atoms': [ '1.1.2' ],
+24 silly audit   'escape-html': [ '1.0.3' ],
+24 silly audit   'escape-string-regexp': [ '4.0.0' ],
+24 silly audit   etag: [ '1.8.1' ],
+24 silly audit   'events-universal': [ '1.0.1' ],
+24 silly audit   eventsource: [ '3.0.7' ],
+24 silly audit   'eventsource-parser': [ '3.0.8' ],
+24 silly audit   'expand-template': [ '2.0.3' ],
+24 silly audit   express: [ '5.2.1' ],
+24 silly audit   'express-rate-limit': [ '8.5.2' ],
+24 silly audit   'fast-deep-equal': [ '3.1.3' ],
+24 silly audit   'fast-fifo': [ '1.3.2' ],
+24 silly audit   'fast-string-truncated-width': [ '3.0.3' ],
+24 silly audit   'fast-string-width': [ '3.0.2' ],
+24 silly audit   'fast-uri': [ '3.1.2' ],
+24 silly audit   'fast-wrap-ansi': [ '0.2.2' ],
+24 silly audit   finalhandler: [ '2.1.1' ],
+24 silly audit   forwarded: [ '0.2.0' ],
+24 silly audit   fresh: [ '2.0.0' ],
+24 silly audit   'fs-constants': [ '1.0.0' ],
+24 silly audit   'function-bind': [ '1.1.2' ],
+24 silly audit   'get-intrinsic': [ '1.3.0' ],
+24 silly audit   'get-proto': [ '1.0.1' ],
+24 silly audit   'github-from-package': [ '0.0.0' ],
+24 silly audit   'global-agent': [ '4.1.3' ],
+24 silly audit   globalthis: [ '1.0.4' ],
+24 silly audit   gopd: [ '1.2.0' ],
+24 silly audit   'guid-typescript': [ '1.0.9' ],
+24 silly audit   'has-property-descriptors': [ '1.0.2' ],
+24 silly audit   'has-symbols': [ '1.1.0' ],
+24 silly audit   hasown: [ '2.0.3' ],
+24 silly audit   hono: [ '4.12.23' ],
+24 silly audit   'http-errors': [ '2.0.1' ],
+24 silly audit   'iconv-lite': [ '0.7.2' ],
+24 silly audit   ieee754: [ '1.2.1' ],
+24 silly audit   'iii-sdk': [ '0.11.2' ],
+24 silly audit   'import-in-the-middle': [ '1.15.0' ],
+24 silly audit   inherits: [ '2.0.4' ],
+24 silly audit   ini: [ '1.3.8' ],
+24 silly audit   'ip-address': [ '10.2.0' ],
+24 silly audit   'ipaddr.js': [ '1.9.1' ],
+24 silly audit   'is-arrayish': [ '0.3.4' ],
+24 silly audit   'is-core-module': [ '2.16.2' ],
+24 silly audit   'is-promise': [ '4.0.0' ],
+24 silly audit   isexe: [ '2.0.0' ],
+24 silly audit   jose: [ '6.2.3' ],
+24 silly audit   'json-schema-to-ts': [ '3.1.1' ],
+24 silly audit   'json-schema-traverse': [ '1.0.0' ],
+24 silly audit   'json-schema-typed': [ '8.0.2' ],
+24 silly audit   matcher: [ '4.0.0' ],
+24 silly audit   'math-intrinsics': [ '1.1.0' ],
+24 silly audit   'media-typer': [ '1.1.0' ],
+24 silly audit   'merge-descriptors': [ '2.0.0' ],
+24 silly audit   'mime-db': [ '1.54.0' ],
+24 silly audit   'mime-types': [ '3.0.2' ],
+24 silly audit   'mimic-response': [ '3.1.0' ],
+24 silly audit   minimist: [ '1.2.8' ],
+24 silly audit   'mkdirp-classic': [ '0.5.3' ],
+24 silly audit   'module-details-from-path': [ '1.0.4' ],
+24 silly audit   ms: [ '2.1.3' ],
+24 silly audit   'napi-build-utils': [ '2.0.0' ],
+24 silly audit   negotiator: [ '1.0.0' ],
+24 silly audit   'node-abi': [ '3.92.0' ],
+24 silly audit   'node-addon-api': [ '6.1.0' ],
+24 silly audit   'object-assign': [ '4.1.1' ],
+24 silly audit   'object-inspect': [ '1.13.4' ],
+24 silly audit   'object-keys': [ '1.1.1' ],
+24 silly audit   'on-finished': [ '2.4.1' ],
+24 silly audit   once: [ '1.4.0' ],
+24 silly audit   'onnx-proto': [ '4.0.4' ],
+24 silly audit   protobufjs: [ '6.11.6', '7.6.1' ],
+24 silly audit   parseurl: [ '1.3.3' ],
+24 silly audit   'path-key': [ '3.1.1' ],
+24 silly audit   'path-parse': [ '1.0.7' ],
+24 silly audit   'path-to-regexp': [ '8.4.2' ],
+24 silly audit   'pkce-challenge': [ '5.0.1' ],
+24 silly audit   platform: [ '1.3.6' ],
+24 silly audit   'prebuild-install': [ '7.1.3' ],
+24 silly audit   'tar-fs': [ '2.1.4', '3.1.2' ],
+24 silly audit   'tar-stream': [ '2.2.0', '3.2.0' ],
+24 silly audit   'proxy-addr': [ '2.0.7' ],
+24 silly audit   pump: [ '3.0.4' ],
+24 silly audit   qs: [ '6.15.2' ],
+24 silly audit   'range-parser': [ '1.2.1' ],
+24 silly audit   'raw-body': [ '3.0.2' ],
+24 silly audit   rc: [ '1.2.8' ],
+24 silly audit   'readable-stream': [ '3.6.2' ],
+24 silly audit   'require-from-string': [ '2.0.2' ],
+24 silly audit   'require-in-the-middle': [ '7.5.2' ],
+24 silly audit   resolve: [ '1.22.12' ],
+24 silly audit   router: [ '2.2.0' ],
+24 silly audit   'safe-buffer': [ '5.2.1' ],
+24 silly audit   'safer-buffer': [ '2.1.2' ],
+24 silly audit   semver: [ '7.8.1' ],
+24 silly audit   send: [ '1.2.1' ],
+24 silly audit   'serialize-error': [ '8.1.0' ],
+24 silly audit   'serve-static': [ '2.2.1' ],
+24 silly audit   setprototypeof: [ '1.2.0' ],
+24 silly audit   sharp: [ '0.32.6' ],
+24 silly audit   'shebang-command': [ '2.0.0' ],
+24 silly audit   'shebang-regex': [ '3.0.0' ],
+24 silly audit   shimmer: [ '1.2.1' ],
+24 silly audit   'side-channel': [ '1.1.0' ],
+24 silly audit   'side-channel-list': [ '1.0.1' ],
+24 silly audit   'side-channel-map': [ '1.0.1' ],
+24 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+24 silly audit   'simple-concat': [ '1.0.1' ],
+24 silly audit   'simple-get': [ '4.0.1' ],
+24 silly audit   'simple-swizzle': [ '0.2.4' ],
+24 silly audit   sisteransi: [ '1.0.5' ],
+24 silly audit   statuses: [ '2.0.2' ],
+24 silly audit   streamx: [ '2.26.0' ],
+24 silly audit   string_decoder: [ '1.3.0' ],
+24 silly audit   'strip-json-comments': [ '2.0.1' ],
+24 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+24 silly audit   teex: [ '1.0.1' ],
+24 silly audit   'text-decoder': [ '1.2.7' ],
+24 silly audit   'tiny-segmenter': [ '0.2.0' ],
+24 silly audit   toidentifier: [ '1.0.1' ],
+24 silly audit   'ts-algebra': [ '2.0.0' ],
+24 silly audit   tslib: [ '2.8.1' ],
+24 silly audit   'tunnel-agent': [ '0.6.0' ],
+24 silly audit   'type-fest': [ '0.20.2' ],
+24 silly audit   'type-is': [ '2.1.0' ],
+24 silly audit   'undici-types': [ '7.24.6' ],
+24 silly audit   unpipe: [ '1.0.0' ],
+24 silly audit   'util-deprecate': [ '1.0.2' ],
+24 silly audit   vary: [ '1.1.2' ],
+24 silly audit   which: [ '2.0.2' ],
+24 silly audit   wrappy: [ '1.0.2' ],
+24 silly audit   ws: [ '8.21.0' ],
+24 silly audit   zod: [ '4.4.3' ],
+24 silly audit   'zod-to-json-schema': [ '3.25.2' ],
+24 silly audit   '@agentmemory/mcp': [ '0.9.24' ]
+24 silly audit }
+25 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-win32-x64-msvc
+26 silly reify mark deleted [
+26 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-win32-x64-msvc'
+26 silly reify ]
+27 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-win32-ia32-msvc
+28 silly reify mark deleted [
+28 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-win32-ia32-msvc'
+28 silly reify ]
+29 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-win32-arm64-msvc
+30 silly reify mark deleted [
+30 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-win32-arm64-msvc'
+30 silly reify ]
+31 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-wasm32-wasi
+32 silly reify mark deleted [
+32 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-wasm32-wasi'
+32 silly reify ]
+33 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@napi-rs/wasm-runtime
+34 silly reify mark deleted [
+34 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@napi-rs/wasm-runtime'
+34 silly reify ]
+35 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@emnapi/core
+36 silly reify mark deleted [
+36 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@emnapi/core'
+36 silly reify ]
+37 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@emnapi/runtime
+38 silly reify mark deleted [
+38 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@emnapi/runtime'
+38 silly reify ]
+39 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@tybys/wasm-util
+40 silly reify mark deleted [
+40 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@tybys/wasm-util'
+40 silly reify ]
+41 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@emnapi/wasi-threads
+42 silly reify mark deleted [
+42 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@emnapi/wasi-threads'
+42 silly reify ]
+43 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/tslib
+44 silly reify mark deleted [
+44 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/tslib'
+44 silly reify ]
+45 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-linux-arm64-musl
+46 silly reify mark deleted [
+46 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-linux-arm64-musl'
+46 silly reify ]
+47 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-linux-arm64-gnu
+48 silly reify mark deleted [
+48 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-linux-arm64-gnu'
+48 silly reify ]
+49 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-linux-arm-gnueabihf
+50 silly reify mark deleted [
+50 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-linux-arm-gnueabihf'
+50 silly reify ]
+51 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-freebsd-x64
+52 silly reify mark deleted [
+52 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-freebsd-x64'
+52 silly reify ]
+53 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-darwin-x64
+54 silly reify mark deleted [
+54 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-darwin-x64'
+54 silly reify ]
+55 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-darwin-arm64
+56 silly reify mark deleted [
+56 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-darwin-arm64'
+56 silly reify ]
+57 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-android-arm64
+58 silly reify mark deleted [
+58 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-android-arm64'
+58 silly reify ]
+59 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-android-arm-eabi
+60 silly reify mark deleted [
+60 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@node-rs/jieba-android-arm-eabi'
+60 silly reify ]
+61 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-win32-x64
+62 silly reify mark deleted [
+62 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-win32-x64'
+62 silly reify ]
+63 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-win32-arm64
+64 silly reify mark deleted [
+64 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-win32-arm64'
+64 silly reify ]
+65 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-linux-arm64-musl
+66 silly reify mark deleted [
+66 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-linux-arm64-musl'
+66 silly reify ]
+67 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-linux-arm64
+68 silly reify mark deleted [
+68 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-linux-arm64'
+68 silly reify ]
+69 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-darwin-x64
+70 silly reify mark deleted [
+70 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-darwin-x64'
+70 silly reify ]
+71 verbose reify failed optional dependency /home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-darwin-arm64
+72 silly reify mark deleted [
+72 silly reify   '/home/hermes/.hermes/profiles/zeus/home/.npm/_npx/ba4b5775a0ab44e2/node_modules/@anthropic-ai/claude-agent-sdk-darwin-arm64'
+72 silly reify ]
+73 http cache @node-rs/jieba-linux-x64-musl@https://registry.npmjs.org/@node-rs/jieba-linux-x64-musl/-/jieba-linux-x64-musl-2.0.1.tgz 0ms (cache hit)
+74 http cache tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 0ms (cache hit)
+75 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.2.tgz 0ms (cache hit)
+76 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz 0ms (cache hit)
+77 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz 0ms (cache hit)
+78 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.10.0.tgz 0ms (cache hit)
+79 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.10.0.tgz 0ms (cache hit)
+80 http cache @anthropic-ai/claude-agent-sdk-linux-x64-musl@https://registry.npmjs.org/@anthropic-ai/claude-agent-sdk-linux-x64-musl/-/claude-agent-sdk-linux-x64-musl-0.3.152.tgz 0ms (cache hit)
+81 http cache @agentmemory/mcp@https://registry.npmjs.org/@agentmemory/mcp/-/mcp-0.9.24.tgz 0ms (cache hit)
+82 silly tarball no local data for @node-rs/jieba-linux-x64-musl@https://registry.npmjs.org/@node-rs/jieba-linux-x64-musl/-/jieba-linux-x64-musl-2.0.1.tgz. Extracting by manifest.
+83 silly tarball no local data for @anthropic-ai/claude-agent-sdk-linux-x64-musl@https://registry.npmjs.org/@anthropic-ai/claude-agent-sdk-linux-x64-musl/-/claude-agent-sdk-linux-x64-musl-0.3.152.tgz. Extracting by manifest.
+84 silly tarball no local data for @agentmemory/mcp@https://registry.npmjs.org/@agentmemory/mcp/-/mcp-0.9.24.tgz. Extracting by manifest.
+85 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 104ms
+86 silly audit report {
+86 silly audit report   protobufjs: [
+86 silly audit report     {
+86 silly audit report       id: 1118641,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-66ff-xgx4-vchm',
+86 silly audit report       title: 'protobuf.js: Code injection through bytes field defaults in generated toObject code',
+86 silly audit report       severity: 'high',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1118924,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-2pr8-phx7-x9h3',
+86 silly audit report       title: 'protobuf.js: Denial of service from crafted field names in generated code',
+86 silly audit report       severity: 'moderate',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1118926,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-fx83-v9x8-x52w',
+86 silly audit report       title: 'protobuf.js: Prototype injection in generated message constructors',
+86 silly audit report       severity: 'moderate',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1118928,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-75px-5xx7-5xc7',
+86 silly audit report       title: 'protobuf.js: Code generation gadget after prototype pollution',
+86 silly audit report       severity: 'high',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1118930,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-jvwf-75h9-cwgg',
+86 silly audit report       title: 'protobuf.js: Process-wide denial of service through unsafe option paths',
+86 silly audit report       severity: 'high',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1118932,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-685m-2w69-288q',
+86 silly audit report       title: 'protobuf.js: Denial of service through unbounded protobuf recursion',
+86 silly audit report       severity: 'high',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1118935,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-q6x5-8v7m-xcrf',
+86 silly audit report       title: 'protobufjs has overlong UTF-8 decoding',
+86 silly audit report       severity: 'moderate',
+86 silly audit report       vulnerable_versions: '<=7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1119378,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-jggg-4jg4-v7c6',
+86 silly audit report       title: 'protobufjs: Denial of Service via unbounded recursive JSON descriptor expansion',
+86 silly audit report       severity: 'moderate',
+86 silly audit report       vulnerable_versions: '<=7.5.7',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     },
+86 silly audit report     {
+86 silly audit report       id: 1117571,
+86 silly audit report       url: 'https://github.com/advisories/GHSA-xq3m-2v4x-88gg',
+86 silly audit report       title: 'Arbitrary code execution in protobufjs',
+86 silly audit report       severity: 'critical',
+86 silly audit report       vulnerable_versions: '<7.5.5',
+86 silly audit report       cwe: [Array],
+86 silly audit report       cvss: [Object]
+86 silly audit report     }
+86 silly audit report   ]
+86 silly audit report }
+87 silly packumentCache corgi:https://registry.npmjs.org/protobufjs cache-miss
+88 http fetch GET 200 https://registry.npmjs.org/protobufjs 43ms (cache updated)
+89 silly packumentCache corgi:https://registry.npmjs.org/protobufjs set size:undefined disposed:false
+90 silly packumentCache corgi:https://registry.npmjs.org/onnx-proto cache-miss
+91 http fetch GET 200 https://registry.npmjs.org/@agentmemory/mcp/-/mcp-0.9.24.tgz 188ms (cache miss)
+92 http fetch GET 200 https://registry.npmjs.org/onnx-proto 131ms (cache revalidated)
+93 silly packumentCache corgi:https://registry.npmjs.org/onnx-proto set size:10521 disposed:false
+94 silly packumentCache corgi:https://registry.npmjs.org/onnxruntime-web cache-miss
+95 http fetch GET 200 https://registry.npmjs.org/onnxruntime-web 822ms (cache revalidated)
+96 silly packumentCache corgi:https://registry.npmjs.org/onnxruntime-web set size:674575 disposed:false
+97 silly packumentCache corgi:https://registry.npmjs.org/@xenova%2ftransformers cache-miss
+98 http fetch GET 200 https://registry.npmjs.org/@xenova%2ftransformers 885ms (cache revalidated)
+99 silly packumentCache corgi:https://registry.npmjs.org/@xenova%2ftransformers set size:93845 disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/@node-rs/jieba-linux-x64-musl/-/jieba-linux-x64-musl-2.0.1.tgz 2462ms (cache miss)
+101 silly packumentCache corgi:https://registry.npmjs.org/@agentmemory%2fagentmemory cache-miss
+102 http fetch GET 200 https://registry.npmjs.org/@agentmemory%2fagentmemory 91ms (cache updated)
+103 silly packumentCache corgi:https://registry.npmjs.org/@agentmemory%2fagentmemory set size:undefined disposed:false
+104 silly packumentCache corgi:https://registry.npmjs.org/@agentmemory%2fmcp cache-miss
+105 http cache https://registry.npmjs.org/@agentmemory%2fmcp 30ms (cache hit)
+106 silly packumentCache corgi:https://registry.npmjs.org/@agentmemory%2fmcp set size:23603 disposed:false
+107 http fetch GET 200 https://registry.npmjs.org/@anthropic-ai/claude-agent-sdk-linux-x64-musl/-/claude-agent-sdk-linux-x64-musl-0.3.152.tgz 6940ms (cache miss)
+108 verbose cwd /home/hermes/.hermes/projects
+109 verbose os Linux 5.15.0-171-generic
+110 verbose node v22.22.2
+111 verbose npm  v10.9.7
+112 verbose exit 0
+113 info ok
