@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/catthew/logs/curator/20260525-094433",
-  "last_run_at": "2026-05-25T09:44:33.531491+00:00",
-  "last_run_duration_seconds": 1.399145,
-  "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
+  "last_report_path": "/home/hermes/.hermes/profiles/catthew/logs/curator/20260601-100341",
+  "last_run_at": "2026-06-01T10:03:41.875485+00:00",
+  "last_run_duration_seconds": 21.043257,
+  "last_run_summary": "auto: no changes; llm: Scanned the provided agent-created candidate set and verified the current skill landscape.\n\nResult: no umbrella-building action was possible in this pass because the candidate list contains exactly one unpinned agent-created skill:\n\n- `hous…",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 3
+  "run_count": 4
 }

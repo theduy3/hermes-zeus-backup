@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/logs/curator/20260525-095042",
-  "last_run_at": "2026-05-25T09:50:42.410636+00:00",
-  "last_run_duration_seconds": 19.710376,
-  "last_run_summary": "auto: no changes; llm: Processed the full candidate list: 1 agent-created, unpinned active skill.\n\nResult: no consolidation or archiving performed.\n\nWhy:\n- `hermes-operations-troubleshooting` is already a class-level umbrella skill, not a one-session micro-skill.…",
+  "last_report_path": "/home/hermes/.hermes/logs/curator/20260601-104453",
+  "last_run_at": "2026-06-01T10:44:53.282642+00:00",
+  "last_run_duration_seconds": 17.773381,
+  "last_run_summary": "auto: no changes; llm: Processed the full candidate set. There is only one agent-created, unpinned skill in scope:\n\n- `hermes-operations-troubleshooting`\n\nDecision: kept as-is. It is already a class-level umbrella for live Hermes operational troubleshooting, with…",
   "last_run_summary_shown_at": "2026-05-25T09:50:42.410636+00:00",
   "paused": false,
-  "run_count": 3
+  "run_count": 4
 }
