@@ -8,3 +8,11 @@
 - [x] Salad greens / spinach
 - [ ] Korean pear
 - [ ] Ghee
+
+## Costco
+- [ ] Eggs
+- [ ] Cheddar cheese
+- [ ] Apples
+- [ ] Sourdough bread
+- [ ] Bread cheese / other cheese
+- [ ] Salad mix or romaine lettuce

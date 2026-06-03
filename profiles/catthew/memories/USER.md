@@ -1,6 +1,6 @@
 For Obsidian, the user wants all newly created notes to go to /Users/theduy/theduyvault/Inbox by default.
 §
-Tasks: Obsidian `- [ ]`; Done cards; timed only; 7d; reminders→family TG. Agenda includes GCal.
+Tasks: Obsidian `- [ ]`; Done cards; timed only; 7d; reminders→family TG. Photo items→Catthew tasks, not GCal OAuth.
 §
 User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
 §
