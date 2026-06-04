@@ -11,10 +11,11 @@ Use this when running the `tonight` cron job against `/vault`.
    - match/remove them as duplicates of an existing Notes page, or
    - create a clearly labeled stub preserving the source URL/attachment path and stating that manual summary/transcript/image interpretation is still needed.
 5. After writing a promoted Notes page, verify the target exists and is non-empty, then remove the root/Inbox original. Do not leave root originals copied into `Notes/`.
-6. Update MOCs/wiki-index/wiki-log only when the files are readable/writable. If they are unavailable, continue and report that limitation; digest creation is the non-negotiable output.
-7. Rerun `find_today_notes.py --json --inbox` after filing and include the remaining count in the digest verification section.
-8. Write `/vault/Daily/<YYYY-MM-DD>-tonight.md` even when zero notes were processed. Include `notes_processed`, the initial queue count, the post-processing queue count, and whether mini wiki-lint was skipped.
-9. Verify the digest by reading it back. If direct overwrite fails but `/vault/Daily` is writable, write a same-directory temp file and atomically replace the final path.
+6. If a prior digest already exists but `find_today_notes.py` still returns items, process the queue anyway. A previous digest may have been written before residual Inbox originals were removed. Match residual captures to existing Notes pages by title/source URL/content, summarize those existing pages, archive/remove the residual originals, and overwrite the digest with the current verified counts.
+7. Update MOCs/wiki-index/wiki-log only when the files are readable/writable. If they are unavailable, continue and report that limitation; digest creation is the non-negotiable output.
+8. Rerun `find_today_notes.py --json --inbox` after filing and include the remaining count in the digest verification section.
+9. Write `/vault/Daily/<YYYY-MM-DD>-tonight.md` even when zero notes were processed. Include `notes_processed`, the initial queue count, the post-processing queue count, and whether mini wiki-lint was skipped.
+10. Verify the digest by reading it back. If direct overwrite fails but `/vault/Daily` is writable, write a same-directory temp file and atomically replace the final path.
 
 ## Digest reporting convention
 
