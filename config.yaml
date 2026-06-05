@@ -380,7 +380,7 @@ skills:
   inline_shell: false
   inline_shell_timeout: 10
   guard_agent_created: false
-  creation_nudge_interval: 15
+  creation_nudge_interval: 10
 curator:
   enabled: true
   interval_hours: 168
@@ -539,6 +539,7 @@ platform_toolsets:
   - delegation
   - file
   - image_gen
+  - kanban
   - memory
   - messaging
   - session_search

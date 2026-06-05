@@ -46,3 +46,9 @@ they run as a different user and get PermissionError. Shell redirection (`cat >
    delete-by-name works even on root-owned files), then write the new one
 
 See `references/vault-write-workaround.md` for the exact code template.
+
+### Pitfall: post-processing helper-script output
+When assembling the daily Markdown manually from helper outputs, sanitize embedded helper sections before writing:
+- `compile_tasks.py` appends a `---` separator and `**Summary**` block after `Later / No Date`; do **not** include that summary inside the daily file body. Use it only for the final confirmation/report.
+- `fetch_weather.py` returns both `## Weather Forecast (7-Day)` and `## Moon Phase`; after splitting out the moon phase, trim any trailing `---` so the final daily file does not contain duplicate horizontal rules before `*Generated:*`.
+- After writing, verify the actual file by reading/counting sections: expected task counts should match the compiler summary, `**Summary**` should be absent from the file body, and `\n---\n\n---\n` should not appear.

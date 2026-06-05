@@ -57,11 +57,40 @@ When cron outputs are running but Telegram delivery says `Unauthorized`:
    - Re-check gateway logs for which profile and token source it loaded.
    - Verify `HERMES_HOME` / profile selection, especially in Docker multi-profile setups.
 
+## Profile Codex auth failure workflow
+
+When a profile cron job fails with `RuntimeError: Codex auth is missing access_token`:
+
+1. Confirm the affected profile and job.
+   - Use `hermes -p <profile> profile show <profile>` to confirm model/provider and gateway status.
+   - Use `hermes -p <profile> cron list` to find the failing job and exact `last_status`.
+2. Compare auth state for the working baseline profile and affected profile.
+   - `hermes auth list openai-codex`
+   - `hermes -p <profile> auth list openai-codex`
+   - If the affected profile has stale legacy provider tokens, suppressed sources, or fewer/older credentials, prefer replacing the profile `auth.json` from a known-working profile rather than editing token fields by hand.
+3. Back up before replacing credentials.
+   - Copy `~/.hermes/profiles/<profile>/auth.json` to `auth.json.bak.<UTC timestamp>`.
+   - Copy the known-good `~/.hermes/auth.json` (or another verified profile auth file) into the affected profile.
+   - Set permissions to `600`.
+4. Verify model auth independently before rerunning cron.
+   - Run `hermes -p <profile> chat -q 'Reply exactly OK' --toolsets '' -Q`.
+   - Success means the profile can call the configured model/provider.
+5. Verify the original cron path.
+   - Run `hermes -p <profile> cron run <job_id>`.
+   - Wait one scheduler tick (usually 60-90 seconds).
+   - Re-run `hermes -p <profile> cron list` and confirm the job `Last run` is `ok`.
+6. Keep the final report terse: backup path, auth verification, cron verification.
+
+See `references/profile-codex-auth-repair.md` for a concrete transcript-safe recipe.
+
 ## Useful commands
 
 ```bash
 hermes cron status
 hermes cron list --all
+hermes -p <profile> auth list openai-codex
+hermes -p <profile> chat -q 'Reply exactly OK' --toolsets '' -Q
+hermes -p <profile> cron run <job_id>
 ps -p <PID> -o pid,ppid,etime,cmd
 
 python3 - <<'PY'
@@ -119,3 +148,4 @@ grep "cron_<job_id>" /home/hermes/.hermes/logs/agent.log | grep -E "(API call fa
 
 - `references/telegram-cron-unauthorized.md` — resolved incident pattern: valid token, working direct send, successful cron test, stale Unauthorized state cleared.
 - `references/codex-stream-typeerror.md` — Codex stream TypeError from malformed SSE frame: root cause, fix, and affected code paths.
+- `references/profile-codex-auth-repair.md` — profile-specific OpenAI Codex auth repair when cron/model calls fail with missing `access_token` despite `auth list` showing credentials.

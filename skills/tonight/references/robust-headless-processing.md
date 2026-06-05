@@ -20,3 +20,8 @@ Use this when running the `tonight` cron job against `/vault`.
 ## Digest reporting convention
 
 The final cron response should be short and operational: digest path, date source, processed count, queue remaining count, and any notable limitations. Do not return `[SILENT]` just because there were zero notes; the digest is always a reportable artifact.
+
+## Implementation pitfalls
+
+- When automating the digest writer from Python, parse `calculate_dates.py` with a simple line-based key/value parser (`line.split(': ', 1)` for `Today:` and `Date:`) instead of hand-rolled regex inside nested string literals. Escaping mistakes can make an otherwise valid script fail before the digest is written.
+- If the linked `references/robust-headless-processing.md` is not present under `/vault/.claude/skills/...`, do not treat that as a vault failure. In Hermes sessions, the canonical support file is available via the `tonight` skill's linked `references/` file; continue with the loaded SKILL.md instructions when running headless.

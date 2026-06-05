@@ -7,12 +7,12 @@
 - [x] Yogurt
 - [x] Salad greens / spinach
 - [ ] Korean pear
-- [ ] Ghee
+- [x] Ghee
 
 ## Costco
-- [ ] Eggs
-- [ ] Cheddar cheese
-- [ ] Apples
-- [ ] Sourdough bread
+- [x] Eggs
+- [x] Cheddar cheese
+- [x] Apples
+- [x] Sourdough bread
 - [ ] Bread cheese / other cheese
-- [ ] Salad mix or romaine lettuce
+- [x] Salad mix or romaine lettuce

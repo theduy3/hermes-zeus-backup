@@ -30,6 +30,8 @@ Learned in practice:
 2. **Discover recent Hermes sessions**
    - Start with `session_search()` with no query to see the latest session IDs.
    - Treat this as a pointer, not the full data source.
+   - Always scan the recent non-cron/interactive sessions too. Daily recaps often include user-requested operational work (profile cleanup, auth fixes, manual reruns) that never appears in cron output files. Use targeted `session_search(query=...)` and scroll the relevant session when a recent title/preview hints at concrete work.
+   - When an interactive session was interrupted, look for the last substantive assistant messages before/after the interruption note; those often contain verified completion status that the final message alone may omit.
 
 3. **Check cron list for delivery failures immediately**
    - Run `hermes cron list` before reading any output files.
@@ -41,6 +43,7 @@ Learned in practice:
    - Non-cron session transcripts: `~/.hermes/sessions/session_YYYYMMDD_*.json`
    - Cron outputs: `~/.hermes/cron/output/*/YYYY-MM-DD_*.md`
    - Use `search_files(target='files')` to locate the day's files.
+   - Do not rely only on `hermes cron list` last-run fields for jobs scheduled later in the day. If current time is after a job should have fired, explicitly check `~/.hermes/cron/output/<job_id>/YYYY-MM-DD_*.md`; cron list can appear stale or be observed before a pending local-time run completes.
 
 5. **Read representative outputs first**
    - Open a few cron output markdown files to understand each job's purpose and final response.

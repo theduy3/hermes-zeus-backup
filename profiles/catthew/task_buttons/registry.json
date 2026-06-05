@@ -239,8 +239,10 @@
     "due_date": "2026-06-03",
     "line": 5,
     "kind": "event",
-    "status": "sent",
-    "message_id": 470
+    "status": "done",
+    "message_id": 470,
+    "done_at": "2026-06-04T05:41:04.715693+00:00",
+    "done_by": "8446251233"
   },
   "6f52d3364310c1c2": {
     "id": "6f52d3364310c1c2",
@@ -251,7 +253,21 @@
     "due_date": "2026-06-03",
     "line": 6,
     "kind": "event",
+    "status": "deleted",
+    "message_id": 471,
+    "deleted_at": "2026-06-04T05:41:12.114076+00:00",
+    "deleted_by": "8446251233"
+  },
+  "0362e6d251e1f2c4": {
+    "id": "0362e6d251e1f2c4",
+    "date": "2026-06-04",
+    "title": "Victoria: Playgym every Thursday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Thursday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-06-04",
+    "line": 7,
+    "kind": "event",
     "status": "sent",
-    "message_id": 471
+    "message_id": 473
   }
 }

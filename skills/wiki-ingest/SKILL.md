@@ -111,3 +111,13 @@ more than twice on the same path — switch to the fallback.
 
 ### Verify infrastructure edits by searching exact new artifacts
 After updating `System/wiki-index.md`, `System/wiki-log.md`, or MOCs, verify with an exact search for the new page/source title, not just by trusting a write succeeded. When patching index rows, do not assume the row's tag/type text from memory; first inspect the actual neighboring row or use an exact old_string from the current file. If the exact artifact is missing after a broad rewrite, patch it in with a small targeted replacement and verify again.
+
+### Notes fallback source archives still count as indexed pages
+When `Sources/` is blocked and the source archive is created under `Notes/` (for example `Notes/<Source Title> Source.md`), treat that archive as a page for infrastructure bookkeeping:
+- Add an index row for both the substantive wiki page(s) and the source archive page.
+- Increment `page_count` for every new `Notes/*.md` created, including `type: repo|article|reflection` source archives.
+- If existing pages are updated from the source, update their `updated` date rows in `wiki-index.md` too.
+- Verify exact searches for the content page title, source archive title, touched MOC link, and `wiki-log.md` entry before finalizing.
+
+### Root-owned Inbox original preservation verification
+When using the root-owned Inbox markdown safe pattern, a directory-level `mv` to `Notes/Archived Inbox Originals/` can succeed even though file patching would be undesirable. After the move, verify both sides explicitly: the original basename is absent from `Inbox/` and present under `Notes/Archived Inbox Originals/`. Report this preservation path in the final summary.

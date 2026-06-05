@@ -12,7 +12,7 @@ theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CH
 §
 SalonX Engineer (`salonx-engineer` / Engineer-SalonX) specifically uses `gpt-5.5` via OpenAI Codex for coding
 §
-Profiles: Telegram=default/alan/mira/turing/zeus/thor/finance/catthew/charles/butter; Discord=3r/charlesbourg/maily/ss. Butter=points/churning.
+Profiles: Telegram=default/zeus/thor/finance/catthew/charles/butter. Removed/missing profiles: 3r, alan, charlesbourg, maily, mira, ss, turing. Butter=points/churning.
 §
 Hermes Docker venv: /home/hermes/.hermes/hermes-agent/venv/ may lack pip. Bootstrap: python3 -m ensurepip --upgrade then python3 -m pip install <pkg>. Use python3 -m pip, not bin/pip.
 §
