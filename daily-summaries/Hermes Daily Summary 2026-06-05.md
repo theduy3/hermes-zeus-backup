@@ -12,41 +12,31 @@ wiki_status: complete
 
 ## Summary
 
-- Hermes core checks completed successfully across status, doctor, cron, MCP, and gateway commands.
-- Daily summary generated locally on 2026-06-05 in the container workspace, not the read-only vault.
+- Generated from live Hermes operational checks on 2026-06-05.
+- Checked status, doctor, cron jobs, MCP configuration, and gateway status.
+- All requested checks completed without command-level failures.
 
 ## What Ran Today
 
-- `Hermes status` — OK (exit 0).
-- `Hermes doctor` — OK (exit 0).
-- `Hermes cron list` — OK (exit 0).
-- `Hermes MCP list` — OK (exit 0).
-- `Hermes gateway status` — OK (exit 0).
+- Daily summary cron produced this local container note.
+- Live commands executed:
+  - `hermes status`
+  - `hermes doctor`
+  - `hermes cron list`
+  - `hermes mcp list`
+  - `hermes gateway status`
 
 ## Health Signals
 
-- Hermes status: OK — ┌─────────────────────────────────────────────────────────┐
-- Hermes doctor: OK — ┌─────────────────────────────────────────────────────────┐
-- Hermes cron list: OK — ┌─────────────────────────────────────────────────────────────────────────┐
-- Hermes MCP list: OK — No MCP servers configured.
-- Hermes gateway status: OK — ✓ Gateway is running (PID: 37)
+- Hermes status: command completed successfully.
+- Hermes doctor: command completed successfully.
+- Cron list: command completed successfully.
+- MCP list: command completed successfully.
+- Gateway status: command completed successfully.
 
-## Next Actions
+### Raw Check Outputs
 
-- No urgent remediation needed from today’s live checks.
-- Keep monitoring cron delivery and gateway health during the next weekday run.
-
-## Related Notes
-
-- [[Hermes Agent Setup and Operations]]
-- [[Hermes Operations Dashboard]]
-
-## Live Check Output
-
-### Hermes status
-
-- Exit code: `0`
-
+- **Hermes status** (`hermes status 2>&1`): OK
 ```text
 ┌─────────────────────────────────────────────────────────┐
 │                 ⚕ Hermes Agent Status                  │
@@ -86,15 +76,10 @@ wiki_status: complete
     Auth file:  /home/hermes/.hermes/auth.json
     Refreshed:  2026-05-27 03:31:57 UTC
   Qwen OAuth    ✗ not logged in (run: qwen auth qwen-oauth)
-    Auth file:  /home/hermes/.qwen/oauth_creds.json
-    Error:      Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
-... (47 more lines)
+    Auth file:  /home/hermes/.qwen/o
+…[truncated]
 ```
-
-### Hermes doctor
-
-- Exit code: `0`
-
+- **Hermes doctor** (`hermes doctor 2>&1`): OK
 ```text
 ┌─────────────────────────────────────────────────────────┐
 │                 🩺 Hermes Doctor                        │
@@ -136,13 +121,11 @@ wiki_status: complete
 
 ◆ Directory Structure
   ✓ ~/.hermes directory exists
-... (86 more lines)
+  ✓ ~/.hermes/cron/ exists
+  ✓ ~/.hermes/sessions/ ex
+…[truncated]
 ```
-
-### Hermes cron list
-
-- Exit code: `0`
-
+- **Cron list** (`hermes cron list 2>&1`): OK
 ```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                         Scheduled Jobs                                  │
@@ -152,17 +135,17 @@ wiki_status: complete
     Name:      daily-hermes-health-check
     Schedule:  0 9 * * *
     Repeat:    ∞
-    Next run:  2026-06-05T09:00:00-07:00
+    Next run:  2026-06-06T09:00:00-07:00
     Deliver:   origin
-    Last run:  2026-06-04T09:01:16.292982-07:00  ok
+    Last run:  2026-06-05T09:01:20.882302-07:00  ok
 
   c9c38ab77915 [active]
     Name:      weekday-hermes-recap
     Schedule:  0 18 * * 1-5
     Repeat:    ∞
-    Next run:  2026-06-05T18:00:00-07:00
+    Next run:  2026-06-08T18:00:00-07:00
     Deliver:   origin
-    Last run:  2026-06-04T18:02:48.785731-07:00  ok
+    Last run:  2026-06-05T18:02:20.925211-07:00  ok
 
   8f310c8f4baf [active]
     Name:      weekly-hermes-ops-review
@@ -176,21 +159,16 @@ wiki_status: complete
     Name:      weekday-hermes-vault-summary
     Schedule:  10 18 * * 1-5
     Repeat:    ∞
-    Next run:  2026-06-05T18:10:00-07:00
+    Next run:  2026-06-08T18:10:00-07:00
     Deliver:   origin
     Skills:    obsidian
-    Last run:  2026-06-03T18:11:08.350648-07:00  ok
+    Last run:  2026-06-04T18:11:42.548749-07:00  ok
 
   12e5ce30563d [active]
-    Name:      nightly-hermes-github-backup
-    Schedule:  0 5 * * *
-... (49 more lines)
+    Name:      nightly-her
+…[truncated]
 ```
-
-### Hermes MCP list
-
-- Exit code: `0`
-
+- **MCP list** (`hermes mcp list 2>&1`): OK
 ```text
 No MCP servers configured.
 
@@ -198,11 +176,7 @@ No MCP servers configured.
     hermes mcp add <name> --url <endpoint>
     hermes mcp add <name> --command <cmd> --args <args...>
 ```
-
-### Hermes gateway status
-
-- Exit code: `0`
-
+- **Gateway status** (`hermes gateway status 2>&1`): OK
 ```text
 ✓ Gateway is running (PID: 37)
   (Running manually, not as a system service)
@@ -219,3 +193,13 @@ Other profiles:
   ✓ thor             — PID 32
   ✓ zeus             — PID 35
 ```
+
+## Next Actions
+
+- No urgent remediation identified from command exit codes.
+- Review cron/MCP/gateway details below for configuration drift or stale entries.
+
+## Related Notes
+
+- [[Hermes Agent Setup and Operations]]
+- [[Hermes Operations Dashboard]]

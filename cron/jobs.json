@@ -18,15 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 64
+        "completed": 65
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-06-05T09:00:00-07:00",
-      "last_run_at": "2026-06-04T09:01:16.292982-07:00",
+      "next_run_at": "2026-06-06T09:00:00-07:00",
+      "last_run_at": "2026-06-05T09:01:20.882302-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -51,15 +51,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 46
+        "completed": 47
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-06-05T18:00:00-07:00",
-      "last_run_at": "2026-06-04T18:02:48.785731-07:00",
+      "next_run_at": "2026-06-08T18:00:00-07:00",
+      "last_run_at": "2026-06-05T18:02:20.925211-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -119,20 +119,20 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 47
+        "completed": 48
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-06-05T18:10:00-07:00",
-      "last_run_at": "2026-06-04T18:11:42.548749-07:00",
+      "next_run_at": "2026-06-08T18:10:00-07:00",
+      "last_run_at": "2026-06-05T18:11:15.863930-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
       "origin": null,
-      "last_delivery_error": null
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out"
     },
     {
       "id": "067ad023e2d9",
@@ -187,15 +187,15 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-06-05T05:00:00-07:00",
-      "last_run_at": "2026-06-04T05:00:41.693334-07:00",
+      "next_run_at": "2026-06-06T05:00:00-07:00",
+      "last_run_at": "2026-06-05T05:00:24.967782-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -226,15 +226,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-06-05T04:00:00-07:00",
-      "last_run_at": "2026-06-04T04:03:15.736069-07:00",
+      "next_run_at": "2026-06-06T04:00:00-07:00",
+      "last_run_at": "2026-06-05T04:02:12.599740-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -266,15 +266,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-06-05T10:00:00-07:00",
-      "last_run_at": "2026-06-04T10:00:27.379490-07:00",
+      "next_run_at": "2026-06-06T10:00:00-07:00",
+      "last_run_at": "2026-06-05T10:00:31.303113-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -306,15 +306,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 48
+        "completed": 51
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-06-05T08:00:00-07:00",
-      "last_run_at": "2026-06-04T20:00:59.423366-07:00",
+      "next_run_at": "2026-06-06T08:00:00-07:00",
+      "last_run_at": "2026-06-05T20:00:46.134638-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -346,17 +346,17 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-06-05T02:00:00-07:00",
-      "last_run_at": "2026-06-04T02:04:45.684234-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-06-06T02:00:00-07:00",
+      "last_run_at": "2026-06-05T02:08:05.078864-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
@@ -386,15 +386,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 31
+        "completed": 33
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-06-04T23:00:00-07:00",
-      "last_run_at": "2026-06-04T18:01:52.433622-07:00",
+      "next_run_at": "2026-06-05T23:00:00-07:00",
+      "last_run_at": "2026-06-05T18:02:05.025414-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -405,5 +405,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-04T20:00:59.425587-07:00"
+  "updated_at": "2026-06-05T20:00:46.135518-07:00"
 }
