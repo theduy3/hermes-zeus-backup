@@ -33,9 +33,13 @@ high-inbound-link pages).
   recipe in `references/root-owned-workflow.md` instead of retrying in-place writes.
 - Batch ordering and orphan filtering details live in `references/batch-and-orphan-filtering.md`.
 - For an efficient sequential implementation pattern (Python scanner/editor, index regeneration, log append, and exact verification checks), see `references/automation-and-verification-pattern.md`.
+- If any referenced helper file is missing in the runtime vault, do not stop the cron job. Fall back to a self-contained `/tmp/wiki_lint_run.py` script that: scans `/vault/Notes` + `/vault/MOCs`, selects exactly 20 issue-bearing pages by oldest/missing `updated`, writes via root-owned-safe replacement, regenerates `System/wiki-index.md`, appends one `wiki-log.md` entry, and prints a JSON verification report.
+- Some imported notes contain conflict-style frontmatter artifacts such as `>> NEW >>` / `<< OLD <<`. When linting those pages, normalize frontmatter by preserving canonical fields only (`tags`, `type`, `created`, `updated`, `sources`, `wiki_status`, plus useful metadata like `title`/`source`) and remove those artifacts from the YAML block before verification.
 
 ## Verification checklist
 - Re-read all 20 enhanced pages, not just a sample, and confirm frontmatter still parses, `updated` is the run date, `wiki_status` is appropriate, and new links are present.
+- Confirm enhanced pages' frontmatter contains no merge/conflict artifacts such as `>> NEW >>` or `<< OLD <<`.
+- Spot-check auto-added cross-reference sentences for semantic relevance; if a heuristic picks unrelated pages, replace them with closer domain neighbors before final verification.
 - After regenerating the index, verify `updated` and `page_count` in the header and confirm all 20 batch titles have index rows.
 - Verify exactly one wiki-log entry was appended for the run.
 - Keep the run bounded to 20 pages; log the remainder as pending work rather than silently expanding scope.
