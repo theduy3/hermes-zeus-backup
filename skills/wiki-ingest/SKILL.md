@@ -87,8 +87,10 @@ Terminal commands that touch files outside the working directory, delete files, 
 Terminal commands that touch files outside the working directory, delete files, or run Python scripts may be flagged for **approval** (`pending_approval: true`). In a headless cron job there is no user to approve — these commands may silently fail,
 partially execute, or have unpredictable results. **Prefer `write_file` and `patch`
 tools over terminal for all file creation and editing.** Use terminal only for
-read-only operations (`ls`, `stat`, `rg` searches). Avoid `rm` — if you must remove a
+read-only operations (`ls`, `stat`, `rg` searches) and narrow directory-level preservation moves for root-owned Inbox originals when the directory is writable. Avoid `rm` — if you must remove a
 file, use `patch` with `replace_all` to empty it, or leave it and note it in the summary.
+
+Do not use `execute_code` for cron wiki ingest batching. In this runtime, arbitrary local Python execution may be approval-blocked in cron; the reliable pattern is explicit `write_file`/`patch` calls for Notes/System/MOC edits, followed by small terminal read-only checks and a single targeted `mkdir -p && mv && test` only when preserving a root-owned Inbox original out of Inbox.
 
 ### Root-owned Inbox markdown sources
 Markdown captures in `Inbox/` can be owned by `root:root` while the `Inbox/` directory itself is writable by `hermes`. In that case, patching frontmatter may fail or be undesirable, but a directory-level `rename`/move can still work because moving depends on directory permissions, not file ownership. Safe pattern after creating the source archive page in `Notes/`:

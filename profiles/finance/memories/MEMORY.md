@@ -10,7 +10,7 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 §
 Travel points as of 2026-05-20: Family Aeroplan 65,928; Porter VIPorter account 5590019622 74,936.
 §
-Investment context as of 2026-05-30: registered portfolio ~$199.1k CAD; cash ~$92.7k (46.6%); holdings ~$106.4k vs ~$63.7k cost (+$42.7k, +67%). NVDA 241 shares ~$71.7k (36% total, 67% invested holdings). Other holdings: FIG 27, GOOG 15, META 11, PLTR 3, RACE 21, VFV.TO 33. Accounts: Wealthsimple RRSP ~$155.2k, FHSA ~$17.5k, Questrade Spousal RRSP ~$6.4k, Questrade RSP ~$20k cash. Key monitoring: cash drag, NVDA concentration, tech/AI factor exposure, USD/CAD FX exposure; no confirmed trades or near-term registered withdrawal need recorded.
+Investment context 2026-05-30: registered ~$200.1k CAD; cash ~$92.7k (46.3%) cash drag; NVDA ~$73.6k (36.8%) single-stock/AI concentration. AI/mega-cap overlap: NVDA, GOOG, META, PLTR, FIG; USD/CAD FX exposure. FHSA: ~$11.5k cash + 33 VFV.TO; deploy based on home timeline (VFV/XEQT/CBIL-like mix). Watch liquidity before investing: June cards + overdue tax/debt/insurance/admin; Montreal Jun 8–15 may delay execution. Rebalance focus: reduce idle cash; avoid adding AI unless sizing explicit.
 §
 Recurring income: biweekly on Thursday starting May 28, 2026, net payroll from Ongles Rivieres to CIBC chequing account is $2,747.50.
 §

@@ -29,6 +29,10 @@
       1778565357576819359,
       4557
     ],
+    "autonomous-ai-agents/community-skill-installation/SKILL.md": [
+      1780819908478729768,
+      3214
+    ],
     "autonomous-ai-agents/hermes-activity-recap/SKILL.md": [
       1780707757711115304,
       9108
@@ -40,6 +44,10 @@
     "autonomous-ai-agents/hermes-discord-local-setup/SKILL.md": [
       1778650599362739688,
       6010
+    ],
+    "autonomous-ai-agents/hermes-skill-installation/SKILL.md": [
+      1780820166761210574,
+      6493
     ],
     "autonomous-ai-agents/hermes-telegram-multi-profile/SKILL.md": [
       1779650433538985432,
@@ -146,12 +154,12 @@
       8718
     ],
     "devops/kanban-orchestrator/SKILL.md": [
-      1778644994278224367,
-      14105
+      1780819229262747922,
+      15831
     ],
     "devops/kanban-worker/SKILL.md": [
-      1779252798259558301,
-      10500
+      1780819229262747922,
+      10979
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -381,6 +389,10 @@
       1778565357589037492,
       5111
     ],
+    "research/last30days/SKILL.md": [
+      1780819766039568949,
+      130813
+    ],
     "research/llm-wiki/SKILL.md": [
       1778565357589204951,
       20113
@@ -410,8 +422,8 @@
       7910
     ],
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1778490391625044033,
-      7618
+      1780819229270747874,
+      7609
     ],
     "software-development/hermes-s6-container-supervision/SKILL.md": [
       1779743766085236865,
@@ -434,8 +446,8 @@
       8483
     ],
     "software-development/spike/SKILL.md": [
-      1778490391625044033,
-      8753
+      1780819229270747874,
+      8730
     ],
     "software-development/subagent-driven-development/SKILL.md": [
       1778565357591313168,
@@ -458,20 +470,20 @@
       1696
     ],
     "today/SKILL.md": [
-      1780571005369393735,
-      3284
+      1780830221914976349,
+      3789
     ],
     "tonight/SKILL.md": [
       1780466615013397253,
       3829
     ],
     "wiki-ingest/SKILL.md": [
-      1780585409585791548,
-      8947
+      1780866227047499373,
+      9438
     ],
     "wiki-lint/SKILL.md": [
-      1780736668834263686,
-      4869
+      1780823141724079000,
+      5036
     ],
     "yuanbao/SKILL.md": [
       1778490391625044033,
@@ -701,6 +713,19 @@
       }
     },
     {
+      "skill_name": "community-skill-installation",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "community-skill-installation",
+      "description": "Install and verify third-party/community Hermes skills, i...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "hermes-activity-recap",
       "category": "autonomous-ai-agents",
       "frontmatter_name": "hermes-activity-recap",
@@ -731,6 +756,19 @@
       "category": "autonomous-ai-agents",
       "frontmatter_name": "hermes-discord-local-setup",
       "description": "Set up Hermes Agent as a local Discord bot on macOS, incl...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-skill-installation",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "hermes-skill-installation",
+      "description": "Use when installing, importing, repairing, or exposing He...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1169,7 +1207,7 @@
       "skill_name": "kanban-orchestrator",
       "category": "devops",
       "frontmatter_name": "kanban-orchestrator",
-      "description": "Decomposition playbook + anti-temptation rules for an orc...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -1186,7 +1224,7 @@
       "skill_name": "kanban-worker",
       "category": "devops",
       "frontmatter_name": "kanban-worker",
-      "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -2073,6 +2111,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "last30days",
+      "category": "research",
+      "frontmatter_name": "last30days",
+      "description": "Research what people actually say about any topic in the ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

@@ -34,8 +34,8 @@
       4333
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1779854868781882920,
-      46349
+      1780819229262747922,
+      46692
     ],
     "autonomous-ai-agents/hermes-discord-local-setup/SKILL.md": [
       1778644994273579807,
@@ -146,12 +146,12 @@
       3639
     ],
     "devops/kanban-orchestrator/SKILL.md": [
-      1778644994278224367,
-      14105
+      1780819229262747922,
+      15831
     ],
     "devops/kanban-worker/SKILL.md": [
-      1779252798259558301,
-      10500
+      1780819229262747922,
+      10979
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -366,8 +366,8 @@
       5120
     ],
     "red-teaming/godmode/SKILL.md": [
-      1778565357588786324,
-      20059
+      1780819229270747874,
+      20044
     ],
     "research/arxiv/SKILL.md": [
       1778490391625044033,
@@ -386,7 +386,7 @@
       2985
     ],
     "research/research-paper-writing/SKILL.md": [
-      1777843113919218436,
+      1777843256886151708,
       103375
     ],
     "smart-home/openhue/SKILL.md": [
@@ -398,16 +398,16 @@
       6140
     ],
     "social-media/xurl/SKILL.md": [
-      1779854868781882920,
-      14977
+      1780819229270747874,
+      15518
     ],
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778490391625044033,
       7910
     ],
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1778490391625044033,
-      7618
+      1780819229270747874,
+      7609
     ],
     "software-development/hermes-s6-container-supervision/SKILL.md": [
       1779743766085236865,
@@ -418,32 +418,32 @@
       10929
     ],
     "software-development/plan/SKILL.md": [
-      1778565357589904495,
-      2016
+      1780819229270747874,
+      8974
     ],
     "software-development/python-debugpy/SKILL.md": [
       1778490391625044033,
       13172
     ],
     "software-development/requesting-code-review/SKILL.md": [
-      1778565357591027125,
-      8483
+      1780819229270747874,
+      8465
     ],
     "software-development/spike/SKILL.md": [
-      1778490391625044033,
-      8753
+      1780819229270747874,
+      8730
     ],
     "software-development/subagent-driven-development/SKILL.md": [
       1778565357591313168,
       10742
     ],
     "software-development/systematic-debugging/SKILL.md": [
-      1778565357591458835,
-      10480
+      1780819229274747850,
+      10471
     ],
     "software-development/test-driven-development/SKILL.md": [
-      1778565357591598710,
-      9573
+      1780819229274747850,
+      9564
     ],
     "software-development/writing-plans/SKILL.md": [
       1778565357591729503,
@@ -2222,7 +2222,7 @@
       "skill_name": "plan",
       "category": "software-development",
       "frontmatter_name": "plan",
-      "description": "Plan mode: write markdown plan to .hermes/plans/, no exec.",
+      "description": "Plan mode: write an actionable markdown plan to .hermes/p...",
       "platforms": [
         "linux",
         "macos",

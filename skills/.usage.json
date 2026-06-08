@@ -1,4 +1,17 @@
 {
+  "community-skill-installation": {
+    "archived_at": null,
+    "created_at": "2026-06-07T08:11:48.485417+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "find-nearby": {
     "archived_at": null,
     "created_at": "2026-05-11T10:12:49.077421+00:00",
@@ -30,13 +43,26 @@
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-21T19:50:36.637086+00:00",
-    "last_used_at": "2026-06-06T16:00:06.426314+00:00",
-    "last_viewed_at": "2026-06-06T16:00:06.421288+00:00",
+    "last_used_at": "2026-06-07T16:00:58.874679+00:00",
+    "last_viewed_at": "2026-06-07T16:00:58.871777+00:00",
     "patch_count": 29,
     "pinned": false,
     "state": "active",
-    "use_count": 805,
-    "view_count": 805
+    "use_count": 808,
+    "view_count": 808
+  },
+  "hermes-agent-skill-authoring": {
+    "archived_at": null,
+    "created_at": "2026-06-07T08:13:49.871047+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-07T08:13:49.873731+00:00",
+    "last_viewed_at": "2026-06-07T08:13:49.871070+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "hermes-discord-local-setup": {
     "archived_at": null,
@@ -56,13 +82,13 @@
     "created_at": "2026-05-13T04:01:40.096916+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-15T05:04:23.400460+00:00",
-    "last_used_at": "2026-06-06T12:00:24.584557+00:00",
-    "last_viewed_at": "2026-06-06T12:00:24.582223+00:00",
+    "last_used_at": "2026-06-07T12:00:58.214695+00:00",
+    "last_viewed_at": "2026-06-07T12:00:58.212456+00:00",
     "patch_count": 16,
     "pinned": false,
     "state": "active",
-    "use_count": 28,
-    "view_count": 28
+    "use_count": 29,
+    "view_count": 29
   },
   "hermes-operations-troubleshooting": {
     "archived_at": null,
@@ -77,6 +103,19 @@
     "use_count": 8,
     "view_count": 8
   },
+  "hermes-skill-installation": {
+    "archived_at": null,
+    "created_at": "2026-06-07T08:16:06.770796+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "hermes-telegram-multi-profile": {
     "archived_at": null,
     "created_at": "2026-05-11T09:20:45.481008+00:00",
@@ -89,6 +128,19 @@
     "state": "active",
     "use_count": 95,
     "view_count": 95
+  },
+  "last30days": {
+    "archived_at": null,
+    "created_at": "2026-06-07T08:11:17.262699+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-07T08:15:19.076653+00:00",
+    "last_viewed_at": "2026-06-07T08:11:17.262729+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 1
   },
   "obsidian-csv-import-ingest": {
     "archived_at": null,
@@ -121,12 +173,12 @@
     "created_at": "2026-05-20T17:00:39.578758+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-21T17:06:22.726357+00:00",
-    "last_used_at": "2026-06-06T17:00:36.731744+00:00",
+    "last_used_at": "2026-06-07T17:00:55.777926+00:00",
     "last_viewed_at": "2026-05-23T01:00:09.279627+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 23,
+    "use_count": 24,
     "view_count": 5
   },
   "software-development/systematic-debugging": {
@@ -146,52 +198,52 @@
     "archived_at": null,
     "created_at": "2026-05-20T08:30:25.138771+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-04T11:03:25.383901+00:00",
-    "last_used_at": "2026-06-06T11:00:15.143024+00:00",
+    "last_patched_at": "2026-06-07T11:03:41.922754+00:00",
+    "last_used_at": "2026-06-07T11:00:54.577627+00:00",
     "last_viewed_at": "2026-05-21T13:22:18.599145+00:00",
-    "patch_count": 3,
+    "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 24,
+    "use_count": 25,
     "view_count": 4
   },
   "tonight": {
     "archived_at": null,
     "created_at": "2026-05-21T01:01:03.002006+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-05T01:02:12.389124+00:00",
-    "last_used_at": "2026-06-07T01:00:10.005315+00:00",
-    "last_viewed_at": "2026-06-05T01:02:00.956253+00:00",
-    "patch_count": 8,
+    "last_patched_at": "2026-06-07T06:03:10.555627+00:00",
+    "last_used_at": "2026-06-08T01:00:57.601310+00:00",
+    "last_viewed_at": "2026-06-07T06:02:58.498523+00:00",
+    "patch_count": 10,
     "pinned": false,
     "state": "active",
-    "use_count": 45,
-    "view_count": 10
+    "use_count": 50,
+    "view_count": 13
   },
   "wiki-ingest": {
     "archived_at": null,
     "created_at": "2026-05-20T15:00:46.174452+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-04T15:03:29.595316+00:00",
-    "last_used_at": "2026-06-07T03:00:45.452474+00:00",
+    "last_patched_at": "2026-06-07T21:03:47.053032+00:00",
+    "last_used_at": "2026-06-08T03:00:58.047320+00:00",
     "last_viewed_at": "2026-05-24T15:02:42.413412+00:00",
-    "patch_count": 11,
+    "patch_count": 12,
     "pinned": false,
     "state": "active",
-    "use_count": 61,
+    "use_count": 64,
     "view_count": 7
   },
   "wiki-lint": {
     "archived_at": null,
     "created_at": "2026-05-20T09:00:43.519564+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-06T09:04:28.845361+00:00",
-    "last_used_at": "2026-06-06T09:00:37.621657+00:00",
+    "last_patched_at": "2026-06-07T09:05:41.727797+00:00",
+    "last_used_at": "2026-06-07T09:00:54.150664+00:00",
     "last_viewed_at": "2026-06-04T09:00:20.170834+00:00",
-    "patch_count": 10,
+    "patch_count": 12,
     "pinned": false,
     "state": "active",
-    "use_count": 35,
+    "use_count": 36,
     "view_count": 16
   },
   "workspace-dispatch": {
