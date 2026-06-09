@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260601-100620",
-  "last_run_at": "2026-06-01T10:06:20.912395+00:00",
-  "last_run_duration_seconds": 20.901944,
-  "last_run_summary": "auto: no changes; llm: Scanned the candidate landscape and loaded the only agent-created candidate skill:\n\n- `wellness-transformation` — active, pinned=no\n\nResult: no consolidation action was appropriate because the candidate set contains only one skill, so there…",
+  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260608-105459",
+  "last_run_at": "2026-06-08T10:54:59.839983+00:00",
+  "last_run_duration_seconds": 17.07088,
+  "last_run_summary": "auto: no changes; llm: Processed the full candidate list provided.\n\nOnly one agent-created, unpinned active skill was present:\n\n- `wellness-transformation`\n\nDecision:\n\n- No prefix/domain cluster with 2+ members exists, so there is no umbrella consolidation opport…",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 4
+  "run_count": 5
 }

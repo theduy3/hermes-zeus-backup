@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/finance/logs/curator/20260601-095448",
-  "last_run_at": "2026-06-01T09:54:48.326993+00:00",
-  "last_run_duration_seconds": 0.95456,
+  "last_report_path": "/home/hermes/.hermes/profiles/finance/logs/curator/20260608-104249",
+  "last_run_at": "2026-06-08T10:42:49.669692+00:00",
+  "last_run_duration_seconds": 1.024547,
   "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 4
+  "run_count": 5
 }

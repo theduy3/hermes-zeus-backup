@@ -377,6 +377,10 @@
       1778565357589037492,
       5111
     ],
+    "research/last30days/SKILL.md": [
+      1780819766039568949,
+      130813
+    ],
     "research/llm-wiki/SKILL.md": [
       1778565357589204951,
       20113
@@ -1136,7 +1140,7 @@
       "skill_name": "kanban-orchestrator",
       "category": "devops",
       "frontmatter_name": "kanban-orchestrator",
-      "description": "Decomposition playbook + anti-temptation rules for an orc...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -1153,7 +1157,7 @@
       "skill_name": "kanban-worker",
       "category": "devops",
       "frontmatter_name": "kanban-worker",
-      "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -2037,6 +2041,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "last30days",
+      "category": "research",
+      "frontmatter_name": "last30days",
+      "description": "Research what people actually say about any topic in the ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

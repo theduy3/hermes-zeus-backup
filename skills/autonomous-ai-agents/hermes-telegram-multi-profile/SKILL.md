@@ -53,7 +53,9 @@ Use this when a user wants separate Hermes Telegram bots for different companies
 12. **API key requirement**: Gateway profiles need the model provider's API key in their `.env`. If using `deepseek-v4-pro` via OpenRouter, set `OPENROUTER_API_KEY=...` in each profile's `.env`. If using DeepSeek directly, set `DEEPSEEK_API_KEY=...`. Without the key, gateways will respond with "No LLM provider configured" errors even though the profile's config.yaml has the correct model/provider.
 13. **Cross-platform profiles**: Profiles can mix Telegram and Discord on the same machine. Each profile's `.env` determines which platforms it connects to — set `TELEGRAM_BOT_TOKEN` for Telegram, `DISCORD_BOT_TOKEN` for Discord, or both for a profile on both platforms. Gateway services are per-profile and per-platform-agnostic.
 
-14. **Token verification tools mask values** — `read_file` and `terminal` both redact bot tokens to `***` or `...PE0`. For precise diagnosis, use Python to extract the bot_id prefix (the numeric part before `:`) or md5 hashes to compare tokens without exposing them. See `references/vps-token-conflict-resolution.md` for the deadlock scenario where both profiles have swapped tokens and neither gateway can restart.
+14. **Slash commands are gateway-startup cached per profile.** Installing or copying a `user-invocable: true` skill into every profile does not make `/skillname` active in already-running Telegram gateways. Restart each affected profile gateway so it rescans `scan_skill_commands()`, then verify local command discovery and current log timestamps. Telegram may register only 30 menu commands and hide the rest, but hidden commands still work when typed directly if discovered. Full playbook: `references/profile-slash-command-cache-refresh.md`.
+
+15. **Token verification tools mask values** — `read_file` and `terminal` both redact bot tokens to `***` or `...PE0`. For precise diagnosis, use Python to extract the bot_id prefix (the numeric part before `:`) or md5 hashes to compare tokens without exposing them. See `references/vps-token-conflict-resolution.md` for the deadlock scenario where both profiles have swapped tokens and neither gateway can restart.
 
 15. **VPS/container entrypoint.sh regenerates default `.env` on every start.** The standard entrypoint writes `TELEGRAM_BOT_TOKEN` from the container's environment variable into `~/.hermes/.env` (the default profile's env), overwriting any manual edits. Profile-specific `.env` files (under `~/.hermes/profiles/<name>/.env`) are NOT overwritten — only the default one is. This means:
     - The default gateway's token is always whatever the container's `TELEGRAM_BOT_TOKEN` env var holds.
@@ -257,6 +259,10 @@ tail -n 80 ~/.hermes/profiles/maily/logs/gateway.error.log
 ```
 
 ## Troubleshooting checklist
+
+### User-invocable slash command exists on disk but Telegram says unknown
+
+If a command like `/last30days` was installed/copied into profile skills but Telegram still reports it as unknown, restart that profile's gateway. Slash command discovery is cached at gateway startup per profile. Verify with the local `scan_skill_commands()` probe and the latest timestamped gateway logs, not by checking the filesystem alone. See `references/profile-slash-command-cache-refresh.md`.
 
 ### Bot reads messages but does not reply
 

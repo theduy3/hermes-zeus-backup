@@ -19,7 +19,9 @@ Heuristic related-link selection can produce technically valid but semantically 
 1. Print or inspect the `## Related` links for all 20 batch pages.
 2. Replace unrelated generic links with closer domain neighbors before final verification.
 3. Use title/file searches to find better neighbors, e.g. browser pages for browser notes, travel pages for travel notes, source/repo pages for GitHub source notes.
-4. If no genuinely relevant second link exists, prefer a relevant MOC or leave the page counted as low-outbound for future human/ingest work rather than forcing an unrelated note.
+4. For very sparse/personal/fleeting stubs, a relevant MOC plus a true workflow/context note is better than forcing a random same-tag page. Avoid letting a generic `ai` tag connect language notes, legal stubs, or mobile captures to Claude/AI pages unless the body actually discusses AI.
+5. For repo/source notes, prefer a same-domain entity/product page or same operational category (e.g. email/self-hosted/customer-support) over an arbitrary high-inbound or recently ingested GitHub source.
+6. If no genuinely relevant second link exists, prefer a relevant MOC or leave the page counted as low-outbound for future human/ingest work rather than forcing an unrelated note.
 
 ## Final verification shape
 

@@ -17,13 +17,13 @@
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-11T10:13:11.810892+00:00",
-    "last_used_at": "2026-05-28T03:47:36.854286+00:00",
-    "last_viewed_at": "2026-05-28T03:47:36.852255+00:00",
+    "last_used_at": "2026-06-08T10:55:10.876470+00:00",
+    "last_viewed_at": "2026-06-08T10:55:10.851360+00:00",
     "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 25,
-    "view_count": 25
+    "use_count": 26,
+    "view_count": 26
   },
   "hermes-telegram-multi-profile": {
     "archived_at": null,
@@ -38,17 +38,30 @@
     "use_count": 6,
     "view_count": 6
   },
+  "last30days": {
+    "archived_at": null,
+    "created_at": "2026-06-09T04:11:30.461647+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-09T04:11:30.461685+00:00",
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 0
+  },
   "wellness-transformation": {
     "archived_at": null,
     "created_at": "2026-05-11T12:39:56.907363+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-05-30T07:33:37.713606+00:00",
-    "last_used_at": "2026-06-08T00:00:54.526340+00:00",
-    "last_viewed_at": "2026-06-08T00:00:54.515089+00:00",
+    "last_used_at": "2026-06-08T10:55:10.885554+00:00",
+    "last_viewed_at": "2026-06-08T10:55:10.873752+00:00",
     "patch_count": 53,
     "pinned": false,
     "state": "active",
-    "use_count": 66,
-    "view_count": 66
+    "use_count": 67,
+    "view_count": 67
   }
 }

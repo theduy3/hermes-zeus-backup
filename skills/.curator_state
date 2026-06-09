@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/logs/curator/20260601-104453",
-  "last_run_at": "2026-06-01T10:44:53.282642+00:00",
-  "last_run_duration_seconds": 17.773381,
-  "last_run_summary": "auto: no changes; llm: Processed the full candidate set. There is only one agent-created, unpinned skill in scope:\n\n- `hermes-operations-troubleshooting`\n\nDecision: kept as-is. It is already a class-level umbrella for live Hermes operational troubleshooting, with…",
+  "last_report_path": "/home/hermes/.hermes/logs/curator/20260608-110159",
+  "last_run_at": "2026-06-08T11:01:59.515859+00:00",
+  "last_run_duration_seconds": 477.133785,
+  "last_run_summary": "auto: no changes; llm: Consolidation pass completed.\n\nCreated 10 class-level umbrella skills and archived 66 narrow skills after copying their full package directories into the umbrella’s `references/<old-skill-name>/` folder so support files (`references/`, `tem…",
   "last_run_summary_shown_at": "2026-06-01T10:44:53.282642+00:00",
   "paused": false,
-  "run_count": 4
+  "run_count": 5
 }
