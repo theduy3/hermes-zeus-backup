@@ -1,0 +1,15 @@
+{
+  "location": "Montreal",
+  "timezone": "America/Toronto",
+  "label": "EDT",
+  "updated_at": "2026-06-09T07:32:19.071475-04:00",
+  "profiles": [
+    "default",
+    "butter",
+    "catthew",
+    "charles",
+    "finance",
+    "thor",
+    "zeus"
+  ]
+}

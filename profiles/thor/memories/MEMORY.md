@@ -17,3 +17,7 @@ Weight tracking: CSV at ~/.hermes/profiles/thor/logs/weight-log.csv, graph scrip
 Thor cron: labels/times match visible Pacific phone time (or Eastern in Quebec if requested). Old reminder button clicks from previous days are rejected/not logged; use today's button. Meditation 7:15AM/10:15PM includes music link ThyQNMZZH-E + 20-min button; Exercise 3PM uses YouTube Jo1eWJ0YNnA; Evening Stretch 9PM uses YouTube g_tea8ZNk5A.
 §
 For Thor hydration logs, when user says “glass” or “cup” of water, count it as 500ml unless they specify another amount.
+§
+§
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

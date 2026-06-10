@@ -15,3 +15,7 @@ Upcoming trip: Okanagan Camping Trip 2026 — Jun 22–24 Monk Park campsite #56
 Hotels.ca reward night value: CA$254.67.
 §
 Marriott Bonvoy free night certificates: 2 nights worth up to 35,000 points each; expire 2027-05-07.
+§
+§
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

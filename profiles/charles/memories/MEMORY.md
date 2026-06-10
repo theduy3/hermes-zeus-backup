@@ -11,3 +11,7 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 Finance profile (Telegram) = user's Personal Finance bot — knows detailed financials, account balances, holdings. Charles should coordinate with it for portfolio strategy, retirement planning, and any advice that needs precise numbers.
 §
 User weekly finance context as of 2026-06-07 PT: registered portfolio cash ~$92.7k (~46.6%); NVDA ~$71.7k (~36.0% total portfolio / ~67.0% invested holdings). Key risks: high cash drag, NVDA/single-stock + tech/AI factor concentration, USD/CAD FX exposure. Near-term admin risk is payments rather than investing: multiple credit card payment tasks Jun 8–27; pending card closures, portfolio update, Laviestella taxes/strata PAD, Ongles Rivieres year-end tax package, Jun 25 SS rent PAD, Jun 11 RBC Avion→BA Avios 30% bonus deadline. Cash constraints: payroll $2,748 biweekly; rent $2,000/month. No confirmed near-term registered withdrawal need or trades recorded.
+§
+§
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

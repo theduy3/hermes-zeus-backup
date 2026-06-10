@@ -107,6 +107,32 @@ When the user asks to make all Hermes agents/profiles work reliably without repe
 
 See `references/docker-profile-gateway-hardening.md` for the full repair pattern, wrapper/supervisor snippets, stale-lock cleanup, and watchdog criteria.
 
+## Telegram cron task-card button workflow
+
+When cron-generated Telegram task cards show inline buttons like `✅ Done` and `⋯ More`, but tapping them does nothing:
+
+1. Treat it as a Telegram callback-query routing problem until proven otherwise.
+   - Sender scripts only emit `callback_data`; the live gateway must handle those prefixes.
+   - Search profile scripts for `InlineKeyboardButton`, `callback_data`, `Done`, and `More`.
+2. Inspect the callback-data prefixes and backing registries.
+   - Known examples: Zeus `zt:` / `ztm:` and Catthew `ct:` / `ctm:`.
+   - Confirm registry paths and schema before writing handler logic.
+3. Patch the central Telegram gateway adapter, not only the cron sender script.
+   - Dispatch task-card prefixes early in `_handle_callback_query`.
+   - `More` should answer quickly, edit the card with details, and keep the Done/More keyboard active.
+   - `Done` should update registry state, safely update the backing task source if supported, then edit the card and remove the keyboard.
+4. Keep writes profile-safe.
+   - Treat callback data as a registry key, never a file path.
+   - Only update source task files under an explicit safe root such as `/vault/Tasks/tasks`.
+5. Restart and verify every relevant profile gateway.
+   - Check `/proc/<pid>/environ` for profile-scoped `HERMES_HOME`.
+   - Tail latest logs for `Connected to Telegram (polling mode)`, `✓ telegram connected`, and `Gateway running with 1 platform(s)`.
+6. Verify with a local callback self-test before reporting success.
+   - Use a temporary registry and fake query object to exercise both `More` and `Done`.
+   - Compile/import the patched gateway module in the project venv.
+
+See `references/telegram-cron-task-card-callbacks.md` for prefix examples, fix pattern, safe-write rules, and verification checks.
+
 ## Weekly ops audit workflow
 
 When auditing Hermes operational health for gateways, MCP servers, cron jobs, and obvious configuration drift:
@@ -188,3 +214,4 @@ grep "cron_<job_id>" /home/hermes/.hermes/logs/agent.log | grep -E "(API call fa
 - `references/codex-stream-typeerror.md` — Codex stream TypeError from malformed SSE frame: root cause, fix, and affected code paths.
 - `references/profile-codex-auth-repair.md` — profile-specific OpenAI Codex auth repair when cron/model calls fail with missing `access_token` despite `auth list` showing credentials.
 - `references/docker-profile-gateway-hardening.md` — Docker multi-profile gateway hardening: profile-scoped `HERMES_HOME`, inherited env cleanup, stale zombie lock removal, supervisor, and silent watchdog pattern.
+- `references/telegram-cron-task-card-callbacks.md` — Telegram cron task-card inline button callbacks: prefix routing, registry updates, safe source-file writes, gateway restarts, and local callback self-tests.

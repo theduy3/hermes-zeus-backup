@@ -15,3 +15,7 @@ Investment context 2026-05-30: registered ~$200.1k CAD; cash ~$92.7k (46.3%) cas
 Recurring income: biweekly on Thursday starting May 28, 2026, net payroll from Ongles Rivieres to CIBC chequing account is $2,747.50.
 §
 Recurring personal expense: monthly rent is $2,000.
+§
+§
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

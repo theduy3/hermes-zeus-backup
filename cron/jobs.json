@@ -25,7 +25,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-06-09T09:00:00-07:00",
+      "next_run_at": "2026-06-09T09:00:00-04:00",
       "last_run_at": "2026-06-08T09:01:01.949631-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -58,7 +58,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-06-09T18:00:00-07:00",
+      "next_run_at": "2026-06-09T18:00:00-04:00",
       "last_run_at": "2026-06-08T18:02:19.439119-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -91,7 +91,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.805996-04:00",
-      "next_run_at": "2026-06-15T09:15:00-07:00",
+      "next_run_at": "2026-06-15T09:15:00-04:00",
       "last_run_at": "2026-06-08T09:19:15.658813-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -126,7 +126,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-06-09T18:10:00-07:00",
+      "next_run_at": "2026-06-09T18:10:00-04:00",
       "last_run_at": "2026-06-08T18:12:14.833216-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -159,7 +159,7 @@
       "paused_at": "2026-05-21T10:15:51.020999-07:00",
       "paused_reason": null,
       "created_at": "2026-04-24T03:31:55.186592+00:00",
-      "next_run_at": "2026-05-21T10:16:07.648088-07:00",
+      "next_run_at": "2026-06-09T07:33:39.865334-04:00",
       "last_run_at": "2026-05-21T10:14:07.648088-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -170,7 +170,7 @@
     {
       "id": "12e5ce30563d",
       "name": "nightly-hermes-github-backup",
-      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync \u2014 push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n\u2500\u2500 SELF-CHECK: IS IT MIDNIGHT CENTRAL? \u2500\u2500\n\nThis cron fires at 05:00 UTC. During CDT (UTC-5, summer), midnight Central = 05:00 UTC \u2014 fire immediately. During CST (UTC-6, winter), midnight Central = 06:00 UTC \u2014 we're one hour early. Do this check first:\n\n1. Determine the current hour in America/Chicago timezone. Use `python3` if available, otherwise `TZ=America/Chicago date +%H`.\n2. If the hour is 0 (midnight) \u2192 proceed to the sync steps below.\n3. If the hour is 23 (11pm Central \u2014 we're an hour early during CST) \u2192 sleep 3600 seconds (1 hour), then proceed.\n4. For any other hour, exit silently with a note that the schedule may need adjustment.\n\n\u2500\u2500 SYNC STEPS \u2500\u2500\n\nOnce midnight Central is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) \u2014 must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message \u2014 include a timestamp (America/Chicago) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n\u2500\u2500 FAILURE HANDLING \u2500\u2500\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n\u2500\u2500 IMPORTANT \u2500\u2500\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` \u2014 if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
+      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync — push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n── SELF-CHECK: IS IT MIDNIGHT CENTRAL? ──\n\nThis cron fires at 05:00 UTC. During EDT (America/Toronto-5, summer), midnight Central = 05:00 UTC — fire immediately. During EDT (America/Toronto-6, winter), midnight Central = 06:00 America/Toronto — we're one hour early. Do this check first:\n\n1. Determine the current hour in America/Toronto timezone. Use `python3` if available, otherwise `TZ=America/Toronto date +%H`.\n2. If the hour is 0 (midnight) → proceed to the sync steps below.\n3. If the hour is 23 (11pm Central — we're an hour early during EDT) → sleep 3600 seconds (1 hour), then proceed.\n4. For any other hour, exit silently with a note that the schedule may need adjustment.\n\n── SYNC STEPS ──\n\nOnce midnight Central is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) — must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message — include a timestamp (America/Toronto) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n── FAILURE HANDLING ──\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n── IMPORTANT ──\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` — if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
       "skills": [],
       "skill": null,
       "model": "gpt-5.5",
@@ -194,7 +194,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-06-09T05:00:00-07:00",
+      "next_run_at": "2026-06-10T05:00:00-04:00",
       "last_run_at": "2026-06-08T05:00:28.226977-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -226,15 +226,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 23
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-06-09T04:00:00-07:00",
-      "last_run_at": "2026-06-08T04:02:59.452957-07:00",
+      "next_run_at": "2026-06-10T04:00:00-04:00",
+      "last_run_at": "2026-06-09T04:02:43.446754-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -273,7 +273,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-06-09T10:00:00-07:00",
+      "next_run_at": "2026-06-09T10:00:00-04:00",
       "last_run_at": "2026-06-08T10:00:56.291909-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -313,7 +313,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-06-09T08:00:00-07:00",
+      "next_run_at": "2026-06-09T08:00:00-04:00",
       "last_run_at": "2026-06-08T20:00:57.547055-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -346,15 +346,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-06-09T02:00:00-07:00",
-      "last_run_at": "2026-06-08T02:06:01.550314-07:00",
+      "next_run_at": "2026-06-10T02:00:00-04:00",
+      "last_run_at": "2026-06-09T02:05:46.914171-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -386,15 +386,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 39
+        "completed": 40
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-06-08T23:00:00-07:00",
-      "last_run_at": "2026-06-08T18:01:30.002861-07:00",
+      "next_run_at": "2026-06-09T18:00:00-04:00",
+      "last_run_at": "2026-06-08T23:01:27.018694-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -424,15 +424,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 39
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-06-08T22:02:37.947636-07:00",
-      "last_run_at": "2026-06-08T21:32:37.947636-07:00",
+      "next_run_at": "2026-06-09T08:01:39.866778-04:00",
+      "last_run_at": "2026-06-09T04:15:39.601284-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -448,5 +448,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-08T21:32:37.947858-07:00"
+  "updated_at": "2026-06-09T07:31:39.866783-04:00"
 }

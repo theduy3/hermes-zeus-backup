@@ -9,3 +9,5 @@ Lives in Pacific timezone (PST/PDT). Has a child named Victoria (born ~mid 2025,
 User prefers terse, commands-only responses. Skip explanations, give just the code or one-liner commands unless asked to elaborate. No fluff.
 §
 Thor profile is wellness on Telegram; model/provider uses gpt-5.5 via openai-codex.
+§
+When the user tells any Hermes profile a travel destination/current location/timezone, they want that travel context and timezone applied across all profiles, not just the profile they told.

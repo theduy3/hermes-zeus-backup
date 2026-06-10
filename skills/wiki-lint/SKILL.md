@@ -34,6 +34,7 @@ high-inbound-link pages).
 - Batch ordering and orphan filtering details live in `references/batch-and-orphan-filtering.md`.
 - For an efficient sequential implementation pattern (Python scanner/editor, index regeneration, log append, and exact verification checks), see `references/automation-and-verification-pattern.md`.
 - For cron-specific pitfalls around unreadable root-owned files and semantic related-link verification, see `references/cron-permission-and-semantic-verification.md`.
+- For post-edit verification/log repair after semantic cross-link cleanup, see `references/post-verification-log-and-index-repair.md`.
 - If any referenced helper file is missing in the runtime vault, do not stop the cron job. Fall back to a self-contained `/tmp/wiki_lint_run.py` script that: scans `/vault/Notes` + `/vault/MOCs`, selects exactly 20 issue-bearing pages by oldest/missing `updated`, writes via root-owned-safe replacement, regenerates `System/wiki-index.md`, appends one `wiki-log.md` entry, and prints a JSON verification report.
 - Some imported notes contain conflict-style frontmatter artifacts such as `>> NEW >>` / `<< OLD <<`. When linting those pages, normalize frontmatter by preserving canonical fields only (`tags`, `type`, `created`, `updated`, `sources`, `wiki_status`, plus useful metadata like `title`/`source`) and remove those artifacts from the YAML block before verification.
 

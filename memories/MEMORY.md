@@ -19,3 +19,7 @@ Hermes Docker venv: /home/hermes/.hermes/hermes-agent/venv/ may lack pip. Bootst
 Tesseract OCR 5.5.0 portable at ~/.local/. Deps: libleptonica6/libgif7/libarchive13/libtesseract5. eng.traineddata at ~/.local/share/tessdata/. Env: TESSDATA_PREFIX, LD_LIBRARY_PATH. Pipeline: pymupdf→PNG→tesseract. pymupdf 1.27 in hermes-agent venv.
 §
 Paperclip on VPS 147.93.116.94 runs in Docker, bound localhost:3100 in container. Host SSH user is root (host lacked hermes); use root SSH tunnel.
+§
+§
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

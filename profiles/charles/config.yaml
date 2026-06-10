@@ -172,7 +172,7 @@ memory:
   user_profile_enabled: true
   memory_char_limit: 2200
   user_char_limit: 1375
-  provider: 'agentmemory'
+  provider: agentmemory
   nudge_interval: 10
   flush_min_turns: 6
 delegation:
@@ -204,7 +204,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: Etc/GMT+7
+timezone: America/Toronto
 telegram:
   reactions: false
   channel_prompts: {}
@@ -230,7 +230,7 @@ security:
   allow_lazy_installs: true
 cron:
   wrap_response: true
-  max_parallel_jobs:
+  max_parallel_jobs: null
 kanban:
   dispatch_in_gateway: true
   dispatch_interval_seconds: 60
@@ -292,7 +292,7 @@ platform_toolsets:
   - web
   telegram:
   - hermes-telegram
-  whatsapp:
+  whatsapp: null
 slack:
   require_mention: true
   free_response_channels: ''

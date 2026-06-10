@@ -11,3 +11,9 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 Always reference BC and Canada statutory holidays when planning. Key holidays: New Year's Day, Family Day (3rd Mon Feb), Good Friday, Easter Monday, Victoria Day (last Mon before May 25), Canada Day (Jul 1), BC Day (1st Mon Aug), Labour Day (1st Mon Sep), Thanksgiving (2nd Mon Oct), Remembrance Day (Nov 11), Christmas (Dec 25), Boxing Day (Dec 26).
 §
 Dining section space between two cabinets for IKEA shopping: depth 42 cm (16.5 in) × length 190 cm (74.8 in) × height 80 cm (31.5 in).
+§
+Victoria pancake recipe: mash 2 small bananas; add dash cinnamon, 2 tbsp oatmeal, 2 tbsp rice flour, 3 small spoons formula, a little water, and 1 egg; cook as small pancakes.
+§
+§
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
