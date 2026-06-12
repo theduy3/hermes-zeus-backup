@@ -54,6 +54,12 @@ Former narrow skills absorbed into this umbrella are preserved under `references
 - Calling a spike result production-ready without verification.
 - Skipping the RED step in TDD.
 - Treating static code review as a substitute for tests.
+- For Telegram inline buttons emitted by script-only cron jobs, checking only the sender script is insufficient; verify the central gateway callback router handles the exact `callback_data` prefixes and preserves/rebuilds keyboards for non-destructive `More` actions.
+- When the user asks for the "old More" behavior, use the Thor-style pattern: plain `More` label, concise details only, no full source-file/body expansion unless explicitly requested.
+
+## References
+
+- `references/telegram-inline-callback-buttons.md` — debugging and implementing Hermes Telegram inline callback buttons across profile gateways, including compact callback prefix patterns and verification steps.
 
 ## Verification Checklist
 

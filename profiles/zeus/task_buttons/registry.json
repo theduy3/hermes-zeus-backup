@@ -1858,5 +1858,78 @@
     "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
     "status": "sent",
     "message_id": 519
+  },
+  "fbab0a2a2d8cd61c": {
+    "id": "fbab0a2a2d8cd61c",
+    "date": "2026-06-11",
+    "title": "Pay CIBC Kitty 2871 (due on the 18th)",
+    "text": "Pay CIBC Kitty 2871 (due on the 18th)",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/pay-cibc-kitty-2871-due-on-the-18th.md",
+    "status": "sent",
+    "message_id": 539
+  },
+  "0c7e80129256c117": {
+    "id": "0c7e80129256c117",
+    "date": "2026-06-11",
+    "title": "Point transfer: RBC Avion Rewards → British Airways Club Avios 30% bonus",
+    "text": "Point transfer: RBC Avion Rewards → British Airways Club Avios 30% bonus",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/2026-06-11-rbc-avion-to-ba-avios-30-transfer-bonus.md",
+    "status": "done",
+    "message_id": 540,
+    "done_at": "2026-06-12T03:18:47.053960+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
+  },
+  "9413da1c989072c7": {
+    "id": "9413da1c989072c7",
+    "date": "2026-06-11",
+    "title": "Weekly Review",
+    "text": "Weekly Review",
+    "source": "Obsidian overdue 2026-06-10",
+    "file_path": "/vault/Tasks/tasks/weekly-review.md",
+    "status": "sent",
+    "message_id": 542
+  },
+  "0be2345d59ec08d7": {
+    "id": "0be2345d59ec08d7",
+    "date": "2026-06-11",
+    "title": "Remind Madame to close credit cards",
+    "text": "Remind Madame to close credit cards",
+    "source": "Obsidian overdue 2026-06-02",
+    "file_path": "/vault/Tasks/tasks/2026-06-02-remind-madame-close-credit-cards.md",
+    "status": "sent",
+    "message_id": 548
+  },
+  "1d6eb9a9d0f801b9": {
+    "id": "1d6eb9a9d0f801b9",
+    "date": "2026-06-11",
+    "title": "Check Clover Software Plan Pricing",
+    "text": "Check Clover Software Plan Pricing",
+    "source": "Obsidian overdue 2026-05-29",
+    "file_path": "/vault/Tasks/tasks/check-clover-software-plan-pricing.md",
+    "status": "sent",
+    "message_id": 549
+  },
+  "4be6deb1d925b3da": {
+    "id": "4be6deb1d925b3da",
+    "date": "2026-06-11",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian overdue 2026-03-04",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 550
+  },
+  "c8cae77668d52156": {
+    "id": "c8cae77668d52156",
+    "date": "2026-06-11",
+    "title": "Set Up Nail Box for Photos",
+    "text": "Set Up Nail Box for Photos",
+    "source": "Obsidian overdue 2026-02-22",
+    "file_path": "/vault/Tasks/tasks/set-up-nail-box-for-photos.md",
+    "status": "sent",
+    "message_id": 551
   }
 }

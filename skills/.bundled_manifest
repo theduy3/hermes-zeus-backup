@@ -24,7 +24,6 @@ github-code-review:e56793f8efef112bbcdad96f69b45ddd
 github-issues:ecb864a88aeea8f88f5b8742fec8806b
 github-pr-workflow:cab1d57b84e253dddff37bd212f469ca
 github-repo-management:7d7131b113d4dc2509a47501a6638e76
-godmode:c592b460bf06e1f31b51bc6ac299e111
 google-workspace:84ff6ddcfc6eba156e4f617b8e760c26
 heartmula:ce53b2e6c9d68238cae5ae727738ecde
 hermes-agent-skill-authoring:373715126bca9172a6acd28bdd424f10
@@ -42,7 +41,6 @@ maps:285f3436aafadf452fac8c0bb5715e40
 nano-pdf:7ad841b6a7879ac1ad74579c0e8d6f97
 node-inspect-debugger:55501511963a3a6410fc767b5ed3e21c
 notion:ac54a68c490d4cf1604bc24160083d43
-obliteratus:98dfcbfcad4416d27d5dcbd0a491d772
 obsidian:1dde562f384c6dc5eaec0b7c214caab4
 ocr-and-documents:0fe461668b245d894370b8b40c3eb012
 opencode:e3583bfa72da47385f6466eaf226faef
@@ -58,6 +56,7 @@ requesting-code-review:f9cc90df11a9ce1cc23595c574eacd75
 research-paper-writing:a5be1df03d86c08ed5378e9f1c18c702
 segment-anything-model:e21f0c842d399668483c440b7943c5d5
 serving-llms-vllm:a8b5453a5316da8df055a0f23c3cbd25
+simplify-code:400de5f892617a4f1e82c8b799142272
 sketch:f8833126112824f6a916c69630cfd042
 songsee:7fd11900a2b71aa070b2c52a5c24c614
 songwriting-and-ai-music:236e0d189a2e7e87b9f080a52ed9188e

@@ -26,8 +26,8 @@
       34288
     ],
     "autonomous-ai-agents/codex/SKILL.md": [
-      1778565357576819359,
-      4557
+      1781228918596083586,
+      5386
     ],
     "autonomous-ai-agents/hermes-activity-recap/SKILL.md": [
       1778644994273493098,
@@ -178,24 +178,24 @@
       3628
     ],
     "github/github-auth/SKILL.md": [
-      1778565357582399131,
-      7546
+      1781228918600083581,
+      7596
     ],
     "github/github-code-review/SKILL.md": [
-      1778565357582517007,
-      13565
+      1781228918600083581,
+      13615
     ],
     "github/github-issues/SKILL.md": [
-      1778565357582650216,
-      9265
+      1781228918600083581,
+      9315
     ],
     "github/github-pr-workflow/SKILL.md": [
-      1778565357582779758,
-      9985
+      1781228918600083581,
+      10035
     ],
     "github/github-repo-management/SKILL.md": [
-      1778565357582896217,
-      13683
+      1781228918600083581,
+      13733
     ],
     "leisure/find-nearby/SKILL.md": [
       1778644994278740411,
@@ -210,8 +210,8 @@
       13773
     ],
     "media/gif-search/SKILL.md": [
-      1778565357583113926,
-      2704
+      1781228918600083581,
+      2720
     ],
     "media/heartmula/SKILL.md": [
       1778565357583251718,
@@ -326,8 +326,8 @@
       14327
     ],
     "productivity/airtable/SKILL.md": [
-      1778490391621044058,
-      11302
+      1781228918600083581,
+      11334
     ],
     "productivity/google-workspace/SKILL.md": [
       1778490391621044058,
@@ -346,8 +346,8 @@
       1414
     ],
     "productivity/notion/SKILL.md": [
-      1778906847017550913,
-      14597
+      1781228918600083581,
+      14629
     ],
     "productivity/ocr-and-documents/SKILL.md": [
       1778490391625044033,
@@ -358,8 +358,8 @@
       9298
     ],
     "productivity/teams-meeting-pipeline/SKILL.md": [
-      1778490391625044033,
-      6867
+      1781228918600083581,
+      6883
     ],
     "productivity/theduylifeos-filing/SKILL.md": [
       1778644994307384401,
@@ -382,8 +382,8 @@
       130813
     ],
     "research/llm-wiki/SKILL.md": [
-      1778565357589204951,
-      20113
+      1781228918604083576,
+      20129
     ],
     "research/polymarket/SKILL.md": [
       1778490391625044033,
@@ -432,6 +432,10 @@
     "software-development/requesting-code-review/SKILL.md": [
       1780819229270747874,
       8465
+    ],
+    "software-development/simplify-code/SKILL.md": [
+      1781228918604083576,
+      8505
     ],
     "software-development/spike/SKILL.md": [
       1780819229270747874,
@@ -2273,6 +2277,23 @@
       "category": "software-development",
       "frontmatter_name": "requesting-code-review",
       "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "simplify-code",
+      "category": "software-development",
+      "frontmatter_name": "simplify-code",
+      "description": "Parallel 3-agent cleanup of recent code changes.",
       "platforms": [
         "linux",
         "macos",

@@ -232,7 +232,7 @@ def main() -> int:
             text += f"\nSource: {source}"
         markup = json.dumps({"inline_keyboard": [[
             {"text": "✅ Done", "callback_data": f"zt:{digest}"},
-            {"text": "⋯ More", "callback_data": f"ztm:{digest}"},
+            {"text": "More", "callback_data": f"ztm:{digest}"},
         ]]}, ensure_ascii=False)
         res = post_telegram(token, "sendMessage", {
             "chat_id": chat_id,
