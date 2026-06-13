@@ -21,7 +21,9 @@ Heuristic related-link selection can produce technically valid but semantically 
 3. Use title/file searches to find better neighbors, e.g. browser pages for browser notes, travel pages for travel notes, source/repo pages for GitHub source notes.
 4. For very sparse/personal/fleeting stubs, a relevant MOC plus a true workflow/context note is better than forcing a random same-tag page. Avoid letting a generic `ai` tag connect language notes, legal stubs, or mobile captures to Claude/AI pages unless the body actually discusses AI.
 5. For repo/source notes, prefer a same-domain entity/product page or same operational category (e.g. email/self-hosted/customer-support) over an arbitrary high-inbound or recently ingested GitHub source.
-6. If no genuinely relevant second link exists, prefer a relevant MOC or leave the page counted as low-outbound for future human/ingest work rather than forcing an unrelated note.
+6. Treat generic shared tags (`ai`, `reference`, `legal`, `personal`, `fleeting`, `to-process`) as insufficient evidence by themselves. During review, remove links that were added only because of these generic tags (e.g. a Korean phrase stub linked to an AI workflow page, or a vague reference capture linked to unrelated reference pages).
+7. Check for contradictions between the generated summary and the generated `## Related` section. If the summary says “no second wiki page is forced” but the Related section contains forced links, remove the Related links and update verification/log counts accordingly.
+8. If no genuinely relevant second link exists, prefer a relevant MOC or leave the page counted as low-outbound for future human/ingest work rather than forcing an unrelated note.
 
 ## Final verification shape
 

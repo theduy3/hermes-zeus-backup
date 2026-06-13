@@ -32,6 +32,7 @@ Learned in practice:
    - Treat this as a pointer, not the full data source.
    - Always scan the recent non-cron/interactive sessions too. Daily recaps often include user-requested operational work (profile cleanup, auth fixes, manual reruns) that never appears in cron output files. Use targeted `session_search(query=...)` and scroll the relevant session when a recent title/preview hints at concrete work.
    - When an interactive session was interrupted, look for the last substantive assistant messages before/after the interruption note; those often contain verified completion status that the final message alone may omit.
+   - If `session_search(session_id=...)` returns a persisted-output file because the transcript is too large, parse that saved JSON file directly with `python3` and print only the nonempty assistant messages (especially the final one). This avoids flooding context while preserving the verified outcome of interactive work.
 
 3. **Check cron list for delivery failures immediately**
    - Run `hermes cron list` before reading any output files.
@@ -66,7 +67,7 @@ Learned in practice:
    - Pre-filter with terminal `grep` first (see step 6).
    - **Cron-mode pitfall:** `execute_code` may be blocked in scheduled cron runs because it executes arbitrary local Python without an approving user. When that happens, run the same aggregation as an explicit `python3 - <<'PY' ... PY` script via the `terminal` tool, or use shell tools (`grep`, `sed`, `awk`, `wc`) directly. Do not stop the recap just because `execute_code` is unavailable.
 
-7. **Look specifically for blockers**
+8. **Look specifically for blockers**
    - Search cron outputs for phrases like:
      - `HTTP 429`
      - `HTTP 401`
@@ -81,6 +82,7 @@ Learned in practice:
      ```bash
      grep -l "^## Error$" ~/.hermes/cron/output/*/YYYY-MM-DD_*.md
      ```
+   - **No-agent/script jobs may produce empty `## Response` sections.** Count these separately from `[SILENT]` and content responses. For watchdog-style jobs, an empty response usually means "no alert/no action"; verify by counting nonempty response sections before reporting them as successful activity.
 
 9. **Cross-check with health-check jobs**
    - If a daily health-check cron exists, read its output directly; it often contains the cleanest summary of gateway health, missing credentials, and broken dependencies.
