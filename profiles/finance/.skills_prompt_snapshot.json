@@ -322,8 +322,8 @@
       10003
     ],
     "productivity/airtable/SKILL.md": [
-      1778490391621044058,
-      11302
+      1781228918600083581,
+      11334
     ],
     "productivity/google-workspace/SKILL.md": [
       1778565357587117317,
@@ -354,8 +354,8 @@
       9298
     ],
     "productivity/teams-meeting-pipeline/SKILL.md": [
-      1778490391625044033,
-      6867
+      1781228918600083581,
+      6883
     ],
     "productivity/theduylifeos-filing/SKILL.md": [
       1778644994307384401,
@@ -372,6 +372,10 @@
     "research/blogwatcher/SKILL.md": [
       1778565357589037492,
       5111
+    ],
+    "research/last30days/SKILL.md": [
+      1780819766039568949,
+      130813
     ],
     "research/llm-wiki/SKILL.md": [
       1778565357589204951,
@@ -424,6 +428,10 @@
     "software-development/requesting-code-review/SKILL.md": [
       1778565357591027125,
       8483
+    ],
+    "software-development/simplify-code/SKILL.md": [
+      1781228918604083576,
+      8505
     ],
     "software-development/spike/SKILL.md": [
       1780819229270747874,
@@ -2028,6 +2036,19 @@
       }
     },
     {
+      "skill_name": "last30days",
+      "category": "research",
+      "frontmatter_name": "last30days",
+      "description": "Research what people actually say about any topic in the ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "llm-wiki",
       "category": "research",
       "frontmatter_name": "llm-wiki",
@@ -2231,6 +2252,23 @@
       "category": "software-development",
       "frontmatter_name": "requesting-code-review",
       "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "simplify-code",
+      "category": "software-development",
+      "frontmatter_name": "simplify-code",
+      "description": "Parallel 3-agent cleanup of recent code changes.",
       "platforms": [
         "linux",
         "macos",

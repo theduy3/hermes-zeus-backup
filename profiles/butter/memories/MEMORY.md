@@ -8,7 +8,7 @@ All Hermes profiles use the openai-codex provider (OAuth via ~/.hermes/auth.json
 §
 Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, finance. Discord=3r(Ongles Rivieres), charlesbourg(Ongles Charlesbourg), maily(Ongles Maily), ss(Sans Souci). Entrypoint sets HERMES_HOME per profile.
 §
-Travel points as of 2026-05-23 from Finance Advisor: Family Aeroplan 65,928; Porter VIPorter acct 5590019622 74,936; Avios 74,467; Marriott Bonvoy 158,606; TD Rewards 39,540; CIBC Aventura 90,931; Amex MR 0; Scene+ 0. Total 504,408.
+Travel points as of 2026-06-13: Family Aeroplan 65,928; Porter VIPorter acct 5590019622 74,936; Avios 74,467; Marriott Bonvoy 158,606; TD Rewards 39,540; CIBC Aventura 0; Amex MR 0; Scene+ 0. CIBC Aventura points cleared on user request.
 §
 Upcoming trip: Okanagan Camping Trip 2026 — Jun 22–24 Monk Park campsite #56; Jun 24–26 Kelowna wine tour, staying at DoubleTree by Hilton West Kelowna.
 §
@@ -18,4 +18,5 @@ Marriott Bonvoy free night certificates: 2 nights worth up to 35,000 points each
 §
 §
 §
-Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+Active travel context: destination Montreal; timezone America/Toronto (Quebec/East Coast trip 2026-07-06 to 2026-07-12); set 2026-06-13. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

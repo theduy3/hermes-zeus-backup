@@ -20,4 +20,5 @@ For Thor hydration logs, when user says “glass” or “cup” of water, count
 §
 §
 §
-Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-06-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+Active travel context: destination Montreal; timezone America/Toronto (Quebec/East Coast trip 2026-07-06 to 2026-07-12); set 2026-06-13. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

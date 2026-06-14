@@ -2,7 +2,7 @@
   "jobs": [
     {
       "id": "caabc02dabc9",
-      "name": "\ud83d\udca7 Water - 7AM EDT",
+      "name": "\ud83d\udca7 Water - 7AM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 500ml \u2014 1/6'.",
       "skills": [],
       "skill": null,
@@ -20,15 +20,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:18.568357+00:00",
-      "next_run_at": "2026-06-13T07:00:00-04:00",
-      "last_run_at": "2026-06-12T07:01:06.966251-04:00",
+      "next_run_at": "2026-06-14T07:00:00-04:00",
+      "last_run_at": "2026-06-13T07:01:12.281889-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -44,7 +44,7 @@
     },
     {
       "id": "b76341d71354",
-      "name": "\ud83d\udca7 Water - 10AM EDT",
+      "name": "\ud83d\udca7 Water - 10AM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Water check'.",
       "skills": [],
       "skill": null,
@@ -62,15 +62,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:28.759162+00:00",
-      "next_run_at": "2026-06-13T10:00:00-04:00",
-      "last_run_at": "2026-06-12T10:00:47.470223-04:00",
+      "next_run_at": "2026-06-14T10:00:00-04:00",
+      "last_run_at": "2026-06-13T10:01:14.990895-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -86,7 +86,7 @@
     },
     {
       "id": "2e5b3af69398",
-      "name": "\ud83d\udca7 Water - 1PM EDT",
+      "name": "\ud83d\udca7 Water - 1PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Keep sipping'.",
       "skills": [],
       "skill": null,
@@ -104,15 +104,15 @@
       "schedule_display": "0 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:36.036225+00:00",
-      "next_run_at": "2026-06-13T13:00:00-04:00",
-      "last_run_at": "2026-06-12T13:00:48.234977-04:00",
+      "next_run_at": "2026-06-14T13:00:00-04:00",
+      "last_run_at": "2026-06-13T13:01:20.112408-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -128,7 +128,7 @@
     },
     {
       "id": "0dd08e4e07da",
-      "name": "\ud83d\udca7 Water - 10PM EDT",
+      "name": "\ud83d\udca7 Water - 10PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Last water'.",
       "skills": [],
       "skill": null,
@@ -146,15 +146,15 @@
       "schedule_display": "0 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 33
+        "completed": 34
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:43.651359+00:00",
-      "next_run_at": "2026-06-13T22:00:00-04:00",
-      "last_run_at": "2026-06-12T22:01:10.421028-04:00",
+      "next_run_at": "2026-06-14T22:00:00-04:00",
+      "last_run_at": "2026-06-13T22:00:24.000846-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -170,7 +170,7 @@
     },
     {
       "id": "b7db2ca9de46",
-      "name": "\ud83d\udec1 Sitz Bath - 9AM EDT",
+      "name": "\ud83d\udec1 Sitz Bath - 9AM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Send a Thor sitz bath reminder with a Telegram inline Done button. The script handles delivery directly and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -188,15 +188,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:43.159219+00:00",
-      "next_run_at": "2026-06-13T09:00:00-04:00",
-      "last_run_at": "2026-06-12T09:01:07.401913-04:00",
+      "next_run_at": "2026-06-14T09:00:00-04:00",
+      "last_run_at": "2026-06-13T09:01:19.263684-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -212,7 +212,7 @@
     },
     {
       "id": "7c74587c2e68",
-      "name": "\ud83d\udec1 Sitz Bath - 9PM EDT",
+      "name": "\ud83d\udec1 Sitz Bath - 9PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Send a Thor evening sitz bath reminder with a Telegram inline Done button. The script handles delivery directly and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -230,15 +230,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:50.382696+00:00",
-      "next_run_at": "2026-06-13T21:00:00-04:00",
-      "last_run_at": "2026-06-12T21:00:50.033605-04:00",
+      "next_run_at": "2026-06-14T21:00:00-04:00",
+      "last_run_at": "2026-06-13T21:00:04.862113-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -254,7 +254,7 @@
     },
     {
       "id": "2616b50dddac",
-      "name": "\ud83e\uddd8 Meditation - 7:15AM EDT",
+      "name": "\ud83e\uddd8 Meditation - 7:15AM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Send Thor morning meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -272,15 +272,15 @@
       "schedule_display": "15 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:06:21.288962+00:00",
-      "next_run_at": "2026-06-13T07:15:00-04:00",
-      "last_run_at": "2026-06-12T07:15:46.976878-04:00",
+      "next_run_at": "2026-06-14T07:15:00-04:00",
+      "last_run_at": "2026-06-13T07:16:12.292523-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -338,7 +338,7 @@
     },
     {
       "id": "4ab656b26552",
-      "name": "\ud83e\udd64 Protein Drink - 2PM EDT",
+      "name": "\ud83e\udd64 Protein Drink - 2PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to have his protein drink. Keep it brief and encouraging. Rotate between messages like: \"\ud83e\udd64 Protein time \u2014 50g to crush. Go!\", \"10AM protein check-in. Get those 50g in. \ud83d\udcaa\", \"Protein shake o'clock. 50g toward your 150g target.\", \"Don't skip the protein window. 50g now. \ud83e\udd64\"",
       "skills": [],
       "skill": null,
@@ -356,15 +356,15 @@
       "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T16:54:07.561293+00:00",
-      "next_run_at": "2026-06-13T14:00:00-04:00",
-      "last_run_at": "2026-06-12T14:01:08.442399-04:00",
+      "next_run_at": "2026-06-14T14:00:00-04:00",
+      "last_run_at": "2026-06-13T14:01:01.278345-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -380,7 +380,7 @@
     },
     {
       "id": "2934304ac770",
-      "name": "\ud83d\udca7 Water - 4PM EDT",
+      "name": "\ud83d\udca7 Water - 4PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Afternoon sip'.",
       "skills": [],
       "skill": null,
@@ -398,15 +398,15 @@
       "schedule_display": "0 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:09.360396+00:00",
-      "next_run_at": "2026-06-13T16:00:00-04:00",
-      "last_run_at": "2026-06-12T16:01:08.916712-04:00",
+      "next_run_at": "2026-06-14T16:00:00-04:00",
+      "last_run_at": "2026-06-13T16:00:21.024137-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -422,7 +422,7 @@
     },
     {
       "id": "eea7a86f64fe",
-      "name": "\ud83d\udca7 Water - 7PM EDT",
+      "name": "\ud83d\udca7 Water - 7PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Evening water'.",
       "skills": [],
       "skill": null,
@@ -440,15 +440,15 @@
       "schedule_display": "0 19 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:10.364301+00:00",
-      "next_run_at": "2026-06-13T19:00:00-04:00",
-      "last_run_at": "2026-06-12T19:01:09.558180-04:00",
+      "next_run_at": "2026-06-14T19:00:00-04:00",
+      "last_run_at": "2026-06-13T19:00:22.212925-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -464,7 +464,7 @@
     },
     {
       "id": "3e512762661c",
-      "name": "\ud83e\uddd8 Meditation - 10:15PM EDT",
+      "name": "\ud83e\uddd8 Meditation - 10:15PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Send Thor evening meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -482,15 +482,15 @@
       "schedule_display": "15 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 25
+        "completed": 26
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:17:08.711093+00:00",
-      "next_run_at": "2026-06-13T22:15:00-04:00",
-      "last_run_at": "2026-06-12T22:16:10.377182-04:00",
+      "next_run_at": "2026-06-14T22:15:00-04:00",
+      "last_run_at": "2026-06-13T22:15:04.075336-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -506,7 +506,7 @@
     },
     {
       "id": "5d9328231c7d",
-      "name": "\ud83c\udfc3 Exercise - 3PM EDT",
+      "name": "\ud83c\udfc3 Exercise - 3PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Send Thor daily 3PM exercise reminder with the YouTube exercise link. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -524,15 +524,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T11:16:49.565000-07:00",
-      "next_run_at": "2026-06-13T15:00:00-04:00",
-      "last_run_at": "2026-06-12T15:01:08.720028-04:00",
+      "next_run_at": "2026-06-14T15:00:00-04:00",
+      "last_run_at": "2026-06-13T15:00:01.900904-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -549,7 +549,7 @@
     },
     {
       "id": "b20602062ff4",
-      "name": "\ud83e\uddd8 Evening Stretch - 9PM EDT",
+      "name": "\ud83e\uddd8 Evening Stretch - 9PM Quebec/East Coast trip 2026-07-06 to 2026-07-12",
       "prompt": "Send Thor daily 9PM evening stretch reminder with the YouTube guide link. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -567,15 +567,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T19:44:23.439951-07:00",
-      "next_run_at": "2026-06-13T21:00:00-04:00",
-      "last_run_at": "2026-06-12T21:00:50.062929-04:00",
+      "next_run_at": "2026-06-14T21:00:00-04:00",
+      "last_run_at": "2026-06-13T21:00:03.653728-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -591,5 +591,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-12T22:16:10.377717-04:00"
+  "updated_at": "2026-06-13T22:15:04.075930-04:00"
 }
