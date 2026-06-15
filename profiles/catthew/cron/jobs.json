@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 28
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-06-14T07:00:00-04:00",
-      "last_run_at": "2026-06-13T07:02:12.650057-04:00",
+      "next_run_at": "2026-06-15T07:00:00-04:00",
+      "last_run_at": "2026-06-14T07:00:52.092024-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -327,15 +327,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 1431
+        "completed": 1527
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-06-14T08:00:00-04:00",
-      "last_run_at": "2026-06-13T23:50:04.944662-04:00",
+      "next_run_at": "2026-06-15T08:00:00-04:00",
+      "last_run_at": "2026-06-14T23:50:10.700680-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -373,15 +373,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T23:41:01.053318-07:00",
-      "next_run_at": "2026-06-14T16:00:00-04:00",
-      "last_run_at": "2026-06-07T16:02:19.122629-07:00",
+      "next_run_at": "2026-06-21T16:00:00-04:00",
+      "last_run_at": "2026-06-14T16:01:57.747140-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -400,5 +400,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-13T23:50:04.945372-04:00"
+  "updated_at": "2026-06-14T23:50:10.701792-04:00"
 }

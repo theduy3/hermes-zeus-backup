@@ -104,6 +104,7 @@ When the user asks to make all Hermes agents/profiles work reliably without repe
 5. Add a silent watchdog, not a noisy daily status report.
    - Use a no-agent cron/script that emits nothing when healthy.
    - Alert only on missing gateways, wrong `HERMES_HOME`, or current-startup auth/polling/port conflicts.
+   - In Docker, do **not** identify profile gateways only by `hermes -p <profile> gateway run` in argv: the final Python process may show only `hermes gateway run`. Match live gateway PIDs by `/proc/<pid>/environ` and profile-scoped `HERMES_HOME` instead. Apply the same rule to restart supervisors to avoid false "missing" alerts or duplicate restarts.
 
 See `references/docker-profile-gateway-hardening.md` for the full repair pattern, wrapper/supervisor snippets, stale-lock cleanup, and watchdog criteria.
 
@@ -146,6 +147,18 @@ When auditing Hermes operational health for gateways, MCP servers, cron jobs, an
 7. Report only action-worthy findings: affected component/profile/job, exact symptom, and next action. Omit healthy inventory unless it clarifies scope.
 
 See `references/weekly-ops-audit.md` for a compact runbook with commands, log patterns, and reporting guidance.
+
+## Codex gpt-5.5 auto-compaction notice workflow
+
+When the user replies to the startup notice about Codex gpt-5.5 raising auto-compaction to 85% and says "fix this issue":
+
+1. Treat it as an unwanted repeated notice, not a model failure.
+2. Preserve the intended behavior by setting `compression.threshold: 0.85`.
+3. Stop the notice by setting `compression.codex_gpt55_autoraise: false`.
+4. Apply the pair to the emitting profile, and usually default + active Telegram profiles for consistency.
+5. Verify with a minimal Hermes startup/chat run that the `Codex gpt-5.5 caps context` notice no longer appears.
+
+Details and pitfalls: `references/codex-gpt55-compression-notice.md`.
 
 ## Useful commands
 

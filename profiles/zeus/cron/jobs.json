@@ -22,17 +22,17 @@
       "schedule_display": "15 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-06-14T06:15:00-04:00",
-      "last_run_at": "2026-06-13T06:17:02.266526-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-06-15T06:15:00-04:00",
+      "last_run_at": "2026-06-14T06:15:13.391141-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Error code: 401 - {'error': {'message': 'Provided authentication token is expired. Please try signing in again.', 'type': None, 'code': 'token_expired', 'param': None}, 'status': 401}",
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -121,17 +121,17 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 28
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-06-14T21:00:00-04:00",
-      "last_run_at": "2026-06-13T21:03:17.362574-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-06-15T21:00:00-04:00",
+      "last_run_at": "2026-06-14T21:00:13.613534-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Error code: 401 - {'error': {'message': 'Provided authentication token is expired. Please try signing in again.', 'type': None, 'code': 'token_expired', 'param': None}, 'status': 401}",
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -170,15 +170,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 1592
+        "completed": 1688
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-25T11:44:10.692069-07:00",
-      "next_run_at": "2026-06-14T08:00:00-04:00",
-      "last_run_at": "2026-06-13T23:50:04.687489-04:00",
+      "next_run_at": "2026-06-15T08:00:00-04:00",
+      "last_run_at": "2026-06-14T23:50:10.705752-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -197,5 +197,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-13T23:50:04.689020-04:00"
+  "updated_at": "2026-06-14T23:50:10.707134-04:00"
 }

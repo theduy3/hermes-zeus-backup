@@ -322,8 +322,8 @@
       2494
     ],
     "productivity/airtable/SKILL.md": [
-      1778644994184319158,
-      11302
+      1781228918600083581,
+      11334
     ],
     "productivity/google-workspace/SKILL.md": [
       1778644994184417492,
@@ -354,8 +354,8 @@
       9298
     ],
     "productivity/teams-meeting-pipeline/SKILL.md": [
-      1778644994204405697,
-      6867
+      1781228918600083581,
+      6883
     ],
     "red-teaming/godmode/SKILL.md": [
       1778644994204541780,
@@ -368,6 +368,10 @@
     "research/blogwatcher/SKILL.md": [
       1778644994215144948,
       5111
+    ],
+    "research/last30days/SKILL.md": [
+      1780819766039568949,
+      130813
     ],
     "research/llm-wiki/SKILL.md": [
       1778644994216657704,
@@ -420,6 +424,10 @@
     "software-development/requesting-code-review/SKILL.md": [
       1778644994243054143,
       8483
+    ],
+    "software-development/simplify-code/SKILL.md": [
+      1781228918604083576,
+      8505
     ],
     "software-development/spike/SKILL.md": [
       1780819229270747874,
@@ -1136,7 +1144,7 @@
       "skill_name": "kanban-orchestrator",
       "category": "devops",
       "frontmatter_name": "kanban-orchestrator",
-      "description": "Decomposition playbook + anti-temptation rules for an orc...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -1153,7 +1161,7 @@
       "skill_name": "kanban-worker",
       "category": "devops",
       "frontmatter_name": "kanban-worker",
-      "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -2019,6 +2027,19 @@
       }
     },
     {
+      "skill_name": "last30days",
+      "category": "research",
+      "frontmatter_name": "last30days",
+      "description": "Research what people actually say about any topic in the ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "llm-wiki",
       "category": "research",
       "frontmatter_name": "llm-wiki",
@@ -2222,6 +2243,23 @@
       "category": "software-development",
       "frontmatter_name": "requesting-code-review",
       "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "simplify-code",
+      "category": "software-development",
+      "frontmatter_name": "simplify-code",
+      "description": "Parallel 3-agent cleanup of recent code changes.",
       "platforms": [
         "linux",
         "macos",

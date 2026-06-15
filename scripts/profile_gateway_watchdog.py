@@ -8,8 +8,15 @@ PROFILES = ['butter','catthew','charles','finance','thor','zeus']
 def run(cmd):
     return subprocess.run(cmd, shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).stdout
 
-def pids_for(pattern):
-    out = run("ps -eo pid=,args= | grep -F %s | grep -v grep || true" % repr(pattern))
+def all_gateway_pids():
+    """Return Hermes gateway PIDs.
+
+    In this Docker setup profile gateways are launched with profile-scoped
+    HERMES_HOME, but the final Python argv is just `hermes gateway run` (the
+    `-p <profile>` argument is not always visible in /proc/<pid>/cmdline).
+    Detect by process env instead of argv profile flags.
+    """
+    out = run("ps -eo pid=,args= | grep -F 'hermes gateway run' | grep -v grep || true")
     pids=[]
     for line in out.splitlines():
         parts=line.strip().split(None,1)
@@ -51,13 +58,14 @@ def recent_bad_log(profile):
     return bad
 
 problems=[]
-def_pids=[pid for pid in pids_for('hermes gateway run') if not any(f'-p {p}' in run(f'tr "\\0" " " < /proc/{pid}/cmdline 2>/dev/null || true') for p in PROFILES)]
+gateway_pids=all_gateway_pids()
+def_pids=[pid for pid in gateway_pids if env(pid,'HERMES_HOME') == str(HOME)]
 if not def_pids:
     problems.append('default gateway missing')
 
 for p in PROFILES:
     expected=str(HOME/'profiles'/p)
-    pids=pids_for(f'hermes -p {p} gateway run')
+    pids=[pid for pid in gateway_pids if env(pid,'HERMES_HOME') == expected]
     if not pids:
         problems.append(f'{p}: gateway missing')
         continue

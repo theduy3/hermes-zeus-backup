@@ -3,7 +3,7 @@
     {
       "id": "3605d270d612",
       "name": "Weekly Portfolio Briefing",
-      "prompt": "Every Sunday, send the user a concise Weekly Portfolio Briefing for their registered investment portfolio.\n\nTiming note: this job is scheduled for Sunday 16:00 America/Toronto, which is 9:00 AM Quebec/East Coast trip 2026-07-06 to 2026-07-12 during daylight time.\n\nUser style: terse, bullet-based, no fluff. Telegram format: no tables.\n\nKnown portfolio snapshot to use as baseline unless newer memory/session context is available:\n- Snapshot date: prices 2026-05-22 close; cash from 2026-05-19.\n- Total registered portfolio: about $199.07k CAD.\n- Cash: about $92.68k CAD (46.6%).\n- Holdings market value: about $106.39k CAD vs cost about $63.70k; open P/L about +$42.69k CAD (+67.0%).\n- Accounts: Wealthsimple RRSP about $155.17k; FHSA about $17.50k (VFV.TO +$1.21k); Questrade Spousal RRSP about $6.40k (holdings P/L +$0.69k); Questrade RSP cash $20k.\n- Holdings/share counts: FIG 27, GOOG 15, META 11, NVDA 241, PLTR 3, RACE 21, VFV.TO 33.\n- Key risk: NVDA market value about $71.69k CAD, roughly 36.0% of registered portfolio; cash roughly 46.6%.\n\nTask each week:\n1. Retrieve current market prices/news/macro context for holdings: FIG, GOOG/GOOGL, META, NVDA, PLTR, RACE, VFV.TO, plus USD/CAD if needed.\n2. Estimate current holding values and allocation using the known share counts and latest prices. Clearly label estimates if cash/account values are stale.\n3. Include: portfolio summary, holdings snapshot, biggest weekly movers or news, risk flags, and action watchlist.\n4. Separate facts from analysis/opinion. Include thesis/risks/timeline/confidence only if suggesting an action.\n5. End with: “This is analysis, not financial advice. Consult a qualified advisor before making investment decisions. Past performance does not guarantee future results.”",
+      "prompt": "Every Sunday, send the user a concise Weekly Portfolio Briefing for their registered investment portfolio.\n\nTiming note: this job is scheduled for Sunday 16:00 America/Toronto, which is 9:00 AM Quebec/East Coast trip 2026-07-06 to 2026-07-12 during daylight time.\n\nUser style: terse, bullet-based, no fluff. Telegram format: no tables.\n\nKnown portfolio snapshot to use as baseline unless newer memory/session context is available:\n- Snapshot date: prices 2026-05-22 close; cash from 2026-05-19.\n- Total registered portfolio: about $199.07k CAD.\n- Cash: about $92.68k CAD (46.6%).\n- Holdings market value: about $106.39k CAD vs cost about $63.70k; open P/L about +$42.69k CAD (+67.0%).\n- Accounts: Wealthsimple RRSP about $155.17k; FHSA about $17.50k (VFV.TO +$1.21k); Questrade Spousal RRSP about $6.40k (holdings P/L +$0.69k); Questrade RSP cash $20k.\n- Holdings/share counts: FIG 27, GOOG 15, META 11, NVDA 241, PLTR 3, RACE 21, VFV.TO 33.\n- Key risk: NVDA market value about $71.69k CAD, roughly 36.0% of registered portfolio; cash roughly 46.6%.\n\nTask each week:\n1. Retrieve current market prices/news/macro context for holdings: FIG, GOOG/GOOGL, META, NVDA, PLTR, RACE, VFV.TO, plus USD/CAD if needed.\n2. Estimate current holding values and allocation using the known share counts and latest prices. Clearly label estimates if cash/account values are stale.\n3. Include: portfolio summary, holdings snapshot, biggest weekly movers or news, risk flags, and action watchlist.\n4. Separate facts from analysis/opinion. Include thesis/risks/timeline/confidence only if suggesting an action.\n5. End with: \u201cThis is analysis, not financial advice. Consult a qualified advisor before making investment decisions. Past performance does not guarantee future results.\u201d",
       "skills": [],
       "skill": null,
       "model": null,
@@ -20,15 +20,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-26T08:04:47.758272-07:00",
-      "next_run_at": "2026-06-14T16:00:00-04:00",
-      "last_run_at": "2026-06-07T16:02:23.335300-07:00",
+      "next_run_at": "2026-06-21T16:00:00-04:00",
+      "last_run_at": "2026-06-14T16:02:00.420222-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -49,5 +49,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-13T21:01:40.666911-04:00"
+  "updated_at": "2026-06-14T16:02:00.421015-04:00"
 }

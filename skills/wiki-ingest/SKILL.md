@@ -45,12 +45,15 @@ update MOCs, archive to Sources/, update `wiki-index.md` + `wiki-log.md`).
 
 ## Pitfalls & environment-specific constraints
 
-### Sources/ is read-only
+### Sources/ may be read-only — verify before choosing archive path
 The `Sources/` directory and its contents are often **root-owned** or mounted
-read-only. The canonical instruction to `mv "Inbox/filename.md" "Sources/filename.md"`
-will fail with "Permission denied." **Workaround:** archive ingested source files to
-`Notes/` instead (with `type: article|reflection` and `ingested: YYYY-MM-DD` in
-frontmatter). Note the `Sources/` blockage in the final summary.
+read-only, but this can vary by run. Do not assume it is blocked forever: during
+pre-flight, inspect `ls -ld /vault/Sources` and use canonical `Sources/` archival if
+it is writable and the source file can be moved safely. If `mv "Inbox/filename.md"
+"Sources/filename.md"` fails with "Permission denied" (or the directory is clearly
+not writable), archive ingested source files to `Notes/` instead (with
+`type: article|reflection` and `ingested: YYYY-MM-DD` in frontmatter). Note the
+`Sources/` blockage in the final summary only when the fallback was actually used.
 
 When using this workaround, prevent repeat ingestion by either moving the Inbox source
 out of `Inbox/` if allowed, or patching only its frontmatter to add `ingested: YYYY-MM-DD`.
@@ -93,7 +96,15 @@ file, use `patch` with `replace_all` to empty it, or leave it and note it in the
 Do not use `execute_code` for cron wiki ingest batching. In this runtime, arbitrary local Python execution may be approval-blocked in cron; the reliable pattern is explicit `write_file`/`patch` calls for Notes/System/MOC edits, followed by small terminal read-only checks and a single targeted `mkdir -p && mv && test` only when preserving a root-owned Inbox original out of Inbox.
 
 ### Root-owned Inbox markdown sources
-Markdown captures in `Inbox/` can be owned by `root:root` while the `Inbox/` directory itself is writable by `hermes`. In that case, patching frontmatter may fail or be undesirable, but a directory-level `rename`/move can still work because moving depends on directory permissions, not file ownership. Safe pattern after creating the source archive page in `Notes/`:
+Markdown captures in `Inbox/` can be owned by `root:root` while the `Inbox/` directory itself is writable by `hermes`. In that case, patching frontmatter may fail or be undesirable, but a directory-level `rename`/move can still work because moving depends on directory permissions, not file ownership.
+
+Safe pattern when `Sources/` is writable:
+1. Create a normalized source archive directly in `Sources/<original basename>.md` with `tags: [source]`, source `type`, `source`, `created`, `ingested`, and `## Pages Updated`.
+2. Move the root-owned Inbox original to `Notes/Archived Inbox Originals/` (collision-safe basename) to prevent repeat ingestion while preserving the raw capture.
+3. Verify three facts explicitly: the Inbox original is absent, the `Sources/` archive exists, and the preserved original exists under `Notes/Archived Inbox Originals/`.
+4. Mention the preservation path in the final summary, but do **not** call this a Notes fallback if the canonical source archive was successfully written to `Sources/`.
+
+Safe pattern when `Sources/` is blocked or a move/write to `Sources/` fails:
 1. Create `Notes/<Source Title> Source.md` with `ingested: YYYY-MM-DD` and `## Pages Updated`.
 2. Move the root-owned Inbox original to `Notes/Archived Inbox Originals/` (collision-safe basename) to prevent repeat ingestion while preserving raw content.
 3. Verify `Inbox/` is empty or contains only unprocessed files that intentionally remain.

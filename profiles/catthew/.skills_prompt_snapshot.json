@@ -221,6 +221,10 @@
       1778490391621044058,
       6319
     ],
+    "media/video-product-extraction/SKILL.md": [
+      1781496866007144277,
+      3661
+    ],
     "media/youtube-content/SKILL.md": [
       1778565357584848850,
       3218
@@ -1456,6 +1460,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "video-product-extraction",
+      "category": "media",
+      "frontmatter_name": "video-product-extraction",
+      "description": "Extract visible products, brands, labels, ingredients, or...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
