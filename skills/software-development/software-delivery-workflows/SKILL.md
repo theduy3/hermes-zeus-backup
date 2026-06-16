@@ -32,6 +32,7 @@ This umbrella covers the class-level lifecycle for making reliable software chan
 4. **Test-drive changes** when behavior can be specified. Start with a failing test and only then implement.
 5. **Instrument runtime** with `pdb`/`debugpy` for Python or `node inspect`/Chrome DevTools Protocol for Node when static inspection is insufficient.
 6. **Review before delivery**: check diff, run quality gates, scan for security issues, and incorporate reviewer feedback.
+7. **Simplify recent changes on request**: when the user explicitly asks to "simplify" or clean up recent code, run the three-reviewer parallel pattern (reuse, quality, efficiency), aggregate findings, apply only high-value fixes, and verify with targeted tests. See `references/simplify-code.md` for the full prompt pattern.
 
 ## Debugging Modes
 
@@ -60,6 +61,7 @@ Former narrow skills absorbed into this umbrella are preserved under `references
 ## References
 
 - `references/telegram-inline-callback-buttons.md` — debugging and implementing Hermes Telegram inline callback buttons across profile gateways, including compact callback prefix patterns and verification steps.
+- `references/simplify-code.md` — after-the-fact parallel review/cleanup workflow using three focused subagents for reuse, quality, and efficiency.
 
 ## Verification Checklist
 

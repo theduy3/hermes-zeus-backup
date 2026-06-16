@@ -75,13 +75,17 @@ When a profile cron job fails with `RuntimeError: Codex auth is missing access_t
 4. Verify model auth independently before rerunning cron.
    - Run `hermes -p <profile> chat -q 'Reply exactly OK' --toolsets '' -Q`.
    - Success means the profile can call the configured model/provider.
-5. Verify the original cron path.
+5. Restart the affected profile gateway before trusting cron reruns.
+   - The cron scheduler runs inside the gateway process and may keep stale credential/provider state after `auth.json` is replaced.
+   - Verify a fresh gateway PID with `hermes -p <profile> gateway status`.
+6. Verify the original cron path.
    - Run `hermes -p <profile> cron run <job_id>`.
    - Wait one scheduler tick (usually 60-90 seconds).
-   - Re-run `hermes -p <profile> cron list` and confirm the job `Last run` is `ok`.
-6. Keep the final report terse: backup path, auth verification, cron verification.
+   - Re-run `hermes -p <profile> cron list --all` and confirm the job `Last run` is `ok`.
+   - If the body succeeds but delivery shows `RuntimeError('cannot schedule new futures after interpreter shutdown')`, rerun once more after the restarted gateway is stable and verify the delivery error clears.
+7. Keep the final report terse: backup path, auth verification, gateway restart, cron verification.
 
-See `references/profile-codex-auth-repair.md` for a concrete transcript-safe recipe.
+See `references/profile-codex-auth-repair.md` for the base auth-repair recipe and `references/profile-cron-rerun-after-auth-repair.md` for the cron rerun + gateway restart verification pattern.
 
 ## Docker multi-profile gateway hardening workflow
 
@@ -105,6 +109,7 @@ When the user asks to make all Hermes agents/profiles work reliably without repe
    - Use a no-agent cron/script that emits nothing when healthy.
    - Alert only on missing gateways, wrong `HERMES_HOME`, or current-startup auth/polling/port conflicts.
    - In Docker, do **not** identify profile gateways only by `hermes -p <profile> gateway run` in argv: the final Python process may show only `hermes gateway run`. Match live gateway PIDs by `/proc/<pid>/environ` and profile-scoped `HERMES_HOME` instead. Apply the same rule to restart supervisors to avoid false "missing" alerts or duplicate restarts.
+   - If `hermes -p <profile> gateway status` shows a PID but the watchdog says missing, inspect `/proc/<pid>/environ`. A process such as `python -m hermes_cli.main --profile <name> gateway run --replace` can still have `HERMES_HOME=~/.hermes`; kill that mis-scoped PID so the entrypoint/supervisor can restart the profile with `HERMES_HOME=~/.hermes/profiles/<name>`.
 
 See `references/docker-profile-gateway-hardening.md` for the full repair pattern, wrapper/supervisor snippets, stale-lock cleanup, and watchdog criteria.
 

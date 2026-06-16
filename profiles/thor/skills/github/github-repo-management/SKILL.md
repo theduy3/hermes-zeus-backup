@@ -514,3 +514,14 @@ for g in json.load(sys.stdin):
 | List workflows | `gh workflow list` | `curl GET /repos/o/r/actions/workflows` |
 | Rerun CI | `gh run rerun ID` | `curl POST /repos/o/r/actions/runs/ID/rerun` |
 | Set secret | `gh secret set KEY` | `curl PUT /repos/o/r/actions/secrets/KEY` (+ encryption) |
+
+## Codebase Inspection
+
+Use repository inspection when the user needs a high-level map before deeper GitHub work: language mix, file counts, generated-code hotspots, or approximate LOC. The absorbed `codebase-inspection` skill is preserved at `references/codebase-inspection.md` and fits this umbrella because codebase sizing is usually a prerequisite for cloning, triage, repo onboarding, release planning, or PR review.
+
+Key rules:
+
+- Prefer fast local inspection tools such as `pygount`, `cloc`, or language-aware counters after cloning.
+- Exclude dependency/vendor/build directories so LOC numbers do not mislead.
+- Report approximate counts with the exact command used.
+- Use inspection output to guide follow-up repository management, not as a substitute for reading important files.

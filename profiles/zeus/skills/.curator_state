@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/zeus/logs/curator/20260608-111713",
-  "last_run_at": "2026-06-08T11:17:13.431302+00:00",
-  "last_run_duration_seconds": 21.080806,
-  "last_run_summary": "auto: no changes; llm: Processed the full agent-created candidate list provided.\n\nHuman summary:\n- Candidate count: 1\n- Prefix/domain clusters with 2+ members: 0\n- `cron-job-patterns` is already a class-level umbrella skill for Hermes cron workflows, with multipl…",
+  "last_report_path": "/home/hermes/.hermes/profiles/zeus/logs/curator/20260615-114912",
+  "last_run_at": "2026-06-15T11:49:12.336118+00:00",
+  "last_run_duration_seconds": 5.134896,
+  "last_run_summary": "auto: 1 marked stale; llm: no change",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 5
+  "run_count": 6
 }

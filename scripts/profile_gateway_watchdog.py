@@ -11,17 +11,24 @@ def run(cmd):
 def all_gateway_pids():
     """Return Hermes gateway PIDs.
 
-    In this Docker setup profile gateways are launched with profile-scoped
-    HERMES_HOME, but the final Python argv is just `hermes gateway run` (the
-    `-p <profile>` argument is not always visible in /proc/<pid>/cmdline).
-    Detect by process env instead of argv profile flags.
+    Healthy Docker profile gateways usually appear as `hermes gateway run` with
+    profile-scoped HERMES_HOME. Mis-started repair attempts can appear as
+    `python -m hermes_cli.main --profile <name> gateway run --replace` while
+    inheriting the default HERMES_HOME; include those too so the alert points at
+    the wrong environment instead of only saying "missing".
     """
-    out = run("ps -eo pid=,args= | grep -F 'hermes gateway run' | grep -v grep || true")
+    out = run("ps -eo pid=,args= | grep -E '(hermes gateway run|hermes_cli\\.main .*gateway run)' | grep -v grep || true")
     pids=[]
     for line in out.splitlines():
         parts=line.strip().split(None,1)
         if parts and parts[0].isdigit(): pids.append(int(parts[0]))
     return pids
+
+def cmdline(pid):
+    try:
+        return Path(f'/proc/{pid}/cmdline').read_bytes().replace(b'\0', b' ').decode(errors='ignore')
+    except Exception:
+        return ''
 
 def env(pid, key):
     try:
@@ -67,7 +74,13 @@ for p in PROFILES:
     expected=str(HOME/'profiles'/p)
     pids=[pid for pid in gateway_pids if env(pid,'HERMES_HOME') == expected]
     if not pids:
-        problems.append(f'{p}: gateway missing')
+        wrong=[pid for pid in gateway_pids if f'--profile {p}' in cmdline(pid) or f'-p {p}' in cmdline(pid)]
+        if wrong:
+            for pid in wrong:
+                hh=env(pid,'HERMES_HOME')
+                problems.append(f'{p}: wrong HERMES_HOME pid={pid} got={hh or "<unset>"} expected={expected}')
+        else:
+            problems.append(f'{p}: gateway missing')
         continue
     for pid in pids:
         hh=env(pid,'HERMES_HOME')

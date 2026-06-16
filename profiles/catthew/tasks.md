@@ -16,6 +16,3 @@
 - [x] Jeanette: prepare baby food to bring to the event — fruit, pancake, 떡뻥
 - [x] Jeanette: head out at 11:45 AM — dad will pick up Jeanette and Victoria
 - [x] Jeanette: set up dolsang when arriving at the venue
-
-## Wed, Jun 17
-- [ ] Victoria immunizations, 2:00–2:30 PM — Vancouver Coastal Health, 2 Months–3 Years Old Immunizations, Early Years Nurse 3

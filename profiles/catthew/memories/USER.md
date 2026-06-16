@@ -4,7 +4,7 @@ Tasks: Obsidian `- [ ]`; Done cards; timed only; 7d; reminders→family TG. Phot
 §
 User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
 §
-Lives in Pacific timezone (PST/PDT). Has a child named Victoria (born ~mid 2025, based on "48 weeks + 5 days" as of 2026-05-10). Manages multiple businesses: nail salons (Ongles Maily, Ongles Charlesbourg, Ongles Rivieres, Sans Souci), a product (salon360), and is involved in real estate (Laviestella, 840 rue de Nemours, deed of purchase). Tracks stock portfolio with specific watchlist. Reads Sagittarius horoscope. Weather tracked for Vancouver BC, Laval QC, Quebec QC.
+Home base Vancouver, BC; use Vancouver-area stores/prices by default unless user asks for travel-location shopping. Lives in Pacific timezone (PST/PDT). Has daughter Victoria (born ~mid-2025). Manages nail salons (Maily, Charlesbourg, Rivieres, Sans Souci), salon360, and real estate. Tracks stock portfolio, Sagittarius horoscope, weather for Vancouver/Laval/Quebec.
 §
 User prefers terse, commands-only responses. Skip explanations, give just the code or one-liner commands unless asked to elaborate. No fluff.
 §

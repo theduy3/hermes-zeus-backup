@@ -2238,8 +2238,11 @@
     "text": "Attend OfF Piknic at Parc Jean-Drapeau",
     "source": "Obsidian overdue 2026-06-13",
     "file_path": "/vault/Tasks/tasks/attend-off-piknic-at-parc-jean-drapeau.md",
-    "status": "sent",
-    "message_id": 591
+    "status": "done",
+    "message_id": 591,
+    "done_at": "2026-06-15T23:20:25.693116+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
   },
   "f3fa29a50c9f21c7": {
     "id": "f3fa29a50c9f21c7",
@@ -2350,5 +2353,131 @@
     "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
     "status": "sent",
     "message_id": 602
+  },
+  "38fa8bff2f8cab48": {
+    "id": "38fa8bff2f8cab48",
+    "date": "2026-06-15",
+    "title": "Attend OfF Piknic at Parc Jean-Drapeau",
+    "text": "Attend OfF Piknic at Parc Jean-Drapeau",
+    "source": "Obsidian overdue 2026-06-13",
+    "file_path": "/vault/Tasks/tasks/attend-off-piknic-at-parc-jean-drapeau.md",
+    "status": "done",
+    "message_id": 605,
+    "done_at": "2026-06-15T12:02:08.770517+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
+  },
+  "93ae1526032d9777": {
+    "id": "93ae1526032d9777",
+    "date": "2026-06-15",
+    "title": "Point transfer: RBC Avion Rewards → British Airways Club Avios 30% bonus",
+    "text": "Point transfer: RBC Avion Rewards → British Airways Club Avios 30% bonus",
+    "source": "Obsidian overdue 2026-06-11",
+    "file_path": "/vault/Tasks/tasks/2026-06-11-rbc-avion-to-ba-avios-30-transfer-bonus.md",
+    "status": "done",
+    "message_id": 606,
+    "done_at": "2026-06-15T23:20:16.015879+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
+  },
+  "0ac20dad4657e534": {
+    "id": "0ac20dad4657e534",
+    "date": "2026-06-15",
+    "title": "Remind Madame to close credit cards",
+    "text": "Remind Madame to close credit cards",
+    "source": "Obsidian overdue 2026-06-02",
+    "file_path": "/vault/Tasks/tasks/2026-06-02-remind-madame-close-credit-cards.md",
+    "status": "sent",
+    "message_id": 607
+  },
+  "3ce0656fcd1086fe": {
+    "id": "3ce0656fcd1086fe",
+    "date": "2026-06-15",
+    "title": "Check Clover Software Plan Pricing",
+    "text": "Check Clover Software Plan Pricing",
+    "source": "Obsidian overdue 2026-05-29",
+    "file_path": "/vault/Tasks/tasks/check-clover-software-plan-pricing.md",
+    "status": "sent",
+    "message_id": 608
+  },
+  "287c8af94c9a2bb3": {
+    "id": "287c8af94c9a2bb3",
+    "date": "2026-06-15",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian overdue 2026-03-04",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 609
+  },
+  "bb1c80abe3619174": {
+    "id": "bb1c80abe3619174",
+    "date": "2026-06-15",
+    "title": "Set Up Nail Box for Photos",
+    "text": "Set Up Nail Box for Photos",
+    "source": "Obsidian overdue 2026-02-22",
+    "file_path": "/vault/Tasks/tasks/set-up-nail-box-for-photos.md",
+    "status": "sent",
+    "message_id": 610
+  },
+  "0adb58cbf3a5bfb4": {
+    "id": "0adb58cbf3a5bfb4",
+    "date": "2026-06-15",
+    "title": "KPI Tip",
+    "text": "KPI Tip",
+    "source": "Obsidian overdue 2026-02-20",
+    "file_path": "/vault/Tasks/tasks/kpi-tip.md",
+    "status": "sent",
+    "message_id": 611
+  },
+  "021e04b405135f22": {
+    "id": "021e04b405135f22",
+    "date": "2026-06-15",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian overdue 2026-02-17",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 612
+  },
+  "3f1d8396ae086a69": {
+    "id": "3f1d8396ae086a69",
+    "date": "2026-06-15",
+    "title": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "text": "Set Up Pre-authorized Payment of Laviestella Taxes and Strata Fees",
+    "source": "Obsidian overdue 2026-02-13",
+    "file_path": "/vault/Tasks/tasks/setup-preauthorized-payment-laviestella-taxes-strata.md",
+    "status": "sent",
+    "message_id": 613
+  },
+  "d53416490d918c3e": {
+    "id": "d53416490d918c3e",
+    "date": "2026-06-15",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 614
+  },
+  "84e3245b0e73d9c8": {
+    "id": "84e3245b0e73d9c8",
+    "date": "2026-06-15",
+    "title": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "text": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "source": "Obsidian overdue 2026-02-06",
+    "file_path": "/vault/Tasks/tasks/create-satisfaction-survey-form-fluentcrm.md",
+    "status": "sent",
+    "message_id": 615
+  },
+  "b449347688631c48": {
+    "id": "b449347688631c48",
+    "date": "2026-06-15",
+    "title": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "text": "Update Website of Ongles Maily, Ongles Charlesbourg, Ongles Rivieres",
+    "source": "Obsidian overdue 2026-02-04",
+    "file_path": "/vault/Tasks/tasks/update-website-of-ongles-maily-charlesbourg-rivieres.md",
+    "status": "sent",
+    "message_id": 616
   }
 }

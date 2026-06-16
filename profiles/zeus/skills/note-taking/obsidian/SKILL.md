@@ -213,6 +213,10 @@ Recommended sender shape:
 - Maintain a registry keyed by task/date/file path so already-sent or done task cards are not resent.
 - Done buttons should update the original Markdown frontmatter to `status: completed`, not just log completion elsewhere.
 
+### Event reminder tasks
+
+When Duy asks to add reminders for public schedules (sports tournaments, concerts, festivals, TV releases, etc.), create dated Obsidian task files under `/vault/Tasks/tasks/`, include the start/kickoff time in the body, normalize times to the active timezone, avoid duplicates by searching existing tasks first, and verify by reading/listing created files. Full pattern: `references/event-reminder-tasks.md`.
+
 ### Efficient batch query (many tasks → categorized lists)
 
 Don't `cat` files one-by-one. Use `execute_code` to batch-parse frontmatter from all task files at once:
@@ -227,6 +231,15 @@ done
 ```
 
 Then in `execute_code`, parse `due_date`, `status`, and title. Filter by `status != completed`, categorize by due_date vs `date.today()`.
+
+### Event/game reminder task pattern
+
+When Duy asks to add reminders for events with specific kickoff/start times (sports games, concerts, watch parties):
+1. Use live/source-backed data when available, then convert times to Duy's active local timezone before writing tasks.
+2. Because task frontmatter only has date-level `due_date`, put the exact local start time in the note body, e.g. `Kickoff: 2026-06-24 18:00 PDT`.
+3. Use one Markdown task per notable event under `/vault/Tasks/tasks/`, with tags like `[personal, world-cup, soccer]` or the relevant event taxonomy.
+4. Add conditional follow-up tasks when the exact event depends on future results, e.g. “Check Korea knockout schedule” or “possible Round of 32,” instead of pretending the bracket is known.
+5. Verify by searching/reading back a sample task after creation, then give Duy a concise list of what was added.
 
 ### Tag taxonomy
 

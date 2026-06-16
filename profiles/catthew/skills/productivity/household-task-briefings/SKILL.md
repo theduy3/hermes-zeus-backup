@@ -36,6 +36,17 @@ Use this skill whenever Sir asks Catthew to add, display, revise, schedule, or s
    - If Sir corrects the Daily Morning Briefing format, update the `Daily Morning Briefing` cron prompt, then verify the cron job content reflects the correction.
    - Keep the prompt concise and explicit about grocery vs task formatting.
 
+## Household product extraction and shopping research
+
+Use this when Sir sends a reel/video/photo and asks to identify products, build a grocery list, or find purchase links/prices.
+
+- First identify products from the source: extract public page metadata where possible, then inspect video frames/key frames if labels are visible.
+- For shopping research, default to **Vancouver, BC** retailers and delivery availability unless Sir explicitly asks for another city. Travel context should not override household shopping location.
+- Prefer exact product matches; if only substitutes are available, label them clearly as “closest match” or “substitute.”
+- Include retailer, verified price, size, direct URL, and availability/shipping caveat. Do not invent prices when a page is blocked or unavailable.
+- For Instacart Vancouver checks, include a Vancouver postal code such as `zipcode=V6B1A1`; otherwise it may silently use a stale/default location.
+- Session reference: `references/product-video-shopping-research.md` captures the Facebook reel → product extraction → Vancouver price lookup workflow.
+
 ## Recurring household routines/checks
 
 Use this when Sir asks to “create this routine,” “every Sunday,” or similar recurring household checks.

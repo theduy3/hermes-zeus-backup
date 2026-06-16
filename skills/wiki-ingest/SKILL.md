@@ -114,13 +114,28 @@ Safe pattern when `Sources/` is blocked or a move/write to `Sources/` fails:
 If an Inbox source contains only a URL and remote fetch/extraction is unavailable or times out in headless cron, do not fabricate a wiki page from the title alone. Create a metadata-only source archive in `Notes/` with `Pages Updated: None`, move/archive the original out of `Inbox/`, and report that no wiki page was created because the source body was unavailable.
 summary.
 
-### read_file tool degrades on permission-denied files
+### read_file/search can degrade on permission-denied files
 The `read_file` tool may succeed on the first call to a root-owned file (cached read)
 but fail on subsequent calls, returning 0 lines with error "File not found." The file
 still exists on disk (`os.path.exists` returns True). **Fallback:** use
 `search_files(target='content')` to grep the file, or `execute_code` with
 `os.path.exists` + `os.path.getsize` to confirm presence. Do not retry `read_file`
 more than twice on the same path — switch to the fallback.
+
+Broad `search_files`/`rg` over all of `Notes/` can also abort when it hits an unreadable
+root-owned note. For dedup checks, avoid one huge content search when permission hazards
+are visible: first check `System/wiki-index.md` and likely exact filenames/titles, then
+run targeted content searches with narrow terms and paths. If a broad search fails on a
+permission-denied file, do not treat that as "no duplicate"; retry with a narrower query
+or rely on the readable index plus exact filename/title probes.
+
+### Opaque Inbox filenames from web clips
+Inbox files such as `de.md` or `dg.md` may contain fully titled article captures even
+though the filename is opaque. In that case, name the substantive wiki page from the
+source title/date (for example `Stock Market Today May 26 2026.md`) while preserving the
+canonical archive basename in `Sources/<original>.md`. Use the original basename in the
+page `sources:` wikilink (e.g. `[[dg]]`) and in `wiki-log.md`; do not force a rename of
+the source archive just to make it human-readable.
 
 ### Verify infrastructure edits by searching exact new artifacts
 After updating `System/wiki-index.md`, `System/wiki-log.md`, or MOCs, verify with an exact search for the new page/source title, not just by trusting a write succeeded. When patching index rows, do not assume the row's tag/type text from memory; first inspect the actual neighboring row or use an exact old_string from the current file. If the exact artifact is missing after a broad rewrite, patch it in with a small targeted replacement and verify again.

@@ -46,6 +46,7 @@ Learned in practice:
    - Use `search_files(target='files')` to locate the day's files. Do this even when `hermes cron list` shows an exact-ish last-run time: output filenames can differ by one second from the list timestamp (e.g. list says `09:01:20`, file is `09-01-19`). Read the path returned by discovery, not a hand-constructed timestamp path.
    - Resolve the reporting date in the job's/user's local timezone, not just UTC. Evening recaps often run while UTC is already the next date; use `TZ=<cron/user timezone> date` when available and summarize the local "today".
    - Do not rely only on `hermes cron list` last-run fields for jobs scheduled later in the day. If current time is after a job should have fired, explicitly check `~/.hermes/cron/output/<job_id>/YYYY-MM-DD_*.md`; cron list can appear stale or be observed before a pending local-time run completes.
+   - If `session_search()` shows a cron session for today with only the initial user prompt and no matching output file yet, treat that job as **in progress or not yet delivered**, not as completed. Mention it only if it materially affects the recap, and avoid claiming its result until a `## Response`/`## Error` output file or final assistant message exists.
 
 5. **Read representative outputs first**
    - Open a few cron output markdown files to understand each job's purpose and final response.

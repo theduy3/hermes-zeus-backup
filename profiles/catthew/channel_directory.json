@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T04:59:10.925538",
+  "updated_at": "2026-06-16T04:58:21.700718",
   "platforms": {
     "telegram": [
       {
@@ -17,6 +17,7 @@
     ],
     "discord": [],
     "whatsapp": [],
+    "whatsapp_cloud": [],
     "slack": [],
     "signal": [],
     "mattermost": [],

@@ -10,6 +10,7 @@ credential_pool_strategies:
   openai-codex: fill_first
 toolsets:
 - hermes-cli
+max_concurrent_sessions: null
 agent:
   max_turns: 90
   gateway_timeout: 1800
@@ -20,6 +21,7 @@ agent:
   task_completion_guidance: true
   environment_probe: true
   environment_hint: ''
+  coding_context: auto
   gateway_timeout_warning: 900
   clarify_timeout: 600
   gateway_notify_interval: 600
@@ -214,6 +216,13 @@ auxiliary:
     api_key: ''
     timeout: 30
     extra_body: {}
+  tts_audio_tags:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 30
+    extra_body: {}
   triage_specifier:
     provider: auto
     model: ''
@@ -241,6 +250,13 @@ auxiliary:
     base_url: ''
     api_key: ''
     timeout: 600
+    extra_body: {}
+  monitor:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 60
     extra_body: {}
   session_search:
     provider: openai-codex
@@ -331,6 +347,11 @@ tts:
   openai:
     model: gpt-4o-mini-tts
     voice: alloy
+  gemini:
+    model: gemini-2.5-flash-preview-tts
+    voice: Kore
+    audio_tags: false
+    persona_prompt_file: ''
   xai:
     voice_id: eve
     language: en
@@ -377,6 +398,7 @@ context:
 memory:
   memory_enabled: true
   user_profile_enabled: true
+  write_approval: false
   memory_char_limit: 2200
   user_char_limit: 1375
   provider: ''
@@ -405,6 +427,7 @@ skills:
   inline_shell: false
   inline_shell_timeout: 10
   guard_agent_created: false
+  write_approval: false
   creation_nudge_interval: 10
 curator:
   enabled: true
@@ -552,6 +575,7 @@ onboarding:
   seen:
     tool_progress_prompt: true
     busy_input_prompt: true
+  profile_build: ask
 updates:
   pre_update_backup: false
   backup_keep: 5
@@ -578,7 +602,7 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
 paste_collapse_char_threshold: 2000
-_config_version: 27
+_config_version: 29
 session_reset:
   mode: both
   idle_minutes: 1440

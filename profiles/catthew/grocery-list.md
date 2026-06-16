@@ -8,6 +8,10 @@
 - [x] Salad greens / spinach
 - [ ] Korean pear
 - [x] Ghee
+- [ ] Broccoli
+- [ ] Yam or sweet potato
+- [ ] Ground beef
+- [ ] New grater from IKEA
 
 ## Costco
 - [x] Eggs
