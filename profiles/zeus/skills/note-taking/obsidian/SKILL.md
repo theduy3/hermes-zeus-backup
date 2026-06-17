@@ -210,7 +210,7 @@ Recurring-task grace behavior:
 Recommended sender shape:
 - Script-only cron (`no_agent=True`) that sends at most one card per run.
 - Drip schedule example: `*/10 8-23 * * *` = every 10 minutes from 8AM through 11:50PM local scheduler time.
-- Maintain a registry keyed by task/date/file path so already-sent or done task cards are not resent.
+- Maintain a registry keyed by stable task identity (`file_path` + title + `due_date`) so already-sent or done task cards are not resent across days. Do **not** include today's send date in the primary digest; date-based keys make overdue tasks reappear daily and can bypass prior Done history.
 - Done buttons should update the original Markdown frontmatter to `status: completed`, not just log completion elsewhere.
 
 ### Event reminder tasks

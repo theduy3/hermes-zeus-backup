@@ -107,11 +107,13 @@ When the user asks to make all Hermes agents/profiles work reliably without repe
    - Treat `STAT Z` lock owners as stale and remove those token lock files before restarting the affected profile.
 5. Add a silent watchdog, not a noisy daily status report.
    - Use a no-agent cron/script that emits nothing when healthy.
-   - Alert only on missing gateways, wrong `HERMES_HOME`, or current-startup auth/polling/port conflicts.
+   - Alert only on missing gateways, wrong `HERMES_HOME`, or true current-startup gateway failures: Telegram polling conflict, token already in use, port conflict, or platform startup failure before a successful connect.
+   - Do **not** treat generic `agent.conversation_loop` / `cron.scheduler` auth strings in `gateway.log` as gateway failures. `Could not parse your authentication token` usually indicates a cron/model-auth failure when the surrounding lines mention `provider=openai-codex` or `Job '<name>' failed`; monitor that separately from gateway health.
+   - If the latest startup window contains `Connected to Telegram`, `✓ telegram connected`, and `Gateway running`, clear or suppress stale earlier startup strings unless a newer true gateway error appears.
    - In Docker, do **not** identify profile gateways only by `hermes -p <profile> gateway run` in argv: the final Python process may show only `hermes gateway run`. Match live gateway PIDs by `/proc/<pid>/environ` and profile-scoped `HERMES_HOME` instead. Apply the same rule to restart supervisors to avoid false "missing" alerts or duplicate restarts.
    - If `hermes -p <profile> gateway status` shows a PID but the watchdog says missing, inspect `/proc/<pid>/environ`. A process such as `python -m hermes_cli.main --profile <name> gateway run --replace` can still have `HERMES_HOME=~/.hermes`; kill that mis-scoped PID so the entrypoint/supervisor can restart the profile with `HERMES_HOME=~/.hermes/profiles/<name>`.
 
-See `references/docker-profile-gateway-hardening.md` for the full repair pattern, wrapper/supervisor snippets, stale-lock cleanup, and watchdog criteria.
+See `references/docker-profile-gateway-hardening.md` for the full repair pattern, wrapper/supervisor snippets, stale-lock cleanup, and watchdog criteria. See `references/profile-gateway-watchdog-false-positives.md` for the false-positive pattern where cron/model auth errors in gateway logs are mislabeled as gateway startup issues.
 
 ## Telegram cron task-card button workflow
 
@@ -233,3 +235,4 @@ grep "cron_<job_id>" /home/hermes/.hermes/logs/agent.log | grep -E "(API call fa
 - `references/profile-codex-auth-repair.md` — profile-specific OpenAI Codex auth repair when cron/model calls fail with missing `access_token` despite `auth list` showing credentials.
 - `references/docker-profile-gateway-hardening.md` — Docker multi-profile gateway hardening: profile-scoped `HERMES_HOME`, inherited env cleanup, stale zombie lock removal, supervisor, and silent watchdog pattern.
 - `references/telegram-cron-task-card-callbacks.md` — Telegram cron task-card inline button callbacks: prefix routing, registry updates, safe source-file writes, gateway restarts, and local callback self-tests.
+- `references/profile-gateway-watchdog-false-positives.md` — avoid misclassifying cron/model auth failures in gateway logs as profile gateway startup failures.

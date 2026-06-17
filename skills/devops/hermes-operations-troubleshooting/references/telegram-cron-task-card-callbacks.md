@@ -16,11 +16,15 @@ Known task-card prefixes from this incident:
 
 - Zeus daily task cards:
   - `zt:<digest>` = Done
-  - `ztm:<digest>` = More
+  - `ztm:<digest>` = More/actions menu
+  - `ztx:<digest>` = Modify selected
+  - `ztd:<digest>` = Delete/dismiss card
   - registry: `~/.hermes/profiles/zeus/task_buttons/registry.json`
 - Catthew household task cards:
   - `ct:<digest>` = Done
-  - `ctm:<digest>` = More
+  - `ctm:<digest>` = More/actions menu
+  - `ctx:<digest>` = Modify selected
+  - `ctd:<digest>` = Delete/dismiss card
   - registry: `~/.hermes/profiles/catthew/task_buttons/registry.json`
 
 If future profiles add task cards, inspect their sender scripts for new `callback_data` prefixes and add matching gateway dispatch/config.
@@ -33,7 +37,9 @@ If future profiles add task cards, inspect their sender scripts for new `callbac
 2. Patch the central Telegram gateway adapter, not the cron script.
    - Dispatch recognized prefixes early in `_handle_callback_query` before generic update-prompt handlers.
    - Answer callbacks quickly so Telegram does not show a spinner.
-   - For `More`, edit the message with expanded task details and keep the Done/More keyboard active.
+   - For `More`, edit the message with expanded task details plus action choices (`Done`, `Modify`, `Delete`, `Back`).
+   - For `Modify`, mark the registry entry `modify_requested` and edit the card with reply instructions so the user can send the desired change.
+   - For `Delete`, mark the registry entry `deleted`, edit the Telegram card to a deleted confirmation, and remove the keyboard.
    - For `Done`, update registry state, update the backing task source if safe, then edit the Telegram card and remove the keyboard.
 3. Keep file writes profile-safe.
    - For Obsidian task markdown, only write inside the expected task root, e.g. `/vault/Tasks/tasks`.

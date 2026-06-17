@@ -433,13 +433,13 @@
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-21T19:50:36.637086+00:00",
-    "last_used_at": "2026-06-15T23:56:59.293536+00:00",
-    "last_viewed_at": "2026-06-15T23:56:59.289621+00:00",
+    "last_used_at": "2026-06-17T04:33:57.193083+00:00",
+    "last_viewed_at": "2026-06-17T04:33:57.189842+00:00",
     "patch_count": 29,
     "pinned": false,
     "state": "active",
-    "use_count": 827,
-    "view_count": 827
+    "use_count": 830,
+    "view_count": 830
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -484,14 +484,14 @@
     "archived_at": null,
     "created_at": "2026-05-24T17:15:39.070238+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-16T00:02:37.179407+00:00",
-    "last_used_at": "2026-06-15T23:56:59.309244+00:00",
-    "last_viewed_at": "2026-06-15T23:56:59.305953+00:00",
-    "patch_count": 20,
+    "last_patched_at": "2026-06-17T04:40:23.010779+00:00",
+    "last_used_at": "2026-06-17T04:34:24.537762+00:00",
+    "last_viewed_at": "2026-06-17T04:34:24.534100+00:00",
+    "patch_count": 25,
     "pinned": false,
     "state": "active",
-    "use_count": 18,
-    "view_count": 18
+    "use_count": 20,
+    "view_count": 20
   },
   "hermes-skill-installation": {
     "archived_at": null,
@@ -771,12 +771,12 @@
     "created_at": "2026-06-08T11:02:02.223976+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-15T22:10:20.789771+00:00",
+    "last_used_at": "2026-06-16T22:10:36.426259+00:00",
     "last_viewed_at": "2026-06-15T22:10:20.785275+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
+    "use_count": 5,
     "view_count": 1
   },
   "obsidian-csv-import-ingest": {
@@ -927,12 +927,12 @@
     "created_at": "2026-05-20T17:00:39.578758+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-12T14:03:05.165394+00:00",
-    "last_used_at": "2026-06-15T14:00:13.496792+00:00",
+    "last_used_at": "2026-06-16T14:00:06.731676+00:00",
     "last_viewed_at": "2026-06-12T14:02:48.196351+00:00",
     "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 30,
+    "use_count": 31,
     "view_count": 6
   },
   "python-debugpy": {
@@ -1148,12 +1148,12 @@
     "created_at": "2026-05-20T08:30:25.138771+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-15T08:02:10.438927+00:00",
-    "last_used_at": "2026-06-15T08:00:09.449518+00:00",
+    "last_used_at": "2026-06-16T22:35:20.889952+00:00",
     "last_viewed_at": "2026-05-21T13:22:18.599145+00:00",
     "patch_count": 5,
     "pinned": false,
     "state": "active",
-    "use_count": 31,
+    "use_count": 34,
     "view_count": 4
   },
   "tonight": {
@@ -1161,12 +1161,12 @@
     "created_at": "2026-05-21T01:01:03.002006+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-15T22:03:18.276492+00:00",
-    "last_used_at": "2026-06-16T03:00:04.931972+00:00",
+    "last_used_at": "2026-06-17T03:00:40.815343+00:00",
     "last_viewed_at": "2026-06-15T22:03:09.288672+00:00",
     "patch_count": 16,
     "pinned": false,
     "state": "active",
-    "use_count": 70,
+    "use_count": 72,
     "view_count": 21
   },
   "touchdesigner-mcp": {
@@ -1199,13 +1199,13 @@
     "archived_at": null,
     "created_at": "2026-05-20T15:00:46.174452+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-15T12:03:57.099712+00:00",
-    "last_used_at": "2026-06-16T00:01:00.206085+00:00",
+    "last_patched_at": "2026-06-17T00:05:47.100408+00:00",
+    "last_used_at": "2026-06-17T00:00:39.606634+00:00",
     "last_viewed_at": "2026-05-24T15:02:42.413412+00:00",
-    "patch_count": 15,
+    "patch_count": 16,
     "pinned": false,
     "state": "active",
-    "use_count": 79,
+    "use_count": 82,
     "view_count": 7
   },
   "wiki-lint": {
@@ -1213,12 +1213,12 @@
     "created_at": "2026-05-20T09:00:43.519564+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-15T06:05:31.395886+00:00",
-    "last_used_at": "2026-06-15T06:00:39.632065+00:00",
+    "last_used_at": "2026-06-16T06:00:05.010552+00:00",
     "last_viewed_at": "2026-06-15T06:00:39.629228+00:00",
     "patch_count": 23,
     "pinned": false,
     "state": "active",
-    "use_count": 50,
+    "use_count": 51,
     "view_count": 24
   },
   "workspace-dispatch": {

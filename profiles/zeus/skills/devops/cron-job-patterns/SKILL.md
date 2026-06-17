@@ -110,6 +110,8 @@ Key defaults for Duy/Zeus:
 - Use `*/10 8-23 * * *` for every 10 minutes from 8:00AM through 11:50PM local/Pacific scheduler time.
 - Order cards: due today first, then overdue tasks newest-first.
 - The Done callback should mark the original Obsidian task file `status: completed` and edit the Telegram message.
+- Registry keys should use stable task identity (`file_path` + title + `due_date`), not today's send date. If the key includes the send date, stale overdue tasks can be resent every day and prior Done clicks will not suppress future cards.
+- Before sending, suppress any task whose `file_path` already has a registry entry with `status: sent` or `status: done` for the same due date; if a registry entry is `done`, reconcile the source Markdown frontmatter to `status: completed`.
 
 ### Testing Script-Only Follow-Up Jobs
 

@@ -100,6 +100,8 @@ Markdown captures in `Inbox/` can be owned by `root:root` while the `Inbox/` dir
 
 Safe pattern when `Sources/` is writable:
 1. Create a normalized source archive directly in `Sources/<original basename>.md` with `tags: [source]`, source `type`, `source`, `created`, `ingested`, and `## Pages Updated`.
+   - For short sources, `write_file` the archive with normalized frontmatter plus the original body.
+   - For large root-owned Markdown captures where reconstructing the full body would be error-prone, use a targeted `cp` from `Inbox/` to `Sources/`, then patch only the archive copy's frontmatter / `## Pages Updated`. Do **not** patch the root-owned Inbox original. Verify the archive copy exists and has the expected size/content before moving the original out of Inbox.
 2. Move the root-owned Inbox original to `Notes/Archived Inbox Originals/` (collision-safe basename) to prevent repeat ingestion while preserving the raw capture.
 3. Verify three facts explicitly: the Inbox original is absent, the `Sources/` archive exists, and the preserved original exists under `Notes/Archived Inbox Originals/`.
 4. Mention the preservation path in the final summary, but do **not** call this a Notes fallback if the canonical source archive was successfully written to `Sources/`.

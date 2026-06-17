@@ -10,7 +10,7 @@
 ## One-off
 - Victoria: Daycare orientation on 2026-06-17 at 10:00 AM PDT
 - Victoria: Immunizations appointment on 2026-06-19 at 1:30 PM PDT, Ravensong Community Health Centre, 2 Months–3 Years Old Immunizations with Early Years Nurse 1
-- Family: BBQ gathering on 2026-06-20 at Jericho Beach, Vancouver
+- Family: BBQ gathering on 2026-06-20 at 11:00 AM PDT, Jericho Beach, Vancouver
 
 ## Notes
 - Parent and Tot Gym pricing: drop-in fee $4.00; 10-visit pass $33.00.

@@ -394,13 +394,13 @@
     "created_at": "2026-06-07T08:25:11.858745+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-14T03:00:38.418460+00:00",
-    "last_viewed_at": "2026-06-14T03:00:38.415860+00:00",
+    "last_used_at": "2026-06-17T04:29:27.596834+00:00",
+    "last_viewed_at": "2026-06-17T04:29:27.592486+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "ocr-and-documents": {
     "archived_at": null,

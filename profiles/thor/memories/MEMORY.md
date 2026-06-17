@@ -4,8 +4,6 @@ GitHub backup: repo theduy3/hermes-zeus-backup, cron 12e5ce30563d at 15:00 UTC (
 §
 Thor wellness Telegram bot profile: token starts 8788503747, profile name "thor", focused on physical health, mental health, and diet/nutrition. SOUL.md set up with evidence-based, warm-but-grounded tone.
 §
-All Hermes profiles use the openai-codex provider (OAuth via ~/.hermes/auth.json), model gpt-5.5 - NOT deepseek or openrouter. Config: model.provider=openai-codex, model.default=gpt-5.5, providers:{} (no base_url). DeepSeek fully removed 2026-05-24. When cloning a profile, verify model.provider=openai-codex (may inherit stale settings).
-§
 Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, finance. Discord=3r(Ongles Rivieres), charlesbourg(Ongles Charlesbourg), maily(Ongles Maily), ss(Sans Souci). Entrypoint sets HERMES_HOME per profile.
 §
 User wants running daily totals (calories vs 1,950 target, protein vs 150g target, water vs 3,000ml target) included every time they log food/water.
@@ -20,7 +18,6 @@ For Thor hydration logs, when user says “glass” or “cup” of water, count
 §
 §
 §
+Active travel: timezone America/Toronto for Quebec/East Coast trip 2026-07-06–12; switch back America/Vancouver after YUL→YVR on 2026-07-12.
 §
-§
-§
-Active travel context: destination unspecified destination; timezone America/Toronto (Quebec/East Coast trip 2026-07-06 to 2026-07-12; switch back America/Vancouver after YUL→YVR return on 2026-07-12); set 2026-06-15. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+Perplexity source to remember: https://www.perplexity.ai/search/22bd7ccb-66cf-4bf4-ba19-922cafc3d6d5. Content not fetched here (HTTP 403); ask user for text if needed.

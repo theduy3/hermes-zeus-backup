@@ -138,8 +138,8 @@
       5285
     ],
     "devops/cron-job-patterns/SKILL.md": [
-      1779859679137505527,
-      9714
+      1781651273038530719,
+      10195
     ],
     "devops/hermes-github-backup-restore/SKILL.md": [
       1778645250053587590,
@@ -322,8 +322,8 @@
       8996
     ],
     "note-taking/obsidian/SKILL.md": [
-      1781570792626525772,
-      15649
+      1781651278882521837,
+      15842
     ],
     "productivity/airtable/SKILL.md": [
       1781228918600083581,
@@ -1165,7 +1165,7 @@
       "skill_name": "kanban-orchestrator",
       "category": "devops",
       "frontmatter_name": "kanban-orchestrator",
-      "description": "",
+      "description": "Decomposition playbook + anti-temptation rules for an orc...",
       "platforms": [
         "linux",
         "macos",
@@ -1182,7 +1182,7 @@
       "skill_name": "kanban-worker",
       "category": "devops",
       "frontmatter_name": "kanban-worker",
-      "description": "",
+      "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
       "platforms": [
         "linux",
         "macos",

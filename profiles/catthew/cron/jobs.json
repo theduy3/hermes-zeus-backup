@@ -23,17 +23,17 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-06-16T07:00:00-04:00",
-      "last_run_at": "2026-06-15T07:00:56.178785-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-06-17T07:00:00-04:00",
+      "last_run_at": "2026-06-16T07:00:28.167560-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Error code: 401 - {'error': {'message': 'Could not parse your authentication token. Please try signing in again.', 'type': None, 'code': 'unauthorized_unknown', 'param': None}, 'status': 401}",
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -69,15 +69,15 @@
       "schedule_display": "0 18 * * 2",
       "repeat": {
         "times": 6,
-        "completed": 2
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T00:12:21.266980-07:00",
-      "next_run_at": "2026-06-16T18:00:00-04:00",
-      "last_run_at": "2026-06-02T18:01:00.245106-07:00",
+      "next_run_at": "2026-06-23T18:00:00-04:00",
+      "last_run_at": "2026-06-16T18:44:44.267006-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -327,15 +327,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 1623
+        "completed": 1719
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-06-16T08:00:00-04:00",
-      "last_run_at": "2026-06-15T23:50:21.523409-04:00",
+      "next_run_at": "2026-06-17T08:00:00-04:00",
+      "last_run_at": "2026-06-16T23:50:42.406044-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -400,5 +400,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-15T23:50:21.524247-04:00"
+  "updated_at": "2026-06-16T23:50:42.407694-04:00"
 }

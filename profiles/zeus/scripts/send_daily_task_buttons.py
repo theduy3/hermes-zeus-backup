@@ -214,13 +214,30 @@ def main() -> int:
     except ValueError:
         send_limit = 1
 
+    # Do not re-send the same task every day. Older versions keyed cards by
+    # date+title+path, so overdue tasks could get a fresh card each morning.
+    # Treat any existing sent/done card for the same source file as already
+    # handled until the source file's due_date changes or the task is edited.
+    handled_by_file: dict[str, list[dict]] = {}
+    for entry in registry.values():
+        if isinstance(entry, dict):
+            fp = str(entry.get("file_path") or "").strip()
+            if fp:
+                handled_by_file.setdefault(fp, []).append(entry)
+
     for idx, task in enumerate(tasks, 1):
         title = str(task.get("title") or task.get("text") or "").strip()
         if not title:
             continue
         source = str(task.get("source") or "").strip()
         file_path = str(task.get("file_path") or "").strip()
-        digest = hashlib.sha1(f"{date_key}\n{title}\n{file_path}".encode("utf-8")).hexdigest()[:16]
+        due_date = str(task.get("due_date") or "").strip()
+        prior_entries = handled_by_file.get(file_path, [])
+        if any(e.get("status") == "done" for e in prior_entries):
+            continue
+        if any(e.get("status") == "sent" and (not e.get("due_date") or e.get("due_date") == due_date) for e in prior_entries):
+            continue
+        digest = hashlib.sha1(f"{title}\n{file_path}\n{due_date}".encode("utf-8")).hexdigest()[:16]
         existing = registry.get(digest, {})
         if existing.get("message_id") and existing.get("status") != "done":
             continue
@@ -244,6 +261,7 @@ def main() -> int:
         registry[digest] = {
             "id": digest,
             "date": date_key,
+            "due_date": due_date,
             "title": title,
             "text": title,
             "source": source,
