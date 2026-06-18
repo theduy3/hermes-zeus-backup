@@ -225,12 +225,12 @@
     "created_at": "2026-06-12T11:00:51.076127+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-16T11:00:23.313580+00:00",
+    "last_used_at": "2026-06-17T11:00:53.968559+00:00",
     "last_viewed_at": "2026-06-16T02:09:06.442974+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
+    "use_count": 7,
     "view_count": 1
   },
   "hermes-activity-recap": {
@@ -316,13 +316,13 @@
     "created_at": "2026-05-25T18:28:29.147554+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-06-15T23:34:51.653238+00:00",
-    "last_used_at": "2026-06-16T22:43:09.749115+00:00",
-    "last_viewed_at": "2026-06-16T22:43:09.746011+00:00",
+    "last_used_at": "2026-06-17T14:39:53.045988+00:00",
+    "last_viewed_at": "2026-06-17T14:39:53.041578+00:00",
     "patch_count": 17,
     "pinned": false,
     "state": "active",
-    "use_count": 57,
-    "view_count": 41
+    "use_count": 59,
+    "view_count": 42
   },
   "humanizer": {
     "archived_at": null,

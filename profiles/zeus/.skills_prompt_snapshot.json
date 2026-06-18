@@ -322,8 +322,8 @@
       8996
     ],
     "note-taking/obsidian/SKILL.md": [
-      1781651278882521837,
-      15842
+      1781707639449473939,
+      16649
     ],
     "productivity/airtable/SKILL.md": [
       1781228918600083581,
@@ -1165,7 +1165,7 @@
       "skill_name": "kanban-orchestrator",
       "category": "devops",
       "frontmatter_name": "kanban-orchestrator",
-      "description": "Decomposition playbook + anti-temptation rules for an orc...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -1182,7 +1182,7 @@
       "skill_name": "kanban-worker",
       "category": "devops",
       "frontmatter_name": "kanban-worker",
-      "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",

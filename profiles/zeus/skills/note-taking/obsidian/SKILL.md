@@ -194,6 +194,8 @@ When the user wants Thor-style inline buttons for Obsidian tasks, prefer a scrip
 
 When the user wants one actionable Telegram card per Obsidian task, read `/vault/Tasks/tasks/*.md` directly and use the vault task files as the source of truth. Avoid requiring an upstream briefing/sidecar job unless the user explicitly wants curated LLM output.
 
+**Timed-task display requirement:** If a task has a specific time, the Telegram card must show it. Prefer a `due_time:` frontmatter field for sortable/parseable task metadata, and also keep the human-readable body line such as `Kickoff: 2026-06-17 10:00 PDT`. The card sender should extract time from `due_time`, `time`, `start_time`, `kickoff`, or body lines matching `Kickoff:`, `Start:`, `Due:`, or `Time:` and render a `Time: ...` line before `Source:`. If Duy replies to a task card saying the time is missing, patch both the source task and the drip script, then verify by importing/running the parser against that task.
+
 Recommended filtering:
 - Include `status: pending` and `status: in_progress` tasks.
 - Exclude `completed`, `done`, `cancelled`, and `canceled`.
@@ -236,7 +238,10 @@ Then in `execute_code`, parse `due_date`, `status`, and title. Filter by `status
 
 When Duy asks to add reminders for events with specific kickoff/start times (sports games, concerts, watch parties):
 1. Use live/source-backed data when available, then convert times to Duy's active local timezone before writing tasks.
-2. Because task frontmatter only has date-level `due_date`, put the exact local start time in the note body, e.g. `Kickoff: 2026-06-24 18:00 PDT`.
+2. Because task frontmatter only has date-level `due_date`, put the exact local start time in both frontmatter and the note body:
+   - Frontmatter: `due_time: 18:00 PDT`
+   - Body: `Kickoff: 2026-06-24 18:00 PDT`
+   This lets Obsidian notes remain readable while Telegram task cards can surface `Time:` without parsing prose.
 3. Use one Markdown task per notable event under `/vault/Tasks/tasks/`, with tags like `[personal, world-cup, soccer]` or the relevant event taxonomy.
 4. Add conditional follow-up tasks when the exact event depends on future results, e.g. “Check Korea knockout schedule” or “possible Round of 32,” instead of pretending the bracket is known.
 5. Verify by searching/reading back a sample task after creation, then give Duy a concise list of what was added.

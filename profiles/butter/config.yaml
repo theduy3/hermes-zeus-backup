@@ -365,7 +365,7 @@ curator:
     enabled: true
     keep: 5
 honcho: {}
-timezone: America/Toronto
+timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''

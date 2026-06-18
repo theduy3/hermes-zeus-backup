@@ -317,5 +317,44 @@
     "kind": "event",
     "status": "sent",
     "message_id": 547
+  },
+  "c01c91311702b4a6": {
+    "id": "c01c91311702b4a6",
+    "date": "2026-06-17",
+    "title": "Victoria: Music class every Wednesday, 10:30 AM",
+    "text": "Victoria: Music class every Wednesday, 10:30 AM",
+    "source": "Household event today",
+    "due_date": "2026-06-17",
+    "line": 5,
+    "kind": "event",
+    "status": "deleted",
+    "message_id": 558,
+    "deleted_at": "2026-06-17T14:40:27Z",
+    "deleted_by": "8446251233",
+    "deleted_reason": "Recurring task deleted by Sir"
+  },
+  "fbfda06fcc77b18f": {
+    "id": "fbfda06fcc77b18f",
+    "date": "2026-06-17",
+    "title": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-06-17",
+    "line": 6,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 559
+  },
+  "917a0b3e0dbea7e3": {
+    "id": "917a0b3e0dbea7e3",
+    "date": "2026-06-17",
+    "title": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-06-17",
+    "line": 5,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 563
   }
 }

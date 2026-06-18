@@ -142,6 +142,11 @@ the source archive just to make it human-readable.
 ### Verify infrastructure edits by searching exact new artifacts
 After updating `System/wiki-index.md`, `System/wiki-log.md`, or MOCs, verify with an exact search for the new page/source title, not just by trusting a write succeeded. When patching index rows, do not assume the row's tag/type text from memory; first inspect the actual neighboring row or use an exact old_string from the current file. If the exact artifact is missing after a broad rewrite, patch it in with a small targeted replacement and verify again.
 
+For file-presence checks, remember that `search_files(target="files")` uses glob-style filename matching, not regex alternation. A pattern like `a.md|b.md` will not verify multiple files. Use separate exact file probes, a simple wildcard that actually matches, or a narrow read-only `ls -la <file1> <file2> ...` verification when confirming source archives and preserved Inbox originals.
+
+### Preserve exact captured URLs when normalizing source frontmatter
+When converting clipped source frontmatter to normalized `Sources/` frontmatter, copy the `source:` URL exactly from the Inbox read, especially long `fbclid`/tracking URLs. Do not retype or abbreviate from memory: one-character drift silently changes provenance. After patching the source archive frontmatter, re-read the first 10–20 lines of the archive and compare the URL/title against the original source metadata before moving the Inbox original out of `Inbox/`.
+
 ### Notes fallback source archives still count as indexed pages
 When `Sources/` is blocked and the source archive is created under `Notes/` (for example `Notes/<Source Title> Source.md`), treat that archive as a page for infrastructure bookkeeping:
 - Add an index row for both the substantive wiki page(s) and the source archive page.

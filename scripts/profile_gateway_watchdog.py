@@ -9,19 +9,39 @@ def run(cmd):
     return subprocess.run(cmd, shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).stdout
 
 def all_gateway_pids():
-    """Return Hermes gateway PIDs.
+    """Return only real Hermes gateway process PIDs.
 
-    Healthy Docker profile gateways usually appear as `hermes gateway run` with
-    profile-scoped HERMES_HOME. Mis-started repair attempts can appear as
-    `python -m hermes_cli.main --profile <name> gateway run --replace` while
-    inheriting the default HERMES_HOME; include those too so the alert points at
-    the wrong environment instead of only saying "missing".
+    Do not use ``ps | grep`` here: a cron/tool shell command can contain the
+    literal text ``hermes gateway run`` or ``--profile <name>`` in its script
+    body while inheriting ``HERMES_HOME=/home/hermes/.hermes``. That produced
+    false wrong-HERMES_HOME alerts for profile gateways even though the live
+    profile Python processes were healthy. Inspect /proc cmdline tokens instead
+    and accept only actual Hermes/Python launcher shapes.
     """
-    out = run("ps -eo pid=,args= | grep -E '(hermes gateway run|hermes_cli\\.main .*gateway run)' | grep -v grep || true")
     pids=[]
-    for line in out.splitlines():
-        parts=line.strip().split(None,1)
-        if parts and parts[0].isdigit(): pids.append(int(parts[0]))
+    for name in os.listdir('/proc'):
+        if not name.isdigit():
+            continue
+        pid=int(name)
+        argv=cmdline(pid).split()
+        if not argv:
+            continue
+        exe=Path(argv[0]).name
+        is_gateway = False
+        # Docker entrypoint profile gateway shape:
+        #   python3 /home/hermes/.local/bin/hermes gateway run
+        if exe.startswith('python') and len(argv) >= 4 and Path(argv[1]).name == 'hermes' and argv[2:4] == ['gateway', 'run']:
+            is_gateway = True
+        # Direct CLI shape:
+        #   hermes gateway run
+        elif exe == 'hermes' and len(argv) >= 3 and argv[1:3] == ['gateway', 'run']:
+            is_gateway = True
+        # Module shape used by some repair commands:
+        #   python -m hermes_cli.main ... gateway run
+        elif exe.startswith('python') and '-m' in argv and 'hermes_cli.main' in argv and 'gateway' in argv and 'run' in argv:
+            is_gateway = True
+        if is_gateway:
+            pids.append(pid)
     return pids
 
 def cmdline(pid):

@@ -4,8 +4,6 @@ On this macOS environment, remindctl is not installed. Apple Reminders can be ma
 §
 GitHub backup: repo theduy3/hermes-zeus-backup, cron 12e5ce30563d at 15:00 UTC (8AM PDT). .gitignore: .env, auth.json, logs/, sessions/, cron/output/, cache/, hermes-agent/, venv/, node_modules/. Recovery: clone into ~/.hermes/ + restore .env + auth.json (openai-codex OAuth).
 §
-Confirmed Quebec/East Coast trip July 6-12, 2026: trip-sensitive scheduling/briefings use Eastern Time from YVR→YUL travel day 2026-07-06 through YUL→YVR return day 2026-07-12; switch back to Pacific Time after return to Vancouver on 2026-07-12.
-§
 Thor wellness Telegram bot profile: token starts 8788503747, profile name "thor", focused on physical health, mental health, and diet/nutrition. SOUL.md set up with evidence-based, warm-but-grounded tone.
 §
 theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CHARLESBOURG/MAILY/RIVIERES/SS), Business HoldCo, Business Projects, Personal, FAMILY TRUST, Education, Job, Archive, Projects. Sort loose files here.
@@ -22,7 +20,4 @@ Paperclip on VPS 147.93.116.94 runs in Docker, bound localhost:3100 in container
 §
 §
 §
-§
-§
-§
-Active travel context: destination unspecified destination; timezone America/Toronto (Quebec/East Coast trip 2026-07-06 to 2026-07-12; switch back America/Vancouver after YUL→YVR return on 2026-07-12); set 2026-06-15. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+Active travel context: Vancouver/PDT. Quebec/Montreal trip Jul 6-12 2026 stays Pacific for Hermes scheduling; switch-back check cron a373ed669cbe on Jul 12 23:55 PDT.

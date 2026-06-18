@@ -92,6 +92,19 @@ def title_from_body(path: pathlib.Path, body: str) -> str:
     return path.stem.replace("-", " ").strip().title()
 
 
+def time_from_task(fm: dict[str, str], body: str) -> str:
+    """Return a concise due/kickoff time for task cards when present."""
+    for key in ("due_time", "time", "start_time", "kickoff"):
+        val = (fm.get(key) or "").strip()
+        if val:
+            return val
+    for line in body.splitlines():
+        m = re.match(r"^(Kickoff|Start|Due|Time):\s*(.+?)\s*$", line.strip(), re.IGNORECASE)
+        if m:
+            return m.group(2).strip()
+    return ""
+
+
 def add_months(d: date, months: int) -> date:
     month_index = d.month - 1 + months
     year = d.year + month_index // 12
@@ -169,11 +182,13 @@ def load_vault_tasks(today: date) -> list[dict]:
             if due > today:
                 continue
         title = title_from_body(path, body)
+        due_time = time_from_task(fm, body)
         tasks.append({
             "title": title,
             "source": "Obsidian" if due == today else f"Obsidian overdue {due.isoformat()}",
             "file_path": str(path),
             "due_date": due.isoformat(),
+            "due_time": due_time,
         })
     # Priority: today's tasks first, then overdue tasks newest-first, then title.
     tasks.sort(key=lambda t: (
@@ -232,6 +247,7 @@ def main() -> int:
         source = str(task.get("source") or "").strip()
         file_path = str(task.get("file_path") or "").strip()
         due_date = str(task.get("due_date") or "").strip()
+        due_time = str(task.get("due_time") or "").strip()
         prior_entries = handled_by_file.get(file_path, [])
         if any(e.get("status") == "done" for e in prior_entries):
             continue
@@ -245,6 +261,8 @@ def main() -> int:
             continue
 
         text = f"☐ {title}"
+        if due_time:
+            text += f"\nTime: {due_time}"
         if source:
             text += f"\nSource: {source}"
         markup = json.dumps({"inline_keyboard": [[

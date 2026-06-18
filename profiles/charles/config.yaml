@@ -205,7 +205,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: America/Toronto
+timezone: America/Vancouver
 telegram:
   reactions: false
   channel_prompts: {}

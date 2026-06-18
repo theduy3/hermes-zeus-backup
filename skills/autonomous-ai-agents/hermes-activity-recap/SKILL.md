@@ -47,8 +47,10 @@ Learned in practice:
    - Resolve the reporting date in the job's/user's local timezone, not just UTC. Evening recaps often run while UTC is already the next date; use `TZ=<cron/user timezone> date` when available and summarize the local "today".
    - Do not rely only on `hermes cron list` last-run fields for jobs scheduled later in the day. If current time is after a job should have fired, explicitly check `~/.hermes/cron/output/<job_id>/YYYY-MM-DD_*.md`; cron list can appear stale or be observed before a pending local-time run completes.
    - If `session_search()` shows a cron session for today with only the initial user prompt and no matching output file yet, treat that job as **in progress or not yet delivered**, not as completed. Mention it only if it materially affects the recap, and avoid claiming its result until a `## Response`/`## Error` output file or final assistant message exists.
+   - **Re-scan near the end of the recap.** Scheduled jobs can finish while you are aggregating earlier outputs. After the first pass, explicitly check any jobs whose scheduled local time is due/near-due and rerun the day's output-file discovery before finalizing counts. Do not let an early aggregate (for example “49 files”) hide a just-finished output that appeared minutes later.
+   - For interactive sessions that changed code or scripts, do a safe read-only/current-state verification before summarizing if possible: inspect the relevant `git status`/diff or current script contents, and run non-destructive syntax checks such as `python3 -m py_compile` when claiming code is syntactically verified. Distinguish “patched but verification was blocked in the original session” from “verified now during recap.”
 
-5. **Read representative outputs first**
+5. **Read representative outputs first**,
    - Open a few cron output markdown files to understand each job's purpose and final response.
    - Identify job IDs and recurring job names before trying to summarize the whole day.
 

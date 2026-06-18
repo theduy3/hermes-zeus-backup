@@ -21,4 +21,6 @@ Recurring personal expense: monthly rent is $2,000.
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Toronto (Quebec/East Coast trip 2026-07-06 to 2026-07-12; switch back America/Vancouver after YUL→YVR return on 2026-07-12); set 2026-06-15. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-06-17. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

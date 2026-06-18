@@ -2650,5 +2650,51 @@
     "done_at": "2026-06-16T22:55:54.727493+00:00",
     "done_by": "8446251233",
     "source_updated": true
+  },
+  "59c5f0280a789d5e": {
+    "id": "59c5f0280a789d5e",
+    "date": "2026-06-17",
+    "due_date": "2026-06-17",
+    "title": "Call Desjardins to Get New Visa Card for OM",
+    "text": "Call Desjardins to Get New Visa Card for OM",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/call-desjardins-new-visa-card-om.md",
+    "status": "sent",
+    "message_id": 673
+  },
+  "3234f0fb964fea39": {
+    "id": "3234f0fb964fea39",
+    "date": "2026-06-17",
+    "due_date": "2026-06-17",
+    "title": "Follow World Cup: England vs Croatia",
+    "text": "Follow World Cup: England vs Croatia",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/follow-world-cup-england-vs-croatia.md",
+    "status": "sent",
+    "message_id": 674
+  },
+  "e4b252012e207211": {
+    "id": "e4b252012e207211",
+    "date": "2026-06-17",
+    "due_date": "2026-06-17",
+    "title": "Follow World Cup: Portugal vs Congo DR",
+    "text": "Follow World Cup: Portugal vs Congo DR",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/follow-world-cup-portugal-vs-congo-dr.md",
+    "status": "sent",
+    "message_id": 675
+  },
+  "b9df0420fb82d08e": {
+    "id": "b9df0420fb82d08e",
+    "date": "2026-06-17",
+    "due_date": "2026-06-17",
+    "title": "Pay CIBC Aventura 8824 (due on the 24th)",
+    "text": "Pay CIBC Aventura 8824 (due on the 24th)",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/pay-cibc-aventura-8824-due-on-the-24th.md",
+    "status": "deleted",
+    "message_id": 676,
+    "deleted_at": "2026-06-17T14:44:30.652205+00:00",
+    "deleted_by": "8446251233"
   }
 }
