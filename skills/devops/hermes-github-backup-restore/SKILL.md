@@ -10,9 +10,9 @@ Disaster recovery for Hermes Agent: nightly backup to a private GitHub repo, and
 
 ## Backup Architecture
 
-- **Cron job**: `nightly-hermes-github-backup` fires daily — targets midnight America/Chicago, which is 05:00 UTC during CDT (summer) or 06:00 UTC during CST (winter)
-- **Schedule**: `0 5 * * *` — fires at 05:00 UTC; the job self-checks against `America/Chicago` timezone and sleeps 1 hour during CST winter months (when 05:00 UTC = 23:00 Central, not midnight yet)
-- **Deployment target**: Linux VPS (the timezone self-check handles DST; macOS `crontab` timezone behavior is different)
+- **Cron job**: `nightly-hermes-github-backup` fires daily at midnight America/Vancouver/Pacific time.
+- **Schedule**: `0 0 * * *` — Hermes cron stores/displays the next run in the active profile timezone; with the current Vancouver/Pacific context this runs at 00:00 PDT/PST. The job self-checks that the current America/Vancouver hour is `00` before syncing.
+- **Deployment target**: Linux VPS. Keep timezone-sensitive cron jobs aligned with Duy's active travel context by using the travel sync script when location/timezone changes.
 - **What's backed up**: `~/.hermes/` minus secrets — skills, memory, config templates, plugins, and any custom files
 - **What's excluded** (.gitignore): `.env`, `auth.json`, `*.pem`, `*.key`, `logs/`, `sessions/`, `audio_cache/`, `cron/output/`, `hermes-agent/` (upstream source, can re-clone), `__pycache__/`, `venv/`, `.venv/`, `node_modules/`, `cache/`, `tmp/`
 - **Repo**: private, token-scoped — fine-grained PAT required (`github_pat_`), scoped to this repo only, **Contents → Read & Write**

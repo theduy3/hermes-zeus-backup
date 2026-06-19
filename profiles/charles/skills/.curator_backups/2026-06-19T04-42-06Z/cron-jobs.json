@@ -1,0 +1,431 @@
+{
+  "jobs": [
+    {
+      "id": "3605d270d612",
+      "name": "Weekly Portfolio Briefing",
+      "prompt": "Every Sunday, send the user a concise Weekly Portfolio Briefing for their registered investment portfolio.\n\nTiming note: this job is scheduled for Sunday 16:00 America/Vancouver, which is 9:00 AM Vancouver/PDT time during daylight time.\n\nUser style: terse, bullet-based, no fluff. Telegram format: no tables.\n\nKnown portfolio snapshot to use as baseline unless newer memory/session context is available:\n- Snapshot date: prices 2026-05-22 close; cash from 2026-05-19.\n- Total registered portfolio: about $199.07k CAD.\n- Cash: about $92.68k CAD (46.6%).\n- Holdings market value: about $106.39k CAD vs cost about $63.70k; open P/L about +$42.69k CAD (+67.0%).\n- Accounts: Wealthsimple RRSP about $155.17k; FHSA about $17.50k (VFV.TO +$1.21k); Questrade Spousal RRSP about $6.40k (holdings P/L +$0.69k); Questrade RSP cash $20k.\n- Holdings/share counts: FIG 27, GOOG 15, MPTA 11, NVDA 241, PLTR 3, RACE 21, VFV.TO 33.\n- Key risk: NVDA market value about $71.69k CAD, roughly 36.0% of registered portfolio; cash roughly 46.6%.\n\nTask each week:\n1. Retrieve current market prices/news/macro context for holdings: FIG, GOOG/GOOGL, MPTA, NVDA, PLTR, RACE, VFV.TO, plus USD/CAD if needed.\n2. Estimate current holding values and allocation using the known share counts and latest prices. Clearly label estimates if cash/account values are stale.\n3. Include: portfolio summary, holdings snapshot, biggest weekly movers or news, risk flags, and action watchlist.\n4. Separate facts from analysis/opinion. Include thesis/risks/timeline/confidence only if suggesting an action.\n5. End with: “This is analysis, not financial advice. Consult a qualified advisor before making investment decisions. Past performance does not guarantee future results.”",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 0",
+        "display": "0 16 * * 0"
+      },
+      "schedule_display": "0 16 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-26T08:04:47.758272-07:00",
+      "next_run_at": "2026-06-21T16:00:00-07:00",
+      "last_run_at": "2026-06-14T16:02:00.420222-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "memory",
+        "skills",
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "f880138dc13c",
+      "name": "SpaceX share reminder - Aug 11 Wave 1",
+      "prompt": "Remind Duy: You asked to be reminded one day before Aug 11, 2026 (Wave 1 unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-10T16:00:00+00:00",
+        "display": "once at 2026-08-10 16:00"
+      },
+      "schedule_display": "once at 2026-08-10 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:34.860482-04:00",
+      "next_run_at": "2026-08-10T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "9b05139d0db8",
+      "name": "SpaceX share reminder - Aug 21 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Aug 21, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-20T16:00:00+00:00",
+        "display": "once at 2026-08-20 16:00"
+      },
+      "schedule_display": "once at 2026-08-20 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:35.864341-04:00",
+      "next_run_at": "2026-08-20T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "8104a0886300",
+      "name": "SpaceX share reminder - Sep 10 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Sep 10, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-09T16:00:00+00:00",
+        "display": "once at 2026-09-09 16:00"
+      },
+      "schedule_display": "once at 2026-09-09 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:36.868652-04:00",
+      "next_run_at": "2026-09-09T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "06c05e194def",
+      "name": "SpaceX share reminder - Sep 25 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Sep 25, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-24T16:00:00+00:00",
+        "display": "once at 2026-09-24 16:00"
+      },
+      "schedule_display": "once at 2026-09-24 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:37.872616-04:00",
+      "next_run_at": "2026-09-24T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "ef9ef32374ba",
+      "name": "SpaceX share reminder - Oct 10 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Oct 10, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-09T16:00:00+00:00",
+        "display": "once at 2026-10-09 16:00"
+      },
+      "schedule_display": "once at 2026-10-09 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:38.876329-04:00",
+      "next_run_at": "2026-10-09T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "c813af9546bf",
+      "name": "SpaceX share reminder - Oct 25 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Oct 25, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-24T16:00:00+00:00",
+        "display": "once at 2026-10-24 16:00"
+      },
+      "schedule_display": "once at 2026-10-24 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:39.880269-04:00",
+      "next_run_at": "2026-10-24T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "c7a08a2a6c56",
+      "name": "SpaceX share reminder - Nov 9 Q3 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Nov 9, 2026 (Q3 unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-11-08T17:00:00+00:00",
+        "display": "once at 2026-11-08 17:00"
+      },
+      "schedule_display": "once at 2026-11-08 17:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:40.884562-04:00",
+      "next_run_at": "2026-11-08T17:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "95ca6ca2b099",
+      "name": "SpaceX share reminder - Dec 9 180d unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Dec 9, 2026 (180d unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-12-08T17:00:00+00:00",
+        "display": "once at 2026-12-08 17:00"
+      },
+      "schedule_display": "once at 2026-12-08 17:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:41.889802-04:00",
+      "next_run_at": "2026-12-08T17:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "b8ddb33f17ab",
+      "name": "SpaceX share reminder - Jun 13 2027 Founder",
+      "prompt": "Remind Duy: You asked to be reminded one day before Jun 13, 2027 (Founder unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2027-06-12T16:00:00+00:00",
+        "display": "once at 2027-06-12 16:00"
+      },
+      "schedule_display": "once at 2027-06-12 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:42.893775-04:00",
+      "next_run_at": "2027-06-12T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-06-17T21:02:28.963068-07:00"
+}

@@ -2696,5 +2696,35 @@
     "message_id": 676,
     "deleted_at": "2026-06-17T14:44:30.652205+00:00",
     "deleted_by": "8446251233"
+  },
+  "bc63e862371965b3": {
+    "id": "bc63e862371965b3",
+    "date": "2026-06-18",
+    "due_date": "2026-06-18",
+    "title": "Follow Korea Republic: Mexico vs Korea Republic",
+    "text": "Follow Korea Republic: Mexico vs Korea Republic",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/follow-korea-republic-mexico-vs-korea-republic.md",
+    "status": "done",
+    "message_id": 702,
+    "odds": "DraftKings: ML Mexico +100 / Draw +230 / South Korea +310; Spread Mexico -0.5 (+100) / South Korea +0.5 (-125); O/U o2.5 (+115) / u2.5 (-145)",
+    "done_at": "2026-06-19T03:00:21.272037+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
+  },
+  "efc4f139230de288": {
+    "id": "efc4f139230de288",
+    "date": "2026-06-18",
+    "due_date": "2026-06-18",
+    "title": "Follow World Cup: Canada vs Qatar",
+    "text": "Follow World Cup: Canada vs Qatar",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/follow-world-cup-canada-vs-qatar.md",
+    "status": "done",
+    "message_id": 701,
+    "odds": "DraftKings: ML Canada OFF / Draw +7000 / Qatar +25000; Spread Canada OFF (OFF) / Qatar OFF (OFF); O/U OFF (OFF) / OFF (OFF)",
+    "done_at": "2026-06-18T23:57:43.225916+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
   }
 }

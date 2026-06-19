@@ -14,11 +14,7 @@ Investment context 2026-06-13: registered cash ~$92.7k (46.6%); NVDA ~$71.7k (36
 §
 Recurring income: biweekly on Thursday starting May 28, 2026, net payroll from Ongles Rivieres to CIBC chequing account is $2,747.50.
 §
-Recurring personal expense: monthly rent is $2,000.
-§
-§
-§
-§
+Recurring personal expenses: rent $2,000/mo; TD mortgage for apt #202 2900 Rue Édouard-Montpetit starts Jul 1 2026, withdrawn 1st monthly; check TD Chequing by 24th for ≥$2,000.
 §
 §
 §

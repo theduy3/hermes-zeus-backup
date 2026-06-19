@@ -131,13 +131,25 @@ run targeted content searches with narrow terms and paths. If a broad search fai
 permission-denied file, do not treat that as "no duplicate"; retry with a narrower query
 or rely on the readable index plus exact filename/title probes.
 
-### Opaque Inbox filenames from web clips
+### Opaque or overlong Inbox filenames from web clips
 Inbox files such as `de.md` or `dg.md` may contain fully titled article captures even
 though the filename is opaque. In that case, name the substantive wiki page from the
 source title/date (for example `Stock Market Today May 26 2026.md`) while preserving the
 canonical archive basename in `Sources/<original>.md`. Use the original basename in the
 page `sources:` wikilink (e.g. `[[dg]]`) and in `wiki-log.md`; do not force a rename of
 the source archive just to make it human-readable.
+
+If the Inbox basename is itself over the 200-byte cap or has no `.md` suffix because a
+long title fragment was parsed as an "extension", first sniff/read it as Markdown. If it
+is a web-clip Markdown source, create a shortened collision-safe archive basename in
+`Sources/` (for example `<owner>_<repo> concise title GitHub.md`) and use that shortened
+archive basename consistently in new page `sources:` wikilinks, `## Pages Updated`,
+`wiki-index.md`, and `wiki-log.md`. For root-owned overlong Markdown, use the root-owned
+Inbox pattern: `cp` the raw file to the shortened `Sources/` path, patch only the archive
+copy's normalized frontmatter and `## Pages Updated`, then move the raw Inbox original to
+`Notes/Archived Inbox Originals/` with a shortened preservation name. Verify: Inbox
+absence, `Sources/` archive presence, preserved-original presence, and exact index/log/MOC
+matches before summarizing.
 
 ### Verify infrastructure edits by searching exact new artifacts
 After updating `System/wiki-index.md`, `System/wiki-log.md`, or MOCs, verify with an exact search for the new page/source title, not just by trusting a write succeeded. When patching index rows, do not assume the row's tag/type text from memory; first inspect the actual neighboring row or use an exact old_string from the current file. If the exact artifact is missing after a broad rewrite, patch it in with a small targeted replacement and verify again.

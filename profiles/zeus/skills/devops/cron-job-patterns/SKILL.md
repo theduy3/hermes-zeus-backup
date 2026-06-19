@@ -112,6 +112,8 @@ Key defaults for Duy/Zeus:
 - The Done callback should mark the original Obsidian task file `status: completed` and edit the Telegram message.
 - Registry keys should use stable task identity (`file_path` + title + `due_date`), not today's send date. If the key includes the send date, stale overdue tasks can be resent every day and prior Done clicks will not suppress future cards.
 - Before sending, suppress any task whose `file_path` already has a registry entry with `status: sent` or `status: done` for the same due date; if a registry entry is `done`, reconcile the source Markdown frontmatter to `status: completed`.
+- For event-follow cards that need live metadata (example: World Cup betting odds), add enrichment late in the send loop after duplicate-suppression checks so every cron tick does not fetch APIs for cards that will not be sent. If a card was already sent and the user requests a metadata addition, edit the existing Telegram `message_id` and store the enriched field in the registry.
+- For sports odds, use an official/structured feed when possible (ESPN scoreboard often embeds DraftKings markets under `competitions[0].odds`) and include moneyline, spread, and over/under in one compact `Odds:` line. Normalize team aliases/diacritics (`Korea Republic`→`South Korea`, `Côte d’Ivoire`→`Ivory Coast`, `USA`→`United States`) before matching fixtures.
 
 ### Testing Script-Only Follow-Up Jobs
 

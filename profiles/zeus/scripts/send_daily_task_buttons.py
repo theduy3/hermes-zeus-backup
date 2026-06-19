@@ -17,6 +17,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+import unicodedata
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -103,6 +104,115 @@ def time_from_task(fm: dict[str, str], body: str) -> str:
         if m:
             return m.group(2).strip()
     return ""
+
+
+def note_field_from_body(body: str, label: str) -> str:
+    for line in body.splitlines():
+        m = re.match(r"^" + re.escape(label) + r":\s*(.+?)\s*$", line.strip(), re.IGNORECASE)
+        if m:
+            return m.group(1).strip()
+    return ""
+
+
+def normalize_team(name: str) -> str:
+    ascii_name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
+    value = re.sub(r"[^a-z0-9]+", " ", ascii_name.lower()).strip()
+    aliases = {
+        "korea republic": "south korea",
+        "south korea": "south korea",
+        "cote d ivoire": "ivory coast",
+        "c te d ivoire": "ivory coast",
+        "ivory coast": "ivory coast",
+        "usa": "united states",
+        "u s a": "united states",
+        "usmnt": "united states",
+        "congo dr": "dr congo",
+        "dr congo": "dr congo",
+    }
+    return aliases.get(value, value)
+
+
+def split_world_cup_title(title: str) -> tuple[str, str] | None:
+    # World Cup tasks are usually `Follow World Cup: A vs B`, but a few
+    # team-specific cards were created as `Follow Korea Republic: A vs B`.
+    m = re.match(r"^Follow\s+(?:World\s+Cup|[^:]+):\s*(.+?)\s+vs\s+(.+?)\s*$", title.strip(), re.IGNORECASE)
+    if not m:
+        return None
+    return m.group(1).strip(), m.group(2).strip()
+
+
+def current_market_value(market: dict, key: str = "odds") -> str:
+    for bucket in ("current", "close", "open"):
+        val = (market.get(bucket) or {}).get(key)
+        if val not in (None, ""):
+            return str(val)
+    return ""
+
+
+def format_world_cup_odds(title: str, due_date: str, body: str = "") -> str:
+    """Fetch pre-game odds from ESPN/DraftKings for World Cup follow cards.
+
+    Falls back to an `Odds:` line in the task note when ESPN has no market.
+    Returns an empty string on network/API failure so the drip job never blocks.
+    """
+    manual = note_field_from_body(body, "Odds")
+    teams = split_world_cup_title(title)
+    if not teams or not due_date:
+        return manual
+    wanted = {normalize_team(teams[0]), normalize_team(teams[1])}
+    try:
+        base = date.fromisoformat(due_date[:10])
+    except ValueError:
+        return manual
+    candidates = [base, base + timedelta(days=1), base - timedelta(days=1)]
+    try:
+        for day in candidates:
+            url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates={day.strftime('%Y%m%d')}"
+            data = json.loads(urllib.request.urlopen(url, timeout=12).read().decode("utf-8"))
+            for event in data.get("events", []):
+                comp = (event.get("competitions") or [{}])[0]
+                competitors = comp.get("competitors") or []
+                event_names = {normalize_team((c.get("team") or {}).get("displayName", "")) for c in competitors}
+                if not wanted.issubset(event_names):
+                    continue
+                odds_list = comp.get("odds") or []
+                odds = next((o for o in odds_list if isinstance(o, dict)), None)
+                if not odds:
+                    return manual
+                sides: dict[str, str] = {}
+                for c in competitors:
+                    team = c.get("team") or {}
+                    sides[c.get("homeAway", "")] = team.get("shortDisplayName") or team.get("displayName") or ""
+                ml = odds.get("moneyline") or {}
+                spread = odds.get("pointSpread") or {}
+                total = odds.get("total") or {}
+                home = sides.get("home", "Home")
+                away = sides.get("away", "Away")
+                ml_home = current_market_value(ml.get("home") or {})
+                ml_away = current_market_value(ml.get("away") or {})
+                ml_draw = current_market_value(ml.get("draw") or {}) or str((odds.get("drawOdds") or {}).get("moneyLine") or "")
+                sp_home_line = current_market_value(spread.get("home") or {}, "line")
+                sp_home_odds = current_market_value(spread.get("home") or {})
+                sp_away_line = current_market_value(spread.get("away") or {}, "line")
+                sp_away_odds = current_market_value(spread.get("away") or {})
+                over_line = current_market_value(total.get("over") or {}, "line")
+                over_odds = current_market_value(total.get("over") or {})
+                under_line = current_market_value(total.get("under") or {}, "line")
+                under_odds = current_market_value(total.get("under") or {})
+                provider = ((odds.get("provider") or {}).get("displayName") or (odds.get("provider") or {}).get("name") or "ESPN odds")
+                parts = []
+                if ml_home or ml_draw or ml_away:
+                    parts.append(f"ML {home} {ml_home or 'n/a'} / Draw {ml_draw or 'n/a'} / {away} {ml_away or 'n/a'}")
+                if sp_home_line or sp_away_line:
+                    parts.append(f"Spread {home} {sp_home_line or 'n/a'} ({sp_home_odds or 'n/a'}) / {away} {sp_away_line or 'n/a'} ({sp_away_odds or 'n/a'})")
+                if over_line or under_line:
+                    parts.append(f"O/U {over_line or 'O n/a'} ({over_odds or 'n/a'}) / {under_line or 'U n/a'} ({under_odds or 'n/a'})")
+                if parts:
+                    return f"{provider}: " + "; ".join(parts)
+                return manual
+    except Exception:
+        return manual
+    return manual
 
 
 def add_months(d: date, months: int) -> date:
@@ -248,6 +358,7 @@ def main() -> int:
         file_path = str(task.get("file_path") or "").strip()
         due_date = str(task.get("due_date") or "").strip()
         due_time = str(task.get("due_time") or "").strip()
+        odds = str(task.get("odds") or "").strip()
         prior_entries = handled_by_file.get(file_path, [])
         if any(e.get("status") == "done" for e in prior_entries):
             continue
@@ -259,10 +370,20 @@ def main() -> int:
             continue
         if existing.get("status") == "done":
             continue
+        if not odds and due_date and split_world_cup_title(title):
+            body = ""
+            try:
+                if file_path:
+                    body = pathlib.Path(file_path).read_text(encoding="utf-8", errors="replace")
+            except Exception:
+                body = ""
+            odds = format_world_cup_odds(title, due_date, body)
 
         text = f"☐ {title}"
         if due_time:
             text += f"\nTime: {due_time}"
+        if odds:
+            text += f"\nOdds: {odds}"
         if source:
             text += f"\nSource: {source}"
         markup = json.dumps({"inline_keyboard": [[
@@ -286,6 +407,7 @@ def main() -> int:
             "file_path": file_path,
             "status": "sent",
             "message_id": message_id,
+            "odds": odds,
         }
         sent += 1
         if sent >= send_limit:

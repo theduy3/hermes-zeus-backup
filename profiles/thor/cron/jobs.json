@@ -2,8 +2,8 @@
   "jobs": [
     {
       "id": "caabc02dabc9",
-      "name": "💧 Water - 7AM Vancouver/PDT time",
-      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '💧 500ml — 1/6'.",
+      "name": "\ud83d\udca7 Water - 7AM Vancouver/PDT time",
+      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 500ml \u2014 1/6'.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -20,15 +20,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 36
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:18.568357+00:00",
-      "next_run_at": "2026-06-18T07:00:00-07:00",
-      "last_run_at": "2026-06-17T07:01:14.010381-04:00",
+      "next_run_at": "2026-06-19T07:00:00-07:00",
+      "last_run_at": "2026-06-18T07:00:27.787325-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -44,8 +44,8 @@
     },
     {
       "id": "b76341d71354",
-      "name": "💧 Water - 10AM Vancouver/PDT time",
-      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '💧 Water check'.",
+      "name": "\ud83d\udca7 Water - 10AM Vancouver/PDT time",
+      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Water check'.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -62,15 +62,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:28.759162+00:00",
-      "next_run_at": "2026-06-18T10:00:00-07:00",
-      "last_run_at": "2026-06-17T10:01:14.696950-04:00",
+      "next_run_at": "2026-06-19T10:00:00-07:00",
+      "last_run_at": "2026-06-18T10:00:28.495327-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -86,8 +86,8 @@
     },
     {
       "id": "2e5b3af69398",
-      "name": "💧 Water - 1PM Vancouver/PDT time",
-      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '💧 Keep sipping'.",
+      "name": "\ud83d\udca7 Water - 1PM Vancouver/PDT time",
+      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Keep sipping'.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -104,15 +104,15 @@
       "schedule_display": "0 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 36
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:36.036225+00:00",
-      "next_run_at": "2026-06-18T13:00:00-07:00",
-      "last_run_at": "2026-06-17T13:01:15.339361-04:00",
+      "next_run_at": "2026-06-19T13:00:00-07:00",
+      "last_run_at": "2026-06-18T13:00:30.656668-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -128,8 +128,8 @@
     },
     {
       "id": "0dd08e4e07da",
-      "name": "💧 Water - 10PM Vancouver/PDT time",
-      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '💧 Last water'.",
+      "name": "\ud83d\udca7 Water - 10PM Vancouver/PDT time",
+      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Last water'.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -146,15 +146,15 @@
       "schedule_display": "0 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 37
+        "completed": 38
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:43.651359+00:00",
-      "next_run_at": "2026-06-17T22:00:00-07:00",
-      "last_run_at": "2026-06-16T22:01:02.610603-04:00",
+      "next_run_at": "2026-06-18T22:00:00-07:00",
+      "last_run_at": "2026-06-17T22:00:09.048581-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -170,7 +170,7 @@
     },
     {
       "id": "b7db2ca9de46",
-      "name": "🛁 Sitz Bath - 9AM Vancouver/PDT time",
+      "name": "\ud83d\udec1 Sitz Bath - 9AM Vancouver/PDT time",
       "prompt": "Send a Thor sitz bath reminder with a Telegram inline Done button. The script handles delivery directly and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -188,15 +188,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:43.159219+00:00",
-      "next_run_at": "2026-06-18T09:00:00-07:00",
-      "last_run_at": "2026-06-17T09:01:14.385679-04:00",
+      "next_run_at": "2026-06-19T09:00:00-07:00",
+      "last_run_at": "2026-06-18T09:00:28.338351-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -212,7 +212,7 @@
     },
     {
       "id": "7c74587c2e68",
-      "name": "🛁 Sitz Bath - 9PM Vancouver/PDT time",
+      "name": "\ud83d\udec1 Sitz Bath - 9PM Vancouver/PDT time",
       "prompt": "Send a Thor evening sitz bath reminder with a Telegram inline Done button. The script handles delivery directly and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -230,15 +230,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 36
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:02:50.382696+00:00",
-      "next_run_at": "2026-06-18T21:00:00-07:00",
-      "last_run_at": "2026-06-17T21:00:26.937410-07:00",
+      "next_run_at": "2026-06-19T21:00:00-07:00",
+      "last_run_at": "2026-06-18T21:00:13.130247-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -254,7 +254,7 @@
     },
     {
       "id": "2616b50dddac",
-      "name": "🧘 Meditation - 7:15AM Vancouver/PDT time",
+      "name": "\ud83e\uddd8 Meditation - 7:15AM Vancouver/PDT time",
       "prompt": "Send Thor morning meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -272,15 +272,15 @@
       "schedule_display": "15 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 36
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:06:21.288962+00:00",
-      "next_run_at": "2026-06-18T07:15:00-07:00",
-      "last_run_at": "2026-06-17T07:16:14.001605-04:00",
+      "next_run_at": "2026-06-19T07:15:00-07:00",
+      "last_run_at": "2026-06-18T07:15:27.708428-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -296,8 +296,8 @@
     },
     {
       "id": "9a296fe6c2aa",
-      "name": "📏 Weekly Measurements",
-      "prompt": "Sunday check-in. Ask theduy for his measurements and weekly metrics. Keep it brief:\n\nCurrent focus metrics:\n- Waist at navel (primary)\n- Hips at widest point\n- Chest at nipple line\n- Arms flexed at midpoint\n\nAlso ask for:\n- Weekly average weight\n- Sleep quality 1-5\n- Stress 1-10\n- Protein ≥ 150g: how many days this week\n- Workouts completed: X/3 gym, X/3 home\n\nCompare to previous week if you have context. Celebrate progress, flag declines neutrally. No judgment — data, not moralizing.",
+      "name": "\ud83d\udccf Weekly Measurements",
+      "prompt": "Sunday check-in. Ask theduy for his measurements and weekly metrics. Keep it brief:\n\nCurrent focus metrics:\n- Waist at navel (primary)\n- Hips at widest point\n- Chest at nipple line\n- Arms flexed at midpoint\n\nAlso ask for:\n- Weekly average weight\n- Sleep quality 1-5\n- Stress 1-10\n- Protein \u2265 150g: how many days this week\n- Workouts completed: X/3 gym, X/3 home\n\nCompare to previous week if you have context. Celebrate progress, flag declines neutrally. No judgment \u2014 data, not moralizing.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -338,8 +338,8 @@
     },
     {
       "id": "4ab656b26552",
-      "name": "🥤 Protein Drink - 2PM Vancouver/PDT time",
-      "prompt": "Remind theduy to have his protein drink. Keep it brief and encouraging. Rotate between messages like: \"🥤 Protein time — 50g to crush. Go!\", \"10AM protein check-in. Get those 50g in. 💪\", \"Protein shake o'clock. 50g toward your 150g target.\", \"Don't skip the protein window. 50g now. 🥤\"",
+      "name": "\ud83e\udd64 Protein Drink - 2PM Vancouver/PDT time",
+      "prompt": "Remind theduy to have his protein drink. Keep it brief and encouraging. Rotate between messages like: \"\ud83e\udd64 Protein time \u2014 50g to crush. Go!\", \"10AM protein check-in. Get those 50g in. \ud83d\udcaa\", \"Protein shake o'clock. 50g toward your 150g target.\", \"Don't skip the protein window. 50g now. \ud83e\udd64\"",
       "skills": [],
       "skill": null,
       "model": null,
@@ -356,15 +356,15 @@
       "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 36
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T16:54:07.561293+00:00",
-      "next_run_at": "2026-06-18T14:00:00-07:00",
-      "last_run_at": "2026-06-17T14:01:20.560327-07:00",
+      "next_run_at": "2026-06-19T14:00:00-07:00",
+      "last_run_at": "2026-06-18T14:00:30.821621-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -380,8 +380,8 @@
     },
     {
       "id": "2934304ac770",
-      "name": "💧 Water - 4PM Vancouver/PDT time",
-      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '💧 Afternoon sip'.",
+      "name": "\ud83d\udca7 Water - 4PM Vancouver/PDT time",
+      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Afternoon sip'.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -398,15 +398,15 @@
       "schedule_display": "0 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 28
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:09.360396+00:00",
-      "next_run_at": "2026-06-18T16:00:00-07:00",
-      "last_run_at": "2026-06-17T16:00:21.333151-07:00",
+      "next_run_at": "2026-06-19T16:00:00-07:00",
+      "last_run_at": "2026-06-18T16:00:31.220488-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -422,8 +422,8 @@
     },
     {
       "id": "eea7a86f64fe",
-      "name": "💧 Water - 7PM Vancouver/PDT time",
-      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '💧 Evening water'.",
+      "name": "\ud83d\udca7 Water - 7PM Vancouver/PDT time",
+      "prompt": "Remind theduy to drink water. Keep it ultra-brief: one short line only, max 6 words. Suggested format: '\ud83d\udca7 Evening water'.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -440,15 +440,15 @@
       "schedule_display": "0 19 * * *",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:10.364301+00:00",
-      "next_run_at": "2026-06-18T19:00:00-07:00",
-      "last_run_at": "2026-06-17T19:00:26.433796-07:00",
+      "next_run_at": "2026-06-19T19:00:00-07:00",
+      "last_run_at": "2026-06-18T19:00:32.131852-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -464,7 +464,7 @@
     },
     {
       "id": "3e512762661c",
-      "name": "🧘 Meditation - 10:15PM Vancouver/PDT time",
+      "name": "\ud83e\uddd8 Meditation - 10:15PM Vancouver/PDT time",
       "prompt": "Send Thor evening meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -482,15 +482,15 @@
       "schedule_display": "15 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:17:08.711093+00:00",
-      "next_run_at": "2026-06-17T22:15:00-07:00",
-      "last_run_at": "2026-06-16T22:16:02.560066-04:00",
+      "next_run_at": "2026-06-18T22:15:00-07:00",
+      "last_run_at": "2026-06-17T22:15:27.244622-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -506,7 +506,7 @@
     },
     {
       "id": "5d9328231c7d",
-      "name": "🏃 Exercise - 3PM Vancouver/PDT time",
+      "name": "\ud83c\udfc3 Exercise - 3PM Vancouver/PDT time",
       "prompt": "Send Thor daily 3PM exercise reminder with the YouTube exercise link. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -524,15 +524,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 20
+        "completed": 21
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T11:16:49.565000-07:00",
-      "next_run_at": "2026-06-18T15:00:00-07:00",
-      "last_run_at": "2026-06-17T15:00:01.057622-07:00",
+      "next_run_at": "2026-06-19T15:00:00-07:00",
+      "last_run_at": "2026-06-18T15:00:11.129227-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -549,7 +549,7 @@
     },
     {
       "id": "b20602062ff4",
-      "name": "🧘 Evening Stretch - 9PM Vancouver/PDT time",
+      "name": "\ud83e\uddd8 Evening Stretch - 9PM Vancouver/PDT time",
       "prompt": "Send Thor daily 9PM evening stretch reminder with the YouTube guide link. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -567,15 +567,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T19:44:23.439951-07:00",
-      "next_run_at": "2026-06-18T21:00:00-07:00",
-      "last_run_at": "2026-06-17T21:00:08.157038-07:00",
+      "next_run_at": "2026-06-19T21:00:00-07:00",
+      "last_run_at": "2026-06-18T21:00:32.492839-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -591,5 +591,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-17T21:02:29.046496-07:00"
+  "updated_at": "2026-06-18T21:00:32.493389-07:00"
 }
