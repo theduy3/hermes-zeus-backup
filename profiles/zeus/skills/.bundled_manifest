@@ -12,6 +12,7 @@ claude-design:c1b63b7651b66fd15d096e57728ec686
 codebase-inspection:29f67c87df868dd08e76c57b86c7a5c6
 codex:66a8aa156673b5dd6e82c4e62f04ba3a
 comfyui:d6f42584ff328d6aa6a4b2e8e678c030
+computer-use:c40a491ce9f5035bb9cdfc141d5f473e
 design-md:b40264457352831ab1d06f3ec671b532
 dogfood:ae6e92c2cd27c3da8a0587f089d19fe3
 evaluating-llms-harness:ac24cf5202db5b024b3079023797a0f6
@@ -31,11 +32,8 @@ huggingface-hub:da338c5152d72db030bb81d923d1c64d
 humanizer:6645b341862575f452e86139c5c71ce9
 imessage:f545da0f5cc64dd9ee1ffd2b7733a11b
 jupyter-live-kernel:352c43dc28428592abbc8c91cb5ce295
-kanban-orchestrator:335a645935c88361ef2a103dba1fba01
-kanban-worker:6fd207ac56286f7d347b85f9d9a35d68
 llama-cpp:0991055ce47146735f0ed02d7658a254
 llm-wiki:a07aaa8591eac310a33aeec868fd74c6
-macos-computer-use:fb1787b32be343b87078d2ae2618dbcf
 manim-video:2ad3d68c3eb5d2675c05138100d3e48b
 maps:6d94a271a5341dc94789a9c99eb2b1a8
 nano-pdf:6c643bd0cfb0548ff0ddaf367d4da6d1
@@ -45,6 +43,7 @@ ocr-and-documents:af5fba9fa8ef003951ff5fe5a0a04adf
 opencode:d2a166c7f2c74f6e47d548ed1290c458
 openhue:ce1dd061d7f49d4752a4c0711ad2666c
 p5js:5f09fa1cb8494c93bc2f5bcbd34a2ead
+petdex:472d8fe96aa175cc1678d3f52dcdc624
 plan:50c4df52eb6b0932649a444bc9984e0a
 polymarket:7644c886e028c229bc8c1f54114c3170
 popular-web-designs:b3fd685e8fbcf981755609ce98a4eea9
@@ -55,7 +54,7 @@ requesting-code-review:9944f54e8ba5c294b47ee93f3e8f239d
 research-paper-writing:a4a5a13107ff94894a4abdb39a5c7a8d
 segment-anything-model:7f1317da421fb8eada27aeacdbb21d30
 serving-llms-vllm:92d66ae1f1112924634fcdcff2f86bc7
-simplify-code:400de5f892617a4f1e82c8b799142272
+simplify-code:ce60afb0693d241e54dcb4eb73f98e4b
 sketch:f8833126112824f6a916c69630cfd042
 songsee:644dc0f267b6661a3df6c76ce80d7f1f
 songwriting-and-ai-music:52be403c894c7bd7d6fe70f7eeaf9460

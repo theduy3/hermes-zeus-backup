@@ -47,11 +47,20 @@ they run as a different user and get PermissionError. Shell redirection (`cat >
 
 See `references/vault-write-workaround.md` for the exact code template.
 
+### Pitfall: helper-script dependency recovery
+If `fetch_watchlist.py`, `fetch_earnings_reports.py`, or `fetch_lunar_date.py` fail because optional Python packages are missing, try installing the missing packages into the active Hermes venv before falling back to a skipped section:
+
+```bash
+python3 -m pip install yfinance lunardate
+```
+
+Do **not** use `--user` from inside the Hermes venv; user site-packages may be hidden and the install can fail. After installing, rerun only the failed helper scripts and continue assembly with the recovered outputs. If install or rerun still fails, include the skipped/unavailable note and complete the briefing.
+
 ### Pitfall: post-processing helper-script output
 When assembling the daily Markdown manually from helper outputs, sanitize embedded helper sections before writing:
-- `compile_tasks.py` appends a `---` separator and `**Summary**` block after `Later / No Date`; do **not** include that summary inside the daily file body. Use it only for the final confirmation/report.
+- `compile_tasks.py` appends a `---` separator and `**Summary**` block after `Later / No Date`; do **not** include that summary inside the daily file body. Use it only for the final confirmation/report. Strip this robustly: the separator may appear as either `\n---\n\n**Summary**` or `\n---\n**Summary**`, so use a regex such as `\n---\n\s*\*\*Summary\*\*:[\s\S]*?(?=\n---\n\n## Morning Brew|\Z)` after assembly if needed, then re-verify `**Summary**` is absent.
 - `fetch_weather.py` returns both `## Weather Forecast (7-Day)` and `## Moon Phase`; after splitting out the moon phase, trim any trailing `---` so the final daily file does not contain duplicate horizontal rules before `*Generated:*`.
-- Most helper outputs that already start with their own `## ...` heading (finance news, earnings, Morning Brew, weather) should have that first heading stripped before insertion under the canonical daily heading, but do not strip the stock watchlist because it starts directly with tables.
+- Most helper outputs that already start with their own `## ...` heading (finance news, earnings, Morning Brew, weather) should have that first heading stripped before insertion under the canonical daily heading, but do not strip the stock watchlist because it starts directly with tables. Strip by prefix/heading level, not only exact title: e.g. `fetch_finance_news.py` may output `## Finance News (Top Headlines)`, which must not remain as a nested duplicate under the canonical `## Finance News`.
 - In scheduled/headless runs, do output processing and file assembly with a terminal-launched Python script in `/tmp/`, then inspect the result with `read_file`; this keeps the workflow inside the cron-safe tool path and preserves the `/vault` write workaround.
 - After writing, verify the actual file by reading/counting sections: expected task counts should match the compiler summary, `**Summary**` should be absent from the file body, and `\n---\n\n---\n` should not appear.
 - When parsing `calculate_dates.py` output in a helper script, use multiline regex (`re.M`) for fields like `^Week`, `^Date`, and `^Victoria`; otherwise the daily header can end up with blank week/Victoria values even though the script output was correct.

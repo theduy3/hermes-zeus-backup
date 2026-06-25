@@ -10,13 +10,13 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 §
 Travel points as of 2026-05-20: Family Aeroplan 65,928; Porter VIPorter account 5590019622 74,936.
 §
-Investment context 2026-06-13: registered cash ~$92.7k (46.6%); NVDA ~$71.7k (36.0% total / 67.0% invested). Risks: cash drag, NVDA/AI mega-cap concentration, USD/CAD FX. No confirmed trades or withdrawal need. Next check-in: balances, 30–90 day cash needs, NVDA trim/cash-deploy rules.
+Investment context 2026-06-20: registered ~$200.1k CAD; cash ~$92.7k (46.3%); NVDA ~$73.6k (36.8%); GOOG/META/PLTR/FIG; FHSA ~$11.5k cash + 33 VFV.TO. Prioritize June cards + overdue tax/debt/admin before investing; set reserve; avoid adding AI/semi beta; stage deployment; decide NVDA trim/stop-add and gradual FHSA broad ETF vs liquidity.
 §
 Recurring income: biweekly on Thursday starting May 28, 2026, net payroll from Ongles Rivieres to CIBC chequing account is $2,747.50.
 §
 Recurring personal expenses: rent $2,000/mo; TD mortgage for apt #202 2900 Rue Édouard-Montpetit starts Jul 1 2026, withdrawn 1st monthly; check TD Chequing by 24th for ≥$2,000.
 §
+Travel context: America/Vancouver (PDT) since 2026-06-19; apply local-time wording/schedules until Duy changes it.
 §
 §
-§
-Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-06-17. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-06-22. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

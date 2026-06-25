@@ -196,6 +196,8 @@ When the user wants one actionable Telegram card per Obsidian task, read `/vault
 
 **Timed-task display requirement:** If a task has a specific time, the Telegram card must show it. Prefer a `due_time:` frontmatter field for sortable/parseable task metadata, and also keep the human-readable body line such as `Kickoff: 2026-06-17 10:00 PDT`. The card sender should extract time from `due_time`, `time`, `start_time`, `kickoff`, or body lines matching `Kickoff:`, `Start:`, `Due:`, or `Time:` and render a `Time: ...` line before `Source:`. If Duy replies to a task card saying the time is missing, patch both the source task and the drip script, then verify by importing/running the parser against that task.
 
+**Betting-odds display requirement for sports/game cards:** If a sports/event reminder card is expected to include betting odds (e.g., World Cup game cards), every card must show an `Odds:` line. The sender should fetch current odds when available and include moneyline/draw, spread, and over/under where the source provides them. If the source has no market, show an explicit unavailable line such as `Odds: No listed ESPN/DraftKings market yet` rather than silently omitting odds. If Duy replies that odds were missing, check the card registry/history for odds already captured at send time, patch the source Obsidian task with an `Odds:` body line when available, update the drip script so future cards always render odds/unavailable, and verify by running the odds formatter/parser against the affected task.
+
 Recommended filtering:
 - Include `status: pending` and `status: in_progress` tasks.
 - Exclude `completed`, `done`, `cancelled`, and `canceled`.
@@ -212,7 +214,7 @@ Recurring-task grace behavior:
 Recommended sender shape:
 - Script-only cron (`no_agent=True`) that sends at most one card per run.
 - Drip schedule example: `*/10 8-23 * * *` = every 10 minutes from 8AM through 11:50PM local scheduler time.
-- Maintain a registry keyed by stable task identity (`file_path` + title + `due_date`) so already-sent or done task cards are not resent across days. Do **not** include today's send date in the primary digest; date-based keys make overdue tasks reappear daily and can bypass prior Done history.
+- Maintain a registry keyed by stable task identity (`file_path` + title + `due_date`) so Done buttons keep working across repeated cards. Duy's preference: unfinished due/overdue and waiting/watch cards should be dripped again every day until marked Done. Suppress `sent` cards only within the same local day; suppress `done` cards permanently unless the source task is intentionally recreated/reset.
 - Done buttons should update the original Markdown frontmatter to `status: completed`, not just log completion elsewhere.
 
 ### Event reminder tasks

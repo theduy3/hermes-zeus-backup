@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/finance/logs/curator/20260615-104909",
-  "last_run_at": "2026-06-15T10:49:09.432632+00:00",
-  "last_run_duration_seconds": 357.928201,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nWhat I changed:\n\n- Created 6 class-level umbrella skills:\n  - `apple-platform-automation`\n  - `autonomous-coding-agents`\n  - `github-workflows`\n  - `creative-design-artifacts`\n  - `kanban-…\narchived 29 skill(s):\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • architecture-diagram — pruned (stale)\n  • claude-code — pruned (stale)\n  • claude-design — pruned (stale)\n  • codebase-inspection — pruned (stale)\n  • codex — pruned (stale)\n  • design-md — pruned (stale)\n  • excalidraw — pruned (stale)\n  • findmy — pruned (stale)\n  … and 19 more\nfull report: hermes curator status",
+  "last_report_path": "/home/hermes/.hermes/profiles/finance/logs/curator/20260622-111935",
+  "last_run_at": "2026-06-22T11:19:35.452592+00:00",
+  "last_run_duration_seconds": 1.281881,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 6
+  "run_count": 7
 }

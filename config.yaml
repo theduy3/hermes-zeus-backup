@@ -124,6 +124,7 @@ checkpoints:
   retention_days: 7
   delete_orphans: true
   min_interval_hours: 24
+context_file_max_chars: null
 file_read_max_chars: 100000
 tool_output:
   max_bytes: 50000
@@ -289,6 +290,7 @@ display:
   tui_agents_nudge: true
   bell_on_complete: false
   show_reasoning: false
+  memory_notifications: 'on'
   streaming: true
   timestamps: false
   final_response_markdown: strip
@@ -310,6 +312,7 @@ display:
   tool_progress_command: false
   tool_progress_overrides: {}
   tool_preview_length: 0
+  tool_progress_grouping: accumulate
   ephemeral_system_ttl: 0
   platforms:
     telegram:
@@ -439,6 +442,7 @@ curator:
   min_idle_hours: 2
   stale_after_days: 30
   archive_after_days: 90
+  consolidate: false
   prune_builtins: true
   backup:
     enabled: true
@@ -501,9 +505,10 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
+- stop/restart hermes gateway (kills running agents)
 - execute_code
 - delete in root path
-- stop/restart hermes gateway (kills running agents)
+- script execution via -e/-c flag
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false
@@ -561,6 +566,8 @@ model_catalog:
 network:
   force_ipv4: false
 gateway:
+  message_timestamps:
+    enabled: false
   strict: false
   media_delivery_allow_dirs: []
   trust_recent_files: true
@@ -609,7 +616,7 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
 paste_collapse_char_threshold: 2000
-_config_version: 29
+_config_version: 30
 session_reset:
   mode: both
   idle_minutes: 1440

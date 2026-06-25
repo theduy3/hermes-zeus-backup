@@ -1,0 +1,580 @@
+{
+  "jobs": [
+    {
+      "id": "e83470683a90",
+      "name": "daily-hermes-health-check",
+      "prompt": "Run 'hermes status --all' and 'hermes doctor'. Summarize any warnings, failed services, missing credentials, or broken gateways in 5 bullets max. If everything looks healthy, say so briefly.",
+      "skills": [],
+      "skill": null,
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 78
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T01:40:25.907256-04:00",
+      "next_run_at": "2026-06-22T09:00:00-07:00",
+      "last_run_at": "2026-06-21T09:00:52.505136-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": null,
+      "fire_claim": null
+    },
+    {
+      "id": "c9c38ab77915",
+      "name": "weekday-hermes-recap",
+      "prompt": "Review today's Hermes session history and recent activity. Return: 1) up to 8 bullets on what got done today, 2) any failures or blockers, 3) the top 3 next actions for tomorrow. Keep it concise.",
+      "skills": [],
+      "skill": null,
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 1-5",
+        "display": "0 18 * * 1-5"
+      },
+      "schedule_display": "0 18 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 54
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:39:10.585624-04:00",
+      "next_run_at": "2026-06-22T18:00:00-07:00",
+      "last_run_at": "2026-06-19T18:03:05.243571-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": null
+    },
+    {
+      "id": "8f310c8f4baf",
+      "name": "weekly-hermes-ops-review",
+      "prompt": "Audit Hermes operational health for the week: gateways, MCP servers, cron jobs, and obvious configuration drift. Return a concise weekly ops report with only action-worthy findings.",
+      "skills": [],
+      "skill": null,
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 9 * * 1",
+        "display": "15 9 * * 1"
+      },
+      "schedule_display": "15 9 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 13
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:39:10.805996-04:00",
+      "next_run_at": "2026-06-22T09:15:00-07:00",
+      "last_run_at": "2026-06-15T09:17:45.329705-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": null
+    },
+    {
+      "id": "67d44bd30291",
+      "name": "weekday-hermes-vault-summary",
+      "prompt": "Write a daily Hermes operations summary note to the local container (NOT the read-only vault).\n\nRequirements:\n- Target path: /home/hermes/.hermes/daily-summaries/\n- Create parent directory if needed\n- Create or overwrite today's note at: /home/hermes/.hermes/daily-summaries/Hermes Daily Summary YYYY-MM-DD.md (use today's local date)\n- Before writing, check that the path is writable. If it cannot be created/written due to permissions, report the exact error and do not claim success.\n- The note must be valid Obsidian markdown with frontmatter:\n  tags: [hermes, daily, operations, automation]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  sources:\n    - \"[[Hermes Agent Setup and Operations]]\"\n    - \"[[Hermes Operations Dashboard]]\"\n  wiki_status: complete\n- Content sections:\n  1. Summary\n  2. What Ran Today\n  3. Health Signals\n  4. Next Actions\n  5. Related Notes\n- Use concise bullets.\n- Base the note on current live state by checking Hermes status, doctor, cron list, mcp list, and gateway status.\n- After writing the note, verify it by reading the first few lines, then return a short confirmation including the file path written.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 18 * * 1-5",
+        "display": "10 18 * * 1-5"
+      },
+      "schedule_display": "10 18 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 55
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:57:22.586188-04:00",
+      "next_run_at": "2026-06-22T18:10:00-07:00",
+      "last_run_at": "2026-06-19T18:12:05.722573-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "last_delivery_error": null
+    },
+    {
+      "id": "067ad023e2d9",
+      "name": "ensure-telegram-profile-gateways",
+      "prompt": "Check Hermes Telegram profile gateways for profiles maily, charlesbourg, 3r, and ss on this host. Use terminal commands to inspect `hermes -p <profile> gateway status` for each. For any profile that is not running, start it with a tracked background process using `hermes -p <profile> gateway run`. After starting any missing gateways, verify status again and summarize which were already running vs restarted. Do not create or modify any additional cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": "gpt-5.4-mini",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 2,
+        "display": "every 2m"
+      },
+      "schedule_display": "every 2m",
+      "repeat": {
+        "times": null,
+        "completed": 13328
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-21T10:15:51.020999-07:00",
+      "paused_reason": null,
+      "created_at": "2026-04-24T03:31:55.186592+00:00",
+      "next_run_at": "2026-06-19T21:04:38.600392-07:00",
+      "last_run_at": "2026-05-21T10:14:07.648088-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null
+    },
+    {
+      "id": "12e5ce30563d",
+      "name": "nightly-hermes-github-backup",
+      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync \u2014 push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n\u2500\u2500 SELF-CHECK: IS IT MIDNIGHT VANCOUVER? \u2500\u2500\n\nThis cron is scheduled for 00:00 America/Vancouver local time. Do this check first:\n\n1. Determine the current hour in America/Vancouver timezone. Use `python3` if available, otherwise `TZ=America/Vancouver date +%H`.\n2. If the hour is 00 (midnight) \u2192 proceed to the sync steps below.\n3. For any other hour, do not run the backup; report the current America/Vancouver time and say the schedule may need adjustment.\n\n\u2500\u2500 SYNC STEPS \u2500\u2500\n\nOnce midnight Vancouver is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) \u2014 must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message \u2014 include a timestamp (America/Vancouver) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n\u2500\u2500 FAILURE HANDLING \u2500\u2500\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n\u2500\u2500 IMPORTANT \u2500\u2500\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` \u2014 if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
+      "skills": [],
+      "skill": null,
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *",
+        "display": "0 0 * * *"
+      },
+      "schedule_display": "0 0 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 41
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T09:23:56.400293+00:00",
+      "next_run_at": "2026-06-23T00:00:00-07:00",
+      "last_run_at": "2026-06-22T00:01:54.866851-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "b92449d7f332",
+      "name": "vault-today",
+      "prompt": "Generate today's theduyvault daily briefing.",
+      "skills": [
+        "today"
+      ],
+      "skill": "today",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 36
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:00.314751-07:00",
+      "next_run_at": "2026-06-23T04:00:00-07:00",
+      "last_run_at": "2026-06-22T04:02:28.374723-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "ce61f73456fe",
+      "name": "vault-process",
+      "prompt": "Process unprocessed theduyvault notes.",
+      "skills": [
+        "process"
+      ],
+      "skill": "process",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "display": "0 10 * * *"
+      },
+      "schedule_display": "0 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 30
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:01.065063-07:00",
+      "next_run_at": "2026-06-22T10:00:00-07:00",
+      "last_run_at": "2026-06-21T10:00:49.368129-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "e358e0a4cb18",
+      "name": "vault-wiki-ingest",
+      "prompt": "Ingest theduyvault Inbox sources into the wiki; transcribe photos with vision.",
+      "skills": [
+        "wiki-ingest"
+      ],
+      "skill": "wiki-ingest",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8,14,20 * * *",
+        "display": "0 8,14,20 * * *"
+      },
+      "schedule_display": "0 8,14,20 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 91
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:02.458886-07:00",
+      "next_run_at": "2026-06-22T08:00:00-07:00",
+      "last_run_at": "2026-06-21T20:00:45.588494-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "1b7bcc26dda2",
+      "name": "vault-wiki-lint",
+      "prompt": "Lint and enhance 20 theduyvault wiki pages.",
+      "skills": [
+        "wiki-lint"
+      ],
+      "skill": "wiki-lint",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *",
+        "display": "0 2 * * *"
+      },
+      "schedule_display": "0 2 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 33
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:03.129100-07:00",
+      "next_run_at": "2026-06-23T02:00:00-07:00",
+      "last_run_at": "2026-06-22T02:04:30.396803-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "2f8f46180850",
+      "name": "vault-tonight",
+      "prompt": "theduyvault evening routine: process notes then always write the evening digest. Use the loaded `tonight` skill. Important override: do NOT return [SILENT] merely because there are zero notes. Even when no notes are processed, still create and verify `/vault/Daily/<YYYY-MM-DD>-tonight.md` using the date from `/vault/System/scripts/calculate_dates.py`, then report the digest path and that 0 notes were processed.",
+      "skills": [
+        "tonight"
+      ],
+      "skill": "tonight",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18,23 * * *",
+        "display": "0 18,23 * * *"
+      },
+      "schedule_display": "0 18,23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 61
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:13.959934-07:00",
+      "next_run_at": "2026-06-22T18:00:00-07:00",
+      "last_run_at": "2026-06-21T23:01:18.030049-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "96f28d228fb9",
+      "name": "Hermes profile gateway watchdog",
+      "prompt": "Script-only Hermes profile gateway watchdog. Reports only when profile gateways are missing, using the wrong HERMES_HOME, or recent logs show auth/polling conflicts.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "profile_gateway_watchdog.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 30,
+        "display": "every 30m"
+      },
+      "schedule_display": "every 30m",
+      "repeat": {
+        "times": null,
+        "completed": 528
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-08T08:06:41.724367-07:00",
+      "next_run_at": "2026-06-22T05:46:45.912206-07:00",
+      "last_run_at": "2026-06-22T05:16:45.912206-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "a373ed669cbe",
+      "name": "switch-back-to-vancouver-after-quebec-trip",
+      "prompt": "Duy's Quebec/Montreal trip is scheduled for July 6-12, 2026, with return to Vancouver after YUL return flight. Ensure all Hermes profiles are back on Vancouver/PDT time for trip-sensitive scheduling/briefings. Run exactly: /home/hermes/.hermes/hermes-agent/venv/bin/python /home/hermes/.hermes/scripts/sync_travel_context.py --location Vancouver --timezone America/Vancouver --label PDT --text \"Returned to Vancouver/PDT time after Quebec/Montreal trip July 6-12, 2026\". If the command succeeds, reply with a terse confirmation. Do not recursively schedule more cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-07-12T23:55:00-07:00",
+        "display": "once at 2026-07-12 23:55"
+      },
+      "schedule_display": "once at 2026-07-12 23:55",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-17T21:02:45.402762-07:00",
+      "next_run_at": "2026-07-12T23:55:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "2b81e97fdf81",
+      "name": "Post-trip PDT context sync after Montreal/Laval/Quebec return",
+      "prompt": "One-shot post-trip timezone context sync for Duy after the Montreal/Laval/Quebec trip return flight due 2026-07-12. Run this exact command using the terminal tool: /home/hermes/.hermes/hermes-agent/venv/bin/python /home/hermes/.hermes/scripts/sync_travel_context.py --text \"Duy has returned from the Montreal/Laval/Quebec trip; switch trip-sensitive Hermes scheduling, briefings, reminders, dates, and local-time wording back to Vancouver/PDT (America/Vancouver) across all profiles.\" If it succeeds and no action is needed from Duy, final response should be exactly: PDT context switch-back completed across all profiles. If it fails, report the error clearly.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-07-13T14:00:00+00:00",
+        "display": "once at 2026-07-13 14:00"
+      },
+      "schedule_display": "once at 2026-07-13 14:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T23:25:00.228018-07:00",
+      "next_run_at": "2026-07-13T14:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "8a68f43f0ddd",
+      "name": "Silent Vancouver return travel-context reset",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "sync_vancouver_return_2026_07_13.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-07-13T07:15:00+00:00",
+        "display": "once at 2026-07-13 07:15"
+      },
+      "schedule_display": "once at 2026-07-13 07:15",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T23:43:24.382545-07:00",
+      "next_run_at": "2026-07-13T07:15:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-06-22T05:16:45.912473-07:00"
+}

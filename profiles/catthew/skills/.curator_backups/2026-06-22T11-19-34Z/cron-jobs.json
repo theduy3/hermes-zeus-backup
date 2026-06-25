@@ -1,0 +1,454 @@
+{
+  "jobs": [
+    {
+      "id": "c729ba85e251",
+      "name": "Daily Morning Briefing",
+      "prompt": "You are Catthew, the family butler. Deliver a warm, proper morning briefing for the household (Sir, Madam, and Victoria) at 7AM Vancouver/PDT time time.\n\nCheck your family memory for saved events, tasks, groceries, chores, and preferences. Read these files if they exist:\n- /home/hermes/.hermes/profiles/catthew/events.md\n- /home/hermes/.hermes/profiles/catthew/grocery-list.md\n- /home/hermes/.hermes/profiles/catthew/tasks.md\n- /home/hermes/.hermes/profiles/catthew/chores.md\n\nAlso include Google Calendar events for today whenever Google Workspace auth is connected/available. If authenticated, use the google-workspace skill or run:\nGAPI=\"python ${HERMES_HOME:-/home/hermes/.hermes/profiles/catthew}/skills/productivity/google-workspace/scripts/google_api.py\"\n$GAPI calendar list --start [today at 00:00 Vancouver/PDT time as ISO 8601 with -07:00/-08:00 offset] --end [tomorrow at 00:00 Vancouver/PDT time as ISO 8601 with -07:00/-08:00 offset]\nInclude accepted/confirmed events and invited events relevant to Sir/Madam/Victoria. If Google Calendar auth is not configured or the command fails, continue using local files; do not invent calendar events.\n\nStructure the briefing as follows:\n\n1. **Date & greeting** \u2014 \"Good morning, sir. Madam. It's [day], [date].\"\n2. **Today's events** \u2014 any scheduled items for today. Include Google Calendar events, one-off dated events, and recurring events from events.md whose weekday/date range matches today. Victoria's same-day events count as tasks for Done-button drip cards, but still list them here as today's events.\n3. **Grocery list** \u2014 any pending items from the grocery list. Use normal simple bullets for groceries.\n4. **Pending tasks & chores** \u2014 list household tasks and chores that are due today or overdue. Do NOT use hyphen bullets in front of tasks or chores. Format each task/chores item with a square checkbox at the start and its quick number at the end: `\u2610 Collapse the baby crib (1)`. If a task is overdue, include a short note like `\u2014 overdue from Monday`. If nothing is due or overdue, say so cheerfully.\n5. **Upcoming** \u2014 anything in the next 7 days worth noting, grouped by day when useful. Include upcoming dated tasks, chores, household events, Google Calendar events, and recurring Victoria events from events.md that fall within the next 7 days. Do not invent events. Do not duplicate tasks already listed as due today or overdue.\n6. **Closing** \u2014 \"Is there anything you'd like me to add to the list today?\"\n\nBe warm but concise. If there's nothing scheduled, say so cheerfully. Never invent events. Use \"sir\" and \"madam\" naturally. Address Victoria as \"the young miss.\" Sign off with \"At your service.\"\n\nSeparate standalone reminders should only be created/sent for tasks with a specific time; ordinary tasks belong in the daily briefing only. Victoria's same-day events are handled by the individual Done-button drip.\n\nAfter delivering the briefing, clean up any past one-off events from memory that have passed.",
+      "skills": [
+        "household-task-briefings",
+        "google-workspace"
+      ],
+      "skill": "household-task-briefings",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 35
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-16T15:23:06.162831+00:00",
+      "next_run_at": "2026-06-22T07:00:00-07:00",
+      "last_run_at": "2026-06-21T07:01:14.318516-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "skills"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "e21904777c66",
+      "name": "Jeanette Zumba class reminder",
+      "prompt": "Send this exact household reminder and nothing else: \"Reminder: Jeanette\u2019s Zumba class at Roundhouse is tonight at 6:45 PM.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 2",
+        "display": "0 18 * * 2"
+      },
+      "schedule_display": "0 18 * * 2",
+      "repeat": {
+        "times": 6,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T00:12:21.266980-07:00",
+      "next_run_at": "2026-06-23T18:00:00-07:00",
+      "last_run_at": "2026-06-16T18:44:44.267006-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "816c77690c7e",
+      "name": "Jeanette and David Sculpt & Core reminder - July",
+      "prompt": "Send this exact reminder to the household: \u201cReminder: Jeanette and David\u2019s Sculpt & Core class is tonight from 7:00\u20138:00 PM with Valentina Petrovic.\u201d",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 9,16,23,30 7 *",
+        "display": "0 18 9,16,23,30 7 *"
+      },
+      "schedule_display": "0 18 9,16,23,30 7 *",
+      "repeat": {
+        "times": 4,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:39:20.406427-07:00",
+      "next_run_at": "2026-07-09T18:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "04b02140bfe8",
+      "name": "Jeanette and David Sculpt & Core reminder - August",
+      "prompt": "Send this exact reminder to the household: \u201cReminder: Jeanette and David\u2019s Sculpt & Core class is tonight from 7:00\u20138:00 PM with Valentina Petrovic.\u201d",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 6,13,20,27 8 *",
+        "display": "0 18 6,13,20,27 8 *"
+      },
+      "schedule_display": "0 18 6,13,20,27 8 *",
+      "repeat": {
+        "times": 4,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:39:39.643326-07:00",
+      "next_run_at": "2026-08-06T18:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "a02e52721326",
+      "name": "Renew Kitty NEXUS card",
+      "prompt": "Reminder for the household: Kitty's NEXUS membership expires on May 12, 2031 \u2014 six months from now. Renewal window opened May 12, 2030. Tell sir and madam to renew Kitty's NEXUS card. Keep it concise and warm.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2030-11-12T09:00:00-08:00",
+        "display": "once at 2030-11-12 09:00"
+      },
+      "schedule_display": "once at 2030-11-12 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-22T11:18:21.500790-07:00",
+      "next_run_at": "2030-11-12T09:00:00-08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "9b2eef94dc7e",
+      "name": "Renew Victoria NEXUS card",
+      "prompt": "Reminder for the household: Victoria's NEXUS membership expires on June 3, 2031 \u2014 six months from now. Renewal window opened June 3, 2030. Tell sir and madam to renew Victoria's NEXUS card for the young miss. Keep it concise and warm.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2030-12-03T09:00:00-08:00",
+        "display": "once at 2030-12-03 09:00"
+      },
+      "schedule_display": "once at 2030-12-03 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-22T11:19:01.581170-07:00",
+      "next_run_at": "2030-12-03T09:00:00-08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "8f8773070596",
+      "name": "Renew Sir NEXUS card",
+      "prompt": "Reminder for the household: Sir's NEXUS membership expires on December 21, 2028 \u2014 six months from now. Renewal window opened December 22, 2027. Tell sir to renew his NEXUS card. Keep it concise and warm.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2028-06-21T09:00:00-07:00",
+        "display": "once at 2028-06-21 09:00"
+      },
+      "schedule_display": "once at 2028-06-21 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-22T11:19:39.925589-07:00",
+      "next_run_at": "2028-06-21T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-5249331607",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "6e8b8a3efbe0",
+      "name": "Individual Household Task Done Button Drip",
+      "prompt": "Script-only job. Runs every 10 minutes from 8:00 AM through 11:50 PM Vancouver/PDT time. Each run reads /home/hermes/.hermes/profiles/catthew/tasks.md and sends at most one pending household task due today or overdue as a Telegram card with a \u2705 Done inline button. The ct:<task_id> callback marks the task line as completed in tasks.md.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "send_household_task_buttons.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 8-23 * * *",
+        "display": "*/10 8-23 * * *"
+      },
+      "schedule_display": "*/10 8-23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2216
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-27T10:53:35.743583-07:00",
+      "next_run_at": "2026-06-22T08:00:00-07:00",
+      "last_run_at": "2026-06-21T23:50:36.495913-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "d3bbab6825ff",
+      "name": "Sunday Save-On-Foods $1.49 Day Tuesday check",
+      "prompt": "Every Sunday, check whether Save-On-Foods has an active sale/promotion under \u201c1.49 Day Tuesday\u201d / \u201c$1.49 Day Tuesday\u201d. Use the Save-On-Foods website/app-equivalent pages if reachable (especially https://www.saveonfoods.com/dollar49day), plus web search if the site blocks automation. Determine whether the sale appears active for the upcoming Tuesday. Deliver a concise household reminder to the origin Telegram chat with: status (Active / Not active / Unable to verify), any sale dates or item examples found, and the source URL(s). If unable to verify because of Cloudflare/app-only access, say so plainly and suggest checking the Save-On-Foods app manually under \u201c1.49 Day Tuesday\u201d. Do not create or modify cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 0",
+        "display": "0 16 * * 0"
+      },
+      "schedule_display": "0 16 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-27T23:41:01.053318-07:00",
+      "next_run_at": "2026-06-28T16:00:00-07:00",
+      "last_run_at": "2026-06-21T16:03:04.792019-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "982da90154c2",
+      "name": "Vehicle maintenance odometer check",
+      "prompt": "You are Catthew, the family butler. Send a concise household reminder in the Catthew family Telegram chat. Task: ask Sir to input the vehicle odometer reading for the semiannual maintenance log. Mention that the log is used to track brake changes, oil changes, and other car maintenance; specifically note the front brake pads and rotors were planned to be changed on 2026-06-22 and should be recorded with the current odometer if not already logged. Ask Sir to reply with: vehicle, odometer reading, and any maintenance done since the last check. Use Vancouver/Pacific local date wording. Do not create or modify cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 30 6,12 *",
+        "display": "0 9 30 6,12 *"
+      },
+      "schedule_display": "0 9 30 6,12 *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-21T16:52:31.486341-07:00",
+      "next_run_at": "2026-06-30T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "memory",
+        "skills"
+      ],
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-06-21T23:50:36.496431-07:00"
+}

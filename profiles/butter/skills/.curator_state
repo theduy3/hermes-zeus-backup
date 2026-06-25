@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/butter/logs/curator/20260615-104910",
-  "last_run_at": "2026-06-15T10:49:10.246897+00:00",
-  "last_run_duration_seconds": 411.790348,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nWhat changed:\n- Created 10 class-level umbrella skills:\n  - `github-workflows`\n  - `autonomous-coding-agents`\n  - `apple-ecosystem-automation`\n  - `software-development-methods`\n  - `visua…\narchived 61 skill(s):\n  • airtable — pruned (stale)\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • architecture-diagram — pruned (stale)\n  • arxiv — pruned (stale)\n  • ascii-art — pruned (stale)\n  • ascii-video — pruned (stale)\n  • audiocraft-audio-generation — pruned (stale)\n  • baoyu-infographic — pruned (stale)\n  • blogwatcher — pruned (stale)\n  … and 51 more\nfull report: hermes curator status",
+  "last_report_path": "/home/hermes/.hermes/profiles/butter/logs/curator/20260622-111934",
+  "last_run_at": "2026-06-22T11:19:34.693627+00:00",
+  "last_run_duration_seconds": 1.365849,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 6
+  "run_count": 7
 }

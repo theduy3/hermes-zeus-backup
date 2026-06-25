@@ -480,7 +480,8 @@ sessions:
   min_interval_hours: 24
   write_json_snapshots: false
 onboarding:
-  seen: {}
+  seen:
+    busy_input_prompt: true
 updates:
   pre_update_backup: false
   backup_keep: 5

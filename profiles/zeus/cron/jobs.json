@@ -22,15 +22,15 @@
       "schedule_display": "15 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 38
+        "completed": 44
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-06-19T06:15:00-07:00",
-      "last_run_at": "2026-06-18T06:16:09.748264-07:00",
+      "next_run_at": "2026-06-25T06:15:00-07:00",
+      "last_run_at": "2026-06-24T06:16:59.357711-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -47,7 +47,8 @@
         "terminal",
         "file"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "a4c95c76c429",
@@ -71,15 +72,15 @@
       "schedule_display": "0 23 * * 6",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T23:42:10.623487-07:00",
-      "next_run_at": "2026-06-20T23:00:00-07:00",
-      "last_run_at": "2026-06-13T23:04:04.073318-04:00",
+      "next_run_at": "2026-06-27T23:00:00-07:00",
+      "last_run_at": "2026-06-20T23:03:45.385615-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -97,7 +98,8 @@
         "skills"
       ],
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "b83af24484d0",
@@ -121,15 +123,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 43
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-06-19T21:00:00-07:00",
-      "last_run_at": "2026-06-18T21:02:08.397175-07:00",
+      "next_run_at": "2026-06-25T21:00:00-07:00",
+      "last_run_at": "2026-06-24T21:02:53.957135-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -148,12 +150,13 @@
       ],
       "workdir": null,
       "profile": null,
-      "updated_at": "2026-05-25T19:04:50.492107+00:00"
+      "updated_at": "2026-05-25T19:04:50.492107+00:00",
+      "fire_claim": null
     },
     {
       "id": "ab4de922b388",
       "name": "Individual Obsidian Task Done Button Drip",
-      "prompt": "Script-only job. Runs every 10 minutes daily starting at 8:00AM Vancouver/PDT time through 11:50PM. Each run reads /vault/Tasks/tasks/*.md directly and sends at most one pending/in_progress task due today or overdue as a Telegram card with a \u2705 Done inline button. Today's tasks are prioritized before overdue tasks. The script uses registry.json to skip already-sent/done tasks for the day. Button callback marks the matching Obsidian task file status as completed via the Telegram gateway zt:<task_id> handler.",
+      "prompt": "Script-only job. Runs every 10 minutes daily starting at 8:00AM Vancouver/PDT time through 11:50PM. Each run reads /vault/Tasks/tasks/*.md directly and sends at most one pending/in_progress task due today or overdue as a Telegram card with a \u2705 Done inline button. Today's tasks are prioritized before overdue tasks. Unfinished due/overdue and waiting/watch cards are dripped again every day until Duy marks Done. The script suppresses sent cards only within the same local day and suppresses done cards permanently. Button callback marks the matching Obsidian task file status as completed via the Telegram gateway zt:<task_id> handler.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -170,15 +173,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 2078
+        "completed": 2665
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-25T11:44:10.692069-07:00",
-      "next_run_at": "2026-06-18T22:00:00-07:00",
-      "last_run_at": "2026-06-18T21:50:24.955860-07:00",
+      "next_run_at": "2026-06-25T08:00:00-07:00",
+      "last_run_at": "2026-06-24T23:50:52.323552-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -194,8 +197,9 @@
         "file"
       ],
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-18T21:50:24.956473-07:00"
+  "updated_at": "2026-06-24T23:50:52.324071-07:00"
 }

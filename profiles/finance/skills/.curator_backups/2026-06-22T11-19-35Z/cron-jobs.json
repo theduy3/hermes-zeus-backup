@@ -1,0 +1,196 @@
+{
+  "jobs": [
+    {
+      "id": "2f7884a7f40c",
+      "name": "Close Avion 7760 reminder",
+      "prompt": "Reminder: Close Avion card ending 7760.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-01T09:00:00-07:00",
+        "display": "once at 2026-09-01 09:00"
+      },
+      "schedule_display": "once at 2026-09-01 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-19T23:07:16.437668-07:00",
+      "next_run_at": "2026-09-01T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "b9a938586a37",
+      "name": "weekly-finance-butter-sync",
+      "prompt": "Weekly Sunday 9:00 AM America/Vancouver finance sync with Butter for Duy.\n\nRole: Finance profile. Prepare a concise finance sync packet intended for exchange with Butter.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Summarize current known personal-finance state from memory/context: credit card payment obligations, card/churning items, points balances, investment context, recurring income/expense, tax/admin finance tasks.\n3. Identify questions/data needed from Butter for the 10:00 AM weekly personal finance report.\n4. Output a short \"Butter sync packet\" with sections: Bottom line, Changes/flags, Data needed from Butter, Inputs for 10AM report.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent balances or transactions.\n- Dates in America/Vancouver local time.\n- Flag urgent/overdue items with \u26a0.\n- This job must not create additional cron jobs.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 0",
+        "display": "0 16 * * 0"
+      },
+      "schedule_display": "0 16 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-18T09:27:00.520245-07:00",
+      "next_run_at": "2026-06-28T16:00:00-07:00",
+      "last_run_at": "2026-06-21T16:02:07.883068-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "907fec2cdf82",
+      "name": "weekly-personal-finance-report",
+      "prompt": "Weekly Sunday 10:00 AM America/Vancouver personal finance report for Duy.\n\nContext: The most recent output from job b9a938586a37 (weekly-finance-butter-sync) is injected before this prompt. Use it as the Butter/Finance sync input.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Generate Duy's weekly personal finance report covering:\n   - Bottom line: urgent actions, cash-flow flags, upcoming due dates.\n   - Credit cards/payments: list due dates, flag overdue/today/this week using \u26a0/\u25cf/\u25cb.\n   - Points/churning: current known balances, active cards, next churn/admin tasks, missing data.\n   - Investments: current known portfolio/watchlist context; fetch public market data only if tickers/watchlist are available in vault/context.\n   - Recurring cash flow: include biweekly payroll $2,747.50 and monthly rent $2,000 if still relevant.\n   - Taxes/admin: GST/QST/corporate/personal deadlines only if documented or generally date-based; label assumptions.\n   - Butter sync: what was received/missing from the 9AM sync.\n3. If enough data is available, include a 7-day action checklist.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent account balances, transactions, or due dates.\n- Round dollars to whole dollars; percentages to 1.0 decimal.\n- Dates in America/Vancouver local time.\n- This is informational, not investment/legal/tax advice.\n- This job must not create additional cron jobs.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": [
+        "b9a938586a37"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * 0",
+        "display": "0 17 * * 0"
+      },
+      "schedule_display": "0 17 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-18T09:27:10.709884-07:00",
+      "next_run_at": "2026-06-28T17:00:00-07:00",
+      "last_run_at": "2026-06-21T17:02:37.758201-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "cfcd56abe858",
+      "name": "monthly-td-chequing-mortgage-buffer-check",
+      "prompt": "Monthly reminder for Duy on the 24th, America/Vancouver local time.\n\nRemind Duy to check TD Chequing account balance for the mortgage withdrawal on apt #202, 2900 Rue \u00c9douard-Montpetit, Laval, QC H7T 2T5.\n\nMessage format:\n\u25cb Mortgage buffer check: verify TD Chequing has at least $2,000 for the TD Bank withdrawal on the 1st of next month.\nProperty: Apt #202, 2900 Rue \u00c9douard-Montpetit, Laval.\n\nStarting context: mortgage payments begin July 1, 2026. Do not claim account access; this is only a reminder.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 24 * *",
+        "display": "0 16 24 * *"
+      },
+      "schedule_display": "0 16 24 * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-18T09:34:17.056793-07:00",
+      "next_run_at": "2026-06-24T16:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory"
+      ],
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-06-21T17:02:37.758937-07:00"
+}

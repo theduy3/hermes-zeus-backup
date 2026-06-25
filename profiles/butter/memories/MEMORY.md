@@ -10,7 +10,7 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 §
 Travel points as of 2026-06-13: Family Aeroplan 65,928; Porter VIPorter acct 5590019622 74,936; Avios 74,467; Marriott Bonvoy 158,606; TD Rewards 39,540; CIBC Aventura 0; Amex MR 0; Scene+ 0. CIBC Aventura points cleared on user request.
 §
-Upcoming trip: Okanagan Camping Trip 2026 — Jun 22–24 Monk Park campsite #56; Jun 24–26 Kelowna wine tour, staying at DoubleTree by Hilton West Kelowna.
+Upcoming trip: Okanagan Camping + Kelowna 2026 — Jun 22–24 Monk Park campsite #56; Jun 24–26 DoubleTree West Kelowna. Jun 24: Mission Hill, Quails' Gate, Crown & Thieves, Wings Korea game. Jun 25 map route https://maps.app.goo.gl/WEfEdcH9cHRt6L5r9: CedarCreek, Azhadi, Arrowleaf picnic, Ex Nihilo, dinner Pane Vino.
 §
 Hotels.ca reward night value: CA$254.67.
 §
@@ -23,4 +23,7 @@ Marriott Bonvoy free night certificates: 2 nights worth up to 35,000 points each
 §
 §
 §
-Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-06-17. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-06-22. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

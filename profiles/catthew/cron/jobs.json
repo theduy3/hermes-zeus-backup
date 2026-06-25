@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 32
+        "completed": 38
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-06-19T07:00:00-07:00",
-      "last_run_at": "2026-06-18T07:00:55.200852-07:00",
+      "next_run_at": "2026-06-25T07:00:00-07:00",
+      "last_run_at": "2026-06-24T07:01:37.550035-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -47,7 +47,8 @@
         "file",
         "skills"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "e21904777c66",
@@ -69,15 +70,15 @@
       "schedule_display": "0 18 * * 2",
       "repeat": {
         "times": 6,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T00:12:21.266980-07:00",
-      "next_run_at": "2026-06-23T18:00:00-07:00",
-      "last_run_at": "2026-06-16T18:44:44.267006-04:00",
+      "next_run_at": "2026-06-30T18:00:00-07:00",
+      "last_run_at": "2026-06-23T18:00:52.992704-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -90,7 +91,8 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "816c77690c7e",
@@ -327,15 +329,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 1917
+        "completed": 2504
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-06-18T22:00:00-07:00",
-      "last_run_at": "2026-06-18T21:50:44.974131-07:00",
+      "next_run_at": "2026-06-25T08:00:00-07:00",
+      "last_run_at": "2026-06-24T23:50:59.803321-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -351,7 +353,8 @@
         "file"
       ],
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "d3bbab6825ff",
@@ -373,15 +376,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T23:41:01.053318-07:00",
-      "next_run_at": "2026-06-21T16:00:00-07:00",
-      "last_run_at": "2026-06-14T16:01:57.747140-04:00",
+      "next_run_at": "2026-06-28T16:00:00-07:00",
+      "last_run_at": "2026-06-21T16:03:04.792019-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -397,8 +400,56 @@
         "terminal"
       ],
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "982da90154c2",
+      "name": "Vehicle maintenance odometer check",
+      "prompt": "You are Catthew, the family butler. Send a concise household reminder in the Catthew family Telegram chat for the semiannual vehicle maintenance log.\n\nKnown latest log entry:\n- Date: 2026-06-22 Vancouver/PDT\n- Odometer: 131,430 km\n- Rear brakes: 65% remaining\n- Front brakes: 100% as of 2026-06-22\n- Front brake pads + rotors: completed/at 100% as of 2026-06-22\n- Oil change sticker: next oil change due at 138,830 km\n\nTask: ask Sir to reply with the current vehicle, odometer reading, brake status, whether any oil change has been done, and any maintenance done since the last check. Mention the latest known odometer, brake status, and next oil change due mileage above so Sir can confirm or update them. Use Vancouver/PDT local date wording. Do not create or modify cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 30 6,12 *",
+        "display": "0 9 30 6,12 *"
+      },
+      "schedule_display": "0 9 30 6,12 *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-21T16:52:31.486341-07:00",
+      "next_run_at": "2026-06-30T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "memory",
+        "skills"
+      ],
+      "workdir": null
     }
   ],
-  "updated_at": "2026-06-18T21:50:44.974829-07:00"
+  "updated_at": "2026-06-24T23:50:59.805558-07:00"
 }

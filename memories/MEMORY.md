@@ -20,4 +20,6 @@ Paperclip on VPS 147.93.116.94 runs in Docker, bound localhost:3100 in container
 §
 §
 §
-Active travel context: Vancouver/PDT. Quebec/Montreal trip Jul 6-12 2026 stays Pacific for Hermes scheduling; switch-back check cron a373ed669cbe on Jul 12 23:55 PDT.
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-06-22. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

@@ -153,9 +153,11 @@ def format_world_cup_odds(title: str, due_date: str, body: str = "") -> str:
     """Fetch pre-game odds from ESPN/DraftKings for World Cup follow cards.
 
     Falls back to an `Odds:` line in the task note when ESPN has no market.
-    Returns an empty string on network/API failure so the drip job never blocks.
+    For World Cup cards, return an explicit unavailable message instead of
+    silently omitting odds, so every game card has an Odds line.
     """
     manual = note_field_from_body(body, "Odds")
+    unavailable = "No listed ESPN/DraftKings market yet"
     teams = split_world_cup_title(title)
     if not teams or not due_date:
         return manual
@@ -163,7 +165,7 @@ def format_world_cup_odds(title: str, due_date: str, body: str = "") -> str:
     try:
         base = date.fromisoformat(due_date[:10])
     except ValueError:
-        return manual
+        return manual or unavailable
     candidates = [base, base + timedelta(days=1), base - timedelta(days=1)]
     try:
         for day in candidates:
@@ -178,7 +180,7 @@ def format_world_cup_odds(title: str, due_date: str, body: str = "") -> str:
                 odds_list = comp.get("odds") or []
                 odds = next((o for o in odds_list if isinstance(o, dict)), None)
                 if not odds:
-                    return manual
+                    return manual or unavailable
                 sides: dict[str, str] = {}
                 for c in competitors:
                     team = c.get("team") or {}
@@ -209,10 +211,10 @@ def format_world_cup_odds(title: str, due_date: str, body: str = "") -> str:
                     parts.append(f"O/U {over_line or 'O n/a'} ({over_odds or 'n/a'}) / {under_line or 'U n/a'} ({under_odds or 'n/a'})")
                 if parts:
                     return f"{provider}: " + "; ".join(parts)
-                return manual
+                return manual or unavailable
     except Exception:
-        return manual
-    return manual
+        return manual or unavailable
+    return manual or unavailable
 
 
 def add_months(d: date, months: int) -> date:
@@ -339,10 +341,9 @@ def main() -> int:
     except ValueError:
         send_limit = 1
 
-    # Do not re-send the same task every day. Older versions keyed cards by
-    # date+title+path, so overdue tasks could get a fresh card each morning.
-    # Treat any existing sent/done card for the same source file as already
-    # handled until the source file's due_date changes or the task is edited.
+    # Re-drip unfinished cards daily until Duy taps Done.
+    # A sent-but-not-done card should be suppressed only for the current day;
+    # tomorrow it becomes eligible again. A done card remains suppressed.
     handled_by_file: dict[str, list[dict]] = {}
     for entry in registry.values():
         if isinstance(entry, dict):
@@ -362,11 +363,16 @@ def main() -> int:
         prior_entries = handled_by_file.get(file_path, [])
         if any(e.get("status") == "done" for e in prior_entries):
             continue
-        if any(e.get("status") == "sent" and (not e.get("due_date") or e.get("due_date") == due_date) for e in prior_entries):
+        if any(
+            e.get("status") == "sent"
+            and (not e.get("due_date") or e.get("due_date") == due_date)
+            and e.get("date") == date_key
+            for e in prior_entries
+        ):
             continue
         digest = hashlib.sha1(f"{title}\n{file_path}\n{due_date}".encode("utf-8")).hexdigest()[:16]
         existing = registry.get(digest, {})
-        if existing.get("message_id") and existing.get("status") != "done":
+        if existing.get("message_id") and existing.get("status") != "done" and existing.get("date") == date_key:
             continue
         if existing.get("status") == "done":
             continue

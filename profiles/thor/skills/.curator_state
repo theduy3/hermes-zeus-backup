@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260615-114911",
-  "last_run_at": "2026-06-15T11:49:11.267184+00:00",
-  "last_run_duration_seconds": 333.6291,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nWhat changed:\n\n- Created 7 new class-level umbrella skills:\n  - `apple-ecosystem`\n  - `ai-coding-agents`\n  - `kanban-workflows`\n  - `creative-html-artifacts`\n  - `media-content-tools`\n  - …\narchived 17 skill(s):\n  • codebase-inspection → github-repo-management\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • ascii-art — pruned (stale)\n  • blogwatcher — pruned (stale)\n  • claude-code — pruned (stale)\n  • claude-design — pruned (stale)\n  • codex — pruned (stale)\n  • findmy — pruned (stale)\n  • gif-search — pruned (stale)\n  … and 7 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin github-repo-management",
+  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260622-121935",
+  "last_run_at": "2026-06-22T12:19:35.435857+00:00",
+  "last_run_duration_seconds": 1.621866,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 6
+  "run_count": 7
 }

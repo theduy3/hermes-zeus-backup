@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/catthew/logs/curator/20260615-104912",
-  "last_run_at": "2026-06-15T10:49:12.126849+00:00",
-  "last_run_duration_seconds": 458.302791,
-  "last_run_summary": "auto: no changes; llm: Completed an umbrella-building consolidation pass.\n\nSummary:\n- Created 7 class-level umbrella skills:\n  - `apple-ecosystem`\n  - `github-workflows`\n  - `coding-agent-delegation`\n  - `kanban-workflows`\n  - `creative-browser-artifacts`\n  - `au…\narchived 34 skill(s):\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • architecture-diagram — pruned (stale)\n  • audiocraft-audio-generation — pruned (stale)\n  • claude-code — pruned (stale)\n  • claude-design — pruned (stale)\n  • codebase-inspection — pruned (stale)\n  • codex — pruned (stale)\n  • design-md — pruned (stale)\n  • evaluating-llms-harness — pruned (stale)\n  … and 24 more\nfull report: hermes curator status",
+  "last_report_path": "/home/hermes/.hermes/profiles/catthew/logs/curator/20260622-111934",
+  "last_run_at": "2026-06-22T11:19:34.752495+00:00",
+  "last_run_duration_seconds": 1.281915,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 6
+  "run_count": 7
 }

@@ -154,7 +154,11 @@ matches before summarizing.
 ### Verify infrastructure edits by searching exact new artifacts
 After updating `System/wiki-index.md`, `System/wiki-log.md`, or MOCs, verify with an exact search for the new page/source title, not just by trusting a write succeeded. When patching index rows, do not assume the row's tag/type text from memory; first inspect the actual neighboring row or use an exact old_string from the current file. If the exact artifact is missing after a broad rewrite, patch it in with a small targeted replacement and verify again.
 
+When inserting a new index row by replacing a neighboring row, preserve the neighboring row verbatim in `new_string`; otherwise the patch can silently delete or mutate an unrelated page row while adding the new one. Immediately re-read a small window around the insertion and search for both the newly inserted row and the preserved neighbor. If the neighbor disappeared or changed, repair it before finalizing.
+
 For file-presence checks, remember that `search_files(target="files")` uses glob-style filename matching, not regex alternation. A pattern like `a.md|b.md` will not verify multiple files. Use separate exact file probes, a simple wildcard that actually matches, or a narrow read-only `ls -la <file1> <file2> ...` verification when confirming source archives and preserved Inbox originals.
+
+Before adding a wikilink to a related page that was inferred from source content, exact-search `Notes/` for that page title. If no page exists and the source does not warrant creating one now, mention the entity in plain text instead of creating a dangling wikilink just to satisfy outbound-link count.
 
 ### Preserve exact captured URLs when normalizing source frontmatter
 When converting clipped source frontmatter to normalized `Sources/` frontmatter, copy the `source:` URL exactly from the Inbox read, especially long `fbclid`/tracking URLs. Do not retype or abbreviate from memory: one-character drift silently changes provenance. After patching the source archive frontmatter, re-read the first 10–20 lines of the archive and compare the URL/title against the original source metadata before moving the Inbox original out of `Inbox/`.

@@ -185,14 +185,14 @@
     "archived_at": null,
     "created_at": "2026-05-18T07:02:53.253169+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-18T22:10:28.509804+00:00",
-    "last_used_at": "2026-06-18T22:33:05.132557+00:00",
-    "last_viewed_at": "2026-06-18T22:33:05.128524+00:00",
-    "patch_count": 14,
+    "last_patched_at": "2026-06-20T16:45:56.865500+00:00",
+    "last_used_at": "2026-06-21T06:00:34.287544+00:00",
+    "last_viewed_at": "2026-06-20T06:22:29.094735+00:00",
+    "patch_count": 15,
     "pinned": false,
     "state": "active",
-    "use_count": 33,
-    "view_count": 28
+    "use_count": 36,
+    "view_count": 30
   },
   "design-md": {
     "archived_at": null,
@@ -394,13 +394,13 @@
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-13T04:51:24.983038+00:00",
-    "last_used_at": "2026-06-15T23:17:56.087733+00:00",
-    "last_viewed_at": "2026-06-15T23:17:56.084141+00:00",
+    "last_used_at": "2026-06-20T06:24:47.461919+00:00",
+    "last_viewed_at": "2026-06-20T06:24:47.457884+00:00",
     "patch_count": 4,
     "pinned": false,
-    "state": "stale",
-    "use_count": 98,
-    "view_count": 98
+    "state": "active",
+    "use_count": 99,
+    "view_count": 99
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -666,14 +666,14 @@
     "archived_at": null,
     "created_at": "2026-05-14T14:00:47.817779+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-17T14:47:19.455849+00:00",
-    "last_used_at": "2026-06-19T04:00:24.969010+00:00",
-    "last_viewed_at": "2026-06-17T14:35:56.909384+00:00",
-    "patch_count": 24,
+    "last_patched_at": "2026-06-20T16:45:51.348636+00:00",
+    "last_used_at": "2026-06-25T04:00:52.160840+00:00",
+    "last_viewed_at": "2026-06-22T16:12:43.108055+00:00",
+    "patch_count": 26,
     "pinned": false,
     "state": "active",
-    "use_count": 108,
-    "view_count": 34
+    "use_count": 127,
+    "view_count": 39
   },
   "ocr-and-documents": {
     "archived_at": null,

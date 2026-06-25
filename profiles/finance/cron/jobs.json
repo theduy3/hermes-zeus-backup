@@ -65,16 +65,16 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-18T09:27:00.520245-07:00",
-      "next_run_at": "2026-06-21T16:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-06-28T16:00:00-07:00",
+      "last_run_at": "2026-06-21T16:02:07.883068-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -91,12 +91,13 @@
         "terminal",
         "file"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "907fec2cdf82",
       "name": "weekly-personal-finance-report",
-      "prompt": "Weekly Sunday 10:00 AM America/Vancouver personal finance report for Duy.\n\nContext: The most recent output from job b9a938586a37 (weekly-finance-butter-sync) is injected before this prompt. Use it as the Butter/Finance sync input.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Generate Duy's weekly personal finance report covering:\n   - Bottom line: urgent actions, cash-flow flags, upcoming due dates.\n   - Credit cards/payments: list due dates, flag overdue/today/this week using \u26a0/\u25cf/\u25cb.\n   - Points/churning: current known balances, active cards, next churn/admin tasks, missing data.\n   - Investments: current known portfolio/watchlist context; fetch public market data only if tickers/watchlist are available in vault/context.\n   - Recurring cash flow: include biweekly payroll $2,747.50 and monthly rent $2,000 if still relevant.\n   - Taxes/admin: GST/QST/corporate/personal deadlines only if documented or generally date-based; label assumptions.\n   - Butter sync: what was received/missing from the 9AM sync.\n3. If enough data is available, include a 7-day action checklist.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent account balances, transactions, or due dates.\n- Round dollars to whole dollars; percentages to 1.0 decimal.\n- Dates in America/Vancouver local time.\n- This is informational, not investment/legal/tax advice.\n- This job must not create additional cron jobs.",
+      "prompt": "Weekly Sunday 10:00 AM America/Vancouver personal finance report for Duy.\n\nContext: The most recent output from job b9a938586a37 (weekly-finance-butter-sync) is injected before this prompt. Use it as the Butter/Finance sync input.\n\nImportant scope rule: Do NOT generate ticker information, watchlist movers, stock prices, market data, or public-market summaries. Charles already has a daily report for ticker/market coverage. For investments, only summarize static portfolio context from memory/Obsidian if relevant, and point to Charles daily report for ticker details.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Generate Duy's weekly personal finance report covering:\n   - Bottom line: urgent actions, cash-flow flags, upcoming due dates.\n   - Credit cards/payments: list due dates, flag overdue/today/this week using \u26a0/\u25cf/\u25cb.\n   - Points/churning: current known balances, active cards, next churn/admin tasks, missing data.\n   - Investments: static allocation/cash-flow context only if documented; no tickers, no prices, no watchlist, no market-data fetching.\n   - Recurring cash flow: include biweekly payroll $2,747.50 and monthly rent $2,000 if still relevant.\n   - Taxes/admin: GST/QST/corporate/personal deadlines only if documented or generally date-based; label assumptions.\n   - Butter sync: what was received/missing from the 9AM sync.\n3. If enough data is available, include a 7-day action checklist.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent account balances, transactions, or due dates.\n- Round dollars to whole dollars; percentages to 1.0 decimal.\n- Dates in America/Vancouver local time.\n- This is informational, not investment/legal/tax advice.\n- This job must not create additional cron jobs.",
       "skills": [
         "obsidian"
       ],
@@ -117,16 +118,16 @@
       "schedule_display": "0 17 * * 0",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-18T09:27:10.709884-07:00",
-      "next_run_at": "2026-06-21T17:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-06-28T17:00:00-07:00",
+      "last_run_at": "2026-06-21T17:02:37.758201-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -137,13 +138,13 @@
         "thread_id": null
       },
       "enabled_toolsets": [
-        "web",
         "memory",
         "skills",
         "terminal",
         "file"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "cfcd56abe858",
@@ -165,16 +166,16 @@
       "schedule_display": "0 16 24 * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-18T09:34:17.056793-07:00",
-      "next_run_at": "2026-06-24T16:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-07-24T16:00:00-07:00",
+      "last_run_at": "2026-06-24T16:00:54.468239-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -187,8 +188,9 @@
       "enabled_toolsets": [
         "memory"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-18T09:34:17.057633-07:00"
+  "updated_at": "2026-06-24T16:00:54.470680-07:00"
 }

@@ -1,5 +1,8 @@
 # Household Tasks
 
+## Mon, Jun 22
+- [ ] Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.
+
 ## Wed, May 27
 - [x] Finish the gift wrapping
 - [x] Madam beauty session at Mary’s at 3:15 PM

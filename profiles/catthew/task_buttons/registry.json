@@ -368,5 +368,79 @@
     "kind": "event",
     "status": "sent",
     "message_id": 568
+  },
+  "5635557b9f2203cc": {
+    "id": "5635557b9f2203cc",
+    "date": "2026-06-20",
+    "title": "Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-06-20",
+    "line": 7,
+    "kind": "event",
+    "status": "deleted",
+    "message_id": 573,
+    "deleted_at": "2026-06-20T16:44:57.351493+00:00",
+    "deleted_by": "8446251233"
+  },
+  "ffa866eb57821cc5": {
+    "id": "ffa866eb57821cc5",
+    "date": "2026-06-22",
+    "title": "Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.",
+    "text": "Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.",
+    "source": "Household task",
+    "due_date": "2026-06-22",
+    "line": 4,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 580
+  },
+  "2f031fef3d350808": {
+    "id": "2f031fef3d350808",
+    "date": "2026-06-23",
+    "title": "Victoria: Playgym every Tuesday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Tuesday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-06-23",
+    "line": 4,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 592
+  },
+  "7d8be415606dedc1": {
+    "id": "7d8be415606dedc1",
+    "date": "2026-06-23",
+    "title": "Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.",
+    "text": "Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.",
+    "source": "Household task overdue 2026-06-22",
+    "due_date": "2026-06-22",
+    "line": 4,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 593
+  },
+  "557bc3f9ed40ad46": {
+    "id": "557bc3f9ed40ad46",
+    "date": "2026-06-24",
+    "title": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "text": "Victoria: Playgym every Wednesday, 12:30 PM–2:30 PM, Roundhouse Community Centre, Parent and Tot Gym, from 2026-04-07 through 2026-06-27",
+    "source": "Household event today",
+    "due_date": "2026-06-24",
+    "line": 5,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 596
+  },
+  "0f46b9a4b57e7e67": {
+    "id": "0f46b9a4b57e7e67",
+    "date": "2026-06-24",
+    "title": "Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.",
+    "text": "Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.",
+    "source": "Household task overdue 2026-06-22",
+    "due_date": "2026-06-22",
+    "line": 4,
+    "kind": "task",
+    "status": "sent",
+    "message_id": 597
   }
 }

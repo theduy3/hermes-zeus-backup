@@ -29,9 +29,14 @@ prompts, no questions.
 - **Skip** the interactive mini wiki-lint pass (the canonical skill already skips it in
   headless mode); the dedicated `wiki-lint` job covers enhancement.
 - Conventions: `/vault/CLAUDE.md`. Use terminal + file tools.
+- For queued Markdown captures that become wiki pages, follow
+  `references/idempotent-wiki-filing-and-digest.md`: write/verify the `Notes/` page,
+  update MOCs/index/log idempotently, remove the source only after readback, recheck
+  the Inbox queue, and make `notes_processed` reflect the verified current-run count.
 
 ## Headless robustness notes
 - Detailed checklist: see `references/robust-headless-processing.md`.
+- For non-trivial multi-file promotions during the evening run, use the deterministic helper pattern in `references/one-off-helper-pattern.md`: idempotent writes, compact JSON summary, ordinary-tool verification, then remove the temporary helper.
 - Treat the output of `find_today_notes.py` as a work queue, not proof that the source still exists. In scheduled runs another process may have already filed a note between discovery and digest generation; before creating duplicates, verify the source path and, if it is gone or empty, search the vault for distinctive title/source URL/content to identify an existing filed page and summarize that page in the digest instead of creating a duplicate.
 - Use `calculate_dates.py` as the source of truth for the digest date/day. The server clock may be UTC while the vault scripts use America/Vancouver; do not name the digest from `date` output or from the `date` field in `find_today_notes.py` if it disagrees with `calculate_dates.py`.
 - After filing notes, rerun `find_today_notes.py --json --inbox` and verify the queue is empty. This catches root originals that were copied into `Notes/` but not removed.

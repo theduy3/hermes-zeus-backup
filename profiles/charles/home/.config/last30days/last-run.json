@@ -1,9 +1,9 @@
 {
-  "topic": "Rocket Lab",
-  "timestamp": "2026-06-09T04:12:57.330803+00:00",
+  "topic": "psix",
+  "timestamp": "2026-06-22T19:03:29.730618+00:00",
   "sources": {
-    "hackernews": 6,
-    "reddit": 13
+    "hackernews": 0,
+    "reddit": 7
   },
-  "total": 19
+  "total": 7
 }

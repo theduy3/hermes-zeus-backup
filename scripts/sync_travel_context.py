@@ -235,7 +235,12 @@ When Duy tells this profile his travel destination, current location, arrival, o
 
 This updates timezone, travel context memory, and timezone-sensitive cron schedules for default plus all named profiles. After it succeeds, reply tersely with the destination/timezone and say all profiles were synced. Do not update only this profile.
 """
-    path.write_text(text.rstrip() + block, encoding="utf-8")
+    try:
+        path.write_text(text.rstrip() + block, encoding="utf-8")
+    except PermissionError:
+        # Some profile SOUL.md files are mounted/owned by another UID. Do not let
+        # a non-writable instruction file block timezone/config/memory/cron sync.
+        return False
     return True
 
 

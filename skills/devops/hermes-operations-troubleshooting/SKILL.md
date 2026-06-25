@@ -151,7 +151,9 @@ When auditing Hermes operational health for gateways, MCP servers, cron jobs, an
 4. Check multi-profile gateway drift explicitly: each profile gateway process should have `HERMES_HOME=~/.hermes/profiles/<profile>`, each profile should have its own `.env` and `config.yaml`, and token comparisons must use redacted fingerprints only.
 5. Treat `Telegram bot token already in use (PID X)` carefully: inspect `/proc/<pid>/stat`; `STAT Z` indicates a zombie/stale conflict that usually requires reaping/restarting the supervisor/container rather than assuming a live duplicate gateway.
 6. For repeated `Api_Server Port 8642 already in use`, identify which process owns the listener and recommend either disabling `api_server` on non-default profiles or assigning unique API server ports.
-7. Report only action-worthy findings: affected component/profile/job, exact symptom, and next action. Omit healthy inventory unless it clarifies scope.
+7. For MCP servers listed as enabled, test them directly with `hermes -p <profile> mcp test <server>` (or `hermes mcp test <server>` for default). `mcp list` proves configuration only; `mcp test` proves the server can spawn/connect and expose tools.
+8. Audit recent cron output files, not only `last_status`. A job can show `Last run: ok` while its delivered/report body says the intended operation did not happen (for example a backup job that exits cleanly after reporting a missing credential). For high-value jobs, read the latest output under `~/.hermes[/profiles/<profile>]/cron/output/<job_id>/` and look for explicit failure text such as `did not run`, `FAIL:`, `missing`, `No files were`, or `Action:`.
+9. Report only action-worthy findings: affected component/profile/job, exact symptom, and next action. Omit healthy inventory unless it clarifies scope.
 
 See `references/weekly-ops-audit.md` for a compact runbook with commands, log patterns, and reporting guidance.
 

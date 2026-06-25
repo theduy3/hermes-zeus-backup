@@ -71,3 +71,11 @@ Thumbs.db
 *.bak.*
 *.bak-*
 *.after-sync
+
+# Additional runtime/noisy state exclusions
+**/cron/output/
+
+# Log exclusions at any profile depth
+**/logs/
+**/.npm/_logs/
+*.log

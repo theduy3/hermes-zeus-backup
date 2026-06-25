@@ -23,4 +23,11 @@ Active travel: timezone America/Toronto for Quebec/East Coast trip 2026-07-06–
 Perplexity source to remember: https://www.perplexity.ai/search/22bd7ccb-66cf-4bf4-ba19-922cafc3d6d5. Content not fetched here (HTTP 403); ask user for text if needed.
 §
 §
-Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-06-17. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+§
+§
+§
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-06-22. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
