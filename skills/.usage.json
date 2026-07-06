@@ -485,13 +485,13 @@
     "created_at": "2026-05-13T04:01:40.096916+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-29T07:03:23.359725+00:00",
-    "last_used_at": "2026-07-06T21:57:25.029655+00:00",
-    "last_viewed_at": "2026-07-06T21:57:25.025972+00:00",
+    "last_used_at": "2026-07-06T22:14:38.440313+00:00",
+    "last_viewed_at": "2026-07-06T22:14:38.437268+00:00",
     "patch_count": 23,
     "pinned": false,
     "state": "active",
-    "use_count": 57,
-    "view_count": 57
+    "use_count": 58,
+    "view_count": 58
   },
   "hermes-operations-troubleshooting": {
     "archived_at": null,
