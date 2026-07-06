@@ -1,21 +1,13 @@
 # Household Tasks
 
-## Mon, Jun 22
-- [ ] Madam: close these credit cards — TD Aeroplan Visa; Amex Gold; Amex Gold Business; Amex Edge Business. Before closing, confirm no pending points, credits, refunds, disputes, autopay, or annual-fee timing issues.
+## Fri, July 3, 2026
+- [x] Victoria gradual entry Day 2: 1:00 PM to 2:30/3:00 PM; visit with Jeanette/The Duy for 30 minutes or 1 hour, then leave Victoria once settled for 1 hour in the program.
 
-## Wed, May 27
-- [x] Finish the gift wrapping
-- [x] Madam beauty session at Mary’s at 3:15 PM
+## Mon, July 6, 2026
+- [x] Victoria gradual entry Day 3: 9:00 AM to 11:30 AM/12:00 PM; first nap and lunch in the program.
 
-## Thu, May 28
-- [x] Collapse the baby crib
-- [x] Move the current cabinet from the dining room to the master bedroom
-- [x] Build the cabinet
-- [x] Iron and alter baby's dress
+## Tue, July 7, 2026
+- [ ] Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.
 
-## Sun, May 31
-- [x] Adavid: pack things to bring to The Victor — flowers, gifts, Korean deco
-- [x] Adavid: head to The Victor with these items at 10:30 AM
-- [x] Jeanette: prepare baby food to bring to the event — fruit, pancake, 떡뻥
-- [x] Jeanette: head out at 11:45 AM — dad will pick up Jeanette and Victoria
-- [x] Jeanette: set up dolsang when arriving at the venue
+## Wed, July 8, 2026
+- [ ] Victoria gradual entry Day 5: full day; Victoria stays all day, shorter day if possible.

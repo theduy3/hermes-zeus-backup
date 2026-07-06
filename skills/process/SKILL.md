@@ -21,6 +21,11 @@ notes, analyze each, decide destination + filename + tags + frontmatter, move it
 - Vault is at **`/vault`**. Run helpers as `python3 /vault/System/scripts/<name>.py`
   (e.g. `calculate_dates.py`, `find_today_notes.py --json --inbox`). Scripts
   self-locate the vault, so cwd does not matter.
+- After filing/editing vault notes, MOCs, wiki-index, or wiki-log, perform an explicit
+  **ad-hoc verification** pass when no canonical suite exists: create a temporary verifier
+  under `/tmp` using an OS-safe `tempfile` path with filename prefix `hermes-verify-`,
+  check the moved files/frontmatter/wikilinks/MOC/index/log plus `find_today_notes.py --json --inbox`,
+  run it, delete it, and report it as ad-hoc verification rather than suite-green evidence.
 - Read/write everything under `/vault/...` (destinations: `Notes/`, `Projects/...`,
   `Tasks/tasks|ideas/`, plus `System/wiki-index.md` and `System/wiki-log.md`).
 - Conventions: `/vault/CLAUDE.md`.

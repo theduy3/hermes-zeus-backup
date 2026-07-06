@@ -30,7 +30,8 @@ Learned in practice:
 2. **Discover recent Hermes sessions**
    - Start with `session_search()` with no query to see the latest session IDs.
    - Treat this as a pointer, not the full data source.
-   - Always scan the recent non-cron/interactive sessions too. Daily recaps often include user-requested operational work (profile cleanup, auth fixes, manual reruns) that never appears in cron output files. Use targeted `session_search(query=...)` and scroll the relevant session when a recent title/preview hints at concrete work.
+   - Always scan the recent non-cron/interactive sessions too. Daily recaps often include user-requested operational work (profile cleanup, auth fixes, skill-install checks, manual reruns) that never appears in cron output files. Use targeted `session_search(query=...)` and scroll the relevant session when a recent title/preview hints at concrete work.
+   - For interactive Hermes configuration or skill-library questions, summarize the verified state, not just the answer text: e.g. record that `hermes skills list` showed N enabled skills and whether content/path searches found the requested installed package. This is often the only trace of manual operational support for the day.
    - When an interactive session was interrupted, look for the last substantive assistant messages before/after the interruption note; those often contain verified completion status that the final message alone may omit.
    - If `session_search(session_id=...)` returns a persisted-output file because the transcript is too large, parse that saved JSON file directly with `python3` and print only the nonempty assistant messages (especially the final one). This avoids flooding context while preserving the verified outcome of interactive work.
 
@@ -42,7 +43,9 @@ Learned in practice:
 4. **Inspect local Hermes artifact paths**
    - Cron session transcripts: `~/.hermes/sessions/session_cron_<jobid>_YYYYMMDD_*.json`
    - Non-cron session transcripts: `~/.hermes/sessions/session_YYYYMMDD_*.json`
-   - Cron outputs: `~/.hermes/cron/output/*/YYYY-MM-DD_*.md`
+   - Default-profile cron outputs: `~/.hermes/cron/output/*/YYYY-MM-DD_*.md`
+   - Named-profile cron outputs: `~/.hermes/profiles/<profile>/cron/output/*/YYYY-MM-DD_*.md`
+   - If recent work moved jobs between profiles, run `hermes --profile <profile> cron list` for the receiving profile and scan that profile's cron output directory too. Default-profile output scans will miss jobs now owned by `wiki`, `zeus`, `finance`, etc.; summarize migrated jobs from the profile that actually owns them.
    - Use `search_files(target='files')` to locate the day's files. Do this even when `hermes cron list` shows an exact-ish last-run time: output filenames can differ by one second from the list timestamp (e.g. list says `09:01:20`, file is `09-01-19`). Read the path returned by discovery, not a hand-constructed timestamp path.
    - Resolve the reporting date in the job's/user's local timezone, not just UTC. Evening recaps often run while UTC is already the next date; use `TZ=<cron/user timezone> date` when available and summarize the local "today".
    - Do not rely only on `hermes cron list` last-run fields for jobs scheduled later in the day. If current time is after a job should have fired, explicitly check `~/.hermes/cron/output/<job_id>/YYYY-MM-DD_*.md`; cron list can appear stale or be observed before a pending local-time run completes.
@@ -83,6 +86,7 @@ Learned in practice:
      - `not found`
      - `Unauthorized`
    - Report exact operational blockers, not vague guesses.
+   - **Extract the final response section, not the first.** Cron output prompts may embed loaded skill text or user instructions that themselves contain `## Response` headings, so parsers using the first regex match can accidentally summarize prompt/skill content. Use the last occurrence (`text.rfind("## Response")`) or parse from the final markdown section before classifying content, blockers, or next actions.
    - **Cron output file structure for failures**: timed-out jobs have `## Error` instead of `## Response` — don't assume every output file has a `## Response` section. When grepping for `## Response`, also check for `## Error` to catch timeout failures:
      ```bash
      grep -l "^## Error$" ~/.hermes/cron/output/*/YYYY-MM-DD_*.md

@@ -53,6 +53,10 @@
       1778565357577168485,
       7259
     ],
+    "computer-use/SKILL.md": [
+      1782362686226103976,
+      11179
+    ],
     "creative/architecture-diagram/SKILL.md": [
       1778565357577307152,
       5830
@@ -78,8 +82,8 @@
       10434
     ],
     "creative/claude-design/SKILL.md": [
-      1778490391617044083,
-      19859
+      1782890181833946172,
+      25117
     ],
     "creative/comfyui/SKILL.md": [
       1778787422952912100,
@@ -352,6 +356,10 @@
     "productivity/ocr-and-documents/SKILL.md": [
       1778490391625044033,
       5280
+    ],
+    "productivity/petdex/SKILL.md": [
+      1782362686227104003,
+      3534
     ],
     "productivity/powerpoint/SKILL.md": [
       1778565357588406114,
@@ -770,6 +778,23 @@
         "linux",
         "macos",
         "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "computer-use",
+      "category": "computer-use",
+      "frontmatter_name": "computer-use",
+      "description": "Drive the user's desktop in the background — clicking, ty...",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
       ],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1954,6 +1979,23 @@
       "category": "productivity",
       "frontmatter_name": "ocr-and-documents",
       "description": "Extract text from PDFs/scans (pymupdf, marker-pdf).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "petdex",
+      "category": "productivity",
+      "frontmatter_name": "petdex",
+      "description": "Install and select animated petdex mascots for Hermes.",
       "platforms": [
         "linux",
         "macos",

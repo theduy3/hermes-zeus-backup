@@ -6,8 +6,8 @@
       3505
     ],
     "autonomous-ai-agents/hermes-activity-recap/SKILL.md": [
-      1782176559049358954,
-      13029
+      1782954260655953676,
+      14234
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
       1779393031553453810,
@@ -28,6 +28,10 @@
     "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
       1779252798243558402,
       12774
+    ],
+    "computer-use/SKILL.md": [
+      1782362686226103976,
+      11179
     ],
     "creative/baoyu-article-illustrator/SKILL.md": [
       1779252798243558402,
@@ -58,12 +62,12 @@
       15429
     ],
     "devops/hermes-github-backup-restore/SKILL.md": [
-      1781800071104064601,
-      8559
+      1782716603357709087,
+      11022
     ],
     "devops/hermes-operations-troubleshooting/SKILL.md": [
-      1782145201216671720,
-      18298
+      1783354770854262297,
+      20071
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -178,8 +182,8 @@
       10003
     ],
     "process/SKILL.md": [
-      1781272985158149205,
-      2561
+      1782579801838199142,
+      3021
     ],
     "productivity/apple-ecosystem-automation/SKILL.md": [
       1780916648930892527,
@@ -188,6 +192,10 @@
     "productivity/linear/SKILL.md": [
       1778565357587617111,
       14782
+    ],
+    "productivity/petdex/SKILL.md": [
+      1782362686227104003,
+      3534
     ],
     "productivity/productivity-suite-automation/SKILL.md": [
       1780916693834618098,
@@ -246,20 +254,20 @@
       1696
     ],
     "today/SKILL.md": [
-      1782212622819509211,
-      5467
+      1782558152268090164,
+      6507
     ],
     "tonight/SKILL.md": [
-      1781917379624204577,
-      5961
+      1782712988497826284,
+      8399
     ],
     "wiki-ingest/SKILL.md": [
       1781903092828892066,
       14549
     ],
     "wiki-lint/SKILL.md": [
-      1782291981433016183,
-      7949
+      1782723922035814145,
+      9590
     ],
     "apple/DESCRIPTION.md": [
       1778644994273296431,
@@ -459,6 +467,23 @@
       "frontmatter_name": "kanban-codex-lane",
       "description": "Use when a Hermes Kanban worker wants to run Codex CLI as...",
       "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "computer-use",
+      "category": "computer-use",
+      "frontmatter_name": "computer-use",
+      "description": "Drive the user's desktop in the background — clicking, ty...",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -1028,6 +1053,23 @@
       "category": "productivity",
       "frontmatter_name": "linear",
       "description": "Linear: manage issues, projects, teams via GraphQL + curl.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "petdex",
+      "category": "productivity",
+      "frontmatter_name": "petdex",
+      "description": "Install and select animated petdex mascots for Hermes.",
       "platforms": [
         "linux",
         "macos",

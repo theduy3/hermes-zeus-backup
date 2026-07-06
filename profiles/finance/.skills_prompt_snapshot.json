@@ -29,6 +29,10 @@
       1779252798243558402,
       12774
     ],
+    "computer-use/SKILL.md": [
+      1782362686226103976,
+      11179
+    ],
     "creative/ascii-art/SKILL.md": [
       1778565357577443278,
       10556
@@ -281,6 +285,10 @@
       1778565357588254530,
       5280
     ],
+    "productivity/petdex/SKILL.md": [
+      1782362686227104003,
+      3534
+    ],
     "productivity/powerpoint/SKILL.md": [
       1778565357588406114,
       9298
@@ -338,8 +346,8 @@
       7910
     ],
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1780819229270747874,
-      7609
+      1782362686227104003,
+      10651
     ],
     "software-development/hermes-s6-container-supervision/SKILL.md": [
       1779743766085236865,
@@ -567,6 +575,23 @@
       "frontmatter_name": "kanban-codex-lane",
       "description": "Use when a Hermes Kanban worker wants to run Codex CLI as...",
       "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "computer-use",
+      "category": "computer-use",
+      "frontmatter_name": "computer-use",
+      "description": "Drive the user's desktop in the background — clicking, ty...",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -1551,6 +1576,23 @@
       }
     },
     {
+      "skill_name": "petdex",
+      "category": "productivity",
+      "frontmatter_name": "petdex",
+      "description": "Install and select animated petdex mascots for Hermes.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "powerpoint",
       "category": "productivity",
       "frontmatter_name": "powerpoint",
@@ -1780,7 +1822,7 @@
       "skill_name": "hermes-agent-skill-authoring",
       "category": "software-development",
       "frontmatter_name": "hermes-agent-skill-authoring",
-      "description": "Author in-repo SKILL.md: frontmatter, validator, structure.",
+      "description": "Author in-repo SKILL.md: frontmatter, validator, structur...",
       "platforms": [
         "linux",
         "macos",

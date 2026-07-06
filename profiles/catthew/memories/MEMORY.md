@@ -28,4 +28,15 @@ Victoria pancake recipe: mash 2 small bananas; add dash cinnamon, 2 tbsp oatmeal
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-06-22. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+§
+§
+§
+§
+§
+§
+§
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-05. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

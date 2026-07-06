@@ -17,4 +17,15 @@ If Duy has an upcoming/current trip to Quebec/East Coast, Zeus should trigger He
 VN food sources: T&T Garden Burnaby (236)660-0515 groceries/prepared. Spot prawns: 604-802-5538 <$23/lb or boat Bayview Richmond 604-760-5376/778-961-2666 $25/lb. Clams/oysters: Costco Burnaby Still Creek $62/100 clams, oysters $55-75/100.
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-06-22. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+§
+§
+§
+§
+§
+§
+§
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-05. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

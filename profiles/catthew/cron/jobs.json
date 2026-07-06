@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 38
+        "completed": 50
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-06-25T07:00:00-07:00",
-      "last_run_at": "2026-06-24T07:01:37.550035-07:00",
+      "next_run_at": "2026-07-07T07:00:00-07:00",
+      "last_run_at": "2026-07-06T07:01:08.267853-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -48,50 +48,6 @@
         "skills"
       ],
       "workdir": null,
-      "fire_claim": null
-    },
-    {
-      "id": "e21904777c66",
-      "name": "Jeanette Zumba class reminder",
-      "prompt": "Send this exact household reminder and nothing else: \"Reminder: Jeanette\u2019s Zumba class at Roundhouse is tonight at 6:45 PM.\"",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 18 * * 2",
-        "display": "0 18 * * 2"
-      },
-      "schedule_display": "0 18 * * 2",
-      "repeat": {
-        "times": 6,
-        "completed": 5
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-05-20T00:12:21.266980-07:00",
-      "next_run_at": "2026-06-30T18:00:00-07:00",
-      "last_run_at": "2026-06-23T18:00:52.992704-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "telegram:-5249331607",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "-5249331607",
-        "chat_name": "Catthew the Butler",
-        "thread_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "profile": null,
       "fire_claim": null
     },
     {
@@ -329,15 +285,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 2504
+        "completed": 3602
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-06-25T08:00:00-07:00",
-      "last_run_at": "2026-06-24T23:50:59.803321-07:00",
+      "next_run_at": "2026-07-06T15:00:00-07:00",
+      "last_run_at": "2026-07-06T14:50:14.342482-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -376,15 +332,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T23:41:01.053318-07:00",
-      "next_run_at": "2026-06-28T16:00:00-07:00",
-      "last_run_at": "2026-06-21T16:03:04.792019-07:00",
+      "next_run_at": "2026-07-12T16:00:00-07:00",
+      "last_run_at": "2026-07-05T16:06:50.228915-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -423,16 +379,16 @@
       "schedule_display": "0 9 30 6,12 *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-21T16:52:31.486341-07:00",
-      "next_run_at": "2026-06-30T09:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-12-30T10:00:00-08:00",
+      "last_run_at": "2026-06-30T09:00:49.378629-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -448,8 +404,99 @@
         "memory",
         "skills"
       ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "24b2049e7526",
+      "name": "Victoria gradual entry Day 4 reminder",
+      "prompt": "Send this exact household reminder to the family Telegram group. Do not create or modify cron jobs.\n\nReminder: Victoria gradual entry Day 4 today \u2014 9:00 AM to 3:30 PM. Victoria will stay through lunch and afternoon nap.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.5",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-07-07T15:15:00+00:00",
+        "display": "once at 2026-07-07 15:15"
+      },
+      "schedule_display": "once at 2026-07-07 15:15",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-02T23:08:01.251439-07:00",
+      "next_run_at": "2026-07-07T15:15:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "7ff1fc807991",
+      "name": "Victoria gradual entry Day 5 reminder",
+      "prompt": "Send this exact household reminder to the family Telegram group. Do not create or modify cron jobs.\n\nReminder: Victoria gradual entry Day 5 today \u2014 full day. Victoria will stay all day, shorter day if possible.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.5",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-07-08T15:00:00+00:00",
+        "display": "once at 2026-07-08 15:00"
+      },
+      "schedule_display": "once at 2026-07-08 15:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-02T23:08:02.286658-07:00",
+      "next_run_at": "2026-07-08T15:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-5249331607",
+        "chat_name": "Catthew - the Butler",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": null,
       "workdir": null
     }
   ],
-  "updated_at": "2026-06-24T23:50:59.805558-07:00"
+  "updated_at": "2026-07-06T14:50:14.346134-07:00"
 }

@@ -32,6 +32,19 @@ This umbrella combines portfolio-level review and single-stock thesis workflows.
 5. For institutional 13F/13G work, fetch primary SEC EDGAR XML, parse `infoTable` rows, keep option rows separate from stock rows, and warn that 13F option `value` is not cash equity exposure. Compare against the prior filing for buy / hold / sell deltas before drawing conclusions.
 6. For daily stock watchlist reports, group tickers by sector or practical investment theme before presenting tables. Add a terse Buy / Hold / Sell / Watch sentiment for each ticker with the reason in parentheses, then include short `Best opportunities today` and `Avoid / wait` sections. This is the user's preferred format for comparing and picking names from a long watchlist.
 
+## Scheduled Weekly Portfolio Briefing Pattern
+
+When producing the user's Sunday registered-portfolio briefing:
+
+- Keep it concise, bullet-based, Telegram-friendly, and avoid tables.
+- Use current tools for market prices, FX, news, and macro context; record data date and source.
+- If Yahoo quote endpoints fail, use the Yahoo chart endpoint for prices/returns and Yahoo RSS for headlines. See `references/weekly-portfolio-briefing-data-notes.md`.
+- Use known share counts and the freshest available cash/account snapshot; label stale cash/account values clearly.
+- Convert USD holdings to CAD with current USD/CAD and state that values are estimates.
+- Include: portfolio summary, holdings snapshot, biggest weekly movers/news, risk flags, and action watchlist.
+- Separate facts from analysis/opinion. Only include thesis, risks, timeline, and confidence when suggesting an action.
+- End with the required investment disclaimer.
+
 ## Daily Watchlist Report Pattern
 
 When creating or updating recurring ticker reports from `/vault/System/Stock Watchlist.md`:
