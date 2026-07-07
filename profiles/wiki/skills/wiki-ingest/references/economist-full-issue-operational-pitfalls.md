@@ -10,14 +10,14 @@ Reliable pattern:
 2. Run the script with `terminal(command="python3 /tmp/script.py", timeout=600)`.
 3. If the script performs partial writes before failing, inspect/patch the script and rerun idempotently; avoid rewriting infrastructure files from partial reads.
 
-## `_cold` archive directory may be root-owned
-Prior issues may have raw article folders under `Sources/_cold/`, but `_cold` can be root-owned. If creating `Sources/_cold/<Issue> Articles/` fails with `PermissionError`, fall back to the documented article-folder location:
+## Active Economist article folders live directly under `Sources/`
+Prior issues or historical logs may mention raw article folders under `Sources/_cold/`, but current vault policy keeps active/high-value Economist issue article folders directly under:
 
-- `Sources/<Issue Title> Articles/`
+```text
+/vault/Sources/<Issue Title> Articles/
+```
 
-Update all issue notes, MOC issue lines, log entries, and source paths consistently to the actual folder used. Do not claim the folder is under `_cold` unless it was actually created there.
-
-## Root-owned content notes are not just infrastructure
+Do not create new active Economist folders in `_cold`; `_cold` is only for legacy bulk archive material. If you discover an active Economist issue folder still under `Sources/_cold/<Issue> Articles/`, migrate it to `/vault/Sources/<Issue Title> Articles/` and update current issue notes/MOC prose paths to the actual folder used. Historical `wiki-log.md` entries can remain historical.
 Some durable notes that normally should be updated during ingest can be root-owned too, e.g. `Notes/Economic Indicators.md`. Treat them like file-level blocked infrastructure:
 
 - Continue creating the source archive, article extracts, and new Notes pages.

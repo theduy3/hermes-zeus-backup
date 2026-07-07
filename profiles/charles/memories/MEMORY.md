@@ -15,4 +15,5 @@ Finance context 2026-07-04 PDT: portfolio cash ~$92.7k (~46.6%); NVDA ~$71.7k (~
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-05. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

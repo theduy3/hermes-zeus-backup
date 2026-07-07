@@ -3337,8 +3337,11 @@
     "text": "Arrive at YVR for Montreal flight",
     "source": "Obsidian",
     "file_path": "/vault/Tasks/tasks/arrive-at-yvr-for-montreal-flight.md",
-    "status": "sent",
+    "status": "done",
     "message_id": 1023,
-    "odds": ""
+    "odds": "",
+    "done_at": "2026-07-07T05:04:30.154548+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
   }
 }

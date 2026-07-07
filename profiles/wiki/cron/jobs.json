@@ -90,7 +90,7 @@
     {
       "id": "e358e0a4cb18",
       "name": "vault-wiki-ingest",
-      "prompt": "Ingest theduyvault Inbox sources into the wiki; transcribe photos with vision.",
+      "prompt": "Ingest theduyvault Inbox sources into the wiki; transcribe photos with vision. Follow the loaded `wiki-ingest` skill and current `/vault/.claude/commands/wiki-ingest.md`. Use normalized source archive names `YYYY-MM-DD - Source Title.md`, keep active/high-value Economist issue article folders directly under `/vault/Sources/<Issue> Articles/` (not `_cold`), keep binaries in `/vault/Attachments/` with source-aligned attachment names, and preserve numbered Economist MOC filenames.",
       "skills": [
         "wiki-ingest"
       ],
@@ -109,15 +109,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 136
+        "completed": 137
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-07-06T20:00:00-07:00",
-      "last_run_at": "2026-07-06T14:05:54.603453-07:00",
+      "next_run_at": "2026-07-07T08:00:00-07:00",
+      "last_run_at": "2026-07-06T20:00:41.485857-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -131,7 +131,7 @@
     {
       "id": "1b7bcc26dda2",
       "name": "vault-wiki-lint",
-      "prompt": "Lint and enhance 20 theduyvault wiki pages.",
+      "prompt": "Lint and enhance 20 theduyvault wiki pages. Follow the loaded `wiki-lint` skill and current `/vault/.claude/commands/wiki-lint.md`; preserve numbered Economist MOC filenames, treat `_cold` as legacy/low-browse bulk only, keep active/high-value sources directly under `/vault/Sources/`, and keep binaries in `/vault/Attachments/`.",
       "skills": [
         "wiki-lint"
       ],
@@ -191,15 +191,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 89
+        "completed": 91
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-07-06T18:00:00-07:00",
-      "last_run_at": "2026-07-05T23:01:51.890436-07:00",
+      "next_run_at": "2026-07-07T18:00:00-07:00",
+      "last_run_at": "2026-07-06T23:05:26.164160-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -278,15 +278,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 107
+        "completed": 140
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-07-06T15:23:23.012686-07:00",
-      "last_run_at": "2026-07-06T15:08:23.012686-07:00",
+      "next_run_at": "2026-07-07T00:11:28.358627-07:00",
+      "last_run_at": "2026-07-06T23:56:28.358627-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -342,5 +342,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-07-06T15:08:23.012833-07:00"
+  "updated_at": "2026-07-06T23:56:28.358817-07:00"
 }

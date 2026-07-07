@@ -41,4 +41,5 @@ Perplexity source to remember: https://www.perplexity.ai/search/22bd7ccb-66cf-4b
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-05. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

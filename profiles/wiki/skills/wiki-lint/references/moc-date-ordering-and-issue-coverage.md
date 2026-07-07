@@ -17,18 +17,18 @@ For issue article folders such as `/vault/Sources/The Economist July 4 2026 Arti
 2. Parse every article wikilink from `## Articles`.
 3. Route article-extract links into the relevant section MOCs using the section labels in `00-index.md`:
    - `The world this week`, `Leaders`, `Letters`, `By Invitation`, `Essay`, `Obituary` → `The Economist MOC`
-   - `United States`, `America at 250` → `US Politics & Society MOC`
-   - `The Americas` → `The Americas MOC`
-   - `Asia` → `Asia MOC`
-   - `China` → `China MOC`
-   - `Middle East & Africa` → `Middle East & Africa MOC`
-   - `Europe` → `Europe MOC`
-   - `Britain` → `Britain MOC`
-   - `International` → `International MOC`
-   - `Business` → `Business MOC`
-   - `Finance & economics`, `Economic & financial indicators` → `Finance & Economics MOC`
-   - `Science & technology` → `Science & Technology MOC`
-   - `Culture` → `Culture MOC`
+   - `United States`, `America at 250` → `06 US Politics & Society MOC`
+   - `The Americas` → `07 The Americas MOC`
+   - `International` → `08 International MOC`
+   - `Asia` → `09 Asia MOC`
+   - `China` → `10 China MOC`
+   - `Middle East & Africa` → `11 Middle East & Africa MOC`
+   - `Europe` → `12 Europe MOC`
+   - `Britain` → `13 Britain MOC`
+   - `Business` → `14 Business MOC`
+   - `Finance & economics`, `Economic & financial indicators` → `15 Finance & Economics MOC`
+   - `Science & technology` → `16 Science & Technology MOC`
+   - `Culture`, `Obituary` → `17 Culture MOC`
 4. Add cross-listing only when it is semantically useful, e.g. AI-governance/legal-AI articles into `AI Development MOC` or `AI Agent Tooling MOC`.
 5. Verify coverage by checking that every `00-index.md` article link appears in at least one readable MOC. Report `article_count`, `covered_count`, and `missing_count`.
 
@@ -36,5 +36,5 @@ For issue article folders such as `/vault/Sources/The Economist July 4 2026 Arti
 
 - Do not assume an issue synthesis page in a MOC means all article extracts are represented. Verify the article-level folder separately.
 - Root-owned MOCs may become unreadable after prior edits. Treat them file-by-file. If the relevant domain MOC is blocked, report the exact `chown` command rather than silently skipping coverage.
-- For The Economist finance articles, prefer `Finance & Economics MOC` for section coverage; `Finance MOC` may be a separate/root-owned hub and should not block section-level Economist coverage.
+- For The Economist finance articles, prefer `15 Finance & Economics MOC` for section coverage; `Finance MOC` may be a separate/root-owned hub and should not block section-level Economist coverage. Preserve actual numbered MOC filenames.
 - Append a `wiki-log.md` maintenance entry after bulk MOC routing or date-order fixes.

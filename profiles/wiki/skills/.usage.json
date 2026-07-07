@@ -576,26 +576,26 @@
     "created_at": "2026-06-27T21:35:40.474760+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-07-05T18:10:51.274170+00:00",
-    "last_viewed_at": "2026-07-05T18:10:51.268441+00:00",
+    "last_used_at": "2026-07-07T04:39:21.359444+00:00",
+    "last_viewed_at": "2026-07-07T04:39:21.355941+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 7,
-    "view_count": 7
+    "use_count": 10,
+    "view_count": 10
   },
   "ocr-and-documents": {
     "archived_at": null,
     "created_at": "2026-06-28T07:03:01.912233+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-07-06T06:49:01.346836+00:00",
-    "last_viewed_at": "2026-07-06T06:49:01.339495+00:00",
+    "last_used_at": "2026-07-07T00:43:37.694988+00:00",
+    "last_viewed_at": "2026-07-07T00:43:37.691128+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 7,
-    "view_count": 7
+    "use_count": 8,
+    "view_count": 8
   },
   "opencode": {
     "archived_at": null,
@@ -706,13 +706,13 @@
     "created_at": "2026-06-30T17:00:37.075528+00:00",
     "created_by": null,
     "last_patched_at": "2026-07-04T17:05:55.194239+00:00",
-    "last_used_at": "2026-07-06T17:00:19.116479+00:00",
-    "last_viewed_at": "2026-07-04T17:05:46.893917+00:00",
+    "last_used_at": "2026-07-07T06:00:38.219533+00:00",
+    "last_viewed_at": "2026-07-07T06:00:38.214564+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 9,
-    "view_count": 2
+    "use_count": 10,
+    "view_count": 3
   },
   "python-debugpy": {
     "archived_at": null,
@@ -913,14 +913,14 @@
     "archived_at": null,
     "created_at": "2026-06-30T06:00:31.229921+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-04T01:07:46.059044+00:00",
-    "last_used_at": "2026-07-06T06:00:12.608650+00:00",
-    "last_viewed_at": "2026-07-04T01:07:24.299374+00:00",
-    "patch_count": 7,
+    "last_patched_at": "2026-07-07T06:06:11.739624+00:00",
+    "last_used_at": "2026-07-07T06:06:01.060774+00:00",
+    "last_viewed_at": "2026-07-07T06:06:01.041952+00:00",
+    "patch_count": 9,
     "pinned": false,
     "state": "active",
-    "use_count": 20,
-    "view_count": 7
+    "use_count": 24,
+    "view_count": 9
   },
   "touchdesigner-mcp": {
     "archived_at": null,
@@ -952,27 +952,27 @@
     "archived_at": null,
     "created_at": "2026-06-21T05:29:50.651791+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-06T21:06:36.943736+00:00",
-    "last_used_at": "2026-07-06T21:06:24.580212+00:00",
-    "last_viewed_at": "2026-07-06T21:06:24.574618+00:00",
-    "patch_count": 65,
+    "last_patched_at": "2026-07-07T05:28:31.183154+00:00",
+    "last_used_at": "2026-07-07T05:28:19.843083+00:00",
+    "last_viewed_at": "2026-07-07T05:28:19.839985+00:00",
+    "patch_count": 86,
     "pinned": false,
     "state": "active",
-    "use_count": 76,
-    "view_count": 55
+    "use_count": 93,
+    "view_count": 71
   },
   "wiki-lint": {
     "archived_at": null,
     "created_at": "2026-06-30T09:00:32.889805+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-06T09:07:15.550624+00:00",
-    "last_used_at": "2026-07-06T09:06:57.553574+00:00",
-    "last_viewed_at": "2026-07-06T09:06:57.550167+00:00",
-    "patch_count": 16,
+    "last_patched_at": "2026-07-07T00:38:52.130489+00:00",
+    "last_used_at": "2026-07-07T00:38:34.542521+00:00",
+    "last_viewed_at": "2026-07-07T00:38:34.539449+00:00",
+    "patch_count": 22,
     "pinned": false,
     "state": "active",
-    "use_count": 41,
-    "view_count": 34
+    "use_count": 48,
+    "view_count": 41
   },
   "xurl": {
     "archived_at": null,
