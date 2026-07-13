@@ -594,5 +594,50 @@
     "done_at": "2026-07-06T20:23:49.983610+00:00",
     "done_by": "8446251233",
     "source_updated": true
+  },
+  "df86ee6c74fb4b42": {
+    "id": "df86ee6c74fb4b42",
+    "date": "2026-07-07",
+    "title": "Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.",
+    "text": "Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.",
+    "source": "Household task",
+    "due_date": "2026-07-07",
+    "line": 10,
+    "kind": "task",
+    "status": "done",
+    "message_id": 674,
+    "done_at": "2026-07-09T04:20:13.034854+00:00",
+    "done_by": "8446251233",
+    "source_updated": false
+  },
+  "ea81e0e386e887bd": {
+    "id": "ea81e0e386e887bd",
+    "date": "2026-07-08",
+    "title": "Victoria gradual entry Day 5: full day; Victoria stays all day, shorter day if possible.",
+    "text": "Victoria gradual entry Day 5: full day; Victoria stays all day, shorter day if possible.",
+    "source": "Household task",
+    "due_date": "2026-07-08",
+    "line": 13,
+    "kind": "task",
+    "status": "done",
+    "message_id": 677,
+    "done_at": "2026-07-09T04:20:05.112413+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
+  },
+  "a0774cd69c2ed511": {
+    "id": "a0774cd69c2ed511",
+    "date": "2026-07-08",
+    "title": "Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.",
+    "text": "Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.",
+    "source": "Household task overdue 2026-07-07",
+    "due_date": "2026-07-07",
+    "line": 10,
+    "kind": "task",
+    "status": "done",
+    "message_id": 679,
+    "done_at": "2026-07-08T21:17:13.883544+00:00",
+    "done_by": "8446251233",
+    "source_updated": true
   }
 }

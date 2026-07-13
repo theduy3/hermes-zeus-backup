@@ -4,4 +4,13 @@ For theduyvault/wiki ingest: The Economist Finance & Economics articles and dail
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+§
+§
+§
+§
+§
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-12. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

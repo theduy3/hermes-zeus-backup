@@ -1,0 +1,346 @@
+{
+  "jobs": [
+    {
+      "id": "b92449d7f332",
+      "name": "vault-today",
+      "prompt": "Generate today's theduyvault daily briefing using the loaded `today` skill, then enrich the Daily Investment Briefing with a rotated watchlist-company update section.\n\nImportant environment:\n- Vault path: /vault\n- Daily investment file target: /vault/Daily/<YYYY-MM-DD>-investment.md as produced by the `today` skill.\n- Ticker source: /vault/System/Stock Watchlist.md under the `Watchlist:` section. Ignore `Indicators:`.\n- Run autonomously; never ask the user questions.\n\nStep A \u2014 generate the normal daily files:\n1. Follow the loaded `today` skill exactly to generate the normal daily briefing and daily investment briefing.\n2. Verify the investment file exists.\n\nStep B \u2014 select the rotated company bucket:\n1. Parse all tickers from the `Watchlist:` section of /vault/System/Stock Watchlist.md, preserving order.\n2. Divide the full watchlist into 7 balanced buckets using ticker index modulo 7: bucket for a ticker is `index % 7` with zero-based index.\n3. Select today's bucket using local America/Toronto date: Monday=0, Tuesday=1, Wednesday=2, Thursday=3, Friday=4, Saturday=5, Sunday=6. This means a 30-ticker list becomes roughly 4-5 tickers/day, and larger lists scale evenly across the week.\n4. If no tickers are selected, write a short note saying no tickers were selected.\n\nStep C \u2014 research selected tickers over the last 30 days:\nFor each selected ticker, research important company-specific developments from the last 30 days. Use web search/content tools if available. Focus on:\n- earnings/guidance, analyst upgrades/downgrades, major product/customer/news events, regulatory/legal issues, M&A, financing/capex, and material stock-moving context;\n- avoid generic market-wide headlines unless directly relevant to the company;\n- include 2-4 concise bullets per ticker, each with a source link/date when available;\n- include a brief \"Why it matters\" sentence per ticker.\nIf web search is unavailable or fails for a ticker, still include the ticker with a clear \"research unavailable\" note rather than inventing facts.\n\nStep D \u2014 insert into the investment file:\n1. Add or replace a section titled exactly:\n   `## Watchlist Company Updates (Last 30 Days)`\n2. Put this section after `## Stock Watchlist` and before `## Morning Brew` in /vault/Daily/<YYYY-MM-DD>-investment.md.\n3. Include a line such as: `*Rotation: <N>/<TOTAL> tickers for <weekday>; source: System/Stock Watchlist.md*`.\n4. Do not duplicate the section if the file is regenerated or the cron is rerun; replace the existing section for the day.\n5. Preserve the rest of the investment file.\n\nStep E \u2014 verify:\nRead back /vault/Daily/<YYYY-MM-DD>-investment.md and verify:\n- `## Watchlist Company Updates (Last 30 Days)` appears exactly once;\n- the section is before `## Morning Brew`;\n- selected ticker symbols are present;\n- no obvious tool error text was inserted.\n\nFinal response: concise summary of files generated/updated, selected tickers, and any failed/unavailable research. This cron runs in a CLI/local context, so delivery may only be visible in cron history unless a gateway delivery target is configured.",
+      "skills": [
+        "today",
+        "last30days"
+      ],
+      "skill": "today",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 56
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:00.314751-07:00",
+      "next_run_at": "2026-07-12T04:00:00-07:00",
+      "last_run_at": "2026-07-11T04:04:39.141264-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "web"
+      ],
+      "workdir": null,
+      "profile": "wiki",
+      "fire_claim": null
+    },
+    {
+      "id": "ce61f73456fe",
+      "name": "vault-process",
+      "prompt": "Process unprocessed theduyvault notes.",
+      "skills": [
+        "process"
+      ],
+      "skill": "process",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "display": "0 10 * * *"
+      },
+      "schedule_display": "0 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 50
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:01.065063-07:00",
+      "next_run_at": "2026-07-12T10:00:00-07:00",
+      "last_run_at": "2026-07-11T10:02:42.915621-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": "wiki",
+      "fire_claim": null
+    },
+    {
+      "id": "e358e0a4cb18",
+      "name": "vault-wiki-ingest",
+      "prompt": "Ingest theduyvault Inbox sources into the wiki; transcribe photos with vision. Follow the loaded `wiki-ingest` skill and current `/vault/.claude/commands/wiki-ingest.md`. Use normalized source archive names `YYYY-MM-DD - Source Title.md`, keep active/high-value Economist issue article folders directly under `/vault/Sources/<Issue> Articles/` (not `_cold`), keep binaries in `/vault/Attachments/` with source-aligned attachment names, and preserve numbered Economist MOC filenames.",
+      "skills": [
+        "wiki-ingest"
+      ],
+      "skill": "wiki-ingest",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8,14,20 * * *",
+        "display": "0 8,14,20 * * *"
+      },
+      "schedule_display": "0 8,14,20 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 151
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:02.458886-07:00",
+      "next_run_at": "2026-07-12T08:00:00-07:00",
+      "last_run_at": "2026-07-11T20:05:41.600172-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": "wiki",
+      "fire_claim": null
+    },
+    {
+      "id": "1b7bcc26dda2",
+      "name": "vault-wiki-lint",
+      "prompt": "Lint and enhance 20 theduyvault wiki pages. Follow the loaded `wiki-lint` skill and current `/vault/.claude/commands/wiki-lint.md`; preserve numbered Economist MOC filenames, treat `_cold` as legacy/low-browse bulk only, keep active/high-value sources directly under `/vault/Sources/`, and keep binaries in `/vault/Attachments/`.",
+      "skills": [
+        "wiki-lint"
+      ],
+      "skill": "wiki-lint",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *",
+        "display": "0 2 * * *"
+      },
+      "schedule_display": "0 2 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 52
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:03.129100-07:00",
+      "next_run_at": "2026-07-12T02:00:00-07:00",
+      "last_run_at": "2026-07-11T02:04:23.388626-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": "wiki",
+      "fire_claim": null
+    },
+    {
+      "id": "2f8f46180850",
+      "name": "vault-tonight",
+      "prompt": "theduyvault evening routine: process notes then always write the evening digest. Use the loaded `tonight` skill. Important override: do NOT return [SILENT] merely because there are zero notes. Even when no notes are processed, still create and verify `/vault/Daily/<YYYY-MM-DD>-tonight.md` using the date from `/vault/System/scripts/calculate_dates.py`, then report the digest path and that 0 notes were processed.",
+      "skills": [
+        "tonight"
+      ],
+      "skill": "tonight",
+      "model": "gpt-5.5",
+      "provider": "openai-codex",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18,23 * * *",
+        "display": "0 18,23 * * *"
+      },
+      "schedule_display": "0 18,23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 101
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T01:29:13.959934-07:00",
+      "next_run_at": "2026-07-12T18:00:00-07:00",
+      "last_run_at": "2026-07-11T23:03:06.910156-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": "wiki",
+      "fire_claim": null
+    },
+    {
+      "id": "2346506d909a",
+      "name": "stock-watchlist-last30days-weekly",
+      "prompt": "Run the weekly `/last30days` research pass for every company in the stock watchlist and write results into the root-level Stock Watchlist folder.\n\nSchedule/time intent:\n- This job is scheduled as `0 1 * * 6` in the scheduler's local America/Toronto time, which corresponds to Saturday 4:00 AM US Eastern time during both standard and daylight time.\n- Treat the report date in America/Toronto.\n\nVault and files:\n- Vault root: /vault\n- Ticker source: /vault/System/Stock Watchlist.md\n- Company notes folder: /vault/Stock Watchlist/\n- Weekly rollup destination: /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md, where YYYY-MM-DD is the America/Toronto date of the run.\n- Index: /vault/Stock Watchlist/Stock Watchlist Index.md\n\nTask:\n1. Parse all tickers under the `Watchlist:` section of /vault/System/Stock Watchlist.md. Ignore `Indicators:`.\n2. For each ticker/company, follow the loaded `last30days` skill: research important company-specific developments from the last 30 days.\n3. Focus on earnings/guidance, analyst upgrades/downgrades, product/customer news, regulatory/legal issues, M&A, financing/capex, and material stock-moving context.\n4. Avoid generic market-wide headlines unless directly tied to that company.\n5. For each company, produce 2-4 concise source-linked bullets, a `Why it matters` sentence, and a triage implication: `Add`, `Hold`, `Reduce`, or `Watch`.\n6. If research fails for a ticker, do not invent facts; write `Research unavailable` with the reason.\n\nWrite/update outputs:\nA. Weekly rollup file:\n- Create /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md.\n- Include frontmatter:\n  tags: [finance, watchlist, last30days]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  wiki_status: draft\n- Include one section per ticker in the order from Stock Watchlist.md.\n\nB. Individual company notes:\n- For each existing company note in /vault/Stock Watchlist/ matching the ticker prefix, add or replace a section titled exactly:\n  `## Last 30 Days Update`\n- The section must include:\n  - `*Updated: YYYY-MM-DD*`\n  - 2-4 source-linked bullets\n  - `Why it matters:` sentence\n  - `Triage implication:` Add/Hold/Reduce/Watch\n  - link to the weekly rollup file as `[[Weekly Last30days YYYY-MM-DD]]`\n- If the company note does not exist, create it using the same style as existing pages in /vault/Stock Watchlist/.\n- Do not duplicate the section on rerun; replace the existing `## Last 30 Days Update` section.\n\nC. Index/log:\n- Update /vault/Stock Watchlist/Stock Watchlist Index.md with a short line under Maintenance or a new `## Latest Weekly Research` section linking to the weekly rollup.\n- Append a concise entry to /vault/System/wiki-log.md.\n- If System or MOC files are root-owned/unwritable, skip them and report the exact `sudo chown hermes:hermes ...` command needed.\n\nVerification:\n- Verify the weekly rollup exists.\n- Verify a sample of company notes contains exactly one `## Last 30 Days Update` section.\n- Verify no obvious tool error text or uncited invented facts were inserted.\n\nFinal response: concise summary with number of tickers processed, rollup path, company notes updated/created, failed/unavailable tickers, and any permission blockers.",
+      "skills": [
+        "last30days"
+      ],
+      "skill": "last30days",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.5",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 1 * * 6",
+        "display": "0 1 * * 6"
+      },
+      "schedule_display": "0 1 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-02T19:59:20.220655-07:00",
+      "next_run_at": "2026-07-18T01:00:00-07:00",
+      "last_run_at": "2026-07-11T01:03:48.554311-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "web"
+      ],
+      "workdir": "/vault",
+      "fire_claim": null
+    },
+    {
+      "id": "7690a85440d7",
+      "name": "newsletter-imap-capture",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "newsletter_imap_capture.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 15,
+        "display": "every 15m"
+      },
+      "schedule_display": "every 15m",
+      "repeat": {
+        "times": null,
+        "completed": 591
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-05T10:52:43.305709-07:00",
+      "next_run_at": "2026-07-12T00:24:40.457370-07:00",
+      "last_run_at": "2026-07-12T00:09:40.457370-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "e48b94212c7c",
+      "name": "afterearnings-latest-transcript-capture",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "afterearnings_latest_capture.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 20160,
+        "display": "every 20160m"
+      },
+      "schedule_display": "every 20160m",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-05T11:01:42.863342-07:00",
+      "next_run_at": "2026-07-21T08:31:07.880316-04:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-07-12T00:09:40.457544-07:00"
+}

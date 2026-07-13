@@ -7,7 +7,7 @@
 - [x] Victoria gradual entry Day 3: 9:00 AM to 11:30 AM/12:00 PM; first nap and lunch in the program.
 
 ## Tue, July 7, 2026
-- [ ] Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.
+- [x] Victoria gradual entry Day 4: 9:00 AM to 3:30 PM; stay through lunch and afternoon nap.
 
 ## Wed, July 8, 2026
-- [ ] Victoria gradual entry Day 5: full day; Victoria stays all day, shorter day if possible.
+- [x] Victoria gradual entry Day 5: full day; Victoria stays all day, shorter day if possible.

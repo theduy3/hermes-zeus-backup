@@ -46,15 +46,25 @@ notes, analyze each, decide destination + filename + tags + frontmatter, move it
 - Use the **terminal** tool for python3 and the **file** tool for moves/writes. Keep
   scheduled-run changes auditable as normal tool calls rather than bundling filing,
   index edits, and source cleanup into an ad hoc Python helper.
+- Serialize multiple edits to the same vault file (`wiki-index.md`, `wiki-log.md`, a MOC,
+  or one note). Do not batch/parallel patch the same file in one turn: Hermes may warn
+  about sibling writes, and serialized patches keep the audit trail and conflict model clear.
 - Verify completion by rerunning `python3 /vault/System/scripts/find_today_notes.py --json --inbox`
   and only report success when the processable note count is zero or remaining notes
   are intentionally left in place (for example, because they contain credentials).
-- When an Inbox/root capture is clearly a refreshed version of an existing `Notes/` page,
-  fold the capture into that existing page instead of creating a duplicate. Preserve and
-  update the existing page's frontmatter, add/update at least two related wikilinks,
-  touch the relevant MOC, update the existing `System/wiki-index.md` row, append a
-  `System/wiki-log.md` ingest entry saying the Inbox capture was folded in, then remove
-  the processed Inbox capture.
+- When an Inbox/root capture is clearly a refreshed version of existing `Notes/` coverage,
+  fold it into the existing page(s) instead of creating a duplicate generic note. Preserve
+  and update existing page frontmatter, add/update at least two related wikilinks, touch
+  relevant MOC(s), update existing `System/wiki-index.md` rows, append a
+  `System/wiki-log.md` ingest entry saying the capture was folded in, then remove the
+  processed Inbox capture.
+- If a refreshed capture contains multiple distinct durable topics, create only the new
+  atomic `Notes/` pages that are genuinely needed, while folding follow-up facts into
+  existing pages. For this mixed fold-in case: add each new page to relevant MOC(s), add
+  new wiki-index rows, increment `page_count` only by the number of new `Notes/` pages,
+  update touched existing index rows' `updated` dates, and write one wiki-log entry that
+  lists the Inbox capture, created pages, updated pages, MOCs touched, and removal status.
+  See `references/refreshed-capture-fold-in.md` for a concrete scheduled-refresh example.
 - Ad-hoc verification temp-file cleanup pitfall: if the run has already deleted or moved
   several vault files, do **not** combine verifier execution and temp-file deletion in one
   shell command (`python verifier; rm verifier`). The security guard may interpret the

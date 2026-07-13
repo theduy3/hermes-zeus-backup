@@ -10,10 +10,11 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 §
 Finance profile (Telegram) = user's Personal Finance bot — knows detailed financials, account balances, holdings. Charles should coordinate with it for portfolio strategy, retirement planning, and any advice that needs precise numbers.
 §
-Finance context 2026-07-04 PDT: portfolio cash ~$92.7k (~46.6%); NVDA ~$71.7k (~36.0% total, 67% invested assets). Liquidity/risk constrained by Jul card payments, TD mortgage monthly on 1st (keep TD chequing ≥$2k by 24th), SS rent PAD, Laviestella taxes/strata PAD, overdue Rivières tax package, Jenny loan agreement, Square/Desjardins admin. Avoid adding AI/semi beta; use staged deployment only after PAD/payment/admin checks.
+Finance context 2026-07-12 EDT: portfolio ~$200.1k CAD; cash ~$92.7k (46.3%) but reserved, not deployable until admin/payment setup clears; NVDA ~$73.6k (36.8%) main concentration. Upcoming Jul card payments 13/22/24/27; keep TD chequing ≥$2k by 24th for Aug 1 mortgage. Confirm SS rent PAD, Laviestella tax/strata PAD, Rivières tax package, Jenny loan, Amex Biz Plat cleanup before deployment. Avoid adding AI/semi beta; FHSA cash deployment gated.
 §
 §
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-12. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

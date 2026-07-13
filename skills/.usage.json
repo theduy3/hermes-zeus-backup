@@ -389,6 +389,19 @@
     "use_count": 0,
     "view_count": 0
   },
+  "github-workflows": {
+    "archived_at": null,
+    "created_at": "2026-07-08T07:00:47.845364+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-10T07:00:47.223292+00:00",
+    "last_viewed_at": "2026-07-10T07:00:47.215174+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
   "godmode": {
     "archived_at": null,
     "created_at": "2026-06-08T11:02:02.054437+00:00",
@@ -432,27 +445,27 @@
     "archived_at": null,
     "created_at": "2026-05-12T18:01:03.868073+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-02T01:04:20.659988+00:00",
-    "last_used_at": "2026-07-07T01:00:21.186042+00:00",
-    "last_viewed_at": "2026-07-07T01:00:21.182218+00:00",
-    "patch_count": 25,
+    "last_patched_at": "2026-07-11T01:03:11.762010+00:00",
+    "last_used_at": "2026-07-11T01:03:03.577002+00:00",
+    "last_viewed_at": "2026-07-11T01:03:03.542435+00:00",
+    "patch_count": 30,
     "pinned": false,
     "state": "active",
-    "use_count": 42,
-    "view_count": 42
+    "use_count": 49,
+    "view_count": 49
   },
   "hermes-agent": {
     "archived_at": null,
     "created_at": "2026-05-11T09:15:24.869805+00:00",
     "created_by": null,
     "last_patched_at": "2026-05-21T19:50:36.637086+00:00",
-    "last_used_at": "2026-07-06T16:15:15.388969+00:00",
-    "last_viewed_at": "2026-07-06T16:15:15.386080+00:00",
+    "last_used_at": "2026-07-13T04:01:54.233504+00:00",
+    "last_viewed_at": "2026-07-13T04:01:54.229038+00:00",
     "patch_count": 29,
     "pinned": false,
     "state": "active",
-    "use_count": 872,
-    "view_count": 872
+    "use_count": 881,
+    "view_count": 881
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -485,26 +498,26 @@
     "created_at": "2026-05-13T04:01:40.096916+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-29T07:03:23.359725+00:00",
-    "last_used_at": "2026-07-07T07:00:29.225638+00:00",
-    "last_viewed_at": "2026-07-07T07:00:29.221424+00:00",
+    "last_used_at": "2026-07-13T07:00:28.441547+00:00",
+    "last_viewed_at": "2026-07-13T07:00:28.432217+00:00",
     "patch_count": 23,
     "pinned": false,
     "state": "active",
-    "use_count": 59,
-    "view_count": 59
+    "use_count": 64,
+    "view_count": 64
   },
   "hermes-operations-troubleshooting": {
     "archived_at": null,
     "created_at": "2026-05-24T17:15:39.070238+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-07-06T16:19:30.856693+00:00",
-    "last_used_at": "2026-07-06T16:19:13.263951+00:00",
-    "last_viewed_at": "2026-07-06T16:19:13.260598+00:00",
+    "last_used_at": "2026-07-11T16:00:55.243722+00:00",
+    "last_viewed_at": "2026-07-11T16:00:55.198333+00:00",
     "patch_count": 28,
     "pinned": false,
     "state": "active",
-    "use_count": 26,
-    "view_count": 26
+    "use_count": 27,
+    "view_count": 27
   },
   "hermes-skill-installation": {
     "archived_at": null,
@@ -797,12 +810,12 @@
     "created_at": "2026-06-08T11:02:02.223976+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-07-07T01:10:16.724268+00:00",
+    "last_used_at": "2026-07-11T01:10:59.473888+00:00",
     "last_viewed_at": "2026-06-30T03:05:40.932680+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 22,
+    "use_count": 26,
     "view_count": 4
   },
   "obsidian-csv-import-ingest": {

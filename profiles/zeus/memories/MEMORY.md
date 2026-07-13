@@ -29,4 +29,13 @@ VN food sources: T&T Garden Burnaby (236)660-0515 groceries/prepared. Spot prawn
 §
 §
 §
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+§
+§
+§
+§
+§
+§
+§
+§
+Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-12. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

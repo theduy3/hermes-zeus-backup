@@ -94,6 +94,7 @@ Learned in practice:
    - **No-agent/script jobs may produce empty `## Response` sections.** Count these separately from `[SILENT]` and content responses. For watchdog-style jobs, an empty response usually means "no alert/no action"; verify by counting nonempty response sections before reporting them as successful activity.
 - **No-agent/script output files may have no `## Response` at all.** Some script-mode cron outputs are just a short markdown header with `**Status:** silent (empty output)`. Treat these as successful silent/no-alert runs when the job status is OK; do not misclassify them as missing or failed responses merely because the response section is absent. Count them separately as no-agent silent runs.
 - **Agent cron output can be empty even when the session has a substantive final answer.** If an output markdown has an empty `## Response` but the corresponding `session_search(session_id=...)` transcript exists, read the final nonempty assistant message from the transcript before calling the job silent. If the transcript is too large and saved to `/tmp/hermes-results/...`, parse that JSON and print only nonempty assistant messages to recover the final report.
+- **Avoid line-reading whole agent cron markdown when skills were loaded.** Cron output files embed the entire prompt and loaded skill text before the final response; `read_file()` from the top can waste context and never reach the useful result. For agent outputs, prefer a small Python/terminal extractor using `text.rfind("## Response")` or `text.rfind("## Error")`, then print only that final section. Use `read_file()` mainly for small script-mode outputs or when you already know the relevant line range.
 
 9. **Cross-check with health-check jobs**
    - If a daily health-check cron exists, read its output directly; it often contains the cleanest summary of gateway health, missing credentials, and broken dependencies.
@@ -128,6 +129,11 @@ Learned in practice:
 ~/.hermes/sessions/session_YYYYMMDD_*.json                 (interactive / non-cron sessions)
 ~/.hermes/cron/output/<job_id>/YYYY-MM-DD_*.md
 ```
+
+## References
+
+- `references/2026-07-07-daily-recap-pattern.md` — example of a cron-heavy, multi-profile daily recap where UTC had rolled over, user-local time still belonged to the prior day, named-profile outputs dominated, and a final re-scan changed the output count.
+- `references/2026-07-08-multi-profile-evening-recap.md` — example of a multi-profile evening recap where most work lived under named-profile cron outputs, no-agent silent runs needed separate classification, raw grep hit prompt/skill boilerplate, and a late co-scheduled `vault-tonight` output appeared during the recap.
 
 ## Good recap style
 

@@ -1,7 +1,14 @@
 {
-  "updated_at": "2026-07-07T06:57:57.701403",
+  "updated_at": "2026-07-13T06:58:46.015739",
   "platforms": {
-    "telegram": [],
+    "telegram": [
+      {
+        "id": "8446251233",
+        "name": "theduy",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
     "discord": [],
     "whatsapp": [],
     "whatsapp_cloud": [],

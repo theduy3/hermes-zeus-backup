@@ -1,0 +1,579 @@
+{
+  "jobs": [
+    {
+      "id": "3605d270d612",
+      "name": "Weekly Portfolio Briefing",
+      "prompt": "Every Sunday, send the user a concise Weekly Portfolio Briefing for their registered investment portfolio.\n\nTiming note: this job is scheduled for Sunday 16:00 America/Toronto, which is 9:00 AM Vancouver/EDT time during daylight time.\n\nUser style: terse, bullet-based, no fluff. Telegram format: no tables.\n\nKnown portfolio snapshot to use as baseline unless newer memory/session context is available:\n- Snapshot date: prices 2026-05-22 close; cash from 2026-05-19.\n- Total registered portfolio: about $199.07k CAD.\n- Cash: about $92.68k CAD (46.6%).\n- Holdings market value: about $106.39k CAD vs cost about $63.70k; open P/L about +$42.69k CAD (+67.0%).\n- Accounts: Wealthsimple RRSP about $155.17k; FHSA about $17.50k (VFV.TO +$1.21k); Questrade Spousal RRSP about $6.40k (holdings P/L +$0.69k); Questrade RSP cash $20k.\n- Holdings/share counts: FIG 27, GOOG 15, MPTA 11, NVDA 241, PLTR 3, RACE 21, VFV.TO 33.\n- Key risk: NVDA market value about $71.69k CAD, roughly 36.0% of registered portfolio; cash roughly 46.6%.\n\nTask each week:\n1. Retrieve current market prices/news/macro context for holdings: FIG, GOOG/GOOGL, MPTA, NVDA, PLTR, RACE, VFV.TO, plus USD/CAD if needed.\n2. Estimate current holding values and allocation using the known share counts and latest prices. Clearly label estimates if cash/account values are stale.\n3. Include: portfolio summary, holdings snapshot, biggest weekly movers or news, risk flags, and action watchlist.\n4. Separate facts from analysis/opinion. Include thesis/risks/timeline/confidence only if suggesting an action.\n5. End with: \u201cThis is analysis, not financial advice. Consult a qualified advisor before making investment decisions. Past performance does not guarantee future results.\u201d",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 0",
+        "display": "0 16 * * 0"
+      },
+      "schedule_display": "0 16 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 6
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-26T08:04:47.758272-07:00",
+      "next_run_at": "2026-07-12T16:00:00-04:00",
+      "last_run_at": "2026-07-05T16:02:35.555765-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "memory",
+        "skills",
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "f880138dc13c",
+      "name": "SpaceX share reminder - Aug 11 Wave 1",
+      "prompt": "Remind Duy: You asked to be reminded one day before Aug 11, 2026 (Wave 1 unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-10T16:00:00+00:00",
+        "display": "once at 2026-08-10 16:00"
+      },
+      "schedule_display": "once at 2026-08-10 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:34.860482-04:00",
+      "next_run_at": "2026-08-10T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "9b05139d0db8",
+      "name": "SpaceX share reminder - Aug 21 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Aug 21, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-20T16:00:00+00:00",
+        "display": "once at 2026-08-20 16:00"
+      },
+      "schedule_display": "once at 2026-08-20 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:35.864341-04:00",
+      "next_run_at": "2026-08-20T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "8104a0886300",
+      "name": "SpaceX share reminder - Sep 10 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Sep 10, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-09T16:00:00+00:00",
+        "display": "once at 2026-09-09 16:00"
+      },
+      "schedule_display": "once at 2026-09-09 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:36.868652-04:00",
+      "next_run_at": "2026-09-09T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "06c05e194def",
+      "name": "SpaceX share reminder - Sep 25 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Sep 25, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-24T16:00:00+00:00",
+        "display": "once at 2026-09-24 16:00"
+      },
+      "schedule_display": "once at 2026-09-24 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:37.872616-04:00",
+      "next_run_at": "2026-09-24T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "ef9ef32374ba",
+      "name": "SpaceX share reminder - Oct 10 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Oct 10, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-09T16:00:00+00:00",
+        "display": "once at 2026-10-09 16:00"
+      },
+      "schedule_display": "once at 2026-10-09 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:38.876329-04:00",
+      "next_run_at": "2026-10-09T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "c813af9546bf",
+      "name": "SpaceX share reminder - Oct 25 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Oct 25, 2026 (unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-24T16:00:00+00:00",
+        "display": "once at 2026-10-24 16:00"
+      },
+      "schedule_display": "once at 2026-10-24 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:39.880269-04:00",
+      "next_run_at": "2026-10-24T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "c7a08a2a6c56",
+      "name": "SpaceX share reminder - Nov 9 Q3 unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Nov 9, 2026 (Q3 unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-11-08T17:00:00+00:00",
+        "display": "once at 2026-11-08 17:00"
+      },
+      "schedule_display": "once at 2026-11-08 17:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:40.884562-04:00",
+      "next_run_at": "2026-11-08T17:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "95ca6ca2b099",
+      "name": "SpaceX share reminder - Dec 9 180d unlock",
+      "prompt": "Remind Duy: You asked to be reminded one day before Dec 9, 2026 (180d unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-12-08T17:00:00+00:00",
+        "display": "once at 2026-12-08 17:00"
+      },
+      "schedule_display": "once at 2026-12-08 17:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:41.889802-04:00",
+      "next_run_at": "2026-12-08T17:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "b8ddb33f17ab",
+      "name": "SpaceX share reminder - Jun 13 2027 Founder",
+      "prompt": "Remind Duy: You asked to be reminded one day before Jun 13, 2027 (Founder unlock) to consider buying more SpaceX shares. Keep it terse. Include: \"This is analysis, not financial advice.\"",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2027-06-12T16:00:00+00:00",
+        "display": "once at 2027-06-12 16:00"
+      },
+      "schedule_display": "once at 2027-06-12 16:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-16T23:28:42.893775-04:00",
+      "next_run_at": "2027-06-12T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "5b4ae97b08c1",
+      "name": "Weekly Pershing Square update",
+      "prompt": "Every Saturday morning, create or update the Obsidian note `/vault/Inbox/Pershing Square Update.md` in theduyvault with a fresh Pershing Square buy / hold / sell update.\n\nContext and requirements:\n- Vault path inside this Hermes environment is `/vault`; if `/vault` is unavailable, check `/Users/theduy/theduyvault`. If both are unavailable, report the blocker.\n- Use SEC EDGAR as the authoritative data source. Pershing Square Capital Management, L.P. CIK is `0001336528`.\n- Fetch the latest two `13F-HR` filings from `https://data.sec.gov/submissions/CIK0001336528.json`, then parse each filing's `infotable.xml` from SEC Archives.\n- Compare latest vs prior 13F by issuer, class, and put/call. For each row, compute latest value, prior value, delta value, latest shares, prior shares, delta shares, and signal: NEW/BUY if absent prior and present latest; SELL/EXIT if present prior and absent latest; ADD if share count rose; REDUCE if share count fell; HOLD if share count unchanged.\n- Also check recent `SCHEDULE 13D/A` filings in the latest 30 days for Pershing Square and summarize any material activist/control-position updates, especially Howard Hughes Holdings or Restaurant Brands if present.\n- Include a short market-context note only if supported by retrieved filings or reliable fetched data. Do not invent data.\n- Important: 13F option rows are not equivalent to cash equity exposure. Keep `Put` and `Call` rows separate and include a warning line about this.\n- Write the note in Markdown with this structure:\n  1. `# Pershing Square Update`\n  2. `Updated: YYYY-MM-DD HH:mm America/Toronto`\n  3. `## Executive summary` with 3-5 bullets\n  4. `## Buy / Add signals` table\n  5. `## Hold signals` table\n  6. `## Reduce / Sell signals` table\n  7. `## Full latest holdings` table\n  8. `## Filing links` with SEC source URLs\n  9. `## Notes and caveats`\n- Overwrite the entire note each run so it stays current.\n- After writing, read back the note header and first table lines to verify the file exists and was updated.\n- Final response should be terse: say updated path, latest filing date, number of holdings, and top buy/reduce/sell signals. Include blocker details if the update failed.",
+      "skills": [
+        "investment-analysis-workflows",
+        "obsidian"
+      ],
+      "skill": "investment-analysis-workflows",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 6",
+        "display": "0 9 * * 6"
+      },
+      "schedule_display": "0 9 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-22T10:58:29.074253-07:00",
+      "next_run_at": "2026-07-11T09:00:00-04:00",
+      "last_run_at": "2026-07-04T09:02:35.617910-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "8a602cdef4de",
+      "name": "Weekly Situational Awareness update",
+      "prompt": "Every Saturday morning, create or update the Obsidian note `/vault/Inbox/Situational Awareness Update.md` in theduyvault with a fresh Situational Awareness buy / hold / sell update.\n\nContext and requirements:\n- Vault path inside this Hermes environment is `/vault`; if `/vault` is unavailable, check `/Users/theduy/theduyvault`. If both are unavailable, report the blocker.\n- Use SEC EDGAR as the authoritative data source. Situational Awareness LP CIK is `0002045724`.\n- Fetch the latest two `13F-HR` filings from `https://data.sec.gov/submissions/CIK0002045724.json`, then parse each filing's information table XML from SEC Archives.\n- Compare latest vs prior 13F by issuer, class, and put/call. For each row, compute latest value, prior value, delta value, latest shares/contracts, prior shares/contracts, delta shares/contracts, and signal: NEW/BUY if absent prior and present latest; SELL/EXIT if present prior and absent latest; ADD if share count rose; REDUCE if share count fell; HOLD if share count unchanged.\n- Also check recent `SCHEDULE 13G`, `SCHEDULE 13D`, and `SCHEDULE 13D/A` filings in the latest 30 days and summarize any material beneficial ownership updates, especially Nebius Group if present.\n- Include a short market-context note only if supported by retrieved filings or reliable fetched data. Do not invent data.\n- Important: 13F option rows are not equivalent to cash equity exposure. Keep `Put` and `Call` rows separate and include a warning line about this.\n- Write the note in Markdown with this structure:\n  1. `# Situational Awareness Update`\n  2. `Updated: YYYY-MM-DD HH:mm America/Toronto`\n  3. `## Executive summary` with 3-5 bullets\n  4. `## Buy / Add signals` table\n  5. `## Hold signals` table\n  6. `## Reduce / Sell signals` table\n  7. `## Full latest holdings` table\n  8. `## Beneficial ownership / activist filings`\n  9. `## Filing links` with SEC source URLs\n  10. `## Notes and caveats`\n- Overwrite the entire note each run so it stays current.\n- After writing, read back the note header and first table lines to verify the file exists and was updated.\n- Final response should be terse: say updated path, latest filing date, number of holdings, top buy/add/reduce/sell signals, and any major beneficial ownership update. Include blocker details if the update failed.",
+      "skills": [
+        "investment-analysis-workflows",
+        "obsidian"
+      ],
+      "skill": "investment-analysis-workflows",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 6",
+        "display": "0 9 * * 6"
+      },
+      "schedule_display": "0 9 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-22T10:58:47.773319-07:00",
+      "next_run_at": "2026-07-11T09:00:00-04:00",
+      "last_run_at": "2026-07-04T09:04:18.536797-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "a592cff295ca",
+      "name": "Daily stock watchlist price and PE report",
+      "prompt": "Every day, send Duy a concise daily report of all stock tickers in the Obsidian watchlist with current price, P/E, sector grouping, and a buy/hold/sell sentiment comment.\n\nContext and requirements:\n- Vault path inside this Hermes environment is `/vault`; if `/vault` is unavailable, check `/Users/theduy/theduyvault`. If both are unavailable, report the blocker.\n- Watchlist config path is `/vault/System/Stock Watchlist.md` or `/Users/theduy/theduyvault/System/Stock Watchlist.md`.\n- Read the note and parse tickers under the `Watchlist: Ticker, Price, Chg %, 52W Range, P/E (fwd), Mkt Cap, Target (upside)` section only. Do not include the `Indicators:` section in the main equity tables.\n- Fetch current market data for every parsed ticker using available tools. Prefer `yfinance` if available; otherwise use Yahoo Finance chart endpoints. For each ticker, collect: last price, currency, daily % change, trailing P/E, forward P/E, market cap, sector, industry, analyst recommendation if available, target mean price if available, and 52-week range if available.\n- If yfinance sector is missing, classify manually from company identity into practical comparison groups. Suggested groups: Mega-cap AI / Platforms, Semiconductors, AI Infrastructure / Cloud, Data Centers / Power, Crypto Miners / Bitcoin Infrastructure, Consumer / Internet, ETFs / Funds, Other / Unresolved.\n- If a ticker cannot be resolved, include it in an `Unresolved` line instead of dropping it silently.\n- Output in Telegram-friendly Markdown:\n  - Heading: `Daily Watchlist - YYYY-MM-DD`\n  - Group tickers by sector / theme with one table per group. Keep ticker order from the watchlist within each group.\n  - Table columns: Ticker, Price, Chg %, P/E, Fwd P/E, Mkt Cap, Sentiment\n  - Sentiment must be one of: `Buy`, `Hold`, `Sell`, or `Watch`, with a terse reason in parentheses, e.g. `Hold (rich P/E)`, `Buy (reasonable Fwd P/E + positive target)`, `Sell (negative earnings + weak tape)`, `Watch (data missing)`.\n  - Use `N/A` when P/E is unavailable, especially ETFs or unprofitable companies.\n  - Add a short `Best opportunities today` section with 3-5 tickers that look most attractive on valuation / momentum / analyst target, clearly labeled as analysis not financial advice.\n  - Add a short `Avoid / wait` section with 3-5 tickers where valuation, negative earnings, data gaps, or daily weakness make the risk/reward less attractive.\n  - Add a short `Notes` section with 2-4 bullets for biggest gainers/losers and missing data.\n- Sentiment rules of thumb:\n  - Prefer `Buy` only when forward P/E is reasonable for the sector or target upside is positive and daily tape is not breaking down.\n  - Use `Hold` for high-quality companies with stretched valuation or neutral tape.\n  - Use `Sell` for clearly deteriorating names, extreme valuation with negative trend, or obvious thesis impairment.\n  - Use `Watch` for ETFs, missing data, highly speculative / unprofitable names, or names requiring deeper research.\n  - Do not overstate confidence. End with: `This is analysis, not financial advice.`\n- Keep the final response concise but readable. The goal is easier comparison and picking, not a long essay.",
+      "skills": [
+        "investment-analysis-workflows",
+        "obsidian"
+      ],
+      "skill": "investment-analysis-workflows",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 18
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-22T11:08:04.949047-07:00",
+      "next_run_at": "2026-07-10T09:00:00-07:00",
+      "last_run_at": "2026-07-09T09:02:04.235525-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-07-09T09:02:04.236205-07:00"
+}

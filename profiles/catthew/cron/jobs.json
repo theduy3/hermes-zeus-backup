@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 50
+        "completed": 55
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-07-07T07:00:00-07:00",
-      "last_run_at": "2026-07-06T07:01:08.267853-07:00",
+      "next_run_at": "2026-07-13T07:00:00-07:00",
+      "last_run_at": "2026-07-12T07:01:27.653696-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -70,16 +70,16 @@
       "schedule_display": "0 18 9,16,23,30 7 *",
       "repeat": {
         "times": 4,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:39:20.406427-07:00",
-      "next_run_at": "2026-07-09T18:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-07-16T18:00:00-07:00",
+      "last_run_at": "2026-07-09T18:00:26.969797-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
@@ -91,7 +91,8 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "04b02140bfe8",
@@ -285,15 +286,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 3656
+        "completed": 4232
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-07-07T08:00:00-07:00",
-      "last_run_at": "2026-07-06T23:50:21.566525-07:00",
+      "next_run_at": "2026-07-13T08:00:00-07:00",
+      "last_run_at": "2026-07-12T23:50:56.291597-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -332,15 +333,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T23:41:01.053318-07:00",
-      "next_run_at": "2026-07-12T16:00:00-07:00",
-      "last_run_at": "2026-07-05T16:06:50.228915-07:00",
+      "next_run_at": "2026-07-19T16:00:00-07:00",
+      "last_run_at": "2026-07-12T16:04:53.690644-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -406,97 +407,7 @@
       ],
       "workdir": null,
       "fire_claim": null
-    },
-    {
-      "id": "24b2049e7526",
-      "name": "Victoria gradual entry Day 4 reminder",
-      "prompt": "Send this exact household reminder to the family Telegram group. Do not create or modify cron jobs.\n\nReminder: Victoria gradual entry Day 4 today \u2014 9:00 AM to 3:30 PM. Victoria will stay through lunch and afternoon nap.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.5",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-07-07T15:15:00+00:00",
-        "display": "once at 2026-07-07 15:15"
-      },
-      "schedule_display": "once at 2026-07-07 15:15",
-      "repeat": {
-        "times": 1,
-        "completed": 0
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-02T23:08:01.251439-07:00",
-      "next_run_at": "2026-07-07T15:15:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "-5249331607",
-        "chat_name": "Catthew - the Butler",
-        "thread_id": null,
-        "user_id": "8446251233"
-      },
-      "enabled_toolsets": null,
-      "workdir": null
-    },
-    {
-      "id": "7ff1fc807991",
-      "name": "Victoria gradual entry Day 5 reminder",
-      "prompt": "Send this exact household reminder to the family Telegram group. Do not create or modify cron jobs.\n\nReminder: Victoria gradual entry Day 5 today \u2014 full day. Victoria will stay all day, shorter day if possible.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.5",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-07-08T15:00:00+00:00",
-        "display": "once at 2026-07-08 15:00"
-      },
-      "schedule_display": "once at 2026-07-08 15:00",
-      "repeat": {
-        "times": 1,
-        "completed": 0
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-02T23:08:02.286658-07:00",
-      "next_run_at": "2026-07-08T15:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "-5249331607",
-        "chat_name": "Catthew - the Butler",
-        "thread_id": null,
-        "user_id": "8446251233"
-      },
-      "enabled_toolsets": null,
-      "workdir": null
     }
   ],
-  "updated_at": "2026-07-06T23:50:21.567319-07:00"
+  "updated_at": "2026-07-12T23:50:56.292077-07:00"
 }
