@@ -10,11 +10,7 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 §
 Finance profile (Telegram) = user's Personal Finance bot — knows detailed financials, account balances, holdings. Charles should coordinate with it for portfolio strategy, retirement planning, and any advice that needs precise numbers.
 §
-Finance context 2026-07-12 EDT: portfolio ~$200.1k CAD; cash ~$92.7k (46.3%) but reserved, not deployable until admin/payment setup clears; NVDA ~$73.6k (36.8%) main concentration. Upcoming Jul card payments 13/22/24/27; keep TD chequing ≥$2k by 24th for Aug 1 mortgage. Confirm SS rent PAD, Laviestella tax/strata PAD, Rivières tax package, Jenny loan, Amex Biz Plat cleanup before deployment. Avoid adding AI/semi beta; FHSA cash deployment gated.
+Finance (Aug 8, 2026): CAD92.7k cash reserved—not deployable—against unknown cards, Desjardins QC, Rivieres tax, Jenny loan. CIBC Costco 4276 Aug13; TD Biz 9716/CIBC 6929/TD 7243 overdue. Keep CAD2k TD chequing by 24th; mortgage debits 1st. Jenny unsigned, Rivieres tax docs incomplete, mortgage-insurance cancellation unconfirmed. Preserve liquidity; NVDA ~36%; no correlated AI/semi adds.
 §
+Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-knowledge-base. Before personal-context answers or substantial writes, read agent_rules.md and search this KB; memory is routing only, never the database.
 §
-§
-§
-§
-§
-Active travel context: destination unspecified destination; timezone America/Vancouver (PDT); set 2026-07-12. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

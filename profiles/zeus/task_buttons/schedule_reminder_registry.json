@@ -1,0 +1,1543 @@
+{
+  "2026-07-21:setup": {
+    "message_id": 1411,
+    "sent_at": "2026-07-21T09:00:46.041973-07:00",
+    "title": "9:00–9:05 — Daily setup",
+    "items": [
+      "Confirm Top 3 and fixed appointments"
+    ]
+  },
+  "2026-07-21:p1": {
+    "message_id": 1412,
+    "sent_at": "2026-07-21T09:10:46.106397-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work",
+    "items": [
+      "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM 60m"
+    ]
+  },
+  "2026-07-21:break1": {
+    "message_id": 1413,
+    "sent_at": "2026-07-21T09:30:46.361874-07:00",
+    "title": "9:30–9:35 — Break",
+    "items": [
+      "Stand up / water / reset"
+    ]
+  },
+  "2026-07-21:p2": {
+    "message_id": 1414,
+    "sent_at": "2026-07-21T09:40:46.428968-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work",
+    "items": [
+      "Check Clover Software Plan Pricing 60m"
+    ]
+  },
+  "2026-07-21:brunch": {
+    "message_id": 1415,
+    "sent_at": "2026-07-21T10:00:46.722762-07:00",
+    "title": "10:00–10:30 — Brunch",
+    "items": [
+      "Brunch",
+      "Water 2/6"
+    ]
+  },
+  "2026-07-21:p3": {
+    "message_id": 1420,
+    "sent_at": "2026-07-21T10:30:47.148055-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-21:break2": {
+    "message_id": 1421,
+    "sent_at": "2026-07-21T10:55:47.395409-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-21:p4": {
+    "message_id": 1422,
+    "sent_at": "2026-07-21T11:05:47.521723-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-21:buffer1": {
+    "message_id": 1423,
+    "sent_at": "2026-07-21T11:25:47.796768-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-21:company": {
+    "message_id": 1424,
+    "sent_at": "2026-07-21T11:45:48.101904-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-21:p5": {
+    "message_id": 1428,
+    "sent_at": "2026-07-21T12:15:48.496007-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-21:buffer2": {
+    "message_id": 1430,
+    "sent_at": "2026-07-21T12:40:48.733028-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-21:p6": {
+    "message_id": 1431,
+    "sent_at": "2026-07-21T13:00:49.030078-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-21:break3": {
+    "message_id": 1432,
+    "sent_at": "2026-07-21T13:25:49.409239-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-21:p7": {
+    "message_id": 1433,
+    "sent_at": "2026-07-21T13:35:49.532674-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-21:protein": {
+    "message_id": 1434,
+    "sent_at": "2026-07-21T14:00:49.900655-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-21:exercise": {
+    "message_id": 1435,
+    "sent_at": "2026-07-21T14:15:50.088465-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-22:setup": {
+    "message_id": 1446,
+    "sent_at": "2026-07-22T09:00:09.831156-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-22:p1": {
+    "message_id": 1448,
+    "sent_at": "2026-07-22T09:10:09.816860-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-22:break1": {
+    "message_id": 1451,
+    "sent_at": "2026-07-22T09:30:10.202713-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-22:p2": {
+    "message_id": 1452,
+    "sent_at": "2026-07-22T09:40:10.258421-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-22:brunch": {
+    "message_id": 1453,
+    "sent_at": "2026-07-22T10:00:10.631903-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-22:p3": {
+    "message_id": 1454,
+    "sent_at": "2026-07-22T10:30:10.919845-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-22:break2": {
+    "message_id": 1463,
+    "sent_at": "2026-07-22T10:55:11.179894-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-22:p4": {
+    "message_id": 1464,
+    "sent_at": "2026-07-22T11:05:11.321645-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-22:buffer1": {
+    "message_id": 1475,
+    "sent_at": "2026-07-22T11:25:11.603106-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-22:company": {
+    "message_id": 1476,
+    "sent_at": "2026-07-22T11:45:11.932792-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-22:p5": {
+    "message_id": 1477,
+    "sent_at": "2026-07-22T12:15:12.343910-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-22:buffer2": {
+    "message_id": 1478,
+    "sent_at": "2026-07-22T12:40:12.669457-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-22:p6": {
+    "message_id": 1479,
+    "sent_at": "2026-07-22T13:00:13.030385-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-22:break3": {
+    "message_id": 1480,
+    "sent_at": "2026-07-22T13:25:13.342985-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-22:p7": {
+    "message_id": 1481,
+    "sent_at": "2026-07-22T13:35:13.530393-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-22:protein": {
+    "message_id": 1482,
+    "sent_at": "2026-07-22T14:00:13.927489-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-22:exercise": {
+    "message_id": 1483,
+    "sent_at": "2026-07-22T14:15:14.115128-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-23:setup": {
+    "message_id": 1502,
+    "sent_at": "2026-07-23T09:00:26.076928-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-23:p1": {
+    "message_id": 1503,
+    "sent_at": "2026-07-23T09:10:26.138946-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-23:break1": {
+    "message_id": 1504,
+    "sent_at": "2026-07-23T09:30:26.458283-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-23:p2": {
+    "message_id": 1505,
+    "sent_at": "2026-07-23T09:40:26.588640-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-23:brunch": {
+    "message_id": 1506,
+    "sent_at": "2026-07-23T10:00:27.126888-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-23:p3": {
+    "message_id": 1507,
+    "sent_at": "2026-07-23T10:30:27.479973-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-23:break2": {
+    "message_id": 1508,
+    "sent_at": "2026-07-23T10:55:27.706261-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-23:p4": {
+    "message_id": 1509,
+    "sent_at": "2026-07-23T11:05:27.867001-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-23:buffer1": {
+    "message_id": 1510,
+    "sent_at": "2026-07-23T11:25:28.166388-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-23:company": {
+    "message_id": 1511,
+    "sent_at": "2026-07-23T11:45:28.474909-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-23:p5": {
+    "message_id": 1512,
+    "sent_at": "2026-07-23T12:15:28.854536-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-23:buffer2": {
+    "message_id": 1513,
+    "sent_at": "2026-07-23T12:40:29.072172-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-23:p6": {
+    "message_id": 1514,
+    "sent_at": "2026-07-23T13:00:29.385947-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-23:break3": {
+    "message_id": 1516,
+    "sent_at": "2026-07-23T13:25:29.598393-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-23:p7": {
+    "message_id": 1521,
+    "sent_at": "2026-07-23T13:35:29.737464-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-23:protein": {
+    "message_id": 1522,
+    "sent_at": "2026-07-23T14:00:30.074540-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-23:exercise": {
+    "message_id": 1523,
+    "sent_at": "2026-07-23T14:15:30.271229-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-24:setup": {
+    "message_id": 1529,
+    "sent_at": "2026-07-24T09:00:42.988402-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-24:p1": {
+    "message_id": 1530,
+    "sent_at": "2026-07-24T09:10:43.098752-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-24:break1": {
+    "message_id": 1531,
+    "sent_at": "2026-07-24T09:30:43.512252-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-24:p2": {
+    "message_id": 1532,
+    "sent_at": "2026-07-24T09:40:43.582829-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-24:brunch": {
+    "message_id": 1533,
+    "sent_at": "2026-07-24T10:00:43.987484-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-24:p3": {
+    "message_id": 1534,
+    "sent_at": "2026-07-24T10:30:44.407071-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-24:break2": {
+    "message_id": 1535,
+    "sent_at": "2026-07-24T10:55:44.675468-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-24:p4": {
+    "message_id": 1536,
+    "sent_at": "2026-07-24T11:05:44.799823-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-24:buffer1": {
+    "message_id": 1537,
+    "sent_at": "2026-07-24T11:25:45.054716-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-24:company": {
+    "message_id": 1538,
+    "sent_at": "2026-07-24T11:45:45.389730-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-24:p5": {
+    "message_id": 1539,
+    "sent_at": "2026-07-24T12:15:45.823477-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-24:buffer2": {
+    "message_id": 1540,
+    "sent_at": "2026-07-24T12:40:46.112098-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-24:p6": {
+    "message_id": 1541,
+    "sent_at": "2026-07-24T13:00:46.472778-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-24:break3": {
+    "message_id": 1542,
+    "sent_at": "2026-07-24T13:25:46.791874-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-24:p7": {
+    "message_id": 1543,
+    "sent_at": "2026-07-24T13:35:46.910974-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-24:protein": {
+    "message_id": 1544,
+    "sent_at": "2026-07-24T14:00:15.114415-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-24:exercise": {
+    "message_id": 1545,
+    "sent_at": "2026-07-24T14:15:15.299735-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-27:setup": {
+    "message_id": 1580,
+    "sent_at": "2026-07-27T09:00:12.108580-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-27:p1": {
+    "message_id": 1581,
+    "sent_at": "2026-07-27T09:10:12.219790-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-27:break1": {
+    "message_id": 1582,
+    "sent_at": "2026-07-27T09:30:13.347135-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-27:p2": {
+    "message_id": 1583,
+    "sent_at": "2026-07-27T09:40:13.420499-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-27:brunch": {
+    "message_id": 1584,
+    "sent_at": "2026-07-27T10:00:13.767453-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-27:p3": {
+    "message_id": 1585,
+    "sent_at": "2026-07-27T10:30:14.291478-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-27:break2": {
+    "message_id": 1586,
+    "sent_at": "2026-07-27T10:55:14.594713-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-27:p4": {
+    "message_id": 1587,
+    "sent_at": "2026-07-27T11:05:14.800171-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-27:buffer1": {
+    "message_id": 1596,
+    "sent_at": "2026-07-27T11:25:15.084260-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-27:company": {
+    "message_id": 1597,
+    "sent_at": "2026-07-27T11:45:15.447335-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-27:p5": {
+    "message_id": 1598,
+    "sent_at": "2026-07-27T12:15:15.948209-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-27:buffer2": {
+    "message_id": 1599,
+    "sent_at": "2026-07-27T12:40:16.238992-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-27:p6": {
+    "message_id": 1604,
+    "sent_at": "2026-07-27T13:00:16.595772-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-27:break3": {
+    "message_id": 1605,
+    "sent_at": "2026-07-27T13:25:17.047645-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-27:p7": {
+    "message_id": 1606,
+    "sent_at": "2026-07-27T13:35:17.198800-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-27:protein": {
+    "message_id": 1607,
+    "sent_at": "2026-07-27T14:00:17.810202-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-27:exercise": {
+    "message_id": 1608,
+    "sent_at": "2026-07-27T14:15:17.861818-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-28:setup": {
+    "message_id": 1615,
+    "sent_at": "2026-07-28T09:00:38.620175-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-28:p1": {
+    "message_id": 1616,
+    "sent_at": "2026-07-28T09:10:38.792474-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-28:break1": {
+    "message_id": 1617,
+    "sent_at": "2026-07-28T09:30:39.172689-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-28:p2": {
+    "message_id": 1618,
+    "sent_at": "2026-07-28T09:40:39.284031-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-28:brunch": {
+    "message_id": 1619,
+    "sent_at": "2026-07-28T10:00:39.665251-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-28:p3": {
+    "message_id": 1620,
+    "sent_at": "2026-07-28T10:30:40.075307-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-28:break2": {
+    "message_id": 1622,
+    "sent_at": "2026-07-28T10:55:40.388370-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-28:p4": {
+    "message_id": 1624,
+    "sent_at": "2026-07-28T11:05:40.572060-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-28:buffer1": {
+    "message_id": 1625,
+    "sent_at": "2026-07-28T11:25:40.986845-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-28:company": {
+    "message_id": 1626,
+    "sent_at": "2026-07-28T11:45:41.359611-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-28:p5": {
+    "message_id": 1627,
+    "sent_at": "2026-07-28T12:15:41.937405-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-28:buffer2": {
+    "message_id": 1628,
+    "sent_at": "2026-07-28T12:40:42.223660-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-28:p6": {
+    "message_id": 1629,
+    "sent_at": "2026-07-28T13:00:42.626219-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-28:break3": {
+    "message_id": 1630,
+    "sent_at": "2026-07-28T13:25:43.062547-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-28:p7": {
+    "message_id": 1631,
+    "sent_at": "2026-07-28T13:35:43.429867-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-28:protein": {
+    "message_id": 1632,
+    "sent_at": "2026-07-28T14:00:43.832496-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-28:exercise": {
+    "message_id": 1633,
+    "sent_at": "2026-07-28T14:15:44.017985-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-29:setup": {
+    "message_id": 1638,
+    "sent_at": "2026-07-29T09:00:38.503098-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-29:p1": {
+    "message_id": 1639,
+    "sent_at": "2026-07-29T09:10:38.575275-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-29:break1": {
+    "message_id": 1640,
+    "sent_at": "2026-07-29T09:30:38.926792-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-29:p2": {
+    "message_id": 1641,
+    "sent_at": "2026-07-29T09:40:39.015241-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-29:brunch": {
+    "message_id": 1642,
+    "sent_at": "2026-07-29T10:00:39.457008-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-29:p3": {
+    "message_id": 1643,
+    "sent_at": "2026-07-29T10:30:39.890615-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-29:break2": {
+    "message_id": 1644,
+    "sent_at": "2026-07-29T10:55:40.218228-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-29:p4": {
+    "message_id": 1645,
+    "sent_at": "2026-07-29T11:05:40.417916-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-29:buffer1": {
+    "message_id": 1646,
+    "sent_at": "2026-07-29T11:25:40.728831-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-29:company": {
+    "message_id": 1647,
+    "sent_at": "2026-07-29T11:45:41.088648-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-29:p5": {
+    "message_id": 1648,
+    "sent_at": "2026-07-29T12:15:41.494014-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-29:buffer2": {
+    "message_id": 1649,
+    "sent_at": "2026-07-29T12:40:41.816519-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-29:p6": {
+    "message_id": 1650,
+    "sent_at": "2026-07-29T13:00:42.203663-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-29:break3": {
+    "message_id": 1651,
+    "sent_at": "2026-07-29T13:25:42.473479-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-29:p7": {
+    "message_id": 1652,
+    "sent_at": "2026-07-29T13:35:42.616770-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-29:protein": {
+    "message_id": 1653,
+    "sent_at": "2026-07-29T14:00:43.064725-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-29:exercise": {
+    "message_id": 1654,
+    "sent_at": "2026-07-29T14:15:43.296366-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-30:setup": {
+    "message_id": 1657,
+    "sent_at": "2026-07-30T09:00:56.287747-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-30:p1": {
+    "message_id": 1658,
+    "sent_at": "2026-07-30T09:10:56.357927-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-30:break1": {
+    "message_id": 1659,
+    "sent_at": "2026-07-30T09:30:22.792614-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-30:p2": {
+    "message_id": 1660,
+    "sent_at": "2026-07-30T09:40:22.793050-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-30:brunch": {
+    "message_id": 1661,
+    "sent_at": "2026-07-30T10:00:27.320676-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-30:p3": {
+    "message_id": 1662,
+    "sent_at": "2026-07-30T10:30:27.456950-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-30:break2": {
+    "message_id": 1663,
+    "sent_at": "2026-07-30T10:55:34.849036-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-30:p4": {
+    "message_id": 1664,
+    "sent_at": "2026-07-30T11:05:34.992736-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-30:buffer1": {
+    "message_id": 1665,
+    "sent_at": "2026-07-30T11:25:37.781786-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-30:company": {
+    "message_id": 1666,
+    "sent_at": "2026-07-30T11:45:45.699909-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-30:p5": {
+    "message_id": 1667,
+    "sent_at": "2026-07-30T12:15:51.574152-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-30:buffer2": {
+    "message_id": 1668,
+    "sent_at": "2026-07-30T12:40:53.234178-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-30:p6": {
+    "message_id": 1669,
+    "sent_at": "2026-07-30T13:00:35.047186-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-30:break3": {
+    "message_id": 1670,
+    "sent_at": "2026-07-30T13:25:20.374732-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-30:p7": {
+    "message_id": 1671,
+    "sent_at": "2026-07-30T13:35:20.914618-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-30:protein": {
+    "message_id": 1672,
+    "sent_at": "2026-07-30T14:00:21.556838-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-30:exercise": {
+    "message_id": 1673,
+    "sent_at": "2026-07-30T14:15:21.671180-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-07-31:setup": {
+    "message_id": 1676,
+    "sent_at": "2026-07-31T09:00:29.656783-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-07-31:p1": {
+    "message_id": 1677,
+    "sent_at": "2026-07-31T09:10:29.687636-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-07-31:break1": {
+    "message_id": 1678,
+    "sent_at": "2026-07-31T09:30:30.053763-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-07-31:p2": {
+    "message_id": 1679,
+    "sent_at": "2026-07-31T09:40:30.158934-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-07-31:brunch": {
+    "message_id": 1680,
+    "sent_at": "2026-07-31T10:00:30.548507-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-07-31:p3": {
+    "message_id": 1681,
+    "sent_at": "2026-07-31T10:30:30.987337-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-07-31:break2": {
+    "message_id": 1682,
+    "sent_at": "2026-07-31T10:55:31.301694-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-07-31:p4": {
+    "message_id": 1683,
+    "sent_at": "2026-07-31T11:05:31.465557-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-07-31:buffer1": {
+    "message_id": 1684,
+    "sent_at": "2026-07-31T11:25:31.731923-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-07-31:company": {
+    "message_id": 1685,
+    "sent_at": "2026-07-31T11:45:32.069263-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-07-31:p5": {
+    "message_id": 1686,
+    "sent_at": "2026-07-31T12:15:32.525722-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-07-31:buffer2": {
+    "message_id": 1687,
+    "sent_at": "2026-07-31T12:40:32.815480-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-07-31:p6": {
+    "message_id": 1688,
+    "sent_at": "2026-07-31T13:00:33.166516-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-07-31:break3": {
+    "message_id": 1689,
+    "sent_at": "2026-07-31T13:25:33.443783-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-07-31:p7": {
+    "message_id": 1690,
+    "sent_at": "2026-07-31T13:35:33.583226-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-07-31:protein": {
+    "message_id": 1691,
+    "sent_at": "2026-07-31T14:00:34.019344-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-07-31:exercise": {
+    "message_id": 1692,
+    "sent_at": "2026-07-31T14:15:34.302470-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-03:setup": {
+    "message_id": 1722,
+    "sent_at": "2026-08-03T09:00:19.670283-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-03:break1": {
+    "message_id": 1723,
+    "sent_at": "2026-08-03T09:30:28.877658-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-03:p2": {
+    "message_id": 1724,
+    "sent_at": "2026-08-03T09:40:28.961863-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-03:brunch": {
+    "message_id": 1725,
+    "sent_at": "2026-08-03T10:00:29.350509-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-03:p3": {
+    "message_id": 1726,
+    "sent_at": "2026-08-03T10:30:29.712856-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-03:break2": {
+    "message_id": 1727,
+    "sent_at": "2026-08-03T10:55:29.992821-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-03:p4": {
+    "message_id": 1728,
+    "sent_at": "2026-08-03T11:05:30.160969-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-03:buffer1": {
+    "message_id": 1729,
+    "sent_at": "2026-08-03T11:25:30.479908-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-03:company": {
+    "message_id": 1734,
+    "sent_at": "2026-08-03T11:45:30.953929-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-03:p5": {
+    "message_id": 1735,
+    "sent_at": "2026-08-03T12:15:31.345403-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-03:buffer2": {
+    "message_id": 1736,
+    "sent_at": "2026-08-03T12:40:31.648996-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-03:p6": {
+    "message_id": 1737,
+    "sent_at": "2026-08-03T13:00:32.043499-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-03:break3": {
+    "message_id": 1738,
+    "sent_at": "2026-08-03T13:25:32.304659-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-03:p7": {
+    "message_id": 1739,
+    "sent_at": "2026-08-03T13:35:32.436222-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-03:protein": {
+    "message_id": 1740,
+    "sent_at": "2026-08-03T14:00:32.880942-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-03:exercise": {
+    "message_id": 1741,
+    "sent_at": "2026-08-03T14:15:33.078383-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-04:setup": {
+    "message_id": 1749,
+    "sent_at": "2026-08-04T09:00:46.434147-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-04:p1": {
+    "message_id": 1750,
+    "sent_at": "2026-08-04T09:10:46.395051-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-04:break1": {
+    "message_id": 1751,
+    "sent_at": "2026-08-04T09:30:46.758732-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-04:p2": {
+    "message_id": 1752,
+    "sent_at": "2026-08-04T09:40:46.837289-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-04:brunch": {
+    "message_id": 1753,
+    "sent_at": "2026-08-04T10:00:47.261269-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-04:p3": {
+    "message_id": 1754,
+    "sent_at": "2026-08-04T10:30:47.767392-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-04:break2": {
+    "message_id": 1755,
+    "sent_at": "2026-08-04T10:55:48.108955-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-04:p4": {
+    "message_id": 1756,
+    "sent_at": "2026-08-04T11:05:48.298956-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-04:buffer1": {
+    "message_id": 1757,
+    "sent_at": "2026-08-04T11:25:48.645950-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-04:company": {
+    "message_id": 1758,
+    "sent_at": "2026-08-04T11:45:49.081933-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-04:p5": {
+    "message_id": 1759,
+    "sent_at": "2026-08-04T12:15:49.571020-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-04:buffer2": {
+    "message_id": 1760,
+    "sent_at": "2026-08-04T12:40:49.930616-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-04:p6": {
+    "message_id": 1761,
+    "sent_at": "2026-08-04T13:00:50.308370-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-04:break3": {
+    "message_id": 1762,
+    "sent_at": "2026-08-04T13:25:50.570055-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-04:p7": {
+    "message_id": 1763,
+    "sent_at": "2026-08-04T13:35:50.735696-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-04:protein": {
+    "message_id": 1764,
+    "sent_at": "2026-08-04T14:00:51.191869-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-04:exercise": {
+    "message_id": 1765,
+    "sent_at": "2026-08-04T14:15:51.361916-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-05:setup": {
+    "message_id": 1769,
+    "sent_at": "2026-08-05T09:00:04.132313-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-05:p1": {
+    "message_id": 1770,
+    "sent_at": "2026-08-05T09:10:04.218487-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-05:break1": {
+    "message_id": 1771,
+    "sent_at": "2026-08-05T09:30:04.640056-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-05:p2": {
+    "message_id": 1772,
+    "sent_at": "2026-08-05T09:40:04.696157-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-05:brunch": {
+    "message_id": 1773,
+    "sent_at": "2026-08-05T10:00:05.281554-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-05:p3": {
+    "message_id": 1774,
+    "sent_at": "2026-08-05T10:30:05.830074-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-05:break2": {
+    "message_id": 1775,
+    "sent_at": "2026-08-05T10:55:06.033314-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-05:p4": {
+    "message_id": 1776,
+    "sent_at": "2026-08-05T11:05:06.197865-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-05:buffer1": {
+    "message_id": 1777,
+    "sent_at": "2026-08-05T11:25:06.524158-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-05:company": {
+    "message_id": 1778,
+    "sent_at": "2026-08-05T11:45:06.908699-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-05:p5": {
+    "message_id": 1779,
+    "sent_at": "2026-08-05T12:15:07.363515-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-05:buffer2": {
+    "message_id": 1780,
+    "sent_at": "2026-08-05T12:40:07.749540-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-05:p6": {
+    "message_id": 1781,
+    "sent_at": "2026-08-05T13:00:08.070746-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-05:break3": {
+    "message_id": 1782,
+    "sent_at": "2026-08-05T13:25:08.379558-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-05:p7": {
+    "message_id": 1783,
+    "sent_at": "2026-08-05T13:35:08.549683-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-05:protein": {
+    "message_id": 1784,
+    "sent_at": "2026-08-05T14:00:08.988927-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-05:exercise": {
+    "message_id": 1785,
+    "sent_at": "2026-08-05T14:15:09.220274-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-06:setup": {
+    "message_id": 1788,
+    "sent_at": "2026-08-06T09:00:22.582146-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-06:p1": {
+    "message_id": 1789,
+    "sent_at": "2026-08-06T09:10:22.709332-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-06:break1": {
+    "message_id": 1790,
+    "sent_at": "2026-08-06T09:30:23.040029-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-06:p2": {
+    "message_id": 1791,
+    "sent_at": "2026-08-06T09:40:23.137135-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-06:brunch": {
+    "message_id": 1792,
+    "sent_at": "2026-08-06T10:00:23.523965-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-06:p3": {
+    "message_id": 1793,
+    "sent_at": "2026-08-06T10:30:24.116572-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-06:break2": {
+    "message_id": 1794,
+    "sent_at": "2026-08-06T10:55:24.400507-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-06:p4": {
+    "message_id": 1795,
+    "sent_at": "2026-08-06T11:05:24.592130-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-06:buffer1": {
+    "message_id": 1796,
+    "sent_at": "2026-08-06T11:25:25.016614-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-06:company": {
+    "message_id": 1797,
+    "sent_at": "2026-08-06T11:45:25.462536-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-06:p5": {
+    "message_id": 1798,
+    "sent_at": "2026-08-06T12:15:25.840900-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-06:buffer2": {
+    "message_id": 1799,
+    "sent_at": "2026-08-06T12:40:26.157509-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-06:p6": {
+    "message_id": 1800,
+    "sent_at": "2026-08-06T13:00:26.530848-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-06:break3": {
+    "message_id": 1801,
+    "sent_at": "2026-08-06T13:25:26.880018-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-06:p7": {
+    "message_id": 1802,
+    "sent_at": "2026-08-06T13:35:27.051845-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-06:protein": {
+    "message_id": 1803,
+    "sent_at": "2026-08-06T14:00:27.578194-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-06:exercise": {
+    "message_id": 1804,
+    "sent_at": "2026-08-06T14:15:27.779286-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-07:setup": {
+    "message_id": 1825,
+    "sent_at": "2026-08-07T09:00:05.923761-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-07:p1": {
+    "message_id": 1830,
+    "sent_at": "2026-08-07T09:10:06.004927-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-07:break1": {
+    "message_id": 1833,
+    "sent_at": "2026-08-07T09:30:06.401407-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-07:p2": {
+    "message_id": 1834,
+    "sent_at": "2026-08-07T09:40:06.478899-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-07:brunch": {
+    "message_id": 1835,
+    "sent_at": "2026-08-07T10:00:06.835751-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-07:p3": {
+    "message_id": 1839,
+    "sent_at": "2026-08-07T10:30:07.281300-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-07:break2": {
+    "message_id": 1840,
+    "sent_at": "2026-08-07T10:55:07.548856-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-07:p4": {
+    "message_id": 1841,
+    "sent_at": "2026-08-07T11:05:07.746083-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-07:buffer1": {
+    "message_id": 1842,
+    "sent_at": "2026-08-07T11:25:08.034915-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-07:company": {
+    "message_id": 1843,
+    "sent_at": "2026-08-07T11:45:08.371878-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-07:p5": {
+    "message_id": 1844,
+    "sent_at": "2026-08-07T12:15:08.834708-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-07:buffer2": {
+    "message_id": 1845,
+    "sent_at": "2026-08-07T12:40:09.207076-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-07:p6": {
+    "message_id": 1846,
+    "sent_at": "2026-08-07T13:00:09.584045-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-07:break3": {
+    "message_id": 1847,
+    "sent_at": "2026-08-07T13:25:09.917151-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-07:p7": {
+    "message_id": 1848,
+    "sent_at": "2026-08-07T13:35:10.081785-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-07:protein": {
+    "message_id": 1849,
+    "sent_at": "2026-08-07T14:00:10.487755-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-07:exercise": {
+    "message_id": 1850,
+    "sent_at": "2026-08-07T14:15:10.690901-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-10:setup": {
+    "message_id": 1863,
+    "sent_at": "2026-08-10T09:00:09.143920-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-10:p1": {
+    "message_id": 1864,
+    "sent_at": "2026-08-10T09:10:09.916986-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-10:break1": {
+    "message_id": 1865,
+    "sent_at": "2026-08-10T09:30:10.330145-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-10:p2": {
+    "message_id": 1866,
+    "sent_at": "2026-08-10T09:40:10.397812-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-10:brunch": {
+    "message_id": 1867,
+    "sent_at": "2026-08-10T10:00:10.725977-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-10:p3": {
+    "message_id": 1868,
+    "sent_at": "2026-08-10T10:30:11.133351-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-10:break2": {
+    "message_id": 1869,
+    "sent_at": "2026-08-10T10:55:11.374308-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-10:p4": {
+    "message_id": 1870,
+    "sent_at": "2026-08-10T11:05:11.560213-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-10:buffer1": {
+    "message_id": 1871,
+    "sent_at": "2026-08-10T11:25:11.830608-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-10:company": {
+    "message_id": 1872,
+    "sent_at": "2026-08-10T11:45:12.169643-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-10:p5": {
+    "message_id": 1873,
+    "sent_at": "2026-08-10T12:15:12.584646-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-10:buffer2": {
+    "message_id": 1874,
+    "sent_at": "2026-08-10T12:40:12.940722-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-10:p6": {
+    "message_id": 1875,
+    "sent_at": "2026-08-10T13:00:13.245226-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-10:break3": {
+    "message_id": 1876,
+    "sent_at": "2026-08-10T13:25:13.572552-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-10:p7": {
+    "message_id": 1877,
+    "sent_at": "2026-08-10T13:35:13.708496-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-10:protein": {
+    "message_id": 1878,
+    "sent_at": "2026-08-10T14:00:14.186372-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-10:exercise": {
+    "message_id": 1879,
+    "sent_at": "2026-08-10T14:15:14.341479-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-11:setup": {
+    "message_id": 1882,
+    "sent_at": "2026-08-11T09:00:24.099391-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-11:p1": {
+    "message_id": 1883,
+    "sent_at": "2026-08-11T09:10:24.044160-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-11:break1": {
+    "message_id": 1884,
+    "sent_at": "2026-08-11T09:30:24.393219-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-11:p2": {
+    "message_id": 1885,
+    "sent_at": "2026-08-11T09:40:24.450739-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-11:brunch": {
+    "message_id": 1886,
+    "sent_at": "2026-08-11T10:00:24.999615-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-11:p3": {
+    "message_id": 1887,
+    "sent_at": "2026-08-11T10:30:25.241023-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-11:break2": {
+    "message_id": 1888,
+    "sent_at": "2026-08-11T10:55:50.048919-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-11:p4": {
+    "message_id": 1889,
+    "sent_at": "2026-08-11T11:01:10.298207-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-11:buffer1": {
+    "message_id": 1890,
+    "sent_at": "2026-08-11T11:25:24.943746-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-11:company": {
+    "message_id": 1891,
+    "sent_at": "2026-08-11T11:45:27.675381-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-11:p5": {
+    "message_id": 1892,
+    "sent_at": "2026-08-11T12:15:32.440255-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-11:buffer2": {
+    "message_id": 1893,
+    "sent_at": "2026-08-11T12:40:19.480806-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-11:p6": {
+    "message_id": 1894,
+    "sent_at": "2026-08-11T13:00:40.051409-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-11:break3": {
+    "message_id": 1895,
+    "sent_at": "2026-08-11T13:25:41.363469-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-11:p7": {
+    "message_id": 1896,
+    "sent_at": "2026-08-11T13:35:44.678873-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-11:protein": {
+    "message_id": 1897,
+    "sent_at": "2026-08-11T14:00:45.436722-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-11:exercise": {
+    "message_id": 1898,
+    "sent_at": "2026-08-11T14:15:45.584213-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-12:setup": {
+    "message_id": 1901,
+    "sent_at": "2026-08-12T09:00:15.236273-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-12:p1": {
+    "message_id": 1902,
+    "sent_at": "2026-08-12T09:10:15.449078-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-12:break1": {
+    "message_id": 1903,
+    "sent_at": "2026-08-12T09:31:07.268949-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-12:p2": {
+    "message_id": 1904,
+    "sent_at": "2026-08-12T09:40:16.488775-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-12:brunch": {
+    "message_id": 1905,
+    "sent_at": "2026-08-12T10:00:29.402167-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-12:p3": {
+    "message_id": 1906,
+    "sent_at": "2026-08-12T10:30:36.454388-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-12:break2": {
+    "message_id": 1907,
+    "sent_at": "2026-08-12T10:55:08.448624-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-12:p4": {
+    "message_id": 1908,
+    "sent_at": "2026-08-12T11:03:15.488224-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-12:buffer1": {
+    "message_id": 1909,
+    "sent_at": "2026-08-12T11:25:15.867025-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-12:company": {
+    "message_id": 1910,
+    "sent_at": "2026-08-12T11:45:16.189769-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-12:p5": {
+    "message_id": 1911,
+    "sent_at": "2026-08-12T12:15:16.659104-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-12:buffer2": {
+    "message_id": 1912,
+    "sent_at": "2026-08-12T12:40:17.066275-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-12:p6": {
+    "message_id": 1913,
+    "sent_at": "2026-08-12T13:00:17.542220-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-12:break3": {
+    "message_id": 1914,
+    "sent_at": "2026-08-12T13:25:17.941275-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-12:p7": {
+    "message_id": 1915,
+    "sent_at": "2026-08-12T13:35:18.195180-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-12:protein": {
+    "message_id": 1917,
+    "sent_at": "2026-08-12T14:00:31.320401-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-12:exercise": {
+    "message_id": 1918,
+    "sent_at": "2026-08-12T14:15:30.298222-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  },
+  "2026-08-13:setup": {
+    "message_id": 1923,
+    "sent_at": "2026-08-13T09:00:32.918176-07:00",
+    "title": "9:00–9:05 — Daily setup"
+  },
+  "2026-08-13:p1": {
+    "message_id": 1924,
+    "sent_at": "2026-08-13T09:10:50.131204-07:00",
+    "title": "9:05–9:30 — Pomodoro 1 — Deep Work"
+  },
+  "2026-08-13:break1": {
+    "message_id": 1925,
+    "sent_at": "2026-08-13T09:30:43.687625-07:00",
+    "title": "9:30–9:35 — Break"
+  },
+  "2026-08-13:p2": {
+    "message_id": 1926,
+    "sent_at": "2026-08-13T09:40:44.769570-07:00",
+    "title": "9:35–10:00 — Pomodoro 2 — Deep Work"
+  },
+  "2026-08-13:brunch": {
+    "message_id": 1927,
+    "sent_at": "2026-08-13T10:00:47.151647-07:00",
+    "title": "10:00–10:30 — Brunch"
+  },
+  "2026-08-13:p3": {
+    "message_id": 1928,
+    "sent_at": "2026-08-13T10:30:50.599341-07:00",
+    "title": "10:30–10:55 — Pomodoro 3 — Deep Work"
+  },
+  "2026-08-13:break2": {
+    "message_id": 1929,
+    "sent_at": "2026-08-13T10:55:53.630309-07:00",
+    "title": "10:55–11:00 — Break"
+  },
+  "2026-08-13:p4": {
+    "message_id": 1930,
+    "sent_at": "2026-08-13T11:01:00.417508-07:00",
+    "title": "11:00–11:25 — Pomodoro 4 — Deep Work"
+  },
+  "2026-08-13:buffer1": {
+    "message_id": 1933,
+    "sent_at": "2026-08-13T11:25:59.989089-07:00",
+    "title": "11:25–11:45 — Buffer / Messages"
+  },
+  "2026-08-13:company": {
+    "message_id": 1934,
+    "sent_at": "2026-08-13T11:45:41.878218-07:00",
+    "title": "11:45–12:15 — Company review"
+  },
+  "2026-08-13:p5": {
+    "message_id": 1935,
+    "sent_at": "2026-08-13T12:15:04.648857-07:00",
+    "title": "12:15–12:40 — Pomodoro 5 — Admin / Finance"
+  },
+  "2026-08-13:buffer2": {
+    "message_id": 1936,
+    "sent_at": "2026-08-13T12:40:11.014319-07:00",
+    "title": "12:40–1:00 — Buffer / Reset"
+  },
+  "2026-08-13:p6": {
+    "message_id": 1938,
+    "sent_at": "2026-08-13T13:00:50.759326-07:00",
+    "title": "1:00–1:25 — Pomodoro 6 — Deep Work"
+  },
+  "2026-08-13:break3": {
+    "message_id": 1939,
+    "sent_at": "2026-08-13T13:25:25.715655-07:00",
+    "title": "1:25–1:30 — Break"
+  },
+  "2026-08-13:p7": {
+    "message_id": 1940,
+    "sent_at": "2026-08-13T13:35:59.245494-07:00",
+    "title": "1:30–1:55 — Pomodoro 7 — Deep Work / Review"
+  },
+  "2026-08-13:protein": {
+    "message_id": 1941,
+    "sent_at": "2026-08-13T14:00:13.514944-07:00",
+    "title": "2:00 — Protein"
+  },
+  "2026-08-13:exercise": {
+    "message_id": 1942,
+    "sent_at": "2026-08-13T14:15:44.590086-07:00",
+    "title": "2:15–2:35 — Exercise + shutdown"
+  }
+}

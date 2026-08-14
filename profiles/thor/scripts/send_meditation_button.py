@@ -7,6 +7,8 @@ nothing on success so cron stays silent (message is already delivered).
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -49,12 +51,25 @@ def main() -> int:
     }
     data = urllib.parse.urlencode(payload).encode("utf-8")
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    req = urllib.request.Request(url, data=data, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            body = resp.read().decode("utf-8", errors="replace")
-    except Exception as exc:
-        print(f"Telegram send failed: {exc}", file=sys.stderr)
+    # Telegram occasionally drops a fresh TLS connection mid-handshake. Retry only
+    # transient transport errors; API rejections below are surfaced immediately.
+    body = None
+    last_error = None
+    for attempt in range(3):
+        req = urllib.request.Request(url, data=data, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                body = resp.read().decode("utf-8", errors="replace")
+            break
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")
+            break
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(2 ** attempt)
+    if body is None:
+        print(f"Telegram send failed after 3 attempts: {last_error}", file=sys.stderr)
         return 1
     try:
         parsed = json.loads(body)

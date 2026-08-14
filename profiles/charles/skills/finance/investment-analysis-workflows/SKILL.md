@@ -51,10 +51,10 @@ When creating or updating recurring ticker reports from `/vault/System/Stock Wat
 
 - Parse only the watchlist ticker section, not indicator sections.
 - Preserve the user's watchlist order within each sector/theme group.
-- Fetch price, daily % change, trailing P/E, forward P/E, market cap, sector/industry, analyst recommendation/target if available, and 52-week range.
+- Fetch price, daily % change, trailing P/E, forward P/E, market cap, sector/industry, analyst recommendation/target if available, and 52-week range for analysis.
 - If vendor sector data is missing, classify manually into practical comparison groups such as Mega-cap AI / Platforms, Semiconductors, AI Infrastructure / Cloud, Data Centers / Power, Crypto Miners / Bitcoin Infrastructure, Consumer / Internet, ETFs / Funds, or Other / Unresolved.
-- Use table columns: `Ticker`, `Price`, `Chg %`, `P/E`, `Fwd P/E`, `Mkt Cap`, `Sentiment`.
-- Sentiment values must be `Buy`, `Hold`, `Sell`, or `Watch`; include a concise reason, e.g. `Hold (rich P/E)`, `Buy (reasonable Fwd P/E + target upside)`, `Sell (weak earnings + weak tape)`, `Watch (data missing)`.
+- User preference: keep Telegram tables narrow with only these columns: `Ticker`, `Price`, `Chg %`, `Fwd P/E`, `Sentiment`. Do not include trailing P/E, market cap, 52-week range, target price, sector, or analyst columns in the main tables.
+- Sentiment values must be `Buy`, `Hold`, `Sell`, or `Watch`; include a concise reason, e.g. `Hold (rich Fwd P/E)`, `Buy (reasonable Fwd P/E + target upside)`, `Sell (weak earnings + weak tape)`, `Watch (data missing)`.
 - Prefer `Watch` for ETFs, missing data, highly speculative or unprofitable names, or names needing deeper research. Do not force a Buy/Sell call when evidence is thin.
 - End investment judgments with the standard caveat that it is analysis, not financial advice.
 

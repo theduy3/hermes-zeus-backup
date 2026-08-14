@@ -53,6 +53,9 @@ Learned in practice:
    - **Re-scan near the end of the recap.** Scheduled jobs can finish while you are aggregating earlier outputs. After the first pass, explicitly check any jobs whose scheduled local time is due/near-due and rerun the day's output-file discovery before finalizing counts. Do not let an early aggregate (for example “49 files”) hide a just-finished output that appeared minutes later.
 - **Watch for co-scheduled evening jobs.** The weekday recap itself may run at the same local minute as other end-of-day jobs (for example `vault-tonight` at 18:00). If `session_search()` shows a just-started cron session with only the initial prompt, or if the cron list says a job is due/near-due, do a second output-file scan after the first aggregation and read any newly appeared file before finalizing. Treat the new file as completed only when its markdown output has a `## Response` or `## Error` section; otherwise call it in-progress or omit it.
 - **If the second scan changes the file count, re-open the new file(s), not just the aggregate.** A just-finished co-scheduled job can change the day's summary materially (for example an evening routine processing a note). Compare file paths from the first and second scans, read the delta outputs, then update the “what got done” bullets and counts before finalizing.
+- **When `search_files` truncates at 200 results, switch to terminal/Python glob aggregation.** Multi-profile recap days can easily exceed the search limit. Use `glob.glob('/home/hermes/.hermes/cron/output/*/YYYY-MM-DD_*.md') + glob.glob('/home/hermes/.hermes/profiles/*/cron/output/*/YYYY-MM-DD_*.md')`, then sort by mtime to spot just-finished files. This avoids missing named-profile outputs and avoids treating a truncated listing as the day’s complete file set.
+- **Do not treat the current recap job as missing while it is running.** The cron output markdown for the recap itself is only written after the final response, so `hermes cron list` may still show the previous successful run while the current session is active. Exclude the current recap job from “missed run”/blocker claims unless there is an explicit `## Error` output, delivery failure, or failed session transcript.
+- **Due-but-absent jobs need evidence before being called failures.** If `cron list` shows a job’s next run time already due/near-due but no output file appears after the second scan, report it only as “not observed yet / pending scheduler tick” when material. Do not call it failed unless `cron list` shows a failed last run, an output file has `## Error`, or session logs show a failed run.
    - For interactive sessions that changed code or scripts, do a safe read-only/current-state verification before summarizing if possible: inspect the relevant `git status`/diff or current script contents, and run non-destructive syntax checks such as `python3 -m py_compile` when claiming code is syntactically verified. Distinguish “patched but verification was blocked in the original session” from “verified now during recap.”
 
 5. **Read representative outputs first**,
@@ -74,6 +77,7 @@ Learned in practice:
    - Prefer summarizing counts from files rather than eyeballing dozens of transcripts.
    - Pre-filter with terminal `grep` first (see step 6).
    - **Cron-mode pitfall:** `execute_code` may be blocked in scheduled cron runs because it executes arbitrary local Python without an approving user. When that happens, run the same aggregation as an explicit `python3 - <<'PY' ... PY` script via the `terminal` tool, or use shell tools (`grep`, `sed`, `awk`, `wc`) directly. Do not stop the recap just because `execute_code` is unavailable.
+   - **Classifier pitfall for no-agent jobs:** script-mode cron files often have no `## Response`; a naive extractor that falls back to the whole file will count `**Status:** silent (empty output)` as substantive content. In aggregation code, first branch on `**Mode:** no_agent`: count `**Status:** silent (empty output)` as `no_agent_silent`, otherwise count it as `no_agent_nonempty` and print the body. Only apply `## Response` / `## Error` parsing to agent-mode outputs. This avoids inflating “content responses” when task-button drips, newsletter polling, or gateway watchdogs ran silently hundreds of times.
 
 8. **Look specifically for blockers**
    - Search cron outputs for phrases like:
@@ -87,6 +91,7 @@ Learned in practice:
      - `Unauthorized`
    - Report exact operational blockers, not vague guesses.
    - **Extract the final response section, not the first.** Cron output prompts may embed loaded skill text or user instructions that themselves contain `## Response` headings, so parsers using the first regex match can accidentally summarize prompt/skill content. Use the last occurrence (`text.rfind("## Response")`) or parse from the final markdown section before classifying content, blockers, or next actions.
+   - **Do not classify every error-looking word inside a successful `## Response` as a failure.** Daily/vault jobs may report recoverable helper issues (for example a Yahoo Finance 404 for one ticker) while also saying files were generated and verification passed. Treat these as notes or minor data gaps, not blockers, unless the final section is `## Error`, the cron status failed, or the response says the requested artifact/action did not complete.
    - **Cron output file structure for failures**: timed-out jobs have `## Error` instead of `## Response` — don't assume every output file has a `## Response` section. When grepping for `## Response`, also check for `## Error` to catch timeout failures:
      ```bash
      grep -l "^## Error$" ~/.hermes/cron/output/*/YYYY-MM-DD_*.md
@@ -134,6 +139,7 @@ Learned in practice:
 
 - `references/2026-07-07-daily-recap-pattern.md` — example of a cron-heavy, multi-profile daily recap where UTC had rolled over, user-local time still belonged to the prior day, named-profile outputs dominated, and a final re-scan changed the output count.
 - `references/2026-07-08-multi-profile-evening-recap.md` — example of a multi-profile evening recap where most work lived under named-profile cron outputs, no-agent silent runs needed separate classification, raw grep hit prompt/skill boilerplate, and a late co-scheduled `vault-tonight` output appeared during the recap.
+- `references/2026-07-20-truncated-multicprofile-recap.md` — example where `search_files` truncated named-profile outputs at 200 results; terminal/Python glob aggregation found the full 333-file day and mtime sorting caught just-finished co-scheduled outputs.
 
 ## Good recap style
 

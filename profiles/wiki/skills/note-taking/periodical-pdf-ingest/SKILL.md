@@ -1,0 +1,81 @@
+---
+name: periodical-pdf-ingest
+description: Ingest recurring periodical PDFs into theduyvault with source archives, semantic notes, MOC routing, and quality verification.
+version: 1.0.0
+metadata:
+  hermes:
+    tags: [vault, pdf, periodicals, finance, economist, value-line]
+---
+
+# Periodical PDF Ingest
+
+Use this companion skill when ingesting recurring magazine/newsletter/report PDFs into theduyvault, especially *The Economist* issues and Value Line `Selection & Opinion` PDFs. This skill captures workflow lessons that complement the main wiki ingest workflow.
+
+## Trigger
+
+- User uploads a PDF and says “ingest this”.
+- PDF is a recurring periodical, market report, magazine issue, or investment survey.
+- Examples: *The Economist* full issue PDFs; Value Line `Selection & Opinion` reports.
+
+## Core workflow
+
+1. **Extract first, then classify**
+   - Use PyMuPDF for text-based PDFs.
+   - Inspect page count, metadata, and first several page previews.
+   - Identify the publication, issue date, sections, and whether the PDF is a full issue or a short report.
+
+2. **Create source-aligned archive artifacts**
+   - Copy/clean the PDF into `/vault/Attachments/` with a source-aligned name.
+   - Create one normalized source archive in `/vault/Sources/YYYY-MM-DD - Source Title.md`.
+   - Preserve generic upload names such as `report-4.pdf` in frontmatter as `original_filename`.
+   - Include full extracted text by page when the source is a short report or when full-text browsing is useful.
+
+3. **Distill into semantic Notes**
+   - Do not leave the ingest as a source archive only.
+   - Create/update durable `/vault/Notes/` pages with the user’s preferred compact-but-substantive briefings.
+   - Notes should carry concrete facts, figures, actors, mechanisms, and implications, not generic one-line summaries.
+
+4. **Route into MOCs and infrastructure**
+   - Update semantic MOCs, `System/wiki-index.md`, and `System/wiki-log.md`.
+   - Keep newest issue/date items at the top of dated MOC sections.
+   - For public-company or investable theses, route to `14 Business MOC` and/or `15 Finance & Economics MOC` as appropriate.
+   - Surface watchlist candidates in the final reply/log; do not edit the user-curated watchlist autonomously.
+
+5. **Verify before replying**
+   - Attachment exists.
+   - Source archive exists and contains `original_filename` for generic uploads.
+   - Created/updated Notes exist and are indexed.
+   - MOCs contain exact links.
+   - `wiki-log.md` contains an ingest entry.
+   - For full issues, spot-check semantic quality, not just counts.
+
+## Economist full-issue quality gate
+
+Full Economist issues require more than structural verification. Counts can pass while article-boundary slicing is wrong. After generating article-level notes:
+
+- Identify articles that start mid-page or share a page with neighboring articles.
+- Read representative generated notes from shared pages.
+- Confirm each `## Briefing` starts from the intended article, not the prior article tail, chart text, or page furniture.
+- If any sample is contaminated, repair slicing before finalizing, even if every note exists and every MOC link is present.
+- Report concise verification numbers to the user.
+
+See `references/economist-boundary-quality-gate.md`.
+
+## Value Line Selection & Opinion pattern
+
+For Value Line market reports:
+
+- Create `Stock Market Today <Issue Date>.md` with index table, rates, inflation, liquidity, breadth, allocation, portfolio signals, and interpretation.
+- Update `Economic Indicators` with the newest market/rates/inflation/breadth datapoints near the top.
+- Update `15 Finance & Economics MOC`.
+- If the issue includes a substantial named-company feature, create a separate company/strategy note and route it through `14 Business MOC` as well.
+- If the feature presents an investable thesis, list it as `Watchlist candidates (review — not added)`.
+
+See `references/value-line-july-24-2026-pattern.md`.
+
+## Pitfalls
+
+- Do not treat “PDF ingested” as complete until the vault has semantic notes, MOC links, index/log entries, and verification.
+- Do not rely only on `## Briefing` presence; read samples for source-boundary correctness.
+- Do not bury a substantial public-company thesis inside a generic market note.
+- Do not auto-edit `System/Stock Watchlist.md`; surface candidates for user review.

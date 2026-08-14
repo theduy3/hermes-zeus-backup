@@ -1,0 +1,6 @@
+{
+  "task_calendar_name": "Kittyggup Family",
+  "task_calendar_id": "05a625d510ad884bcedf222735efe0ab5926b8b43f20e4b80493d84309466802@group.calendar.google.com",
+  "timezone": "America/Vancouver",
+  "rule": "When creating Catthew tasks with a due date or due time, write the task to /vault/Tasks with tag catthew and create the matching Google Calendar event on this calendar. Confirm before deleting or modifying calendar events."
+}

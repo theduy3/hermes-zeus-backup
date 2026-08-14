@@ -46,6 +46,14 @@ notes, analyze each, decide destination + filename + tags + frontmatter, move it
 - Use the **terminal** tool for python3 and the **file** tool for moves/writes. Keep
   scheduled-run changes auditable as normal tool calls rather than bundling filing,
   index edits, and source cleanup into an ad hoc Python helper.
+- In headless cron, keep analysis and filing work in normal auditable tool calls. Do not
+  use arbitrary local Python execution to batch-read/classify/edit many vault files; if a
+  script is needed, reserve it for the required `/tmp/hermes-verify-*` ad-hoc verifier and
+  run it only after the auditable filing edits are complete.
+- Before creating a new `Notes/` page from a loose capture, search existing `Notes/` for
+  the proposed title/topic and obvious synonyms. If an existing page covers the same
+  durable topic, fold the capture into that page and remove the Inbox copy rather than
+  creating a duplicate.
 - Serialize multiple edits to the same vault file (`wiki-index.md`, `wiki-log.md`, a MOC,
   or one note). Do not batch/parallel patch the same file in one turn: Hermes may warn
   about sibling writes, and serialized patches keep the audit trail and conflict model clear.

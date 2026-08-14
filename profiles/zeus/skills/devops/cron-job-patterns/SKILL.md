@@ -100,6 +100,57 @@ When the user asks to test a cron job immediately:
 
 For cross-profile aggregation jobs, avoid unnecessary nested `hermes --profile ... chat -q` calls unless the job truly needs live reasoning from those profiles; reading their `cron/jobs.json` is faster and less likely to exceed the scheduler window. If a pipeline feeds a downstream script-only job (for example, writing a JSON sidecar that a later job sends as Telegram buttons), prefer deterministic filesystem aggregation over live specialist chats — a hung child profile can prevent the sidecar from being generated, making the downstream job appear to “work” while sending nothing useful.
 
+### Pomodoro Schedule Reminders + Separate Task Cards
+
+When Duy wants task delivery integrated with his time-management system, keep **schedule/Pomodoro reminders** and **actionable task cards** separate:
+- Schedule reminders are one-line plain Telegram time labels with no Done/Log buttons, no task registry writes, no checkboxes, no task names, and no “what to do” instructions. Example: `🗓 12:15–12:40 — Pomodoro 5 — Admin / Finance`.
+- Morning briefing `Weekday Pomodoro Schedule` is also a generic time-block template only: never append daily task titles/descriptions to any schedule line. Daily tasks belong only in `Today Tasks` / `Top 3`. In particular, keep `12:15–12:40 — Pomodoro 5 — Admin / Finance` without a trailing colon/task.
+- Obsidian task cards are separate messages sourced directly from `/vault/Tasks/tasks/*.md` and may include Done buttons.
+- Do not merge a Pomodoro/block reminder and a task Done button into one card.
+- Do not drip overdue tasks as task cards; Duy moves overdue items himself during planning. Drip due-today tasks only.
+- Specific-time events/tasks must stay fixed-time items: include them in the daily plan `Fixed` section and task cards, but do not feed them into Pomodoro reminders.
+
+Approved Duy schedule constraints:
+- Before 9:00 AM: baby/family; no normal work cards.
+- 10:00–10:30 AM: brunch; protected.
+- 25-minute Pomodoro work reminders between 9:00 AM and 2:45 PM.
+- 2:35–2:45 PM: pickup transition; stop work.
+- Around 2:45 PM onward: Victoria/family; only urgent/fixed reminders.
+- Company review rotation is weekdays only: Monday SalonX, Tuesday SS/Sans Souci, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg.
+- Weekends: do **not** schedule or label `Company Review`; use `Investment Portfolio Review` instead for the 11:45–12:15 review block.
+- Weekends: do **not** include a Pomodoro schedule in the morning briefing, and Zeus schedule-reminder scripts should stay silent. Still allow source task cards for due-today fixed/important tasks.
+
+Pattern:
+1. Generate `/vault/Tasks/planning/YYYY-MM-DD.md` before the work window from `/vault/Tasks/tasks/*.md`.
+2. Add/consume task metadata fields: `time_block`, `estimated_minutes`, `energy`, `priority`, `company`; detect fixed-time metadata like `due_time`, `time`, `start_time`, body `Time:`, `Kickoff:`.
+3. Run the Pomodoro schedule reminder script as script-only cron every 5 minutes (e.g. `*/5 9-20 * * *`); the script should stay silent except inside configured reminder windows.
+4. Use windows like: setup 9:00–9:05; Pomodoro 1 9:05–9:30; break 9:30–9:35; Pomodoro 2 9:35–10:00; brunch 10:00–10:30; Pomodoros 3–7 through 1:55; protein 2:00; exercise/shutdown 2:15–2:35.
+5. Run the due-today task-card drip separately every 10 minutes; it sends at most one source-task card with Done buttons and never sends overdue tasks.
+6. Verify by checking the generated plan contains brunch, pickup transition, correct weekday company, Top 3, Pomodoro sections, `Fixed` for specific-time tasks, and No-Date Triage; then dry-run a forced Pomodoro reminder and confirm there is no inline keyboard/button output.
+
+### Duy Thor/Zeus Daily Reminder Coordination
+
+Zeus owns tasks, planning, and calendar sync. Thor owns wellness reminders only. Keep these systems separate in prompts and summaries.
+
+Current preferred Thor wellness schedule (Pacific/Vancouver):
+- 7:00 AM — Water 1/6.
+- 8:45 AM — Morning meditation.
+- 10:00 AM — Brunch water 2/6.
+- 12:45 PM — Golf mobility checklist.
+- 1:00 PM — Water 3/6.
+- 2:00 PM — Protein drink.
+- 2:15 PM — Exercise before Victoria pickup.
+- 4:00 PM — Water 4/6.
+- 7:00 PM — Water 5/6.
+- 8:45 PM — Evening stretch.
+- 10:00 PM — Water 6/6.
+- 10:15 PM — Evening meditation.
+- Sunday 5:00 PM — Weekly measurements.
+
+Important correction: Thor is **not** globally silent before 9AM. Duy wants water at 7AM and meditation at 8:45AM, while avoiding a 9AM pile-up with Zeus setup. Do not reintroduce 9AM water; water 2/6 belongs at 10AM brunch.
+
+When editing Thor from Zeus, read and write `/home/hermes/.hermes/profiles/thor/cron/jobs.json` directly, back it up first, update `schedule.expr`, `schedule.display`, `schedule_display`, `next_run_at`, and `updated_at`, then validate JSON and print the affected jobs.
+
 ### Telegram Task Button Drips
 
 When the user wants individual Telegram task cards with Done buttons, prefer a script-only drip job. See `references/telegram-task-button-drip.md` for the full pattern.
@@ -111,7 +162,7 @@ Key defaults for Duy/Zeus:
 - Order cards: due today first, then overdue tasks newest-first.
 - The Done callback should mark the original Obsidian task file `status: completed` and edit the Telegram message.
 - Registry keys should use stable task identity (`file_path` + title + `due_date`) so Done buttons keep working across repeated cards. Duy's preference: unfinished due/overdue and waiting/watch cards should be dripped again every day until marked Done. Suppress `sent` cards only within the same local day; suppress `done` cards permanently unless the source task is intentionally recreated/reset.
-- Before sending, suppress any task whose `file_path` already has a registry entry with `status: sent` or `status: done` for the same due date; if a registry entry is `done`, reconcile the source Markdown frontmatter to `status: completed`.
+- Before sending, suppress any task whose `file_path` already has a registry entry with `status: sent` for the same local day, even if the task's `due_date` changed after a calendar drag/reverse-sync; if a registry entry is `done`, reconcile the source Markdown frontmatter to `status: completed`. Use `due_date` in the callback digest if needed, but do not require due-date equality for same-day duplicate suppression.
 - For event-follow cards that need live metadata (example: World Cup betting odds), add enrichment late in the send loop after duplicate-suppression checks so every cron tick does not fetch APIs for cards that will not be sent. If a card was already sent and the user requests a metadata addition, edit the existing Telegram `message_id` and store the enriched field in the registry.
 - For sports odds, use an official/structured feed when possible (ESPN scoreboard often embeds DraftKings markets under `competitions[0].odds`) and include moneyline, spread, and over/under in one compact `Odds:` line. Normalize team aliases/diacritics (`Korea Republic`→`South Korea`, `Côte d’Ivoire`→`Ivory Coast`, `USA`→`United States`) before matching fixtures.
 

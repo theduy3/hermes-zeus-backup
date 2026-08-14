@@ -79,3 +79,12 @@ Thumbs.db
 **/logs/
 **/.npm/_logs/
 *.log
+
+# OAuth/API credentials at profile depth (NEVER commit)
+**/google_token.json
+**/google_client_secret.json
+**/google_oauth_pending.json
+**/oauth_token.json
+**/*token*.json
+**/*client_secret*.json
+**/*oauth_pending*.json

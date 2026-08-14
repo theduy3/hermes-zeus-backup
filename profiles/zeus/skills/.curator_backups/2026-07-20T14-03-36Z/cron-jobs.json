@@ -1,0 +1,351 @@
+{
+  "jobs": [
+    {
+      "id": "e6711b998b07",
+      "name": "Daily Morning Briefing - Personal Tasks",
+      "prompt": "You are preparing Zeus's Daily Morning Briefing for Duy.\n\nPurpose: a plan-first personal/life-admin briefing that respects Duy's real day. No stocks, market data, news, horoscope, quote, moon phase, or filler.\n\nUse America/Vancouver local date/time unless active travel context says otherwise.\n\nFirst gather:\n1. Generate or refresh today's daily plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py`.\n2. Read `/vault/Tasks/planning/YYYY-MM-DD.md` for today.\n3. Read Catthew's latest family briefing output from the most recent file in `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` if available. Extract Victoria/family/daycare/appointment items only.\n4. Read today's `/vault/Daily/YYYY-MM-DD.md` if available, else latest Daily note, for personal schedule/context only.\n5. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Treat `done` as completed and avoid presenting done/deleted task cards as pending.\n\nHard schedule constraints:\n- Before 9:00 AM: baby/family; no work expected.\n- 10:00\u201310:30 AM: brunch; protected.\n- 2:35\u20132:45 PM: pickup transition; stop work.\n- Around 2:45 PM: pick up Victoria / family transition.\n- After 2:45 PM: family-first; only urgent/fixed reminders.\n- Deep work only fits between 9:00 AM and 2:45 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg.\n\nOutput format, compact Telegram-readable plaintext:\n\nToday \u2014 YYYY-MM-DD\n\nFixed\n- 2:45 PM \u2014 Pick up Victoria / family transition\n- [other true fixed family/personal appointments only]\n\nCompany Review\n- 11:45\u201312:15 \u2014 [company]\n\nTop 3\n1. ...\n2. ...\n3. ...\n\nSchedule\n- 9:00\u20139:10 \u2014 Daily setup\n- 9:10\u201310:00 \u2014 Deep Work 1: ...\n- 10:00\u201310:30 \u2014 Brunch\n- 10:30\u201311:45 \u2014 Deep Work 2: ...\n- 11:45\u201312:15 \u2014 Company Review: ...\n- 12:15\u201312:45 \u2014 Admin / Finance: ...\n- 1:00\u20132:15 \u2014 Deep Work 3: ...\n- 2:15\u20132:35 \u2014 Shutdown\n\nDecisions Needed\n- [only if needed; omit if none]\n\nRules:\n- Do not dump every overdue task.\n- Max 3 Top 3 items.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- No work-task nagging before 9; phrase this as passive planning only.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 6 * * *",
+        "display": "15 6 * * *"
+      },
+      "schedule_display": "15 6 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 70
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-13T21:51:54.763482+00:00",
+      "next_run_at": "2026-07-21T06:15:00-07:00",
+      "last_run_at": "2026-07-20T06:16:44.070257-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "a4c95c76c429",
+      "name": "Weekly Finance-Investment Knowledge Trade",
+      "prompt": "You are Zeus coordinating the weekly knowledge trade between Duy's Finance Advisor profile (`finance`) and Investment Strategist profile (`charles`). This job is intended for every Saturday at 11:00 PM Vancouver/PDT time.\n\nDo not schedule any new cron jobs.\n\nGoal: have Finance Advisor and Investment Strategist exchange useful context, then send Duy a compact summary.\n\nSteps:\n1. Ask Finance Advisor for a weekly finance/admin summary by running a one-shot Hermes command via terminal:\n   `hermes --profile finance chat -q \"Weekly knowledge trade for Duy. Summarize finance/admin context the Investment Strategist should know: upcoming payments, credit card actions, tax/debt/insurance deadlines, cash constraints, risk limits, and any finance tasks due soon. Keep it concise, factual, no investment advice.\"`\n2. Ask Investment Strategist for a weekly investment summary by running:\n   `hermes --profile charles chat -q \"Weekly knowledge trade for Duy. Summarize investment/portfolio context the Finance Advisor should know: portfolio allocation concerns, planned trades/rebalances, cash needs, risk exposures, watchlist items, and upcoming investment decisions. Keep it concise. Include disclaimer only if giving analysis.\"`\n3. Send Finance Advisor's summary to Investment Strategist with:\n   `hermes --profile charles chat -q \"Finance Advisor weekly context for Duy: [PASTE FINANCE SUMMARY]. Incorporate this into your context for future portfolio/investment guidance. Reply with only key implications for investment planning.\"`\n4. Send Investment Strategist's summary to Finance Advisor with:\n   `hermes --profile finance chat -q \"Investment Strategist weekly context for Duy: [PASTE INVPSTMENT SUMMARY]. Incorporate this into your context for future finance/admin reminders. Reply with only key implications for cashflow, deadlines, or admin tasks.\"`\n5. Final message to Duy: compact bullets only:\n   - `\ud83d\udcb0 Finance shared:` top 2-3 items\n   - `\ud83d\udcc8 Investment shared:` top 2-3 items\n   - `\ud83d\udd01 Cross-agent implications:` top 2-3 action-relevant implications\n   - `\u26a0\ufe0f Needs Duy:` only if a decision/action is needed\n\nKeep final under 12 bullets. No tables. No raw logs.",
+      "skills": [
+        "cron-job-patterns"
+      ],
+      "skill": "cron-job-patterns",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * 6",
+        "display": "0 23 * * 6"
+      },
+      "schedule_display": "0 23 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 10
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-19T23:42:10.623487-07:00",
+      "next_run_at": "2026-07-25T23:00:00-07:00",
+      "last_run_at": "2026-07-18T23:04:17.504433-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "memory",
+        "skills"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "b83af24484d0",
+      "name": "Daily Evening Briefing - Task Status",
+      "prompt": "You are preparing Zeus's Daily Evening Briefing for Duy at 9:00PM Vancouver/Pacific time.\n\nPurpose: tomorrow builder + task status. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse America/Vancouver local date/time unless active travel context says otherwise.\n\nGather:\n1. Read today's `/vault/Tasks/planning/YYYY-MM-DD.md` if it exists.\n2. Generate tomorrow's plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py --tomorrow`.\n3. Read tomorrow's `/vault/Tasks/planning/YYYY-MM-DD.md`.\n4. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `done` as completed, `sent` as sent but not completed, `deleted` as dismissed.\n5. Read `/vault/Tasks/tasks/*.md` directly for pending/in_progress tasks due tomorrow or in the next 7 days. Exclude completed/done/cancelled/canceled.\n6. Optionally read Catthew latest output from `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` for family/Victoria fixed items.\n\nHard schedule constraints to preserve:\n- Before 9:00 AM: baby/family, no work.\n- 10:00\u201310:30 AM: brunch protected.\n- 2:35\u20132:45 PM: pickup transition.\n- Around 2:45 PM: pick up Victoria / family transition.\n- Deep work only between 9:00 AM and 2:45 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg.\n\nOutput compact Telegram-readable plaintext:\n\nTomorrow Prep \u2014 YYYY-MM-DD\n\nCompany Review\n- 11:45\u201312:15 \u2014 [company]\n\nCarry Forward?\n- [unfinished from today only if genuinely still pending/sent]\n\nCandidate Top 3\n1. ...\n2. ...\n3. ...\n\nAdmin / Finance Batch\n- ...\n\nNo-Date Triage\n- [max 3: schedule / backlog / delete?]\n\nNeed Duy Decision\n- [omit if none]\n\nRules:\n- Do not shame or dump backlog.\n- Max 3 candidate priorities.\n- Ask for decisions only when necessary.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- Unfinished deep work should be rescheduled into tomorrow's realistic blocks, not repeated endlessly.",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "display": "0 21 * * *"
+      },
+      "schedule_display": "0 21 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 68
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:28:03.704476-07:00",
+      "next_run_at": "2026-07-20T21:00:00-07:00",
+      "last_run_at": "2026-07-19T21:01:55.880921-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "updated_at": "2026-05-25T19:04:50.492107+00:00",
+      "fire_claim": null
+    },
+    {
+      "id": "ab4de922b388",
+      "name": "Time-Blocked Obsidian Task Card Drip",
+      "prompt": "Script-only job. Every 5 minutes during Duy's weekday work window, run planned_task_drip.py. The script regenerates today's /vault/Tasks/planning/YYYY-MM-DD.md from theduyvault tasks, sends Telegram cards only at approved time-block windows (9:00 setup, 9:10 deep work, 10:30 deep work, 11:45 company review, 12:15 admin/finance, 13:00 deep work, 14:15 shutdown), and stays silent outside windows. It respects protected time: no work before 9:00, brunch 10:00-10:30, pickup transition 14:35-14:45, family after 14:45.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "planned_task_drip.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 9-14 * * 1-5",
+        "display": "*/5 9-14 * * 1-5"
+      },
+      "schedule_display": "*/5 9-14 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 5392
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-25T11:44:10.692069-07:00",
+      "next_run_at": "2026-07-20T09:00:00-07:00",
+      "last_run_at": "2026-07-17T14:55:13.644782-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "901801e68cb5",
+      "name": "Generate Daily Time-Blocked Plan",
+      "prompt": "Script-only job. Generate today's time-blocked planning note from theduyvault tasks before Duy's 9AM work window. Writes /vault/Tasks/planning/YYYY-MM-DD.md using approved constraints: no work before 9AM, brunch 10:00-10:30, pickup transition 14:35-14:45, Victoria/family after 14:45, company review rotation Monday SalonX, Tuesday SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg. Delivery local only.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "generate_daily_plan.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 8 * * 1-5",
+        "display": "55 8 * * 1-5"
+      },
+      "schedule_display": "55 8 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-17T14:43:15.623012-07:00",
+      "next_run_at": "2026-07-20T08:55:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "ef5bf01b48bb",
+      "name": "Sync Obsidian Tasks to theduy Calendar",
+      "prompt": "Script-only job. Sync dated eligible Obsidian task files from /vault/Tasks/tasks/*.md to Google Calendar `theduy calendar` only (calendar ID duynt1989@gmail.com). Exclude any task tagged or mentioning catthew/#catthew. Exclude completed/done/cancelled/canceled. Upsert events using source file extendedProperties and delete stale events managed by this script. Stay silent except for script stdout saved locally.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "sync_obsidian_tasks_to_theduy_calendar.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 8-22 * * *",
+        "display": "*/15 8-22 * * *"
+      },
+      "schedule_display": "*/15 8-22 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 135
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-17T19:06:33.209615-07:00",
+      "next_run_at": "2026-07-20T08:00:00-07:00",
+      "last_run_at": "2026-07-19T22:45:49.199789-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "bd73d9d0851c",
+      "name": "Import theduy Calendar Task Events to Obsidian",
+      "prompt": "Script-only job. Import explicitly-prefixed Google Calendar events from `theduy calendar` (duynt1989@gmail.com) into Obsidian task files under /vault/Tasks/tasks. Only import events whose title starts with `Task:` or `TODO:`. Ignore normal appointments, ignore Zeus's own Obsidian->Calendar mirror events, and ignore #catthew/catthew events. Mark imported Google events with private extendedProperties for idempotency. Stay silent except for script stdout saved locally.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "import_theduy_calendar_tasks.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 8-22 * * *",
+        "display": "*/15 8-22 * * *"
+      },
+      "schedule_display": "*/15 8-22 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 130
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-17T20:24:52.039837-07:00",
+      "next_run_at": "2026-07-20T08:00:00-07:00",
+      "last_run_at": "2026-07-19T22:45:49.235359-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-07-20T06:16:44.070640-07:00"
+}

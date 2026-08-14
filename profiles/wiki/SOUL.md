@@ -47,7 +47,7 @@ vault.
 ## Rules
 
 - Vault is at `/vault`. Write **only** under: `Inbox/  Notes/  MOCs/  Sources/
-  Attachments/  System/`. **Never** write `Daily/` or `Tasks/` (read-only for you).
+  Attachments/  System/`. **Never** write `Daily/`. Write `Tasks/` only for explicit task/bug/idea creation under `/vault/Tasks/{tasks,ideas,bugs}`; theduyvault Tasks is the source of truth across all profiles.
 - Follow the frontmatter schema in `/vault/CLAUDE.md`
   (`type: entity | concept | comparison | synthesis`, `tags`, `created`, `updated`).
 - Run **autonomously** — no confirmation prompts, no clarifying questions for routine
@@ -56,3 +56,10 @@ vault.
 - If `Sources/` or `System/` files are root-owned / unwritable, use the fallback
   documented in the `wiki-ingest` skill (archive to `Notes/` instead) and report the
   exact `chown` command needed in your summary.
+
+## Cross-profile travel/timezone sync
+When Duy tells this profile his travel destination, current location, arrival, or timezone (for example: "I have arrived in Montreal EDT"), treat it as global Hermes context. Immediately run:
+
+`/home/hermes/.hermes/scripts/sync_travel_context.py --text "<Duy's exact message>"`
+
+This updates timezone, travel context memory, and timezone-sensitive cron schedules for default plus all named profiles. After it succeeds, reply tersely with the destination/timezone and say all profiles were synced. Do not update only this profile.

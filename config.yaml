@@ -1,14 +1,18 @@
 model:
   default: gpt-5.5
   provider: openai-codex
+  parameters:
+    reasoning_effort: max
   auxiliary: gpt-5.5
   max_output_tokens: 8192
-  base_url: https://chatgpt.com/backend-api/codex
+  base_url: https://inference-api.nousresearch.com/v1
 fallback_providers: '[]'
 credential_pool_strategies:
   openai-codex: fill_first
+  nous: fill_first
+  xai-oauth: fill_first
 toolsets:
-- hermes-cli
+  - hermes-cli
 agent:
   max_turns: 90
   gateway_timeout: 1800
@@ -81,6 +85,7 @@ terminal:
   singularity_image: docker://nikolaik/python-nodejs:python3.11-nodejs20
   modal_image: nikolaik/python-nodejs:python3.11-nodejs20
   daytona_image: nikolaik/python-nodejs:python3.11-nodejs20
+  vercel_runtime: node24
   container_cpu: 1.0
   container_memory: 5120
   container_disk: 51200
@@ -90,7 +95,6 @@ terminal:
   docker_extra_args: []
   docker_run_as_host_user: false
   persistent_shell: true
-  vercel_runtime: node24
   lifetime_seconds: 300
 web:
   backend: ''
@@ -113,6 +117,8 @@ browser:
     adopt_existing_tab: false
     rewrite_loopback_urls: false
     loopback_host_alias: host.docker.internal
+  cloud_provider: camofox
+  use_gateway: false
 checkpoints:
   enabled: true
   max_snapshots: 50
@@ -120,8 +126,8 @@ checkpoints:
   max_file_size_mb: 10
   auto_prune: false
   retention_days: 7
-  delete_orphans: true
   min_interval_hours: 24
+  delete_orphans: true
 file_read_max_chars: 100000
 tool_output:
   max_bytes: 50000
@@ -147,17 +153,6 @@ compression:
   protect_first_n: 3
   abort_on_summary_failure: false
   codex_gpt55_autoraise: false
-kanban:
-  dispatch_in_gateway: true
-  dispatch_interval_seconds: 60
-  failure_limit: 2
-  worker_log_rotate_bytes: 2097152
-  worker_log_backup_count: 1
-  orchestrator_profile: ''
-  default_assignee: ''
-  auto_decompose: true
-  auto_decompose_per_tick: 3
-  dispatch_stale_timeout_seconds: 14400
 prompt_caching:
   cache_ttl: 5m
 openrouter:
@@ -316,9 +311,9 @@ display:
   runtime_footer:
     enabled: false
     fields:
-    - model
-    - context_pct
-    - cwd
+      - model
+      - context_pct
+      - cwd
   copy_shortcut: auto
   tool_progress: all
   background_process_notifications: all
@@ -415,7 +410,6 @@ delegation:
   child_timeout_seconds: 600
   reasoning_effort: ''
   max_concurrent_children: 3
-  max_async_children: 3
   max_spawn_depth: 1
   orchestrator_enabled: true
   subagent_auto_approve: false
@@ -441,7 +435,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: America/Vancouver
+timezone: America/Toronto
 slack:
   require_mention: true
   free_response_channels: ''
@@ -468,11 +462,11 @@ discord:
     speech_gain: 1.0
     ack_enabled: true
     ack_phrases:
-    - Let me look into that.
-    - One moment.
-    - Checking on that now.
-    - Give me a sec.
-    - On it.
+      - Let me look into that.
+      - One moment.
+      - Checking on that now.
+      - Give me a sec.
+      - On it.
 telegram:
   reactions: false
   allowed_chats: ''
@@ -493,10 +487,10 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
-- stop/restart hermes gateway (kills running agents)
-- execute_code
-- delete in root path
-- script execution via -e/-c flag
+  - stop/restart hermes gateway (kills running agents)
+  - execute_code
+  - delete in root path
+  - script execution via -e/-c flag
 hooks_auto_accept: false
 security:
   allow_private_urls: false
@@ -513,6 +507,17 @@ security:
   allow_lazy_installs: true
 cron:
   wrap_response: true
+kanban:
+  dispatch_in_gateway: true
+  dispatch_interval_seconds: 60
+  failure_limit: 2
+  worker_log_rotate_bytes: 2097152
+  worker_log_backup_count: 1
+  orchestrator_profile: ''
+  default_assignee: ''
+  auto_decompose: true
+  auto_decompose_per_tick: 3
+  dispatch_stale_timeout_seconds: 14400
 code_execution:
   mode: project
   timeout: 300
@@ -583,10 +588,15 @@ secrets:
     override_existing: true
     auto_install: true
     server_url: ''
+  command:
+    enabled: true
+    command: /bin/bash /home/hermes/.hermes/secrets/telegram_decrypt.sh
+    helper_timeout_seconds: 3
+    override_existing: false
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
 paste_collapse_char_threshold: 2000
-_config_version: 32
+_config_version: 33
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -594,64 +604,129 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-  - browser
-  - clarify
-  - code_execution
-  - context_engine
-  - cronjob
-  - delegation
-  - file
-  - image_gen
-  - kanban
-  - memory
-  - messaging
-  - session_search
-  - skills
-  - terminal
-  - todo
-  - tts
-  - video
-  - video_gen
-  - vision
-  - web
+    - bfl
+    - browser
+    - clarify
+    - code_execution
+    - context_engine
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - kanban
+    - memory
+    - messaging
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
   telegram:
-  - browser
-  - clarify
-  - code_execution
-  - context_engine
-  - cronjob
-  - delegation
-  - file
-  - image_gen
-  - memory
-  - messaging
-  - session_search
-  - skills
-  - terminal
-  - todo
-  - tts
-  - video
-  - video_gen
-  - vision
-  - web
+    - browser
+    - clarify
+    - code_execution
+    - context_engine
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - messaging
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
   whatsapp:
-  - hermes-whatsapp
+    - hermes-whatsapp
   slack:
-  - hermes-slack
+    - hermes-slack
   signal:
-  - hermes-signal
+    - hermes-signal
   homeassistant:
-  - hermes-homeassistant
+    - hermes-homeassistant
   qqbot:
-  - hermes-qqbot
+    - hermes-qqbot
 approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 known_plugin_toolsets:
   cli:
-  - spotify
+    - a2a
+    - spotify
   telegram:
-  - spotify
+    - spotify
 plugins:
   enabled:
-  - multi-agent-context
+    - multi-agent-context
 default: gpt-5.5
+mcp_servers:
+  graphify-hermes:
+    command: graphify-mcp
+    args:
+      - /home/hermes/.graphify/hermes/graphify-out/graph.json
+    enabled: true
+  graphify-vault:
+    command: graphify-mcp
+    args:
+      - /home/hermes/.graphify/theduyvault/graphify-out/graph.json
+    enabled: true
+  graphify-vault-core:
+    command: graphify-mcp
+    args:
+      - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
+    enabled: true
+  graphify-vault-sources:
+    command: graphify-mcp
+    args:
+      - /home/hermes/.graphify/theduyvault-sources/graphify-out/graph.json
+    enabled: true
+  graphify-vault-daily:
+    command: graphify-mcp
+    args:
+      - /home/hermes/.graphify/theduyvault-daily/graphify-out/graph.json
+    enabled: true
+video_gen:
+  provider: xai
+  use_gateway: false
+  model: grok-imagine-video
+  xai:
+    storage:
+      enabled: true
+      public_url: true
+known_builtin_toolsets:
+  cli:
+    - bfl
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao

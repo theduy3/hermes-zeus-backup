@@ -1,0 +1,28 @@
+{
+  "rule_ids": [
+    "pipe_to_interpreter"
+  ],
+  "severity": "HIGH",
+  "command_redacted": "command -v yt-dlp >/dev/null && yt-dlp --dump-json --skip-download 'https://www....",
+  "findings": [
+    {
+      "rule_id": "pipe_to_interpreter",
+      "severity": "HIGH",
+      "title": "Pipe to interpreter: yt-dlp | python3",
+      "description": "Command pipes output from 'yt-dlp' directly to interpreter 'python3'. Downloaded content will be executed without inspection.",
+      "evidence": [
+        {
+          "type": "command_pattern",
+          "pattern": "pipe to interpreter",
+          "matched": "yt-dlp --dump-json --skip-download 'https://www.youtube.com/watch?v=7xNz2yCdBms' | python3 -c 'import sys,json; d=[REDACTED]; print(d.get(\"title\")); print(d.get(\"description\",\"\")[:1000]); print(d.get(\"duration\")); print(d.get(\"channel\"))'"
+        },
+        {
+          "type": "url",
+          "raw": "https://www.youtube.com/watch?v=7xNz2yCdBms"
+        }
+      ],
+      "mitre_id": "T1059.004"
+    }
+  ],
+  "timestamp": "2026-07-17T20:47:38.583808571+00:00"
+}

@@ -42,6 +42,25 @@ HERMES_HOME = get_hermes_home()
 TOKEN_PATH = HERMES_HOME / "google_token.json"
 CLIENT_SECRET_PATH = HERMES_HOME / "google_client_secret.json"
 
+
+def _load_profile_env_defaults() -> None:
+    """Load non-secret profile defaults, especially GOOGLE_CALENDAR_ID."""
+    env_path = HERMES_HOME / ".env"
+    if not env_path.exists():
+        return
+    for raw in env_path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        if key not in {"GOOGLE_CALENDAR_ID", "GOOGLE_CALENDAR_NAME"}:
+            continue
+        os.environ.setdefault(key, value.strip().strip('"').strip("'"))
+
+
+_load_profile_env_defaults()
+
 SCOPES = [
     "https://www.googleapis.com/auth/gmail.readonly",
     "https://www.googleapis.com/auth/gmail.send",
@@ -1097,26 +1116,28 @@ def main():
     cal = sub.add_parser("calendar")
     cal_sub = cal.add_subparsers(dest="action", required=True)
 
+    default_calendar = os.getenv("GOOGLE_CALENDAR_ID", "primary")
+
     p = cal_sub.add_parser("list")
     p.add_argument("--start", default="", help="Start time (ISO 8601)")
     p.add_argument("--end", default="", help="End time (ISO 8601)")
     p.add_argument("--max", type=int, default=25)
-    p.add_argument("--calendar", default="primary")
+    p.add_argument("--calendar", default=default_calendar)
     p.set_defaults(func=calendar_list)
 
     p = cal_sub.add_parser("create")
     p.add_argument("--summary", required=True)
-    p.add_argument("--start", required=True, help="Start (ISO 8601 with timezone)")
-    p.add_argument("--end", required=True, help="End (ISO 8601 with timezone)")
+    p.add_argument("--start", required=True, help="ISO 8601 datetime")
+    p.add_argument("--end", required=True, help="ISO 8601 datetime")
     p.add_argument("--location", default="")
     p.add_argument("--description", default="")
     p.add_argument("--attendees", default="", help="Comma-separated email addresses")
-    p.add_argument("--calendar", default="primary")
+    p.add_argument("--calendar", default=default_calendar)
     p.set_defaults(func=calendar_create)
 
     p = cal_sub.add_parser("delete")
     p.add_argument("event_id")
-    p.add_argument("--calendar", default="primary")
+    p.add_argument("--calendar", default=default_calendar)
     p.set_defaults(func=calendar_delete)
 
     # --- Drive ---

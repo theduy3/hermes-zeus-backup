@@ -178,6 +178,8 @@ Related folders: `Tasks/ideas/` (no due date), `Tasks/bugs/` (issues), `Tasks/re
 
 ### Task update fallback cleanup
 
+**Daily-note sync pitfall:** `System/scripts/sync_daily_tasks.py` should treat checked Daily-note boxes as completion signals, but should not reopen already-completed task files just because an old Daily note still has an unchecked `- [ ]` line. Reopening from unchecked Daily notes must require an explicit `--allow-reopen` flag, otherwise Telegram Done buttons can be undone by stale Daily notes.
+
 If a task update was accidentally written outside the vault (for example `/home/hermes/task-update-YYYY-MM-DD.md`) and it lists intended task changes with paths under `/vault/Tasks/tasks/`:
 1. Parse the referenced task file paths from the fallback note.
 2. Apply the intended status updates directly to each task file's YAML frontmatter (e.g. `status: completed`).
@@ -190,6 +192,56 @@ Use Python (`pathlib`, `re`, `shutil.move`) for this cleanup; avoid shell `mv` b
 
 When the user wants Thor-style inline buttons for Obsidian tasks, prefer a script-only cron that scans `/vault/Tasks/tasks/*.md` directly and sends one Telegram card per due/overdue pending task. The button callback should resolve a registry entry back to the source Markdown file and update its YAML frontmatter to `status: completed`. Do not rely on an LLM-generated sidecar like `today_tasks.json` unless the user explicitly wants a curated staging layer. Detailed pattern: `references/telegram-task-buttons.md`.
 
+### Duy's time-blocked planning system
+
+Approved structure for Duy's workday:
+- Before 9:00 AM: baby/family; no normal work cards.
+- 10:00–10:30 AM: brunch; protected.
+- 2:35–2:45 PM: pickup transition; stop work.
+- Around 2:45 PM: pick up Victoria / family transition.
+- Deep work only between 9:00 AM and 2:45 PM, excluding brunch.
+- Work reminders should use 25-minute Pomodoro sessions, not long 50–75 minute block prompts.
+- Company review rotation: Monday SalonX, Tuesday SS/Sans Souci, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg.
+
+Planning artifacts:
+- Daily plans live at `/vault/Tasks/planning/YYYY-MM-DD.md`.
+- Generator script: `/home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py`.
+- Pomodoro schedule reminder sender: `/home/hermes/.hermes/profiles/zeus/scripts/send_daily_schedule_reminder.py`.
+- Due-today task card sender: `/home/hermes/.hermes/profiles/zeus/scripts/due_task_drip.py`.
+- Legacy time-block sender `/home/hermes/.hermes/profiles/zeus/scripts/planned_task_drip.py` should stay paused/disabled unless Duy explicitly asks for block-based reminders again.
+- Active task metadata fields: `time_block`, `estimated_minutes`, `energy`, `priority`, `company`; specific-time tasks use `due_time`, `time`, `start_time`, `kickoff`, or body `Time:`/`Kickoff:` lines.
+- Full operational reference: `references/time-blocked-planning.md`.
+- Task/calendar/Telegram workflow reference: `references/duy-task-calendar-telegram-workflow.md`.
+- Zeus task/calendar/Pomodoro/earnings maintenance notes: `references/zeus-task-calendar-earnings-pomodoro.md`.
+
+When updating the planning system, preserve these rules and verify generated plans contain brunch, pickup transition, the correct weekday company, `Today Tasks`, Top 3, Pomodoro sections, and No-Date Triage. `Today Tasks` is the authoritative due-today non-fixed list and must not be replaced with future/high-priority backlog items. Specific-time events/tasks belong under `Fixed` and must not be fed into Pomodoro reminders. Daily schedule reminders should be one-line time labels only (for example `🗓 9:05–9:30 — Pomodoro 1 — Deep Work`) with no checkboxes, task list, instructions, Done/Log buttons, or “what to do” text; task cards are separate. If Google Calendar is part of the planning integration, Zeus should default to Duy's `theduy calendar` (`duynt1989@gmail.com`) with Calendar-only scope unless the user explicitly requests broader Workspace access.
+
+### Obsidian task sync with theduy Google Calendar
+
+Source-of-truth rule: `/vault/Tasks/tasks/*.md` owns tasks. Telegram and Google Calendar are capture/display layers.
+
+**Obsidian -> Google Calendar mirror**
+Zeus syncs dated eligible tasks from `/vault/Tasks/tasks/*.md` to Google Calendar `theduy calendar` only (`duynt1989@gmail.com`) via `/home/hermes/.hermes/profiles/zeus/scripts/sync_obsidian_tasks_to_theduy_calendar.py`.
+Rules:
+- Exclude tasks tagged or mentioning `#catthew`/`catthew`.
+- Exclude completed/done/cancelled/canceled tasks.
+- Upsert all-day events using Google Calendar private `extendedProperties` with `managed_by=zeus-obsidian-task-sync` and `source_path`.
+- Delete stale Google events managed by this script when the source task is completed, deleted, or no longer eligible.
+- Cron job `Sync Obsidian Tasks to theduy Calendar` runs every 15 minutes from 8AM-10PM.
+Verification command: run the script with `--dry-run`; expected steady state is `0 created, 0 updated, 0 stale deleted, N unchanged`, then query managed events and confirm `catthew_mentions 0`.
+
+**Google Calendar -> Obsidian capture**
+Zeus imports only explicitly-prefixed events from `theduy calendar` via `/home/hermes/.hermes/profiles/zeus/scripts/import_theduy_calendar_tasks.py`.
+Rules:
+- Import only event titles starting with `Task:` or `TODO:`.
+- Do not import normal appointments/events.
+- Ignore events managed by the Obsidian->Calendar mirror (`managed_by=zeus-obsidian-task-sync`) to avoid loops.
+- Ignore `#catthew`/`catthew` events.
+- Create/update `/vault/Tasks/tasks/*.md` with `google_event_id`, `calendar_imported_by=zeus-calendar-task-import`, date/time metadata, planning metadata, and source link.
+- Mark imported calendar events with private `extendedProperties` (`managed_by=zeus-calendar-task-import`, `obsidian_path`) for idempotency.
+- Cron job `Import theduy Calendar Task Events to Obsidian` runs every 15 minutes from 8AM-10PM.
+Verification: script passes `py_compile`; fixture test should confirm `Task:` imports, `#catthew` is skipped, mirror events are skipped, and normal appointment titles are skipped. Then `--dry-run` should report current importable count.
+
 ### Telegram task card drip from Obsidian tasks
 
 When the user wants one actionable Telegram card per Obsidian task, read `/vault/Tasks/tasks/*.md` directly and use the vault task files as the source of truth. Avoid requiring an upstream briefing/sidecar job unless the user explicitly wants curated LLM output.
@@ -201,8 +253,15 @@ When the user wants one actionable Telegram card per Obsidian task, read `/vault
 Recommended filtering:
 - Include `status: pending` and `status: in_progress` tasks.
 - Exclude `completed`, `done`, `cancelled`, and `canceled`.
-- Include only tasks with `due_date <= today`.
-- Order by user preference: due today first, then overdue tasks newest-first.
+- For Zeus due-task Telegram drips, include only tasks with `due_date == today`; do not drip overdue tasks because Duy moves overdue items himself during planning.
+- Task cards and schedule/block reminders must stay separate: task cards may have Done buttons; planning/Pomodoro reminders are plain messages without buttons.
+- Specific-time tasks/events are fixed-time items. Show their time on task cards and in the daily plan `Fixed` section, but do not feed them into Pomodoro schedule reminders.
+
+Calendar-plugin pitfall:
+- Duy's Obsidian Today view can include files from `/vault/Tasks/calendar/*.md`, not just `/vault/Tasks/tasks/*.md`.
+- Calendar files use frontmatter like `title:`, `date: YYYY-MM-DD`, and `completed: false` instead of task-file `due_date:` / `status:`.
+- Canonical generated Full Calendar stubs include `generated_by: sync-calendar-events` and `source_note:`. If Full Calendar creates a new item directly, it may be an orphan stub with `title:`/`date:`/`completed: false` but no source task note; `/vault/System/scripts/sync-calendar-events.py` should adopt those current/future unfinished orphan task stubs into `/vault/Tasks/tasks/*.md`, delete the orphan stub, then regenerate a canonical mirror so Zeus Telegram cards and theduy Google Calendar sync can see it.
+- Telegram task-card drips should read `/vault/Tasks/tasks/*.md` as the durable source of truth. If they scan `/vault/Tasks/calendar` directly, exclude generated mirrors, `completed: true`, checked/titled `✅` items, and old stale calendar files to avoid duplicate/ghost cards.
 
 Recurring-task grace behavior:
 - If the user says a task is recurring and should disappear even when not marked done, implement that in the task-button/drip script, not by marking it completed.
@@ -220,6 +279,8 @@ Recommended sender shape:
 ### Event reminder tasks
 
 When Duy asks to add reminders for public schedules (sports tournaments, concerts, festivals, TV releases, etc.), create dated Obsidian task files under `/vault/Tasks/tasks/`, include the start/kickoff time in the body, normalize times to the active timezone, avoid duplicates by searching existing tasks first, and verify by reading/listing created files. Full pattern: `references/event-reminder-tasks.md`.
+
+For major US stock-market earnings reminders, use `references/earnings-reminder-tasks.md`: create fixed-time finance task reminders with `due_time` / `time_block: fixed`, keep them out of Pomodoro reminders, sync via Zeus to `theduy calendar`, and refresh quarterly at the beginning of Jan/Apr/Jul/Oct.
 
 ### Efficient batch query (many tasks → categorized lists)
 

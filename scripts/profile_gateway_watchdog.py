@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-import os, subprocess
+import os, subprocess, re
+from datetime import datetime, timezone
 from pathlib import Path
 
 HOME = Path('/home/hermes/.hermes')
@@ -73,12 +74,40 @@ def last_start_window(profile):
             start=i
     return lines[start:][-300:]
 
+def _line_age_seconds(line):
+    m = re.search(r'(20\d\d-\d\d-\d\d \d\d:\d\d:\d\d)', line)
+    if not m:
+        return None
+    try:
+        # Container logs are local time; use naive delta to avoid timezone config drift.
+        return (datetime.now() - datetime.strptime(m.group(1), '%Y-%m-%d %H:%M:%S')).total_seconds()
+    except Exception:
+        return None
+
 def recent_bad_log(profile):
     lines=last_start_window(profile)
     bad=[]
-    patterns=['polling conflict','token already in use','Could not parse your authentication token','auth is missing access_token','Port 8642 already in use']
-    for pat in patterns:
+
+    # True startup blockers. Do not include model/cron auth strings here: they can
+    # appear in gateway.log but are not gateway startup failures.
+    blocker_patterns=['token already in use','Port 8642 already in use']
+    for pat in blocker_patterns:
         if any(pat in l for l in lines): bad.append(pat)
+
+    # Telegram can emit one transient 409 when an old long-poll session is still
+    # expiring, then continue normally. Alert only if conflicts are recent or
+    # repeated in the current startup window.
+    conflict_lines=[l for l in lines if 'polling conflict' in l]
+    recent_conflicts=[]
+    for l in conflict_lines:
+        age=_line_age_seconds(l)
+        # Untimestamped duplicate console lines are not enough to make an old
+        # conflict current; rely on timestamped log lines or repeated conflicts.
+        if age is not None and age <= 20*60:
+            recent_conflicts.append(l)
+    if len(conflict_lines) >= 3 or recent_conflicts:
+        bad.append('polling conflict')
+
     # If it connected after a startup retry, do not keep stale startup conflict as active.
     if any('✓ telegram connected' in l or 'Connected to Telegram' in l for l in lines):
         bad=[b for b in bad if b not in ('token already in use',)]

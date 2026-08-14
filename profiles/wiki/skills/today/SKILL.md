@@ -1,6 +1,6 @@
 ---
 name: today
-description: Generate the theduyvault daily briefing (tasks, finance, weather, lunar, quote) into Daily/. Scheduled headless job.
+description: Generate the theduyvault daily briefing (weather, lunar, quote) and separate investment briefing. Scheduled headless job.
 version: 1.0.0
 metadata:
   hermes:
@@ -11,22 +11,24 @@ metadata:
 # today — theduyvault daily briefing (headless)
 
 You are running as a scheduled cron job. No human is watching: never ask for
-confirmation, never stop to ask a question. Run the full "all tasks" briefing
-(no project filter).
+confirmation, never stop to ask a question. Generate the full daily briefing
+without any visible task sections in the main Daily note.
 
 ## Canonical instructions
-Read and follow **`/vault/.claude/skills/today/SKILL.md`** exactly — it lists every
-step (date context, sync task status, compile tasks, watchlist, finance news,
-earnings, horoscope, weather, lunar date, Morning Brew, quote) and the exact output
-format for the daily file.
+Read and follow **`/vault/.claude/skills/today/SKILL.md`** for date context,
+watchlist, finance news, earnings, horoscope, weather, lunar date, Morning Brew,
+quote and file-writing mechanics. However, the no-task runtime adaptation below
+supersedes any canonical instructions to compile or display tasks in the main daily
+file.
 
 ## Runtime adaptations (this environment)
 - The vault is mounted at **`/vault`** (not `/root/theduyvault`). Run every helper as
   an absolute path, e.g. `python3 /vault/System/scripts/calculate_dates.py`. The
   scripts self-locate the vault from their own path, so any working directory is fine.
 - Write the briefing to **`/vault/Daily/<YYYY-MM-DD>.md`**.
+- **User preference as of 2026-07-20: omit ALL task sections from the Daily Briefing.** Do not include `## Overdue`, `## Due Today`, `## This Week`, `## Next Week`, `## Later / No Date`, task checkboxes, task reference tables, or task-count summaries in `/vault/Daily/<YYYY-MM-DD>.md`. Keep task syncing only if needed for task status hygiene, but the user does not want tasks displayed in the daily briefing. The Daily Investment Briefing is unchanged. For retroactive cleanup, use `scripts/remove_daily_task_sections.py`; it edits only `/vault/Daily/YYYY-MM-DD.md` main daily files and leaves `*-investment.md` / `*-tonight.md` untouched. After cleanup, verify zero task headings, zero `- [ ]` / `- [x]` task checkboxes, no duplicate separators, and no excessive blank-line runs remain.
 - Vault conventions live in `/vault/CLAUDE.md`; the daily-file frontmatter/format is in
-  the canonical skill above — match it precisely.
+  the canonical skill above, except this no-tasks override supersedes the canonical task sections.
 - Use the **terminal** tool for the `python3` scripts. If a fetch script fails
   (e.g. missing `NEWS_API_KEY`), include whatever sections succeeded and note the
   skipped one — do not abort the whole briefing.

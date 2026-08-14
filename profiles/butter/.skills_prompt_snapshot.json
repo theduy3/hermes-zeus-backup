@@ -1,9 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "manifest": {
+    "apple/DESCRIPTION.md": [
+      1778644994273296431,
+      152
+    ],
     "apple/apple-ecosystem-automation/SKILL.md": [
       1781520696542069442,
       1866
+    ],
+    "autonomous-ai-agents/DESCRIPTION.md": [
+      1775843805095735812,
+      211
     ],
     "autonomous-ai-agents/autonomous-coding-agents/SKILL.md": [
       1781520695526072108,
@@ -29,9 +37,13 @@
       1779252798243558402,
       12774
     ],
-    "computer-use/SKILL.md": [
-      1782362686226103976,
-      11179
+    "autonomous-ai-agents/computer-use/SKILL.md": [
+      1785556028603935571,
+      16658
+    ],
+    "creative/DESCRIPTION.md": [
+      1775843805096651856,
+      116
     ],
     "creative/baoyu-article-illustrator/SKILL.md": [
       1779252798243558402,
@@ -49,21 +61,25 @@
       1778565357578383615,
       6318
     ],
-    "creative/humanizer/SKILL.md": [
-      1778490391617044083,
-      30025
-    ],
     "creative/pixel-art/SKILL.md": [
       1778565357579560953,
       7581
     ],
-    "creative/touchdesigner-mcp/SKILL.md": [
-      1778490391617044083,
-      15429
-    ],
     "creative/visual-artifact-design/SKILL.md": [
       1781520731861973514,
       1889
+    ],
+    "creative/humanizer/SKILL.md": [
+      1784175066020257584,
+      34463
+    ],
+    "creative/touchdesigner-mcp/SKILL.md": [
+      1785092884121088599,
+      15269
+    ],
+    "data-science/DESCRIPTION.md": [
+      1775843805114145597,
+      137
     ],
     "data-science/jupyter-live-kernel/SKILL.md": [
       1778565357580488582,
@@ -81,13 +97,33 @@
       1778565357580872875,
       6836
     ],
+    "diagramming/DESCRIPTION.md": [
+      1775843805114670348,
+      159
+    ],
     "dogfood/SKILL.md": [
       1778565357580987834,
       6270
     ],
+    "domain/DESCRIPTION.md": [
+      1775843805115300100,
+      1142
+    ],
+    "email/DESCRIPTION.md": [
+      1775843805115439891,
+      101
+    ],
     "email/himalaya/SKILL.md": [
       1778644994278319659,
       6818
+    ],
+    "feeds/DESCRIPTION.md": [
+      1778644994278507868,
+      115
+    ],
+    "gaming/DESCRIPTION.md": [
+      1775843805116133601,
+      129
     ],
     "gaming/minecraft-modpack-server/SKILL.md": [
       1778565357581377127,
@@ -97,13 +133,29 @@
       1778565357581521544,
       8709
     ],
+    "gifs/DESCRIPTION.md": [
+      1775843805116638227,
+      109
+    ],
+    "github/DESCRIPTION.md": [
+      1775843805116774144,
+      167
+    ],
     "github/github-workflows/SKILL.md": [
       1781520660138161616,
       3554
     ],
+    "inference-sh/DESCRIPTION.md": [
+      1775843805120502401,
+      706
+    ],
     "leisure/find-nearby/SKILL.md": [
       1778644994278740411,
       3088
+    ],
+    "mcp/DESCRIPTION.md": [
+      1778644994278911453,
+      271
     ],
     "mcp/mcporter/SKILL.md": [
       1778644994279009620,
@@ -113,6 +165,10 @@
       1778644994279090954,
       13773
     ],
+    "media/DESCRIPTION.md": [
+      1775843805121513945,
+      139
+    ],
     "media/media-content-production/SKILL.md": [
       1781520732877970664,
       1897
@@ -121,9 +177,25 @@
       1778490391621044058,
       6319
     ],
+    "mlops/DESCRIPTION.md": [
+      1775843805122554071,
+      162
+    ],
+    "mlops/cloud/DESCRIPTION.md": [
+      1778644994279176246,
+      92
+    ],
     "mlops/cloud/modal/SKILL.md": [
       1778644994279323080,
       8580
+    ],
+    "mlops/evaluation/DESCRIPTION.md": [
+      1775843805123322906,
+      126
+    ],
+    "mlops/inference/DESCRIPTION.md": [
+      1775843805125290327,
+      161
     ],
     "mlops/inference/gguf/SKILL.md": [
       1778644994279730373,
@@ -145,6 +217,10 @@
       1781520754677908345,
       1628
     ],
+    "mlops/models/DESCRIPTION.md": [
+      1778644994282607968,
+      191
+    ],
     "mlops/models/clip/SKILL.md": [
       1778644994282687302,
       6909
@@ -157,9 +233,17 @@
       1778644994283265471,
       7491
     ],
+    "mlops/research/DESCRIPTION.md": [
+      1775843805131867131,
+      113
+    ],
     "mlops/research/dspy/SKILL.md": [
       1778565357586710066,
       15220
+    ],
+    "mlops/training/DESCRIPTION.md": [
+      1775843805132691924,
+      150
     ],
     "mlops/training/axolotl/SKILL.md": [
       1778644994283424263,
@@ -185,17 +269,29 @@
       1778644994293024343,
       2272
     ],
+    "mlops/vector-databases/DESCRIPTION.md": [
+      1775843805142786443,
+      125
+    ],
+    "note-taking/DESCRIPTION.md": [
+      1775843805142918985,
+      146
+    ],
     "note-taking/obsidian-csv-import-ingest/SKILL.md": [
       1778644994305897936,
       8996
+    ],
+    "productivity/DESCRIPTION.md": [
+      1775843805143460320,
+      114
     ],
     "productivity/linear/SKILL.md": [
       1778565357587617111,
       14782
     ],
-    "productivity/petdex/SKILL.md": [
-      1782362686227104003,
-      3534
+    "productivity/ocr-and-documents/DESCRIPTION.md": [
+      1776960632000000000,
+      147
     ],
     "productivity/productivity-platforms/SKILL.md": [
       1781520733893967809,
@@ -205,9 +301,33 @@
       1778644994307384401,
       5120
     ],
+    "productivity/petdex/SKILL.md": [
+      1782362686227104003,
+      3534
+    ],
+    "productivity/tui-widgets/SKILL.md": [
+      1784734181783534118,
+      6672
+    ],
+    "productivity/docx/SKILL.md": [
+      1784734181778533985,
+      8178
+    ],
+    "productivity/pdf/SKILL.md": [
+      1784734181782534091,
+      7005
+    ],
+    "productivity/xlsx/SKILL.md": [
+      1784734181783534118,
+      9126
+    ],
     "red-teaming/godmode/SKILL.md": [
       1778565357588786324,
       20059
+    ],
+    "research/DESCRIPTION.md": [
+      1775843805155132592,
+      179
     ],
     "research/last30days/SKILL.md": [
       1780819766039568949,
@@ -217,9 +337,17 @@
       1781520753665911287,
       1816
     ],
+    "smart-home/DESCRIPTION.md": [
+      1775843805167642449,
+      123
+    ],
     "smart-home/openhue/SKILL.md": [
       1778565357589426535,
       2713
+    ],
+    "social-media/DESCRIPTION.md": [
+      1775843805167957033,
+      151
     ],
     "social-media/xitter/SKILL.md": [
       1778644994307488109,
@@ -232,10 +360,6 @@
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778490391625044033,
       7910
-    ],
-    "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1782362686227104003,
-      10651
     ],
     "software-development/hermes-s6-container-supervision/SKILL.md": [
       1779743766085236865,
@@ -257,6 +381,14 @@
       1778565357591729503,
       7229
     ],
+    "software-development/hermes-agent-skill-authoring/SKILL.md": [
+      1785092884130088840,
+      11357
+    ],
+    "software-development/inspecting-hermes-desktop-dom/SKILL.md": [
+      1785556028604935598,
+      6204
+    ],
     "telegram/SKILL.md": [
       1778644994307587526,
       1696
@@ -265,120 +397,33 @@
       1778490391625044033,
       3795
     ],
-    "apple/DESCRIPTION.md": [
-      1778644994273296431,
-      152
+    "hermes-desktop-plugins/SKILL.md": [
+      1784734181777533958,
+      8849
     ],
-    "autonomous-ai-agents/DESCRIPTION.md": [
-      1775843805095735812,
-      211
+    "hermes-themes/SKILL.md": [
+      1784734181777533958,
+      7119
     ],
-    "creative/DESCRIPTION.md": [
-      1775843805096651856,
-      116
-    ],
-    "data-science/DESCRIPTION.md": [
-      1775843805114145597,
-      137
-    ],
-    "diagramming/DESCRIPTION.md": [
-      1775843805114670348,
-      159
-    ],
-    "domain/DESCRIPTION.md": [
-      1775843805115300100,
-      1142
-    ],
-    "email/DESCRIPTION.md": [
-      1775843805115439891,
-      101
-    ],
-    "feeds/DESCRIPTION.md": [
-      1778644994278507868,
-      115
-    ],
-    "gaming/DESCRIPTION.md": [
-      1775843805116133601,
-      129
-    ],
-    "gifs/DESCRIPTION.md": [
-      1775843805116638227,
-      109
-    ],
-    "github/DESCRIPTION.md": [
-      1775843805116774144,
-      167
-    ],
-    "inference-sh/DESCRIPTION.md": [
-      1775843805120502401,
-      706
-    ],
-    "mcp/DESCRIPTION.md": [
-      1778644994278911453,
-      271
-    ],
-    "media/DESCRIPTION.md": [
-      1775843805121513945,
-      139
-    ],
-    "mlops/DESCRIPTION.md": [
-      1775843805122554071,
-      162
-    ],
-    "mlops/cloud/DESCRIPTION.md": [
-      1778644994279176246,
-      92
-    ],
-    "mlops/evaluation/DESCRIPTION.md": [
-      1775843805123322906,
-      126
-    ],
-    "mlops/inference/DESCRIPTION.md": [
-      1775843805125290327,
-      161
-    ],
-    "mlops/models/DESCRIPTION.md": [
-      1778644994282607968,
-      191
-    ],
-    "mlops/research/DESCRIPTION.md": [
-      1775843805131867131,
-      113
-    ],
-    "mlops/training/DESCRIPTION.md": [
-      1775843805132691924,
-      150
-    ],
-    "mlops/vector-databases/DESCRIPTION.md": [
-      1775843805142786443,
-      125
-    ],
-    "note-taking/DESCRIPTION.md": [
-      1775843805142918985,
-      146
-    ],
-    "productivity/DESCRIPTION.md": [
-      1775843805143460320,
-      114
-    ],
-    "productivity/ocr-and-documents/DESCRIPTION.md": [
-      1776960632000000000,
-      147
-    ],
-    "research/DESCRIPTION.md": [
-      1775843805155132592,
-      179
-    ],
-    "smart-home/DESCRIPTION.md": [
-      1775843805167642449,
-      123
-    ],
-    "social-media/DESCRIPTION.md": [
-      1775843805167957033,
-      151
+    "agent-reach/SKILL.md": [
+      1785567266701897817,
+      6702
     ]
   },
   "skills": [
+    {
+      "skill_name": "agent-reach",
+      "category": "agent-reach",
+      "frontmatter_name": "agent-reach",
+      "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/loo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
     {
       "skill_name": "apple-ecosystem-automation",
       "category": "apple",
@@ -403,6 +448,23 @@
         "linux",
         "macos",
         "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "computer-use",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "computer-use",
+      "description": "Drive the user's desktop in the background — clicking, ty...",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
       ],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -469,23 +531,6 @@
       "frontmatter_name": "kanban-codex-lane",
       "description": "Use when a Hermes Kanban worker wants to run Codex CLI as...",
       "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "computer-use",
-      "category": "computer-use",
-      "frontmatter_name": "computer-use",
-      "description": "Drive the user's desktop in the background — clicking, ty...",
-      "platforms": [
-        "macos",
-        "windows",
-        "linux"
-      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -599,7 +644,7 @@
       "skill_name": "touchdesigner-mcp",
       "category": "creative",
       "frontmatter_name": "touchdesigner-mcp",
-      "description": "Control a running TouchDesigner instance via twozero MCP ...",
+      "description": "Control TouchDesigner via twozero MCP.",
       "platforms": [
         "linux",
         "macos",
@@ -761,6 +806,40 @@
       "category": "github",
       "frontmatter_name": "github-workflows",
       "description": "Class-level GitHub workflow umbrella: auth, repositories,...",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-desktop-plugins",
+      "category": "hermes-desktop-plugins",
+      "frontmatter_name": "hermes-desktop-plugins",
+      "description": "Write desktop app plugins that add UI panes and commands.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-themes",
+      "category": "hermes-themes",
+      "frontmatter_name": "hermes-themes",
+      "description": "Author a Hermes color theme that skins every surface.",
       "platforms": [
         "linux",
         "macos",
@@ -1079,10 +1158,44 @@
       }
     },
     {
+      "skill_name": "docx",
+      "category": "productivity",
+      "frontmatter_name": "docx",
+      "description": "Create, read, edit Word .docx documents and templates.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "linear",
       "category": "productivity",
       "frontmatter_name": "linear",
       "description": "Linear: manage issues, projects, teams via GraphQL + curl.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "pdf",
+      "category": "productivity",
+      "frontmatter_name": "pdf",
+      "description": "Create, merge, split, fill, and secure PDF files.",
       "platforms": [
         "linux",
         "macos",
@@ -1135,6 +1248,36 @@
       "frontmatter_name": "theduylifeos-filing",
       "description": "Sort loose files (Downloads, new docs) into the user's th...",
       "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "tui-widgets",
+      "category": "productivity",
+      "frontmatter_name": "tui-widgets",
+      "description": "Author live widget apps for the Hermes TUI dock.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "xlsx",
+      "category": "productivity",
+      "frontmatter_name": "xlsx",
+      "description": "Create, read, edit Excel .xlsx spreadsheets and CSVs.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -1259,7 +1402,7 @@
       "skill_name": "hermes-agent-skill-authoring",
       "category": "software-development",
       "frontmatter_name": "hermes-agent-skill-authoring",
-      "description": "Author in-repo SKILL.md: frontmatter, validator, structur...",
+      "description": "Author in-repo SKILL.md files: frontmatter and structure.",
       "platforms": [
         "linux",
         "macos",
@@ -1278,6 +1421,23 @@
       "frontmatter_name": "hermes-s6-container-supervision",
       "description": "Modify, debug, or extend the s6-overlay supervision tree ...",
       "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "inspecting-hermes-desktop-dom",
+      "category": "software-development",
+      "frontmatter_name": "inspecting-hermes-desktop-dom",
+      "description": "Read the live Hermes desktop DOM/CSS over CDP.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

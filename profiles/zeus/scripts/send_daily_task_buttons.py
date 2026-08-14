@@ -25,6 +25,7 @@ BASE = pathlib.Path("/home/hermes/.hermes/profiles/zeus/task_buttons")
 INPUT = BASE / "today_tasks.json"
 REGISTRY = BASE / "registry.json"
 VAULT_TASKS = pathlib.Path("/vault/Tasks/tasks")
+CALENDAR_TASKS = pathlib.Path("/vault/Tasks/calendar")
 ENV_FILES = [pathlib.Path("/home/hermes/.hermes/profiles/zeus/.env"), pathlib.Path("/home/hermes/.hermes/.env")]
 CONFIG = pathlib.Path("/home/hermes/.hermes/profiles/zeus/config.yaml")
 
@@ -261,6 +262,54 @@ def update_due_date(path: pathlib.Path, old_due: date, new_due: date) -> None:
         path.write_text(updated, encoding="utf-8")
 
 
+def load_calendar_tasks(today: date) -> list[dict]:
+    """Load dated Obsidian Tasks/calendar items for today's Telegram cards.
+
+    The Calendar plugin stores one file per scheduled item under
+    /vault/Tasks/calendar with frontmatter like `title`, `date`, and
+    `completed`. These are visible in Obsidian's Today view but are separate
+    from /vault/Tasks/tasks/*.md, so scan them explicitly. Only include today's
+    unfinished calendar items; old calendar files often remain with stale
+    `completed: false` despite their titles being prefixed with ✅.
+    """
+    if not CALENDAR_TASKS.exists():
+        return []
+    tasks: list[dict] = []
+    for path in sorted(CALENDAR_TASKS.glob("*.md")):
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+        fm, body = parse_frontmatter(text)
+        title = (fm.get("title") or title_from_body(path, body)).strip()
+        if not title or title.startswith("✅"):
+            continue
+        completed = (fm.get("completed") or "").strip().lower()
+        status = (fm.get("status") or "").strip().lower()
+        if completed in {"true", "yes", "1"} or status in {"completed", "done", "cancelled", "canceled"}:
+            continue
+        due_text = (fm.get("date") or fm.get("due_date") or "").strip()
+        if not due_text:
+            continue
+        try:
+            due = date.fromisoformat(due_text[:10])
+        except ValueError:
+            continue
+        if due != today:
+            continue
+        due_time = time_from_task(fm, body)
+        tasks.append({
+            "title": title,
+            "source": "Obsidian calendar",
+            "file_path": str(path),
+            "due_date": due.isoformat(),
+            "due_time": due_time,
+            "modified_at": path.stat().st_mtime,
+        })
+    tasks.sort(key=lambda t: (float(t.get("modified_at") or 0), t.get("title", "").lower()), reverse=True)
+    return tasks
+
+
 def load_vault_tasks(today: date) -> list[dict]:
     if not VAULT_TASKS.exists():
         return []
@@ -301,16 +350,13 @@ def load_vault_tasks(today: date) -> list[dict]:
             "file_path": str(path),
             "due_date": due.isoformat(),
             "due_time": due_time,
+            "modified_at": path.stat().st_mtime,
         })
-    # Priority: today's tasks first, then overdue tasks newest-first, then title.
-    tasks.sort(key=lambda t: (
-        0 if t.get("due_date") == today.isoformat() else 1,
-        t.get("due_date", "9999-99-99") if t.get("due_date") == today.isoformat() else "",
-        t.get("title", "").lower(),
-    ))
+    # Priority: today's newly-added/modified tasks first, then overdue tasks newest-first.
     overdue = [t for t in tasks if t.get("due_date") != today.isoformat()]
     overdue.sort(key=lambda t: (t.get("due_date", "0000-00-00"), t.get("title", "").lower()), reverse=True)
     today_tasks = [t for t in tasks if t.get("due_date") == today.isoformat()]
+    today_tasks.sort(key=lambda t: (float(t.get("modified_at") or 0), t.get("title", "").lower()), reverse=True)
     return today_tasks + overdue
 
 
@@ -325,7 +371,7 @@ def main() -> int:
     local_today = today_local()
     date_key = local_today.isoformat()
     try:
-        tasks = load_vault_tasks(local_today)
+        tasks = load_vault_tasks(local_today) + load_calendar_tasks(local_today)
     except Exception as exc:
         print(f"vault task scan failed: {exc}", file=sys.stderr)
         tasks = []
@@ -337,9 +383,9 @@ def main() -> int:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8")) if REGISTRY.exists() else {}
     sent = 0
     try:
-        send_limit = max(1, int(os.environ.get("TASK_BUTTON_SEND_LIMIT", "1")))
+        send_limit = max(1, int(os.environ.get("TASK_BUTTON_SEND_LIMIT", "5")))
     except ValueError:
-        send_limit = 1
+        send_limit = 5
 
     # Re-drip unfinished cards daily until Duy taps Done.
     # A sent-but-not-done card should be suppressed only for the current day;
@@ -363,9 +409,11 @@ def main() -> int:
         prior_entries = handled_by_file.get(file_path, [])
         if any(e.get("status") == "done" for e in prior_entries):
             continue
+        # Suppress a task once per local day by source file, even if its due_date
+        # changes later the same day via calendar drag/reverse-sync. Otherwise the
+        # same card can be resent with a new digest when due_date changes.
         if any(
             e.get("status") == "sent"
-            and (not e.get("due_date") or e.get("due_date") == due_date)
             and e.get("date") == date_key
             for e in prior_entries
         ):

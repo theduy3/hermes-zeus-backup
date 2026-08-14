@@ -1,41 +1,4 @@
 {
-  "updated_at": "2026-07-13T06:58:46.015739",
-  "platforms": {
-    "telegram": [
-      {
-        "id": "8446251233",
-        "name": "theduy",
-        "type": "dm",
-        "thread_id": null
-      }
-    ],
-    "discord": [],
-    "whatsapp": [],
-    "whatsapp_cloud": [],
-    "slack": [],
-    "signal": [],
-    "mattermost": [],
-    "matrix": [],
-    "homeassistant": [],
-    "email": [],
-    "sms": [],
-    "dingtalk": [],
-    "msgraph_webhook": [],
-    "feishu": [],
-    "wecom": [],
-    "wecom_callback": [],
-    "weixin": [],
-    "bluebubbles": [],
-    "qqbot": [],
-    "yuanbao": [],
-    "relay": [],
-    "google_chat": [],
-    "irc": [],
-    "line": [],
-    "ntfy": [],
-    "photon": [],
-    "raft": [],
-    "simplex": [],
-    "teams": []
-  }
+  "updated_at": "2026-08-14T04:00:57.155489",
+  "platforms": {}
 }

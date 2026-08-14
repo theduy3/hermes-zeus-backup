@@ -1,13 +1,15 @@
-For Obsidian, the user wants all newly created notes to go to /Users/theduy/theduyvault/Inbox by default.
+New Obsidian notes default to /Users/theduy/theduyvault/Inbox.
 §
-User wants tasks created in Obsidian tasks, not Apple Reminders.
+OpenAI-only models/providers; no Anthropic, OpenRouter, or non-OpenAI configs.
 §
-User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
+Lives in Pacific timezone (PST/PDT). Has child Victoria. Tracks personal finance, stock/watchlist, Canadian credit card churning, points, horoscope, and Vancouver/Laval/Quebec weather.
 §
-Lives in Pacific timezone (PST/PDT). Has child Victoria. Manages nail salons (Maily, Charlesbourg, Rivières, Sans Souci), salon360, and real estate. Tracks stock portfolio/watchlist, Canadian credit card churning, points redemptions, Sagittarius horoscope, and weather for Vancouver/Laval/Quebec.
+Prefers terse, no-fluff responses; commands/one-liners when possible.
 §
-User prefers terse, commands-only responses. Skip explanations, give just the code or one-liner commands unless asked to elaborate. No fluff.
-§
-Discord user ID: 836783578552467467. Telegram user ID: 8446251233. Profile architecture: Telegram for specialist agents (hermes-orchestrator, zeus-personal, alan-research, mira-writer, turing-debugger) and Discord for business/salon profiles (maily-Ongles Maily, charlesbourg-Ongles Charlesbourg, 3r-Ongles Rivieres, ss-Sans Souci). Thor profile is wellness on Telegram, model openai-codex (gpt-5.5).
+Discord user ID: 836783578552467467. Telegram user ID: 8446251233. Profiles: Telegram specialist agents, Discord business profiles, Thor wellness on Telegram.
 §
 When the user adds or cancels any credit card, they want Obsidian recurring payment tasks updated automatically.
+§
+Tasks go in /vault/Tasks/{tasks,bugs,ideas} with vault frontmatter; not Apple Reminders/local files.
+§
+Finance outputs show personal finance only; exclude business info for OM/Ongles Maily, OC/Ongles Charlesbourg, 3R/Ongles Rivieres, SS/Sans Souci, and Laviestella unless explicitly requested.
