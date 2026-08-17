@@ -23,16 +23,16 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 89
+        "completed": 92
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-08-14T04:00:00-04:00",
-      "last_run_at": "2026-08-13T04:00:33.545057-04:00",
-      "last_status": "pending",
+      "next_run_at": "2026-08-17T04:00:00-04:00",
+      "last_run_at": "2026-08-16T04:03:48.760728-04:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -46,8 +46,7 @@
       "profile": "wiki",
       "fire_claim": null,
       "provider_snapshot": null,
-      "model_snapshot": null,
-      "preflight_alerted": false
+      "model_snapshot": null
     },
     {
       "id": "ce61f73456fe",
@@ -71,16 +70,16 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 83
+        "completed": 86
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-08-14T10:00:00-04:00",
-      "last_run_at": "2026-08-13T10:00:28.963633-04:00",
-      "last_status": "pending",
+      "next_run_at": "2026-08-17T10:00:00-04:00",
+      "last_run_at": "2026-08-16T10:06:06.005397-04:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -90,8 +89,7 @@
       "profile": "wiki",
       "fire_claim": null,
       "provider_snapshot": null,
-      "model_snapshot": null,
-      "preflight_alerted": false
+      "model_snapshot": null
     },
     {
       "id": "e358e0a4cb18",
@@ -115,15 +113,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 248
+        "completed": 257
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-08-14T08:00:00-04:00",
-      "last_run_at": "2026-08-13T20:00:48.189937-04:00",
+      "next_run_at": "2026-08-17T08:00:00-04:00",
+      "last_run_at": "2026-08-16T20:00:48.232350-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -158,16 +156,16 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 85
+        "completed": 88
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-08-14T02:00:00-04:00",
-      "last_run_at": "2026-08-13T05:00:04.382916-04:00",
-      "last_status": "pending",
+      "next_run_at": "2026-08-17T02:00:00-04:00",
+      "last_run_at": "2026-08-16T02:06:08.667624-04:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -177,8 +175,7 @@
       "profile": "wiki",
       "fire_claim": null,
       "provider_snapshot": null,
-      "model_snapshot": null,
-      "preflight_alerted": false
+      "model_snapshot": null
     },
     {
       "id": "2f8f46180850",
@@ -202,15 +199,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 166
+        "completed": 172
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-08-14T18:00:00-04:00",
-      "last_run_at": "2026-08-13T23:01:28.946546-04:00",
+      "next_run_at": "2026-08-17T18:00:00-04:00",
+      "last_run_at": "2026-08-16T23:04:02.674228-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -247,17 +244,17 @@
       "schedule_display": "0 1 * * 6",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-02T19:59:20.220655-07:00",
-      "next_run_at": "2026-08-15T01:00:00-07:00",
-      "last_run_at": "2026-08-08T01:02:44.456210-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-22T01:00:00-04:00",
+      "last_run_at": "2026-08-15T04:11:12.022538-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key.",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -291,15 +288,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 3554
+        "completed": 3824
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-08-14T00:11:17.588513-04:00",
-      "last_run_at": "2026-08-13T23:56:17.588513-04:00",
+      "next_run_at": "2026-08-17T00:01:36.867422-04:00",
+      "last_run_at": "2026-08-16T23:46:36.867422-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -356,5 +353,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-13T23:56:17.588706-04:00"
+  "updated_at": "2026-08-16T23:46:36.867630-04:00"
 }

@@ -23,16 +23,16 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 87
+        "completed": 90
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-08-14T07:00:00-04:00",
-      "last_run_at": "2026-08-13T10:00:29.034909-04:00",
-      "last_status": "pending",
+      "next_run_at": "2026-08-17T07:00:00-04:00",
+      "last_run_at": "2026-08-16T07:01:56.017334-04:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
@@ -48,8 +48,7 @@
         "skills"
       ],
       "workdir": null,
-      "fire_claim": null,
-      "preflight_alerted": false
+      "fire_claim": null
     },
     {
       "id": "a02e52721326",
@@ -200,15 +199,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 7283
+        "completed": 7571
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-08-14T08:00:00-04:00",
-      "last_run_at": "2026-08-13T23:50:28.517303-04:00",
+      "next_run_at": "2026-08-17T08:00:00-04:00",
+      "last_run_at": "2026-08-16T23:50:48.795513-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -247,15 +246,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T23:41:01.053318-07:00",
-      "next_run_at": "2026-08-16T16:00:00-07:00",
-      "last_run_at": "2026-08-09T16:00:52.229748-07:00",
+      "next_run_at": "2026-08-23T16:00:00-04:00",
+      "last_run_at": "2026-08-16T19:03:27.536697-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -344,15 +343,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 21
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T16:00:45.951943-07:00",
-      "next_run_at": "2026-08-14T15:00:00-04:00",
-      "last_run_at": "2026-08-13T15:01:43.688186-04:00",
+      "next_run_at": "2026-08-17T15:00:00-04:00",
+      "last_run_at": "2026-08-16T15:00:56.300431-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -488,17 +487,17 @@
       "schedule_display": "0 20 * * 6",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:48:22.261304-07:00",
-      "next_run_at": "2026-08-15T20:00:00-07:00",
-      "last_run_at": "2026-08-08T20:00:06.867083-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-22T20:00:00-04:00",
+      "last_run_at": "2026-08-15T23:00:18.207790-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openai-codex' -> 'nous'; model 'gpt-5.6-luna' -> 'tencent/hy3:free'), and this job is unpinned. No inference call was made. To run on the new config, pin it explicitly: `cronjob action=update job_id=2f94a63c501d provider=<provider> model=<model>` (or pin the original values to keep them). See #44585.",
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -515,5 +514,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-13T23:50:28.517783-04:00"
+  "updated_at": "2026-08-16T23:50:48.796012-04:00"
 }

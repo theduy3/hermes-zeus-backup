@@ -3,14 +3,14 @@
     {
       "id": "b92449d7f332",
       "name": "vault-today",
-      "prompt": "Generate today's theduyvault daily briefing using the loaded `today` skill, then enrich the Daily Investment Briefing with a rotated watchlist-company update section.\n\nImportant environment:\n- Vault path: /vault\n- Daily investment file target: /vault/Daily/<YYYY-MM-DD>-investment.md as produced by the `today` skill.\n- Ticker source: /vault/System/Stock Watchlist.md under the `Watchlist:` section. Ignore `Indicators:`.\n- Run autonomously; never ask the user questions.\n\nStep A \u2014 generate the normal daily files:\n1. Follow the loaded `today` skill exactly to generate the normal daily briefing and daily investment briefing.\n2. Verify the investment file exists.\n\nStep B \u2014 select the rotated company bucket:\n1. Parse all tickers from the `Watchlist:` section of /vault/System/Stock Watchlist.md, preserving order.\n2. Divide the full watchlist into 7 balanced buckets using ticker index modulo 7: bucket for a ticker is `index % 7` with zero-based index.\n3. Select today's bucket using local America/Toronto date: Monday=0, Tuesday=1, Wednesday=2, Thursday=3, Friday=4, Saturday=5, Sunday=6. This means a 30-ticker list becomes roughly 4-5 tickers/day, and larger lists scale evenly across the week.\n4. If no tickers are selected, write a short note saying no tickers were selected.\n\nStep C \u2014 research selected tickers over the last 30 days:\nFor each selected ticker, research important company-specific developments from the last 30 days. Use web search/content tools if available. Focus on:\n- earnings/guidance, analyst upgrades/downgrades, major product/customer/news events, regulatory/legal issues, M&A, financing/capex, and material stock-moving context;\n- avoid generic market-wide headlines unless directly relevant to the company;\n- include 2-4 concise bullets per ticker, each with a source link/date when available;\n- include a brief \"Why it matters\" sentence per ticker.\nIf web search is unavailable or fails for a ticker, still include the ticker with a clear \"research unavailable\" note rather than inventing facts.\n\nStep D \u2014 insert into the investment file:\n1. Add or replace a section titled exactly:\n   `## Watchlist Company Updates (Last 30 Days)`\n2. Put this section after `## Stock Watchlist` and before `## Morning Brew` in /vault/Daily/<YYYY-MM-DD>-investment.md.\n3. Include a line such as: `*Rotation: <N>/<TOTAL> tickers for <weekday>; source: System/Stock Watchlist.md*`.\n4. Do not duplicate the section if the file is regenerated or the cron is rerun; replace the existing section for the day.\n5. Preserve the rest of the investment file.\n\nStep E \u2014 verify:\nRead back /vault/Daily/<YYYY-MM-DD>-investment.md and verify:\n- `## Watchlist Company Updates (Last 30 Days)` appears exactly once;\n- the section is before `## Morning Brew`;\n- selected ticker symbols are present;\n- no obvious tool error text was inserted.\n\nFinal response: concise summary of files generated/updated, selected tickers, and any failed/unavailable research. This cron runs in a CLI/local context, so delivery may only be visible in cron history unless a gateway delivery target is configured.",
+      "prompt": "Generate today's theduyvault daily briefing using the loaded `today` skill, then enrich the Daily Investment Briefing as applicable. IMPORTANT: the main Daily Briefing must omit all task sections and task counts (`Overdue`, `Due Today`, `This Week`, `Next Week`, `Later / No Date`, task checkboxes/tables). Keep finance/watchlist content in the separate investment briefing.",
       "skills": [
         "today",
         "last30days"
       ],
       "skill": "today",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -23,15 +23,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 56
+        "completed": 92
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-07-12T04:00:00-07:00",
-      "last_run_at": "2026-07-11T04:04:39.141264-07:00",
+      "next_run_at": "2026-08-17T04:00:00-04:00",
+      "last_run_at": "2026-08-16T04:03:48.760728-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -44,7 +44,9 @@
       ],
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null
     },
     {
       "id": "ce61f73456fe",
@@ -54,8 +56,8 @@
         "process"
       ],
       "skill": "process",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -68,15 +70,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 50
+        "completed": 85
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-07-12T10:00:00-07:00",
-      "last_run_at": "2026-07-11T10:02:42.915621-07:00",
+      "next_run_at": "2026-08-16T10:00:00-04:00",
+      "last_run_at": "2026-08-15T10:01:14.958903-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -85,7 +87,9 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null
     },
     {
       "id": "e358e0a4cb18",
@@ -95,8 +99,8 @@
         "wiki-ingest"
       ],
       "skill": "wiki-ingest",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -109,15 +113,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 151
+        "completed": 254
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-07-12T08:00:00-07:00",
-      "last_run_at": "2026-07-11T20:05:41.600172-07:00",
+      "next_run_at": "2026-08-16T08:00:00-04:00",
+      "last_run_at": "2026-08-15T20:00:25.597225-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -126,7 +130,9 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null
     },
     {
       "id": "1b7bcc26dda2",
@@ -136,8 +142,8 @@
         "wiki-lint"
       ],
       "skill": "wiki-lint",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -150,15 +156,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 52
+        "completed": 88
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-07-12T02:00:00-07:00",
-      "last_run_at": "2026-07-11T02:04:23.388626-07:00",
+      "next_run_at": "2026-08-17T02:00:00-04:00",
+      "last_run_at": "2026-08-16T02:06:08.667624-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -167,7 +173,9 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null
     },
     {
       "id": "2f8f46180850",
@@ -177,8 +185,8 @@
         "tonight"
       ],
       "skill": "tonight",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -191,15 +199,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 101
+        "completed": 170
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-07-12T18:00:00-07:00",
-      "last_run_at": "2026-07-11T23:03:06.910156-07:00",
+      "next_run_at": "2026-08-16T18:00:00-04:00",
+      "last_run_at": "2026-08-15T23:01:25.336262-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -208,7 +216,9 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null
     },
     {
       "id": "2346506d909a",
@@ -218,10 +228,10 @@
         "last30days"
       ],
       "skill": "last30days",
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.5",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -234,17 +244,17 @@
       "schedule_display": "0 1 * * 6",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-02T19:59:20.220655-07:00",
-      "next_run_at": "2026-07-18T01:00:00-07:00",
-      "last_run_at": "2026-07-11T01:03:48.554311-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-22T01:00:00-04:00",
+      "last_run_at": "2026-08-15T04:11:12.022538-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key.",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -278,15 +288,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 591
+        "completed": 3755
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-07-12T00:24:40.457370-07:00",
-      "last_run_at": "2026-07-12T00:09:40.457370-07:00",
+      "next_run_at": "2026-08-16T05:40:22.227700-04:00",
+      "last_run_at": "2026-08-16T05:25:22.227700-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -324,23 +334,24 @@
       "schedule_display": "every 20160m",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T11:01:42.863342-07:00",
-      "next_run_at": "2026-07-21T08:31:07.880316-04:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-08-20T20:06:07.786103-04:00",
+      "last_run_at": "2026-07-26T11:15:04.761598-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-12T00:09:40.457544-07:00"
+  "updated_at": "2026-08-16T05:25:22.227891-04:00"
 }
