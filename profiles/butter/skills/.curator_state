@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/butter/logs/curator/20260810-141332",
-  "last_run_at": "2026-08-10T14:13:32.408952+00:00",
-  "last_run_duration_seconds": 1.596166,
+  "last_report_path": "/home/hermes/.hermes/profiles/butter/logs/curator/20260817-144310",
+  "last_run_at": "2026-08-17T14:43:10.859673+00:00",
+  "last_run_duration_seconds": 1.770114,
   "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 14
+  "run_count": 15
 }

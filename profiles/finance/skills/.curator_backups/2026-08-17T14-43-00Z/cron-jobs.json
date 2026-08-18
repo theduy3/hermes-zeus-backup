@@ -46,7 +46,7 @@
     {
       "id": "b9a938586a37",
       "name": "weekly-finance-butter-sync",
-      "prompt": "Weekly Sunday 9:00 AM America/Vancouver finance sync with Butter for Duy.\n\nRole: Finance profile. Prepare a concise finance sync packet intended for exchange with Butter.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Summarize current known personal-finance state from memory/context: credit card payment obligations, card/churning items, points balances, investment context, recurring income/expense, tax/admin finance tasks.\n3. Identify questions/data needed from Butter for the 10:00 AM weekly personal finance report.\n4. Output a short \"Butter sync packet\" with sections: Bottom line, Changes/flags, Data needed from Butter, Inputs for 10AM report.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent balances or transactions.\n- Dates in America/Vancouver local time.\n- Flag urgent/overdue items with \u26a0.\n- This job must not create additional cron jobs.",
+      "prompt": "Weekly Sunday 9:00 AM America/Toronto finance sync with Butter for Duy.\n\nRole: Finance profile. Prepare a concise finance sync packet intended for exchange with Butter.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Summarize current known personal-finance state from memory/context: credit card payment obligations, card/churning items, points balances, investment context, recurring income/expense, tax/admin finance tasks.\n3. Identify questions/data needed from Butter for the 10:00 AM weekly personal finance report.\n4. Output a short \"Butter sync packet\" with sections: Bottom line, Changes/flags, Data needed from Butter, Inputs for 10AM report.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent balances or transactions.\n- Dates in America/Toronto local time.\n- Flag urgent/overdue items with ⚠.\n- This job must not create additional cron jobs.",
       "skills": [
         "obsidian"
       ],
@@ -65,15 +65,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-18T09:27:00.520245-07:00",
-      "next_run_at": "2026-07-19T16:00:00-07:00",
-      "last_run_at": "2026-07-12T16:02:41.333045-07:00",
+      "next_run_at": "2026-08-23T16:00:00-04:00",
+      "last_run_at": "2026-08-16T19:01:44.987504-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -97,7 +97,7 @@
     {
       "id": "907fec2cdf82",
       "name": "weekly-personal-finance-report",
-      "prompt": "Weekly Sunday 10:00 AM America/Vancouver personal finance report for Duy.\n\nContext: The most recent output from job b9a938586a37 (weekly-finance-butter-sync) is injected before this prompt. Use it as the Butter/Finance sync input.\n\nImportant scope rule: Do NOT generate ticker information, watchlist movers, stock prices, market data, or public-market summaries. Charles already has a daily report for ticker/market coverage. For investments, only summarize static portfolio context from memory/Obsidian if relevant, and point to Charles daily report for ticker details.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Generate Duy's weekly personal finance report covering:\n   - Bottom line: urgent actions, cash-flow flags, upcoming due dates.\n   - Credit cards/payments: list due dates, flag overdue/today/this week using \u26a0/\u25cf/\u25cb.\n   - Points/churning: current known balances, active cards, next churn/admin tasks, missing data.\n   - Investments: static allocation/cash-flow context only if documented; no tickers, no prices, no watchlist, no market-data fetching.\n   - Recurring cash flow: include biweekly payroll $2,747.50 and monthly rent $2,000 if still relevant.\n   - Taxes/admin: GST/QST/corporate/personal deadlines only if documented or generally date-based; label assumptions.\n   - Butter sync: what was received/missing from the 9AM sync.\n3. If enough data is available, include a 7-day action checklist.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent account balances, transactions, or due dates.\n- Round dollars to whole dollars; percentages to 1.0 decimal.\n- Dates in America/Vancouver local time.\n- This is informational, not investment/legal/tax advice.\n- This job must not create additional cron jobs.",
+      "prompt": "Weekly Sunday 10:00 AM America/Toronto personal finance report for Duy.\n\nContext: The most recent output from job b9a938586a37 (weekly-finance-butter-sync) is injected before this prompt. Use it as the Butter/Finance sync input.\n\nImportant scope rule: Do NOT generate ticker information, watchlist movers, stock prices, market data, or public-market summaries. Charles already has a daily report for ticker/market coverage. For investments, only summarize static portfolio context from memory/Obsidian if relevant, and point to Charles daily report for ticker details.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Generate Duy's weekly personal finance report covering:\n   - Bottom line: urgent actions, cash-flow flags, upcoming due dates.\n   - Credit cards/payments: list due dates, flag overdue/today/this week using ⚠/●/○.\n   - Points/churning: current known balances, active cards, next churn/admin tasks, missing data.\n   - Investments: static allocation/cash-flow context only if documented; no tickers, no prices, no watchlist, no market-data fetching.\n   - Recurring cash flow: include biweekly payroll $2,747.50 and monthly rent $2,000 if still relevant.\n   - Taxes/admin: GST/QST/corporate/personal deadlines only if documented or generally date-based; label assumptions.\n   - Butter sync: what was received/missing from the 9AM sync.\n3. If enough data is available, include a 7-day action checklist.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent account balances, transactions, or due dates.\n- Round dollars to whole dollars; percentages to 1.0 decimal.\n- Dates in America/Toronto local time.\n- This is informational, not investment/legal/tax advice.\n- This job must not create additional cron jobs.",
       "skills": [
         "obsidian"
       ],
@@ -118,15 +118,15 @@
       "schedule_display": "0 17 * * 0",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-18T09:27:10.709884-07:00",
-      "next_run_at": "2026-07-19T17:00:00-07:00",
-      "last_run_at": "2026-07-12T17:02:36.906358-07:00",
+      "next_run_at": "2026-08-23T17:00:00-04:00",
+      "last_run_at": "2026-08-16T20:04:51.006503-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -149,7 +149,7 @@
     {
       "id": "cfcd56abe858",
       "name": "monthly-td-chequing-mortgage-buffer-check",
-      "prompt": "Monthly reminder for Duy on the 24th, America/Vancouver local time.\n\nRemind Duy to check TD Chequing account balance for the mortgage withdrawal on apt #202, 2900 Rue \u00c9douard-Montpetit, Laval, QC H7T 2T5.\n\nMessage format:\n\u25cb Mortgage buffer check: verify TD Chequing has at least $2,000 for the TD Bank withdrawal on the 1st of next month.\nProperty: Apt #202, 2900 Rue \u00c9douard-Montpetit, Laval.\n\nStarting context: mortgage payments begin July 1, 2026. Do not claim account access; this is only a reminder.",
+      "prompt": "Monthly reminder for Duy on the 24th, America/Toronto local time.\n\nRemind Duy to check TD Chequing account balance for the mortgage withdrawal on apt #202, 2900 Rue Édouard-Montpetit, Laval, QC H7T 2T5.\n\nMessage format:\n○ Mortgage buffer check: verify TD Chequing has at least $2,000 for the TD Bank withdrawal on the 1st of next month.\nProperty: Apt #202, 2900 Rue Édouard-Montpetit, Laval.\n\nStarting context: mortgage payments begin July 1, 2026. Do not claim account access; this is only a reminder.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -166,15 +166,15 @@
       "schedule_display": "0 16 24 * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-18T09:34:17.056793-07:00",
-      "next_run_at": "2026-07-24T16:00:00-07:00",
-      "last_run_at": "2026-06-24T16:00:54.468239-07:00",
+      "next_run_at": "2026-08-24T16:00:00-04:00",
+      "last_run_at": "2026-07-24T16:01:43.844487-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -192,5 +192,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-12T17:02:36.906801-07:00"
+  "updated_at": "2026-08-16T20:04:51.007017-04:00"
 }

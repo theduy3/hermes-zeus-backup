@@ -486,7 +486,7 @@
     {
       "id": "a592cff295ca",
       "name": "Daily stock watchlist price and PE report",
-      "prompt": "Every day at 9:00 AM local time, send Duy a concise, live Daily Watchlist Report for all ticker symbols in `/vault/System/Stock Watchlist.md`.\n\nData acquisition is mandatory: do not send a report saying live data is unavailable unless every fallback below was attempted and failed. Read the watchlist first and parse only its ticker section.\n\nUse live sources in this order, recording the as-of date/time:\n1. Use Yahoo Finance chart API for prices and daily change: `https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}?range=5d&interval=1d` (use `curl`/Python through terminal if needed). Derive the latest regular-market close and prior close; label data as most recent market close when the market is closed.\n2. For forward P/E, use a live web search for `{ticker} forward PE Yahoo Finance` or Yahoo Finance quote/statistics pages. If unavailable, display `—`, not fabricated data.\n3. Use web search for brief current news/sentiment only where useful.\n\nIf one vendor or endpoint fails, proceed with the others; never abandon the entire watchlist because one source fails. Do not state tools are unavailable without trying the terminal-based Yahoo endpoint fallback. If data is partially unavailable, give the available price/change rows and label only the affected field `—`.\n\nGroup tickers by practical sector/investment theme while preserving watchlist order. Use narrow Telegram tables only: `Ticker | Price | Chg % | Fwd P/E | Sentiment`. Sentiment must be Buy, Hold, Sell, or Watch with a short parenthetical rationale. End with terse `Best opportunities today` and `Avoid / wait` bullets.\n\nClearly separate facts from judgment; include the exact data timestamp/source. End exactly: `This is analysis, not financial advice. Consult a qualified advisor before making investment decisions. Past performance does not guarantee future results.`\n\nDo not modify the watchlist file. Deliver the complete report to this chat.",
+      "prompt": "Every day at 9:00 AM local time, send Duy a concise, live Daily Watchlist Report for all ticker symbols in `/vault/System/Stock Watchlist.md`.\n\nData acquisition is mandatory: do not send a report saying live data is unavailable unless every fallback below was attempted and failed. Read the watchlist first and parse only its ticker section.\n\nUse live sources in this order, recording the as-of date/time:\n1. Use Yahoo Finance chart API for prices and daily change: `https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}?range=5d&interval=1d` (use `curl`/Python through terminal if needed). Derive the latest regular-market close and prior close; label data as most recent market close when the market is closed.\n2. For forward P/E, use a live web search for `{ticker} forward PE Yahoo Finance` or Yahoo Finance quote/statistics pages. If unavailable, display `—`, not fabricated data.\n3. Use web search for brief current news/sentiment only where useful.\n\n=== ANALYTICAL FRAMEWORK — The Big 3 Stock Indicators ===\nDo NOT judge any ticker on P/E (or Fwd P/E) in isolation. A low P/E can be a \"value trap\" (a dying business); a high P/E may be fully justified by growth. Every Sentiment call must be grounded in a balance across three pillars:\n\n1. Valuation — PEG ratio (P/E ÷ expected earnings growth). Lower is better: <1.0 is attractive, >2.0 is stretched.\n2. Profitability / Cash — Free Cash Flow trend (rising = healthy; negative or shrinking = red flag).\n3. Financial Health — ROIC (high & stable = durable competitive edge; declining = losing the moat).\n\nBUY signal: PEG < 1.0 combined with rising Free Cash Flow AND a high, stable ROIC. (An efficient, cash-generating business bought at a reasonable price relative to its growth.)\nSELL signal: Declining ROIC, negative/shrinking Free Cash Flow, OR a PEG ratio stretched far above 2.0. (Growth no longer justifies the share price, or the moat is eroding.)\n\nWhere the three pillars are available from live sources, fetch them (PEG, FCF direction, ROIC) and let them drive the Sentiment column and the Best/Avoid bullets. Where they cannot be assessed — ETFs, pre-profit miners, speculative or thin-data names — do NOT force a Buy/Sell: assign Watch with a reason like \"Watch (need FCF/ROIC/PEG to confirm)\". Default to Watch rather than an overconfident call on P/E alone.\n=== END FRAMEWORK ===\n\nIf one vendor or endpoint fails, proceed with the others; never abandon the entire watchlist because one source fails. Do not state tools are unavailable without trying the terminal-based Yahoo endpoint fallback. If data is partially unavailable, give the available price/change rows and label only the affected field `—`.\n\nGroup tickers by practical sector/investment theme while preserving watchlist order. Use narrow Telegram tables only: `Ticker | Price | Chg % | Fwd P/E | Sentiment`. Sentiment must be Buy, Hold, Sell, or Watch with a short parenthetical rationale that reflects the Big 3 lens above. End with terse `Best opportunities today` and `Avoid / wait` bullets, citing the pillar evidence (e.g. \"XYZ — Buy: PEG 0.8 + rising FCF + stable ROIC\" or \"NVDA — Watch: rich PEG, need FCF confirmation\").\n\nClearly separate facts from judgment; include the exact data timestamp/source. End exactly: `This is analysis, not financial advice. Consult a qualified advisor before making investment decisions. Past performance does not guarantee future results.`\n\nDo not modify the watchlist file. Deliver the complete report to this chat.",
       "skills": [
         "investment-analysis-workflows",
         "obsidian"
@@ -506,15 +506,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 58
+        "completed": 61
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-22T11:08:04.949047-07:00",
-      "next_run_at": "2026-08-17T09:00:00-04:00",
-      "last_run_at": "2026-08-16T09:04:29.339396-04:00",
+      "next_run_at": "2026-08-18T09:00:00-04:00",
+      "last_run_at": "2026-08-17T15:15:49.392501-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -561,17 +561,17 @@
       "schedule_display": "0 10 * * 1",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T14:22:43.268555-04:00",
-      "next_run_at": "2026-08-17T10:00:00-04:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-08-24T10:00:00-04:00",
+      "last_run_at": "2026-08-17T10:00:11.036905-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openai-codex' -> 'nous'; model 'gpt-5.6-luna' -> 'tencent/hy3:free'), and this job is unpinned. No inference call was made. To run on the new config, pin it explicitly: `cronjob action=update job_id=007323653af7 provider=<provider> model=<model>` (or pin the original values to keep them). See #44585.",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -580,8 +580,9 @@
         "terminal",
         "file"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-16T19:03:41.373134-04:00"
+  "updated_at": "2026-08-17T15:15:49.392984-04:00"
 }

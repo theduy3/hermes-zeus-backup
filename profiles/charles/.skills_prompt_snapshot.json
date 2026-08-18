@@ -98,8 +98,8 @@
       4057
     ],
     "finance/investment-analysis-workflows/SKILL.md": [
-      1784280003778304315,
-      4610
+      1786993112328715885,
+      5560
     ],
     "gaming/DESCRIPTION.md": [
       1776960632000000000,
@@ -578,7 +578,7 @@
       "skill_name": "sdlc-review",
       "category": "devops",
       "frontmatter_name": "sdlc-review",
-      "description": "Review Kanban handoffs and route verified outcomes.",
+      "description": "",
       "platforms": [
         "linux",
         "macos",

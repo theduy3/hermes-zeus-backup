@@ -32,6 +32,18 @@ This umbrella combines portfolio-level review and single-stock thesis workflows.
 5. For institutional 13F/13G work, fetch primary SEC EDGAR XML, parse `infoTable` rows, keep option rows separate from stock rows, and warn that 13F option `value` is not cash equity exposure. Compare against the prior filing for buy / hold / sell deltas before drawing conclusions.
 6. For daily stock watchlist reports, group tickers by sector or practical investment theme before presenting tables. Add a terse Buy / Hold / Sell / Watch sentiment for each ticker with the reason in parentheses, then include short `Best opportunities today` and `Avoid / wait` sections. This is the user's preferred format for comparing and picking names from a long watchlist.
 
+## The Big 3 Stock Indicators (Buy/Sell Decision Lens)
+
+Never judge a ticker on P/E in isolation — a low P/E can be a value trap (dying business) and a high P/E may be growth-justified. Ground every Buy / Hold / Sell-equivalent call in a balance across three pillars:
+
+- **Valuation** — PEG ratio (P/E ÷ expected earnings growth). <1.0 attractive, >2.0 stretched.
+- **Profitability / Cash** — Free Cash Flow trend (rising = healthy; negative or shrinking = red flag).
+- **Financial Health** — ROIC (high & stable = durable moat; declining = eroding edge).
+
+BUY signal: PEG < 1.0 + rising Free Cash Flow + high stable ROIC.
+SELL signal: declining ROIC, negative/shrinking Free Cash Flow, or PEG stretched far above 2.0.
+When the three pillars cannot be assessed (ETFs, pre-profit names, thin data), default to Watch rather than forcing a Buy/Sell. Embedded in the Daily Watchlist Report and applied to ad-hoc theses and the Weekly Briefing.
+
 ## Scheduled Weekly Portfolio Briefing Pattern
 
 When producing the user's Sunday registered-portfolio briefing:

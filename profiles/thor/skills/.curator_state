@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260810-151405",
-  "last_run_at": "2026-08-10T15:14:05.505272+00:00",
-  "last_run_duration_seconds": 1.995876,
-  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
+  "last_report_path": "/home/hermes/.hermes/profiles/thor/logs/curator/20260817-154508",
+  "last_run_at": "2026-08-17T15:45:08.726827+00:00",
+  "last_run_duration_seconds": 1.665391,
+  "last_run_summary": "auto: 1 marked stale; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 14
+  "run_count": 15
 }
