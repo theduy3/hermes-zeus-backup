@@ -1,0 +1,428 @@
+{
+  "MSFT": {
+    "price": 495.4,
+    "prevClose": 496.88,
+    "chg": -0.3,
+    "metaPx": 480.35,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Microsoft Corporation"
+  },
+  "AMZN": {
+    "price": 262.65,
+    "prevClose": 265.13,
+    "chg": -0.94,
+    "metaPx": 261.31,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Amazon.com, Inc."
+  },
+  "GOOG": {
+    "price": 343.54,
+    "prevClose": 343.94,
+    "chg": -0.12,
+    "metaPx": 341.45,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Alphabet Inc."
+  },
+  "META": {
+    "price": 589.85,
+    "prevClose": 594.97,
+    "chg": -0.86,
+    "metaPx": 568.97,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Meta Platforms, Inc."
+  },
+  "AAPL": {
+    "price": 305.93,
+    "prevClose": 305.26,
+    "chg": 0.22,
+    "metaPx": 305.59,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Apple Inc."
+  },
+  "CRM": {
+    "price": 196.21,
+    "prevClose": 201.37,
+    "chg": -2.56,
+    "metaPx": 190.97,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:03+00:00",
+    "name": "Salesforce, Inc."
+  },
+  "DELL": {
+    "price": 490.81,
+    "prevClose": 494.51,
+    "chg": -0.75,
+    "metaPx": 479.81,
+    "currency": "USD",
+    "time": "2026-08-17T20:04:47+00:00",
+    "name": "Dell Technologies Inc."
+  },
+  "PLTR": {
+    "price": 174.04,
+    "prevClose": 179.01,
+    "chg": -2.78,
+    "metaPx": 172.55,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "Palantir Technologies Inc."
+  },
+  "ORCL": {
+    "price": 150.52,
+    "prevClose": 156.22,
+    "chg": -3.65,
+    "metaPx": 146.65,
+    "currency": "USD",
+    "time": "2026-08-17T20:05:01+00:00",
+    "name": "Oracle Corporation"
+  },
+  "CRWV": {
+    "price": 105.26,
+    "prevClose": 106.29,
+    "chg": -0.97,
+    "metaPx": 106.0,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "CoreWeave, Inc."
+  },
+  "INFY": {
+    "price": 12.09,
+    "prevClose": 12.41,
+    "chg": -2.58,
+    "metaPx": 11.62,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:02+00:00",
+    "name": "Infosys Limited"
+  },
+  "NBIS": {
+    "price": 277.68,
+    "prevClose": 255.04,
+    "chg": 8.88,
+    "metaPx": 268.85,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Nebius Group N.V."
+  },
+  "TSLA": {
+    "price": 342.27,
+    "prevClose": 339.96,
+    "chg": 0.68,
+    "metaPx": 339.3,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Tesla, Inc."
+  },
+  "NFLX": {
+    "price": 78.16,
+    "prevClose": 78.24,
+    "chg": -0.1,
+    "metaPx": 76.02,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "Netflix, Inc."
+  },
+  "MELI": {
+    "price": 1844.58,
+    "prevClose": 1828.25,
+    "chg": 0.89,
+    "metaPx": 1787.57,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "MercadoLibre, Inc."
+  },
+  "HD": {
+    "price": 338.86,
+    "prevClose": 341.7,
+    "chg": -0.83,
+    "metaPx": 337.88,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:03+00:00",
+    "name": "Home Depot, Inc. (The)"
+  },
+  "LOW": {
+    "price": 218.47,
+    "prevClose": 218.22,
+    "chg": 0.11,
+    "metaPx": 215.81,
+    "currency": "USD",
+    "time": "2026-08-17T20:02:19+00:00",
+    "name": "Lowe's Companies, Inc."
+  },
+  "WMT": {
+    "price": 115.27,
+    "prevClose": 115.72,
+    "chg": -0.39,
+    "metaPx": 114.33,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Walmart Inc."
+  },
+  "TGT": {
+    "price": 154.48,
+    "prevClose": 155.51,
+    "chg": -0.66,
+    "metaPx": 151.01,
+    "currency": "USD",
+    "time": "2026-08-17T20:03:33+00:00",
+    "name": "Target Corporation"
+  },
+  "ASML": {
+    "price": 1844.08,
+    "prevClose": 1847.9,
+    "chg": -0.21,
+    "metaPx": 1883.12,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "ASML Holding N.V. - New York Re"
+  },
+  "AVGO": {
+    "price": 392.99,
+    "prevClose": 417.82,
+    "chg": -5.94,
+    "metaPx": 392.43,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Broadcom Inc."
+  },
+  "NVDA": {
+    "price": 225.16,
+    "prevClose": 225.3,
+    "chg": -0.06,
+    "metaPx": 225.01,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "NVIDIA Corporation"
+  },
+  "AMD": {
+    "price": 514.39,
+    "prevClose": 483.01,
+    "chg": 6.5,
+    "metaPx": 506.0,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Advanced Micro Devices, Inc."
+  },
+  "SNDK": {
+    "price": 1641.11,
+    "prevClose": 1528.11,
+    "chg": 7.39,
+    "metaPx": 1786.85,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "Sandisk Corporation"
+  },
+  "MU": {
+    "price": 971.66,
+    "prevClose": 949.83,
+    "chg": 2.3,
+    "metaPx": 1011.75,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Micron Technology, Inc."
+  },
+  "TSM": {
+    "price": 426.35,
+    "prevClose": 430.49,
+    "chg": -0.96,
+    "metaPx": 430.97,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:02+00:00",
+    "name": "Taiwan Semiconductor Manufactur"
+  },
+  "INTC": {
+    "price": 102.5,
+    "prevClose": 104.56,
+    "chg": -1.97,
+    "metaPx": 103.49,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Intel Corporation"
+  },
+  "BE": {
+    "price": 229.94,
+    "prevClose": 236.22,
+    "chg": -2.66,
+    "metaPx": 232.16,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:03+00:00",
+    "name": "Bloom Energy Corporation"
+  },
+  "APLD": {
+    "price": 31.2,
+    "prevClose": 30.62,
+    "chg": 1.89,
+    "metaPx": 31.18,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Applied Digital Corporation"
+  },
+  "TE": {
+    "price": 5.11,
+    "prevClose": 4.79,
+    "chg": 6.68,
+    "metaPx": 4.88,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:02+00:00",
+    "name": "T1 Energy Inc."
+  },
+  "PSIX": {
+    "price": 40.54,
+    "prevClose": 41.07,
+    "chg": -1.29,
+    "metaPx": 39.5,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "Power Solutions International, "
+  },
+  "GLW": {
+    "price": 165.99,
+    "prevClose": 158.54,
+    "chg": 4.7,
+    "metaPx": 173.21,
+    "currency": "USD",
+    "time": "2026-08-17T20:04:51+00:00",
+    "name": "Corning Incorporated"
+  },
+  "BW": {
+    "price": 10.29,
+    "prevClose": 9.35,
+    "chg": 10.05,
+    "metaPx": 9.92,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:03+00:00",
+    "name": "Babcock & Wilcox Enterprises, I"
+  },
+  "PUMP": {
+    "price": 12.1,
+    "prevClose": 11.54,
+    "chg": 4.85,
+    "metaPx": 12.79,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:03+00:00",
+    "name": "ProPetro Holding Corp."
+  },
+  "IREN": {
+    "price": 44.06,
+    "prevClose": 44.76,
+    "chg": -1.56,
+    "metaPx": 44.9,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "IREN LIMITED"
+  },
+  "CORZ": {
+    "price": 20.18,
+    "prevClose": 19.78,
+    "chg": 2.02,
+    "metaPx": 20.13,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Core Scientific, Inc."
+  },
+  "RIOT": {
+    "price": 19.01,
+    "prevClose": 19.21,
+    "chg": -1.02,
+    "metaPx": 20.04,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "Riot Platforms, Inc."
+  },
+  "CLSK": {
+    "price": 12.09,
+    "prevClose": 11.52,
+    "chg": 4.95,
+    "metaPx": 12.4,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "CleanSpark, Inc."
+  },
+  "BITF": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "BTDR": {
+    "price": 9.13,
+    "prevClose": 8.76,
+    "chg": 4.22,
+    "metaPx": 9.39,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Bitdeer Technologies Group"
+  },
+  "HIVE": {
+    "price": 2.69,
+    "prevClose": 2.58,
+    "chg": 4.26,
+    "metaPx": 3.07,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "HIVE Digital Technologies Ltd"
+  },
+  "VFV.TO": {
+    "price": 191.64,
+    "prevClose": 192.7,
+    "chg": -0.55,
+    "metaPx": 190.73,
+    "currency": "CAD",
+    "time": "2026-08-17T19:59:50+00:00",
+    "name": "VANGUARD SP 500 INDEX ETF"
+  },
+  "GLD": {
+    "price": 401.48,
+    "prevClose": 398.96,
+    "chg": 0.63,
+    "metaPx": 405.49,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "SPDR Gold Shares"
+  },
+  "SMH": {
+    "price": 587.82,
+    "prevClose": 589.12,
+    "chg": -0.22,
+    "metaPx": 594.07,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:00+00:00",
+    "name": "VanEck Semiconductor ETF"
+  },
+  "SPCX": {
+    "price": 140.0,
+    "prevClose": 141.29,
+    "chg": -0.91,
+    "metaPx": 146.23,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Space Exploration Technologies "
+  },
+  "RKLB": {
+    "price": 80.25,
+    "prevClose": 80.1,
+    "chg": 0.19,
+    "metaPx": 82.08,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "Rocket Lab Corporation"
+  },
+  "SEI": {
+    "price": 63.3,
+    "prevClose": 59.9,
+    "chg": 5.68,
+    "metaPx": 65.97,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:03+00:00",
+    "name": "Solaris Energy Infrastructure, "
+  },
+  "WYFI": {
+    "price": 29.52,
+    "prevClose": 28.22,
+    "chg": 4.61,
+    "metaPx": 30.35,
+    "currency": "USD",
+    "time": "2026-08-17T20:00:01+00:00",
+    "name": "WhiteFiber, Inc."
+  }
+}

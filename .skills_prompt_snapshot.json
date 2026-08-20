@@ -41,10 +41,6 @@
       1786571009777391427,
       5326
     ],
-    "autonomous-ai-agents/computer-use/SKILL.md": [
-      1786469842082392865,
-      16461
-    ],
     "autonomous-ai-agents/merge-reconciler/SKILL.md": [
       1786469842083392892,
       7606
@@ -52,6 +48,10 @@
     "autonomous-ai-agents/hermes-profile-model-config/SKILL.md": [
       1786606377113408703,
       7748
+    ],
+    "autonomous-ai-agents/computer-use/SKILL.md": [
+      1787031466234675630,
+      18603
     ],
     "creative/DESCRIPTION.md": [
       1775843805096651856,
@@ -112,6 +112,10 @@
     "devops/hermes-encrypted-secrets/SKILL.md": [
       1786659759618021712,
       4647
+    ],
+    "devops/hermes-custom-endpoint/SKILL.md": [
+      1787036395338226237,
+      5702
     ],
     "diagramming/DESCRIPTION.md": [
       1775843805114670348,
@@ -349,10 +353,6 @@
       1786469842088393027,
       10395
     ],
-    "productivity/pdf/SKILL.md": [
-      1786469842090393081,
-      12266
-    ],
     "productivity/xlsx/SKILL.md": [
       1786469842094393189,
       9655
@@ -401,6 +401,18 @@
       1786660592822468505,
       5963
     ],
+    "productivity/pdf/SKILL.md": [
+      1787031466236675684,
+      12244
+    ],
+    "productivity/box/SKILL.md": [
+      1787031466235675656,
+      11697
+    ],
+    "productivity/session-librarian/SKILL.md": [
+      1787031466236675684,
+      4827
+    ],
     "red-teaming/godmode/SKILL.md": [
       1778565357588786324,
       20059
@@ -426,8 +438,12 @@
       4501
     ],
     "research/grounded-citations/SKILL.md": [
-      1786469842098393296,
-      11241
+      1787031466236675684,
+      11231
+    ],
+    "research/blocked-page-recovery/SKILL.md": [
+      1787031466236675684,
+      5152
     ],
     "smart-home/DESCRIPTION.md": [
       1775843805167642449,
@@ -799,6 +815,19 @@
       "category": "devops",
       "frontmatter_name": "hermes-cron-ops",
       "description": "Audit and fix Hermes cron jobs across all profiles safely.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-custom-endpoint",
+      "category": "devops",
+      "frontmatter_name": "hermes-custom-endpoint",
+      "description": "Use when adding a custom provider to Hermes Agent.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1376,6 +1405,23 @@
       }
     },
     {
+      "skill_name": "box",
+      "category": "productivity",
+      "frontmatter_name": "box",
+      "description": "Box manages cloud files, sharing, search, and metadata.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "document-to-action-items",
       "category": "productivity",
       "frontmatter_name": "document-to-action-items",
@@ -1599,6 +1645,23 @@
       }
     },
     {
+      "skill_name": "session-librarian",
+      "category": "productivity",
+      "frontmatter_name": "session-librarian",
+      "description": "Organize sessions by prompt: find, rename, archive, prune.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "theduylifeos-filing",
       "category": "productivity",
       "frontmatter_name": "theduylifeos-filing",
@@ -1663,6 +1726,23 @@
       "category": "red-teaming",
       "frontmatter_name": "godmode",
       "description": "Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "blocked-page-recovery",
+      "category": "research",
+      "frontmatter_name": "blocked-page-recovery",
+      "description": "Recover blocked/paywalled/WAF'd pages via fallbacks.",
       "platforms": [
         "linux",
         "macos",

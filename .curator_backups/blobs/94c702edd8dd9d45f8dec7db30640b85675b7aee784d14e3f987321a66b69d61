@@ -1,0 +1,62 @@
+# Orcarouter Model Picker Diagnosis
+
+Session: 2026-08-18. User's Hermes Agent config had orcarouter set up as a bare custom endpoint (inline `model.provider: custom` + `model.base_url`). The `/model` picker showed no orcarouter option.
+
+## Root Cause
+
+Config was:
+
+```yaml
+model:
+  default: orcarouter/auto
+  provider: custom
+  base_url: https://api.orcarouter.ai/v1
+```
+
+This is the "bare custom" form. The `/model` picker inventory (`hermes_cli/inventory.py` → `build_models_payload` → `list_authenticated_providers`) only enumerates providers from:
+
+- `providers:` dict (new-style, keyed by provider name)
+- `custom_providers:` list (legacy)
+
+A bare `provider: custom` with inline `base_url` on the `model:` section is NOT in either collection, so it never appears in the picker.
+
+## What Still Works
+
+The runtime provider resolution (`runtime_provider.py:_get_named_custom_provider`) falls back to the bare custom trust path when no named entry matches — it uses `model.base_url` directly. So `/model qwen3.8-27b-free` (typing the model name directly) should still switch the model while keeping the orcarouter base_url. But you can't browse available models via the picker.
+
+## Fix Applied Conceptually
+
+Add to `providers:`:
+
+```yaml
+providers:
+  orcarouter:
+    api: https://api.orcarouter.ai/v1
+```
+
+And change model section to:
+
+```yaml
+model:
+  default: orcarouter/auto
+  provider: orcarouter
+```
+
+This makes orcarouter appear in the `/model` picker with its discovered models.
+
+## Available Models
+
+To discover what models orcarouter actually serves, probe its `/v1/models` endpoint:
+
+```bash
+curl -s https://api.orcarouter.ai/v1/models | python3 -m json.tool
+```
+
+The user confirmed using free models like `qwen3.8-27b-free` — this is the model name to use with `/model <name>` if staying on the bare custom config.
+
+## Code References
+
+- `hermes_cli/inventory.py:load_picker_context()` — builds the ConfigContext from disk config; bare custom model.base_url is read but the provider is not added to `user_providers` or `custom_providers`
+- `hermes_cli/inventory.py:build_models_payload()` — calls `list_authenticated_providers()` which only emits rows for providers in `user_providers` / `custom_providers`
+- `hermes_cli/model_switch.py:_bare_custom_provider_def()` — constructs a ProviderDef for bare custom endpoints at switch time, but this is not used by the picker inventory path
+- `hermes_cli/runtime_provider.py:_get_named_custom_provider()` — scans `providers:` then `custom_providers:`; falls through to bare custom when no match

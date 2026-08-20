@@ -41,25 +41,25 @@
       1778490391613044108,
       7259
     ],
-    "autonomous-ai-agents/claude-code/SKILL.md": [
-      1785092884117088491,
-      34283
-    ],
     "autonomous-ai-agents/codex/SKILL.md": [
       1785092884117088491,
       5738
+    ],
+    "autonomous-ai-agents/merge-reconciler/SKILL.md": [
+      1786469842083392892,
+      7606
+    ],
+    "autonomous-ai-agents/claude-code/SKILL.md": [
+      1787031466234675630,
+      34281
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
       1785092884117088491,
       11962
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
-      1786469842082392865,
-      16461
-    ],
-    "autonomous-ai-agents/merge-reconciler/SKILL.md": [
-      1786469842083392892,
-      7606
+      1787031466234675630,
+      18603
     ],
     "creative/DESCRIPTION.md": [
       1776960632000000000,
@@ -68,10 +68,6 @@
     "creative/architecture-diagram/SKILL.md": [
       1778490391613044108,
       5830
-    ],
-    "creative/ascii-art/SKILL.md": [
-      1778490391613044108,
-      10556
     ],
     "creative/baoyu-infographic/SKILL.md": [
       1778490391617044083,
@@ -97,10 +93,6 @@
       1785092884120088572,
       7297
     ],
-    "creative/pretext/SKILL.md": [
-      1785092884121088599,
-      13962
-    ],
     "creative/sketch/SKILL.md": [
       1785092884121088599,
       9788
@@ -113,21 +105,29 @@
       1786469842083392892,
       15011
     ],
-    "creative/comfyui/SKILL.md": [
-      1786469842084392919,
-      24096
-    ],
     "creative/manim-video/SKILL.md": [
       1786469842086392973,
       12150
     ],
-    "creative/p5js/SKILL.md": [
-      1786469842087393000,
-      27536
-    ],
     "creative/songwriting-and-ai-music/SKILL.md": [
       1786469842087393000,
       10963
+    ],
+    "creative/ascii-art/SKILL.md": [
+      1787031466234675630,
+      10552
+    ],
+    "creative/comfyui/SKILL.md": [
+      1787031466234675630,
+      24075
+    ],
+    "creative/p5js/SKILL.md": [
+      1787031466234675630,
+      27534
+    ],
+    "creative/pretext/SKILL.md": [
+      1787031466234675630,
+      13959
     ],
     "data-science/DESCRIPTION.md": [
       1776960632000000000,
@@ -169,29 +169,29 @@
       1778490391621044058,
       3628
     ],
-    "github/github-auth/SKILL.md": [
-      1785556028604935598,
-      7618
-    ],
-    "github/github-code-review/SKILL.md": [
-      1785556028604935598,
-      13620
-    ],
-    "github/github-issues/SKILL.md": [
-      1785556028604935598,
-      9320
-    ],
-    "github/github-pr-workflow/SKILL.md": [
-      1785556028604935598,
-      10040
-    ],
-    "github/github-repo-management/SKILL.md": [
-      1785556028604935598,
-      13738
-    ],
     "github/github-issue-to-pr/SKILL.md": [
       1786469842087393000,
       6058
+    ],
+    "github/github-auth/SKILL.md": [
+      1787031466234675630,
+      11949
+    ],
+    "github/github-code-review/SKILL.md": [
+      1787031466234675630,
+      13614
+    ],
+    "github/github-issues/SKILL.md": [
+      1787031466235675656,
+      9312
+    ],
+    "github/github-pr-workflow/SKILL.md": [
+      1787031466235675656,
+      10034
+    ],
+    "github/github-repo-management/SKILL.md": [
+      1787031466235675656,
+      13727
     ],
     "media/DESCRIPTION.md": [
       1776960632000000000,
@@ -210,8 +210,8 @@
       2336
     ],
     "media/youtube-content/SKILL.md": [
-      1786469842087393000,
-      3543
+      1787031466235675656,
+      3538
     ],
     "mlops/DESCRIPTION.md": [
       1776960632000000000,
@@ -289,14 +289,6 @@
       1776960632000000000,
       114
     ],
-    "productivity/airtable/SKILL.md": [
-      1781228918600083581,
-      11334
-    ],
-    "productivity/maps/SKILL.md": [
-      1778490391625044033,
-      6726
-    ],
     "productivity/notion/SKILL.md": [
       1781228918600083581,
       14629
@@ -317,18 +309,6 @@
       1786469842089393054,
       13670
     ],
-    "productivity/ocr-and-documents/SKILL.md": [
-      1786469842090393081,
-      5785
-    ],
-    "productivity/ocr-and-documents/DESCRIPTION.md": [
-      1776960632000000000,
-      147
-    ],
-    "productivity/powerpoint/SKILL.md": [
-      1786469842093393162,
-      10793
-    ],
     "productivity/teams-meeting-pipeline/SKILL.md": [
       1786469842094393189,
       6816
@@ -336,10 +316,6 @@
     "productivity/docx/SKILL.md": [
       1786469842088393027,
       10395
-    ],
-    "productivity/pdf/SKILL.md": [
-      1786469842090393081,
-      12266
     ],
     "productivity/xlsx/SKILL.md": [
       1786469842094393189,
@@ -361,13 +337,41 @@
       1786469842094393189,
       3975
     ],
+    "productivity/airtable/SKILL.md": [
+      1787031466235675656,
+      11314
+    ],
+    "productivity/maps/SKILL.md": [
+      1787031466236675684,
+      6705
+    ],
+    "productivity/ocr-and-documents/SKILL.md": [
+      1787031466236675684,
+      5784
+    ],
+    "productivity/ocr-and-documents/DESCRIPTION.md": [
+      1776960632000000000,
+      147
+    ],
+    "productivity/powerpoint/SKILL.md": [
+      1787031466236675684,
+      10781
+    ],
+    "productivity/pdf/SKILL.md": [
+      1787031466236675684,
+      12244
+    ],
+    "productivity/box/SKILL.md": [
+      1787031466235675656,
+      11697
+    ],
+    "productivity/session-librarian/SKILL.md": [
+      1787031466236675684,
+      4827
+    ],
     "research/DESCRIPTION.md": [
       1776960632000000000,
       179
-    ],
-    "research/arxiv/SKILL.md": [
-      1778490391625044033,
-      10085
     ],
     "research/blogwatcher/SKILL.md": [
       1778490391625044033,
@@ -393,9 +397,17 @@
       1786469842098393296,
       4501
     ],
+    "research/arxiv/SKILL.md": [
+      1787031466236675684,
+      10075
+    ],
     "research/grounded-citations/SKILL.md": [
-      1786469842098393296,
-      11241
+      1787031466236675684,
+      11231
+    ],
+    "research/blocked-page-recovery/SKILL.md": [
+      1787031466236675684,
+      5152
     ],
     "smart-home/DESCRIPTION.md": [
       1776960632000000000,
@@ -417,10 +429,6 @@
       1780819229270747874,
       8465
     ],
-    "software-development/spike/SKILL.md": [
-      1780819229270747874,
-      8730
-    ],
     "software-development/systematic-debugging/SKILL.md": [
       1782362686227104003,
       14065
@@ -441,10 +449,6 @@
       1785556028604935598,
       6204
     ],
-    "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1786469842105393485,
-      14439
-    ],
     "software-development/node-inspect-debugger/SKILL.md": [
       1786469842108393566,
       10894
@@ -456,6 +460,14 @@
     "software-development/dogfood/SKILL.md": [
       1786469842105393485,
       6324
+    ],
+    "software-development/hermes-agent-skill-authoring/SKILL.md": [
+      1787031466236675684,
+      14438
+    ],
+    "software-development/spike/SKILL.md": [
+      1787031466236675684,
+      8729
     ],
     "yuanbao/SKILL.md": [
       1778490391625044033,
@@ -1547,6 +1559,23 @@
       }
     },
     {
+      "skill_name": "box",
+      "category": "productivity",
+      "frontmatter_name": "box",
+      "description": "Box manages cloud files, sharing, search, and metadata.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "document-to-action-items",
       "category": "productivity",
       "frontmatter_name": "document-to-action-items",
@@ -1753,6 +1782,23 @@
       }
     },
     {
+      "skill_name": "session-librarian",
+      "category": "productivity",
+      "frontmatter_name": "session-librarian",
+      "description": "Organize sessions by prompt: find, rename, archive, prune.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "teams-meeting-pipeline",
       "category": "productivity",
       "frontmatter_name": "teams-meeting-pipeline",
@@ -1821,6 +1867,23 @@
       "category": "research",
       "frontmatter_name": "arxiv",
       "description": "Search arXiv papers by keyword, author, category, or ID.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "blocked-page-recovery",
+      "category": "research",
+      "frontmatter_name": "blocked-page-recovery",
+      "description": "Recover blocked/paywalled/WAF'd pages via fallbacks.",
       "platforms": [
         "linux",
         "macos",

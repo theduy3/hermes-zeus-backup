@@ -1,0 +1,287 @@
+{
+  "MSFT": {
+    "fwdPE": 20.376884,
+    "trailPE": 26.730663,
+    "peg": 1.61,
+    "name": "Microsoft Corporation"
+  },
+  "AMZN": {
+    "fwdPE": 25.118088,
+    "trailPE": 21.141586,
+    "peg": 1.4,
+    "name": "Amazon.com, Inc."
+  },
+  "GOOG": {
+    "fwdPE": 23.155134,
+    "trailPE": 17.12387,
+    "peg": 0.93,
+    "name": "Alphabet Inc."
+  },
+  "META": {
+    "fwdPE": 16.309875,
+    "trailPE": 21.414,
+    "peg": 0.88,
+    "name": "Meta Platforms, Inc."
+  },
+  "AAPL": {
+    "fwdPE": 32.071053,
+    "trailPE": 35.08496,
+    "peg": 2.47,
+    "name": "Apple Inc."
+  },
+  "CRM": {
+    "fwdPE": 12.304276,
+    "trailPE": 22.734526,
+    "peg": 0.81,
+    "name": "Salesforce, Inc."
+  },
+  "DELL": {
+    "fwdPE": 21.607077,
+    "trailPE": 38.171043,
+    "peg": 0.81,
+    "name": "Dell Technologies Inc."
+  },
+  "PLTR": {
+    "fwdPE": 74.56012,
+    "trailPE": 148.75,
+    "peg": 2.34,
+    "name": "Palantir Technologies Inc."
+  },
+  "ORCL": {
+    "fwdPE": 13.435713,
+    "trailPE": 25.1113,
+    "peg": 0.85,
+    "name": "Oracle Corporation"
+  },
+  "CRWV": {
+    "fwdPE": -59.71629,
+    "trailPE": null,
+    "peg": null,
+    "name": "CoreWeave, Inc."
+  },
+  "INFY": {
+    "fwdPE": 13.687819,
+    "trailPE": 14.897436,
+    "peg": 2.06,
+    "name": "Infosys Limited"
+  },
+  "NBIS": {
+    "fwdPE": -89.691414,
+    "trailPE": null,
+    "peg": 0.63,
+    "name": "Nebius Group N.V."
+  },
+  "TSLA": {
+    "fwdPE": 156.00143,
+    "trailPE": 311.2844,
+    "peg": 5.01,
+    "name": "Tesla, Inc."
+  },
+  "NFLX": {
+    "fwdPE": 19.883919,
+    "trailPE": 23.905659,
+    "peg": 1.75,
+    "name": "Netflix, Inc."
+  },
+  "MELI": {
+    "fwdPE": 31.514362,
+    "trailPE": 50.25499,
+    "peg": 1.31,
+    "name": "MercadoLibre, Inc."
+  },
+  "HD": {
+    "fwdPE": 21.003948,
+    "trailPE": 23.980127,
+    "peg": 1.91,
+    "name": "Home Depot, Inc. (The)"
+  },
+  "LOW": {
+    "fwdPE": 16.090057,
+    "trailPE": 18.242603,
+    "peg": 1.43,
+    "name": "Lowe's Companies, Inc."
+  },
+  "WMT": {
+    "fwdPE": 34.855858,
+    "trailPE": 40.686832,
+    "peg": 4.39,
+    "name": "Walmart Inc."
+  },
+  "TGT": {
+    "fwdPE": 16.701838,
+    "trailPE": 19.94848,
+    "peg": 2.87,
+    "name": "Target Corporation"
+  },
+  "ASML": {
+    "fwdPE": 36.619034,
+    "trailPE": 64.09531,
+    "peg": 2.22,
+    "name": "ASML Holding N.V. - New York Re"
+  },
+  "AVGO": {
+    "fwdPE": 20.093021,
+    "trailPE": 65.405,
+    "peg": 0.44,
+    "name": "Broadcom Inc."
+  },
+  "NVDA": {
+    "fwdPE": 17.581158,
+    "trailPE": 34.457886,
+    "peg": 0.62,
+    "name": "NVIDIA Corporation"
+  },
+  "AMD": {
+    "fwdPE": 32.7299,
+    "trailPE": 131.42857,
+    "peg": 1.1,
+    "name": "Advanced Micro Devices, Inc."
+  },
+  "SNDK": {
+    "fwdPE": 6.7646613,
+    "trailPE": 24.212059,
+    "peg": null,
+    "name": "Sandisk Corporation"
+  },
+  "MU": {
+    "fwdPE": 6.5320725,
+    "trailPE": 22.885094,
+    "peg": 0.14,
+    "name": "Micron Technology, Inc."
+  },
+  "TSM": {
+    "fwdPE": 19.786266,
+    "trailPE": 32.477016,
+    "peg": 1.03,
+    "name": "Taiwan Semiconductor Manufactur"
+  },
+  "INTC": {
+    "fwdPE": 50.72716,
+    "trailPE": null,
+    "peg": 1.36,
+    "name": "Intel Corporation"
+  },
+  "BE": {
+    "fwdPE": 47.523422,
+    "trailPE": 301.5065,
+    "peg": 0.97,
+    "name": "Bloom Energy Corporation"
+  },
+  "APLD": {
+    "fwdPE": -124.72,
+    "trailPE": null,
+    "peg": 1.83,
+    "name": "Applied Digital Corporation"
+  },
+  "TE": {
+    "fwdPE": 51.368423,
+    "trailPE": null,
+    "peg": null,
+    "name": "T1 Energy Inc."
+  },
+  "PSIX": {
+    "fwdPE": 12.116565,
+    "trailPE": 13.435374,
+    "peg": 0.82,
+    "name": "Power Solutions International, "
+  },
+  "GLW": {
+    "fwdPE": 40.090454,
+    "trailPE": 79.820274,
+    "peg": 1.27,
+    "name": "Corning Incorporated"
+  },
+  "BW": {
+    "fwdPE": 20.957895,
+    "trailPE": null,
+    "peg": null,
+    "name": "Babcock & Wilcox Enterprises, I"
+  },
+  "PUMP": {
+    "fwdPE": 32.018227,
+    "trailPE": null,
+    "peg": null,
+    "name": "ProPetro Holding Corp."
+  },
+  "IREN": {
+    "fwdPE": -47.76596,
+    "trailPE": 58.31169,
+    "peg": 3.11,
+    "name": "IREN LIMITED"
+  },
+  "CORZ": {
+    "fwdPE": 143.7857,
+    "trailPE": null,
+    "peg": null,
+    "name": "Core Scientific, Inc."
+  },
+  "RIOT": {
+    "fwdPE": -21.431093,
+    "trailPE": null,
+    "peg": null,
+    "name": "Riot Platforms, Inc."
+  },
+  "CLSK": {
+    "fwdPE": -8.75292,
+    "trailPE": null,
+    "peg": null,
+    "name": "CleanSpark, Inc."
+  },
+  "BITF": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "BTDR": {
+    "fwdPE": -27.617647,
+    "trailPE": null,
+    "peg": null,
+    "name": "Bitdeer Technologies Group"
+  },
+  "HIVE": {
+    "fwdPE": 204.66667,
+    "trailPE": null,
+    "peg": null,
+    "name": "HIVE Digital Technologies Ltd"
+  },
+  "VFV.TO": {
+    "fwdPE": null,
+    "trailPE": 26.84376,
+    "peg": null,
+    "name": "VANGUARD SP 500 INDEX ETF"
+  },
+  "GLD": {
+    "fwdPE": null,
+    "trailPE": null,
+    "peg": null,
+    "name": "SPDR Gold Shares"
+  },
+  "SMH": {
+    "fwdPE": null,
+    "trailPE": 42.14408,
+    "peg": null,
+    "name": "VanEck Semiconductor ETF"
+  },
+  "SPCX": {
+    "fwdPE": 88.14612,
+    "trailPE": null,
+    "peg": null,
+    "name": "Space Exploration Technologies "
+  },
+  "RKLB": {
+    "fwdPE": 1641.6,
+    "trailPE": null,
+    "peg": null,
+    "name": "Rocket Lab Corporation"
+  },
+  "SEI": {
+    "fwdPE": 31.319136,
+    "trailPE": 83.506325,
+    "peg": 0.94,
+    "name": "Solaris Energy Infrastructure, "
+  },
+  "WYFI": {
+    "fwdPE": 58.84634,
+    "trailPE": null,
+    "peg": null,
+    "name": "WhiteFiber, Inc."
+  }
+}

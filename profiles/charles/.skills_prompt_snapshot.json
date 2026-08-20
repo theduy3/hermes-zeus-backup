@@ -25,13 +25,13 @@
       1779252798243558402,
       12774
     ],
-    "autonomous-ai-agents/computer-use/SKILL.md": [
-      1786469842082392865,
-      16461
-    ],
     "autonomous-ai-agents/merge-reconciler/SKILL.md": [
       1786469842083392892,
       7606
+    ],
+    "autonomous-ai-agents/computer-use/SKILL.md": [
+      1787031466234675630,
+      18603
     ],
     "creative/DESCRIPTION.md": [
       1776960632000000000,
@@ -233,10 +233,6 @@
       1786469842088393027,
       10395
     ],
-    "productivity/pdf/SKILL.md": [
-      1786469842090393081,
-      12266
-    ],
     "productivity/xlsx/SKILL.md": [
       1786469842094393189,
       9655
@@ -256,6 +252,18 @@
     "productivity/weekly-review-planning/SKILL.md": [
       1786469842094393189,
       3975
+    ],
+    "productivity/pdf/SKILL.md": [
+      1787031466236675684,
+      12244
+    ],
+    "productivity/box/SKILL.md": [
+      1787031466235675656,
+      11697
+    ],
+    "productivity/session-librarian/SKILL.md": [
+      1787031466236675684,
+      4827
     ],
     "red-teaming/godmode/SKILL.md": [
       1780819229270747874,
@@ -278,8 +286,12 @@
       4501
     ],
     "research/grounded-citations/SKILL.md": [
-      1786469842098393296,
-      11241
+      1787031466236675684,
+      11231
+    ],
+    "research/blocked-page-recovery/SKILL.md": [
+      1787031466236675684,
+      5152
     ],
     "smart-home/DESCRIPTION.md": [
       1776960632000000000,
@@ -861,6 +873,23 @@
       }
     },
     {
+      "skill_name": "box",
+      "category": "productivity",
+      "frontmatter_name": "box",
+      "description": "Box manages cloud files, sharing, search, and metadata.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "document-to-action-items",
       "category": "productivity",
       "frontmatter_name": "document-to-action-items",
@@ -993,6 +1022,23 @@
       }
     },
     {
+      "skill_name": "session-librarian",
+      "category": "productivity",
+      "frontmatter_name": "session-librarian",
+      "description": "Organize sessions by prompt: find, rename, archive, prune.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "tui-widgets",
       "category": "productivity",
       "frontmatter_name": "tui-widgets",
@@ -1044,6 +1090,23 @@
       "category": "red-teaming",
       "frontmatter_name": "godmode",
       "description": "Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "blocked-page-recovery",
+      "category": "research",
+      "frontmatter_name": "blocked-page-recovery",
+      "description": "Recover blocked/paywalled/WAF'd pages via fallbacks.",
       "platforms": [
         "linux",
         "macos",

@@ -1,0 +1,428 @@
+{
+  "MSFT": {
+    "price": 480.35,
+    "prevClose": 496.8800048828125,
+    "chg": -3.326759926012926,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Microsoft Corporation",
+    "exchange": "NMS"
+  },
+  "AMZN": {
+    "price": 261.31,
+    "prevClose": 265.1300048828125,
+    "chg": -1.4408044402597664,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Amazon.com, Inc.",
+    "exchange": "NMS"
+  },
+  "GOOG": {
+    "price": 341.45,
+    "prevClose": 343.94000244140625,
+    "chg": -0.7239641866986551,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Alphabet Inc.",
+    "exchange": "NMS"
+  },
+  "META": {
+    "price": 568.97,
+    "prevClose": 594.969970703125,
+    "chg": -4.369963524780699,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Meta Platforms, Inc.",
+    "exchange": "NMS"
+  },
+  "AAPL": {
+    "price": 305.59,
+    "prevClose": 305.260009765625,
+    "chg": 0.10810136402352132,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Apple Inc.",
+    "exchange": "NMS"
+  },
+  "CRM": {
+    "price": 190.97,
+    "prevClose": 201.3699951171875,
+    "chg": -5.164620037426734,
+    "currency": "USD",
+    "time": 1786996803,
+    "name": "Salesforce, Inc.",
+    "exchange": "NYQ"
+  },
+  "DELL": {
+    "price": 479.81,
+    "prevClose": 494.510009765625,
+    "chg": -2.972641498721558,
+    "currency": "USD",
+    "time": 1786997087,
+    "name": "Dell Technologies Inc.",
+    "exchange": "NYQ"
+  },
+  "PLTR": {
+    "price": 172.55,
+    "prevClose": 179.00999450683594,
+    "chg": -3.6087339841738473,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "Palantir Technologies Inc.",
+    "exchange": "NMS"
+  },
+  "ORCL": {
+    "price": 146.65,
+    "prevClose": 156.22000122070312,
+    "chg": -6.125976920959626,
+    "currency": "USD",
+    "time": 1786997101,
+    "name": "Oracle Corporation",
+    "exchange": "NYQ"
+  },
+  "CRWV": {
+    "price": 106.0,
+    "prevClose": 106.29000091552734,
+    "chg": -0.2728393198131764,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "CoreWeave, Inc.",
+    "exchange": "NMS"
+  },
+  "INFY": {
+    "price": 11.62,
+    "prevClose": 12.40999984741211,
+    "chg": -6.365832853550364,
+    "currency": "USD",
+    "time": 1786996802,
+    "name": "Infosys Limited",
+    "exchange": "NYQ"
+  },
+  "NBIS": {
+    "price": 268.85,
+    "prevClose": 255.0399932861328,
+    "chg": 5.41483966335177,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Nebius Group N.V.",
+    "exchange": "NMS"
+  },
+  "TSLA": {
+    "price": 339.3,
+    "prevClose": 339.9599914550781,
+    "chg": -0.19413797848777864,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Tesla, Inc.",
+    "exchange": "NMS"
+  },
+  "NFLX": {
+    "price": 76.02,
+    "prevClose": 78.23999786376953,
+    "chg": -2.8374206599992076,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "Netflix, Inc.",
+    "exchange": "NMS"
+  },
+  "MELI": {
+    "price": 1787.57,
+    "prevClose": 1828.25,
+    "chg": -2.225078627102424,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "MercadoLibre, Inc.",
+    "exchange": "NMS"
+  },
+  "HD": {
+    "price": 337.88,
+    "prevClose": 341.70001220703125,
+    "chg": -1.117943245701953,
+    "currency": "USD",
+    "time": 1786996803,
+    "name": "Home Depot, Inc. (The)",
+    "exchange": "NYQ"
+  },
+  "LOW": {
+    "price": 215.81,
+    "prevClose": 218.22000122070312,
+    "chg": -1.1043906182851215,
+    "currency": "USD",
+    "time": 1786996939,
+    "name": "Lowe's Companies, Inc.",
+    "exchange": "NYQ"
+  },
+  "WMT": {
+    "price": 114.33,
+    "prevClose": 115.72000122070312,
+    "chg": -1.201176292810517,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Walmart Inc.",
+    "exchange": "NMS"
+  },
+  "TGT": {
+    "price": 151.01,
+    "prevClose": 155.50999450683594,
+    "chg": -2.8937011547757048,
+    "currency": "USD",
+    "time": 1786997013,
+    "name": "Target Corporation",
+    "exchange": "NYQ"
+  },
+  "ASML": {
+    "price": 1883.12,
+    "prevClose": 1847.9000244140625,
+    "chg": 1.9059459451603742,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "ASML Holding N.V. - New York Re",
+    "exchange": "NMS"
+  },
+  "AVGO": {
+    "price": 392.43,
+    "prevClose": 417.82000732421875,
+    "chg": -6.076781120851563,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Broadcom Inc.",
+    "exchange": "NMS"
+  },
+  "NVDA": {
+    "price": 225.01,
+    "prevClose": 225.3000030517578,
+    "chg": -0.1287186186549672,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "NVIDIA Corporation",
+    "exchange": "NMS"
+  },
+  "AMD": {
+    "price": 506.0,
+    "prevClose": 483.010009765625,
+    "chg": 4.759733705214645,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Advanced Micro Devices, Inc.",
+    "exchange": "NMS"
+  },
+  "SNDK": {
+    "price": 1786.85,
+    "prevClose": 1528.1099853515625,
+    "chg": 16.932028265551235,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "Sandisk Corporation",
+    "exchange": "NMS"
+  },
+  "MU": {
+    "price": 1011.75,
+    "prevClose": 949.8300170898438,
+    "chg": 6.51905938916008,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Micron Technology, Inc.",
+    "exchange": "NMS"
+  },
+  "TSM": {
+    "price": 430.97,
+    "prevClose": 430.489990234375,
+    "chg": 0.11150311889103201,
+    "currency": "USD",
+    "time": 1786996802,
+    "name": "Taiwan Semiconductor Manufactur",
+    "exchange": "NYQ"
+  },
+  "INTC": {
+    "price": 103.49,
+    "prevClose": 104.55999755859375,
+    "chg": -1.0233335726640063,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Intel Corporation",
+    "exchange": "NMS"
+  },
+  "BE": {
+    "price": 232.16,
+    "prevClose": 236.22000122070312,
+    "chg": -1.718737278690394,
+    "currency": "USD",
+    "time": 1786996803,
+    "name": "Bloom Energy Corporation",
+    "exchange": "NYQ"
+  },
+  "APLD": {
+    "price": 31.18,
+    "prevClose": 30.6200008392334,
+    "chg": 1.828867228667984,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Applied Digital Corporation",
+    "exchange": "NMS"
+  },
+  "TE": {
+    "price": 4.88,
+    "prevClose": 4.789999961853027,
+    "chg": 1.8789152163616245,
+    "currency": "USD",
+    "time": 1786996802,
+    "name": "T1 Energy Inc.",
+    "exchange": "NYQ"
+  },
+  "PSIX": {
+    "price": 39.5,
+    "prevClose": 41.06999969482422,
+    "chg": -3.822740945922323,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "Power Solutions International, ",
+    "exchange": "NCM"
+  },
+  "GLW": {
+    "price": 173.21,
+    "prevClose": 158.5399932861328,
+    "chg": 9.253189942673192,
+    "currency": "USD",
+    "time": 1786997091,
+    "name": "Corning Incorporated",
+    "exchange": "NYQ"
+  },
+  "BW": {
+    "price": 9.92,
+    "prevClose": 9.350000381469727,
+    "chg": 6.0962523558814565,
+    "currency": "USD",
+    "time": 1786996803,
+    "name": "Babcock & Wilcox Enterprises, I",
+    "exchange": "NYQ"
+  },
+  "PUMP": {
+    "price": 12.79,
+    "prevClose": 11.539999961853027,
+    "chg": 10.831889447825041,
+    "currency": "USD",
+    "time": 1786996803,
+    "name": "ProPetro Holding Corp.",
+    "exchange": "NYQ"
+  },
+  "IREN": {
+    "price": 44.9,
+    "prevClose": 44.7599983215332,
+    "chg": 0.31278302885780773,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "IREN LIMITED",
+    "exchange": "NMS"
+  },
+  "CORZ": {
+    "price": 20.13,
+    "prevClose": 19.780000686645508,
+    "chg": 1.76946057231835,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Core Scientific, Inc.",
+    "exchange": "NMS"
+  },
+  "RIOT": {
+    "price": 20.04,
+    "prevClose": 19.209999084472656,
+    "chg": 4.3206712914329515,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "Riot Platforms, Inc.",
+    "exchange": "NCM"
+  },
+  "CLSK": {
+    "price": 12.4,
+    "prevClose": 11.520000457763672,
+    "chg": 7.638884611703904,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "CleanSpark, Inc.",
+    "exchange": "NCM"
+  },
+  "BITF": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "BTDR": {
+    "price": 9.39,
+    "prevClose": 8.760000228881836,
+    "chg": 7.191778021204236,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Bitdeer Technologies Group",
+    "exchange": "NCM"
+  },
+  "HIVE": {
+    "price": 3.07,
+    "prevClose": 2.5799999237060547,
+    "chg": 18.992251580770667,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "HIVE Digital Technologies Ltd",
+    "exchange": "NCM"
+  },
+  "VFV.TO": {
+    "price": 190.73,
+    "prevClose": 192.6999969482422,
+    "chg": -1.0223129109707898,
+    "currency": "CAD",
+    "time": 1786996790,
+    "name": "VANGUARD SP 500 INDEX ETF",
+    "exchange": "TOR"
+  },
+  "GLD": {
+    "price": 405.49,
+    "prevClose": 398.9599914550781,
+    "chg": 1.6367577413228278,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "SPDR Gold Shares",
+    "exchange": "PCX"
+  },
+  "SMH": {
+    "price": 594.07,
+    "prevClose": 589.1199951171875,
+    "chg": 0.840237120423641,
+    "currency": "USD",
+    "time": 1786996800,
+    "name": "VanEck Semiconductor ETF",
+    "exchange": "NGM"
+  },
+  "SPCX": {
+    "price": 146.23,
+    "prevClose": 141.2899932861328,
+    "chg": 3.496359932485059,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Space Exploration Technologies ",
+    "exchange": "NMS"
+  },
+  "RKLB": {
+    "price": 82.08,
+    "prevClose": 80.0999984741211,
+    "chg": 2.4719120644160917,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "Rocket Lab Corporation",
+    "exchange": "NMS"
+  },
+  "SEI": {
+    "price": 65.97,
+    "prevClose": 59.900001525878906,
+    "chg": 10.133553121027283,
+    "currency": "USD",
+    "time": 1786996803,
+    "name": "Solaris Energy Infrastructure, ",
+    "exchange": "NYQ"
+  },
+  "WYFI": {
+    "price": 30.35,
+    "prevClose": 28.219999313354492,
+    "chg": 7.547841029314034,
+    "currency": "USD",
+    "time": 1786996801,
+    "name": "WhiteFiber, Inc.",
+    "exchange": "NCM"
+  }
+}

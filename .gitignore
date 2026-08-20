@@ -88,3 +88,4 @@ Thumbs.db
 **/*token*.json
 **/*client_secret*.json
 **/*oauth_pending*.json
+shared/nous_auth.json

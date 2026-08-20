@@ -4492,5 +4492,17 @@
     "status": "sent",
     "message_id": 1953,
     "odds": ""
+  },
+  "eea06b8128b3daa3": {
+    "id": "eea06b8128b3daa3",
+    "date": "2026-08-19",
+    "due_date": "2026-08-19",
+    "title": "Reconcile CAD liquidity gap before allocation",
+    "text": "Reconcile CAD liquidity gap before allocation",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/reconcile-liquidity-gap-usrbash-vs-cad927k.md",
+    "status": "sent",
+    "message_id": 2040,
+    "odds": ""
   }
 }
