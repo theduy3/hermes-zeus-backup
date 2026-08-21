@@ -358,6 +358,21 @@
     "use_count": 0,
     "view_count": 0
   },
+  "external-mcp-integrations": {
+    "archived_at": null,
+    "created_at": "2026-08-20T18:47:40.480646+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-20T18:47:59.542459+00:00",
+    "last_reused_patch_generation": 1,
+    "last_used_at": "2026-08-20T21:51:47.105584+00:00",
+    "last_viewed_at": "2026-08-20T21:51:47.101158+00:00",
+    "patch_count": 1,
+    "patch_generation": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
   "find-nearby": {
     "archived_at": null,
     "created_at": "2026-05-11T10:12:49.077421+00:00",
@@ -610,14 +625,14 @@
     "created_by": null,
     "last_patched_at": "2026-05-21T19:50:36.637086+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-20T04:01:19.655920+00:00",
-    "last_viewed_at": "2026-08-20T04:01:19.641675+00:00",
+    "last_used_at": "2026-08-20T21:36:36.811616+00:00",
+    "last_viewed_at": "2026-08-20T21:36:36.794911+00:00",
     "patch_count": 29,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 930,
-    "view_count": 930
+    "use_count": 931,
+    "view_count": 931
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -737,14 +752,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-13T07:32:57.625272+00:00",
     "last_reused_patch_generation": 4,
-    "last_used_at": "2026-08-18T07:34:50.325882+00:00",
-    "last_viewed_at": "2026-08-18T07:34:50.316654+00:00",
+    "last_used_at": "2026-08-21T03:59:23.739717+00:00",
+    "last_viewed_at": "2026-08-21T03:59:23.705503+00:00",
     "patch_count": 4,
     "patch_generation": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 11,
+    "view_count": 11
   },
   "hermes-skill-installation": {
     "archived_at": null,
@@ -925,14 +940,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-13T07:08:15.518440+00:00",
-    "last_viewed_at": "2026-08-13T07:08:15.501793+00:00",
+    "last_used_at": "2026-08-20T21:36:36.802572+00:00",
+    "last_viewed_at": "2026-08-20T21:36:36.787292+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
   },
   "life-os-migration": {
     "archived_at": null,
@@ -970,14 +985,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-12T20:42:33.602752+00:00",
-    "last_viewed_at": "2026-08-12T20:42:33.576477+00:00",
+    "last_used_at": "2026-08-20T21:51:29.135707+00:00",
+    "last_viewed_at": "2026-08-20T21:51:29.127905+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 4,
+    "view_count": 4
   },
   "llama-cpp": {
     "archived_at": null,
@@ -1043,6 +1058,21 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "mcporter": {
+    "archived_at": null,
+    "created_at": "2026-08-20T18:40:20.298987+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-20T18:40:20.313089+00:00",
+    "last_viewed_at": "2026-08-20T18:40:20.299003+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "media-retrieval-and-audio-workflows": {
     "archived_at": null,
@@ -1118,13 +1148,15 @@
     "created_at": "2026-07-06T16:15:15.280743+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-07-27T16:15:12.148220+00:00",
-    "last_viewed_at": "2026-07-27T16:15:12.144820+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-20T23:56:10.544875+00:00",
+    "last_viewed_at": "2026-08-20T23:56:10.497393+00:00",
     "patch_count": 0,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 4,
+    "view_count": 4
   },
   "node-inspect-debugger": {
     "archived_at": null,
@@ -1171,13 +1203,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-19T22:10:15.973094+00:00",
+    "last_used_at": "2026-08-20T22:10:26.740764+00:00",
     "last_viewed_at": "2026-08-12T21:39:31.893211+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 61,
+    "use_count": 62,
     "view_count": 11
   },
   "obsidian-csv-import-ingest": {
@@ -1383,14 +1415,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-08-20T21:36:36.807788+00:00",
+    "last_viewed_at": "2026-08-20T21:36:36.791508+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "python-debugpy": {
     "archived_at": null,
@@ -1400,6 +1432,51 @@
     "last_used_at": null,
     "last_viewed_at": null,
     "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
+  "remarkable-2026-planner": {
+    "archived_at": null,
+    "created_at": "2026-08-20T21:50:31.331304+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-20T21:50:31.373819+00:00",
+    "last_viewed_at": "2026-08-20T21:50:31.331492+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "remarkable-device-sync": {
+    "archived_at": null,
+    "created_at": "2026-08-20T21:55:54.611475+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-21T00:21:10.704613+00:00",
+    "last_reused_patch_generation": 3,
+    "last_used_at": "2026-08-21T00:19:37.385179+00:00",
+    "last_viewed_at": "2026-08-21T00:19:37.380574+00:00",
+    "patch_count": 6,
+    "patch_generation": 6,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
+  "remarkable-mcp-integration": {
+    "archived_at": null,
+    "created_at": "2026-08-20T22:45:47.241275+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-20T22:45:56.400203+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 2,
+    "patch_generation": 2,
     "pinned": false,
     "state": "active",
     "use_count": 0,
@@ -1417,6 +1494,21 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "research-intelligence-workflows": {
+    "archived_at": null,
+    "created_at": "2026-08-20T18:40:20.305124+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-20T18:40:20.316366+00:00",
+    "last_viewed_at": "2026-08-20T18:40:20.305135+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "research-paper-writing": {
     "archived_at": null,
@@ -1486,6 +1578,21 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "session-librarian": {
+    "archived_at": null,
+    "created_at": "2026-08-20T18:44:39.787569+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-20T18:44:39.792655+00:00",
+    "last_viewed_at": "2026-08-20T18:44:39.787783+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "sketch": {
     "archived_at": null,

@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 93
+        "completed": 94
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-08-20T07:00:00-04:00",
-      "last_run_at": "2026-08-19T07:03:42.424456-04:00",
+      "next_run_at": "2026-08-21T07:00:00-04:00",
+      "last_run_at": "2026-08-20T07:02:35.537385-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -200,15 +200,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 7859
+        "completed": 7955
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-08-20T08:00:00-04:00",
-      "last_run_at": "2026-08-19T23:51:00.045931-04:00",
+      "next_run_at": "2026-08-21T08:00:00-04:00",
+      "last_run_at": "2026-08-20T23:50:20.171150-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -345,15 +345,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 24
+        "completed": 25
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T16:00:45.951943-07:00",
-      "next_run_at": "2026-08-20T15:00:00-04:00",
-      "last_run_at": "2026-08-19T15:00:32.269006-04:00",
+      "next_run_at": "2026-08-21T15:00:00-04:00",
+      "last_run_at": "2026-08-20T15:00:42.946780-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -378,10 +378,10 @@
       "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Clean the humidifier (weekly household task).” It is Wednesday at 8:00 PM America/Toronto. Do not create or modify tasks, calendar events, or cron jobs.",
       "skills": [],
       "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.6-luna",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -428,10 +428,10 @@
       "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Put out garbage, recycling, and organics.” It is Tuesday or Thursday at 8:00 PM America/Toronto. Do not create or modify tasks, calendar events, or cron jobs.",
       "skills": [],
       "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.6-luna",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -444,17 +444,17 @@
       "schedule_display": "0 20 * * 2,4",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:48:22.249169-07:00",
-      "next_run_at": "2026-08-20T20:00:00-04:00",
-      "last_run_at": "2026-08-18T20:00:16.531362-04:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openai-codex' -> 'nous'; model 'gpt-5.6-luna' -> 'tencent/hy3:free'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit 57824304b35d --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
+      "next_run_at": "2026-08-25T20:00:00-04:00",
+      "last_run_at": "2026-08-20T20:00:49.192786-04:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -469,8 +469,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "drift_alerted": true,
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "2f94a63c501d",
@@ -478,10 +477,10 @@
       "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Put out all garbage.” It is Saturday at 8:00 PM America/Toronto. Do not create or modify tasks, calendar events, or cron jobs.",
       "skills": [],
       "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.6-luna",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -521,5 +520,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-19T23:51:00.046509-04:00"
+  "updated_at": "2026-08-20T23:50:20.171593-04:00"
 }

@@ -46,8 +46,8 @@
       7606
     ],
     "autonomous-ai-agents/hermes-profile-model-config/SKILL.md": [
-      1786606377113408703,
-      7748
+      1787270154447115004,
+      10636
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
       1787031466234675630,
@@ -116,6 +116,10 @@
     "devops/hermes-custom-endpoint/SKILL.md": [
       1787036395338226237,
       5702
+    ],
+    "devops/remarkable-mcp-integration/SKILL.md": [
+      1787265946981524502,
+      5706
     ],
     "diagramming/DESCRIPTION.md": [
       1775843805114670348,
@@ -190,12 +194,16 @@
       3152
     ],
     "mcp/native-mcp/SKILL.md": [
-      1778644994279090954,
-      13773
+      1787270187581009060,
+      16199
     ],
     "mcp/graphify-hermes-vault-integration/SKILL.md": [
       1785095695430641433,
       9908
+    ],
+    "mcp/external-mcp-integrations/SKILL.md": [
+      1787251660452838729,
+      4691
     ],
     "media/DESCRIPTION.md": [
       1775843805121513945,
@@ -412,6 +420,14 @@
     "productivity/session-librarian/SKILL.md": [
       1787031466236675684,
       4827
+    ],
+    "productivity/remarkable-2026-planner/SKILL.md": [
+      1787271928778991758,
+      6209
+    ],
+    "productivity/remarkable-device-sync/SKILL.md": [
+      1787262954589679366,
+      5552
     ],
     "red-teaming/godmode/SKILL.md": [
       1778565357588786324,
@@ -876,6 +892,19 @@
       }
     },
     {
+      "skill_name": "remarkable-mcp-integration",
+      "category": "devops",
+      "frontmatter_name": "remarkable-mcp-integration",
+      "description": "Wire/debug reMarkable Cloud MCP across Hermes profiles.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "sdlc-review",
       "category": "devops",
       "frontmatter_name": "sdlc-review",
@@ -1073,6 +1102,19 @@
       "category": "leisure",
       "frontmatter_name": "find-nearby",
       "description": "Find nearby places (restaurants, cafes, bars, pharmacies,...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "external-mcp-integrations",
+      "category": "mcp",
+      "frontmatter_name": "external-mcp-integrations",
+      "description": "Use when wiring external MCP servers into Hermes.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1623,6 +1665,32 @@
       "category": "productivity",
       "frontmatter_name": "project-context",
       "description": "Use when maintaining current project context.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "remarkable-2026-planner",
+      "category": "productivity",
+      "frontmatter_name": "remarkable-2026-planner",
+      "description": "Sync a reMarkable Planner into the vault and Life OS safely.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "remarkable-device-sync",
+      "category": "productivity",
+      "frontmatter_name": "remarkable-device-sync",
+      "description": "Use when wiring reMarkable MCP or planner habit sync.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

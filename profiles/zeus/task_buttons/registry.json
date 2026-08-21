@@ -4504,5 +4504,29 @@
     "status": "sent",
     "message_id": 2040,
     "odds": ""
+  },
+  "2263a5a958e2fa7b": {
+    "id": "2263a5a958e2fa7b",
+    "date": "2026-08-20",
+    "due_date": "2026-08-20",
+    "title": "Confirm first income deposit (Aug 20)",
+    "text": "Confirm first income deposit (Aug 20)",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/confirm-income-deposit-2026-08-20.md",
+    "status": "sent",
+    "message_id": 2060,
+    "odds": ""
+  },
+  "8d21cd98d7ec41da": {
+    "id": "8d21cd98d7ec41da",
+    "date": "2026-08-20",
+    "due_date": "2026-08-20",
+    "title": "Decide NVDA ~36% concentration vs no-add rule",
+    "text": "Decide NVDA ~36% concentration vs no-add rule",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/reconcile-nvda-concentration-vs-no-add-rule.md",
+    "status": "sent",
+    "message_id": 2061,
+    "odds": ""
   }
 }

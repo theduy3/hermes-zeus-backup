@@ -1,0 +1,20 @@
+{
+  "date": "2026-08-20",
+  "plan_path": "/vault/Tasks/planning/remarkable/2026-08-20.md",
+  "tasks": [],
+  "lifeos": {
+    "thor": "gated:exercise",
+    "meditation": "gated:meditation",
+    "goals": []
+  },
+  "pages_read": [
+    551,
+    552,
+    963,
+    964
+  ],
+  "confidence": "low",
+  "habits_confirmed": false,
+  "dry_run": false,
+  "applied_at": "2026-08-21T00:16:33Z"
+}

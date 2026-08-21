@@ -4,7 +4,7 @@ theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CH
 §
 Profiles: Telegram=default/zeus/thor/finance/catthew/charles/butter. Docker profile gateways hardened via venv/bin/hermes wrapper; supervisor ~/.hermes/scripts/profile_gateway_supervisor.sh; watchdog cron 96f28d228fb9.
 §
-Hermes Docker venv: /home/hermes/.hermes/hermes-agent/venv/ may lack pip. Bootstrap: python3 -m ensurepip --upgrade then python3 -m pip install <pkg>. Use python3 -m pip, not bin/pip.
+Hermes Docker venv: may lack pip — `python3 -m ensurepip --upgrade` then `python3 -m pip` (not bin/pip).
 §
 cronjob tool = DEFAULT profile only; other profiles' jobs are at ~/.hermes/profiles/<p>/cron/jobs.json (edit directly or `hermes cron --profile <p>`). Provider-less cron jobs inherit the profile default provider (openai-codex), so null provider does NOT avoid a Codex-credential block — pin provider explicitly.
 §
@@ -12,4 +12,4 @@ Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-kno
 §
 config.yaml and .env are write-PROTECTED from patch/write_file tools (security guards reject them). For config.yaml use `hermes config set <key> <value>` (nested keys work, e.g. secrets.command.enabled). For .env edits use terminal python. For security-sensitive credential/env changes (token moves, encryption setup) wait for explicit approval — do NOT proceed on clarify-timeout best-judgment; user stopped an in-flight credential move once.
 §
-Orcarouter: user only uses free models like qwen3.8-27b-free
+Orcarouter: free models only (qwen3.8-27b-free). reMarkable: SamMorrowDrums cloud MCP wired into ALL profiles (read-only, token registered, cloud-connected via ~/.rmapi). Its image/canvas/OCR tools need a vision model; hy3:free is text-only and cannot view reMarkable images.

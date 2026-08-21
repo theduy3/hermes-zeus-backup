@@ -22,15 +22,15 @@
       "schedule_display": "15 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 102
+        "completed": 103
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-08-20T06:15:00-04:00",
-      "last_run_at": "2026-08-19T06:16:51.598899-04:00",
+      "next_run_at": "2026-08-21T06:15:00-04:00",
+      "last_run_at": "2026-08-20T06:17:05.114403-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -124,15 +124,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 100
+        "completed": 101
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-08-20T21:00:00-04:00",
-      "last_run_at": "2026-08-19T21:02:05.864913-04:00",
+      "next_run_at": "2026-08-21T21:00:00-04:00",
+      "last_run_at": "2026-08-20T21:04:10.620753-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -152,103 +152,6 @@
       "workdir": null,
       "profile": null,
       "updated_at": "2026-05-25T19:04:50.492107+00:00",
-      "fire_claim": null,
-      "failure_streak": 0
-    },
-    {
-      "id": "ab4de922b388",
-      "name": "Time-Blocked Obsidian Task Card Drip",
-      "prompt": "Script-only job. Every 5 minutes during Duy's weekday work window, run planned_task_drip.py. The script regenerates today's /vault/Tasks/planning/YYYY-MM-DD.md from theduyvault tasks, sends Telegram cards only at approved time-block windows (9:00 setup, 9:10 deep work, 10:30 deep work, 11:45 company review, 12:15 admin/finance, 13:00 deep work, 14:15 shutdown), and stays silent outside windows. It respects protected time: no work before 9:00, brunch 10:00-10:30, pickup transition 14:35-14:45, family after 14:45.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": "planned_task_drip.py",
-      "no_agent": true,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "*/5 9-14 * * 1-5",
-        "display": "*/5 9-14 * * 1-5"
-      },
-      "schedule_display": "*/5 9-14 * * 1-5",
-      "repeat": {
-        "times": null,
-        "completed": 5464
-      },
-      "enabled": false,
-      "state": "paused",
-      "paused_at": "2026-07-20T17:29:08.472698-07:00",
-      "paused_reason": null,
-      "created_at": "2026-05-25T11:44:10.692069-07:00",
-      "next_run_at": "2026-08-07T09:00:00-04:00",
-      "last_run_at": "2026-07-20T14:55:22.484260-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "local",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "8446251233",
-        "chat_name": "theduy",
-        "thread_id": null
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "profile": null,
-      "fire_claim": null
-    },
-    {
-      "id": "901801e68cb5",
-      "name": "Generate Daily Time-Blocked Plan",
-      "prompt": "Script-only job. Generate today's time-blocked planning note from theduyvault tasks before Duy's 9AM work window. Writes /vault/Tasks/planning/YYYY-MM-DD.md using approved constraints: no work before 9AM, brunch 10:00-10:30, pickup transition 14:35-14:45, Victoria/family after 14:45, company review rotation Monday SalonX, Tuesday SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg; weekends use Investment Portfolio Review instead of Company Review and no Pomodoro schedule. Delivery local only.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": "generate_daily_plan.py",
-      "no_agent": true,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 8 * * 1-5",
-        "display": "55 8 * * 1-5"
-      },
-      "schedule_display": "55 8 * * 1-5",
-      "repeat": {
-        "times": null,
-        "completed": 23
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-17T14:43:15.623012-07:00",
-      "next_run_at": "2026-08-20T08:55:00-04:00",
-      "last_run_at": "2026-08-19T08:55:12.974381-04:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "local",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "8446251233",
-        "chat_name": "theduy",
-        "thread_id": null,
-        "user_id": "8446251233"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
       "fire_claim": null,
       "failure_streak": 0
     },
@@ -274,15 +177,15 @@
       "schedule_display": "*/15 8-22 * * *",
       "repeat": {
         "times": null,
-        "completed": 1982
+        "completed": 2042
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T19:06:33.209615-07:00",
-      "next_run_at": "2026-08-20T08:00:00-04:00",
-      "last_run_at": "2026-08-19T22:45:49.578491-04:00",
+      "next_run_at": "2026-08-21T08:00:00-04:00",
+      "last_run_at": "2026-08-20T22:45:43.996809-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -324,15 +227,15 @@
       "schedule_display": "*/15 8-22 * * *",
       "repeat": {
         "times": null,
-        "completed": 1977
+        "completed": 2037
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T20:24:52.039837-07:00",
-      "next_run_at": "2026-08-20T08:00:00-04:00",
-      "last_run_at": "2026-08-19T22:45:49.559887-04:00",
+      "next_run_at": "2026-08-21T08:00:00-04:00",
+      "last_run_at": "2026-08-20T22:45:43.986842-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -374,65 +277,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 2930
+        "completed": 3026
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-20T12:00:09.338658-07:00",
-      "next_run_at": "2026-08-20T08:00:00-04:00",
-      "last_run_at": "2026-08-19T23:50:03.598572-04:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "local",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "8446251233",
-        "chat_name": "theduy",
-        "thread_id": null,
-        "user_id": "8446251233"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 0
-    },
-    {
-      "id": "7909be6c0881",
-      "name": "Daily Pomodoro Schedule Reminders",
-      "prompt": "Script-only job. Run send_daily_schedule_reminder.py every 5 minutes; the script stays silent except inside configured Vancouver/EDT weekday reminder windows, and stays fully silent on weekends. Sends a plain one-line Pomodoro schedule reminder only, e.g. '🗓 9:05–9:30 — Pomodoro 1 — Deep Work'. No checkboxes, no task list, no buttons. Task cards with Done buttons are handled separately by due_task_drip.py. Specific-time events/tasks must not be fed into Pomodoro reminders.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": "send_daily_schedule_reminder.py",
-      "no_agent": true,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "*/5 9-20 * * *",
-        "display": "*/5 9-20 * * *"
-      },
-      "schedule_display": "*/5 9-20 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 4323
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-20T17:29:12.804213-07:00",
-      "next_run_at": "2026-08-20T09:00:00-04:00",
-      "last_run_at": "2026-08-19T20:55:20.901632-04:00",
+      "next_run_at": "2026-08-21T08:00:00-04:00",
+      "last_run_at": "2026-08-20T23:50:50.071650-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -501,5 +354,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-19T23:50:03.599006-04:00"
+  "updated_at": "2026-08-20T23:50:50.072358-04:00"
 }

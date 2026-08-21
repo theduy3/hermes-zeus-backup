@@ -1,0 +1,29 @@
+{
+  "date": "2026-08-20",
+  "source_document": "2026 Planner",
+  "pages_read": [551, 552, 69, 963, 964],
+  "day_schedule_text": "(sample) morning deep work; Victoria pickup 14:45",
+  "day_notes_text": "(sample) confirm income deposit; NVDA concentration decision",
+  "tasks": [
+    {
+      "title": "Sample planner task — DELETE ME",
+      "done": false,
+      "due": "2026-08-20",
+      "notes": "dry-run example only",
+      "skip_vault_task": true
+    }
+  ],
+  "goals": [],
+  "exercise": {
+    "done": true,
+    "minutes": 30,
+    "note": "sample walk"
+  },
+  "meditation": {
+    "done": true,
+    "minutes": 10,
+    "note": "sample sit"
+  },
+  "confidence": "low",
+  "dry_run": true
+}

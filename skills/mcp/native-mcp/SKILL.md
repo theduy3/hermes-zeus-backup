@@ -264,6 +264,47 @@ pip install --upgrade mcp
 
 The client retries up to 5 times with exponential backoff (1s, 2s, 4s, 8s, 16s, capped at 60s). If the server is fundamentally unreachable, it gives up after 5 attempts. Check the server process and network connectivity.
 
+### Server "degraded"/"parked" with `Failed to parse JSONRPC message from server`
+
+**Cause:** stdio MCP servers communicate over **stdout** as JSON-RPC. If the server (or any library it imports) writes a stray non-JSON line to **stdout** — a deprecation warning, a banner, a `print()` — Hermes's JSON-RPC parser chokes on it and marks the server `degraded`, then `parked`. Symptom in logs:
+```
+ERROR mcp.client.stdio: Failed to parse JSONRPC message from server
+WARNING tools.mcp_tool: MCP server 'X' keepalive failed ... (rapid-drop budget exhausted), parking
+```
+First confirm the server actually works in isolation:
+```bash
+# Feed a minimal handshake, inspect raw stdout for non-JSON lines
+printf '%s\n' \
+  '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"p","version":"1"}}}' \
+  '{"jsonrpc":"2.0","method":"notifications/initialized"}' \
+  '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}' \
+  | <launcher-command> | head
+```
+If you see a non-JSON line like `warning: The \`fitz\` API is deprecated...` mixed with JSON, that's the culprit.
+
+**Fix:** wrap the server in a launcher script that filters the noise off stdout. Example for a `fitz`/PyMuPDF deprecation warning:
+```bash
+#!/usr/bin/env bash
+# ~/.hermes/scripts/run-example-mcp.sh
+# Filter known non-JSON stdout noise so the JSON-RPC channel stays clean.
+export PATH="${HOME}/.local/bin:${PATH}"
+exec uvx --from git+https://github.com/owner/repo mcp-server-name "$@" \
+  2> >(cat >&2) \
+  | grep --line-buffered -vE "warning: The \`fitz\` API is deprecated"
+```
+- Redirect stderr straight through (`2> >(cat >&2)`) so real server errors stay visible.
+- The `grep -v` on stdout drops only the offending line; everything else passes through as JSON.
+- Use a wrapper script rather than inline args — `hermes mcp add` / `config.yaml` can't easily do stream filtering.
+- Verify the fix: re-run the handshake probe; stdout should contain zero non-JSON lines and a `tools/list` result.
+
+### Debugging a custom stdio launcher
+
+Write a tiny probe file (`/tmp/handshake.jsonl`) with the three JSON lines above and pipe it through the launcher — avoids inline heredocs, which trip the agent command-blocklist. Then count non-JSON lines:
+```bash
+<launcher> < /tmp/handshake.jsonl > /tmp/out.txt 2> /tmp/err.txt
+echo "stray_stdout_lines: $(grep -cv jsonrpc /tmp/out.txt)"
+```
+
 ## Examples
 
 ### Time Server (uvx)

@@ -1,0 +1,147 @@
+---
+name: remarkable-2026-planner
+description: "Use when syncing reMarkable 2026 Planner pages into vault/Life OS or answering Telegram questions about reMarkable notes."
+version: 1.0.0
+author: Hermes
+license: MIT
+metadata:
+  hermes:
+    tags: [remarkable, planner, habits, telegram, life-os, vault]
+    related_skills: [life-knowledge-base, life-tracker, today, native-mcp]
+---
+
+# reMarkable 2026 Planner + library
+
+## When to use
+- User asks about reMarkable notes / notebooks / planner from Telegram or CLI
+- Daily/cron sync of **2026 Planner** into theduyvault + Life OS
+- Exercise / meditation habit capture from planner grids
+- Goals/tasks spotted on planner pages
+
+## Authority split
+| Content | Authority |
+|---|---|
+| Dated actionable tasks | `/vault/Tasks/` (Telegram already surfaces these) |
+| Daily plan cards | `/vault/Tasks/planning/` |
+| Planner mirror extracts | `/vault/Tasks/planning/remarkable/YYYY-MM-DD.md` |
+| Exercise / meditation observations | Life OS `30-health/` via tracker writers |
+| Strategic goals context | Life OS `70-goals/` via `life_log.py` |
+| Freeform notebook Q&A | reMarkable MCP live read (not auto-copied) |
+
+Do **not** invent habit completions, minutes, or tasks. Only write what the page extract clearly supports. If OCR is ambiguous, put text in the mirror file under Raw OCR and skip Life OS habit fields.
+
+## Prerequisites
+1. SamMorrowDrums `remarkable-mcp` configured on the active Hermes profile (cloud mode + Connect).
+2. Tools appear as `mcp_remarkable_*` (names may vary slightly after discovery).
+3. Planner notebook = **any document whose name contains `Planner`** (case-insensitive), e.g. `2026 Planner`, `2027 Planner`. Prefer the one matching the working year; see `page_map.pick_planner_document()`.
+
+## Page map (2026 Planner)
+Code: `/home/hermes/.hermes/projects/remarkable-mcp/page_map.py`
+
+| Layer | Pages | Formula |
+|---|---|---|
+| Year | 2–3 | 2 calendar, 3 goals |
+| Quarter Q | 4–11 | `2+2Q`, `3+2Q` |
+| Month M | 12–35 | `10+2M`, `11+2M` |
+| Week W | 36–88 | `35+W` |
+| Day | 89–818 | schedule `89+(DOY-1)*2`, notes `+1` |
+| Exercise grid | 963 | fixed |
+| Meditation grid | 964 | fixed |
+
+Anchors verified: p2 year cal, p69 = Week 34, p550 = Aug 19 notes, p551 = Aug 20 schedule.
+
+Get today's pages:
+```bash
+python3 /home/hermes/.hermes/projects/remarkable-mcp/page_map.py YYYY-MM-DD
+python3 /home/hermes/.hermes/projects/remarkable-mcp/page_map.py check
+```
+
+## A) Telegram Q&A (rest of notes)
+For questions about non-planner notebooks or general library search:
+1. Prefer MCP: `remarkable_status` → `remarkable_browse` / `remarkable_search` / `remarkable_recent`
+2. Read with `remarkable_read` / `remarkable_image` (OCR/handwriting as needed)
+3. Answer with notebook name, path, page, and short quote
+4. Do **not** dump whole notebooks into vault unless user asks to file something
+5. Vault tasks/goals/habits for the day still come from `/vault/Tasks` + Life OS — use those when the question is about commitments, not ink
+
+## B) Daily planner sync (goals / tasks / exercise / meditation)
+Target date = America/Toronto calendar date unless user overrides.
+
+### Steps
+1. Resolve pages:
+   ```bash
+   python3 /home/hermes/.hermes/projects/remarkable-mcp/page_map.py $DATE
+   ```
+   Daily minimum: day schedule, day notes, week page, exercise 963, meditation 964.
+2. Resolve planner notebook (do not hardcode a year):
+   ```text
+   remarkable_browse /  OR  remarkable_search query=Planner
+   → pick title containing "Planner"; prefer year in $DATE (or wall-clock year)
+   ```
+   Helper: `python3 -c "from page_map import pick_planner_document; print(pick_planner_document([...]))"`
+   Page geometry in `page_map.py` is currently calibrated for the **2026** planner layout. If the user opens a 2027/2028 planner with a different layout, stop and recalibrate anchors before writing habits.
+3. Pull pages (image+OCR preferred for grids/handwriting):
+   - day schedule + notes
+   - week page
+   - exercise grid (page 963) — find the cell/mark for `$DATE` only
+   - meditation grid (page 964) — same
+   - On Mondays / 1st of month also month (and quarter/year when applicable)
+4. Build extract JSON (only confident fields). Set `source_document` to the **exact** notebook title. Schema example:
+   `/home/hermes/.hermes/projects/remarkable-mcp/examples/sample-extract-2026-08-20.json`
+5. Apply (real write):
+   ```bash
+   python3 /home/hermes/.hermes/projects/remarkable-mcp/apply_planner_extract.py \
+     --json /path/to/extract.json
+   ```
+   Dry-run first when testing:
+   ```bash
+   python3 .../apply_planner_extract.py --json extract.json --dry-run
+   ```
+6. Report: pages read, mirror path, tasks created (if any), Life OS events, confidence, ambiguities skipped.
+
+### Extraction rules
+- **Exercise / meditation:** require a clear mark/minutes for that date on grids 963/964. If only a vague scribble, set raw_ocr and omit done/minutes.
+- **Tasks:** only explicit action items from day schedule/notes. Prefer linking/updating existing vault tasks over duplicates. Use `skip_vault_task: true` when the item already exists in `/vault/Tasks`.
+- **Goals:** year/quarter/month goal pages only when those pages were read; strategic wording → Life OS goals, not task spam.
+- **Epistemic:** all planner-derived values are `self_report` from OCR; say so if uncertain.
+
+## C) Cron shape (when enabled)
+Prompt should:
+1. Load this skill
+2. Use Toronto date
+3. Run page_map + MCP reads + apply_planner_extract
+4. Deliver short digest to Telegram: habits status, new tasks, open questions
+5. Stay silent-ish if nothing changed (optional hash of extract)
+
+Do not enable cron until cloud MCP auth works end-to-end.
+
+## Setup (one-time, human)
+1. Open https://my.remarkable.com/device/desktop/connect → one-time code
+2. On Hermes host:
+   ```bash
+   uvx --from git+https://github.com/SamMorrowDrums/remarkable-mcp remarkable-mcp --register CODE
+   ```
+3. Add MCP (default profile = Telegram):
+   ```bash
+   hermes mcp add remarkable \
+     --command uvx \
+     --args --from git+https://github.com/SamMorrowDrums/remarkable-mcp remarkable-mcp \
+     --connect-timeout 120
+   ```
+   If token is not in `~/.rmapi`, pass `--env REMARKABLE_TOKEN=...`
+4. Restart gateway / new session so tools inject
+5. Smoke: status, browse, read page 551 of 2026 Planner
+
+## Pitfalls
+- Cloud needs **reMarkable Connect**, not a Claude subscription
+- Remote Hermes cannot use USB mode unless tablet is reachable
+- Handwriting OCR may need Vision key or sampling — never fake habit completion
+- `/vault` writes from agents: use hermes-owned Python (see today skill vault-write workaround) if permission errors
+- Re-running Life OS events with same id fails — use correct/supersede flow, don't invent a second completion
+
+## Verification
+- [ ] `page_map.py check` passes
+- [ ] MCP `remarkable_status` ok
+- [ ] Mirror written under `/vault/Tasks/planning/remarkable/`
+- [ ] Exercise/meditation only written when extract is explicit
+- [ ] Telegram can answer a non-planner note question via MCP
