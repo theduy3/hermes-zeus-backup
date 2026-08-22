@@ -49,20 +49,13 @@ Cron: `Due-Today Obsidian Task Card Drip` (`056878e263a5`), every 10 minutes 8AM
 - 09:35–10:00 Pomodoro 2
 - 10:00–10:30 brunch
 - 10:30–10:55 Pomodoro 3
-- 10:55–11:00 break
-- 11:00–11:25 Pomodoro 4
-- 11:25–11:45 buffer/messages
+- 9:00–10:00 exercise (morning, after dropping Victoria at daycare)
+- 10:00–10:30 brunch
 - 11:45–12:15 company review
-- 12:15–12:40 Pomodoro 5 admin/finance
-- 12:40–13:00 buffer/reset
-- 13:00–13:25 Pomodoro 6
-- 13:25–13:30 break
-- 13:30–13:55 Pomodoro 7
-- 14:00 protein
-- 14:15–14:35 exercise/shutdown
-- 14:35–14:45 pickup transition
+- 3:35–3:45 pickup transition
+- 3:45 pick up Victoria
 
-Cron: `Daily Pomodoro Schedule Reminders` (`7909be6c0881`), every 5 minutes 9AM–8PM; script stays silent outside windows.
+Cron: `Daily Schedule Reminders` (`7909be6c0881`), every 5 minutes 9AM–8PM; script stays silent outside windows.
 
 Legacy `planned_task_drip.py` / `Time-Blocked Obsidian Task Card Drip` (`ab4de922b388`) should stay paused unless Duy explicitly wants old block-based reminders again.
 

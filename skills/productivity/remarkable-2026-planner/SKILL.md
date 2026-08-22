@@ -51,6 +51,15 @@ confirms the marks on-device, the sync writes them as UNCONFIRMED + `confidence:
 low` and skips ALL Life OS habit writes. Confirm via `--confirm-habits` (or
 `habits_confirmed:true` in JSON) AFTER the user verifies.
 
+CRITICAL: marks are dated, not "today". The grid read happens on `data.date`
+(e.g. Aug 20) but the X marks are on OTHER days (Aug 14/17/18/19). NEVER stamp
+all marks with `data.date` — that collapses 4 exercise days onto one day and
+corrupts health history. Use the `habit_entries` array (each with its own
+`date`), which the apply script loops over to write ONE Life OS event per mark
+on its correct date (exercise->thor_log.py thor-rm-<date>; meditation->life_store
+med-rm-<date>). The legacy flat `exercise`/`meditation` objects are deprecated
+because they only carry `data.date`.
+
 **C. Store the rendered PNG alongside the transcription.**
 Transcription is the lossy layer. `rm_capture.py` shells to `remarkable_image`
 and decodes the base64 PNG to `assets/<date>/<page>.png`. Each page block gets
@@ -79,15 +88,33 @@ Build an extract JSON (use `pages` array preferred; legacy flat fields
   "habits_confirmed": false
 }
 ```
-Apply (dry run first):
+Apply (dry run FIRST — verify per-date mapping before writing Life OS):
 ```
 python3 apply_planner_extract.py --json <extract>.json --dry-run --no-capture
-python3 apply_planner_extract.py --json <extract>.json --no-capture        # real write
-python3 apply_planner_extract.py --json <extract>.json --confirm-habits    # after user verifies marks
+python3 apply_planner_extract.py --json <extract>.json --no-capture        # real write (gated)
+python3 apply_planner_extract.py --json <extract>.json --confirm-habits    # after user verifies marks on-device
 ```
-Capture PNGs (separate step, proven):
-```
-python3 rm_capture.py "2026 Planner" 551 /vault/Tasks/planning/remarkable/assets/2026-08-20/551.png
+Confirmed-habit extract (note `habit_entries` carries EACH mark's own date —
+never stamp them all with `data.date`):
+```json
+{
+  "date": "2026-08-20",
+  "source_document": "2026 Planner",
+  "confidence": "low",
+  "pages": [
+    {"page": 963, "role": "exercise_grid", "text": "X marks confirmed: Aug 14, 17, 18, 19", "confidence": "low"},
+    {"page": 964, "role": "meditation_grid", "text": "X mark confirmed: Aug 20", "confidence": "low"}
+  ],
+  "habit_entries": [
+    {"date": "2026-08-14", "type": "exercise", "done": true, "note": "X mark p963 (confirmed on device)"},
+    {"date": "2026-08-17", "type": "exercise", "done": true, "note": "X mark p963 (confirmed on device)"},
+    {"date": "2026-08-18", "type": "exercise", "done": true, "note": "X mark p963 (confirmed on device)"},
+    {"date": "2026-08-19", "type": "exercise", "done": true, "note": "X mark p963 (confirmed on device)"},
+    {"date": "2026-08-20", "type": "meditation", "done": true, "note": "X mark p964 (confirmed on device)"}
+  ],
+  "capture_pngs": false,
+  "habits_confirmed": true
+}
 ```
 
 ## Pitfalls (learned the hard way)
@@ -113,6 +140,25 @@ python3 rm_capture.py "2026 Planner" 551 /vault/Tasks/planning/remarkable/assets
    `bash <file>`, not inline.
 7. **Page geometry is 2026-specific.** `page_map.YEAR=2026`; recalibrate anchors
    before enabling writes on a new-year planner layout. `self_check()` validates.
+8. **`remarkable_read` indexes by EXTRACTED content page, not physical page.**
+   `content_type=annotations` on physical p963 → `page_out_of_range` (the doc
+   reports 1 extracted page). For grid strokes, use `remarkable_image` (physical
+   page works there) and read pixels; the annotation text layer is unreliable
+   for grids.
+9. **Restarting Telegram gateways from inside the gateway is refused.** `hermes -p
+   <p> gateway restart` blocks with "Refusing to restart … inside the gateway
+   process." Fix: `kill` the `hermes gateway run` PIDs; the `profile_gateway_watchdog`
+   cron (96f28d228fb9, every 30m) or `profile_gateway_supervisor.sh` restarts
+   them in ~20-40s. Verify MCP load in `logs/gateway.log` (look for
+   "degraded"/"parked").
+10. **Vision-model discovery one-liner** (Nous free+vision):
+   `curl -s https://inference-api.nousresearch.com/v1/models | python3 -c "import sys,json; [print(m['id']) for m in json.load(sys.stdin)['data'] if 'image' in (m.get('architecture',{}).get('input_modalities',[]) or []) and m.get('pricing',{}).get('prompt')=='0']"`
+   → `stepfun/step-3.7-flash:free` is the free vision pick used as the
+   `model.auxiliary.vision` across all profiles.
+
+> Support file: `references/operational-recipes.md` (copy-paste launcher, model
+> grep, PNG probe, verified habit-run transcript, gateway-restart details). If
+> missing, the recipes above are the condensed version.
 
 ## Verification standard
 - `python3 page_map.py check` → "OK page_map self-check passed"

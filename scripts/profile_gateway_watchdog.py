@@ -31,15 +31,15 @@ def all_gateway_pids():
         is_gateway = False
         # Docker entrypoint profile gateway shape:
         #   python3 /home/hermes/.local/bin/hermes gateway run
-        if exe.startswith('python') and len(argv) >= 4 and Path(argv[1]).name == 'hermes' and argv[2:4] == ['gateway', 'run']:
+        if exe.startswith('python') and len(argv) >= 4 and Path(argv[1]).name == 'hermes' and argv[2:4] in (['gateway', 'run'], ['gateway', 'restart']):
             is_gateway = True
         # Direct CLI shape:
         #   hermes gateway run
-        elif exe == 'hermes' and len(argv) >= 3 and argv[1:3] == ['gateway', 'run']:
+        elif exe == 'hermes' and len(argv) >= 3 and argv[1:3] in (['gateway', 'run'], ['gateway', 'restart']):
             is_gateway = True
         # Module shape used by some repair commands:
         #   python -m hermes_cli.main ... gateway run
-        elif exe.startswith('python') and '-m' in argv and 'hermes_cli.main' in argv and 'gateway' in argv and 'run' in argv:
+        elif exe.startswith('python') and '-m' in argv and 'hermes_cli.main' in argv and 'gateway' in argv and ('run' in argv or 'restart' in argv):
             is_gateway = True
         if is_gateway:
             pids.append(pid)

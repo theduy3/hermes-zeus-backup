@@ -1,0 +1,96 @@
+---
+name: phone-call-reminder
+description: "Spoken Telegram call reminders via CallMeBot + Hermes cron."
+version: 1.0.0
+author: Hermes Agent
+metadata:
+  hermes:
+    tags: [reminder, phone-call, telegram, callmebot, voice, cron]
+---
+
+# Phone-call reminder via CallMeBot
+
+Fire a spoken reminder to the user by phone, for free, using CallMeBot. Verified
+working 2026-08-21 with `USER=@theduynguyen`.
+
+## When to use
+
+The user says something like *"call me at HH:MM [to X]"* or *"remind me at
+HH:MM — call me [to do X]"*. This is a **spoken** reminder: at the due time the
+Telegram bot rings the user (in-app voice call) and speaks the message via TTS.
+
+## Architecture (already built)
+
+- `~/.hermes/scripts/callmebot_reminder.sh` — fires the CallMeBot request.
+  - Telegram voice call (default, no key): `https://api.callmebot.com/start.php?source=hermes&user=@USER&text=MSG&lang=LANG`
+  - Optional real PSTN call (needs `CALLMEBOT_KEY` + `USER=+CC…`): `https://api.callmebot.com/call.php?phone=USER&text=MSG&lang=LANG&key=KEY`
+- `~/.hermes/scripts/callmebot.conf` — `600` perms; holds `USER=@handle` and
+  optional `CALLMEBOT_KEY`. No secrets other than the username/key live here.
+- The dispatch is a one-off Hermes **cron job** (`no_agent: true`,
+  `script: callmebot_reminder.sh "MESSAGE"`) so it runs inside the gateway
+  even with no user present. The default gateway (healthy) runs it.
+
+The script strips HTML from the CallMeBot response and surfaces the one-time
+authorize link on failure; exits non-zero on rejected dispatch.
+
+## Setup (one-time, user does most of it)
+
+1. **Hermes side (already done):** scripts + conf exist. `USER` is the user's
+   real Telegram `@username` (case-sensitive, copy from Telegram → Settings →
+   Username). Do NOT guess it; the API rejects unknown handles as
+   "not authorized".
+2. **User authorizes CallMeBot (browser OAuth, required):**
+   - Open `https://api2.callmebot.com/txt/auth.php` in a browser.
+   - Click **Login** → completes Telegram OAuth for the `@username` account.
+   - Must reach a success/"authorized" screen, not just message a bot.
+   - Telegram → Settings → Privacy & Security → **Voice Calls** must allow calls
+     (Everybody, or add `@CallMeBot_API` as a contact), else the call is silently blocked.
+3. **Test once:** `cd ~/.hermes/scripts && CALLMEBOT_CONF=./callmebot.conf ./callmebot_reminder.sh "Test from Hermes"`. Expected: `Autorization OK … Starting Telegram Audio Call … Call answered and ended by the user`. The user must **answer** to hear the TTS.
+
+## Creating a reminder job
+
+When the user names a time + message, create a one-off cron via the `cronjob`
+tool with:
+
+- `action=create`
+- `schedule` = ISO local timestamp, e.g. `2026-08-22T15:45:00`
+- `prompt` = empty/short note (the script does the work)
+- `no_agent=true`
+- `script` = absolute path to `callmebot_reminder.sh` followed by the quoted
+  TTS message, e.g. `/home/hermes/.hermes/scripts/callmebot_reminder.sh "Pick up Victoria at 3:45pm"`
+- `deliver=origin` (or the user's telegram) so they also get a written log.
+
+Confirm the job id back to the user. The gateway fires it at the due time.
+
+## Behavior notes
+
+- **Answer to hear it:** the bot speaks only after the user picks up. No-answer
+  = ring nudge only, no voicemail drop. Tell the user: pick up to hear the words.
+- **Fair-use limits:** free CallMeBot is a few calls/day with a short cooldown
+  between calls to the same user. Fine for personal reminders (Victoria pickup);
+  not for high-volume blasting.
+- **Rate limit:** repeated API hits trip `"Too many requests"`. If seen, **stop
+  calling the API** and wait ~3 min before retrying. Do not loop/retry rapidly.
+- **`source=hermes`** in the URL is an arbitrary tag; safe to keep.
+- Voice: default `lang=en-US-Standard-B`. Other `en-*`/regional Standard voices
+  are valid (Wavenet/premium voices are NOT supported by the API).
+
+## Pitfalls (learned this session)
+
+- A plain `/start` message to the bot is NOT sufficient — the **browser OAuth**
+  at `txt/auth.php` is what registers the username for the call bot
+  (`@CallMeBot_API`).
+- The wrong `@username` is the #1 failure: "not authorized" usually means the
+  handle in `callmebot.conf` doesn't match the account that did the OAuth. The
+  user's display name is NOT their @username.
+- The real PSTN `call.php` endpoint needs an `API key` from the `@CallMeBot_phone`
+  bot; `start.php` (Telegram in-app) needs none. Keep both paths in the script
+  but default to the keyless in-app call unless the user supplies a key.
+- Repeated authorization checks during setup tripped the global rate limit and
+  blocked the real test — batch verification, then wait before the live call.
+
+## Verification
+
+After setup, run the script once and confirm `Autorization OK` + `Call answered`
+in the output before promising the user it works. Keep the conf at `600` and the
+script at `700`.

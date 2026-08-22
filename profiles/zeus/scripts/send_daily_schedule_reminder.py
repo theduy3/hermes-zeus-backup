@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Send Zeus daily Pomodoro schedule reminders.
+"""Send Zeus daily schedule reminders (brunch, company review, protein, exercise, pickup).
 
 Runs as a no-agent cron. It stays silent except in configured reminder windows.
 Schedule reminders are plain one-line messages without buttons or task lists;
@@ -30,23 +30,11 @@ ENV_FILES = [PROFILE / ".env", pathlib.Path("/home/hermes/.hermes/.env")]
 # Weekday work-day reminders. Windows are intentionally short; cron can run
 # every 5 minutes and only one reminder per key/day will be sent.
 WEEKDAY_WINDOWS = [
-    {"key": "setup", "start": "09:00", "end": "09:06", "heading": "9:00–9:05 Daily Setup", "title": "Daily setup", "time": "9:00–9:05", "fallback": ["Confirm Top 3", "Check fixed appointments", "Start on purpose"]},
-    {"key": "p1", "start": "09:05", "end": "09:11", "heading": "9:05–9:30 Pomodoro 1 — Deep Work", "title": "Pomodoro 1 — Deep Work", "time": "9:05–9:30", "fallback": ["Start highest-energy task"]},
-    {"key": "break1", "start": "09:30", "end": "09:36", "heading": "9:30–9:35 Break", "title": "Break", "time": "9:30–9:35", "fallback": ["Stand up", "Water", "Reset"]},
-    {"key": "p2", "start": "09:35", "end": "09:41", "heading": "9:35–10:00 Pomodoro 2 — Deep Work", "title": "Pomodoro 2 — Deep Work", "time": "9:35–10:00", "fallback": ["Continue deep work"]},
+    {"key": "exercise", "start": "09:00", "end": "09:06", "heading": "9:00–10:00 Exercise", "title": "Exercise", "time": "9:00–10:00", "fallback": ["Morning exercise", "Drop Victoria at daycare first"]},
     {"key": "brunch", "start": "10:00", "end": "10:06", "heading": "10:00–10:30 Brunch", "title": "Brunch", "time": "10:00–10:30", "fallback": ["Brunch", "Water 2/6"]},
-    {"key": "p3", "start": "10:30", "end": "10:36", "heading": "10:30–10:55 Pomodoro 3 — Deep Work", "title": "Pomodoro 3 — Deep Work", "time": "10:30–10:55", "fallback": ["Continue priority deep work"]},
-    {"key": "break2", "start": "10:55", "end": "11:01", "heading": "10:55–11:00 Break", "title": "Break", "time": "10:55–11:00", "fallback": ["Stand up", "Reset"]},
-    {"key": "p4", "start": "11:00", "end": "11:06", "heading": "11:00–11:25 Pomodoro 4 — Deep Work", "title": "Pomodoro 4 — Deep Work", "time": "11:00–11:25", "fallback": ["Continue priority deep work"]},
-    {"key": "buffer1", "start": "11:25", "end": "11:31", "heading": "11:25–11:45 Buffer / Messages", "title": "Buffer / Messages", "time": "11:25–11:45", "fallback": ["Messages", "Reset", "Prepare company review"]},
     {"key": "company", "start": "11:45", "end": "11:51", "heading": "11:45–12:15 Company Review", "title": "Company review", "time": "11:45–12:15", "fallback": ["Revenue/cash", "Staff/schedule", "Reviews/complaints", "Pick one follow-up"]},
-    {"key": "p5", "start": "12:15", "end": "12:21", "heading": "12:15–12:40 Pomodoro 5 — Admin / Finance", "title": "Pomodoro 5 — Admin / Finance", "time": "12:15–12:40", "fallback": ["Calls/payments/vendors"]},
-    {"key": "buffer2", "start": "12:40", "end": "12:46", "heading": "12:40–1:00 Buffer / Reset", "title": "Buffer / Reset", "time": "12:40–1:00", "fallback": ["Messages / reset", "Golf mobility"]},
-    {"key": "p6", "start": "13:00", "end": "13:06", "heading": "1:00–1:25 Pomodoro 6 — Deep Work", "title": "Pomodoro 6 — Deep Work", "time": "1:00–1:25", "fallback": ["Continue priority work"]},
-    {"key": "break3", "start": "13:25", "end": "13:31", "heading": "1:25–1:30 Break", "title": "Break", "time": "1:25–1:30", "fallback": ["Stand up", "Reset"]},
-    {"key": "p7", "start": "13:30", "end": "13:36", "heading": "1:30–1:55 Pomodoro 7 — Deep Work / Review", "title": "Pomodoro 7 — Deep Work / Review", "time": "1:30–1:55", "fallback": ["Finish one clear next step"]},
     {"key": "protein", "start": "14:00", "end": "14:06", "heading": "", "title": "Protein", "time": "2:00", "fallback": ["Protein drink"]},
-    {"key": "exercise", "start": "14:15", "end": "14:21", "heading": "2:15–2:35 Exercise + Shutdown", "title": "Exercise + shutdown", "time": "2:15–2:35", "fallback": ["Exercise before Victoria pickup", "Mark completed tasks Done", "Stop by 2:35"]},
+    {"key": "pickup", "start": "15:35", "end": "15:41", "heading": "3:35–3:45 Pickup Transition", "title": "Pickup transition", "time": "3:35–3:45", "fallback": ["Stop work", "Prepare to pick up Victoria"]},
 ]
 
 # Weekends are intentionally silent for Zeus schedule reminders. Weekend task

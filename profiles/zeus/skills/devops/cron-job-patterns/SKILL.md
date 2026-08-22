@@ -55,6 +55,16 @@ The `cronjob` tool only manages the **current profile's** scheduler. To modify a
 3. Include `updated_at` timestamp
 4. Verify the job is in the right state afterwards
 
+## Editing a Job Prompt In-Place (current profile)
+
+When Duy asks to add or remove a clause, or append a template, to an existing briefing/reminder prompt, do **not** resupply the whole prompt through `cronjob update` — the prompts are long and re-typing risks drift and lost context. Edit the stored prompt directly:
+
+1. Read `~/.hermes/profiles/<profile>/cron/jobs.json` (use `cronjob action=list` first to get the job `id`).
+2. Locate the job by `id` and patch its `prompt` string with the `patch` tool — change only the needed clause, or append a clearly delimited block (e.g. a `NOTE-TAKING TEMPLATE` section). When scripting, guard against double-adding with `if "Marker" not in prompt`.
+3. Verify by reading the file back. The next scheduled run picks up the new prompt automatically — no `cronjob update` round-trip needed.
+
+This technique also applies to another profile's jobs.json (see Editing Another Profile's Cron Jobs above) — just target that profile's path. Keep edits minimal and self-contained; the cron run has no conversation context.
+
 ## Pipeline Schedule Pattern
 
 When chaining Job A → Job B:
@@ -103,8 +113,8 @@ For cross-profile aggregation jobs, avoid unnecessary nested `hermes --profile .
 ### Pomodoro Schedule Reminders + Separate Task Cards
 
 When Duy wants task delivery integrated with his time-management system, keep **schedule/Pomodoro reminders** and **actionable task cards** separate:
-- Schedule reminders are one-line plain Telegram time labels with no Done/Log buttons, no task registry writes, no checkboxes, no task names, and no “what to do” instructions. Example: `🗓 12:15–12:40 — Pomodoro 5 — Admin / Finance`.
-- Morning briefing `Weekday Pomodoro Schedule` is also a generic time-block template only: never append daily task titles/descriptions to any schedule line. Daily tasks belong only in `Today Tasks` / `Top 3`. In particular, keep `12:15–12:40 — Pomodoro 5 — Admin / Finance` without a trailing colon/task.
+- Schedule reminders are one-line plain Telegram time labels with no Done/Log buttons, no task registry writes, no checkboxes, no task names, and no “what to do” instructions. Example: `🗓 3:35–3:45 — Pickup Transition`.
+- The morning briefing no longer includes a Pomodoro/schedule section (removed at Duy's request). Never append daily task titles/descriptions to schedule reminder lines. Daily tasks belong only in `Today Tasks` / `Top 3`. Daily schedule reminders are one-line labels for: exercise, brunch, company review, protein, pickup transition.
 - Obsidian task cards are separate messages sourced directly from `/vault/Tasks/tasks/*.md` and may include Done buttons.
 - Do not merge a Pomodoro/block reminder and a task Done button into one card.
 - Do not drip overdue tasks as task cards; Duy moves overdue items himself during planning. Drip due-today tasks only.
@@ -113,12 +123,14 @@ When Duy wants task delivery integrated with his time-management system, keep **
 Approved Duy schedule constraints:
 - Before 9:00 AM: baby/family; no normal work cards.
 - 10:00–10:30 AM: brunch; protected.
-- 25-minute Pomodoro work reminders between 9:00 AM and 2:45 PM.
-- 2:35–2:45 PM: pickup transition; stop work.
-- Around 2:45 PM onward: Victoria/family; only urgent/fixed reminders.
+- No fixed deep-work / Pomodoro blocks; schedule reminders only for brunch, company review, protein, exercise, and pickup.
+- 3:35–3:45 PM: pickup transition; stop work.
+- Around 3:45 PM onward: Victoria/family; only urgent/fixed reminders.
 - Company review rotation is weekdays only: Monday SalonX, Tuesday SS/Sans Souci, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg.
 - Weekends: do **not** schedule or label `Company Review`; use `Investment Portfolio Review` instead for the 11:45–12:15 review block.
 - Weekends: do **not** include a Pomodoro schedule in the morning briefing, and Zeus schedule-reminder scripts should stay silent. Still allow source task cards for due-today fixed/important tasks.
+
+Note: the anchors above (pickup transition, deep-work window, Victoria/family cutoff) are **mirrored** across `generate_daily_plan.py`, `send_daily_schedule_reminder.py`, `planned_task_drip.py`, the Morning/Evening briefing cron prompts, and the note-taking skill docs. When Duy changes one of them it is a multi-file cascade — edit all together (see task-calendar-reminder-automation: "Changing a recurring schedule anchor").
 
 Pattern:
 1. Generate `/vault/Tasks/planning/YYYY-MM-DD.md` before the work window from `/vault/Tasks/tasks/*.md`.

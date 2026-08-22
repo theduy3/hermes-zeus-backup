@@ -197,24 +197,26 @@ When the user wants Thor-style inline buttons for Obsidian tasks, prefer a scrip
 Approved structure for Duy's workday:
 - Before 9:00 AM: baby/family; no normal work cards.
 - 10:00–10:30 AM: brunch; protected.
-- 2:35–2:45 PM: pickup transition; stop work.
-- Around 2:45 PM: pick up Victoria / family transition.
-- Deep work only between 9:00 AM and 2:45 PM, excluding brunch.
-- Work reminders should use 25-minute Pomodoro sessions, not long 50–75 minute block prompts.
+- 9:00–10:00 AM: exercise (morning, after dropping Victoria at daycare).
+- 3:35–3:45 PM: pickup transition; stop work.
+- Around 3:45 PM: pick up Victoria / family transition.
+- No fixed deep-work / Pomodoro blocks; work flexibly between 10:30 AM and 3:35 PM, excluding brunch.
+- There are NO fixed deep-work / Pomodoro blocks anymore. Work is done flexibly between 10:30 AM and 3:35 PM (excluding brunch). Schedule reminders fire only for: exercise (9:00–10:00), brunch (10:00–10:30), company review (11:45–12:15), protein (2:00), and pickup transition (3:35–3:45).
 - Company review rotation: Monday SalonX, Tuesday SS/Sans Souci, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg.
 
 Planning artifacts:
 - Daily plans live at `/vault/Tasks/planning/YYYY-MM-DD.md`.
 - Generator script: `/home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py`.
-- Pomodoro schedule reminder sender: `/home/hermes/.hermes/profiles/zeus/scripts/send_daily_schedule_reminder.py`.
+- Daily schedule reminder sender: `/home/hermes/.hermes/profiles/zeus/scripts/send_daily_schedule_reminder.py` (windows = exercise/brunch/company/protein/pickup only; no Pomodoro).
 - Due-today task card sender: `/home/hermes/.hermes/profiles/zeus/scripts/due_task_drip.py`.
 - Legacy time-block sender `/home/hermes/.hermes/profiles/zeus/scripts/planned_task_drip.py` should stay paused/disabled unless Duy explicitly asks for block-based reminders again.
 - Active task metadata fields: `time_block`, `estimated_minutes`, `energy`, `priority`, `company`; specific-time tasks use `due_time`, `time`, `start_time`, `kickoff`, or body `Time:`/`Kickoff:` lines.
 - Full operational reference: `references/time-blocked-planning.md`.
 - Task/calendar/Telegram workflow reference: `references/duy-task-calendar-telegram-workflow.md`.
-- Zeus task/calendar/Pomodoro/earnings maintenance notes: `references/zeus-task-calendar-earnings-pomodoro.md`.
+- Zeus task/calendar/Pomodoro/earnings maintenance notes: `references/explain.md` is not used; see `references/zeus-task-calendar-earnings-pomodoro.md`.
+- Schedule restructure cascade checklist: `references/schedule-restructure-checklist.md` (edit ALL these files when Duy changes the recurring schedule).
 
-When updating the planning system, preserve these rules and verify generated plans contain brunch, pickup transition, the correct weekday company, `Today Tasks`, Top 3, Pomodoro sections, and No-Date Triage. `Today Tasks` is the authoritative due-today non-fixed list and must not be replaced with future/high-priority backlog items. Specific-time events/tasks belong under `Fixed` and must not be fed into Pomodoro reminders. Daily schedule reminders should be one-line time labels only (for example `🗓 9:05–9:30 — Pomodoro 1 — Deep Work`) with no checkboxes, task list, instructions, Done/Log buttons, or “what to do” text; task cards are separate. If Google Calendar is part of the planning integration, Zeus should default to Duy's `theduy calendar` (`duynt1989@gmail.com`) with Calendar-only scope unless the user explicitly requests broader Workspace access.
+When updating the planning system, preserve these rules and verify generated plans contain: Exercise (9:00–10:00), Brunch, Company Review (correct weekday), Pickup Transition (3:35–3:45), Pick up Victoria (3:45), `Today Tasks`, Top 3, and No-Date Triage. Do NOT reintroduce fixed Pomodoro/deep-work blocks unless Duy explicitly asks. `Today Tasks` is the authoritative due-today non-fixed list and must not be replaced with future/high-priority backlog items. Specific-time events/tasks belong under `Fixed` and must not be fed into reminders. Daily schedule reminders should be one-line time labels only (for example `🗓 3:35–3:45 — Pickup Transition`) with no checkboxes, task list, instructions, Done/Log buttons, or “what to do” text; task cards are separate. If Google Calendar is part of the planning integration, Zeus should default to Duy's `theduy calendar` (`duynt1989@gmail.com`) with Calendar-only scope unless the user explicitly requests broader Workspace access.
 
 ### Obsidian task sync with theduy Google Calendar
 

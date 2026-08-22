@@ -3,7 +3,7 @@
     {
       "id": "e6711b998b07",
       "name": "Daily Morning Briefing - Personal Tasks",
-      "prompt": "Prepare Zeus's compact daily morning briefing for Duy, focused on personal/life admin. Use the authoritative current dated task and planning sources in /vault/Tasks. Report fixed commitments, due-today tasks, the assigned review block, Top 3, and the weekday Pomodoro schedule (weekends: Investment Portfolio Review, no company review or Pomodoro schedule). Exclude stocks/news/horoscope/filler.\n\nCritical family rule: when a due-today task says Sea Star daycare is closed, Victoria stays home. Do NOT include or infer any “Pick up Victoria” / pickup-transition reminder that day. Do not refer to exercise as being before Victoria pickup that day.\n\nOutput concise plaintext suitable for Telegram. Do not fabricate events.",
+      "prompt": "Prepare Zeus's compact daily morning briefing for Duy, focused on personal/life admin. Use the authoritative current dated task and planning sources in /vault/Tasks. Report fixed commitments, due-today tasks, the assigned review block (Company Review on weekdays; Investment Portfolio Review on weekends), and Top 3. Exclude stocks/news/horoscope/filler.\n\nCritical family rule: when a due-today task says Sea Star daycare is closed, Victoria stays home. Do NOT include or infer any “Pick up Victoria” / pickup-transition reminder that day. Do not refer to exercise as being before Victoria pickup that day.\n\nOutput concise plaintext suitable for Telegram. Do not fabricate events.\n\nNOTE-TAKING TEMPLATE — include the following 'Morning Intention (1 Minute)' reflection block for Duy to review while taking his morning notes (do not answer it yourself):\n- Control Focus: What is the main thing within my control today?",
       "skills": [
         "obsidian"
       ],
@@ -22,15 +22,15 @@
       "schedule_display": "15 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 103
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-08-21T06:15:00-04:00",
-      "last_run_at": "2026-08-20T06:17:05.114403-04:00",
+      "next_run_at": "2026-08-22T06:15:00-04:00",
+      "last_run_at": "2026-08-21T06:16:44.520320-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -105,7 +105,7 @@
     {
       "id": "b83af24484d0",
       "name": "Daily Evening Briefing - Task Status",
-      "prompt": "You are preparing Zeus's Daily Evening Briefing for Duy at 9:00PM Vancouver/EDT time.\n\nPurpose: tomorrow builder + task status. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse America/Toronto local date/time unless active travel context says otherwise.\n\nGather:\n1. Read today's `/vault/Tasks/planning/YYYY-MM-DD.md` if it exists.\n2. Generate tomorrow's plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py --tomorrow`.\n3. Read tomorrow's `/vault/Tasks/planning/YYYY-MM-DD.md`.\n4. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `done` as completed, `sent` as sent but not completed, `deleted` as dismissed.\n5. Read `/vault/Tasks/tasks/*.md` directly for pending/in_progress tasks due tomorrow or in the next 7 days. Exclude completed/done/cancelled/canceled.\n6. Optionally read Catthew latest output from `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` for family/Victoria fixed items.\n\nHard schedule constraints to preserve:\n- Before 9:00 AM: baby/family, no work.\n- 10:00–10:30 AM: brunch protected.\n- 2:35–2:45 PM: pickup transition.\n- Around 2:45 PM: pick up Victoria / family transition.\n- Deep work only between 9:00 AM and 2:45 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg. Weekends: no Company Review; use Investment Portfolio Review instead.\n- Weekends: do not include Pomodoro Schedule in the morning briefing, and Zeus schedule-reminder scripts stay silent. Show only Fixed, Today Tasks, Review Block, Top 3, Decisions if needed.\n\nOutput compact Telegram-readable plaintext:\n\nTomorrow Prep — YYYY-MM-DD\n\nReview Block\n- 11:45–12:15 — [Company Review on weekdays; Investment Portfolio Review on weekends]\n\nCarry Forward?\n- [unfinished from today only if genuinely still pending/sent]\n\nCandidate Top 3\n1. ...\n2. ...\n3. ...\n\nAdmin / Finance Batch\n- ...\n\nNo-Date Triage\n- [max 3: schedule / backlog / delete?]\n\nNeed Duy Decision\n- [omit if none]\n\nRules:\n- Do not shame or dump backlog.\n- Max 3 candidate priorities.\n- Ask for decisions only when necessary.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- Unfinished deep work should be rescheduled into tomorrow's realistic blocks, not repeated endlessly.",
+      "prompt": "You are preparing Zeus's Daily Evening Briefing for Duy at 9:00PM Vancouver/EDT time.\n\nPurpose: tomorrow builder + task status. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse America/Toronto local date/time unless active travel context says otherwise.\n\nGather:\n1. Read today's `/vault/Tasks/planning/YYYY-MM-DD.md` if it exists.\n2. Generate tomorrow's plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py --tomorrow`.\n3. Read tomorrow's `/vault/Tasks/planning/YYYY-MM-DD.md`.\n4. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `done` as completed, `sent` as sent but not completed, `deleted` as dismissed.\n5. Read `/vault/Tasks/tasks/*.md` directly for pending/in_progress tasks due tomorrow or in the next 7 days. Exclude completed/done/cancelled/canceled.\n6. Optionally read Catthew latest output from `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` for family/Victoria fixed items.\n\nHard schedule constraints to preserve:\n- Before 9:00 AM: baby/family, no work.\n- 10:00–10:30 AM: brunch protected.\n- 3:35–3:45 PM: pickup transition.\n- Around 3:45 PM: pick up Victoria / family transition.\n- No fixed deep-work / Pomodoro blocks; work flexibly between 10:30 AM and 3:35 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg. Weekends: no Company Review; use Investment Portfolio Review instead.\n- Weekends: do not include Pomodoro Schedule in the morning briefing, and Zeus schedule-reminder scripts stay silent. Show only Fixed, Today Tasks, Review Block, Top 3, Decisions if needed.\n\nOutput compact Telegram-readable plaintext:\n\nTomorrow Prep — YYYY-MM-DD\n\nReview Block\n- 11:45–12:15 — [Company Review on weekdays; Investment Portfolio Review on weekends]\n\nCarry Forward?\n- [unfinished from today only if genuinely still pending/sent]\n\nCandidate Top 3\n1. ...\n2. ...\n3. ...\n\nAdmin / Finance Batch\n- ...\n\nNo-Date Triage\n- [max 3: schedule / backlog / delete?]\n\nNeed Duy Decision\n- [omit if none]\n\nRules:\n- Do not shame or dump backlog.\n- Max 3 candidate priorities.\n- Ask for decisions only when necessary.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- Unfinished deep work should be rescheduled into tomorrow's realistic blocks, not repeated endlessly.\n\nNOTE-TAKING TEMPLATE — include the following 'Evening Audit & Highlights (3–5 Minutes)' reflection block for Duy to review while taking his evening notes (do not answer it yourself):\n- Stoic Audit: Where did I fall short or react poorly today?\n- Actionable Fix: How will I handle that better next time?\n- Daily Highlight: What was the single best moment or win of the day?\n- Gratitude Anchor: What is one specific thing/person I am grateful for today?",
       "skills": [
         "obsidian"
       ],
@@ -124,15 +124,15 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 101
+        "completed": 102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-08-21T21:00:00-04:00",
-      "last_run_at": "2026-08-20T21:04:10.620753-04:00",
+      "next_run_at": "2026-08-22T21:00:00-04:00",
+      "last_run_at": "2026-08-21T21:01:35.059235-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -177,15 +177,15 @@
       "schedule_display": "*/15 8-22 * * *",
       "repeat": {
         "times": null,
-        "completed": 2042
+        "completed": 2102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T19:06:33.209615-07:00",
-      "next_run_at": "2026-08-21T08:00:00-04:00",
-      "last_run_at": "2026-08-20T22:45:43.996809-04:00",
+      "next_run_at": "2026-08-22T08:00:00-04:00",
+      "last_run_at": "2026-08-21T22:45:39.426558-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -227,15 +227,15 @@
       "schedule_display": "*/15 8-22 * * *",
       "repeat": {
         "times": null,
-        "completed": 2037
+        "completed": 2097
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T20:24:52.039837-07:00",
-      "next_run_at": "2026-08-21T08:00:00-04:00",
-      "last_run_at": "2026-08-20T22:45:43.986842-04:00",
+      "next_run_at": "2026-08-22T08:00:00-04:00",
+      "last_run_at": "2026-08-21T22:45:39.382228-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -277,15 +277,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 3026
+        "completed": 3122
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-20T12:00:09.338658-07:00",
-      "next_run_at": "2026-08-21T08:00:00-04:00",
-      "last_run_at": "2026-08-20T23:50:50.071650-04:00",
+      "next_run_at": "2026-08-22T08:00:00-04:00",
+      "last_run_at": "2026-08-21T23:50:39.244261-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -354,5 +354,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-20T23:50:50.072358-04:00"
+  "updated_at": "2026-08-21T23:50:39.244719-04:00"
 }

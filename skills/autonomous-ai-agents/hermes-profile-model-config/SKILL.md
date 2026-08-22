@@ -181,6 +181,39 @@ for m in json.load(sys.stdin).get('data', []):
 - API key in env
 - Endpoint configurable via `model.base_url`
 
+## Auditing current model config across all profiles
+
+When the user asks which model/provider each profile uses (not switching), READ
+each `config.yaml` — `hermes status` / `hermes -p <p> status` only print the
+default model and hide the auxiliary/vision slot. Parse the YAML directly and
+build a comparison table. Reusable audit script + output-flagging for cosmetic
+`name:` labels and `max_output_tokens` divergence: see
+`references/audit-and-availability-check.md`.
+
+Key points when reporting an audit:
+- Always report `model.default` as the ACTIVE model, never `model.name`.
+- Flag when `model.name` (a cosmetic display label, e.g. `gpt-5.6-luna`) differs
+  from `model.default` (e.g. `tencent/hy3:free`) — the label is decorative.
+- Flag per-profile `max_output_tokens` divergence on the same `model.default`;
+  it silently changes reply-length caps.
+- Note where auxiliary/vision sub-models are pinned to a different provider than
+  the main model (e.g. `openai-codex gpt-5.5` for session_search while main is
+  `nous` `hy3:free`).
+
+## Checking model existence / free-tier on a provider
+
+- `web_search`/`web_extract` require FIRECRAWL_API_KEY (absent → both fail).
+- Provider `/v1/models` endpoints may be Cloudflare-blocked.
+- Fallback when both are down: the bundled catalog at
+  `~/.hermes/hermes-agent/website/static/api/model-catalog.json` answers
+  "does model ID <X> exist on provider <Y>?" — see the parse recipe in
+  `references/audit-and-availability-check.md`.
+- **The catalog does NOT encode Nous free-tier gating** (resolved live via Nous
+  Portal pricing, per the manifest's own `nous.metadata.note`). A model present
+  in the catalog is not necessarily free; `description:"free"` only appears on
+  some `openrouter` entries. "Is <X> free on Nous?" needs a live Portal check,
+  not the catalog.
+
 ## Verification standard
 
 Before declaring success:
@@ -207,7 +240,18 @@ Before declaring success:
 
 8. **Profile with .env but no config.yaml falls back to main token.** This is a silent failure mode — every profile should have its own `config.yaml`.
 
+9. **Cosmetic `model.name` label is NOT the active model.** `model.name: gpt-5.6-luna` while `model.default: tencent/hy3:free` means the profile runs hy3; the `name` is only a display label. Audit/report on `model.default`. Flag any `name != default`.
+
+10. **Catalog presence ≠ free on Nous.** The bundled `model-catalog.json` only proves a model ID exists on a provider. Nous free-tier gating is resolved live via Portal pricing and is NOT in the manifest. "Is <X> free on Nous?" requires a live check, not a catalog grep. (A `description:"free"` field only appears on some `openrouter` entries.)
+
+11. **Web/provider model-discovery can be unavailable.** With no `FIRECRAWL_API_KEY`, both `web_search` and `web_extract` fail; `hermes model` is interactive-only (no TTY in agent context). When the user asks "is <model> available/free on <provider>", fall back to the bundled catalog JSON parse (see `references/audit-and-availability-check.md`) for existence, and clearly state the free-tier limit.
+
 ## Related skills
 
 - `hermes-telegram-multi-profile` — multi-profile setup, gateway management, token per profile
 - `hermes-agent` — general Hermes CLI and configuration reference
+
+## References
+
+- `references/nous-free-models.md` — full Nous free-model landscape, auth troubleshooting, verified curl discovery.
+- `references/audit-and-availability-check.md` — reusable audit script for per-profile model config (flags cosmetic `name:` label + `max_output_tokens` divergence) and the local-catalog fallback for model-existence checks when web/provider endpoints are down.

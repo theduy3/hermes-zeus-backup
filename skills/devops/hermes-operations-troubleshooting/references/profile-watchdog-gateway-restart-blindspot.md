@@ -1,0 +1,77 @@
+# Watchdog false-positive: live gateway running as `gateway restart` not seen
+
+## Symptom
+
+Profile watchdog reports `default gateway missing` (or `<profile>: gateway missing`)
+even though the gateway is visibly alive and serving traffic.
+
+Root cause in the observed incident (2026-08-21): the live default gateway was
+running as `hermes gateway restart` (a restart-triggered promotion), but the
+watchdog's `all_gateway_pids()` scanner only matched these cmdline shapes:
+
+- `python3 .../hermes gateway run`
+- `hermes gateway run`
+- `python -m hermes_cli.main ... gateway run`
+
+`gateway restart` was NOT in any shape, so the scanner returned zero default
+gateways and the watchdog emitted a false "missing" alert. The real gateway
+(PID 2387703) was up, Telegram-connected (polling), and serving the user's chat.
+
+The entrypoint's default supervisor loop was harmlessly spinning at the same
+time: every 10s it ran `hermes gateway run`, saw the singleton lock held by the
+live `gateway restart` PID, printed `Another gateway instance is already
+running (PID ...)`, and retried. That loop is benign — it does NOT mean the
+default gateway is down.
+
+## Verification (before "fixing" by killing anything)
+
+1. Confirm live gateway procs and their HERMES_HOME:
+   ```bash
+   for pid in $(ls /proc | grep -E '^[0-9]+$'); do
+     c=$(tr '\0' ' ' < /proc/$pid/cmdline 2>/dev/null)
+     case "$c" in *"gateway run"*|*"gateway restart"*)
+       h=$(tr '\0' '\n' < /proc/$pid/environ 2>/dev/null | grep -x 'HERMES_HOME=/home/hermes/.hermes')
+       [ -n "$h" ] && echo "DEFAULT GW PID $pid: $c";;
+     esac
+   done
+   ```
+2. Confirm it is actually connected, not just running cron in a degraded state:
+   ```bash
+   grep -iE "telegram connected|✓ telegram|Gateway running|response ready" \
+        /home/hermes/.hermes/logs/gateway.log | tail
+   ```
+3. Run the watchdog script itself and read its exit/printed problems:
+   ```bash
+   python3 /home/hermes/.hermes/scripts/profile_gateway_watchdog.py; echo "EXIT:$?"
+   ```
+
+If a real default `gateway run` adapter exists, is Telegram-connected, and is
+serving responses, but the watchdog still says "missing" → it is the scanner
+blind-spot, not a dead gateway.
+
+## Fix
+
+Patch `profile_gateway_watchdog.py` `all_gateway_pids()` so every gateway-shape
+match also accepts `gateway restart` (and the `-m hermes_cli.main ... gateway
+restart` module shape). After the edit, re-run the watchdog — it must print
+nothing and exit 0.
+
+Do NOT kill the live `gateway restart` process to "resolve" the alert. That
+drops the user's active chat and turns a false positive into a real outage.
+The correct repair is making the watchdog see the already-healthy process.
+
+## Why this happens
+
+`hermes gateway restart` is the normal path when a restart is requested (it
+stops the old adapter and starts a new one in-process, often leaving the
+process cmdline as `gateway restart` for the life of that process). The
+watchdog must treat `restart` and `run` as equivalent "live gateway" signals,
+just like the Docker hardening rule already says to match by
+`/proc/<pid>/environ` + HERMES_HOME rather than by argv alone.
+
+## Durable rule
+
+> A live gateway whose cmdline is `hermes gateway restart` is a healthy gateway.
+> The watchdog's process scanner must accept both `run` and `restart` as valid
+> gateway shapes. Never kill a live gateway to silence a "missing" watchdog
+> alert — verify liveness first, then fix the scanner.

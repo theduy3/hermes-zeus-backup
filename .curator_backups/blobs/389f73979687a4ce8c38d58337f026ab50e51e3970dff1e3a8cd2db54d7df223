@@ -1,0 +1,9 @@
+# CallMeBot reminder config — owned by hermes, mode 600.
+# USER is your Telegram @username (no API key needed for in-app voice calls).
+# CallMeBot must be authorized to contact this @username once (see setup note).
+USER=@REPLACE_WITH_YOUR_TELEGRAM_USERNAME
+
+# --- Optional: real PSTN phone call (needs a one-time API key) ---
+# Get KEY from the @CallMeBot_phone bot, then set USER to your +CC phonenumber
+# (e.g. +16045551234) to switch this script to a real cellular call.
+# CALLMEBOT_KEY=

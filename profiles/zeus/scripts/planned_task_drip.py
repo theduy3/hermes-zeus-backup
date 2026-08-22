@@ -188,7 +188,7 @@ def main() -> int:
     if win["kind"] == "summary":
         items = top3(plan)
         text = "Today’s Plan\n" + "\n".join(f"{i+1}. {x}" for i, x in enumerate(items))
-        text += "\n\nProtected: brunch 10:00–10:30; pickup transition 2:35–2:45."
+        text += "\n\nProtected: brunch 10:00–10:30; pickup transition 3:35–3:45."
         res = post_telegram(token, "sendMessage", {"chat_id": chat_id, "text": text})
         preg[key] = {"message_id": res.get("result", {}).get("message_id"), "sent_at": now.isoformat()}
         sent_any = True
@@ -200,7 +200,7 @@ def main() -> int:
         preg[key] = {"message_id": res.get("result", {}).get("message_id"), "sent_at": now.isoformat()}
         sent_any = True
     elif win["kind"] == "shutdown":
-        text = "Shutdown — 2:15–2:35\n☐ Mark completed tasks Done\n☐ Move unfinished tasks\n☐ Capture next actions\n☐ Stop by 2:35 for pickup transition"
+        text = "Shutdown — 3:35–3:45\n☐ Mark completed tasks Done\n☐ Move unfinished tasks\n☐ Capture next actions\n☐ Stop by 3:35 for pickup transition"
         res = post_telegram(token, "sendMessage", {"chat_id": chat_id, "text": text})
         preg[key] = {"message_id": res.get("result", {}).get("message_id"), "sent_at": now.isoformat()}
         sent_any = True

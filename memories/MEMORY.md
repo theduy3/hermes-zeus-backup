@@ -1,15 +1,19 @@
-Vault /vault writable. /vault/Inbox is an ingest queue processed by daily cron; use it only for notes meant to be filed/consumed. Keep durable operational artifacts outside Inbox (e.g. ~/.graphify, skills, or Tasks).
+Vault /vault writable. /vault/Inbox=ingest queue (daily cron); durable ops artifacts outside Inbox.
 §
-theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CHARLESBOURG/MAILY/RIVIERES/SS), Business HoldCo, Business Projects, Personal, FAMILY TRUST, Education, Job, Archive, Projects. Sort loose files here.
+theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, OptCo (CHARLESBOURG/MAILY/RIVIERES/SS), HoldCo, Business Projects, Personal, FAMILY TRUST, Education, Job, Archive, Projects.
 §
-Profiles: Telegram=default/zeus/thor/finance/catthew/charles/butter. Docker profile gateways hardened via venv/bin/hermes wrapper; supervisor ~/.hermes/scripts/profile_gateway_supervisor.sh; watchdog cron 96f28d228fb9.
+Profiles Telegram=default/zeus/thor/finance/catthew/charles/butter. GW: venv/bin/hermes wrapper + supervisor ~/.hermes/scripts/profile_gateway_supervisor.sh; watchdog cron 96f28d228fb9.
 §
-Hermes Docker venv: may lack pip — `python3 -m ensurepip --upgrade` then `python3 -m pip` (not bin/pip).
+Bluehost host hal-server-803171 (Alma9, ssh bluehost): Hermes ctr `hermes`, data vol hermes_hermes-data, vault /root/theduyvault. SSH key-only; fail2ban→iptables-multiport; firewalld masked; iptables-services. Keys: duynt1989@gmail.com (Mac), root@srv1300679 (old VPS 147.93.116.94). Docker venv: ensurepip then python3 -m pip.
 §
-cronjob tool = DEFAULT profile only; other profiles' jobs are at ~/.hermes/profiles/<p>/cron/jobs.json (edit directly or `hermes cron --profile <p>`). Provider-less cron jobs inherit the profile default provider (openai-codex), so null provider does NOT avoid a Codex-credential block — pin provider explicitly.
+cronjob tool=DEFAULT only; other profiles: ~/.hermes/profiles/<p>/cron/jobs.json or `hermes cron --profile <p>`. Null provider still inherits openai-codex — pin provider explicitly.
 §
-Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-knowledge-base. Agents must read agent_rules.md/search it before personal-context answers or substantial writes; persistent memory is routing only. Raw cross-device/newsletter captures stay in /vault/Inbox→theduyvault archive; Life OS receives only curated current, source-linked context.
+Life OS SoT: ~/.hermes/projects/life-os/life-knowledge-base (read agent_rules.md before personal writes). Memory=routing only. Raw captures: /vault/Inbox→archive; Life OS=curated sourced only.
 §
-config.yaml and .env are write-PROTECTED from patch/write_file tools (security guards reject them). For config.yaml use `hermes config set <key> <value>` (nested keys work, e.g. secrets.command.enabled). For .env edits use terminal python. For security-sensitive credential/env changes (token moves, encryption setup) wait for explicit approval — do NOT proceed on clarify-timeout best-judgment; user stopped an in-flight credential move once.
+config.yaml/.env write-protected from patch/write_file. config: `hermes config set`. .env: terminal python. Credential/encryption changes need explicit approval (not clarify-timeout).
 §
-Orcarouter: free models only (qwen3.8-27b-free). reMarkable: SamMorrowDrums cloud MCP wired into ALL profiles (read-only, token registered, cloud-connected via ~/.rmapi). Its image/canvas/OCR tools need a vision model; hy3:free is text-only and cannot view reMarkable images.
+Orcarouter: free only (qwen3.8-27b-free). reMarkable MCP all profiles read-only (~/.rmapi); image/OCR needs vision (hy3:free text-only).
+§
+Vault Graphify MCP scope: default only loads all 4 (vault/core/sources/daily); named bots ≤1 (usually vault-core); thor/wiki 0. Skill: multi-profile-mcp-scoping.
+§
+Graphify vault MCP policy: only default loads all 4 vault graphs (vault/core/sources/daily); named profile bots keep 0–1 (prefer vault-core for zeus/finance/butter/catthew/charles; thor/wiki=0). graphify-hermes stays disabled on default unless debugging.

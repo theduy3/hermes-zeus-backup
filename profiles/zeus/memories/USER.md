@@ -8,6 +8,6 @@ User prefers terse, commands-only responses. Skip explanations, give just the co
 §
 Profiles: Telegram default/zeus/alan/mira/turing/thor/catthew/finance; Discord 3r/charlesbourg/maily/ss. User IDs: Telegram 8446251233, Discord 836783578552467467.
 §
-Zeus task cards: due-today only with Done buttons; Pomodoro schedule reminders are one-line plain time labels only (no tasks/checklists/buttons); fixed-time tasks stay fixed, not Pomodoro; Duy moves overdue tasks himself. Wants major US stock earnings reminders refreshed quarterly.
+Zeus task cards: due-today only with Done buttons; daily schedule reminders (exercise/brunch/company review/protein/pickup transition) are one-line plain time labels only (no tasks/checklists/buttons); fixed-time tasks stay fixed; Duy moved the recurring pickup to 3:45 PM and deleted all fixed Pomodoro/deep-work blocks. Wants major US stock earnings reminders refreshed quarterly.
 §
 Weekend: no Company Review or Pomodoro schedule; use Investment Portfolio Review.

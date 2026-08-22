@@ -201,79 +201,94 @@ def render_goals_block(goals: list[dict]) -> str:
 # --------------------------------------------------------------------------
 # Life OS writes (gated by habit confirmation)
 # --------------------------------------------------------------------------
-def run_thor(data: dict, dry: bool, habits_confirmed: bool) -> str | None:
+def _habit_entries(data: dict) -> list[dict]:
+    """Normalize habit marks into dated entries.
+
+    Preferred: data['habit_entries'] = [{'date':'2026-08-14','type':'exercise',
+    'note':'...'}, ...]. Falls back to legacy flat exercise/meditation objects,
+    which only carry a single data['date'] stamp (deprecated — loses per-day
+    granularity)."""
+    entries = data.get("habit_entries")
+    if entries:
+        return entries
+    out = []
     ex = data.get("exercise") or {}
-    if not ex:
-        return None
-    if ex.get("minutes") is None and not ex.get("note") and ex.get("done") is not True:
-        return None
-    if not habits_confirmed:
-        print("HABIT GATE: exercise unconfirmed — skipping Life OS write")
-        return "gated:exercise"
-    cmd = [
-        sys.executable,
-        str(LIFE_TRACKER / "thor_log.py"),
-        "--date", data["date"],
-        "--event-id", f"thor-rm-{data['date']}",
-    ]
-    if ex.get("minutes") is not None:
-        cmd += ["--exercise-minutes", str(int(ex["minutes"]))]
-    note_parts = []
-    if ex.get("done") is True:
-        note_parts.append("exercise done (remarkable planner grid)")
-    elif ex.get("done") is False:
-        note_parts.append("exercise not done (remarkable planner grid)")
-    if ex.get("note"):
-        note_parts.append(str(ex["note"]))
-    note_parts.append("source=remarkable-2026-planner")
-    cmd += ["--note", "; ".join(note_parts)]
-    if dry:
-        print("DRY", " ".join(cmd))
-        return "dry:thor"
-    r = subprocess.run(cmd, capture_output=True, text=True)
-    print(r.stdout)
-    if r.returncode != 0:
-        print(r.stderr, file=sys.stderr)
-        return f"thor_error:{r.returncode}"
-    return "thor_ok"
-
-
-def run_meditation(data: dict, dry: bool, habits_confirmed: bool, conf: str) -> str | None:
     med = data.get("meditation") or {}
-    if not med:
-        return None
-    if med.get("minutes") is None and not med.get("note") and med.get("done") is not True:
-        return None
+    if ex:
+        out.append({"date": data["date"], "type": "exercise",
+                    "done": ex.get("done"), "minutes": ex.get("minutes"),
+                    "note": ex.get("note")})
+    if med:
+        out.append({"date": data["date"], "type": "meditation",
+                    "done": med.get("done"), "minutes": med.get("minutes"),
+                    "note": med.get("note")})
+    return out
+
+
+def run_habit_entries(data: dict, dry: bool, habits_confirmed: bool, conf: str) -> dict:
+    """Write one Life OS health event PER dated habit mark.
+
+    Exercise -> thor_log.py (thor-rm-<date>). Meditation -> life_store
+    (med-rm-<date>). Each uses the mark's OWN date, never data['date'], so a
+    grid read on Aug 20 with marks on Aug 14/17/18/19 does not collapse them
+    all onto Aug 20. Gated until habits_confirmed (user verified on device)."""
+    results = {}
     if not habits_confirmed:
-        print("HABIT GATE: meditation unconfirmed — skipping Life OS write")
-        return "gated:meditation"
+        n = len(_habit_entries(data))
+        if n:
+            print(f"HABIT GATE: {n} habit mark(s) unconfirmed — skipping Life OS writes")
+        return {"gated": n}
     sys.path.insert(0, str(LIFE_TRACKER))
     import life_store as s  # noqa
-
-    payload = {"source": "remarkable-2026-planner"}
-    if med.get("minutes") is not None:
-        payload["meditation_minutes"] = int(med["minutes"])
-    if med.get("done") is True:
-        payload["meditation_done"] = True
-    elif med.get("done") is False:
-        payload["meditation_done"] = False
-    if med.get("note"):
-        payload["note"] = str(med["note"])
-    event_id = f"med-rm-{data['date']}"
     estimated = (conf == "low")
-    if dry:
-        print("DRY life_store health observation", event_id, payload, "estimated=", estimated)
-        return "dry:med"
-    try:
-        rec = s.write(
-            "health", "observation", data["date"], payload,
-            event_id=event_id, source_ids=("remarkable_planner",), estimated=estimated,
-        )
-        print(f"OK meditation event {rec['id']}")
-        return "med_ok"
-    except Exception as e:
-        print(f"meditation write error: {e}", file=sys.stderr)
-        return f"med_error:{e}"
+    for e in _habit_entries(data):
+        d = e.get("date") or data["date"]
+        typ = e.get("type")
+        note = e.get("note") or ""
+        note = f"{note}; source=remarkable-2026-planner" if note else "source=remarkable-2026-planner"
+        if typ == "exercise":
+            cmd = [sys.executable, str(LIFE_TRACKER / "thor_log.py"),
+                   "--date", d, "--event-id", f"thor-rm-{d}"]
+            if e.get("minutes") is not None:
+                cmd += ["--exercise-minutes", str(int(e["minutes"]))]
+            if e.get("done") is True:
+                note = "exercise done (remarkable planner grid); " + note
+            elif e.get("done") is False:
+                note = "exercise not done (remarkable planner grid); " + note
+            cmd += ["--note", note]
+            if dry:
+                print("DRY", " ".join(cmd)); results[d + ":exercise"] = "dry"
+                continue
+            r = subprocess.run(cmd, capture_output=True, text=True)
+            print(r.stdout)
+            results[d + ":exercise"] = "ok" if r.returncode == 0 else f"err:{r.returncode}"
+            if r.returncode != 0:
+                print(r.stderr, file=sys.stderr)
+        elif typ == "meditation":
+            payload = {"source": "remarkable-2026-planner"}
+            if e.get("minutes") is not None:
+                payload["meditation_minutes"] = int(e["minutes"])
+            if e.get("done") is True:
+                payload["meditation_done"] = True
+            elif e.get("done") is False:
+                payload["meditation_done"] = False
+            if e.get("note"):
+                payload["note"] = str(e["note"])
+            event_id = f"med-rm-{d}"
+            if dry:
+                print("DRY life_store", event_id, payload, "estimated=", estimated)
+                results[d + ":meditation"] = "dry"
+                continue
+            try:
+                rec = s.write("health", "observation", d, payload,
+                              event_id=event_id, source_ids=("remarkable_planner",),
+                              estimated=estimated)
+                print(f"OK meditation event {rec['id']}")
+                results[d + ":meditation"] = "ok"
+            except Exception as ex:
+                print(f"meditation write error: {ex}", file=sys.stderr)
+                results[d + ":meditation"] = f"err:{ex}"
+    return results
 
 
 def run_goals(data: dict, dry: bool) -> list[str]:
@@ -474,8 +489,7 @@ def main() -> int:
     created = [] if args.no_tasks else maybe_create_tasks(data, dry)
     life: dict = {}
     if not args.no_lifeos:
-        life["thor"] = run_thor(data, dry, habits_confirmed)
-        life["meditation"] = run_meditation(data, dry, habits_confirmed, overall_conf)
+        life["habits"] = run_habit_entries(data, dry, habits_confirmed, overall_conf)
         life["goals"] = run_goals(data, dry)
 
     STATE_DIR.mkdir(parents=True, exist_ok=True)

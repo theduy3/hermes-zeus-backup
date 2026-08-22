@@ -93,6 +93,30 @@ The briefing must not substitute future/high-priority backlog for due-today item
 
 The morning briefing prompt should read Today Tasks and include every item there.
 
+### Changing a recurring schedule anchor (multi-file cascade)
+
+Duy's time anchors (pickup, exercise window, brunch, company-review rotation, deep-work window) are **hardcoded in many files**, not configured in one place. Changing any anchor is a coordinated cascade — editing only one file leaves briefings, plans, and reminders disagreeing.
+
+Anchor-bearing files (full map + grep tokens in `references/schedule-anchor-cascade.md`):
+
+- `scripts/generate_daily_plan.py` (BLOCKS, constraints text, pickup line, exercise label)
+- `scripts/send_daily_schedule_reminder.py` (WINDOWS, fallback/transition text)
+- `scripts/planned_task_drip.py` (Protected summary, shutdown text)
+- `cron/jobs.json` (Morning + Evening briefing prompts)
+- `skills/note-taking/obsidian/SKILL.md` and its `references/time-blocked-planning.md`, `references/zeus-task-calendar-earnings-pomodoro.md`
+- `skills/devops/cron-job-patterns/SKILL.md` ("Approved Duy schedule constraints")
+- already-generated `/vault/Tasks/planning/YYYY-MM-DD.md` (including future-dated plans)
+
+Procedure:
+
+1. `grep -r` the old time tokens across `~/.hermes` and `/vault/Tasks/planning` (`2:45`, `2:35`, `Pick up Victoria`, `pickup transition`, `before Victoria pickup`, `Deep work only between`).
+2. **Clarify scope before editing** — when shifting one anchor, ask whether adjacent blocks shift too (e.g. pickup transition, or moving exercise to a different part of the day). Use `clarify` in a live session; cron runs cannot ask.
+3. Edit each source consistently. For cron prompts, patch `jobs.json` in place (see cron-job-patterns: "Editing a Job Prompt In-Place").
+4. Regenerate or hand-edit future-dated `/vault/Tasks/planning/*.md`.
+5. `python3 -m py_compile` the edited scripts and re-run the verification dry-runs.
+
+When an anchor moves, the pre-brunch deep-work/Pomodoro `BLOCKS` may need restructuring, not just relabeling — Duy has moved exercise to a morning window after daycare drop-off while keeping pickup in the afternoon. Treat `BLOCKS` as negotiable.
+
 ## Verification checklist
 
 After changes, run the relevant dry-runs/compiles:
@@ -117,3 +141,4 @@ Expected:
 ## Session-specific detail
 
 See `references/zeus-task-event-reminder-taxonomy.md` for the concrete corrections that led to this skill.
+See `references/schedule-anchor-cascade.md` for the full file map + grep tokens when Duy changes a recurring time anchor (pickup, exercise, brunch, etc.).

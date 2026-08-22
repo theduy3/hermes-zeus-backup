@@ -6,17 +6,13 @@ Use this when working on Duy's theduyvault Tasks, daily planning notes, task-car
 
 - Before 9:00 AM: baby/family; no normal work task cards.
 - 9:00–9:10: daily setup / top priorities.
-- 9:10–10:00: Deep Work 1.
+- 9:00–10:00: Exercise (morning, after dropping Victoria at daycare).
 - 10:00–10:30: brunch; protected.
-- 10:30–11:45: Deep Work 2.
 - 11:45–12:15: rotating company review.
-- 12:15–12:45: admin / finance batch.
-- 12:45–1:00: buffer.
-- 1:00–2:15: Deep Work 3.
-- 2:15–2:35: shutdown / mark Done / reschedule.
-- 2:35–2:45: pickup transition; stop work.
-- Around 2:45: pick up Victoria / family transition.
-- After 2:45: family-first; only urgent fixed reminders or evening planning.
+- 12:15–12:40: admin / finance batch.
+- 3:35–3:45: pickup transition; stop work.
+- Around 3:45: pick up Victoria / family transition.
+- After 3:45: family-first; only urgent fixed reminders or evening planning.
 
 ## Company review rotation
 

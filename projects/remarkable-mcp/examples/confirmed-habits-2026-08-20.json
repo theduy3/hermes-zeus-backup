@@ -1,0 +1,20 @@
+{
+  "date": "2026-08-20",
+  "source_document": "2026 Planner",
+  "confidence": "low",
+  "pages": [
+    {"page": 963, "role": "exercise_grid", "text": "X marks confirmed on device: Aug 14, 17, 18, 19 (exercise)", "confidence": "low"},
+    {"page": 964, "role": "meditation_grid", "text": "X mark confirmed on device: Aug 20 (meditation)", "confidence": "low"}
+  ],
+  "tasks": [],
+  "goals": [],
+  "habit_entries": [
+    {"date": "2026-08-14", "type": "exercise", "done": true, "note": "X mark on p963 (confirmed on device)"},
+    {"date": "2026-08-17", "type": "exercise", "done": true, "note": "X mark on p963 (confirmed on device)"},
+    {"date": "2026-08-18", "type": "exercise", "done": true, "note": "X mark on p963 (confirmed on device)"},
+    {"date": "2026-08-19", "type": "exercise", "done": true, "note": "X mark on p963 (confirmed on device)"},
+    {"date": "2026-08-20", "type": "meditation", "done": true, "note": "X mark on p964 (confirmed on device)"}
+  ],
+  "capture_pngs": false,
+  "habits_confirmed": true
+}

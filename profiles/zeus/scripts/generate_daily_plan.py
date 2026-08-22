@@ -4,7 +4,7 @@
 Writes /vault/Tasks/planning/YYYY-MM-DD.md using the approved schedule:
 - no work before 9AM
 - brunch 10:00-10:30
-- pickup transition 2:35-2:45, Victoria/family after 2:45
+- pickup transition 3:35-3:45, Victoria/family after 3:45
 - rotating company review: SalonX Mon, SS Tue, Rivieres Wed, Maily Thu, Charlesbourg Fri
 - weekends: no company review; use Investment Portfolio Review instead
 """
@@ -29,16 +29,7 @@ COMPANY_BY_WEEKDAY = {
     4: ("Ongles Charlesbourg", "charlesbourg"),
 }
 
-BLOCKS = [
-    ("9:10–10:00", "Deep Work 1", "deep_work", 50),
-    ("10:00–10:30", "Brunch", "protected", 30),
-    ("10:30–11:45", "Deep Work 2", "deep_work", 75),
-    ("11:45–12:15", "Company Review", "company_review", 30),
-    ("12:15–12:45", "Admin / Finance Batch", "admin_batch", 30),
-    ("12:45–1:00", "Buffer", "protected", 15),
-    ("1:00–2:15", "Deep Work 3", "deep_work", 75),
-    ("2:15–2:35", "Shutdown", "shutdown", 20),
-]
+# Time blocks are no longer hardcoded; generate_plan() emits a lightweight skeleton.
 
 @dataclass
 class Task:
@@ -228,7 +219,7 @@ def generate_plan(day: date, write: bool = True) -> str:
     review_related = [t for t in tasks if t.company == review_slug and not t.specific_time]
     timed_today = [t for t in sorted(tasks, key=priority_key) if (t.specific_time or t.kind == "event") and t.sort_due == day]
     today_tasks = [t for t in sorted(tasks, key=priority_key) if t.kind == "task" and t.due and t.sort_due == day and not t.specific_time]
-    # Pomodoro reminders should not pull overdue tasks; Duy moves overdue items himself while planning.
+    # Schedule reminders should not pull overdue tasks; Duy moves overdue items himself while planning.
     schedulable = lambda t: t.kind == "task" and bool(t.due) and not t.specific_time and t.sort_due >= day
     top3 = pick(today_tasks or tasks, lambda t: schedulable(t) and t.priority in {"urgent", "high", "normal"} and t.time_block != "family", 180, used, 3)
     p1 = pick(tasks, lambda t: schedulable(t) and t.time_block == "deep_work" and t.energy == "high", 25, used, 1)
@@ -257,20 +248,20 @@ def generate_plan(day: date, write: bool = True) -> str:
         lines += [
             "- Weekend is family-first; no work schedule blocks.",
             "- Specific-time events/tasks stay fixed.",
-            "- 2:45 PM onward — Victoria / family; only urgent fixed reminders.",
+            "- 3:45 PM onward — Victoria / family; only urgent fixed reminders.",
         ]
     else:
         lines += [
-            "- 25-minute Pomodoro reminders for work blocks.",
-            "- Specific-time events/tasks stay fixed; they are not fed into Pomodoro reminders.",
-            "- 2:35–2:45 PM — pickup transition; stop work.",
-            "- 2:45 PM onward — Victoria / family; only urgent fixed reminders.",
+            "- No fixed deep-work / Pomodoro blocks; work flexibly between 10:30 AM and 3:35 PM.",
+            "- Specific-time events/tasks stay fixed.",
+            "- 3:35–3:45 PM — pickup transition; stop work.",
+            "- 3:45 PM onward — Victoria / family; only urgent fixed reminders.",
         ]
     lines += ["", "## Fixed"]
     # Victoria pickup is a weekday handoff, except when Sea Star is closed and
     # Victoria stays home. Weekends also do not invent a pickup appointment.
     if day.weekday() < 5 and not daycare_closed:
-        lines += ["- 2:45 PM — Pick up Victoria / family transition"]
+        lines += ["- 3:45 PM — Pick up Victoria / family transition"]
     lines += [md_task(t) for t in timed_today] if timed_today else []
     lines += ["", "## Today Tasks"]
     lines += [md_task(t) for t in today_tasks] or ["- None"]
@@ -291,15 +282,8 @@ def generate_plan(day: date, write: bool = True) -> str:
             (PLAN_DIR / f"{day.isoformat()}.md").write_text(content, encoding="utf-8")
         return content
 
-    lines += ["", "## 9:00–9:05 Daily Setup", "- [ ] Confirm Top 3 and fixed appointments", ""]
-    lines += ["## 9:05–9:30 Pomodoro 1 — Deep Work"] + ([md_task(t) for t in p1] or ["- [ ] Reserve for highest-energy task"])
-    lines += ["", "## 9:30–9:35 Break", "- [ ] Stand up / water / reset", ""]
-    lines += ["## 9:35–10:00 Pomodoro 2 — Deep Work"] + ([md_task(t) for t in p2] or ["- [ ] Continue deep work"])
-    lines += ["", "## 10:00–10:30 Brunch", "Protected.", ""]
-    lines += ["## 10:30–10:55 Pomodoro 3 — Deep Work"] + ([md_task(t) for t in p3] or ["- [ ] Continue priority deep work"])
-    lines += ["", "## 10:55–11:00 Break", "- [ ] Stand up / reset", ""]
-    lines += ["## 11:00–11:25 Pomodoro 4 — Deep Work"] + ([md_task(t) for t in p4] or ["- [ ] Continue priority deep work"])
-    lines += ["", "## 11:25–11:45 Buffer / Messages", f"- [ ] Messages / reset / prepare {review_label.lower()}", ""]
+    lines += ["", "## 9:00–10:00 Exercise", "Morning block — after dropping Victoria at daycare.", ""]
+    lines += ["## 10:00–10:30 Brunch", "Protected.", ""]
     lines += [f"## 11:45–12:15 {review_label}", f"Focus: {review_target}", "", "Checklist:"]
     if review_label == "Investment Portfolio Review":
         lines += ["- [ ] Review portfolio allocation / concentration", "- [ ] Check watchlist and earnings dates", "- [ ] Review macro / rates / market notes", "- [ ] Note any cash needs or rebalance candidates", "- [ ] Pick one follow-up action if needed."]
@@ -307,13 +291,9 @@ def generate_plan(day: date, write: bool = True) -> str:
         lines += ["- [ ] Cash / revenue abnormal?", "- [ ] Staff / schedule issue?", "- [ ] Customer reviews / complaints?", "- [ ] Supplies / equipment / vendor / software?", "- [ ] Pick one follow-up action if needed."]
     if review_related:
         lines += ["", "Related tasks:"] + [md_task(t) for t in review_related[:5]]
-    lines += ["", "## 12:15–12:40 Pomodoro 5 — Admin / Finance"] + ([md_task(t) for t in p5] or ["- [ ] Process calls/payments/vendors"])
-    lines += ["", "## 12:40–1:00 Buffer / Reset", "- [ ] Messages / reset", ""]
-    lines += ["## 1:00–1:25 Pomodoro 6 — Deep Work"] + ([md_task(t) for t in p6] or ["- [ ] Continue priority work"])
-    lines += ["", "## 1:25–1:30 Break", "- [ ] Stand up / reset", ""]
-    lines += ["## 1:30–1:55 Pomodoro 7 — Deep Work / Review"] + ([md_task(t) for t in p7] or ["- [ ] Finish one clear next step"])
-    shutdown_label = "- [ ] Exercise / family transition" if daycare_closed else "- [ ] Exercise before Victoria pickup"
-    lines += ["", "## 2:15–2:35 Exercise + Shutdown", shutdown_label, "- [ ] Mark completed tasks Done", "- [ ] Move unfinished tasks", "- [ ] Stop by 2:35", ""]
+    if not daycare_closed:
+        lines += ["", "## 3:35–3:45 Pickup Transition", "- [ ] Stop work; prepare to pick up Victoria", ""]
+        lines += ["## 3:45 PM — Pick up Victoria / family transition"]
     lines += ["## Tomorrow / Next 7 Days"] + ([md_task(t) for t in next7] or ["- None"])
     lines += ["", "## No-Date Triage — max 5"] + ([md_task(t) for t in no_date] or ["- None"])
     content = "\n".join(lines) + "\n"

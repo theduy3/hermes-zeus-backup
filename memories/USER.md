@@ -1,10 +1,8 @@
 New raw captures, including device/newsletter imports, go to /vault/Inbox; Life OS is the eventual current operating authority, while theduyvault remains raw capture, source evidence, research, and history.
 §
-Tasks/ideas/bugs remain authoritative in /vault/Tasks/{tasks,ideas,bugs}, not Apple Reminders.
-§
 User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
 §
-Lives Pacific time; child Victoria; owns nail salons, salon360, and real estate. Tracks stocks, horoscope, and Vancouver/Laval/Quebec weather.
+Lives Pacific time; child Victoria; owns nail salons, salon360, real estate. Telegram @username is @theduynguyen (case-sensitive — never guess @theduy). Tracks stocks, horoscope, Vancouver/Laval/Quebec weather.
 §
 User prefers terse, commands-first responses unless they ask for detail.
 §

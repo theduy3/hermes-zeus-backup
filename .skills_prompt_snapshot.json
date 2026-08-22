@@ -46,8 +46,8 @@
       7606
     ],
     "autonomous-ai-agents/hermes-profile-model-config/SKILL.md": [
-      1787270154447115004,
-      10636
+      1787346400148993436,
+      13859
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
       1787031466234675630,
@@ -94,8 +94,8 @@
       11646
     ],
     "devops/hermes-operations-troubleshooting/SKILL.md": [
-      1786658542221214102,
-      31939
+      1787346341490410240,
+      32968
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -120,6 +120,10 @@
     "devops/remarkable-mcp-integration/SKILL.md": [
       1787265946981524502,
       5706
+    ],
+    "devops/vps-host-ssh-hardening/SKILL.md": [
+      1787321619600704773,
+      6548
     ],
     "diagramming/DESCRIPTION.md": [
       1775843805114670348,
@@ -198,12 +202,20 @@
       16199
     ],
     "mcp/graphify-hermes-vault-integration/SKILL.md": [
-      1785095695430641433,
-      9908
+      1787325397518681580,
+      10419
     ],
     "mcp/external-mcp-integrations/SKILL.md": [
       1787251660452838729,
       4691
+    ],
+    "mcp/multi-profile-mcp-scoping/SKILL.md": [
+      1787325970002134150,
+      4347
+    ],
+    "mcp/multi-profile-mcp-footprint/SKILL.md": [
+      1787326499793433557,
+      3939
     ],
     "media/DESCRIPTION.md": [
       1775843805121513945,
@@ -422,12 +434,20 @@
       4827
     ],
     "productivity/remarkable-2026-planner/SKILL.md": [
-      1787271928778991758,
-      6209
+      1787286960018392261,
+      9204
     ],
     "productivity/remarkable-device-sync/SKILL.md": [
       1787262954589679366,
       5552
+    ],
+    "productivity/voice-call-reminders/SKILL.md": [
+      1787347162132449828,
+      5579
+    ],
+    "productivity/phone-call-reminder/SKILL.md": [
+      1787347866597124535,
+      4920
     ],
     "red-teaming/godmode/SKILL.md": [
       1778565357588786324,
@@ -924,6 +944,19 @@
       }
     },
     {
+      "skill_name": "vps-host-ssh-hardening",
+      "category": "devops",
+      "frontmatter_name": "vps-host-ssh-hardening",
+      "description": "Use when hardening SSH/brute-force on RHEL/Alma VPS hosts.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "webhook-subscriptions",
       "category": "devops",
       "frontmatter_name": "webhook-subscriptions",
@@ -1141,6 +1174,32 @@
       "category": "mcp",
       "frontmatter_name": "mcporter",
       "description": "Use the mcporter CLI to list, configure, auth, and call M...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "multi-profile-mcp-footprint",
+      "category": "mcp",
+      "frontmatter_name": "multi-profile-mcp-footprint",
+      "description": "Use when scoping heavy MCP across Hermes profiles.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "multi-profile-mcp-scoping",
+      "category": "mcp",
+      "frontmatter_name": "multi-profile-mcp-scoping",
+      "description": "Use when scoping MCP servers across Hermes profiles.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1631,6 +1690,19 @@
       }
     },
     {
+      "skill_name": "phone-call-reminder",
+      "category": "productivity",
+      "frontmatter_name": "phone-call-reminder",
+      "description": "Spoken Telegram call reminders via CallMeBot + Hermes cron.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "product-price-monitor",
       "category": "productivity",
       "frontmatter_name": "product-price-monitor",
@@ -1747,6 +1819,19 @@
       "category": "productivity",
       "frontmatter_name": "tui-widgets",
       "description": "Author live widget apps for the Hermes TUI dock.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "voice-call-reminders",
+      "category": "productivity",
+      "frontmatter_name": "voice-call-reminders",
+      "description": "Trigger a spoken call reminder via CallMeBot.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

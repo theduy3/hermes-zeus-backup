@@ -3,18 +3,21 @@
   "plan_path": "/vault/Tasks/planning/remarkable/2026-08-20.md",
   "tasks": [],
   "lifeos": {
-    "thor": "gated:exercise",
-    "meditation": "gated:meditation",
+    "habits": {
+      "2026-08-14:exercise": "ok",
+      "2026-08-17:exercise": "ok",
+      "2026-08-18:exercise": "ok",
+      "2026-08-19:exercise": "ok",
+      "2026-08-20:meditation": "ok"
+    },
     "goals": []
   },
   "pages_read": [
-    551,
-    552,
     963,
     964
   ],
   "confidence": "low",
-  "habits_confirmed": false,
+  "habits_confirmed": true,
   "dry_run": false,
-  "applied_at": "2026-08-21T00:16:33Z"
+  "applied_at": "2026-08-21T04:33:31Z"
 }
