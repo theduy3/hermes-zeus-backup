@@ -1,47 +1,78 @@
-import urllib.request, json, time, sys
+import urllib.request, json, ssl, time, sys
+from concurrent.futures import ThreadPoolExecutor
 
-TICKERS = {
-    "Mega-cap AI / Platforms": ["MSFT","AMZN","GOOG","META","AAPL"],
-    "AI Infrastructure / Cloud": ["CRM","DELL","PLTR","ORCL","CRWV","INFY","NBIS"],
-    "Consumer / Internet": ["TSLA","NFLX","MELI"],
-    "Semiconductors": ["ASML","AVGO","NVDA","AMD","SNDK","MU","TSM","INTC"],
-    "Data Centers / Power": ["BE","APLD","TE","PSIX","GLW","BW","PUMP"],
-    "Crypto Miners / Bitcoin Infrastructure": ["IREN","CORZ","RIOT","CLSK","BITF","BTDR","HIVE"],
-    "ETFs / Funds": ["VFV.TO","GLD","SMH"],
-    "Other / Unresolved": ["SPCX","RKLB","SEI","WYFI"],
-}
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.loads(r.read().decode())
+TICKERS = [
+ "MSFT","AMZN","GOOG","META","AAPL",
+ "CRM","DELL","PLTR","ORCL","CRWV","INFY","NBIS",
+ "TSLA","NFLX","MELI",
+ "HD","LOW","WMT","TGT",
+ "ASML","AVGO","NVDA","AMD","SNDK","MU","TSM","INTC",
+ "BE","APLD","TE","PSIX","GLW","BW","PUMP",
+ "IREN","CORZ","RIOT","CLSK","BITF","BTDR","HIVE",
+ "VFV.TO","GLD","SMH",
+ "SPCX","RKLB","SEI","WYFI",
+]
 
-all_t = [t for v in TICKERS.values() for t in v]
-data = {}
-# batch of 12
-batch = 12
-for i in range(0, len(all_t), batch):
-    grp = all_t[i:i+batch]
-    url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + ",".join(grp)
-    try:
-        j = fetch(url)
-        for q in j.get("quoteResponse",{}).get("result",[]):
-            sym = q.get("symbol")
-            data[sym] = {
-                "price": q.get("regularMarketPrice"),
-                "chg": q.get("regularMarketChangePercent"),
-                "fwdpe": q.get("forwardPE"),
-                "trailingpe": q.get("trailingPE"),
-                "mktcap": q.get("marketCap"),
-                "name": q.get("shortName"),
-                "time": q.get("regularMarketTime"),
-                "currency": q.get("currency"),
-            }
-    except Exception as e:
-        print(f"BATCH ERR {grp}: {e}", file=sys.stderr)
-    time.sleep(0.3)
+def fetch_one(t):
+    out = {"ticker": t}
+    # ---- chart for price + change ----
+    chart_url = f"https://query1.finance.yahoo.com/v8/finance/chart/{t}?range=5d&interval=1d"
+    chart_url2 = f"https://query2.finance.yahoo.com/v8/finance/chart/{t}?range=5d&interval=1d"
+    data = None
+    for url in (chart_url, chart_url2):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=15, context=ctx) as r:
+                data = json.load(r)
+            break
+        except Exception as e:
+            out["chart_err"] = str(e)
+    if data and data.get("chart",{}).get("result"):
+        try:
+            res = data["chart"]["result"][0]
+            ts = res["timestamp"]
+            closes = res["indicators"]["quote"][0]["close"]
+            valid = [(a,c) for a,c in zip(ts,closes) if c is not None]
+            last = valid[-1][1]
+            prev = valid[-2][1]
+            out["price"] = round(last,2)
+            out["chg_pct"] = round((last/prev-1)*100,2)
+            out["currency"] = res["meta"].get("currency")
+        except Exception as e:
+            out["chart_err"] = str(e)
+    # ---- quoteSummary for forward PE ----
+    qs_url = f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{t}?modules=summaryDetail,defaultKeyStatistics"
+    qs_url2 = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{t}?modules=summaryDetail,defaultKeyStatistics"
+    qdata = None
+    for url in (qs_url, qs_url2):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=15, context=ctx) as r:
+                qdata = json.load(r)
+            break
+        except Exception as e:
+            out["qs_err"] = str(e)
+    if qdata and qdata.get("quoteSummary",{}).get("result"):
+        try:
+            sd = qdata["quoteSummary"]["result"][0].get("summaryDetail",{})
+            fpe = sd.get("forwardPE",{})
+            out["fwd_pe"] = fpe.get("raw") if isinstance(fpe,dict) else None
+        except Exception as e:
+            out["qs_err"] = str(e)
+    return out
+
+results = []
+with ThreadPoolExecutor(max_workers=12) as ex:
+    results = list(ex.map(fetch_one, TICKERS))
 
 with open("/home/hermes/.hermes/projects/watchlist_data.json","w") as f:
-    json.dump(data, f, indent=2, default=str)
-print("OK fetched", len(data), "of", len(all_t))
-print("MISSING:", [t for t in all_t if t not in data])
+    json.dump(results, f, indent=2)
+
+# print compact summary
+for r in results:
+    print(f"{r['ticker']:8} price={r.get('price')} chg={r.get('chg_pct')} fwdPE={r.get('fwd_pe')} err={r.get('chart_err') or r.get('qs_err') or ''}")
+print("TOTAL", len(results))

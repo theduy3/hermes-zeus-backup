@@ -687,5 +687,17 @@
     "kind": "event",
     "status": "sent",
     "message_id": 915
+  },
+  "ac3e100f2dfac059": {
+    "id": "ac3e100f2dfac059",
+    "date": "2026-08-22",
+    "title": "Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym",
+    "text": "Victoria: Playgym every Saturday, 9:15 AM–11:45 AM, Roundhouse Community Centre, Parent and Tot Gym",
+    "source": "Household event today",
+    "due_date": "2026-08-22",
+    "line": 7,
+    "kind": "event",
+    "status": "sent",
+    "message_id": 949
   }
 }

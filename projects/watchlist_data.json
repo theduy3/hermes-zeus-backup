@@ -1,479 +1,289 @@
-{
-  "MSFT": {
-    "fwdpe": 24.98,
-    "price": 494.59,
-    "prev": 499.86,
-    "chg": -1.0542952026567516,
-    "hi52": 553.72,
-    "lo52": 349.2,
-    "time": 1786637128,
-    "cur": "USD",
-    "name": "Microsoft Corporation"
+[
+  {
+    "ticker": "MSFT",
+    "price": 483.24,
+    "chg_pct": 0.43,
+    "fwd_pe": 20.49948
   },
-  "AMZN": {
-    "fwdpe": 28.77,
-    "price": 265.87,
-    "prev": 272.26,
-    "chg": -2.347021229706893,
-    "hi52": 287.2,
-    "lo52": 196.0,
-    "time": 1786637129,
-    "cur": "USD",
-    "name": "Amazon.com, Inc."
+  {
+    "ticker": "AMZN",
+    "price": 258.63,
+    "chg_pct": -0.57,
+    "fwd_pe": 24.890984
   },
-  "GOOG": {
-    "fwdpe": 25.38,
-    "price": 343.55,
-    "prev": 356.62,
-    "chg": -3.6649655095059144,
-    "hi52": 404.47,
-    "lo52": 197.46,
-    "time": 1786637131,
-    "cur": "USD",
-    "name": "Alphabet Inc."
+  {
+    "ticker": "GOOG",
+    "price": 341.75,
+    "chg_pct": 1.05,
+    "fwd_pe": 23.07405
   },
-  "META": {
-    "fwdpe": 18.07,
-    "price": 585.9,
-    "prev": 589.9,
-    "chg": -0.6780810306831667,
-    "hi52": 796.25,
-    "lo52": 520.26,
-    "time": 1786637127,
-    "cur": "USD",
-    "name": "Meta Platforms, Inc."
+  {
+    "ticker": "META",
+    "price": 549.9,
+    "chg_pct": 0.75,
+    "fwd_pe": 15.845125
   },
-  "AAPL": {
-    "fwdpe": 33.01,
-    "price": 302.7,
-    "prev": 312.41,
-    "chg": -3.108095131397854,
-    "hi52": 344.57,
-    "lo52": 223.78,
-    "time": 1786637131,
-    "cur": "USD",
-    "name": "Apple Inc."
+  {
+    "ticker": "AAPL",
+    "price": 309.35,
+    "chg_pct": -0.63,
+    "fwd_pe": 32.43169
   },
-  "CRM": {
-    "fwdpe": 13.87,
-    "price": 191.91,
-    "prev": 186.77,
-    "chg": 2.7520479734432652,
-    "hi52": 269.11,
-    "lo52": 146.32,
-    "time": 1786637132,
-    "cur": "USD",
-    "name": "Salesforce, Inc."
+  {
+    "ticker": "CRM",
+    "price": 209.17,
+    "chg_pct": 1.82,
+    "fwd_pe": 13.479003
   },
-  "DELL": {
-    "fwdpe": 25.67,
-    "price": 498.51,
-    "prev": 437.65,
-    "chg": 13.906089340797445,
-    "hi52": 514.0,
-    "lo52": 110.22,
-    "time": 1786637128,
-    "cur": "USD",
-    "name": "Dell Technologies Inc."
+  {
+    "ticker": "DELL",
+    "price": 442.08,
+    "chg_pct": 1.68,
+    "fwd_pe": 19.771152
   },
-  "PLTR": {
-    "fwdpe": 89.86,
-    "price": 175.834,
-    "prev": 155.92,
-    "chg": 12.771934325295033,
-    "hi52": 207.52,
-    "lo52": 106.37,
-    "time": 1786637132,
-    "cur": "USD",
-    "name": "Palantir Technologies Inc."
+  {
+    "ticker": "PLTR",
+    "price": 179.94,
+    "chg_pct": 3.44,
+    "fwd_pe": 77.75339
   },
-  "ORCL": {
-    "fwdpe": 19.03,
-    "price": 154.48,
-    "prev": 143.47,
-    "chg": 7.674078204502677,
-    "hi52": 345.72,
-    "lo52": 114.5,
-    "time": 1786637132,
-    "cur": "USD",
-    "name": "Oracle Corporation"
+  {
+    "ticker": "ORCL",
+    "price": 146.47,
+    "chg_pct": 3.1,
+    "fwd_pe": 13.419222
   },
-  "CRWV": {
-    "fwdpe": null,
-    "price": 108.79,
-    "prev": 85.33,
-    "chg": 27.493261455525612,
-    "hi52": 153.2,
-    "lo52": 60.55,
-    "time": 1786637133,
-    "cur": "USD",
-    "name": "CoreWeave, Inc."
+  {
+    "ticker": "CRWV",
+    "price": 87.85,
+    "chg_pct": -2.13,
+    "fwd_pe": -47.070484
   },
-  "INFY": {
-    "fwdpe": 14.97,
-    "price": 12.215,
-    "prev": 12.36,
-    "chg": -1.1731391585760484,
-    "hi52": 30.0,
-    "lo52": 10.3,
-    "time": 1786637134,
-    "cur": "USD",
-    "name": "Infosys Limited"
+  {
+    "ticker": "INFY",
+    "price": 11.94,
+    "chg_pct": 0.93,
+    "fwd_pe": 14.064763
   },
-  "NBIS": {
-    "fwdpe": null,
-    "price": 257.55,
-    "prev": 189.88,
-    "chg": 35.63829787234044,
-    "hi52": 299.86,
-    "lo52": 62.01,
-    "time": 1786637133,
-    "cur": "USD",
-    "name": "Nebius Group N.V."
+  {
+    "ticker": "NBIS",
+    "price": 219.13,
+    "chg_pct": -0.45,
+    "fwd_pe": -73.104256
   },
-  "TSLA": {
-    "fwdpe": 169.43,
-    "price": 333.94,
-    "prev": 319.53,
-    "chg": 4.50974869339343,
-    "hi52": 498.83,
-    "lo52": 297.38,
-    "time": 1786637135,
-    "cur": "USD",
-    "name": "Tesla, Inc."
+  {
+    "ticker": "TSLA",
+    "price": 362.86,
+    "chg_pct": 5.14,
+    "fwd_pe": 168.10124
   },
-  "NFLX": {
-    "fwdpe": 21.42,
-    "price": 76.61,
-    "prev": 73.69,
-    "chg": 3.9625457999728617,
-    "hi52": 126.71,
-    "lo52": 65.08,
-    "time": 1786637136,
-    "cur": "USD",
-    "name": "Netflix, Inc."
+  {
+    "ticker": "NFLX",
+    "price": 79.59,
+    "chg_pct": -0.69,
+    "fwd_pe": 20.830116
   },
-  "MELI": {
-    "fwdpe": 43.41,
-    "price": 1829.03,
-    "prev": 1830.0,
-    "chg": -0.053005464480875814,
-    "hi52": 2548.5,
-    "lo52": 1495.0,
-    "time": 1786637101,
-    "cur": "USD",
-    "name": "MercadoLibre, Inc."
+  {
+    "ticker": "MELI",
+    "price": 1922.73,
+    "chg_pct": 0.04,
+    "fwd_pe": 33.897198
   },
-  "ASML": {
-    "fwdpe": 32.08,
-    "price": 1855.05,
-    "prev": 1704.37,
-    "chg": 8.840803346691157,
-    "hi52": 1999.96,
-    "lo52": 716.2,
-    "time": 1786637136,
-    "cur": "USD",
-    "name": "ASML Holding N.V. - New York Re"
+  {
+    "ticker": "HD",
+    "price": 335.61,
+    "chg_pct": 0.33,
+    "fwd_pe": 20.921282
   },
-  "AVGO": {
-    "fwdpe": 26.4,
-    "price": 422.53,
-    "prev": 420.57,
-    "chg": 0.4660341916922223,
-    "hi52": 495.0,
-    "lo52": 281.87,
-    "time": 1786637136,
-    "cur": "USD",
-    "name": "Broadcom Inc."
+  {
+    "ticker": "LOW",
+    "price": 216.09,
+    "chg_pct": -0.58,
+    "fwd_pe": 16.499361
   },
-  "NVDA": {
-    "fwdpe": 22.49,
-    "price": 224.807,
-    "prev": 218.99,
-    "chg": 2.6562856751449737,
-    "hi52": 236.54,
-    "lo52": 164.07,
-    "time": 1786637136,
-    "cur": "USD",
-    "name": "NVIDIA Corporation"
+  {
+    "ticker": "WMT",
+    "price": 103.7,
+    "chg_pct": -0.13,
+    "fwd_pe": 32.155037
   },
-  "AMD": {
-    "fwdpe": 43.48,
-    "price": 493.26,
-    "prev": 489.28,
-    "chg": 0.8134401569653406,
-    "hi52": 584.73,
-    "lo52": 149.22,
-    "time": 1786637137,
-    "cur": "USD",
-    "name": "Advanced Micro Devices, Inc."
+  {
+    "ticker": "TGT",
+    "price": 165.44,
+    "chg_pct": 4.54,
+    "fwd_pe": 17.439262
   },
-  "SNDK": {
-    "fwdpe": 7.25,
-    "price": 1544.28,
-    "prev": 1258.58,
-    "chg": 22.70018592381891,
-    "hi52": 2354.39,
-    "lo52": 42.82,
-    "time": 1786637138,
-    "cur": "USD",
-    "name": "Sandisk Corporation"
+  {
+    "ticker": "ASML",
+    "price": 1763.76,
+    "chg_pct": 0.77,
+    "fwd_pe": 29.195837
   },
-  "MU": {
-    "fwdpe": 6.34,
-    "price": 963.26,
-    "prev": 881.47,
-    "chg": 9.27881833754977,
-    "hi52": 1255.0,
-    "lo52": 113.46,
-    "time": 1786637138,
-    "cur": "USD",
-    "name": "Micron Technology, Inc."
+  {
+    "ticker": "AVGO",
+    "price": 368.45,
+    "chg_pct": 1.21,
+    "fwd_pe": 18.890873
   },
-  "TSM": {
-    "fwdpe": 19.54,
-    "price": 433.28,
-    "prev": 418.2,
-    "chg": 3.605930176948825,
-    "hi52": 479.0,
-    "lo52": 223.7,
-    "time": 1786637137,
-    "cur": "USD",
-    "name": "Taiwan Semiconductor Manufactur"
+  {
+    "ticker": "NVDA",
+    "price": 214.72,
+    "chg_pct": -0.98,
+    "fwd_pe": 16.482347
   },
-  "INTC": {
-    "fwdpe": 60.57,
-    "price": 105.56,
-    "prev": 99.81,
-    "chg": 5.760945797014328,
-    "hi52": 142.35,
-    "lo52": 21.9,
-    "time": 1786637139,
-    "cur": "USD",
-    "name": "Intel Corporation"
+  {
+    "ticker": "AMD",
+    "price": 473.25,
+    "chg_pct": 0.81,
+    "fwd_pe": 30.559921
   },
-  "BE": {
-    "fwdpe": 69.08,
-    "price": 240.725,
-    "prev": 228.96,
-    "chg": 5.138452131376654,
-    "hi52": 351.28,
-    "lo52": 40.56,
-    "time": 1786637133,
-    "cur": "USD",
-    "name": "Bloom Energy Corporation"
+  {
+    "ticker": "SNDK",
+    "price": 1596.08,
+    "chg_pct": -0.28,
+    "fwd_pe": 6.029277
   },
-  "APLD": {
-    "fwdpe": null,
-    "price": 31.1,
-    "prev": 28.86,
-    "chg": 7.761607761607768,
-    "hi52": 50.725,
-    "lo52": 13.16,
-    "time": 1786637131,
-    "cur": "USD",
-    "name": "Applied Digital Corporation"
+  {
+    "ticker": "MU",
+    "price": 966.78,
+    "chg_pct": -0.77,
+    "fwd_pe": 6.236275
   },
-  "TE": {
-    "fwdpe": null,
-    "price": 4.945,
-    "prev": 5.55,
-    "chg": -10.900900900900892,
-    "hi52": 12.49,
-    "lo52": 1.2,
-    "time": 1786637137,
-    "cur": "USD",
-    "name": "T1 Energy Inc."
+  {
+    "ticker": "TSM",
+    "price": 418.95,
+    "chg_pct": 0.71,
+    "fwd_pe": 19.234417
   },
-  "PSIX": {
-    "fwdpe": 12.78,
-    "price": 40.87,
-    "prev": 33.02,
-    "chg": 23.773470623864306,
-    "hi52": 119.7,
-    "lo52": 25.28,
-    "time": 1786637113,
-    "cur": "USD",
-    "name": "Power Solutions International, "
+  {
+    "ticker": "INTC",
+    "price": 90.07,
+    "chg_pct": -2.24,
+    "fwd_pe": 44.14915
   },
-  "GLW": {
-    "fwdpe": 45.22,
-    "price": 165.73,
-    "prev": 157.18,
-    "chg": 5.439623361750848,
-    "hi52": 271.78,
-    "lo52": 63.37,
-    "time": 1786637140,
-    "cur": "USD",
-    "name": "Corning Incorporated"
+  {
+    "ticker": "BE",
+    "price": 201.45,
+    "chg_pct": -0.51,
+    "fwd_pe": 41.23705
   },
-  "BW": {
-    "fwdpe": 50.03,
-    "price": 9.445,
-    "prev": 9.38,
-    "chg": 0.6929637526652399,
-    "hi52": 22.03,
-    "lo52": 1.4,
-    "time": 1786637142,
-    "cur": "USD",
-    "name": "Babcock & Wilcox Enterprises, I"
+  {
+    "ticker": "APLD",
+    "price": 27.21,
+    "chg_pct": -5.03,
+    "fwd_pe": -108.84
   },
-  "PUMP": {
-    "fwdpe": 49.7,
-    "price": 11.595,
-    "prev": 10.95,
-    "chg": 5.8904109589041225,
-    "hi52": 18.5,
-    "lo52": 4.51,
-    "time": 1786637063,
-    "cur": "USD",
-    "name": "ProPetro Holding Corp."
+  {
+    "ticker": "TE",
+    "price": 4.42,
+    "chg_pct": 1.38,
+    "fwd_pe": 46.526318
   },
-  "IREN": {
-    "fwdpe": null,
-    "price": 45.53,
-    "prev": 37.93,
-    "chg": 20.03691009754812,
-    "hi52": 76.87,
-    "lo52": 17.22,
-    "time": 1786637141,
-    "cur": "USD",
-    "name": "IREN LIMITED"
+  {
+    "ticker": "PSIX",
+    "price": 36.43,
+    "chg_pct": 0.36,
+    "fwd_pe": 11.174847
   },
-  "CORZ": {
-    "fwdpe": 663.4,
-    "price": 20.29,
-    "prev": 21.05,
-    "chg": -3.6104513064133092,
-    "hi52": 30.46,
-    "lo52": 13.135,
-    "time": 1786637143,
-    "cur": "USD",
-    "name": "Core Scientific, Inc."
+  {
+    "ticker": "GLW",
+    "price": 149.84,
+    "chg_pct": -1.06,
+    "fwd_pe": 34.68133
   },
-  "RIOT": {
-    "fwdpe": null,
-    "price": 19.927,
-    "prev": 21.21,
-    "chg": -6.049033474776055,
-    "hi52": 30.32,
-    "lo52": 11.16,
-    "time": 1786637144,
-    "cur": "USD",
-    "name": "Riot Platforms, Inc."
+  {
+    "ticker": "BW",
+    "price": 8.28,
+    "chg_pct": -1.78,
+    "fwd_pe": 17.49308
   },
-  "CLSK": {
-    "fwdpe": null,
-    "price": 11.795,
-    "prev": 12.75,
-    "chg": -7.490196078431373,
-    "hi52": 23.61,
-    "lo52": 8.0,
-    "time": 1786637142,
-    "cur": "USD",
-    "name": "CleanSpark, Inc."
+  {
+    "ticker": "PUMP",
+    "price": 11.33,
+    "chg_pct": 0.0,
+    "fwd_pe": 27.619326
   },
-  "BITF": {
-    "fwdpe": null,
-    "yerr": "HTTP Error 404: Not Found"
+  {
+    "ticker": "IREN",
+    "price": 41.88,
+    "chg_pct": -1.69,
+    "fwd_pe": -41.741005
   },
-  "BTDR": {
-    "fwdpe": null,
-    "price": 8.92,
-    "prev": 10.52,
-    "chg": -15.209125475285168,
-    "hi52": 27.8,
-    "lo52": 6.916,
-    "time": 1786637145,
-    "cur": "USD",
-    "name": "Bitdeer Technologies Group"
+  {
+    "ticker": "CORZ",
+    "price": 17.81,
+    "chg_pct": -3.15,
+    "fwd_pe": 127.21428
   },
-  "HIVE": {
-    "fwdpe": null,
-    "price": 2.59,
-    "prev": 2.76,
-    "chg": -6.1594202898550705,
-    "hi52": 7.84,
-    "lo52": 1.73,
-    "time": 1786637146,
-    "cur": "USD",
-    "name": "HIVE Digital Technologies Ltd"
+  {
+    "ticker": "RIOT",
+    "price": 19.83,
+    "chg_pct": -5.48,
+    "fwd_pe": -21.206514
   },
-  "VFV.TO": {
-    "fwdpe": null,
-    "price": 192.41,
-    "prev": 191.62,
-    "chg": 0.4122742928713037,
-    "hi52": 194.21,
-    "lo52": 155.76,
-    "time": 1786637119,
-    "cur": "CAD",
-    "name": "VANGUARD SP 500 INDEX ETF"
+  {
+    "ticker": "CLSK",
+    "price": 11.98,
+    "chg_pct": -4.92,
+    "fwd_pe": -8.45645
   },
-  "GLD": {
-    "fwdpe": null,
-    "price": 399.89,
-    "prev": 389.67,
-    "chg": 2.6227320553288602,
-    "hi52": 509.7,
-    "lo52": 305.19,
-    "time": 1786637143,
-    "cur": "USD",
-    "name": "SPDR Gold Shares"
+  {
+    "ticker": "BITF",
+    "chart_err": "HTTP Error 404: Not Found",
+    "qs_err": "HTTP Error 404: Not Found"
   },
-  "SMH": {
-    "fwdpe": null,
-    "price": 594.84,
-    "prev": 571.48,
-    "chg": 4.087632113109822,
-    "hi52": 671.83,
-    "lo52": 281.15,
-    "time": 1786637143,
-    "cur": "USD",
-    "name": "VanEck Semiconductor ETF"
+  {
+    "ticker": "BTDR",
+    "price": 11.37,
+    "chg_pct": 9.01,
+    "fwd_pe": -24.326057
   },
-  "SPCX": {
-    "fwdpe": 60.71,
-    "price": 141.53,
-    "prev": 114.92,
-    "chg": 23.15523842673164,
-    "hi52": 225.64,
-    "lo52": 104.83,
-    "time": 1786637148,
-    "cur": "USD",
-    "name": "Space Exploration Technologies "
+  {
+    "ticker": "HIVE",
+    "price": 3.03,
+    "chg_pct": -3.19,
+    "fwd_pe": -14.428572
   },
-  "RKLB": {
-    "fwdpe": null,
-    "price": 81.43,
-    "prev": 75.67,
-    "chg": 7.611999471388932,
-    "hi52": 151.0,
-    "lo52": 37.57,
-    "time": 1786637148,
-    "cur": "USD",
-    "name": "Rocket Lab Corporation"
+  {
+    "ticker": "VFV.TO",
+    "price": 187.6,
+    "chg_pct": 0.28,
+    "fwd_pe": null
   },
-  "SEI": {
-    "fwdpe": 76.51,
-    "price": 61.35,
-    "prev": 57.01,
-    "chg": 7.612699526398884,
-    "hi52": 86.19,
-    "lo52": 24.57,
-    "time": 1786637143,
-    "cur": "USD",
-    "name": "Solaris Energy Infrastructure, "
+  {
+    "ticker": "GLD",
+    "price": 423.36,
+    "chg_pct": 1.95,
+    "fwd_pe": null
   },
-  "WYFI": {
-    "fwdpe": null,
-    "price": 29.63,
-    "prev": 24.71,
-    "chg": 19.910967219749082,
-    "hi52": 46.87,
-    "lo52": 10.51,
-    "time": 1786637120,
-    "cur": "USD",
-    "name": "WhiteFiber, Inc."
+  {
+    "ticker": "SMH",
+    "price": 560.42,
+    "chg_pct": -0.4,
+    "fwd_pe": null
+  },
+  {
+    "ticker": "SPCX",
+    "price": 136.97,
+    "chg_pct": 2.22,
+    "fwd_pe": 85.52714
+  },
+  {
+    "ticker": "RKLB",
+    "price": 72.57,
+    "chg_pct": -0.52,
+    "fwd_pe": 1451.4
+  },
+  {
+    "ticker": "SEI",
+    "price": 53.28,
+    "chg_pct": -1.77,
+    "fwd_pe": 26.493887
+  },
+  {
+    "ticker": "WYFI",
+    "price": 20.72,
+    "chg_pct": -2.08,
+    "fwd_pe": 40.174503
   }
-}
+]

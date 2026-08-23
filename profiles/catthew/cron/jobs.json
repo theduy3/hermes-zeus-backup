@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 95
+        "completed": 96
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-08-22T07:00:00-04:00",
-      "last_run_at": "2026-08-21T07:01:42.432006-04:00",
+      "next_run_at": "2026-08-23T07:00:00-04:00",
+      "last_run_at": "2026-08-22T07:03:33.251174-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -200,15 +200,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 8051
+        "completed": 8147
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-08-22T08:00:00-04:00",
-      "last_run_at": "2026-08-21T23:50:39.368865-04:00",
+      "next_run_at": "2026-08-23T08:00:00-04:00",
+      "last_run_at": "2026-08-22T23:50:03.726151-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -345,15 +345,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T16:00:45.951943-07:00",
-      "next_run_at": "2026-08-22T15:00:00-04:00",
-      "last_run_at": "2026-08-21T15:00:38.209084-04:00",
+      "next_run_at": "2026-08-23T15:00:00-04:00",
+      "last_run_at": "2026-08-22T15:01:38.065237-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -403,8 +403,8 @@
       "created_at": "2026-08-06T09:33:19.285279-07:00",
       "next_run_at": "2026-08-26T20:00:00-04:00",
       "last_run_at": "2026-08-19T20:00:17.736878-04:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openai-codex' -> 'nous'; model 'gpt-5.6-luna' -> 'tencent/hy3:free'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit 2993226070ee --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
+      "last_status": "pending",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -419,8 +419,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "drift_alerted": true,
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "57824304b35d",
@@ -493,17 +492,17 @@
       "schedule_display": "0 20 * * 6",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:48:22.261304-07:00",
-      "next_run_at": "2026-08-22T20:00:00-04:00",
-      "last_run_at": "2026-08-15T23:00:18.207790-04:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openai-codex' -> 'nous'; model 'gpt-5.6-luna' -> 'tencent/hy3:free'), and this job is unpinned. No inference call was made. To run on the new config, pin it explicitly: `cronjob action=update job_id=2f94a63c501d provider=<provider> model=<model>` (or pin the original values to keep them). See #44585.",
+      "next_run_at": "2026-08-29T20:00:00-04:00",
+      "last_run_at": "2026-08-22T20:01:07.151102-04:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -517,8 +516,9 @@
         "terminal"
       ],
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     }
   ],
-  "updated_at": "2026-08-21T23:50:39.369337-04:00"
+  "updated_at": "2026-08-22T23:50:03.726619-04:00"
 }

@@ -10,7 +10,7 @@ Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, financ
 §
 Finance profile (Telegram) = user's Personal Finance bot — knows detailed financials, account balances, holdings. Charles should coordinate with it for portfolio strategy, retirement planning, and any advice that needs precise numbers.
 §
-Finance (Aug 8, 2026): CAD92.7k cash reserved—not deployable—against unknown cards, Desjardins QC, Rivieres tax, Jenny loan. CIBC Costco 4276 Aug13; TD Biz 9716/CIBC 6929/TD 7243 overdue. Keep CAD2k TD chequing by 24th; mortgage debits 1st. Jenny unsigned, Rivieres tax docs incomplete, mortgage-insurance cancellation unconfirmed. Preserve liquidity; NVDA ~36%; no correlated AI/semi adds.
-§
 Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-knowledge-base. Before personal-context answers or substantial writes, read agent_rules.md and search this KB; memory is routing only, never the database.
 §
+§
+Finance (Aug 22, 2026): NVDA ~36% of book — cap/diversify, DO NOT ADD. No new AI/semi/correlated exposure: MSFT,AMZN,GOOG,META,NVDA,AVGO,TSLA,ASML,AMD,INTC,NBIS. Charles = triage/watchlist layer ONLY; book of record = Finance profile (no advice here). FX ~1.39 CAD/USD. Income $2,747.50 biweekly net (Ongles Rivieres→CIBC, Thursdays). CAD ~2.7k liquid RESERVED vs cards/tax/loan; free liquidity unreconciled. TD Chequing >=$2,000 by Aug 24 (mortgage). FHSA room = watch item.

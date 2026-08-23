@@ -215,13 +215,13 @@
     "created_by": "agent",
     "last_patched_at": "2026-07-27T18:14:03.718121+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-21T21:08:03.941381+00:00",
+    "last_used_at": "2026-08-23T03:00:23.987606+00:00",
     "last_viewed_at": "2026-08-21T21:08:03.924777+00:00",
     "patch_count": 24,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 75,
+    "use_count": 76,
     "view_count": 61
   },
   "design-md": {
@@ -842,13 +842,13 @@
     "created_by": null,
     "last_patched_at": "2026-07-21T17:14:42.244039+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-22T01:00:36.823148+00:00",
+    "last_used_at": "2026-08-23T01:00:22.478280+00:00",
     "last_viewed_at": "2026-08-07T05:24:19.492167+00:00",
     "patch_count": 45,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 278,
+    "use_count": 280,
     "view_count": 71
   },
   "ocr-and-documents": {

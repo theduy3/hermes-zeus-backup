@@ -23,17 +23,17 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 97
+        "completed": 98
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-08-22T04:00:00-04:00",
-      "last_run_at": "2026-08-21T04:03:51.977020-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-23T04:00:00-04:00",
+      "last_run_at": "2026-08-22T04:04:07.662482-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Response truncated due to output length limit",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
@@ -47,7 +47,7 @@
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 1
     },
     {
       "id": "ce61f73456fe",
@@ -71,15 +71,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 91
+        "completed": 92
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-08-22T10:00:00-04:00",
-      "last_run_at": "2026-08-21T10:01:31.080216-04:00",
+      "next_run_at": "2026-08-23T10:00:00-04:00",
+      "last_run_at": "2026-08-22T10:05:11.541206-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -115,17 +115,17 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 272
+        "completed": 275
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-08-22T08:00:00-04:00",
-      "last_run_at": "2026-08-21T20:00:52.672758-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-23T08:00:00-04:00",
+      "last_run_at": "2026-08-22T20:10:21.777826-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
@@ -135,7 +135,7 @@
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 1
     },
     {
       "id": "1b7bcc26dda2",
@@ -159,15 +159,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 93
+        "completed": 94
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-08-22T02:00:00-04:00",
-      "last_run_at": "2026-08-21T02:02:05.411170-04:00",
+      "next_run_at": "2026-08-23T02:00:00-04:00",
+      "last_run_at": "2026-08-22T02:07:13.651740-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -203,15 +203,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 182
+        "completed": 184
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-08-22T18:00:00-04:00",
-      "last_run_at": "2026-08-21T23:02:41.259391-04:00",
+      "next_run_at": "2026-08-23T18:00:00-04:00",
+      "last_run_at": "2026-08-22T23:04:00.295207-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -249,17 +249,17 @@
       "schedule_display": "0 1 * * 6",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-02T19:59:20.220655-07:00",
-      "next_run_at": "2026-08-22T01:00:00-04:00",
-      "last_run_at": "2026-08-15T04:11:12.022538-04:00",
+      "next_run_at": "2026-08-29T01:00:00-04:00",
+      "last_run_at": "2026-08-22T01:13:00.802424-04:00",
       "last_status": "error",
-      "last_error": "RuntimeError: HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key.",
+      "last_error": "RuntimeError: HTTP 524: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/\",\"title\":\"Error 524: A timeout occurred\",\"status\":524,\"detail\":\"The origin web server did not return a complete response within the 120-second Proxy Read Timeout window. The connecti",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -269,7 +269,8 @@
         "web"
       ],
       "workdir": "/vault",
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 1
     },
     {
       "id": "7690a85440d7",
@@ -293,15 +294,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 4280
+        "completed": 4370
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-08-22T00:15:39.220485-04:00",
-      "last_run_at": "2026-08-22T00:00:39.220485-04:00",
+      "next_run_at": "2026-08-23T00:15:21.304859-04:00",
+      "last_run_at": "2026-08-23T00:00:21.304859-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -360,5 +361,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-08-22T00:00:39.220627-04:00"
+  "updated_at": "2026-08-23T00:00:21.305073-04:00"
 }

@@ -4,7 +4,7 @@ theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CH
 §
 All Hermes profiles use the openai-codex provider (OAuth via ~/.hermes/auth.json), model gpt-5.5 - NOT deepseek or openrouter. Config: model.provider=openai-codex, model.default=gpt-5.5, providers:{} (no base_url). DeepSeek fully removed 2026-05-24. When cloning a profile, verify model.provider=openai-codex (may inherit stale settings).
 §
-Portfolio ~$200k, NVDA ~36-37% single-name; NO new AI/semi/correlated exposure. Charles layer = watchlist/triage ONLY, real book is Finance profile. Liquidity: Finance memory CAD 92.7k reserved (cards/Laviestella/Desjardins/Rivieres/Jenny); Life OS '/usr/bin/bash CAD' is a stale/garbled figure — reconcile gap before allocating. If surplus confirmed, diversify + cap/reduce NVDA. Watch CAD/USD ~1.39, FHSA, ETF vs single stocks. MORTGAGE DATE CONFLICT: memory says TD mortgage apt#202 starts Jul 1 2026; 2026-08-16 handoff says Sep 1 — verify which is correct.
+PORTFOLIO: ~$200k; NVDA ~36% (~71-72k)=~67% invested; ~46% cash drag CAD92.7k reserved. NO new AI/semi (no-add rule). CONTRADICTION: watchlist NVDA 'Add-on-weakness' vs no-add — decision OVERDUE (due Aug20). Don't deploy reserved cash until PAD/tax/card recon clears. Life OS '/usr/bin/bash CAD' stale — reconcile gap. Watchlist Aug20: Watch MSFT,AAPL,DELL,PLTR,NBIS,TSLA; Hold AMZN,ORCL,WMT. Earnings SNOW Aug26,BABA Sep4. UPCOMING: resolve NVDA; confirm surplus; FHSA VFV.TO; set risk limits. Posture: preserve liquidity, diversify+cap/reduce NVDA before adding risk. CAD/USD ~1.39. Charles=watchlist only; real book=Finance.
 §
 Recurring income: biweekly on Thursday starting May 28, 2026, net payroll from Ongles Rivieres to CIBC chequing account is $2,747.50.
 §
