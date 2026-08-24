@@ -3,14 +3,14 @@
     {
       "id": "b92449d7f332",
       "name": "vault-today",
-      "prompt": "Generate today's theduyvault daily briefing using the loaded `today` skill, then enrich the Daily Investment Briefing with a rotated watchlist-company update section.\n\nImportant environment:\n- Vault path: /vault\n- Daily investment file target: /vault/Daily/<YYYY-MM-DD>-investment.md as produced by the `today` skill.\n- Ticker source: /vault/System/Stock Watchlist.md under the `Watchlist:` section. Ignore `Indicators:`.\n- Run autonomously; never ask the user questions.\n\nStep A \u2014 generate the normal daily files:\n1. Follow the loaded `today` skill exactly to generate the normal daily briefing and daily investment briefing.\n2. Verify the investment file exists.\n\nStep B \u2014 select the rotated company bucket:\n1. Parse all tickers from the `Watchlist:` section of /vault/System/Stock Watchlist.md, preserving order.\n2. Divide the full watchlist into 7 balanced buckets using ticker index modulo 7: bucket for a ticker is `index % 7` with zero-based index.\n3. Select today's bucket using local America/Vancouver date: Monday=0, Tuesday=1, Wednesday=2, Thursday=3, Friday=4, Saturday=5, Sunday=6. This means a 30-ticker list becomes roughly 4-5 tickers/day, and larger lists scale evenly across the week.\n4. If no tickers are selected, write a short note saying no tickers were selected.\n\nStep C \u2014 research selected tickers over the last 30 days:\nFor each selected ticker, research important company-specific developments from the last 30 days. Use web search/content tools if available. Focus on:\n- earnings/guidance, analyst upgrades/downgrades, major product/customer/news events, regulatory/legal issues, M&A, financing/capex, and material stock-moving context;\n- avoid generic market-wide headlines unless directly relevant to the company;\n- include 2-4 concise bullets per ticker, each with a source link/date when available;\n- include a brief \"Why it matters\" sentence per ticker.\nIf web search is unavailable or fails for a ticker, still include the ticker with a clear \"research unavailable\" note rather than inventing facts.\n\nStep D \u2014 insert into the investment file:\n1. Add or replace a section titled exactly:\n   `## Watchlist Company Updates (Last 30 Days)`\n2. Put this section after `## Stock Watchlist` and before `## Morning Brew` in /vault/Daily/<YYYY-MM-DD>-investment.md.\n3. Include a line such as: `*Rotation: <N>/<TOTAL> tickers for <weekday>; source: System/Stock Watchlist.md*`.\n4. Do not duplicate the section if the file is regenerated or the cron is rerun; replace the existing section for the day.\n5. Preserve the rest of the investment file.\n\nStep E \u2014 verify:\nRead back /vault/Daily/<YYYY-MM-DD>-investment.md and verify:\n- `## Watchlist Company Updates (Last 30 Days)` appears exactly once;\n- the section is before `## Morning Brew`;\n- selected ticker symbols are present;\n- no obvious tool error text was inserted.\n\nFinal response: concise summary of files generated/updated, selected tickers, and any failed/unavailable research. This cron runs in a CLI/local context, so delivery may only be visible in cron history unless a gateway delivery target is configured.",
+      "prompt": "Generate today's theduyvault daily briefing using the loaded `today` skill, then enrich the Daily Investment Briefing as applicable. IMPORTANT: the main Daily Briefing must omit all task sections and task counts (`Overdue`, `Due Today`, `This Week`, `Next Week`, `Later / No Date`, task checkboxes/tables). Keep finance/watchlist content in the separate investment briefing.",
       "skills": [
         "today",
         "last30days"
       ],
       "skill": "today",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -23,15 +23,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 63
+        "completed": 99
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-07-19T04:00:00-07:00",
-      "last_run_at": "2026-07-18T04:03:31.799375-07:00",
+      "next_run_at": "2026-08-24T04:00:00-04:00",
+      "last_run_at": "2026-08-23T04:03:55.827484-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -44,7 +44,10 @@
       ],
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0
     },
     {
       "id": "ce61f73456fe",
@@ -54,8 +57,8 @@
         "process"
       ],
       "skill": "process",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -68,15 +71,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 57
+        "completed": 92
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-07-19T10:00:00-07:00",
-      "last_run_at": "2026-07-18T10:07:22.854887-07:00",
+      "next_run_at": "2026-08-23T10:00:00-04:00",
+      "last_run_at": "2026-08-22T10:05:11.541206-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -85,7 +88,10 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0
     },
     {
       "id": "e358e0a4cb18",
@@ -95,8 +101,8 @@
         "wiki-ingest"
       ],
       "skill": "wiki-ingest",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -109,24 +115,27 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 172
+        "completed": 275
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-07-19T08:00:00-07:00",
-      "last_run_at": "2026-07-18T20:01:12.178828-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-23T08:00:00-04:00",
+      "last_run_at": "2026-08-22T20:10:21.777826-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 1
     },
     {
       "id": "1b7bcc26dda2",
@@ -136,8 +145,8 @@
         "wiki-lint"
       ],
       "skill": "wiki-lint",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -150,15 +159,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 59
+        "completed": 95
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-07-19T02:00:00-07:00",
-      "last_run_at": "2026-07-18T02:05:21.770676-07:00",
+      "next_run_at": "2026-08-24T02:00:00-04:00",
+      "last_run_at": "2026-08-23T02:08:21.769548-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -167,7 +176,10 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0
     },
     {
       "id": "2f8f46180850",
@@ -177,8 +189,8 @@
         "tonight"
       ],
       "skill": "tonight",
-      "model": "gpt-5.5",
-      "provider": "openai-codex",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -191,15 +203,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 115
+        "completed": 184
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-07-19T18:00:00-07:00",
-      "last_run_at": "2026-07-18T23:04:33.763413-07:00",
+      "next_run_at": "2026-08-23T18:00:00-04:00",
+      "last_run_at": "2026-08-22T23:04:00.295207-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -208,20 +220,23 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": null
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0
     },
     {
       "id": "2346506d909a",
       "name": "stock-watchlist-last30days-weekly",
-      "prompt": "Run the weekly `/last30days` research pass for every company in the stock watchlist and write results into the root-level Stock Watchlist folder.\n\nSchedule/time intent:\n- This job is scheduled as `0 1 * * 6` in the scheduler's local America/Vancouver time, which corresponds to Saturday 4:00 AM US Eastern time during both standard and daylight time.\n- Treat the report date in America/Vancouver.\n\nVault and files:\n- Vault root: /vault\n- Ticker source: /vault/System/Stock Watchlist.md\n- Company notes folder: /vault/Stock Watchlist/\n- Weekly rollup destination: /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md, where YYYY-MM-DD is the America/Vancouver date of the run.\n- Index: /vault/Stock Watchlist/Stock Watchlist Index.md\n\nTask:\n1. Parse all tickers under the `Watchlist:` section of /vault/System/Stock Watchlist.md. Ignore `Indicators:`.\n2. For each ticker/company, follow the loaded `last30days` skill: research important company-specific developments from the last 30 days.\n3. Focus on earnings/guidance, analyst upgrades/downgrades, product/customer news, regulatory/legal issues, M&A, financing/capex, and material stock-moving context.\n4. Avoid generic market-wide headlines unless directly tied to that company.\n5. For each company, produce 2-4 concise source-linked bullets, a `Why it matters` sentence, and a triage implication: `Add`, `Hold`, `Reduce`, or `Watch`.\n6. If research fails for a ticker, do not invent facts; write `Research unavailable` with the reason.\n\nWrite/update outputs:\nA. Weekly rollup file:\n- Create /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md.\n- Include frontmatter:\n  tags: [finance, watchlist, last30days]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  wiki_status: draft\n- Include one section per ticker in the order from Stock Watchlist.md.\n\nB. Individual company notes:\n- For each existing company note in /vault/Stock Watchlist/ matching the ticker prefix, add or replace a section titled exactly:\n  `## Last 30 Days Update`\n- The section must include:\n  - `*Updated: YYYY-MM-DD*`\n  - 2-4 source-linked bullets\n  - `Why it matters:` sentence\n  - `Triage implication:` Add/Hold/Reduce/Watch\n  - link to the weekly rollup file as `[[Weekly Last30days YYYY-MM-DD]]`\n- If the company note does not exist, create it using the same style as existing pages in /vault/Stock Watchlist/.\n- Do not duplicate the section on rerun; replace the existing `## Last 30 Days Update` section.\n\nC. Index/log:\n- Update /vault/Stock Watchlist/Stock Watchlist Index.md with a short line under Maintenance or a new `## Latest Weekly Research` section linking to the weekly rollup.\n- Append a concise entry to /vault/System/wiki-log.md.\n- If System or MOC files are root-owned/unwritable, skip them and report the exact `sudo chown hermes:hermes ...` command needed.\n\nVerification:\n- Verify the weekly rollup exists.\n- Verify a sample of company notes contains exactly one `## Last 30 Days Update` section.\n- Verify no obvious tool error text or uncited invented facts were inserted.\n\nFinal response: concise summary with number of tickers processed, rollup path, company notes updated/created, failed/unavailable tickers, and any permission blockers.",
+      "prompt": "Run the weekly `/last30days` research pass for every company in the stock watchlist and write results into the root-level Stock Watchlist folder.\n\nSchedule/time intent:\n- This job is scheduled as `0 1 * * 6` in the scheduler's local America/Toronto time, which corresponds to Saturday 4:00 AM US Eastern time during both standard and daylight time.\n- Treat the report date in America/Toronto.\n\nVault and files:\n- Vault root: /vault\n- Ticker source: /vault/System/Stock Watchlist.md\n- Company notes folder: /vault/Stock Watchlist/\n- Weekly rollup destination: /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md, where YYYY-MM-DD is the America/Toronto date of the run.\n- Index: /vault/Stock Watchlist/Stock Watchlist Index.md\n\nTask:\n1. Parse all tickers under the `Watchlist:` section of /vault/System/Stock Watchlist.md. Ignore `Indicators:`.\n2. For each ticker/company, follow the loaded `last30days` skill: research important company-specific developments from the last 30 days.\n3. Focus on earnings/guidance, analyst upgrades/downgrades, product/customer news, regulatory/legal issues, M&A, financing/capex, and material stock-moving context.\n4. Avoid generic market-wide headlines unless directly tied to that company.\n5. For each company, produce 2-4 concise source-linked bullets, a `Why it matters` sentence, and a triage implication: `Add`, `Hold`, `Reduce`, or `Watch`.\n6. If research fails for a ticker, do not invent facts; write `Research unavailable` with the reason.\n\nWrite/update outputs:\nA. Weekly rollup file:\n- Create /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md.\n- Include frontmatter:\n  tags: [finance, watchlist, last30days]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  wiki_status: draft\n- Include one section per ticker in the order from Stock Watchlist.md.\n\nB. Individual company notes:\n- For each existing company note in /vault/Stock Watchlist/ matching the ticker prefix, add or replace a section titled exactly:\n  `## Last 30 Days Update`\n- The section must include:\n  - `*Updated: YYYY-MM-DD*`\n  - 2-4 source-linked bullets\n  - `Why it matters:` sentence\n  - `Triage implication:` Add/Hold/Reduce/Watch\n  - link to the weekly rollup file as `[[Weekly Last30days YYYY-MM-DD]]`\n- If the company note does not exist, create it using the same style as existing pages in /vault/Stock Watchlist/.\n- Do not duplicate the section on rerun; replace the existing `## Last 30 Days Update` section.\n\nC. Index/log:\n- Update /vault/Stock Watchlist/Stock Watchlist Index.md with a short line under Maintenance or a new `## Latest Weekly Research` section linking to the weekly rollup.\n- Append a concise entry to /vault/System/wiki-log.md.\n- If System or MOC files are root-owned/unwritable, skip them and report the exact `sudo chown hermes:hermes ...` command needed.\n\nVerification:\n- Verify the weekly rollup exists.\n- Verify a sample of company notes contains exactly one `## Last 30 Days Update` section.\n- Verify no obvious tool error text or uncited invented facts were inserted.\n\nFinal response: concise summary with number of tickers processed, rollup path, company notes updated/created, failed/unavailable tickers, and any permission blockers.",
       "skills": [
         "last30days"
       ],
       "skill": "last30days",
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.5",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -234,17 +249,17 @@
       "schedule_display": "0 1 * * 6",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-02T19:59:20.220655-07:00",
-      "next_run_at": "2026-07-25T01:00:00-07:00",
-      "last_run_at": "2026-07-18T01:05:00.735497-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-29T01:00:00-04:00",
+      "last_run_at": "2026-08-22T01:13:00.802424-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 524: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/\",\"title\":\"Error 524: A timeout occurred\",\"status\":524,\"detail\":\"The origin web server did not return a complete response within the 120-second Proxy Read Timeout window. The connecti",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -254,7 +269,8 @@
         "web"
       ],
       "workdir": "/vault",
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 1
     },
     {
       "id": "7690a85440d7",
@@ -278,15 +294,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 1222
+        "completed": 4392
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-07-19T00:44:53.839449-07:00",
-      "last_run_at": "2026-07-19T00:29:53.839449-07:00",
+      "next_run_at": "2026-08-23T06:07:09.566744-04:00",
+      "last_run_at": "2026-08-23T05:52:09.566744-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -300,7 +316,8 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "e48b94212c7c",
@@ -324,23 +341,25 @@
       "schedule_display": "every 20160m",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T11:01:42.863342-07:00",
-      "next_run_at": "2026-07-26T11:15:03.812251-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-09-03T20:06:39.512253-04:00",
+      "last_run_at": "2026-08-20T20:06:39.512253-04:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null,
+      "failure_streak": 0
     }
   ],
-  "updated_at": "2026-07-19T00:29:53.839664-07:00"
+  "updated_at": "2026-08-23T05:52:09.566967-04:00"
 }
