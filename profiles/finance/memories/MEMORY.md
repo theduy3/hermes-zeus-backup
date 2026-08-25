@@ -10,6 +10,7 @@ Recurring income: biweekly on Thursday starting May 28, 2026, net payroll from O
 §
 Recurring personal expenses: rent $2,000/mo; TD mortgage for apt #202 2900 Rue Édouard-Montpetit starts Jul 1 2026, withdrawn 1st monthly; check TD Chequing by 24th for ≥$2,000.
 §
-Active travel context: destination unspecified destination; timezone America/Toronto (EDT); set 2026-08-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
 §
 Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-knowledge-base. Before personal-context answers or substantial writes, read agent_rules.md and search this KB; memory is routing only, never the database.
+§
+Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-08-24. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

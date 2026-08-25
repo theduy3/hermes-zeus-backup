@@ -16,6 +16,7 @@ If Duy has an upcoming/current trip to Quebec/East Coast, Zeus should trigger He
 §
 Duy tasks: /vault/Tasks/tasks source; Telegram capture; Obsidian edit; Google theduy mirrors/imports Task:/TODO:, #catthew excluded. Recurring tasks auto-roll after 2 days. Thor weekdays: water 7, meditation 8:45, brunch+water 10, protein 2, exercise 2:15 before Victoria pickup. Weekends light/family.
 §
-Active travel context: destination unspecified destination; timezone America/Toronto (EDT); set 2026-08-06. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
 §
 Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-knowledge-base. Before personal-context answers or substantial writes, read agent_rules.md and search this KB; memory is routing only, never the database.
+§
+Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-08-24. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

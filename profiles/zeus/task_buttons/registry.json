@@ -4528,5 +4528,41 @@
     "status": "sent",
     "message_id": 2061,
     "odds": ""
+  },
+  "071948a064a65fe8": {
+    "id": "071948a064a65fe8",
+    "date": "2026-08-24",
+    "due_date": "2026-08-24",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 2188,
+    "odds": ""
+  },
+  "8e036ff1edbecfec": {
+    "id": "8e036ff1edbecfec",
+    "date": "2026-08-24",
+    "due_date": "2026-08-24",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 2189,
+    "odds": ""
+  },
+  "f17c63bf29d9bd93": {
+    "id": "f17c63bf29d9bd93",
+    "date": "2026-08-24",
+    "due_date": "2026-08-24",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 2190,
+    "odds": ""
   }
 }

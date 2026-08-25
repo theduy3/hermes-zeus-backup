@@ -2,7 +2,7 @@
   "jobs": [
     {
       "id": "caabc02dabc9",
-      "name": "💧 Water - 7AM Vancouver/EDT time",
+      "name": "💧 Water - 7AM Vancouver/PDT time",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief, max 6 words. Suggested format: '💧 500ml — 1/6'.",
       "skills": [],
       "skill": null,
@@ -20,15 +20,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 101
+        "completed": 102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:18.568357+00:00",
-      "next_run_at": "2026-08-24T07:00:00-04:00",
-      "last_run_at": "2026-08-23T07:00:13.900156-04:00",
+      "next_run_at": "2026-08-25T07:00:00-07:00",
+      "last_run_at": "2026-08-24T07:00:37.850911-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -47,7 +47,7 @@
     },
     {
       "id": "b76341d71354",
-      "name": "💧 Water - 10AM Brunch Vancouver/EDT time",
+      "name": "💧 Water - 10AM Brunch Vancouver/PDT time",
       "prompt": "Remind theduy to drink water with brunch. Keep it ultra-brief, max 6 words. Suggested format: '💧 Brunch water — 2/6'.",
       "skills": [],
       "skill": null,
@@ -65,15 +65,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 101
+        "completed": 102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:28.759162+00:00",
-      "next_run_at": "2026-08-24T10:00:00-04:00",
-      "last_run_at": "2026-08-23T10:00:15.585971-04:00",
+      "next_run_at": "2026-08-25T10:00:00-07:00",
+      "last_run_at": "2026-08-24T10:00:40.874961-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -92,7 +92,7 @@
     },
     {
       "id": "2e5b3af69398",
-      "name": "💧 Water - 1PM Vancouver/EDT time",
+      "name": "💧 Water - 1PM Vancouver/PDT time",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief, max 6 words. Suggested format: '💧 1PM water — 3/6'.",
       "skills": [],
       "skill": null,
@@ -110,15 +110,15 @@
       "schedule_display": "0 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 102
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:36.036225+00:00",
-      "next_run_at": "2026-08-24T13:00:00-04:00",
-      "last_run_at": "2026-08-23T13:00:18.722686-04:00",
+      "next_run_at": "2026-08-25T13:00:00-04:00",
+      "last_run_at": "2026-08-24T16:00:46.173077-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "0dd08e4e07da",
-      "name": "💧 Water - 10PM Vancouver/EDT time",
+      "name": "💧 Water - 10PM Vancouver/PDT time",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief, max 6 words. Suggested format: '💧 Last water — 6/6'.",
       "skills": [],
       "skill": null,
@@ -155,15 +155,15 @@
       "schedule_display": "0 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 105
+        "completed": 106
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T12:53:43.651359+00:00",
-      "next_run_at": "2026-08-24T22:00:00-04:00",
-      "last_run_at": "2026-08-23T22:00:30.153552-04:00",
+      "next_run_at": "2026-08-25T22:00:00-04:00",
+      "last_run_at": "2026-08-25T01:00:54.484091-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -182,7 +182,7 @@
     },
     {
       "id": "2616b50dddac",
-      "name": "🧘 Meditation - 8:45AM Vancouver/EDT time",
+      "name": "🧘 Meditation - 8:45AM Vancouver/PDT time",
       "prompt": "Send Thor morning meditation reminder with the YouTube Music link and a Telegram inline Done button at 8:45AM, before Zeus setup. Keep it brief. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -200,15 +200,15 @@
       "schedule_display": "45 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 102
+        "completed": 103
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T13:06:21.288962+00:00",
-      "next_run_at": "2026-08-24T08:45:00-04:00",
-      "last_run_at": "2026-08-23T08:45:15.029992-04:00",
+      "next_run_at": "2026-08-25T08:45:00-07:00",
+      "last_run_at": "2026-08-24T08:45:39.053940-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -227,7 +227,7 @@
     },
     {
       "id": "9a296fe6c2aa",
-      "name": "📏 Weekly Measurements - Saturday 9AM Vancouver/EDT time",
+      "name": "📏 Weekly Measurements - Saturday 9AM Vancouver/PDT time",
       "prompt": "Sunday check-in. Ask theduy for his measurements and weekly metrics. Keep it brief:\n\nCurrent focus metrics:\n- Waist at navel (primary)\n- Hips at widest point\n- Chest at nipple line\n- Arms flexed at midpoint\n\nAlso ask for:\n- Weekly average weight\n- Sleep quality 1-5\n- Stress 1-10\n- Protein ≥ 150g: how many days this week\n- Workouts completed: X/3 gym, X/3 home\n\nCompare to previous week if you have context. Celebrate progress, flag declines neutrally. No judgment — data, not moralizing.",
       "skills": [],
       "skill": null,
@@ -252,7 +252,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T18:51:13.738516+00:00",
-      "next_run_at": "2026-08-29T09:00:00-04:00",
+      "next_run_at": "2026-08-29T09:00:00-07:00",
       "last_run_at": "2026-08-22T09:02:26.469349-04:00",
       "last_status": "ok",
       "last_error": null,
@@ -271,7 +271,7 @@
     },
     {
       "id": "4ab656b26552",
-      "name": "🥤 Protein Drink - 2PM Vancouver/EDT time",
+      "name": "🥤 Protein Drink - 2PM Vancouver/PDT time",
       "prompt": "Remind theduy to have his protein drink at 2PM before shutdown/pickup. Keep it brief and encouraging. Suggested format: 🥤 Protein now — 50g.",
       "skills": [],
       "skill": null,
@@ -289,15 +289,15 @@
       "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 102
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T16:54:07.561293+00:00",
-      "next_run_at": "2026-08-24T14:00:00-04:00",
-      "last_run_at": "2026-08-23T14:00:19.754836-04:00",
+      "next_run_at": "2026-08-25T14:00:00-04:00",
+      "last_run_at": "2026-08-24T17:00:46.670438-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -316,7 +316,7 @@
     },
     {
       "id": "2934304ac770",
-      "name": "💧 Water - 4PM Vancouver/EDT time",
+      "name": "💧 Water - 4PM Vancouver/PDT time",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief, max 6 words. Suggested format: '💧 Afternoon water — 4/6'.",
       "skills": [],
       "skill": null,
@@ -334,15 +334,15 @@
       "schedule_display": "0 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 94
+        "completed": 95
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:09.360396+00:00",
-      "next_run_at": "2026-08-24T16:00:00-04:00",
-      "last_run_at": "2026-08-23T16:00:22.241809-04:00",
+      "next_run_at": "2026-08-25T16:00:00-04:00",
+      "last_run_at": "2026-08-24T19:00:48.518089-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -361,7 +361,7 @@
     },
     {
       "id": "eea7a86f64fe",
-      "name": "💧 Water - 7PM Vancouver/EDT time",
+      "name": "💧 Water - 7PM Vancouver/PDT time",
       "prompt": "Remind theduy to drink water. Keep it ultra-brief, max 6 words. Suggested format: '💧 Evening water — 5/6'.",
       "skills": [],
       "skill": null,
@@ -379,15 +379,15 @@
       "schedule_display": "0 19 * * *",
       "repeat": {
         "times": null,
-        "completed": 92
+        "completed": 93
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:09:10.364301+00:00",
-      "next_run_at": "2026-08-24T19:00:00-04:00",
-      "last_run_at": "2026-08-23T19:00:26.203872-04:00",
+      "next_run_at": "2026-08-25T19:00:00-04:00",
+      "last_run_at": "2026-08-24T22:00:50.377176-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -406,7 +406,7 @@
     },
     {
       "id": "3e512762661c",
-      "name": "🧘 Meditation - 10:15PM Vancouver/EDT time",
+      "name": "🧘 Meditation - 10:15PM Vancouver/PDT time",
       "prompt": "Send Thor evening meditation reminder with the YouTube Music link and a Telegram inline Done button. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -424,15 +424,15 @@
       "schedule_display": "15 22 * * *",
       "repeat": {
         "times": null,
-        "completed": 97
+        "completed": 98
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T05:17:08.711093+00:00",
-      "next_run_at": "2026-08-24T22:15:00-04:00",
-      "last_run_at": "2026-08-23T22:15:30.303702-04:00",
+      "next_run_at": "2026-08-25T22:15:00-04:00",
+      "last_run_at": "2026-08-25T01:15:54.637675-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -450,7 +450,7 @@
     },
     {
       "id": "5d9328231c7d",
-      "name": "🏃 Exercise - 2:15PM Before Victoria Pickup Vancouver/EDT time",
+      "name": "🏃 Exercise - 2:15PM Before Victoria Pickup Vancouver/PDT time",
       "prompt": "Send Thor daily pre-pickup exercise reminder at 2:15PM with the YouTube exercise link. Keep it brief: exercise before Victoria pickup. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -468,15 +468,15 @@
       "schedule_display": "15 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 87
+        "completed": 89
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T11:16:49.565000-07:00",
-      "next_run_at": "2026-08-24T14:15:00-04:00",
-      "last_run_at": "2026-08-23T14:15:20.070208-04:00",
+      "next_run_at": "2026-08-25T14:15:00-04:00",
+      "last_run_at": "2026-08-24T17:15:46.941457-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -496,7 +496,7 @@
     },
     {
       "id": "b20602062ff4",
-      "name": "🧘 Evening Stretch - 8:45PM Vancouver/EDT time",
+      "name": "🧘 Evening Stretch - 8:45PM Vancouver/PDT time",
       "prompt": "Send Thor daily 8:45PM evening stretch reminder with the YouTube guide link. The script handles direct Telegram delivery and stays silent on success.",
       "skills": [],
       "skill": null,
@@ -514,15 +514,15 @@
       "schedule_display": "45 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 86
+        "completed": 87
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T19:44:23.439951-07:00",
-      "next_run_at": "2026-08-24T20:45:00-04:00",
-      "last_run_at": "2026-08-23T20:45:28.414183-04:00",
+      "next_run_at": "2026-08-25T20:45:00-04:00",
+      "last_run_at": "2026-08-24T23:45:53.761356-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -562,15 +562,15 @@
       "schedule_display": "45 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 52
+        "completed": 54
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-03T08:45:50.043073-07:00",
-      "next_run_at": "2026-08-24T12:45:00-04:00",
-      "last_run_at": "2026-08-23T12:47:29.888641-04:00",
+      "next_run_at": "2026-08-25T12:45:00-04:00",
+      "last_run_at": "2026-08-24T15:46:16.331597-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -589,5 +589,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-08-23T22:15:30.304190-04:00"
+  "updated_at": "2026-08-25T01:15:54.638083-04:00"
 }

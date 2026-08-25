@@ -22,7 +22,7 @@ credential_pool_strategies:
   nous: fill_first
   xai-oauth: fill_first
 toolsets:
-  - hermes-cli
+- hermes-cli
 agent:
   max_turns: 90
   gateway_timeout: 1800
@@ -323,9 +323,9 @@ display:
   runtime_footer:
     enabled: false
     fields:
-      - model
-      - context_pct
-      - cwd
+    - model
+    - context_pct
+    - cwd
   copy_shortcut: auto
   tool_progress: all
 dashboard:
@@ -446,7 +446,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: America/Toronto
+timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''
@@ -473,11 +473,11 @@ discord:
     speech_gain: 1.0
     ack_enabled: true
     ack_phrases:
-      - Let me look into that.
-      - One moment.
-      - Checking on that now.
-      - Give me a sec.
-      - On it.
+    - Let me look into that.
+    - One moment.
+    - Checking on that now.
+    - Give me a sec.
+    - On it.
 telegram:
   reactions: false
   allowed_chats: ''
@@ -498,10 +498,10 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
-  - stop/restart hermes gateway (kills running agents)
-  - execute_code
-  - delete in root path
-  - script execution via -e/-c flag
+- stop/restart hermes gateway (kills running agents)
+- execute_code
+- delete in root path
+- script execution via -e/-c flag
 hooks_auto_accept: false
 security:
   allow_private_urls: false
@@ -616,95 +616,95 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-    - bfl
-    - browser
-    - clarify
-    - code_execution
-    - context_engine
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - kanban
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - video
-    - video_gen
-    - vision
-    - web
-    - x_search
+  - bfl
+  - browser
+  - clarify
+  - code_execution
+  - context_engine
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - kanban
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - video
+  - video_gen
+  - vision
+  - web
+  - x_search
   telegram:
-    - browser
-    - clarify
-    - code_execution
-    - context_engine
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - video
-    - video_gen
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - context_engine
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - video
+  - video_gen
+  - vision
+  - web
   whatsapp:
-    - hermes-whatsapp
+  - hermes-whatsapp
   slack:
-    - hermes-slack
+  - hermes-slack
   signal:
-    - hermes-signal
+  - hermes-signal
   homeassistant:
-    - hermes-homeassistant
+  - hermes-homeassistant
   qqbot:
-    - hermes-qqbot
+  - hermes-qqbot
 approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 known_plugin_toolsets:
   cli:
-    - a2a
-    - spotify
+  - a2a
+  - spotify
   telegram:
-    - spotify
+  - spotify
 plugins:
   enabled:
-    - multi-agent-context
+  - multi-agent-context
 default: gpt-5.5
 mcp_servers:
   graphify-hermes:
     command: graphify-mcp
     args:
-      - /home/hermes/.graphify/hermes/graphify-out/graph.json
+    - /home/hermes/.graphify/hermes/graphify-out/graph.json
     enabled: false
   graphify-vault:
     command: graphify-mcp
     args:
-      - /home/hermes/.graphify/theduyvault/graphify-out/graph.json
+    - /home/hermes/.graphify/theduyvault/graphify-out/graph.json
     enabled: true
   graphify-vault-core:
     command: graphify-mcp
     args:
-      - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
+    - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
     enabled: true
   graphify-vault-sources:
     command: graphify-mcp
     args:
-      - /home/hermes/.graphify/theduyvault-sources/graphify-out/graph.json
+    - /home/hermes/.graphify/theduyvault-sources/graphify-out/graph.json
     enabled: true
   graphify-vault-daily:
     command: graphify-mcp
     args:
-      - /home/hermes/.graphify/theduyvault-daily/graphify-out/graph.json
+    - /home/hermes/.graphify/theduyvault-daily/graphify-out/graph.json
     enabled: true
   remarkable:
     command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh
@@ -720,30 +720,30 @@ video_gen:
       public_url: true
 known_builtin_toolsets:
   cli:
-    - bfl
-    - browser
-    - clarify
-    - code_execution
-    - computer_use
-    - context_engine
-    - cronjob
-    - delegation
-    - discord
-    - discord_admin
-    - file
-    - homeassistant
-    - image_gen
-    - memory
-    - session_search
-    - skills
-    - spotify
-    - stt
-    - terminal
-    - todo
-    - tts
-    - video
-    - video_gen
-    - vision
-    - web
-    - x_search
-    - yuanbao
+  - bfl
+  - browser
+  - clarify
+  - code_execution
+  - computer_use
+  - context_engine
+  - cronjob
+  - delegation
+  - discord
+  - discord_admin
+  - file
+  - homeassistant
+  - image_gen
+  - memory
+  - session_search
+  - skills
+  - spotify
+  - stt
+  - terminal
+  - todo
+  - tts
+  - video
+  - video_gen
+  - vision
+  - web
+  - x_search
+  - yuanbao

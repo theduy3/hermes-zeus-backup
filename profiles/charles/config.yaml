@@ -15,7 +15,7 @@ fallback_providers: '[]'
 credential_pool_strategies:
   openai-codex: fill_first
 toolsets:
-  - hermes-cli
+- hermes-cli
 max_concurrent_sessions: null
 agent:
   max_turns: 90
@@ -300,9 +300,9 @@ display:
   runtime_footer:
     enabled: false
     fields:
-      - model
-      - context_pct
-      - cwd
+    - model
+    - context_pct
+    - cwd
   copy_shortcut: auto
 dashboard:
   theme: default
@@ -424,7 +424,7 @@ curator:
     enabled: true
     keep: 5
 honcho: {}
-timezone: America/Toronto
+timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''
@@ -453,11 +453,11 @@ discord:
     speech_gain: 1.0
     ack_enabled: true
     ack_phrases:
-      - Let me look into that.
-      - One moment.
-      - Checking on that now.
-      - Give me a sec.
-      - On it.
+    - Let me look into that.
+    - One moment.
+    - Checking on that now.
+    - Give me a sec.
+    - On it.
 whatsapp: {}
 telegram:
   reactions: false
@@ -481,8 +481,8 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
-  - overwrite project env/config via redirection
-  - execute_code
+- overwrite project env/config via redirection
+- execute_code
 quick_commands: {}
 platform_hints: {}
 hooks: {}
@@ -590,31 +590,31 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-    - browser
-    - clarify
-    - code_execution
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
   telegram:
-    - hermes-telegram
+  - hermes-telegram
   whatsapp: null
 mcp_servers:
   agentmemory:
     command: npx
     args:
-      - -y
-      - '@agentmemory/mcp'
+    - -y
+    - '@agentmemory/mcp'
     env:
       AGENTMEMORY_TOOLS: all
       AGENTMEMORY_URL: http://localhost:3121
@@ -622,7 +622,7 @@ mcp_servers:
   graphify-vault-core:
     command: graphify-mcp
     args:
-      - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
+    - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
     enabled: true
   remarkable:
     command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh

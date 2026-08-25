@@ -14,7 +14,7 @@ fallback_providers: '[]'
 credential_pool_strategies:
   openai-codex: fill_first
 toolsets:
-  - hermes-cli
+- hermes-cli
 agent:
   max_turns: 90
   gateway_timeout: 1800
@@ -321,9 +321,9 @@ display:
   runtime_footer:
     enabled: false
     fields:
-      - model
-      - context_pct
-      - cwd
+    - model
+    - context_pct
+    - cwd
   copy_shortcut: auto
   tool_progress: all
   background_process_notifications: all
@@ -446,7 +446,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: America/Toronto
+timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''
@@ -473,11 +473,11 @@ discord:
     speech_gain: 1.0
     ack_enabled: true
     ack_phrases:
-      - Let me look into that.
-      - One moment.
-      - Checking on that now.
-      - Give me a sec.
-      - On it.
+    - Let me look into that.
+    - One moment.
+    - Checking on that now.
+    - Give me a sec.
+    - On it.
 telegram:
   reactions: false
   allowed_chats: ''
@@ -498,11 +498,11 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
-  - delete in root path
-  - script execution via heredoc
-  - stop/restart hermes gateway (kills running agents)
-  - execute_code
-  - script execution via -e/-c flag
+- delete in root path
+- script execution via heredoc
+- stop/restart hermes gateway (kills running agents)
+- execute_code
+- script execution via -e/-c flag
 hooks_auto_accept: false
 security:
   allow_private_urls: false
@@ -601,60 +601,60 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-    - browser
-    - clarify
-    - code_execution
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - kanban
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - kanban
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
   telegram:
-    - browser
-    - clarify
-    - code_execution
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
   whatsapp:
-    - hermes-whatsapp
+  - hermes-whatsapp
   slack:
-    - hermes-slack
+  - hermes-slack
   signal:
-    - hermes-signal
+  - hermes-signal
   homeassistant:
-    - hermes-homeassistant
+  - hermes-homeassistant
   qqbot:
-    - hermes-qqbot
+  - hermes-qqbot
 approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 known_plugin_toolsets:
   cli:
-    - spotify
+  - spotify
   telegram:
-    - spotify
+  - spotify
 plugins:
   enabled:
-    - multi-agent-context
+  - multi-agent-context
 default: gpt-5.5
 mcp_servers:
   remarkable:

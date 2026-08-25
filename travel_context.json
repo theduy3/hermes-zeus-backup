@@ -1,8 +1,8 @@
 {
-  "location": "unspecified destination",
-  "timezone": "America/Toronto",
-  "label": "EDT",
-  "updated_at": "2026-08-06T20:06:07.545094-04:00",
+  "location": "Vancouver",
+  "timezone": "America/Vancouver",
+  "label": "PDT",
+  "updated_at": "2026-08-24T12:27:40.003055-07:00",
   "profiles": [
     "default",
     "butter",

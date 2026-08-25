@@ -18,15 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 142
+        "completed": 143
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-08-24T09:00:00-04:00",
-      "last_run_at": "2026-08-23T09:02:39.620563-04:00",
+      "next_run_at": "2026-08-25T09:00:00-07:00",
+      "last_run_at": "2026-08-24T09:02:04.819782-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 98
+        "completed": 99
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-08-24T18:00:00-04:00",
-      "last_run_at": "2026-08-21T18:03:21.087506-04:00",
+      "next_run_at": "2026-08-25T18:00:00-04:00",
+      "last_run_at": "2026-08-24T21:01:14.807414-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -92,15 +92,15 @@
       "schedule_display": "15 9 * * 1",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 23
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.805996-04:00",
-      "next_run_at": "2026-08-24T09:15:00-04:00",
-      "last_run_at": "2026-08-17T12:24:35.008807-04:00",
+      "next_run_at": "2026-08-31T09:15:00-07:00",
+      "last_run_at": "2026-08-24T09:19:38.388897-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -108,7 +108,8 @@
       "last_delivery_error": null,
       "fire_claim": null,
       "provider_snapshot": null,
-      "model_snapshot": null
+      "model_snapshot": null,
+      "failure_streak": 0
     },
     {
       "id": "67d44bd30291",
@@ -130,15 +131,15 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 99
+        "completed": 100
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-08-24T18:10:00-04:00",
-      "last_run_at": "2026-08-21T18:12:08.947681-04:00",
+      "next_run_at": "2026-08-25T18:10:00-04:00",
+      "last_run_at": "2026-08-24T21:12:30.117064-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -174,7 +175,7 @@
       "paused_at": "2026-05-21T10:15:51.020999-07:00",
       "paused_reason": null,
       "created_at": "2026-04-24T03:31:55.186592+00:00",
-      "next_run_at": "2026-08-06T20:08:07.587277-04:00",
+      "next_run_at": "2026-08-24T12:29:40.056547-07:00",
       "last_run_at": "2026-05-21T10:14:07.648088-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -185,7 +186,7 @@
     {
       "id": "12e5ce30563d",
       "name": "nightly-hermes-github-backup",
-      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync — push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n── SELF-CHECK: IS IT MIDNIGHT VANCOUVER? ──\n\nThis cron is scheduled for 00:00 America/Toronto local time. Do this check first:\n\n1. Determine the current hour in America/Toronto timezone. Use `python3` if available, otherwise `TZ=America/Toronto date +%H`.\n2. If the hour is 00 (midnight) → proceed to the sync steps below.\n3. For any other hour, do not run the backup; report the current America/Toronto time and say the schedule may need adjustment.\n\n── SYNC STEPS ──\n\nOnce midnight Vancouver is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) — must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message — include a timestamp (America/Toronto) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n── FAILURE HANDLING ──\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n── IMPORTANT ──\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` — if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
+      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync — push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n── SELF-CHECK: IS IT MIDNIGHT VANCOUVER? ──\n\nThis cron is scheduled for 00:00 America/Vancouver local time. Do this check first:\n\n1. Determine the current hour in America/Vancouver timezone. Use `python3` if available, otherwise `TZ=America/Vancouver date +%H`.\n2. If the hour is 00 (midnight) → proceed to the sync steps below.\n3. For any other hour, do not run the backup; report the current America/Vancouver time and say the schedule may need adjustment.\n\n── SYNC STEPS ──\n\nOnce midnight Vancouver is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) — must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message — include a timestamp (America/Vancouver) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n── FAILURE HANDLING ──\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n── IMPORTANT ──\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` — if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
       "skills": [],
       "skill": null,
       "model": "upstage/solar-pro4:free",
@@ -202,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 103
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-08-25T00:00:00-04:00",
-      "last_run_at": "2026-08-23T00:03:18.800900-04:00",
+      "next_run_at": "2026-08-26T00:00:00-04:00",
+      "last_run_at": "2026-08-24T00:04:52.841718-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-24T00:01:55.386480-04:00",
-        "by": "hal-server-803171.novalocal:2799855:5b173818850c4d4fb5ff661f4fe54976"
+        "at": "2026-08-25T03:00:26.313023-04:00",
+        "by": "hal-server-803171.novalocal:2799855:9a0e177e83524a3fa1d7a47e85aa6303"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -246,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 3525
+        "completed": 3579
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-08-24T00:25:55.478916-04:00",
-      "last_run_at": "2026-08-23T23:55:55.478916-04:00",
+      "next_run_at": "2026-08-25T03:28:26.454740-04:00",
+      "last_run_at": "2026-08-25T02:58:26.454740-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -293,15 +294,15 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 28
+        "completed": 29
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-08-24T03:30:00-04:00",
-      "last_run_at": "2026-08-23T03:31:27.210636-04:00",
+      "next_run_at": "2026-08-25T03:30:00-07:00",
+      "last_run_at": "2026-08-24T03:31:46.179647-04:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nwarning: 65 source file(s) produced zero nodes and are absent from the graph: baseline.json, easy.json, hard.json, acp.json, gui.json (+60 more). A re-run will retry them (empties are no longer cached); if it persists, please report the file(s) (#1666).\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 234, in <module>\n    main()\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 216, in main\n    stats[\"hermes\"] = build_hermes()\n                      ^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 102, in build_hermes\n    run([\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 85, in run\n    subprocess.run(cmd, cwd=str(cwd) if cwd else None, env=env, check=True)\n  File \"/home/hermes/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['graphify', 'extract', '/home/hermes/.hermes/hermes-agent', '--code-only', '--out', '/home/hermes/.graphify/hermes', '--force', '--max-workers', '4']' died with <Signals.SIGKILL: 9>.\nstdout:\n$ graphify extract /home/hermes/.hermes/hermes-agent --code-only --out /home/hermes/.graphify/hermes --force --max-workers 4\n[graphify extract] --force: full re-scan, semantic cache reads skipped\n[graphify extract] scanning /home/hermes/.hermes/hermes-agent\n[graphify extract] --code-only: skipping 1805 non-code file(s) (1730 docs, 10 papers, 65 images) — no LLM extraction\n[graphify extract] found 6972 code, 0 docs, 0 papers, 0 images\n[graphify extract] 790 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, .mailmap, .nojekyll (+784 more)\n[graphify extract] 10 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env.example, .envrc, .npmrc, bitwarden.md, command.md, index.md (+4 more)\n[graphify extract] AST extraction on 6972 code files...\n  AST extraction: 100/2515 uncached files (3%) [4 workers]\n  AST extraction: 200/2515 uncached files (7%) [4 workers]\n  AST extraction: 300/2515 uncached files (11%) [4 workers]\n  AST extraction: 400/2515 uncached files (15%) [4 workers]\n  AST extraction: 500/2515 uncached files (19%) [4 workers]\n  AST extraction: 600/2515 uncached files (23%) [4 workers]\n  AST extraction: 700/2515 uncached files (27%) [4 workers]\n  AST extraction: 800/2515 uncached files (31%) [4 workers]\n  AST extraction: 900/2515 uncached files (35%) [4 workers]\n  AST extraction: 1000/2515 uncached files (39%) [4 workers]\n  AST extraction: 1100/2515 uncached files (43%) [4 workers]\n  AST extraction: 1200/2515 uncached files (47%) [4 workers]\n  AST extraction: 1300/2515 uncached files (51%) [4 workers]\n  AST extraction: 1400/2515 uncached files (55%) [4 workers]\n  AST extraction: 1500/2515 uncached files (59%) [4 workers]\n  AST extraction: 1600/2515 uncached files (63%) [4 workers]\n  AST extraction: 1700/2515 uncached files (67%) [4 workers]\n  AST extraction: 1800/2515 uncached files (71%) [4 workers]\n  AST extraction: 1900/2515 uncached files (75%) [4 workers]\n  AST extraction: 2000/2515 uncached files (79%) [4 workers]\n  AST extraction: 2100/2515 uncached files (83%) [4 workers]\n  AST extraction: 2200/2515 uncached files (87%) [4 workers]\n  AST extraction: 2300/2515 uncached files (91%) [4 workers]\n  AST extraction: 2400/2515 uncached files (95%) [4 workers]\n  AST extraction: 2500/2515 uncached files (99%) [4 workers]\n  AST extraction: 2515/2515 uncached files (100%) [4 workers]",
       "last_delivery_error": null,
@@ -310,7 +311,7 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 6
+      "failure_streak": 7
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -337,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-08-24T05:15:00-04:00",
-      "last_run_at": "2026-08-23T05:15:40.570480-04:00",
+      "next_run_at": "2026-08-25T05:15:00-07:00",
+      "last_run_at": "2026-08-24T05:15:04.157060-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -394,7 +395,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.742726-04:00",
-      "next_run_at": "2026-12-30T09:30:00-05:00",
+      "next_run_at": "2026-12-30T09:30:00-08:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -443,7 +444,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.752745-04:00",
-      "next_run_at": "2026-12-30T10:00:00-05:00",
+      "next_run_at": "2026-12-30T10:00:00-08:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -492,7 +493,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.762660-04:00",
-      "next_run_at": "2026-08-26T20:30:00-04:00",
+      "next_run_at": "2026-08-26T20:30:00-07:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -541,7 +542,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.773308-04:00",
-      "next_run_at": "2026-08-26T20:00:00-04:00",
+      "next_run_at": "2026-08-26T20:00:00-07:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -559,5 +560,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-24T00:01:55.386737-04:00"
+  "updated_at": "2026-08-25T03:00:26.313198-04:00"
 }

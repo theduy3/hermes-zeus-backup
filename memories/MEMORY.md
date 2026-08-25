@@ -17,3 +17,5 @@ Orcarouter: free only (qwen3.8-27b-free). reMarkable MCP all profiles read-only 
 Vault Graphify MCP scope: default only loads all 4 (vault/core/sources/daily); named bots ≤1 (usually vault-core); thor/wiki 0. Skill: multi-profile-mcp-scoping.
 §
 Graphify vault MCP policy: only default loads all 4 vault graphs (vault/core/sources/daily); named profile bots keep 0–1 (prefer vault-core for zeus/finance/butter/catthew/charles; thor/wiki=0). graphify-hermes stays disabled on default unless debugging.
+§
+Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-08-24. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
