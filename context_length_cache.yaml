@@ -13,3 +13,4 @@ context_lengths:
   tencent/hy3:free@https://inference-api.nousresearch.com/v1: 262144
   upstage/solar-pro4:free@https://inference-api.nousresearch.com/v1: 524288
   tencent/hy3@https://inference-api.nousresearch.com/v1: 262144
+  hy3-free@https://inference-api.nousresearch.com/v1: 262144

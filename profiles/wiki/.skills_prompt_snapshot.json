@@ -53,13 +53,13 @@
       1787031466234675630,
       34281
     ],
-    "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1785092884117088491,
-      11962
-    ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
       1787031466234675630,
       18603
+    ],
+    "autonomous-ai-agents/hermes-agent/SKILL.md": [
+      1787717347294880478,
+      13183
     ],
     "creative/DESCRIPTION.md": [
       1776960632000000000,
@@ -309,10 +309,6 @@
       1786469842089393054,
       13670
     ],
-    "productivity/teams-meeting-pipeline/SKILL.md": [
-      1786469842094393189,
-      6816
-    ],
     "productivity/docx/SKILL.md": [
       1786469842088393027,
       10395
@@ -368,6 +364,10 @@
     "productivity/session-librarian/SKILL.md": [
       1787031466236675684,
       4827
+    ],
+    "productivity/teams-meeting-pipeline/SKILL.md": [
+      1787717347294880478,
+      6953
     ],
     "research/DESCRIPTION.md": [
       1776960632000000000,

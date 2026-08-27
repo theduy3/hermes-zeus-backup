@@ -1,5 +1,5 @@
 model:
-  default: tencent/hy3:free
+  default: z-ai/glm-5.2
   provider: nous
   auxiliary:
     provider: nous
@@ -9,11 +9,13 @@ model:
   max_output_tokens: 128000
   parameters:
     reasoning_effort: max
-fallback_providers: '[]'
+fallback_providers:
+  - provider: openrouter
+    model: thinkingmachines/inkling-small:free
 credential_pool_strategies:
   openai-codex: fill_first
 toolsets:
-- hermes-cli
+  - hermes-cli
 agent:
   max_turns: 60
   gateway_timeout: 1800
@@ -273,9 +275,9 @@ display:
   runtime_footer:
     enabled: false
     fields:
-    - model
-    - context_pct
-    - cwd
+      - model
+      - context_pct
+      - cwd
   copy_shortcut: auto
   tool_progress_overrides: {}
   tool_progress: all
@@ -409,8 +411,8 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
-- delete in root path
-- script execution via heredoc
+  - delete in root path
+  - script execution via heredoc
 quick_commands:
   research:
     type: alias
@@ -501,27 +503,27 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-  - hermes-cli
+    - hermes-cli
   telegram:
-  - hermes-telegram
+    - hermes-telegram
   whatsapp:
-  - hermes-whatsapp
+    - hermes-whatsapp
   slack:
-  - hermes-slack
+    - hermes-slack
   signal:
-  - hermes-signal
+    - hermes-signal
   homeassistant:
-  - hermes-homeassistant
+    - hermes-homeassistant
   qqbot:
-  - hermes-qqbot
+    - hermes-qqbot
 approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 mcp_servers:
   agentmemory:
     command: npx
     args:
-    - -y
-    - '@agentmemory/mcp'
+      - -y
+      - '@agentmemory/mcp'
     env:
       AGENTMEMORY_TOOLS: all
       AGENTMEMORY_URL: http://localhost:3121
@@ -529,7 +531,7 @@ mcp_servers:
   graphify-vault-core:
     command: graphify-mcp
     args:
-    - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
+      - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
     enabled: true
   remarkable:
     command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh

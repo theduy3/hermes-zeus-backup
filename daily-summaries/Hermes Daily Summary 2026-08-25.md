@@ -13,38 +13,51 @@ wiki_status: complete
 
 ## Summary
 
-Hermes Agent is operational with 7 active profiles under the gateway. The model is `tencent/hy3:free` via Nous Portal (auth valid through 2026-08-25 02:10 UTC — expires tonight). All 7 scheduled cron jobs are healthy with no failures. MCP stack is stable: 5 servers enabled, 1 disabled.
+Hermes Agent is healthy and fully operational. Gateway running with 7 child profiles. 12 of 13 scheduled jobs active; the one inactive job appears to be a no-agent script that completed normally. All MCP servers enabled. One Telegram profile (`default`) and 6 other named profiles active. xAI OAuth and Nous Portal authenticated; OpenAI Codex not set up (non-blocking).
 
 ## What Ran Today
 
-- **daily-hermes-health-check** — completed 2026-08-24 09:02 EDT, next at 2026-08-25 09:00 PDT
-- **weekday-hermes-recap** — completed 2026-08-24 21:01 EDT, next at 2026-08-25 18:00 EDT
-- **weekly-hermes-ops-review** — completed 2026-08-24 09:19 EDT, next 2026-08-31 (Monday)
-- **weekday-hermes-vault-summary** — currently running (started 2026-08-21, still active as of this check)
-- **nightly-hermes-github-backup** — completed 2026-08-24 00:04 PDT, next at 2026-08-25 00:00 PDT
-- **Hermes profile gateway watchdog** — last health ping 2026-08-24 20:58 EDT, every 30 min
+**Completed cron jobs (2026-08-25):**
+- `daily-hermes-health-check` — 12:01 EDT, ok
+- `weekday-hermes-recap` — 18:02 EDT, ok
+- `weekly-hermes-ops-review` — ran 2026-08-24, ok
+- `nightly-hermes-github-backup` — 03:02 EDT, ok
+- `Hermes profile gateway watchdog` — 17:59 EDT, ok
+- `graphify-daily-refresh` — 07:28 EDT, ok
+- `Daily Tasks/Events Call Generator (Zeus+Catthew)` — 08:15 EDT, ok
+- `weekday-hermes-vault-summary` — running as of this report (in progress)
+
+Upcoming next runs: watchdog at 18:29 EDT, vault summary at 18:10 EDT, daily health at 09:00 EDT tomorrow.
 
 ## Health Signals
 
-- **Gateway:** Running (manual, not system service). PIDs: 2799855, 2388278, 2388285, 2388288, 2388291, 2388293, 2388294, 2895923.
-- **Profiles online:** butter, catthew, charles, finance, thor, wiki, zeus — all responding.
-- **Doctor:** Clean — no security advisories, no MCP anomalies, SQLite WAL healthy, all required packages present.
-- **Auth:** Nous Portal logged in and valid. OpenAI Codex, MiniMax OAuth not logged in (non-blocking).
-- **Config:** v37, no deprecated keys, .env exists but no API keys stored.
-- **MCP servers:**
-  - Enabled: graphify-vault, graphify-vault-core, graphify-vault-sources, graphify-vault-daily, remarkable
-  - Disabled: graphify-hermes
+**Green:**
+- Gateway: running (8 PIDs), all 7 profiles responsive
+- MCP: graphify-vault (core/sources/daily) + remarkable all enabled; graphify-hermes disabled (intentional per policy)
+- Python/DB: 3.11.15, SQLite WAL, state.db 691.8 MB, 13,138 sessions
+- Auth: Nous Portal + xAI OAuth active; refreshable
+- Telegram: configured and operational
+- Skills Hub: 8 skills installed, lock OK
+
+**Yellow (non-blocking):**
+- No API keys in `~/.hermes/.env` — model runs via Nous Portal auth only
+- OpenAI Codex not authenticated
+- MiniMax OAuth not logged in
+- graphify-hermes MCP disabled (by policy — default profile loads all 4 vault graphs)
+- 2 npm workspace advisories (build-tool only, not runtime)
+- Playwright Chromium not installed (browser_* tools hidden)
+
+**No red signals.** No security advisories. No suspicious MCP commands.
 
 ## Next Actions
 
-- **Nous Portal auth expires tonight** (2026-08-25 02:10 UTC / ~22:10 EDT) — re-auth before then or first job after expiry will fail.
-- **graphify-hermes MCP disabled** — if Hermes-vault graph integration is needed, enable it via `hermes mcp enable graphify-hermes`.
-- **Gateway not installed as system service** — runs manually. Consider `hermes gateway install` for persistence across reboots.
-- **vault-summary cron still running** — monitor for completion; if stuck, investigate.
+- `[ ]` Verify `weekday-hermes-vault-summary` completes successfully (in progress at report time)
+- `[ ]` Consider setting OpenAI Codex auth if Codex-based models are desired
+- `[ ]` Optional: install Playwright Chromium for browser tool access
+- `[ ]` Optional: set GITHUB_TOKEN in `.env` to lift 60 req/hr GitHub rate limit
 
 ## Related Notes
 
-- [[Hermes Agent Setup and Operations]]
-- [[Hermes Operations Dashboard]]
-- [[Profile Gateway Watchdog]]
-- [[Nous Portal Auth]]
+- `[[Hermes Agent Setup and Operations]]`
+- `[[Hermes Operations Dashboard]]`
+- `[[Life OS State of Truth]]`

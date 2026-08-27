@@ -18,15 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 143
+        "completed": 145
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-08-25T09:00:00-07:00",
-      "last_run_at": "2026-08-24T09:02:04.819782-04:00",
+      "next_run_at": "2026-08-27T09:00:00-04:00",
+      "last_run_at": "2026-08-26T09:03:03.361984-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 99
+        "completed": 101
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-08-25T18:00:00-04:00",
-      "last_run_at": "2026-08-24T21:01:14.807414-04:00",
+      "next_run_at": "2026-08-27T18:00:00-04:00",
+      "last_run_at": "2026-08-26T18:04:32.265493-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -131,15 +131,15 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 100
+        "completed": 102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-08-25T18:10:00-04:00",
-      "last_run_at": "2026-08-24T21:12:30.117064-04:00",
+      "next_run_at": "2026-08-27T18:10:00-04:00",
+      "last_run_at": "2026-08-26T18:12:58.926225-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -203,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 104
+        "completed": 106
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-08-26T00:00:00-04:00",
-      "last_run_at": "2026-08-24T00:04:52.841718-04:00",
+      "next_run_at": "2026-08-28T00:00:00-07:00",
+      "last_run_at": "2026-08-26T00:01:18.987554-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-25T03:00:26.313023-04:00",
-        "by": "hal-server-803171.novalocal:2799855:9a0e177e83524a3fa1d7a47e85aa6303"
+        "at": "2026-08-27T00:03:19.645486-07:00",
+        "by": "hal-server-803171.novalocal:2935089:9e043990607144819562ec5ac4ed307a"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -247,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 3579
+        "completed": 3675
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-08-25T03:28:26.454740-04:00",
-      "last_run_at": "2026-08-25T02:58:26.454740-04:00",
+      "next_run_at": "2026-08-27T00:33:19.841265-07:00",
+      "last_run_at": "2026-08-27T00:03:19.841265-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -294,24 +294,24 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-08-25T03:30:00-07:00",
-      "last_run_at": "2026-08-24T03:31:46.179647-04:00",
+      "next_run_at": "2026-08-27T03:30:00-04:00",
+      "last_run_at": "2026-08-26T03:31:14.752676-04:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nwarning: 65 source file(s) produced zero nodes and are absent from the graph: baseline.json, easy.json, hard.json, acp.json, gui.json (+60 more). A re-run will retry them (empties are no longer cached); if it persists, please report the file(s) (#1666).\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 234, in <module>\n    main()\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 216, in main\n    stats[\"hermes\"] = build_hermes()\n                      ^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 102, in build_hermes\n    run([\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 85, in run\n    subprocess.run(cmd, cwd=str(cwd) if cwd else None, env=env, check=True)\n  File \"/home/hermes/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['graphify', 'extract', '/home/hermes/.hermes/hermes-agent', '--code-only', '--out', '/home/hermes/.graphify/hermes', '--force', '--max-workers', '4']' died with <Signals.SIGKILL: 9>.\nstdout:\n$ graphify extract /home/hermes/.hermes/hermes-agent --code-only --out /home/hermes/.graphify/hermes --force --max-workers 4\n[graphify extract] --force: full re-scan, semantic cache reads skipped\n[graphify extract] scanning /home/hermes/.hermes/hermes-agent\n[graphify extract] --code-only: skipping 1805 non-code file(s) (1730 docs, 10 papers, 65 images) — no LLM extraction\n[graphify extract] found 6972 code, 0 docs, 0 papers, 0 images\n[graphify extract] 790 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, .mailmap, .nojekyll (+784 more)\n[graphify extract] 10 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env.example, .envrc, .npmrc, bitwarden.md, command.md, index.md (+4 more)\n[graphify extract] AST extraction on 6972 code files...\n  AST extraction: 100/2515 uncached files (3%) [4 workers]\n  AST extraction: 200/2515 uncached files (7%) [4 workers]\n  AST extraction: 300/2515 uncached files (11%) [4 workers]\n  AST extraction: 400/2515 uncached files (15%) [4 workers]\n  AST extraction: 500/2515 uncached files (19%) [4 workers]\n  AST extraction: 600/2515 uncached files (23%) [4 workers]\n  AST extraction: 700/2515 uncached files (27%) [4 workers]\n  AST extraction: 800/2515 uncached files (31%) [4 workers]\n  AST extraction: 900/2515 uncached files (35%) [4 workers]\n  AST extraction: 1000/2515 uncached files (39%) [4 workers]\n  AST extraction: 1100/2515 uncached files (43%) [4 workers]\n  AST extraction: 1200/2515 uncached files (47%) [4 workers]\n  AST extraction: 1300/2515 uncached files (51%) [4 workers]\n  AST extraction: 1400/2515 uncached files (55%) [4 workers]\n  AST extraction: 1500/2515 uncached files (59%) [4 workers]\n  AST extraction: 1600/2515 uncached files (63%) [4 workers]\n  AST extraction: 1700/2515 uncached files (67%) [4 workers]\n  AST extraction: 1800/2515 uncached files (71%) [4 workers]\n  AST extraction: 1900/2515 uncached files (75%) [4 workers]\n  AST extraction: 2000/2515 uncached files (79%) [4 workers]\n  AST extraction: 2100/2515 uncached files (83%) [4 workers]\n  AST extraction: 2200/2515 uncached files (87%) [4 workers]\n  AST extraction: 2300/2515 uncached files (91%) [4 workers]\n  AST extraction: 2400/2515 uncached files (95%) [4 workers]\n  AST extraction: 2500/2515 uncached files (99%) [4 workers]\n  AST extraction: 2515/2515 uncached files (100%) [4 workers]",
+      "last_error": "Script exited with code 1\nstderr:\nwarning: 66 source file(s) produced zero nodes and are absent from the graph: baseline.json, easy.json, hard.json, acp.json, gui.json (+61 more). A re-run will retry them (empties are no longer cached); if it persists, please report the file(s) (#1666).\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 234, in <module>\n    main()\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 216, in main\n    stats[\"hermes\"] = build_hermes()\n                      ^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 102, in build_hermes\n    run([\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 85, in run\n    subprocess.run(cmd, cwd=str(cwd) if cwd else None, env=env, check=True)\n  File \"/home/hermes/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['graphify', 'extract', '/home/hermes/.hermes/hermes-agent', '--code-only', '--out', '/home/hermes/.graphify/hermes', '--force', '--max-workers', '4']' died with <Signals.SIGKILL: 9>.\nstdout:\n$ graphify extract /home/hermes/.hermes/hermes-agent --code-only --out /home/hermes/.graphify/hermes --force --max-workers 4\n[graphify extract] --force: full re-scan, semantic cache reads skipped\n[graphify extract] scanning /home/hermes/.hermes/hermes-agent\n[graphify extract] --code-only: skipping 1854 non-code file(s) (1780 docs, 10 papers, 64 images) — no LLM extraction\n[graphify extract] found 7507 code, 0 docs, 0 papers, 0 images\n[graphify extract] 901 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, .mailmap, .nojekyll (+895 more)\n[graphify extract] 10 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env.example, .envrc, .npmrc, bitwarden.md, command.md, index.md (+4 more)\n[graphify extract] AST extraction on 7507 code files...\n  AST extraction: 100/3711 uncached files (2%) [4 workers]\n  AST extraction: 200/3711 uncached files (5%) [4 workers]\n  AST extraction: 300/3711 uncached files (8%) [4 workers]\n  AST extraction: 400/3711 uncached files (10%) [4 workers]\n  AST extraction: 500/3711 uncached files (13%) [4 workers]\n  AST extraction: 600/3711 uncached files (16%) [4 workers]\n  AST extraction: 700/3711 uncached files (18%) [4 workers]\n  AST extraction: 800/3711 uncached files (21%) [4 workers]\n  AST extraction: 900/3711 uncached files (24%) [4 workers]\n  AST extraction: 1000/3711 uncached files (26%) [4 workers]\n  AST extraction: 1100/3711 uncached files (29%) [4 workers]\n  AST extraction: 1200/3711 uncached files (32%) [4 workers]\n  AST extraction: 1300/3711 uncached files (35%) [4 workers]\n  AST extraction: 1400/3711 uncached files (37%) [4 workers]\n  AST extraction: 1500/3711 uncached files (40%) [4 workers]\n  AST extraction: 1600/3711 uncached files (43%) [4 workers]\n  AST extraction: 1700/3711 uncached files (45%) [4 workers]\n  AST extraction: 1800/3711 uncached files (48%) [4 workers]\n  AST extraction: 1900/3711 uncached files (51%) [4 workers]\n  AST extraction: 2000/3711 uncached files (53%) [4 workers]\n  AST extraction: 2100/3711 uncached files (56%) [4 workers]\n  AST extraction: 2200/3711 uncached files (59%) [4 workers]\n  AST extraction: 2300/3711 uncached files (61%) [4 workers]\n  AST extraction: 2400/3711 uncached files (64%) [4 workers]\n  AST extraction: 2500/3711 uncached files (67%) [4 workers]\n  AST extraction: 2600/3711 uncached files (70%) [4 workers]\n  AST extraction: 2700/3711 uncached files (72%) [4 workers]\n  AST extraction: 2800/3711 uncached files (75%) [4 workers]\n  AST extraction: 2900/3711 uncached files (78%) [4 workers]\n  AST extraction: 3000/3711 uncached files (80%) [4 workers]\n  AST extraction: 3100/3711 uncached files (83%) [4 workers]\n  AST extraction: 3200/3711 uncached files (86%) [4 workers]\n  AST extraction: 3300/3711 uncached files (88%) [4 workers]\n  AST extraction: 3400/3711 uncached files (91%) [4 workers]\n  AST extraction: 3500/3711 uncached files (94%) [4 workers]\n  AST extraction: 3600/3711 uncached files (97%) [4 workers]\n  AST extraction: 3700/3711 uncached files (99%) [4 workers]\n  AST extraction: 3711/3711 uncached files (100%) [4 workers]",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 7
+      "failure_streak": 1
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-08-25T05:15:00-07:00",
-      "last_run_at": "2026-08-24T05:15:04.157060-04:00",
+      "next_run_at": "2026-08-27T05:15:00-04:00",
+      "last_run_at": "2026-08-26T05:15:39.275025-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -486,16 +486,16 @@
       "schedule_display": "30 20 * * 3",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.762660-04:00",
-      "next_run_at": "2026-08-26T20:30:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-09-02T20:30:00-07:00",
+      "last_run_at": "2026-08-26T20:30:17.173553-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
@@ -508,7 +508,8 @@
         "user_id": "8446251233"
       },
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "0c2a800fe2b5",
@@ -535,16 +536,16 @@
       "schedule_display": "0 20 * * 3",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.773308-04:00",
-      "next_run_at": "2026-08-26T20:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-09-02T20:00:00-07:00",
+      "last_run_at": "2026-08-26T20:00:13.298502-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
@@ -557,8 +558,95 @@
         "user_id": "8446251233"
       },
       "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "a5e9804a3168",
+      "name": "ox-alpha-free-expiry-model-switch",
+      "prompt": "One-shot model migration task (self-contained; no prior context).\n\nBackground: The default Hermes model \"stealth/ox-alpha\" on OpenRouter stops being free on 2026-08-28. At this run, switch the DEFAULT profile to the next best FREE model WITH VISION on OpenRouter; if none exists, switch to the Nous provider.\n\nSteps:\n1. Fetch the public model list: curl https://openrouter.ai/api/v1/models (no auth needed for listing). Filter for models where pricing.prompt == \"0\" and pricing.completion == \"0\" (free) AND input modalities include \"image\" (vision-capable).\n2. Rank candidates: prefer recent flagship-family general-purpose chat models with vision input (Gemini, Qwen-VL, Llama vision, Mistral, etc.). Exclude image-generation-only and embedding models.\n3. Verify your top pick actually works by sending a tiny test chat completion through OpenRouter using the OPENROUTER_API_KEY from ~/.hermes/.env (write a small Python or shell snippet in /tmp that loads the key from .env rather than hardcoding anything). Confirm you get an HTTP 200 with a completion before trusting the pick.\n4. Apply via terminal ONLY (config.yaml is write-protected from file-edit tools): hermes config set model.default \"<model-id>\" && hermes config set model.provider openrouter\n5. FALLBACK: if no free vision model passes verification, switch provider to Nous instead (hermes config set model.provider nous, plus a valid Nous-supported model id). Do NOT leave OpenRouter configured pointing at a now-paid-only ox-alpha model.\n6. Only modify the DEFAULT profile config (~/.hermes/config.yaml); never touch other profiles.\n7. Report: chosen model + why, verification outcome, exact config values set. If nothing changed due to failure, say so explicitly.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openrouter",
+      "model_snapshot": "stealth/ox-alpha",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-28T13:00:00-07:00",
+        "display": "once at 2026-08-28 13:00"
+      },
+      "schedule_display": "once at 2026-08-28 13:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-25T21:23:37.992710-07:00",
+      "next_run_at": "2026-08-28T13:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "4d68d1c54f91",
+      "name": "Revert profiles to xAI Grok (fallback expiry)",
+      "prompt": "You are reverting a temporary model switch. Earlier today all Hermes profiles were switched to hy3-free / nous (the Nous free fallback tier) because xAI Grok was down. Now revert them back to xAI Grok — but ONLY if xAI is actually reachable, otherwise keep the fallback and report.\n\nSteps:\n1. Verify xAI is back. A lightweight reachability check is fine (e.g. confirm the xai-oauth credential pool is non-empty via /home/hermes/.local/bin/hermes config show, or confirm the xai provider resolves). If xAI appears still unavailable, DO NOT revert: leave hy3-free/nous in place, report \"xAI still down — kept hy3-free/nous fallback,\" and stop.\n2. If xAI is reachable, for EACH of these profiles — default, butter, catthew, charles, finance, thor, wiki, zeus — set the model back to Grok:\n   - For the \"default\" profile, omit --profile:\n       /home/hermes/.local/bin/hermes config set model.default grok-4.20-reasoning\n       /home/hermes/.local/bin/hermes config set model.provider xai\n   - For every other profile, add --profile <name>:\n       /home/hermes/.local/bin/hermes config set --profile zeus model.default grok-4.20-reasoning\n       /home/hermes/.local/bin/hermes config set --profile zeus model.provider xai\n3. After setting, verify each with /home/hermes/.local/bin/hermes config get [--profile <p>] model.default and model.provider.\n4. Report a concise table: profile -> model/provider, and whether the revert succeeded. Only change model.default and model.provider — touch nothing else.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "opencode-free",
+      "model_snapshot": "hy3-free",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T09:00:00-07:00",
+        "display": "once at 2026-08-27 09:00"
+      },
+      "schedule_display": "once at 2026-08-27 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-26T17:33:22.496129-07:00",
+      "next_run_at": "2026-08-27T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "all",
+      "origin": null,
+      "enabled_toolsets": null,
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-25T03:00:26.313198-04:00"
+  "updated_at": "2026-08-27T00:03:19.841399-07:00"
 }

@@ -186,8 +186,7 @@ def main() -> int:
             print(f"would send: {task.title} ({task.path})")
             return 0
         markup = json.dumps({"inline_keyboard": [[
-            {"text": "✅ Done", "callback_data": f"zt:{digest}"},
-            {"text": "More", "callback_data": f"ztm:{digest}"},
+            {"text":"Done","callback_data":f"zt:{digest}"},{"text":"Delay","callback_data":f"delay:{digest}"},{"text":"Delete","callback_data":f"del:{digest}"},
         ]]}, ensure_ascii=False)
         res = post_telegram(token, "sendMessage", {"chat_id": chat_id, "text": text, "reply_markup": markup, "disable_web_page_preview": "true"})
         mid = res.get("result", {}).get("message_id")
@@ -210,3 +209,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+# Auto handlers added: delay reply parses YYYY-MM-DD; delete removes file + syncs calendar

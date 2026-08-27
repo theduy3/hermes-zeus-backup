@@ -1,5 +1,5 @@
 model:
-  default: tencent/hy3:free
+  default: z-ai/glm-5.2
   provider: nous
   auxiliary:
     vision:
@@ -10,11 +10,13 @@ model:
   parameters:
     reasoning_effort: max
 providers: {}
-fallback_providers: '[]'
+fallback_providers:
+  - provider: openrouter
+    model: thinkingmachines/inkling-small:free
 credential_pool_strategies:
   openai-codex: fill_first
 toolsets:
-- hermes-cli
+  - hermes-cli
 agent:
   max_turns: 90
   gateway_timeout: 1800
@@ -272,9 +274,9 @@ display:
   runtime_footer:
     enabled: false
     fields:
-    - model
-    - context_pct
-    - cwd
+      - model
+      - context_pct
+      - cwd
   copy_shortcut: auto
   tool_progress: all
   background_process_notifications: all
@@ -474,45 +476,45 @@ streaming:
   enabled: false
 platform_toolsets:
   cli:
-  - browser
-  - clarify
-  - code_execution
-  - cronjob
-  - delegation
-  - file
-  - image_gen
-  - memory
-  - messaging
-  - session_search
-  - skills
-  - terminal
-  - todo
-  - tts
-  - vision
-  - web
+    - browser
+    - clarify
+    - code_execution
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - messaging
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
   telegram:
-  - hermes-telegram
+    - hermes-telegram
   whatsapp:
-  - hermes-whatsapp
+    - hermes-whatsapp
   slack:
-  - hermes-slack
+    - hermes-slack
   signal:
-  - hermes-signal
+    - hermes-signal
   homeassistant:
-  - hermes-homeassistant
+    - hermes-homeassistant
   qqbot:
-  - hermes-qqbot
+    - hermes-qqbot
 approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 known_plugin_toolsets:
   cli:
-  - spotify
+    - spotify
 mcp_servers:
   agentmemory:
     command: npx
     args:
-    - -y
-    - '@agentmemory/mcp'
+      - -y
+      - '@agentmemory/mcp'
     env:
       AGENTMEMORY_TOOLS: all
       AGENTMEMORY_URL: http://localhost:3121
@@ -520,7 +522,7 @@ mcp_servers:
   graphify-vault-core:
     command: graphify-mcp
     args:
-    - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
+      - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
     enabled: true
   remarkable:
     command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh

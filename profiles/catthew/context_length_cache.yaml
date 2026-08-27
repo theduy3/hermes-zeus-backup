@@ -5,3 +5,4 @@ context_lengths:
   gpt-5.6-luna@https://chatgpt.com/backend-api/codex: 272000
   gpt-5.6-terra@https://chatgpt.com/backend-api/codex: 272000
   tencent/hy3:free@https://inference-api.nousresearch.com/v1: 262144
+  hy3-free@https://inference-api.nousresearch.com/v1: 262144
