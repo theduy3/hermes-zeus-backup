@@ -1,6 +1,6 @@
 New raw captures, including device/newsletter imports, go to /vault/Inbox; Life OS is the eventual current operating authority, while theduyvault remains raw capture, source evidence, research, and history.
 §
-User only wants OpenAI models/providers enabled; they do not want Anthropic, OpenRouter, or any non-OpenAI model configured.
+Primary: xai-oauth grok-4.5 all profiles; fallback Nous hy3-free. No Anthropic/OpenRouter primary; keep OpenCode providers removed.
 §
 Lives Pacific time; child Victoria; owns nail salons, salon360, real estate. Telegram @username is @theduynguyen (case-sensitive — never guess @theduy). Tracks stocks, horoscope, Vancouver/Laval/Quebec weather.
 §

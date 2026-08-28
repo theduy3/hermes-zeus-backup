@@ -1,20 +1,21 @@
 model:
-  default: z-ai/glm-5.2
-  provider: nous
+  default: grok-4.5
+  provider: xai-oauth
   auxiliary:
     vision:
-      model: stepfun/step-3.7-flash:free
-      provider: nous
+      model: grok-4.5
+      provider: xai-oauth
+    provider: xai-oauth
   max_output_tokens: 128000
-  name: gpt-5.6-luna
   parameters:
     reasoning_effort: max
-providers: {}
 fallback_providers:
-  - provider: openrouter
-    model: thinkingmachines/inkling-small:free
+  - provider: nous
+    model: hy3-free
 credential_pool_strategies:
   openai-codex: fill_first
+  xai-oauth: fill_first
+  nous: fill_first
 toolsets:
   - hermes-cli
 agent:
@@ -80,7 +81,6 @@ terminal:
   auto_source_bashrc: true
   docker_image: nikolaik/python-nodejs:python3.11-nodejs20
   docker_forward_env: []
-  docker_env: {}
   singularity_image: docker://nikolaik/python-nodejs:python3.11-nodejs20
   modal_image: nikolaik/python-nodejs:python3.11-nodejs20
   daytona_image: nikolaik/python-nodejs:python3.11-nodejs20
@@ -121,8 +121,8 @@ checkpoints:
   max_file_size_mb: 10
   auto_prune: false
   retention_days: 7
-  delete_orphans: true
   min_interval_hours: 24
+  delete_orphans: true
 file_read_max_chars: 100000
 tool_output:
   max_bytes: 50000
@@ -170,21 +170,55 @@ auxiliary:
     base_url: ''
     api_key: ''
     timeout: 120
-    extra_body: {}
     download_timeout: 30
-  web_extract:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 360
-    extra_body: {}
   compression:
     provider: openai-codex
     model: gpt-5.5
     base_url: ''
     api_key: ''
     timeout: 120
+  skills_hub:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 30
+  approval:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 30
+  mcp:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 30
+  title_generation:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 30
+  triage_specifier:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 120
+  curator:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 600
+  web_extract:
+    provider: openai-codex
+    model: gpt-5.5
+    base_url: ''
+    api_key: ''
+    timeout: 360
     extra_body: {}
   session_search:
     provider: openai-codex
@@ -194,48 +228,6 @@ auxiliary:
     timeout: 30
     extra_body: {}
     max_concurrency: 3
-  skills_hub:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 30
-    extra_body: {}
-  approval:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 30
-    extra_body: {}
-  mcp:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 30
-    extra_body: {}
-  title_generation:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 30
-    extra_body: {}
-  triage_specifier:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 120
-    extra_body: {}
-  curator:
-    provider: openai-codex
-    model: gpt-5.5
-    base_url: ''
-    api_key: ''
-    timeout: 600
-    extra_body: {}
   flush_memories:
     provider: openai-codex
     model: gpt-5.5
@@ -251,6 +243,7 @@ display:
   tui_auto_resume_recent: false
   bell_on_complete: false
   show_reasoning: false
+  background_process_notifications: all
   streaming: true
   timestamps: false
   final_response_markdown: strip
@@ -267,10 +260,8 @@ display:
     last_lines: 2
   interim_assistant_messages: true
   tool_progress_command: false
-  tool_progress_overrides: {}
   tool_preview_length: 0
   ephemeral_system_ttl: 0
-  platforms: {}
   runtime_footer:
     enabled: false
     fields:
@@ -278,8 +269,8 @@ display:
       - context_pct
       - cwd
   copy_shortcut: auto
+  tool_progress_overrides: {}
   tool_progress: all
-  background_process_notifications: all
 dashboard:
   theme: default
 privacy:
@@ -311,7 +302,6 @@ tts:
     voice: en_US-lessac-medium
 stt:
   enabled: true
-  provider: local
   local:
     model: base
     language: ''
@@ -319,6 +309,7 @@ stt:
     model: whisper-1
   mistral:
     model: voxtral-mini-latest
+  provider: local
 voice:
   record_key: ctrl+b
   max_recording_seconds: 120
@@ -337,8 +328,8 @@ memory:
   user_profile_enabled: true
   memory_char_limit: 2200
   user_char_limit: 1375
-  provider: agentmemory
   nudge_interval: 10
+  provider: agentmemory
   flush_min_turns: 6
 delegation:
   model: ''
@@ -372,32 +363,26 @@ curator:
   backup:
     enabled: true
     keep: 5
-honcho: {}
 timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''
   allowed_channels: ''
-  channel_prompts: {}
 discord:
   require_mention: true
   free_response_channels: ''
   allowed_channels: ''
   auto_thread: true
   reactions: true
-  channel_prompts: {}
   dm_role_auth_guild: ''
   server_actions: ''
-whatsapp: {}
 telegram:
   reactions: false
-  channel_prompts: {}
   allowed_chats: ''
 mattermost:
   require_mention: true
   free_response_channels: ''
   allowed_channels: ''
-  channel_prompts: {}
 matrix:
   require_mention: true
   free_response_rooms: ''
@@ -409,10 +394,7 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist: []
-quick_commands: {}
-hooks: {}
 hooks_auto_accept: false
-personalities: {}
 security:
   allow_private_urls: false
   redact_secrets: true
@@ -428,7 +410,6 @@ security:
   allow_lazy_installs: true
 cron:
   wrap_response: true
-  max_parallel_jobs: null
 kanban:
   dispatch_in_gateway: true
   dispatch_interval_seconds: 60
@@ -445,9 +426,16 @@ model_catalog:
   enabled: true
   url: https://hermes-agent.nousresearch.com/docs/api/model-catalog.json
   ttl_hours: 24
-  providers: {}
+  excluded_providers:
+    - opencode
+    - opencode-zen
+    - opencode-go
+    - opencode-free
+    - moa
 network:
   force_ipv4: false
+streaming:
+  enabled: false
 sessions:
   auto_prune: false
   retention_days: 90
@@ -465,15 +453,12 @@ lsp:
   wait_mode: document
   wait_timeout: 5.0
   install_strategy: auto
-  servers: {}
 _config_version: 23
 session_reset:
   mode: both
   idle_minutes: 1440
   at_hour: 4
 group_sessions_per_user: true
-streaming:
-  enabled: false
 platform_toolsets:
   cli:
     - browser
@@ -483,6 +468,7 @@ platform_toolsets:
     - delegation
     - file
     - image_gen
+    - kanban
     - memory
     - messaging
     - session_search
@@ -492,8 +478,26 @@ platform_toolsets:
     - tts
     - vision
     - web
+    - x_search
   telegram:
-    - hermes-telegram
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - kanban
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
+    - x_search
   whatsapp:
     - hermes-whatsapp
   slack:
@@ -508,6 +512,10 @@ approval_mode: ask
 TELEGRAM_HOME_CHANNEL: '8446251233'
 known_plugin_toolsets:
   cli:
+    - a2a
+    - spotify
+  telegram:
+    - a2a
     - spotify
 mcp_servers:
   agentmemory:
@@ -528,3 +536,80 @@ mcp_servers:
     command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh
     connect_timeout: 180.0
     enabled: true
+known_builtin_toolsets:
+  telegram:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
+  cli:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
+
+# ── Fallback Model ────────────────────────────────────────────────────
+# Automatic provider failover when primary is unavailable.
+# Uncomment and configure to enable. Triggers on rate limits (429),
+# overload (529), service errors (503), or connection failures.
+#
+# Supported providers:
+#   openrouter   (OPENROUTER_API_KEY)  — routes to any model
+#   openai-codex (OAuth — hermes auth) — OpenAI Codex
+#   nous         (OAuth — hermes auth) — Nous Portal
+#   zai          (ZAI_API_KEY)         — Z.AI / GLM
+#   kimi-coding  (KIMI_API_KEY)        — Kimi / Moonshot
+#   kimi-coding-cn (KIMI_CN_API_KEY)   — Kimi / Moonshot (China)
+#   minimax      (MINIMAX_API_KEY)     — MiniMax
+#   minimax-cn   (MINIMAX_CN_API_KEY)  — MiniMax (China)
+#   bedrock      (AWS IAM / boto3)     — AWS Bedrock (Converse API)
+#
+# For custom OpenAI-compatible endpoints, add base_url and key_env.
+#
+# fallback_model:
+#   provider: openrouter
+#   model: anthropic/claude-sonnet-4

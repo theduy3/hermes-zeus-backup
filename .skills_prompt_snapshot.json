@@ -46,8 +46,8 @@
       7606
     ],
     "autonomous-ai-agents/hermes-profile-model-config/SKILL.md": [
-      1787791037500358597,
-      14742
+      1787844330851837887,
+      19784
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
       1787031466234675630,
@@ -94,8 +94,8 @@
       11646
     ],
     "devops/hermes-operations-troubleshooting/SKILL.md": [
-      1787346341490410240,
-      32968
+      1787853065706561265,
+      36764
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -501,6 +501,14 @@
       1778644994307488109,
       6140
     ],
+    "social-media/x-twitter-search-routing/SKILL.md": [
+      1787855634537136327,
+      5019
+    ],
+    "social-media/agent-reach-platform-auth/SKILL.md": [
+      1787855625438889950,
+      4656
+    ],
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778490391625044033,
       7910
@@ -562,8 +570,8 @@
       40495
     ],
     "agent-reach/SKILL.md": [
-      1785567266701897817,
-      6702
+      1787854430774537598,
+      7429
     ]
   },
   "skills": [
@@ -902,7 +910,7 @@
       "skill_name": "hermes-operations-troubleshooting",
       "category": "devops",
       "frontmatter_name": "hermes-operations-troubleshooting",
-      "description": "Troubleshoot Hermes operational issues in live deployment...",
+      "description": "Troubleshoot Hermes ops: cron, gateway, Telegram/Discord ...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1999,10 +2007,36 @@
       }
     },
     {
+      "skill_name": "agent-reach-platform-auth",
+      "category": "social-media",
+      "frontmatter_name": "agent-reach-platform-auth",
+      "description": "Use when importing Agent Reach Reddit/Twitter VPS cookies.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "social-platform-workflows",
       "category": "social-media",
       "frontmatter_name": "social-platform-workflows",
       "description": "Use when operating or designing workflows for social/mess...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "x-twitter-search-routing",
+      "category": "social-media",
+      "frontmatter_name": "x-twitter-search-routing",
+      "description": "Use when searching X/Twitter via Hermes or Telegram.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

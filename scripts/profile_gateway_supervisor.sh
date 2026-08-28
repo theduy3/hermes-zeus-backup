@@ -4,9 +4,22 @@ BASE=/home/hermes/.hermes
 PROFILES=(butter catthew charles finance thor zeus)
 LOG_BASE="$BASE/profile-supervisor.log"
 is_profile_gateway_running() {
+  # Match live python hermes gateway procs by HERMES_HOME.
+  # Do NOT require contiguous "hermes gateway run" in args — supervisor launches
+  #   python3 .../hermes -p <name> gateway run
+  # so "hermes" and "gateway" are separated by -p <name>.
   local profile_home="$1"
-  local pid
-  for pid in $(ps -eo pid=,args= | awk '/hermes gateway run/ && !/awk/ {print $1}'); do
+  local pid cmd
+  for pid in /proc/[0-9]*; do
+    pid="${pid##*/}"
+    [[ "$pid" =~ ^[0-9]+$ ]] || continue
+    cmd=$(tr '\0' ' ' < "/proc/$pid/cmdline" 2>/dev/null) || continue
+    # real gateway adapter only (python ... hermes ... gateway run|restart)
+    # not bash entrypoint wrappers or this supervisor script
+    case "$cmd" in
+      *python*hermes*gateway*run*|*python*hermes*gateway*restart*) ;;
+      *) continue ;;
+    esac
     tr '\0' '\n' < "/proc/$pid/environ" 2>/dev/null | grep -Fx "HERMES_HOME=$profile_home" >/dev/null && return 0
   done
   return 1

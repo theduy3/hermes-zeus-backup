@@ -1,18 +1,18 @@
 model:
-  default: hy3-free
-  provider: nous
+  default: grok-4.5
+  provider: xai-oauth
   parameters:
     reasoning_effort: max
   auxiliary:
-    provider: nous
+    provider: xai-oauth
     vision:
-      model: stepfun/step-3.7-flash:free
-      provider: nous
+      model: grok-4.5
+      provider: xai-oauth
   max_output_tokens: 8192
   api_mode: chat_completions
 fallback_providers:
-  - provider: openrouter
-    model: thinkingmachines/inkling-small:free
+  - provider: nous
+    model: hy3-free
 credential_pool_strategies:
   openai-codex: fill_first
   nous: fill_first
@@ -185,12 +185,6 @@ auxiliary:
     api_key: ''
     timeout: 120
     download_timeout: 30
-  web_extract:
-    provider: auto
-    model: ''
-    base_url: ''
-    api_key: ''
-    timeout: 360
   compression:
     provider: auto
     model: ''
@@ -257,6 +251,12 @@ auxiliary:
     base_url: ''
     api_key: ''
     timeout: 60
+  web_extract:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 360
   session_search:
     provider: openai-codex
     model: gpt-5.5
@@ -371,7 +371,6 @@ tts:
     voice: en_US-lessac-medium
 stt:
   enabled: true
-  provider: local
   local:
     model: base
     language: ''
@@ -384,6 +383,7 @@ stt:
     language_code: ''
     tag_audio_events: false
     diarize: false
+  provider: local
 voice:
   record_key: ctrl+b
   max_recording_seconds: 120
@@ -403,8 +403,8 @@ memory:
   write_approval: false
   memory_char_limit: 2200
   user_char_limit: 1375
-  provider: ''
   nudge_interval: 10
+  provider: ''
   flush_min_turns: 6
 delegation:
   model: ''
@@ -548,6 +548,12 @@ model_catalog:
   enabled: true
   url: https://hermes-agent.nousresearch.com/docs/api/model-catalog.json
   ttl_hours: 1
+  excluded_providers:
+    - opencode
+    - opencode-zen
+    - opencode-go
+    - opencode-free
+    - moa
 network:
   force_ipv4: false
 gateway:
@@ -605,7 +611,7 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
 paste_collapse_char_threshold: 2000
-_config_version: 37
+_config_version: 39
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -613,7 +619,6 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-    - bfl
     - browser
     - clarify
     - code_execution
@@ -644,6 +649,7 @@ platform_toolsets:
     - delegation
     - file
     - image_gen
+    - kanban
     - memory
     - messaging
     - session_search
@@ -655,6 +661,7 @@ platform_toolsets:
     - video_gen
     - vision
     - web
+    - x_search
   whatsapp:
     - hermes-whatsapp
   slack:
@@ -672,6 +679,7 @@ known_plugin_toolsets:
     - a2a
     - spotify
   telegram:
+    - a2a
     - spotify
 plugins:
   enabled:
@@ -717,7 +725,6 @@ video_gen:
       public_url: true
 known_builtin_toolsets:
   cli:
-    - bfl
     - browser
     - clarify
     - code_execution
@@ -744,3 +751,60 @@ known_builtin_toolsets:
     - web
     - x_search
     - yuanbao
+  telegram:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
+platforms:
+  telegram:
+    enabled: true
+    home_channel:
+      platform: telegram
+      chat_id: '8446251233'
+      name: theduy
+      user_id: '8446251233'
+
+# ── Fallback Model ────────────────────────────────────────────────────
+# Automatic provider failover when primary is unavailable.
+# Uncomment and configure to enable. Triggers on rate limits (429),
+# overload (529), service errors (503), or connection failures.
+#
+# Supported providers:
+#   openrouter   (OPENROUTER_API_KEY)  — routes to any model
+#   openai-codex (OAuth — hermes auth) — OpenAI Codex
+#   nous         (OAuth — hermes auth) — Nous Portal
+#   zai          (ZAI_API_KEY)         — Z.AI / GLM
+#   kimi-coding  (KIMI_API_KEY)        — Kimi / Moonshot
+#   kimi-coding-cn (KIMI_CN_API_KEY)   — Kimi / Moonshot (China)
+#   minimax      (MINIMAX_API_KEY)     — MiniMax
+#   minimax-cn   (MINIMAX_CN_API_KEY)  — MiniMax (China)
+#   bedrock      (AWS IAM / boto3)     — AWS Bedrock (Converse API)
+#
+# For custom OpenAI-compatible endpoints, add base_url and key_env.
+#
+# fallback_model:
+#   provider: openrouter
+#   model: anthropic/claude-sonnet-4

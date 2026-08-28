@@ -155,5 +155,53 @@
     "title": "VN report / gift",
     "message_id": 2471,
     "due_date": "Mar 1/31"
+  },
+  "4b232e90de629780": {
+    "id": "4b232e90de629780",
+    "date": "2026-08-27",
+    "due_date": "2026-08-28",
+    "title": "Check Clover Software Plan Pricing",
+    "text": "Check Clover Software Plan Pricing",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/check-clover-software-plan-pricing.md",
+    "status": "delayed",
+    "message_id": 2499,
+    "odds": ""
+  },
+  "42a3fd20d1b1acbd": {
+    "id": "42a3fd20d1b1acbd",
+    "date": "2026-08-27",
+    "due_date": "2026-08-28",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "delayed",
+    "message_id": 2500,
+    "odds": ""
+  },
+  "2b4129595afd65be": {
+    "id": "2b4129595afd65be",
+    "date": "2026-08-27",
+    "due_date": "2026-08-28",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "delayed",
+    "message_id": 2501,
+    "odds": ""
+  },
+  "3cc503b886e0f74b": {
+    "id": "3cc503b886e0f74b",
+    "date": "2026-08-27",
+    "due_date": "2026-08-28",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "delayed",
+    "message_id": 2502,
+    "odds": ""
   }
 }

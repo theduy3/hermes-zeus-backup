@@ -12,10 +12,8 @@ Life OS SoT: ~/.hermes/projects/life-os/life-knowledge-base (read agent_rules.md
 §
 config.yaml/.env write-protected from patch/write_file. config: `hermes config set`. .env: terminal python. Credential/encryption changes need explicit approval (not clarify-timeout).
 §
-Orcarouter: free only (qwen3.8-27b-free). reMarkable MCP all profiles read-only (~/.rmapi); image/OCR needs vision (hy3:free text-only).
-§
-Vault Graphify MCP scope: default only loads all 4 (vault/core/sources/daily); named bots ≤1 (usually vault-core); thor/wiki 0. Skill: multi-profile-mcp-scoping.
-§
-Graphify vault MCP policy: only default loads all 4 vault graphs (vault/core/sources/daily); named profile bots keep 0–1 (prefer vault-core for zeus/finance/butter/catthew/charles; thor/wiki=0). graphify-hermes stays disabled on default unless debugging.
+Graphify MCP: default=all 4 vault graphs; named bots 0-1 (vault-core); thor/wiki=0; graphify-hermes off unless debug.
 §
 Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-08-24. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+§
+Orcarouter free-only; reMarkable MCP RO; X public search=x_search all profiles; AR Twitter cookies live (twitter-ar feed/user/user-posts; search often 404); Reddit rdt cookies live; AR skip bili/xueqiu/linkedin/xhs/xiaoyuzhou; GH+Exa live; FB/IG OpenCLI desktop-only not on VPS. Cookie import: rdt-import-cookies / twitter-ar-import-cookies --from-file. Doc ~/.agent-reach/docs/telegram-platforms.md + agent-reach references/cookie-import-vps.md

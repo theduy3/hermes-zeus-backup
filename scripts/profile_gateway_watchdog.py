@@ -9,6 +9,27 @@ PROFILES = ['butter','catthew','charles','finance','thor','zeus']
 def run(cmd):
     return subprocess.run(cmd, shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).stdout
 
+def _gateway_action(rest):
+    """Return True if argv tail is gateway run/restart after optional profile flags.
+
+    Accepts:
+      gateway run|restart
+      -p NAME gateway run|restart
+      --profile NAME gateway run|restart
+      ... plus optional --replace anywhere before gateway
+    """
+    i = 0
+    while i < len(rest):
+        tok = rest[i]
+        if tok in ('-p', '--profile') and i + 1 < len(rest):
+            i += 2
+            continue
+        if tok == '--replace':
+            i += 1
+            continue
+        break
+    return rest[i:i+2] in (['gateway', 'run'], ['gateway', 'restart'])
+
 def all_gateway_pids():
     """Return only real Hermes gateway process PIDs.
 
@@ -18,6 +39,10 @@ def all_gateway_pids():
     false wrong-HERMES_HOME alerts for profile gateways even though the live
     profile Python processes were healthy. Inspect /proc cmdline tokens instead
     and accept only actual Hermes/Python launcher shapes.
+
+    Profile supervisor launches:
+      python3 .../hermes -p <name> gateway run
+    so gateway/run are NOT always argv[2:4] — strip -p/--profile first.
     """
     pids=[]
     for name in os.listdir('/proc'):
@@ -29,18 +54,17 @@ def all_gateway_pids():
             continue
         exe=Path(argv[0]).name
         is_gateway = False
-        # Docker entrypoint profile gateway shape:
-        #   python3 /home/hermes/.local/bin/hermes gateway run
-        if exe.startswith('python') and len(argv) >= 4 and Path(argv[1]).name == 'hermes' and argv[2:4] in (['gateway', 'run'], ['gateway', 'restart']):
-            is_gateway = True
-        # Direct CLI shape:
-        #   hermes gateway run
-        elif exe == 'hermes' and len(argv) >= 3 and argv[1:3] in (['gateway', 'run'], ['gateway', 'restart']):
-            is_gateway = True
+        # python3 .../hermes [ -p NAME | --profile NAME ] gateway run|restart
+        if exe.startswith('python') and len(argv) >= 4 and Path(argv[1]).name == 'hermes':
+            is_gateway = _gateway_action(argv[2:])
+        # hermes [ -p NAME | --profile NAME ] gateway run|restart
+        elif exe == 'hermes' and len(argv) >= 3:
+            is_gateway = _gateway_action(argv[1:])
         # Module shape used by some repair commands:
-        #   python -m hermes_cli.main ... gateway run
-        elif exe.startswith('python') and '-m' in argv and 'hermes_cli.main' in argv and 'gateway' in argv and ('run' in argv or 'restart' in argv):
-            is_gateway = True
+        #   python -m hermes_cli.main [ -p NAME ] gateway run|restart
+        elif exe.startswith('python') and '-m' in argv and 'hermes_cli.main' in argv:
+            idx = argv.index('hermes_cli.main')
+            is_gateway = _gateway_action(argv[idx+1:])
         if is_gateway:
             pids.append(pid)
     return pids

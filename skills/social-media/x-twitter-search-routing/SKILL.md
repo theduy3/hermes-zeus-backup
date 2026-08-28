@@ -1,0 +1,111 @@
+---
+name: x-twitter-search-routing
+description: "Use when searching X/Twitter via Hermes or Telegram."
+version: 1.0.0
+author: Hermes Agent
+license: MIT
+metadata:
+  hermes:
+    tags: [x, twitter, x_search, agent-reach, telegram, profiles]
+    related_skills: [agent-reach, social-platform-workflows, hermes-telegram-multi-profile, xitter]
+---
+
+# X/Twitter search routing (Hermes)
+
+Class-level guide for **read-only X discovery** inside Hermes. Prefer the lightest working backend. Skill presence ≠ tool readiness.
+
+## When to Use
+
+- User asks to search X/Twitter/推特 from Hermes CLI or any Telegram profile bot
+- User asks whether Agent Reach can search X, or to “wire” Twitter search
+- Enabling or verifying native `x_search` across multi-profile gateways
+- Diagnosing why Telegram bots cannot search X despite skills installed
+
+## Decision tree
+
+1. **Public keyword/topic search (CLI or Telegram bots)**  
+   Use native tool **`x_search`** (xAI Responses). Needs `xai-oauth` pool entry or `XAI_API_KEY`. No cookies, no X developer app.
+
+2. **Logged-in session (feed, whoami, cookie GraphQL) via Agent Reach**  
+   Use **`twitter-cli`** (`twitter` / `twitter-ar`). Needs user Cookie-Editor export → `TWITTER_AUTH_TOKEN` + `TWITTER_CT0`.
+
+3. **Official API post/like/DM/search**  
+   Use **`xurl`** or **`xitter`/`x-cli`** with X API keys — separate stack.
+
+## Never claim readiness without checks
+
+```bash
+# Agent Reach Twitter — doctor alone is insufficient (often stays warn + active_backend null
+# even with good cookies; it refuses to run twitter status).
+twitter-ar status          # require authenticated true
+twitter-ar feed -n 1       # optional live read
+
+# Native x_search requirements (from hermes-agent venv)
+python - <<'PY'
+from tools.x_search_tool import check_x_search_requirements
+print(check_x_search_requirements())
+PY
+```
+
+Do **not** say Agent Reach Twitter is down solely because doctor is `warn`. Do **not** say it is up without a successful `twitter-ar status` (or equivalent). Do **not** confuse installed skills with `platform_toolsets` enablement.
+
+## Enable `x_search` on Telegram multi-profile
+
+`x_search` is opt-in. CLI may have it while Telegram omits it. Skills do not auto-enable it.
+
+```bash
+hermes tools enable x_search --platform telegram
+hermes tools enable x_search --platform cli
+for p in butter catthew charles finance thor wiki zeus; do
+  hermes -p "$p" tools enable x_search --platform telegram
+  hermes -p "$p" tools enable x_search --platform cli
+done
+```
+
+Verify each profile `config.yaml` → `platform_toolsets.telegram` contains `x_search`. Restart gateways after enable; existing chats may need `/new`.
+
+Smoke (no `limit=` kwarg — signature is query + optional handle/date filters):
+
+```python
+from tools.x_search_tool import x_search_tool
+print(x_search_tool(query="OpenAI announcements")[:800])
+```
+
+## Agent Reach / twitter-cli wiring
+
+Install:
+
+```bash
+uv tool install twitter-cli   # or pipx install twitter-cli — want v0.8.5+
+```
+
+Cookies (user pastes Header String; agent imports):
+
+1. User logs into x.com → Cookie-Editor → **Header String** (must contain `auth_token` + `ct0`).
+2. Write paste to a temp file (umask 077); **prefer `--from-file`** over argv.
+3. `twitter-ar-import-cookies --from-file /tmp/…` → writes `~/.agent-reach/secrets/twitter.env` (600) and runs `agent-reach configure twitter-cookies … --sync-legacy-twitter`.
+4. Shred temp file. Never print cookie values / env contents.
+5. Smoke: `twitter-ar status` + `twitter-ar feed -n 3` + optional `whoami` / `user-posts`.
+
+Notes:
+
+- `agent-reach configure twitter-cookies '…'` alone only helps **doctor** completeness; it does **not** export shell env for bare `twitter`.
+- Always prefer `twitter-ar …` (loads env then execs `twitter`). Bare `twitter` needs explicit env in-process.
+- **`twitter-ar search` often HTTP 404** even when auth/feed/user work (GraphQL churn). For public keyword/topic search use native **`x_search`**. For session reads use `feed` / `user` / `user-posts` / `tweet`.
+- `ClientTransaction` init warnings can appear on success paths — ignore unless the command fails.
+- Full VPS cookie procedure: skill `agent-reach-platform-auth` (+ `references/import-and-smoke.md`).
+
+## VPS notes
+
+- Datacenter IP + cookie GraphQL = ban risk. Prefer **`x_search`** for routine public search on servers.
+- Bulk-killing gateway PIDs can zero out bots or spawn **duplicates** (entrypoint + profile supervisor both respawn → polling conflicts). After restart: one python `hermes … gateway run` per profile + one default; trust only **latest** `✓ telegram connected` log lines.
+- Wiki may be outside `profile_gateway_supervisor.sh` profile list — start separately if missing.
+
+## Related detail
+
+See `references/checklist.md` for a short enable/verify checklist.
+
+## Safety
+
+- No secret dumps (cookies, X API keys, bot tokens, xAI tokens).
+- Write actions (post/like/RT) stay on xurl/xitter with explicit user intent — out of scope for `x_search`.
