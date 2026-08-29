@@ -18,15 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 146
+        "completed": 147
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-08-28T09:00:00-07:00",
-      "last_run_at": "2026-08-27T09:03:33.824792-07:00",
+      "next_run_at": "2026-08-29T09:00:00-07:00",
+      "last_run_at": "2026-08-28T09:01:19.282894-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 102
+        "completed": 103
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-08-28T18:00:00-07:00",
-      "last_run_at": "2026-08-27T18:04:14.472614-07:00",
+      "next_run_at": "2026-08-31T18:00:00-07:00",
+      "last_run_at": "2026-08-28T18:01:32.009729-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -131,15 +131,15 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 103
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-08-28T18:10:00-07:00",
-      "last_run_at": "2026-08-27T18:11:57.801521-07:00",
+      "next_run_at": "2026-08-31T18:10:00-07:00",
+      "last_run_at": "2026-08-28T18:11:48.613930-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -203,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 107
+        "completed": 108
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-08-29T00:00:00-07:00",
-      "last_run_at": "2026-08-27T00:06:01.191283-07:00",
+      "next_run_at": "2026-08-30T00:00:00-07:00",
+      "last_run_at": "2026-08-28T00:03:44.598815-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-28T00:01:47.274022-07:00",
-        "by": "hal-server-803171.novalocal:3637441:1975e96f4b254391a573fb7c0e270b2a"
+        "at": "2026-08-29T00:00:42.057515-07:00",
+        "by": "hal-server-803171.novalocal:3637441:d3df8ac5d38e4f209ff992d12256cb86"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -247,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 3722
+        "completed": 3770
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-08-28T00:07:46.936173-07:00",
-      "last_run_at": "2026-08-27T23:37:46.936173-07:00",
+      "next_run_at": "2026-08-29T00:11:41.896087-07:00",
+      "last_run_at": "2026-08-28T23:41:41.896087-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -294,24 +294,24 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 32
+        "completed": 33
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-08-28T03:30:00-07:00",
-      "last_run_at": "2026-08-27T03:31:22.442237-07:00",
+      "next_run_at": "2026-08-29T03:30:00-07:00",
+      "last_run_at": "2026-08-28T03:31:44.129225-07:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nwarning: 66 source file(s) produced zero nodes and are absent from the graph: baseline.json, easy.json, hard.json, acp.json, gui.json (+61 more). A re-run will retry them (empties are no longer cached); if it persists, please report the file(s) (#1666).\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 234, in <module>\n    main()\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 216, in main\n    stats[\"hermes\"] = build_hermes()\n                      ^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 102, in build_hermes\n    run([\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 85, in run\n    subprocess.run(cmd, cwd=str(cwd) if cwd else None, env=env, check=True)\n  File \"/home/hermes/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['graphify', 'extract', '/home/hermes/.hermes/hermes-agent', '--code-only', '--out', '/home/hermes/.graphify/hermes', '--force', '--max-workers', '4']' died with <Signals.SIGKILL: 9>.\nstdout:\n$ graphify extract /home/hermes/.hermes/hermes-agent --code-only --out /home/hermes/.graphify/hermes --force --max-workers 4\n[graphify extract] --force: full re-scan, semantic cache reads skipped\n[graphify extract] scanning /home/hermes/.hermes/hermes-agent\n[graphify extract] --code-only: skipping 1854 non-code file(s) (1780 docs, 10 papers, 64 images) — no LLM extraction\n[graphify extract] found 7507 code, 0 docs, 0 papers, 0 images\n[graphify extract] 901 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, .mailmap, .nojekyll (+895 more)\n[graphify extract] 10 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env.example, .envrc, .npmrc, bitwarden.md, command.md, index.md (+4 more)\n[graphify extract] AST extraction on 7507 code files...\n  AST extraction: 100/2800 uncached files (3%) [4 workers]\n  AST extraction: 200/2800 uncached files (7%) [4 workers]\n  AST extraction: 300/2800 uncached files (10%) [4 workers]\n  AST extraction: 400/2800 uncached files (14%) [4 workers]\n  AST extraction: 500/2800 uncached files (17%) [4 workers]\n  AST extraction: 600/2800 uncached files (21%) [4 workers]\n  AST extraction: 700/2800 uncached files (25%) [4 workers]\n  AST extraction: 800/2800 uncached files (28%) [4 workers]\n  AST extraction: 900/2800 uncached files (32%) [4 workers]\n  AST extraction: 1000/2800 uncached files (35%) [4 workers]\n  AST extraction: 1100/2800 uncached files (39%) [4 workers]\n  AST extraction: 1200/2800 uncached files (42%) [4 workers]\n  AST extraction: 1300/2800 uncached files (46%) [4 workers]\n  AST extraction: 1400/2800 uncached files (50%) [4 workers]\n  AST extraction: 1500/2800 uncached files (53%) [4 workers]\n  AST extraction: 1600/2800 uncached files (57%) [4 workers]\n  AST extraction: 1700/2800 uncached files (60%) [4 workers]\n  AST extraction: 1800/2800 uncached files (64%) [4 workers]\n  AST extraction: 1900/2800 uncached files (67%) [4 workers]\n  AST extraction: 2000/2800 uncached files (71%) [4 workers]\n  AST extraction: 2100/2800 uncached files (75%) [4 workers]\n  AST extraction: 2200/2800 uncached files (78%) [4 workers]\n  AST extraction: 2300/2800 uncached files (82%) [4 workers]\n  AST extraction: 2400/2800 uncached files (85%) [4 workers]\n  AST extraction: 2500/2800 uncached files (89%) [4 workers]\n  AST extraction: 2600/2800 uncached files (92%) [4 workers]\n  AST extraction: 2700/2800 uncached files (96%) [4 workers]\n  AST extraction: 2800/2800 uncached files (100%) [4 workers]\n  AST extraction: 2800/2800 uncached files (100%) [4 workers]",
+      "last_error": "Script exited with code 1\nstderr:\nwarning: 66 source file(s) produced zero nodes and are absent from the graph: baseline.json, easy.json, hard.json, acp.json, gui.json (+61 more). A re-run will retry them (empties are no longer cached); if it persists, please report the file(s) (#1666).\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 234, in <module>\n    main()\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 216, in main\n    stats[\"hermes\"] = build_hermes()\n                      ^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 102, in build_hermes\n    run([\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 85, in run\n    subprocess.run(cmd, cwd=str(cwd) if cwd else None, env=env, check=True)\n  File \"/home/hermes/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['graphify', 'extract', '/home/hermes/.hermes/hermes-agent', '--code-only', '--out', '/home/hermes/.graphify/hermes', '--force', '--max-workers', '4']' died with <Signals.SIGKILL: 9>.\nstdout:\n$ graphify extract /home/hermes/.hermes/hermes-agent --code-only --out /home/hermes/.graphify/hermes --force --max-workers 4\n[graphify extract] --force: full re-scan, semantic cache reads skipped\n[graphify extract] scanning /home/hermes/.hermes/hermes-agent\n[graphify extract] --code-only: skipping 1854 non-code file(s) (1780 docs, 10 papers, 64 images) — no LLM extraction\n[graphify extract] found 7507 code, 0 docs, 0 papers, 0 images\n[graphify extract] 902 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, .mailmap, .nojekyll (+896 more)\n[graphify extract] 10 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env.example, .envrc, .npmrc, bitwarden.md, command.md, index.md (+4 more)\n[graphify extract] AST extraction on 7507 code files...\n  AST extraction: 100/2801 uncached files (3%) [4 workers]\n  AST extraction: 200/2801 uncached files (7%) [4 workers]\n  AST extraction: 300/2801 uncached files (10%) [4 workers]\n  AST extraction: 400/2801 uncached files (14%) [4 workers]\n  AST extraction: 500/2801 uncached files (17%) [4 workers]\n  AST extraction: 600/2801 uncached files (21%) [4 workers]\n  AST extraction: 700/2801 uncached files (24%) [4 workers]\n  AST extraction: 800/2801 uncached files (28%) [4 workers]\n  AST extraction: 900/2801 uncached files (32%) [4 workers]\n  AST extraction: 1000/2801 uncached files (35%) [4 workers]\n  AST extraction: 1100/2801 uncached files (39%) [4 workers]\n  AST extraction: 1200/2801 uncached files (42%) [4 workers]\n  AST extraction: 1300/2801 uncached files (46%) [4 workers]\n  AST extraction: 1400/2801 uncached files (49%) [4 workers]\n  AST extraction: 1500/2801 uncached files (53%) [4 workers]\n  AST extraction: 1600/2801 uncached files (57%) [4 workers]\n  AST extraction: 1700/2801 uncached files (60%) [4 workers]\n  AST extraction: 1800/2801 uncached files (64%) [4 workers]\n  AST extraction: 1900/2801 uncached files (67%) [4 workers]\n  AST extraction: 2000/2801 uncached files (71%) [4 workers]\n  AST extraction: 2100/2801 uncached files (74%) [4 workers]\n  AST extraction: 2200/2801 uncached files (78%) [4 workers]\n  AST extraction: 2300/2801 uncached files (82%) [4 workers]\n  AST extraction: 2400/2801 uncached files (85%) [4 workers]\n  AST extraction: 2500/2801 uncached files (89%) [4 workers]\n  AST extraction: 2600/2801 uncached files (92%) [4 workers]\n  AST extraction: 2700/2801 uncached files (96%) [4 workers]\n  AST extraction: 2800/2801 uncached files (99%) [4 workers]\n  AST extraction: 2801/2801 uncached files (100%) [4 workers]",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 2
+      "failure_streak": 3
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-08-28T05:15:00-07:00",
-      "last_run_at": "2026-08-27T05:15:26.993691-07:00",
+      "next_run_at": "2026-08-29T05:15:00-07:00",
+      "last_run_at": "2026-08-28T05:15:58.728030-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -586,23 +586,26 @@
       "schedule_display": "once at 2026-08-28 13:00",
       "repeat": {
         "times": 1,
-        "completed": 0
+        "completed": 1
       },
-      "enabled": true,
-      "state": "scheduled",
+      "enabled": false,
+      "state": "completed",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-25T21:23:37.992710-07:00",
-      "next_run_at": "2026-08-28T13:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": null,
+      "last_run_at": "2026-08-28T13:00:13.407406-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openrouter' -> 'xai-oauth'; model 'stealth/ox-alpha' -> 'grok-4.5'), and this job is unpinned. No inference call was made. This finite one-shot job is consumed by this attempted run; create a new one-shot job at a future time with an explicit provider and model. This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
       "last_delivery_error": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null,
+      "drift_alerted": true
     },
     {
       "id": "4d68d1c54f91",
@@ -651,5 +654,5 @@
       "drift_alerted": true
     }
   ],
-  "updated_at": "2026-08-28T00:01:47.274182-07:00"
+  "updated_at": "2026-08-29T00:00:42.057686-07:00"
 }

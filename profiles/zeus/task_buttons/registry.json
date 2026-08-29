@@ -203,5 +203,65 @@
     "status": "delayed",
     "message_id": 2502,
     "odds": ""
+  },
+  "4b740674a462a37b": {
+    "id": "4b740674a462a37b",
+    "date": "2026-08-28",
+    "due_date": "2026-08-28",
+    "title": "Check Clover Software Plan Pricing",
+    "text": "Check Clover Software Plan Pricing",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/check-clover-software-plan-pricing.md",
+    "status": "sent",
+    "message_id": 2505,
+    "odds": ""
+  },
+  "cc4a98345c831bcc": {
+    "id": "cc4a98345c831bcc",
+    "date": "2026-08-28",
+    "due_date": "2026-08-28",
+    "title": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "text": "Create Form to Get Satisfaction Survey That Triggers Email to Clients in FluentCRM",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/create-satisfaction-survey-form-fluentcrm.md",
+    "status": "sent",
+    "message_id": 2506,
+    "odds": ""
+  },
+  "8cfa0fc0265c1c49": {
+    "id": "8cfa0fc0265c1c49",
+    "date": "2026-08-28",
+    "due_date": "2026-08-28",
+    "title": "Fix SS Menu",
+    "text": "Fix SS Menu",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/fix-ss-menu.md",
+    "status": "sent",
+    "message_id": 2507,
+    "odds": ""
+  },
+  "f28159cedbe17bae": {
+    "id": "f28159cedbe17bae",
+    "date": "2026-08-28",
+    "due_date": "2026-08-28",
+    "title": "Guide to Distribute to Employees: Exchange",
+    "text": "Guide to Distribute to Employees: Exchange",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/guide-employee-exchange-distribution.md",
+    "status": "sent",
+    "message_id": 2508,
+    "odds": ""
+  },
+  "ee405f5261994e96": {
+    "id": "ee405f5261994e96",
+    "date": "2026-08-28",
+    "due_date": "2026-08-28",
+    "title": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "text": "Memo to Staff: Addon $15+ Requires Mutual Agreement",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/memo-addon-15-mutual-agreement-policy.md",
+    "status": "sent",
+    "message_id": 2509,
+    "odds": ""
   }
 }
