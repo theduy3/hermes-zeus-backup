@@ -11,7 +11,7 @@ model:
     reasoning_effort: max
 fallback_providers:
   - provider: nous
-    model: hy3-free
+    model: tencent/hy3:free
 credential_pool_strategies:
   openai-codex: fill_first
   xai-oauth: fill_first

@@ -487,14 +487,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-27T21:41:52.645223+00:00",
     "last_reused_patch_generation": 2,
-    "last_used_at": "2026-08-29T03:00:35.068888+00:00",
-    "last_viewed_at": "2026-08-29T03:00:35.060634+00:00",
+    "last_used_at": "2026-08-30T03:00:49.594825+00:00",
+    "last_viewed_at": "2026-08-30T03:00:49.581212+00:00",
     "patch_count": 7,
     "patch_generation": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 13,
-    "view_count": 13
+    "use_count": 18,
+    "view_count": 18
   },
   "heartmula": {
     "archived_at": null,
@@ -647,13 +647,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-28T11:00:22.822326+00:00",
+    "last_used_at": "2026-08-29T11:00:50.622722+00:00",
     "last_viewed_at": "2026-07-03T02:58:23.489482+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 67,
+    "use_count": 69,
     "view_count": 1
   },
   "llama-cpp": {
@@ -798,14 +798,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-27T21:41:52.672237+00:00",
     "last_reused_patch_generation": 1,
-    "last_used_at": "2026-08-29T06:00:31.418197+00:00",
-    "last_viewed_at": "2026-08-29T06:00:31.413895+00:00",
+    "last_used_at": "2026-08-30T06:00:59.274136+00:00",
+    "last_viewed_at": "2026-08-30T06:00:59.268716+00:00",
     "patch_count": 17,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 23,
-    "view_count": 23
+    "use_count": 32,
+    "view_count": 32
   },
   "obsidian-wiki-maintenance-patterns": {
     "archived_at": null,
@@ -825,13 +825,15 @@
     "created_at": "2026-06-28T07:03:01.912233+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-08-08T15:24:13.595157+00:00",
-    "last_viewed_at": "2026-08-08T15:24:13.579736+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-30T02:58:49.740978+00:00",
+    "last_viewed_at": "2026-08-30T02:58:49.726881+00:00",
     "patch_count": 0,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 14,
-    "view_count": 14
+    "use_count": 15,
+    "view_count": 15
   },
   "opencode": {
     "archived_at": null,
@@ -889,14 +891,16 @@
     "archived_at": null,
     "created_at": "2026-07-22T23:23:07.145018+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-07-22T23:23:26.937450+00:00",
-    "last_used_at": "2026-08-01T15:47:55.793027+00:00",
-    "last_viewed_at": "2026-08-01T15:47:55.766138+00:00",
-    "patch_count": 2,
+    "last_patched_at": "2026-08-30T06:49:43.204681+00:00",
+    "last_reused_patch_generation": 2,
+    "last_used_at": "2026-08-30T06:49:48.394105+00:00",
+    "last_viewed_at": "2026-08-30T06:49:48.390857+00:00",
+    "patch_count": 4,
+    "patch_generation": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 6,
+    "view_count": 6
   },
   "petdex": {
     "archived_at": null,
@@ -969,14 +973,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-18T17:07:45.360351+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-29T06:00:31.421787+00:00",
-    "last_viewed_at": "2026-08-29T06:00:31.403081+00:00",
+    "last_used_at": "2026-08-30T06:00:24.249585+00:00",
+    "last_viewed_at": "2026-08-30T06:00:24.240729+00:00",
     "patch_count": 6,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 118,
-    "view_count": 58
+    "use_count": 122,
+    "view_count": 61
   },
   "product-price-monitor": {
     "archived_at": null,
@@ -1211,13 +1215,13 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T13:40:32.242775+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-28T11:00:22.802104+00:00",
+    "last_used_at": "2026-08-29T11:00:50.604477+00:00",
     "last_viewed_at": "2026-08-06T16:39:15.762321+00:00",
     "patch_count": 8,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 73,
+    "use_count": 74,
     "view_count": 12
   },
   "tonight": {
@@ -1226,14 +1230,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-21T06:02:53.477782+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-29T06:00:31.408010+00:00",
-    "last_viewed_at": "2026-08-29T06:00:31.397463+00:00",
+    "last_used_at": "2026-08-30T06:00:24.245135+00:00",
+    "last_viewed_at": "2026-08-30T06:00:24.235845+00:00",
     "patch_count": 29,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 167,
-    "view_count": 47
+    "use_count": 171,
+    "view_count": 49
   },
   "touchdesigner-mcp": {
     "archived_at": null,
@@ -1323,14 +1327,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T15:07:12.534687+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-29T03:00:35.076926+00:00",
-    "last_viewed_at": "2026-08-29T03:00:35.065544+00:00",
+    "last_used_at": "2026-08-30T06:49:05.584849+00:00",
+    "last_viewed_at": "2026-08-30T06:49:05.580096+00:00",
     "patch_count": 150,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 343,
-    "view_count": 162
+    "use_count": 353,
+    "view_count": 169
   },
   "wiki-lint": {
     "archived_at": null,
@@ -1338,14 +1342,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T09:06:00.610974+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-28T09:00:31.007413+00:00",
-    "last_viewed_at": "2026-08-28T09:00:31.004374+00:00",
+    "last_used_at": "2026-08-29T09:01:00.617390+00:00",
+    "last_viewed_at": "2026-08-29T09:01:00.614119+00:00",
     "patch_count": 54,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 208,
-    "view_count": 148
+    "use_count": 215,
+    "view_count": 154
   },
   "xlsx": {
     "archived_at": null,

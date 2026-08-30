@@ -1,18 +1,9 @@
-Vault in Docker: ro at /vault/. Cron workers need bind mounts in docker-compose.yml. Cron jobs toolsets ["web","memory","skills","terminal","file"].
+Vault ro /vault/. Cron: bind mounts in compose; toolsets web/memory/skills/terminal/file.
 §
-GitHub backup: repo theduy3/hermes-zeus-backup, cron 12e5ce30563d at 15:00 UTC (8AM PDT). .gitignore: .env, auth.json, logs/, sessions/, cron/output/, cache/, hermes-agent/, venv/, node_modules/. Recovery: clone into ~/.hermes/ + restore .env + auth.json (openai-codex OAuth).
+Finance Telegram = book of record (balances/holdings). Charles coordinates strategy/watchlist; no precise-number advice without Finance.
 §
-theduylifeos: /Users/theduy/theduylifeos/ — Legal, Finance, Business OptCo (CHARLESBOURG/MAILY/RIVIERES/SS), Business HoldCo, Business Projects, Personal, FAMILY TRUST, Education, Job, Archive, Projects. Sort loose files here.
+Life OS SoT: /home/hermes/.hermes/projects/life-os/life-knowledge-base (+ agent_rules.md). Memory=routing only.
 §
-All Hermes profiles use the openai-codex provider (OAuth via ~/.hermes/auth.json), model gpt-5.5 - NOT deepseek or openrouter. Config: model.provider=openai-codex, model.default=gpt-5.5, providers:{} (no base_url). DeepSeek fully removed 2026-05-24. When cloning a profile, verify model.provider=openai-codex (may inherit stale settings).
+Finance weekly Aug 30 2026 PDT (Charles=triage/watchlist only; Finance=book; facts≠advice). Gates before any deploy: free vs reserved CAD; Aug20 payroll $2747.50 posted; NVDA conc. vs no-add. Book ~$200k; ~67% invested; ~46% cash drag. CAD ~$92.7k reserved (cards/tax/strata/Desjardins/Jenny) — no deploy reserved. LifeOS liquid $0 vs Finance $92.7k conflict. FX 1.38–1.39. NO add AI/semi: MSFT AMZN GOOG META NVDA AVGO TSLA ASML AMD INTC NBIS. NVDA ~36% (~$71–72k) — decide cap/reduce before new risk. Cash: mortgage ≥$2k TD Sep1; payroll Sep3. Cards: Costco~21 Aeroplan~29 AmexKitty~30 TD1st~Sep1; miss Aventura/BMO. Earn watch: AVGO Sep3 BABA Sep4 ADBE Sep10. Stale Jenny/Desjardins/AmexBizPlat; RBC Avion Sep15; strata PAD Dec30.
 §
-Platform mapping: Telegram=default(orch), alan, mira, turing, zeus, thor, finance. Discord=3r(Ongles Rivieres), charlesbourg(Ongles Charlesbourg), maily(Ongles Maily), ss(Sans Souci). Entrypoint sets HERMES_HOME per profile.
-§
-Finance profile (Telegram) = user's Personal Finance bot — knows detailed financials, account balances, holdings. Charles should coordinate with it for portfolio strategy, retirement planning, and any advice that needs precise numbers.
-§
-Life OS detailed source of truth: /home/hermes/.hermes/projects/life-os/life-knowledge-base. Before personal-context answers or substantial writes, read agent_rules.md and search this KB; memory is routing only, never the database.
-§
-§
-Finance (Aug 22, 2026): NVDA ~36% of book — cap/diversify, DO NOT ADD. No new AI/semi/correlated exposure: MSFT,AMZN,GOOG,META,NVDA,AVGO,TSLA,ASML,AMD,INTC,NBIS. Charles = triage/watchlist layer ONLY; book of record = Finance profile (no advice here). FX ~1.39 CAD/USD. Income $2,747.50 biweekly net (Ongles Rivieres→CIBC, Thursdays). CAD ~2.7k liquid RESERVED vs cards/tax/loan; free liquidity unreconciled. TD Chequing >=$2,000 by Aug 24 (mortgage). FHSA room = watch item.
-§
-Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-08-24. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
+Travel: Vancouver, America/Vancouver PDT (set 2026-08-24) until changed.

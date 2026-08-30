@@ -993,14 +993,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-05-30T07:33:37.713606+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-12T19:46:00.736583+00:00",
-    "last_viewed_at": "2026-08-12T19:46:00.729120+00:00",
+    "last_used_at": "2026-08-29T16:00:39.453548+00:00",
+    "last_viewed_at": "2026-08-29T16:00:39.445754+00:00",
     "patch_count": 53,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 113,
-    "view_count": 113
+    "use_count": 114,
+    "view_count": 114
   },
   "xlsx": {
     "archived_at": null,

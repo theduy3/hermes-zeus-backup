@@ -1,0 +1,51 @@
+# Economist article-boundary slicing (page-offset pitfall)
+
+## The bug
+When building `Sources/<Issue> Articles/NN-<slug>.md` for a full *Economist* PDF, the
+naive approach is to slice the PDF by **physical page number** and write each page's
+extracted text into one article file. This is wrong whenever two articles share a page
+(the common case: a short article ends mid-page and the next begins on the same page,
+or a page carries a chart + caption + the tail of article A + the head of article B).
+
+Symptom: article B's `## Main points` / `## Briefing` opens with the *closing*
+paragraph, chart label, or `■` end-marker of article A. The note is still "complete"
+(counts pass) but semantically contaminated.
+
+### Real incident
+The 2026-08-08 *Economist* (Aug 8–14) article folder was built page-offset: extract
+`52-africa-dollar.md` actually carried Huawei/SMIC text, `53-bots-indian-it.md` carried
+the Africa-dollar text, and so on down the whole 66-article folder. Flagged in
+`wiki-log.md` on 2026-08-16; required re-extraction from the no-ads PDF.
+
+## The fix — slice by article boundary, not page
+1. Extract **all** page text once into a flat list `pages[n]`.
+2. Build the manifest from the magazine Table of Contents (section + article title),
+   recording the *first physical page* each article appears on.
+3. For each article, collect text from its start page through the page *before* the
+   next article's start page, then **trim to the article boundary**:
+   - Drop everything before the article's headline/drop-cap start.
+   - Drop everything after the article's `■` end marker (or the next article's
+     headline, or a `SOURCES/` / `[]/` footer).
+4. When an article genuinely spans a page break, join the two page slices; do not
+   assign a whole page to one article and leave the remainder orphaned.
+5. Verify by reading 2–3 generated notes from shared pages: confirm each opens with its
+   own headline, not a neighbour's tail.
+
+## Guardrail for the quality gate
+The "Economist full-issue quality gate" step must include this boundary check *before*
+any MOC routing. If samples are contaminated, repair slicing and re-emit the affected
+article files + their derived Notes — do not just relink.
+
+## PyMuPDF helper pattern (run from a write_file script, then `python3 /tmp/x.py`)
+```python
+import pymupdf, json
+doc = pymupdf.open(PDF)
+pages = [doc[i].get_text("text") for i in range(len(doc))]
+# manifest: list of (slug, start_page_0idx, next_start_page_0idx_or_None)
+for slug, a, b in manifest:
+    raw = "\n".join(pages[a:b or len(pages)])
+    # trim head/tail to article boundary with regex on headline + ■ marker
+```
+Keep `PYTHONPATH` pointed at the venv site-packages if `inspect` import shadows
+`pymupdf` (see environment note in the session: a local `inspect.py` in cwd breaks
+`import pymupdf`).
