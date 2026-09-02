@@ -7,14 +7,22 @@ Outputs stay outside the vault:
   /home/hermes/.graphify/theduyvault-core/graphify-out/     MOCs/Projects/Notes/Tasks
   /home/hermes/.graphify/theduyvault-sources/graphify-out/  Sources/Clippings/Stock Watchlist
   /home/hermes/.graphify/theduyvault-daily/graphify-out/    Daily/AgentMemory/Inbox/System
+
+Designed for a tight container (~2.5Gi cgroup):
+  - Hermes extract is scoped to core source dirs (no node_modules/venv/apps)
+  - max-workers defaults to 1
+  - no --force on daily runs (incremental AST cache)
+  - Hermes / per-vault failures are soft: keep prior graph, continue others
 """
 from __future__ import annotations
 
+import gc
 import json
 import os
 import shutil
 import subprocess
 import sys
+import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,6 +32,44 @@ HERMES_SRC = HOME / ".hermes" / "hermes-agent"
 VAULT = Path("/vault")
 HERMES_OUT_ROOT = BASE / "hermes"
 
+# Full-tree extract pulls node_modules/venv/apps (~7.5k files) and gets
+# SIGKILL/OOM on the ~2.5Gi cron cgroup. Scope via .graphifyignore in-repo.
+HERMES_GRAPHIFYIGNORE = """\
+# Managed by graphify_refresh.py — keep Hermes extract under container RAM.
+node_modules/
+**/node_modules/
+venv/
+.venv/
+apps/
+website/
+web/
+ui-tui/
+docs/
+tests/
+tests-js/
+contributors/
+docker/
+nix/
+locales/
+assets/
+datagen-config-examples/
+mcp-research-data/
+optional-skills/platforms/
+**/.git/
+**/dist/
+**/build/
+**/__pycache__/
+**/*.egg-info/
+*.egg-info/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+"""
+
+# Keep workers low on this host. Override with GRAPHIFY_MAX_WORKERS.
+MAX_WORKERS = max(1, int(os.environ.get("GRAPHIFY_MAX_WORKERS", "1")))
+# Set GRAPHIFY_HERMES_FORCE=1 for a full re-scan of the scoped tree.
+HERMES_FORCE = os.environ.get("GRAPHIFY_HERMES_FORCE", "").strip() in {"1", "true", "yes"}
 VAULT_GRAPHS = {
     "theduyvault": {
         "description": "legacy/all structural vault graph",
@@ -92,19 +138,108 @@ def graph_stats(path: Path) -> dict:
         "nodes": len(data.get("nodes", [])),
         "edges": len(data.get("links", data.get("edges", []))),
         "bytes": path.stat().st_size,
+        "mtime": datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).isoformat(),
     }
 
 
+def ensure_hermes_graphifyignore() -> Path:
+    """Write scoped ignore rules into the Hermes checkout (detect reads scan root)."""
+    path = HERMES_SRC / ".graphifyignore"
+    desired = HERMES_GRAPHIFYIGNORE.lstrip("\n")
+    if path.exists() and path.read_text(encoding="utf-8") == desired:
+        print(f"[hermes] .graphifyignore already current at {path}", flush=True)
+        return path
+    path.write_text(desired, encoding="utf-8")
+    print(f"[hermes] wrote scoped .graphifyignore at {path}", flush=True)
+    return path
+
+
+def _hermes_needs_force(out_graph: Path) -> bool:
+    """Force when missing, env-forced, empty, or prior graph wasn't scoped-core."""
+    if HERMES_FORCE or not out_graph.exists():
+        return True
+    try:
+        if graph_stats(out_graph)["nodes"] == 0:
+            return True
+    except Exception:
+        return True
+    meta_path = HERMES_OUT_ROOT / "graphify-out" / "BUILD_META.json"
+    if not meta_path.exists():
+        # Legacy full-tree graph (~node_modules) must be replaced once.
+        return True
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except Exception:
+        return True
+    return meta.get("mode") != "scoped-core"
+
+
 def build_hermes() -> dict:
+    out_dir = HERMES_OUT_ROOT / "graphify-out"
+    out_graph = out_dir / "graph.json"
+    backup = out_dir / "graph.json.bak"
     HERMES_OUT_ROOT.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    ensure_hermes_graphifyignore()
+
+    # Preserve last good graph so a failed/empty rebuild cannot wipe MCP input.
+    if out_graph.exists():
+        try:
+            if graph_stats(out_graph)["nodes"] > 0:
+                shutil.copy2(out_graph, backup)
+        except Exception:
+            pass
+    elif backup.exists() is False:
+        legacy = out_dir / "graph.json.pre-scope.bak"
+        if legacy.exists():
+            shutil.copy2(legacy, backup)
+
     env = os.environ.copy()
     env["PATH"] = f"{HOME / '.local' / 'bin'}:{env.get('PATH', '')}"
-    run([
-        "graphify", "extract", str(HERMES_SRC), "--code-only", "--out",
-        str(HERMES_OUT_ROOT), "--force", "--max-workers", "4",
-    ], env=env)
-    return graph_stats(HERMES_OUT_ROOT / "graphify-out" / "graph.json")
+    force = _hermes_needs_force(out_graph)
+    cmd = [
+        "graphify", "extract", str(HERMES_SRC),
+        "--code-only",
+        "--out", str(HERMES_OUT_ROOT),
+        "--max-workers", str(MAX_WORKERS),
+        "--no-cluster",  # cheaper peak RAM; MCP only needs graph.json
+    ]
+    if force:
+        cmd.append("--force")
+    run(cmd, env=env)
 
+    if not out_graph.exists():
+        if backup.exists():
+            shutil.copy2(backup, out_graph)
+        raise FileNotFoundError(f"hermes graph missing after build: {out_graph}")
+
+    stats = graph_stats(out_graph)
+    if stats["nodes"] == 0:
+        if backup.exists() and graph_stats(backup)["nodes"] > 0:
+            shutil.copy2(backup, out_graph)
+            stats = graph_stats(out_graph)
+            stats["restored_backup"] = True
+        raise RuntimeError(
+            f"hermes extract produced 0 nodes (scoped ignore too aggressive or scan failed); "
+            f"restored_prior={stats.get('restored_backup', False)}"
+        )
+
+    stats["mode"] = "scoped-core"
+    stats["max_workers"] = MAX_WORKERS
+    stats["forced"] = force
+    (out_dir / "BUILD_META.json").write_text(json.dumps({
+        "built_at": datetime.now(timezone.utc).isoformat(),
+        "source_repo": str(HERMES_SRC),
+        "name": "hermes",
+        "mode": "scoped-core",
+        "graphifyignore": str(HERMES_SRC / ".graphifyignore"),
+        "max_workers": MAX_WORKERS,
+        "forced": force,
+        "nodes": stats["nodes"],
+        "edges": stats["edges"],
+        "bytes": stats["bytes"],
+    }, indent=2, ensure_ascii=False), encoding="utf-8")
+    return stats
 
 def vault_markdown_files(
     include_top: set[str],
@@ -126,7 +261,9 @@ def vault_markdown_files(
         if any(rel_posix.startswith(prefix) for prefix in exclude_prefixes):
             continue
         prefix_match = any(rel_posix.startswith(prefix) for prefix in include_prefixes)
-        top_match = (len(rel.parts) > 1 and rel.parts[0] in include_top) or (len(rel.parts) == 1 and "(root)" in include_top)
+        top_match = (len(rel.parts) > 1 and rel.parts[0] in include_top) or (
+            len(rel.parts) == 1 and "(root)" in include_top
+        )
         if not (prefix_match or top_match):
             continue
         files.append(p)
@@ -151,14 +288,14 @@ def build_vault_graph(
     out = out_root / "graphify-out"
     out.mkdir(parents=True, exist_ok=True)
     paths = vault_markdown_files(include_top, include_prefixes, exclude_prefixes)
-    print(f"[{name}] structural markdown extraction on {len(paths)} files", flush=True)
-    result = extract(paths, cache_root=out_root, root=VAULT, max_workers=4)
+    print(f"[{name}] structural markdown extraction on {len(paths)} files (workers={MAX_WORKERS})", flush=True)
+    result = extract(paths, cache_root=out_root, root=VAULT, max_workers=MAX_WORKERS)
     (out / ".graphify_extract.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     G = build_from_json(result, root=str(VAULT), directed=False)
     if G.number_of_nodes() == 0:
-        raise SystemExit(f"{name} graph is empty")
+        raise RuntimeError(f"{name} graph is empty")
     communities = cluster(G)
     cohesion = score_all(G, communities)
     labels = {cid: f"{name} Community {cid}" for cid in communities}
@@ -203,31 +340,78 @@ def build_vault_graph(
         "edges": G.number_of_edges(),
         "communities": len(communities),
         "god_nodes": gods[:20],
+        "max_workers": MAX_WORKERS,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
+    # Drop large in-memory structures before the next vault graph.
+    del G, result, communities, cohesion
+    gc.collect()
     return graph_stats(out / "graph.json") | {"files": len(paths), "description": description}
+
+
+def _keep_prior(name: str, err: BaseException) -> dict:
+    """On failure, report prior graph stats if present so MCP keeps a working file."""
+    path = BASE / name / "graphify-out" / "graph.json"
+    payload: dict = {
+        "error": f"{type(err).__name__}: {err}",
+        "kept_prior": path.exists(),
+    }
+    if path.exists():
+        try:
+            payload.update(graph_stats(path))
+        except Exception as stats_err:  # noqa: BLE001
+            payload["stats_error"] = str(stats_err)
+    print(f"[{name}] FAILED: {payload['error']} (kept_prior={payload['kept_prior']})", flush=True)
+    traceback.print_exc()
+    return payload
 
 
 def main() -> None:
     reexec_with_graphify_if_needed()
     skip_hermes = "--vault-only" in sys.argv
     only_split = "--split-only" in sys.argv
+    hermes_only = "--hermes-only" in sys.argv
     stats: dict[str, dict] = {}
+    failures = 0
+
     if not skip_hermes and not only_split:
-        stats["hermes"] = build_hermes()
-    for name, cfg in VAULT_GRAPHS.items():
-        stats[name] = build_vault_graph(
-            name,
-            cfg["include_top"],
-            cfg["description"],
-            cfg.get("include_prefixes"),
-            cfg.get("exclude_prefixes"),
-        )
+        try:
+            stats["hermes"] = build_hermes()
+        except Exception as err:  # noqa: BLE001 — soft-fail so vault graphs still refresh
+            stats["hermes"] = _keep_prior("hermes", err)
+            failures += 1
+        gc.collect()
+
+    if not hermes_only:
+        for name, cfg in VAULT_GRAPHS.items():
+            try:
+                stats[name] = build_vault_graph(
+                    name,
+                    cfg["include_top"],
+                    cfg["description"],
+                    cfg.get("include_prefixes"),
+                    cfg.get("exclude_prefixes"),
+                )
+            except Exception as err:  # noqa: BLE001
+                stats[name] = _keep_prior(name, err)
+                failures += 1
+            gc.collect()
+
     summary = BASE / "last-refresh.json"
     summary.write_text(json.dumps({
         "refreshed_at": datetime.now(timezone.utc).isoformat(),
+        "max_workers": MAX_WORKERS,
+        "hermes_force": HERMES_FORCE,
+        "failures": failures,
         "stats": stats,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(stats, indent=2, ensure_ascii=False), flush=True)
+
+    # Exit 0 if at least one graph succeeded; exit 1 only if everything failed.
+    succeeded = sum(1 for v in stats.values() if "error" not in v)
+    if succeeded == 0:
+        raise SystemExit(1)
+    if failures:
+        print(f"completed with {failures} soft failure(s), {succeeded} ok", flush=True)
 
 
 if __name__ == "__main__":

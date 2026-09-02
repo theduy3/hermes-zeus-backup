@@ -23,17 +23,17 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 103
+        "completed": 105
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-08-30T07:00:00-07:00",
-      "last_run_at": "2026-08-29T07:03:28.702642-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-02T07:00:00-07:00",
+      "last_run_at": "2026-09-01T07:00:13.796552-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -49,7 +49,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 2
     },
     {
       "id": "a02e52721326",
@@ -183,7 +183,7 @@
     {
       "id": "6e8b8a3efbe0",
       "name": "Individual Household Task Done Button Drip",
-      "prompt": "Script-only job. Runs every 10 minutes from 8:00 AM through 11:50 PM Vancouver/PDT time. Each run reads /home/hermes/.hermes/profiles/catthew/tasks.md and sends at most one pending household task due today or overdue as a Telegram card with a ✅ Done inline button. The ct:<task_id> callback marks the task line as completed in tasks.md.",
+      "prompt": "Script-only job. Runs every 10 minutes from 8:00 AM through 11:50 PM Vancouver/EDT time. Each run reads /home/hermes/.hermes/profiles/catthew/tasks.md and sends at most one pending household task due today or overdue as a Telegram card with a ✅ Done inline button. The ct:<task_id> callback marks the task line as completed in tasks.md.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -200,15 +200,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 8836
+        "completed": 9107
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-08-30T08:00:00-07:00",
-      "last_run_at": "2026-08-29T23:50:44.143480-07:00",
+      "next_run_at": "2026-09-01T21:10:00-07:00",
+      "last_run_at": "2026-09-01T21:00:44.033781-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -248,15 +248,15 @@
       "schedule_display": "0 16 * * 0",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T23:41:01.053318-07:00",
-      "next_run_at": "2026-08-30T16:00:00-07:00",
-      "last_run_at": "2026-08-23T16:02:01.068083-04:00",
+      "next_run_at": "2026-09-06T16:00:00-07:00",
+      "last_run_at": "2026-08-30T16:01:05.152936-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -279,7 +279,7 @@
     {
       "id": "982da90154c2",
       "name": "Vehicle maintenance odometer check",
-      "prompt": "You are Catthew, the family butler. Send a concise household reminder in the Catthew family Telegram chat for the semiannual vehicle maintenance log.\n\nKnown latest log entry:\n- Date: 2026-06-22 Vancouver/PDT\n- Odometer: 131,430 km\n- Rear brakes: 65% remaining\n- Front brakes: 100% as of 2026-06-22\n- Front brake pads + rotors: completed/at 100% as of 2026-06-22\n- Oil change sticker: next oil change due at 138,830 km\n\nTask: ask Sir to reply with the current vehicle, odometer reading, brake status, whether any oil change has been done, and any maintenance done since the last check. Mention the latest known odometer, brake status, and next oil change due mileage above so Sir can confirm or update them. Use Vancouver/PDT local date wording. Do not create or modify cron jobs.",
+      "prompt": "You are Catthew, the family butler. Send a concise household reminder in the Catthew family Telegram chat for the semiannual vehicle maintenance log.\n\nKnown latest log entry:\n- Date: 2026-06-22 Vancouver/EDT\n- Odometer: 131,430 km\n- Rear brakes: 65% remaining\n- Front brakes: 100% as of 2026-06-22\n- Front brake pads + rotors: completed/at 100% as of 2026-06-22\n- Oil change sticker: next oil change due at 138,830 km\n\nTask: ask Sir to reply with the current vehicle, odometer reading, brake status, whether any oil change has been done, and any maintenance done since the last check. Mention the latest known odometer, brake status, and next oil change due mileage above so Sir can confirm or update them. Use Vancouver/EDT local date wording. Do not create or modify cron jobs.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -303,7 +303,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-21T16:52:31.486341-07:00",
-      "next_run_at": "2026-12-30T10:00:00-08:00",
+      "next_run_at": "2026-12-30T10:00:00-05:00",
       "last_run_at": "2026-06-30T09:00:49.378629-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -327,7 +327,7 @@
     {
       "id": "f1f1cdddc83e",
       "name": "Victoria 3 PM developmental game reminder",
-      "prompt": "You are Catthew, the family butler, sending Sir and Madam a daily 3:00 PM reminder for Victoria's 20-minute toy-free, indoor, low-mess developmental play session. Do not create, update, or modify cron jobs.\n\nUse America/Vancouver local date. Determine the day number starting with day 1 on the first run date, 2026-07-27, and rotate through this 28-day plan. If the current date is earlier than 2026-07-27, use day 1. Compute cycle_day = ((days_since_2026_07_27) mod 28) + 1. Months 1-2 are easier; months 3-4 add challenge; months 5-6 add phrases/pretend/extra steps. Mention the progression only if useful.\n\nDaily output format, concise:\n**Victoria's 3 PM game**\nDomain: <Fine motor/Gross motor/Language/Sensory-cognitive>\nGame: <name>\nHow: <2-4 short instructions>\nWatch for: <one developmental cue>\nLink: <YouTube search URL if helpful, otherwise omit>\n\nSafety rules: always supervise; use only baby-safe household items; avoid choking hazards such as loose bottle caps, buttons, rice, pom-poms, or small parts unless fully sealed/taped or replaced with large safe items; stop if frustrated; keep it playful.\n\n28-day rotation:\n1 Fine motor — Tissue-box posting: fold scarves/socks/washcloths and let her post/pull them from an empty tissue box. Link: https://www.youtube.com/results?search_query=toddler+posting+activity+tissue+box\n2 Fine motor — Clothespin drop: adult clips clothespins around a box edge; Victoria pulls them off and drops into box. Use large clips only, supervise closely.\n3 Fine motor — Sticky-note peel: place sticky notes on wall/table; she peels and sticks them back. Name colours if possible.\n4 Fine motor — Laundry transfer: move socks from basket to bowl, one at a time; later sort pairs.\n5 Fine motor — Contact-paper pat: tape contact paper sticky-side-out to wall; press large paper scraps/fabric squares on/off.\n6 Fine motor — Big lid matching: match large plastic container lids to containers; no tiny caps.\n7 Fine motor — Stacking challenge: stack soft folded cloths or large containers; count each one.\n8 Gross motor — Cushion mountain: crawl/climb over pillows/cushions; add 'up/down' words. Link: https://www.youtube.com/results?search_query=toddler+indoor+obstacle+course+cushions\n9 Gross motor — Follow the leader: clap, stomp, touch head, turn around; she copies.\n10 Gross motor — Cardboard tunnel: crawl through a large box tunnel or under a chair bridge.\n11 Gross motor — Sock-ball toss: toss rolled socks into laundry basket; cheer attempts, not accuracy.\n12 Gross motor — Step-over line: tape a line or lay a towel; step over, step back, walk around.\n13 Gross motor — Animal walks: bear crawl, tiny penguin steps, big stomps; copy each other.\n14 Gross motor — Freeze dance: short song, dance, pause/freeze; repeat. Link: https://www.youtube.com/results?search_query=toddler+freeze+dance+song\n15 Language — Mirror body parts: point to nose, eyes, mouth, hands; let her point back. Link: https://www.youtube.com/results?search_query=toddler+body+parts+song\n16 Language — Mirror faces: happy, surprised, sleepy; name each face and copy her expressions.\n17 Language — Picture-book pointing: ask 'Where is the dog?' or 'What do you see?' Accept pointing/sounds.\n18 Language — Echo game: say simple words/sounds: mama, dada, up, bye, woof; pause for imitation.\n19 Language — Itsy Bitsy Spider: sing slowly with hand motions; pause before key words. Link: https://www.youtube.com/results?search_query=itsy+bitsy+spider+actions+toddler\n20 Language — Choice words: offer two safe items, 'sock or cup?'; model 'more', 'up', 'all done'.\n21 Language — Pretend phone: use a safe remote/closed phone-shaped object; say hello/bye, copy babble.\n22 Sensory-cognitive — Sock matching: pull socks from basket, match colours/pairs, put into piles.\n23 Sensory-cognitive — Peekaboo object: hide a spoon/sock under cloth; ask 'Where did it go?'\n24 Sensory-cognitive — Sound bottle listening: use a tightly sealed/taped bottle/jar with rice/buttons inside; shake loud/soft/fast/slow. Link: https://www.youtube.com/results?search_query=toddler+sound+bottle+sensory+activity\n25 Sensory-cognitive — Big/little sorting: sort large safe household items into big vs little bowls; no small choking items.\n26 Sensory-cognitive — Gel-bag tracing: if available, use a double-sealed taped sensory gel bag; trace lines/circles through it. Otherwise trace on a pillow/blanket with finger.\n27 Sensory-cognitive — Which lid fits?: offer 2-3 large containers and lids; trial-and-error matching.\n28 Sensory-cognitive — Memory peek: show two safe items, cover one, reveal; ask 'which one is gone?'",
+      "prompt": "You are Catthew, the family butler, sending Sir and Madam a daily 3:00 PM reminder for Victoria's 20-minute toy-free, indoor, low-mess developmental play session. Do not create, update, or modify cron jobs.\n\nUse America/Toronto local date. Determine the day number starting with day 1 on the first run date, 2026-07-27, and rotate through this 28-day plan. If the current date is earlier than 2026-07-27, use day 1. Compute cycle_day = ((days_since_2026_07_27) mod 28) + 1. Months 1-2 are easier; months 3-4 add challenge; months 5-6 add phrases/pretend/extra steps. Mention the progression only if useful.\n\nDaily output format, concise:\n**Victoria's 3 PM game**\nDomain: <Fine motor/Gross motor/Language/Sensory-cognitive>\nGame: <name>\nHow: <2-4 short instructions>\nWatch for: <one developmental cue>\nLink: <YouTube search URL if helpful, otherwise omit>\n\nSafety rules: always supervise; use only baby-safe household items; avoid choking hazards such as loose bottle caps, buttons, rice, pom-poms, or small parts unless fully sealed/taped or replaced with large safe items; stop if frustrated; keep it playful.\n\n28-day rotation:\n1 Fine motor — Tissue-box posting: fold scarves/socks/washcloths and let her post/pull them from an empty tissue box. Link: https://www.youtube.com/results?search_query=toddler+posting+activity+tissue+box\n2 Fine motor — Clothespin drop: adult clips clothespins around a box edge; Victoria pulls them off and drops into box. Use large clips only, supervise closely.\n3 Fine motor — Sticky-note peel: place sticky notes on wall/table; she peels and sticks them back. Name colours if possible.\n4 Fine motor — Laundry transfer: move socks from basket to bowl, one at a time; later sort pairs.\n5 Fine motor — Contact-paper pat: tape contact paper sticky-side-out to wall; press large paper scraps/fabric squares on/off.\n6 Fine motor — Big lid matching: match large plastic container lids to containers; no tiny caps.\n7 Fine motor — Stacking challenge: stack soft folded cloths or large containers; count each one.\n8 Gross motor — Cushion mountain: crawl/climb over pillows/cushions; add 'up/down' words. Link: https://www.youtube.com/results?search_query=toddler+indoor+obstacle+course+cushions\n9 Gross motor — Follow the leader: clap, stomp, touch head, turn around; she copies.\n10 Gross motor — Cardboard tunnel: crawl through a large box tunnel or under a chair bridge.\n11 Gross motor — Sock-ball toss: toss rolled socks into laundry basket; cheer attempts, not accuracy.\n12 Gross motor — Step-over line: tape a line or lay a towel; step over, step back, walk around.\n13 Gross motor — Animal walks: bear crawl, tiny penguin steps, big stomps; copy each other.\n14 Gross motor — Freeze dance: short song, dance, pause/freeze; repeat. Link: https://www.youtube.com/results?search_query=toddler+freeze+dance+song\n15 Language — Mirror body parts: point to nose, eyes, mouth, hands; let her point back. Link: https://www.youtube.com/results?search_query=toddler+body+parts+song\n16 Language — Mirror faces: happy, surprised, sleepy; name each face and copy her expressions.\n17 Language — Picture-book pointing: ask 'Where is the dog?' or 'What do you see?' Accept pointing/sounds.\n18 Language — Echo game: say simple words/sounds: mama, dada, up, bye, woof; pause for imitation.\n19 Language — Itsy Bitsy Spider: sing slowly with hand motions; pause before key words. Link: https://www.youtube.com/results?search_query=itsy+bitsy+spider+actions+toddler\n20 Language — Choice words: offer two safe items, 'sock or cup?'; model 'more', 'up', 'all done'.\n21 Language — Pretend phone: use a safe remote/closed phone-shaped object; say hello/bye, copy babble.\n22 Sensory-cognitive — Sock matching: pull socks from basket, match colours/pairs, put into piles.\n23 Sensory-cognitive — Peekaboo object: hide a spoon/sock under cloth; ask 'Where did it go?'\n24 Sensory-cognitive — Sound bottle listening: use a tightly sealed/taped bottle/jar with rice/buttons inside; shake loud/soft/fast/slow. Link: https://www.youtube.com/results?search_query=toddler+sound+bottle+sensory+activity\n25 Sensory-cognitive — Big/little sorting: sort large safe household items into big vs little bowls; no small choking items.\n26 Sensory-cognitive — Gel-bag tracing: if available, use a double-sealed taped sensory gel bag; trace lines/circles through it. Otherwise trace on a pillow/blanket with finger.\n27 Sensory-cognitive — Which lid fits?: offer 2-3 large containers and lids; trial-and-error matching.\n28 Sensory-cognitive — Memory peek: show two safe items, cover one, reveal; ask 'which one is gone?'",
       "skills": [],
       "skill": null,
       "model": "tencent/hy3:free",
@@ -346,17 +346,17 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 35
+        "completed": 38
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T16:00:45.951943-07:00",
-      "next_run_at": "2026-08-30T15:00:00-07:00",
-      "last_run_at": "2026-08-29T15:01:03.965365-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-02T15:00:00-07:00",
+      "last_run_at": "2026-09-01T15:00:37.470525-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -371,12 +371,12 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 2
     },
     {
       "id": "2993226070ee",
       "name": "Weekly clean humidifier reminder",
-      "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Clean the humidifier (weekly household task).” It is Wednesday at 8:00 PM America/Vancouver. Do not create or modify tasks, calendar events, or cron jobs.",
+      "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Clean the humidifier (weekly household task).” It is Wednesday at 8:00 PM America/Toronto. Do not create or modify tasks, calendar events, or cron jobs.",
       "skills": [],
       "skill": null,
       "model": "tencent/hy3:free",
@@ -402,7 +402,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:33:19.285279-07:00",
-      "next_run_at": "2026-09-02T20:00:00-07:00",
+      "next_run_at": "2026-09-02T20:00:00-04:00",
       "last_run_at": "2026-08-26T20:00:32.229232-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -425,7 +425,7 @@
     {
       "id": "57824304b35d",
       "name": "Garbage, recycling & organics reminder",
-      "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Put out garbage, recycling, and organics.” It is Tuesday or Thursday at 8:00 PM America/Vancouver. Do not create or modify tasks, calendar events, or cron jobs.",
+      "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Put out garbage, recycling, and organics.” It is Tuesday or Thursday at 8:00 PM America/Toronto. Do not create or modify tasks, calendar events, or cron jobs.",
       "skills": [],
       "skill": null,
       "model": "tencent/hy3:free",
@@ -444,17 +444,17 @@
       "schedule_display": "0 20 * * 2,4",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:48:22.249169-07:00",
-      "next_run_at": "2026-09-01T20:00:00-07:00",
-      "last_run_at": "2026-08-27T20:00:47.353396-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-03T20:00:00-07:00",
+      "last_run_at": "2026-09-01T20:00:51.003445-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -469,12 +469,12 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 1
     },
     {
       "id": "2f94a63c501d",
       "name": "Saturday all garbage reminder",
-      "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Put out all garbage.” It is Saturday at 8:00 PM America/Vancouver. Do not create or modify tasks, calendar events, or cron jobs.",
+      "prompt": "You are Catthew, the family butler. Send this concise reminder to the household: “☐ Put out all garbage.” It is Saturday at 8:00 PM America/Toronto. Do not create or modify tasks, calendar events, or cron jobs.",
       "skills": [],
       "skill": null,
       "model": "tencent/hy3:free",
@@ -500,7 +500,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:48:22.261304-07:00",
-      "next_run_at": "2026-09-05T20:00:00-07:00",
+      "next_run_at": "2026-09-05T20:00:00-04:00",
       "last_run_at": "2026-08-29T20:00:28.006424-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -521,5 +521,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-08-29T23:50:44.145196-07:00"
+  "updated_at": "2026-09-01T21:00:44.034790-07:00"
 }

@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/hermes/.hermes/profiles/butter/logs/curator/20260824-151057",
-  "last_run_at": "2026-08-24T15:10:57.890775+00:00",
-  "last_run_duration_seconds": 1.622191,
-  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
+  "last_report_path": "/home/hermes/.hermes/profiles/butter/logs/curator/20260831-152541",
+  "last_run_at": "2026-08-31T15:25:41.343329+00:00",
+  "last_run_duration_seconds": 1.312037,
+  "last_run_summary": "auto: 3 marked stale; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-05-11T08:41:54.281410+00:00",
   "paused": false,
-  "run_count": 16
+  "run_count": 17
 }

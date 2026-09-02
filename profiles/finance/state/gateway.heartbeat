@@ -1,1 +1,1 @@
-{"pid": 3637892, "updated_at": "2026-08-30T07:04:30.065104+00:00", "monotonic": 9298712.382025642, "start_time": 1787853568.1785104, "mem": {"rss_kib": 148228, "mem_total_kib": 4003164, "mem_available_kib": 579696, "swap_used_kib": 6986428}}
+{"pid": 3637892, "updated_at": "2026-09-02T04:01:15.516258+00:00", "monotonic": 9546917.833160955, "start_time": 1787853568.1785104, "mem": {"rss_kib": 219072, "mem_total_kib": 4003164, "mem_available_kib": 434656, "swap_used_kib": 7304192}}

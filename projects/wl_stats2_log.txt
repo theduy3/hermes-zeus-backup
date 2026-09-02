@@ -1,0 +1,129 @@
+crumb try query2 200 fGVNT/HWIEp
+FINAL CRUMB fGVNT/HWIEp
+COOKIES [('.yahoo.com', 'A1', 'd=AQABBP-llWoCENEpNh'), ('.yahoo.com', 'A3', 'd=AQABBP-llWoCENEpNh'), ('.yahoo.com', 'A1S', 'd=AQABBP-llWoCENEpNh')]
+MSFT True 21.611334 1.64 0.34039003 None
+AMZN True 25.094051 1.36 0.30558002 None
+GOOG True 22.551197 0.92 0.48676 None
+META True 16.323385 0.85 0.29848 None
+AAPL True 32.96112 2.54 1.4875101 None
+CRM True 16.546278 1.05 0.19381 None
+DELL True 20.671576 0.77 None None
+PLTR True 80.31146 2.49 0.38097 None
+ORCL True 13.668609 0.86 0.53376 None
+CRWV True -42.586987 None -0.43596 None
+INFY True 14.247347 2.02 0.32 None
+NBIS True -67.89992 0.63 0.00601 None
+TSLA True 168.5697 5.2 0.046669997 None
+NFLX True 21.320837 1.79 0.49541 None
+MELI True 34.363503 1.38 0.27504 None
+HD True 20.519844 1.83 1.0429599 None
+LOW True 15.824981 1.4 None None
+WMT True 32.42631 3.91 0.22313999 None
+TGT True 17.0013 2.61 0.26408002 None
+ASML True 32.56283 2.07 0.53942 None
+AVGO True 18.869488 0.42 0.37280998 None
+NVDA True 14.325774 0.63 1.17211 None
+AMD True 30.128674 1.02 0.10196 None
+SNDK True 5.7008567 None 0.9164 None
+MU True 6.0406294 0.14 0.66638 None
+TSM True 19.162336 1.02 0.39969003 None
+INTC True 43.64423 1.36 -0.10715 None
+BE True 41.45216 0.91 0.22213 None
+APLD True -99.62 1.83 -0.08376 None
+TE True 46.789474 None -1.2445099 None
+PSIX True 11.127301 0.82 0.40065 None
+GLW True 34.067974 1.17 0.16813 None
+BW True 15.538842 None None None
+PUMP True 26.88801 None -0.01502 None
+IREN True -176.34148 3.11 -0.23408002 None
+CORZ True 114.465004 None None None
+RIOT True -19.543573 None -0.48243 None
+CLSK True -7.9926167 None -0.68622 None
+BITF EXC HTTP Error 404: Not Found
+BTDR True -31.544119 None -0.25264 None
+HIVE True -12.857143 None -0.66388 None
+VFV.TO True None None None None
+GLD True None None None None
+SMH True None None None None
+SPCX True 89.273674 None None None
+RKLB True 1266.7 None -0.07915 None
+SEI True 27.022812 0.94 0.08099 None
+WYFI True 34.0572 None -0.13727 None
+CRCL True 56.855892 4.34 0.15347 None
+finviz row matches 0 status 200 len 224106
+snippet TickerLogos: true,
+                hasDiscountCampaign: false,
+                discountCampaign: null,
+                featureFlags: {"redesign":true,"knowledgebase":true,"stockswhymoving":true,"googleonetap":true,"subscriptionredesign":true,"indexpage":true},
+                featureDiscovery: []
+            };
+        
+FinvizSettings.hoverCharts = { stock: { timeframe: 'd', dateRange: null, width: 466, height: 219, barWidth: 1, barMargin: 1, borderWidth: 1 }, forex: { timeframe: 'd', date
+finviz row matches 0 status 200 len 228887
+snippet TickerLogos: true,
+                hasDiscountCampaign: false,
+                discountCampaign: null,
+                featureFlags: {"redesign":true,"knowledgebase":true,"stockswhymoving":true,"googleonetap":true,"subscriptionredesign":true,"indexpage":true},
+                featureDiscovery: []
+            };
+        
+FinvizSettings.hoverCharts = { stock: { timeframe: 'd', dateRange: null, width: 466, height: 219, barWidth: 1, barMargin: 1, borderWidth: 1 }, forex: { timeframe: 'd', date
+finviz row matches 0 status 200 len 212226
+snippet TickerLogos: true,
+                hasDiscountCampaign: false,
+                discountCampaign: null,
+                featureFlags: {"redesign":true,"knowledgebase":true,"stockswhymoving":true,"googleonetap":true,"subscriptionredesign":true,"indexpage":true},
+                featureDiscovery: []
+            };
+        
+FinvizSettings.hoverCharts = { stock: { timeframe: 'd', dateRange: null, width: 466, height: 219, barWidth: 1, barMargin: 1, borderWidth: 1 }, forex: { timeframe: 'd', date
+DONE merged 49 finviz 0
+{"t": "MSFT", "ok": true, "forwardPE": 21.611334, "peg": 1.64, "roe": 0.34039003, "fcf": 16545500160, "growth_+1y": 0.1934, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "AMZN", "ok": true, "forwardPE": 25.094051, "peg": 1.36, "roe": 0.30558002, "fcf": 3219124992, "growth_+1y": -0.1671, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "GOOG", "ok": true, "forwardPE": 22.551197, "peg": 0.92, "roe": 0.48676, "fcf": 22665000960, "growth_+1y": -0.2801, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "META", "ok": true, "forwardPE": 16.323385, "peg": 0.85, "roe": 0.29848, "fcf": 21553625088, "growth_+1y": 0.122, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "AAPL", "ok": true, "forwardPE": 32.96112, "peg": 2.54, "roe": 1.4875101, "fcf": 107721875456, "growth_+1y": 0.0809, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "CRM", "ok": true, "forwardPE": 16.546278, "peg": 1.05, "roe": 0.19381, "fcf": 17731874816, "growth_+1y": -0.0207, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "DELL", "ok": true, "forwardPE": 20.671576, "peg": 0.77, "roe": null, "fcf": 5434124800, "growth_+1y": 0.1899, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "PLTR", "ok": true, "forwardPE": 80.31146, "peg": 2.49, "roe": 0.38097, "fcf": 2159104512, "growth_+1y": 0.4439, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "ORCL", "ok": true, "forwardPE": 13.668609, "peg": 0.86, "roe": 0.53376, "fcf": -24536750080, "growth_+1y": 0.35599998, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "CRWV", "ok": true, "forwardPE": -42.586987, "peg": null, "roe": -0.43596, "fcf": -9088615424, "growth_+1y": 0.5047, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "INFY", "ok": true, "forwardPE": 14.247347, "peg": 2.02, "roe": 0.32, "fcf": 3165625088, "growth_+1y": 0.0546, "rec": "hold", "fwd_src": null, "err": null}
+{"t": "NBIS", "ok": true, "forwardPE": -67.89992, "peg": 0.63, "roe": 0.00601, "fcf": -9614650368, "growth_+1y": -0.4654, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "TSLA", "ok": true, "forwardPE": 168.5697, "peg": 5.2, "roe": 0.046669997, "fcf": 4835999744, "growth_+1y": 0.2177, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "NFLX", "ok": true, "forwardPE": 21.320837, "peg": 1.79, "roe": 0.49541, "fcf": 25387552768, "growth_+1y": 0.0643, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "MELI", "ok": true, "forwardPE": 34.363503, "peg": 1.38, "roe": 0.27504, "fcf": 353375008, "growth_+1y": 0.45459998, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "HD", "ok": true, "forwardPE": 20.519844, "peg": 1.83, "roe": 1.0429599, "fcf": 10762625024, "growth_+1y": 0.0679, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "LOW", "ok": true, "forwardPE": 15.824981, "peg": 1.4, "roe": null, "fcf": 4615374848, "growth_+1y": 0.060900003, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "WMT", "ok": true, "forwardPE": 32.42631, "peg": 3.91, "roe": 0.22313999, "fcf": 8984500224, "growth_+1y": 0.1195, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "TGT", "ok": true, "forwardPE": 17.0013, "peg": 2.61, "roe": 0.26408002, "fcf": 3447375104, "growth_+1y": -0.0596, "rec": "hold", "fwd_src": null, "err": null}
+{"t": "ASML", "ok": true, "forwardPE": 32.56283, "peg": 2.07, "roe": 0.53942, "fcf": 8437675008, "growth_+1y": 0.35349998, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "AVGO", "ok": true, "forwardPE": 18.869488, "peg": 0.42, "roe": 0.37280998, "fcf": 27212249088, "growth_+1y": 0.6772, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "NVDA", "ok": true, "forwardPE": 14.325774, "peg": 0.63, "roe": 1.17211, "fcf": 41809874944, "growth_+1y": 0.64779997, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "AMD", "ok": true, "forwardPE": 30.128674, "peg": 1.02, "roe": 0.10196, "fcf": 8841499648, "growth_+1y": 1.0416, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "SNDK", "ok": true, "forwardPE": 5.7008567, "peg": null, "roe": 0.9164, "fcf": 7720875008, "growth_+1y": 0.2364, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "MU", "ok": true, "forwardPE": 6.0406294, "peg": 0.14, "roe": 0.66638, "fcf": 7639499776, "growth_+1y": 1.112, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "TSM", "ok": true, "forwardPE": 19.162336, "peg": 1.02, "roe": 0.39969003, "fcf": 730826014720, "growth_+1y": 0.289, "rec": "none", "fwd_src": null, "err": null}
+{"t": "INTC", "ok": true, "forwardPE": 43.64423, "peg": 1.36, "roe": -0.10715, "fcf": 4866375168, "growth_+1y": 0.34849998, "rec": "none", "fwd_src": null, "err": null}
+{"t": "BE", "ok": true, "forwardPE": 41.45216, "peg": 0.91, "roe": 0.22213, "fcf": 531637504, "growth_+1y": 0.8181, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "APLD", "ok": true, "forwardPE": -99.62, "peg": 1.83, "roe": -0.08376, "fcf": -4961438720, "growth_+1y": 0.7378, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "TE", "ok": true, "forwardPE": 46.789474, "peg": null, "roe": -1.2445099, "fcf": -122719128, "growth_+1y": 1.2794, "rec": "none", "fwd_src": null, "err": null}
+{"t": "PSIX", "ok": true, "forwardPE": 11.127301, "peg": 0.82, "roe": 0.40065, "fcf": 42089376, "growth_+1y": 0.1399, "rec": "none", "fwd_src": null, "err": null}
+{"t": "GLW", "ok": true, "forwardPE": 34.067974, "peg": 1.17, "roe": 0.16813, "fcf": 734499968, "growth_+1y": 0.3213, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "BW", "ok": true, "forwardPE": 15.538842, "peg": null, "roe": null, "fcf": 237248256, "growth_+1y": 2.2642999, "rec": "none", "fwd_src": null, "err": null}
+{"t": "PUMP", "ok": true, "forwardPE": 26.88801, "peg": null, "roe": -0.01502, "fcf": -48068500, "growth_+1y": 18.1139, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "IREN", "ok": true, "forwardPE": -176.34148, "peg": 3.11, "roe": -0.23408002, "fcf": -4237871104, "growth_+1y": 0.7957, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "CORZ", "ok": true, "forwardPE": 114.465004, "peg": null, "roe": null, "fcf": 464833248, "growth_+1y": 1.0361, "rec": "none", "fwd_src": null, "err": null}
+{"t": "RIOT", "ok": true, "forwardPE": -19.543573, "peg": null, "roe": -0.48243, "fcf": -718855744, "growth_+1y": 0.3448, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "CLSK", "ok": true, "forwardPE": -7.9926167, "peg": null, "roe": -0.68622, "fcf": 48898124, "growth_+1y": -0.1708, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "BITF", "ok": false, "forwardPE": null, "peg": null, "roe": null, "fcf": null, "growth_+1y": null, "rec": null, "fwd_src": null, "err": "HTTP Error 404: Not Found"}
+{"t": "BTDR", "ok": true, "forwardPE": -31.544119, "peg": null, "roe": -0.25264, "fcf": 16953624, "growth_+1y": 0.78040004, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "HIVE", "ok": true, "forwardPE": -12.857143, "peg": null, "roe": -0.66388, "fcf": 140166000, "growth_+1y": 0.5116, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "VFV.TO", "ok": true, "forwardPE": null, "peg": null, "roe": null, "fcf": null, "growth_+1y": null, "rec": null, "fwd_src": null, "err": null}
+{"t": "GLD", "ok": true, "forwardPE": null, "peg": null, "roe": null, "fcf": null, "growth_+1y": null, "rec": null, "fwd_src": null, "err": null}
+{"t": "SMH", "ok": true, "forwardPE": null, "peg": null, "roe": null, "fcf": null, "growth_+1y": null, "rec": null, "fwd_src": null, "err": null}
+{"t": "SPCX", "ok": true, "forwardPE": 89.273674, "peg": null, "roe": null, "fcf": null, "growth_+1y": 17.1883, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "RKLB", "ok": true, "forwardPE": 1266.7, "peg": null, "roe": -0.07915, "fcf": -251963632, "growth_+1y": 2.1111, "rec": "buy", "fwd_src": null, "err": null}
+{"t": "SEI", "ok": true, "forwardPE": 27.022812, "peg": 0.94, "roe": 0.08099, "fcf": -806578240, "growth_+1y": 0.86010003, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "WYFI", "ok": true, "forwardPE": 34.0572, "peg": null, "roe": -0.13727, "fcf": -429604800, "growth_+1y": 1.8462, "rec": "strong_buy", "fwd_src": null, "err": null}
+{"t": "CRCL", "ok": true, "forwardPE": 56.855892, "peg": 4.34, "roe": 0.15347, "fcf": 206229376, "growth_+1y": 0.3067, "rec": "buy", "fwd_src": null, "err": null}

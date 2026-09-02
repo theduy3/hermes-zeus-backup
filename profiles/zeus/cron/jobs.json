@@ -22,17 +22,17 @@
       "schedule_display": "15 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 112
+        "completed": 114
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-13T21:51:54.763482+00:00",
-      "next_run_at": "2026-08-30T06:15:00-07:00",
-      "last_run_at": "2026-08-29T06:15:57.161999-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-02T06:15:00-07:00",
+      "last_run_at": "2026-09-01T06:15:11.776899-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -49,12 +49,12 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 2
     },
     {
       "id": "a4c95c76c429",
       "name": "Weekly Finance-Investment Knowledge Trade",
-      "prompt": "You are Zeus coordinating the weekly knowledge trade between Duy's Finance Advisor profile (`finance`) and Investment Strategist profile (`charles`). This job is intended for every Saturday at 11:00 PM Vancouver/PDT time.\n\nDo not schedule any new cron jobs.\n\nGoal: have Finance Advisor and Investment Strategist exchange useful context, then send Duy a compact summary.\n\nSteps:\n1. Ask Finance Advisor for a weekly finance/admin summary by running a one-shot Hermes command via terminal:\n   `hermes --profile finance chat -q \"Weekly knowledge trade for Duy. Summarize finance/admin context the Investment Strategist should know: upcoming payments, credit card actions, tax/debt/insurance deadlines, cash constraints, risk limits, and any finance tasks due soon. Keep it concise, factual, no investment advice.\"`\n2. Ask Investment Strategist for a weekly investment summary by running:\n   `hermes --profile charles chat -q \"Weekly knowledge trade for Duy. Summarize investment/portfolio context the Finance Advisor should know: portfolio allocation concerns, planned trades/rebalances, cash needs, risk exposures, watchlist items, and upcoming investment decisions. Keep it concise. Include disclaimer only if giving analysis.\"`\n3. Send Finance Advisor's summary to Investment Strategist with:\n   `hermes --profile charles chat -q \"Finance Advisor weekly context for Duy: [PASTE FINANCE SUMMARY]. Incorporate this into your context for future portfolio/investment guidance. Reply with only key implications for investment planning.\"`\n4. Send Investment Strategist's summary to Finance Advisor with:\n   `hermes --profile finance chat -q \"Investment Strategist weekly context for Duy: [PASTE INVPSTMENT SUMMARY]. Incorporate this into your context for future finance/admin reminders. Reply with only key implications for cashflow, deadlines, or admin tasks.\"`\n5. Final message to Duy: compact bullets only:\n   - `💰 Finance shared:` top 2-3 items\n   - `📈 Investment shared:` top 2-3 items\n   - `🔁 Cross-agent implications:` top 2-3 action-relevant implications\n   - `⚠️ Needs Duy:` only if a decision/action is needed\n\nKeep final under 12 bullets. No tables. No raw logs.",
+      "prompt": "You are Zeus coordinating the weekly knowledge trade between Duy's Finance Advisor profile (`finance`) and Investment Strategist profile (`charles`). This job is intended for every Saturday at 11:00 PM Vancouver/EDT time.\n\nDo not schedule any new cron jobs.\n\nGoal: have Finance Advisor and Investment Strategist exchange useful context, then send Duy a compact summary.\n\nSteps:\n1. Ask Finance Advisor for a weekly finance/admin summary by running a one-shot Hermes command via terminal:\n   `hermes --profile finance chat -q \"Weekly knowledge trade for Duy. Summarize finance/admin context the Investment Strategist should know: upcoming payments, credit card actions, tax/debt/insurance deadlines, cash constraints, risk limits, and any finance tasks due soon. Keep it concise, factual, no investment advice.\"`\n2. Ask Investment Strategist for a weekly investment summary by running:\n   `hermes --profile charles chat -q \"Weekly knowledge trade for Duy. Summarize investment/portfolio context the Finance Advisor should know: portfolio allocation concerns, planned trades/rebalances, cash needs, risk exposures, watchlist items, and upcoming investment decisions. Keep it concise. Include disclaimer only if giving analysis.\"`\n3. Send Finance Advisor's summary to Investment Strategist with:\n   `hermes --profile charles chat -q \"Finance Advisor weekly context for Duy: [PASTE FINANCE SUMMARY]. Incorporate this into your context for future portfolio/investment guidance. Reply with only key implications for investment planning.\"`\n4. Send Investment Strategist's summary to Finance Advisor with:\n   `hermes --profile finance chat -q \"Investment Strategist weekly context for Duy: [PASTE INVPSTMENT SUMMARY]. Incorporate this into your context for future finance/admin reminders. Reply with only key implications for cashflow, deadlines, or admin tasks.\"`\n5. Final message to Duy: compact bullets only:\n   - `💰 Finance shared:` top 2-3 items\n   - `📈 Investment shared:` top 2-3 items\n   - `🔁 Cross-agent implications:` top 2-3 action-relevant implications\n   - `⚠️ Needs Duy:` only if a decision/action is needed\n\nKeep final under 12 bullets. No tables. No raw logs.",
       "skills": [
         "cron-job-patterns"
       ],
@@ -80,7 +80,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-19T23:42:10.623487-07:00",
-      "next_run_at": "2026-09-05T23:00:00-07:00",
+      "next_run_at": "2026-09-05T23:00:00-04:00",
       "last_run_at": "2026-08-29T23:06:23.166863-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -106,7 +106,7 @@
     {
       "id": "b83af24484d0",
       "name": "Daily Evening Briefing - Task Status",
-      "prompt": "You are preparing Zeus's Daily Evening Briefing for Duy at 9:00PM Vancouver/PDT time.\n\nPurpose: tomorrow builder + task status. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse America/Vancouver local date/time unless active travel context says otherwise.\n\nGather:\n1. Read today's `/vault/Tasks/planning/YYYY-MM-DD.md` if it exists.\n2. Generate tomorrow's plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py --tomorrow`.\n3. Read tomorrow's `/vault/Tasks/planning/YYYY-MM-DD.md`.\n4. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `done` as completed, `sent` as sent but not completed, `deleted` as dismissed.\n5. Read `/vault/Tasks/tasks/*.md` directly for pending/in_progress tasks due tomorrow or in the next 7 days. Exclude completed/done/cancelled/canceled.\n6. Optionally read Catthew latest output from `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` for family/Victoria fixed items.\n\nHard schedule constraints to preserve:\n- Before 9:00 AM: baby/family, no work.\n- 10:00–10:30 AM: brunch protected.\n- 3:35–3:45 PM: pickup transition.\n- Around 3:45 PM: pick up Victoria / family transition.\n- No fixed deep-work / Pomodoro blocks; work flexibly between 10:30 AM and 3:35 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg. Weekends: no Company Review; use Investment Portfolio Review instead.\n- Weekends: do not include Pomodoro Schedule in the morning briefing, and Zeus schedule-reminder scripts stay silent. Show only Fixed, Today Tasks, Review Block, Top 3, Decisions if needed.\n\nOutput compact Telegram-readable plaintext:\n\nTomorrow Prep — YYYY-MM-DD\n\nReview Block\n- 11:45–12:15 — [Company Review on weekdays; Investment Portfolio Review on weekends]\n\nCarry Forward?\n- [unfinished from today only if genuinely still pending/sent]\n\nCandidate Top 3\n1. ...\n2. ...\n3. ...\n\nAdmin / Finance Batch\n- ...\n\nNo-Date Triage\n- [max 3: schedule / backlog / delete?]\n\nNeed Duy Decision\n- [omit if none]\n\nRules:\n- Do not shame or dump backlog.\n- Max 3 candidate priorities.\n- Ask for decisions only when necessary.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- Unfinished deep work should be rescheduled into tomorrow's realistic blocks, not repeated endlessly.\n\nNOTE-TAKING TEMPLATE — include the following 'Evening Audit & Highlights (3–5 Minutes)' reflection block for Duy to review while taking his evening notes (do not answer it yourself):\n- Daily Highlight: What was the single best moment or win of the day?\n- Gratitude Anchor: What is one specific thing/person I am grateful for today?\n- Stoic Audit: Where did I fall short or react poorly today?\n- Actionable Fix: How will I handle that better next time?",
+      "prompt": "You are preparing Zeus's Daily Evening Briefing for Duy at 9:00PM Vancouver/EDT time.\n\nPurpose: tomorrow builder + task status. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse America/Toronto local date/time unless active travel context says otherwise.\n\nGather:\n1. Read today's `/vault/Tasks/planning/YYYY-MM-DD.md` if it exists.\n2. Generate tomorrow's plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py --tomorrow`.\n3. Read tomorrow's `/vault/Tasks/planning/YYYY-MM-DD.md`.\n4. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `done` as completed, `sent` as sent but not completed, `deleted` as dismissed.\n5. Read `/vault/Tasks/tasks/*.md` directly for pending/in_progress tasks due tomorrow or in the next 7 days. Exclude completed/done/cancelled/canceled.\n6. Optionally read Catthew latest output from `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` for family/Victoria fixed items.\n\nHard schedule constraints to preserve:\n- Before 9:00 AM: baby/family, no work.\n- 10:00–10:30 AM: brunch protected.\n- 3:35–3:45 PM: pickup transition.\n- Around 3:45 PM: pick up Victoria / family transition.\n- No fixed deep-work / Pomodoro blocks; work flexibly between 10:30 AM and 3:35 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg. Weekends: no Company Review; use Investment Portfolio Review instead.\n- Weekends: do not include Pomodoro Schedule in the morning briefing, and Zeus schedule-reminder scripts stay silent. Show only Fixed, Today Tasks, Review Block, Top 3, Decisions if needed.\n\nOutput compact Telegram-readable plaintext:\n\nTomorrow Prep — YYYY-MM-DD\n\nReview Block\n- 11:45–12:15 — [Company Review on weekdays; Investment Portfolio Review on weekends]\n\nCarry Forward?\n- [unfinished from today only if genuinely still pending/sent]\n\nCandidate Top 3\n1. ...\n2. ...\n3. ...\n\nAdmin / Finance Batch\n- ...\n\nNo-Date Triage\n- [max 3: schedule / backlog / delete?]\n\nNeed Duy Decision\n- [omit if none]\n\nRules:\n- Do not shame or dump backlog.\n- Max 3 candidate priorities.\n- Ask for decisions only when necessary.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- Unfinished deep work should be rescheduled into tomorrow's realistic blocks, not repeated endlessly.\n\nNOTE-TAKING TEMPLATE — include the following 'Evening Audit & Highlights (3–5 Minutes)' reflection block for Duy to review while taking his evening notes (do not answer it yourself):\n- Daily Highlight: What was the single best moment or win of the day?\n- Gratitude Anchor: What is one specific thing/person I am grateful for today?\n- Stoic Audit: Where did I fall short or react poorly today?\n- Actionable Fix: How will I handle that better next time?",
       "skills": [
         "obsidian"
       ],
@@ -125,17 +125,17 @@
       "schedule_display": "0 21 * * *",
       "repeat": {
         "times": null,
-        "completed": 110
+        "completed": 113
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T17:28:03.704476-07:00",
-      "next_run_at": "2026-08-30T21:00:00-07:00",
-      "last_run_at": "2026-08-29T21:03:03.579756-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-02T21:00:00-07:00",
+      "last_run_at": "2026-09-01T21:00:59.519160-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -154,7 +154,7 @@
       "profile": null,
       "updated_at": "2026-05-25T19:04:50.492107+00:00",
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 2
     },
     {
       "id": "ef5bf01b48bb",
@@ -178,15 +178,15 @@
       "schedule_display": "*/15 8-22 * * *",
       "repeat": {
         "times": null,
-        "completed": 2593
+        "completed": 2766
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T19:06:33.209615-07:00",
-      "next_run_at": "2026-08-30T08:00:00-07:00",
-      "last_run_at": "2026-08-29T22:45:27.283085-07:00",
+      "next_run_at": "2026-09-01T21:15:00-07:00",
+      "last_run_at": "2026-09-01T21:00:50.255241-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -228,15 +228,15 @@
       "schedule_display": "*/15 8-22 * * *",
       "repeat": {
         "times": null,
-        "completed": 2588
+        "completed": 2761
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T20:24:52.039837-07:00",
-      "next_run_at": "2026-08-30T08:00:00-07:00",
-      "last_run_at": "2026-08-29T22:45:27.273162-07:00",
+      "next_run_at": "2026-09-01T21:15:00-07:00",
+      "last_run_at": "2026-09-01T21:00:50.250671-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -278,15 +278,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 3907
+        "completed": 4178
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-20T12:00:09.338658-07:00",
-      "next_run_at": "2026-08-30T08:00:00-07:00",
-      "last_run_at": "2026-08-29T23:50:29.175991-07:00",
+      "next_run_at": "2026-09-01T21:10:00-07:00",
+      "last_run_at": "2026-09-01T21:00:49.126798-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -335,7 +335,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-20T20:04:12.464339-07:00",
-      "next_run_at": "2026-10-01T08:00:00-07:00",
+      "next_run_at": "2026-10-01T08:00:00-04:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -355,5 +355,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-29T23:50:29.176517-07:00"
+  "updated_at": "2026-09-01T21:00:59.519707-07:00"
 }

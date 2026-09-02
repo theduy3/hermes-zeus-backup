@@ -82,15 +82,23 @@ Common writable vault state on VPS/container:
 
 Create `/home/hermes/.hermes/scripts/graphify_refresh.py` with this behavior:
 
-1. Build Hermes graph:
+1. Build Hermes graph (low-RAM host — do **not** full-tree `--force` with 4 workers):
 
 ```bash
+# Script maintains ~/.hermes/hermes-agent/.graphifyignore (drops node_modules/venv/apps/…)
+# then runs something equivalent to:
 graphify extract /home/hermes/.hermes/hermes-agent \
   --code-only \
   --out /home/hermes/.graphify/hermes \
-  --force \
-  --max-workers 4
+  --max-workers 1 \
+  --no-cluster
+# --force only on first scoped rebuild or GRAPHIFY_HERMES_FORCE=1
 ```
+
+**OOM pitfall (recurring on ~2.5Gi cgroup):** unscoped extract sees ~7.5k code files
+(node_modules/venv/apps) and dies with `SIGKILL`. Scope via `.graphifyignore`,
+`GRAPHIFY_MAX_WORKERS=1` (default in script), soft-fail Hermes so vault graphs still
+refresh, and never leave a 0-node `graph.json` (restore `.bak`).
 
 2. Build theduyvault graph structurally with Python using Graphify library:
 
@@ -112,7 +120,10 @@ Run manually:
 
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
+# full: hermes + 4 vault graphs
 uv tool run --from graphifyy python /home/hermes/.hermes/scripts/graphify_refresh.py
+# flags: --hermes-only | --vault-only | --split-only
+# env: GRAPHIFY_MAX_WORKERS=1  GRAPHIFY_HERMES_FORCE=1
 ```
 
 Expected outputs from initial integration:

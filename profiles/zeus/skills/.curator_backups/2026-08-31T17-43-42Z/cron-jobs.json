@@ -1,0 +1,359 @@
+{
+  "jobs": [
+    {
+      "id": "e6711b998b07",
+      "name": "Daily Morning Briefing - Personal Tasks",
+      "prompt": "Prepare Zeus's compact daily morning briefing for Duy, focused on personal/life admin. Use the authoritative current dated task and planning sources in /vault/Tasks. Report fixed commitments, due-today tasks, the assigned review block (Company Review on weekdays; Investment Portfolio Review on weekends), and Top 3. Exclude stocks/news/horoscope/filler.\n\nCritical family rule: when a due-today task says Sea Star daycare is closed, Victoria stays home. Do NOT include or infer any “Pick up Victoria” / pickup-transition reminder that day. Do not refer to exercise as being before Victoria pickup that day.\n\nOutput concise plaintext suitable for Telegram. Do not fabricate events.\n\nNOTE-TAKING TEMPLATE — include the following 'Morning Intention (1 Minute)' reflection block for Duy to review while taking his morning notes (do not answer it yourself):\n- Control Focus: What is the main thing within my control today?",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 6 * * *",
+        "display": "15 6 * * *"
+      },
+      "schedule_display": "15 6 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 113
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-13T21:51:54.763482+00:00",
+      "next_run_at": "2026-09-01T06:15:00-07:00",
+      "last_run_at": "2026-08-31T06:15:09.902283-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null,
+      "failure_streak": 1
+    },
+    {
+      "id": "a4c95c76c429",
+      "name": "Weekly Finance-Investment Knowledge Trade",
+      "prompt": "You are Zeus coordinating the weekly knowledge trade between Duy's Finance Advisor profile (`finance`) and Investment Strategist profile (`charles`). This job is intended for every Saturday at 11:00 PM Vancouver/EDT time.\n\nDo not schedule any new cron jobs.\n\nGoal: have Finance Advisor and Investment Strategist exchange useful context, then send Duy a compact summary.\n\nSteps:\n1. Ask Finance Advisor for a weekly finance/admin summary by running a one-shot Hermes command via terminal:\n   `hermes --profile finance chat -q \"Weekly knowledge trade for Duy. Summarize finance/admin context the Investment Strategist should know: upcoming payments, credit card actions, tax/debt/insurance deadlines, cash constraints, risk limits, and any finance tasks due soon. Keep it concise, factual, no investment advice.\"`\n2. Ask Investment Strategist for a weekly investment summary by running:\n   `hermes --profile charles chat -q \"Weekly knowledge trade for Duy. Summarize investment/portfolio context the Finance Advisor should know: portfolio allocation concerns, planned trades/rebalances, cash needs, risk exposures, watchlist items, and upcoming investment decisions. Keep it concise. Include disclaimer only if giving analysis.\"`\n3. Send Finance Advisor's summary to Investment Strategist with:\n   `hermes --profile charles chat -q \"Finance Advisor weekly context for Duy: [PASTE FINANCE SUMMARY]. Incorporate this into your context for future portfolio/investment guidance. Reply with only key implications for investment planning.\"`\n4. Send Investment Strategist's summary to Finance Advisor with:\n   `hermes --profile finance chat -q \"Investment Strategist weekly context for Duy: [PASTE INVPSTMENT SUMMARY]. Incorporate this into your context for future finance/admin reminders. Reply with only key implications for cashflow, deadlines, or admin tasks.\"`\n5. Final message to Duy: compact bullets only:\n   - `💰 Finance shared:` top 2-3 items\n   - `📈 Investment shared:` top 2-3 items\n   - `🔁 Cross-agent implications:` top 2-3 action-relevant implications\n   - `⚠️ Needs Duy:` only if a decision/action is needed\n\nKeep final under 12 bullets. No tables. No raw logs.",
+      "skills": [
+        "cron-job-patterns"
+      ],
+      "skill": "cron-job-patterns",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * 6",
+        "display": "0 23 * * 6"
+      },
+      "schedule_display": "0 23 * * 6",
+      "repeat": {
+        "times": null,
+        "completed": 16
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-19T23:42:10.623487-07:00",
+      "next_run_at": "2026-09-05T23:00:00-04:00",
+      "last_run_at": "2026-08-29T23:06:23.166863-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "memory",
+        "skills"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null,
+      "failure_streak": 0
+    },
+    {
+      "id": "b83af24484d0",
+      "name": "Daily Evening Briefing - Task Status",
+      "prompt": "You are preparing Zeus's Daily Evening Briefing for Duy at 9:00PM Vancouver/EDT time.\n\nPurpose: tomorrow builder + task status. No stocks, headlines, weather, horoscope, quote, or long commentary.\n\nUse America/Toronto local date/time unless active travel context says otherwise.\n\nGather:\n1. Read today's `/vault/Tasks/planning/YYYY-MM-DD.md` if it exists.\n2. Generate tomorrow's plan by running: `python3 /home/hermes/.hermes/profiles/zeus/scripts/generate_daily_plan.py --tomorrow`.\n3. Read tomorrow's `/vault/Tasks/planning/YYYY-MM-DD.md`.\n4. Read `/home/hermes/.hermes/profiles/zeus/task_buttons/registry.json` if it exists. Interpret `done` as completed, `sent` as sent but not completed, `deleted` as dismissed.\n5. Read `/vault/Tasks/tasks/*.md` directly for pending/in_progress tasks due tomorrow or in the next 7 days. Exclude completed/done/cancelled/canceled.\n6. Optionally read Catthew latest output from `/home/hermes/.hermes/profiles/catthew/cron/output/c729ba85e251/` for family/Victoria fixed items.\n\nHard schedule constraints to preserve:\n- Before 9:00 AM: baby/family, no work.\n- 10:00–10:30 AM: brunch protected.\n- 3:35–3:45 PM: pickup transition.\n- Around 3:45 PM: pick up Victoria / family transition.\n- No fixed deep-work / Pomodoro blocks; work flexibly between 10:30 AM and 3:35 PM, excluding brunch.\n- Company review rotation: Monday SalonX, Tuesday Sans Souci/SS, Wednesday Ongles Rivieres, Thursday Ongles Maily, Friday Ongles Charlesbourg. Weekends: no Company Review; use Investment Portfolio Review instead.\n- Weekends: do not include Pomodoro Schedule in the morning briefing, and Zeus schedule-reminder scripts stay silent. Show only Fixed, Today Tasks, Review Block, Top 3, Decisions if needed.\n\nOutput compact Telegram-readable plaintext:\n\nTomorrow Prep — YYYY-MM-DD\n\nReview Block\n- 11:45–12:15 — [Company Review on weekdays; Investment Portfolio Review on weekends]\n\nCarry Forward?\n- [unfinished from today only if genuinely still pending/sent]\n\nCandidate Top 3\n1. ...\n2. ...\n3. ...\n\nAdmin / Finance Batch\n- ...\n\nNo-Date Triage\n- [max 3: schedule / backlog / delete?]\n\nNeed Duy Decision\n- [omit if none]\n\nRules:\n- Do not shame or dump backlog.\n- Max 3 candidate priorities.\n- Ask for decisions only when necessary.\n- Strip Obsidian markup: `[[Page|label]]` -> `label`, remove raw tags/brackets.\n- Unfinished deep work should be rescheduled into tomorrow's realistic blocks, not repeated endlessly.\n\nNOTE-TAKING TEMPLATE — include the following 'Evening Audit & Highlights (3–5 Minutes)' reflection block for Duy to review while taking his evening notes (do not answer it yourself):\n- Daily Highlight: What was the single best moment or win of the day?\n- Gratitude Anchor: What is one specific thing/person I am grateful for today?\n- Stoic Audit: Where did I fall short or react poorly today?\n- Actionable Fix: How will I handle that better next time?",
+      "skills": [
+        "obsidian"
+      ],
+      "skill": "obsidian",
+      "model": "tencent/hy3:free",
+      "provider": "nous",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "display": "0 21 * * *"
+      },
+      "schedule_display": "0 21 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 111
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-20T17:28:03.704476-07:00",
+      "next_run_at": "2026-08-31T21:00:00-07:00",
+      "last_run_at": "2026-08-30T21:02:21.740772-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "memory",
+        "skills",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "updated_at": "2026-05-25T19:04:50.492107+00:00",
+      "fire_claim": null,
+      "failure_streak": 0
+    },
+    {
+      "id": "ef5bf01b48bb",
+      "name": "Sync Obsidian Tasks to theduy Calendar",
+      "prompt": "Script-only job. Sync dated eligible Obsidian task files from /vault/Tasks/tasks/*.md to Google Calendar `theduy calendar` only (calendar ID duynt1989@gmail.com). Exclude any task tagged or mentioning catthew/#catthew. Exclude completed/done/cancelled/canceled. Upsert events using source file extendedProperties and delete stale events managed by this script. Stay silent except for script stdout saved locally.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "sync_obsidian_tasks_to_theduy_calendar.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 8-22 * * *",
+        "display": "*/15 8-22 * * *"
+      },
+      "schedule_display": "*/15 8-22 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2664
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-17T19:06:33.209615-07:00",
+      "next_run_at": "2026-08-31T10:45:00-07:00",
+      "last_run_at": "2026-08-31T10:30:09.923506-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null,
+      "failure_streak": 0
+    },
+    {
+      "id": "bd73d9d0851c",
+      "name": "Import theduy Calendar Task Events to Obsidian",
+      "prompt": "Script-only job. Import explicitly-prefixed Google Calendar events from `theduy calendar` (duynt1989@gmail.com) into Obsidian task files under /vault/Tasks/tasks. Only import events whose title starts with `Task:` or `TODO:`. Ignore normal appointments, ignore Zeus's own Obsidian->Calendar mirror events, and ignore #catthew/catthew events. Mark imported Google events with private extendedProperties for idempotency. Stay silent except for script stdout saved locally.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "import_theduy_calendar_tasks.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 8-22 * * *",
+        "display": "*/15 8-22 * * *"
+      },
+      "schedule_display": "*/15 8-22 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2659
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-17T20:24:52.039837-07:00",
+      "next_run_at": "2026-08-31T10:45:00-07:00",
+      "last_run_at": "2026-08-31T10:30:09.570653-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null,
+      "failure_streak": 0
+    },
+    {
+      "id": "056878e263a5",
+      "name": "Due-Today Obsidian Task Card Drip",
+      "prompt": "Script-only job. Every 10 minutes during Duy's active day, send at most one Telegram card for a pending/in-progress non-catthew Obsidian task in /vault/Tasks/tasks with due_date exactly today. Do not drip overdue tasks; Duy moves overdue items himself while planning. Source of truth is the task Markdown file; Done button callback zt:<digest> must mark that original file completed via Zeus task_buttons registry.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "due_task_drip.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 8-23 * * *",
+        "display": "*/10 8-23 * * *"
+      },
+      "schedule_display": "*/10 8-23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4020
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-20T12:00:09.338658-07:00",
+      "next_run_at": "2026-08-31T10:50:00-07:00",
+      "last_run_at": "2026-08-31T10:40:09.548894-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null,
+      "failure_streak": 0
+    },
+    {
+      "id": "ccdc2300f9fe",
+      "name": "Quarterly Major Earnings Reminder Import",
+      "prompt": "Script-only quarterly job. Fetch the major US-listed stock earnings schedule plus every ticker in Duy's watchlist from /vault/System/Stock Watchlist.md, then create Obsidian task reminders in /vault/Tasks/tasks via fetch_major_earnings_reminders.py. Run at the beginning of January, April, July, and October. The script is idempotent; it creates one earnings reminder per major/watchlist ticker/date, with due_time/session metadata so specific-time events stay fixed and are not fed into Pomodoro reminders.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "fetch_major_earnings_reminders.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 1 1,4,7,10 *",
+        "display": "0 8 1 1,4,7,10 *"
+      },
+      "schedule_display": "0 8 1 1,4,7,10 *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-20T20:04:12.464339-07:00",
+      "next_run_at": "2026-10-01T08:00:00-04:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8446251233",
+        "chat_name": "theduy",
+        "thread_id": null,
+        "user_id": "8446251233"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-08-31T10:40:09.550134-07:00"
+}

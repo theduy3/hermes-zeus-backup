@@ -1,0 +1,34 @@
+---
+name: hermes-cron-ops
+description: Audit and fix Hermes cron jobs across all profiles safely.
+---
+
+# Hermes cron ops (multi-profile)
+
+## When to use
+- "Audit all cronjobs / make sure they run with any provider / fix blocked jobs."
+- Fixing `blocked_config` ("No Codex credentials stored") or Telegram `Unauthorized` delivery errors across the fleet.
+
+## Critical gotchas (verified — cost real debugging time)
+1. **The `cronjob` agent tool only sees the DEFAULT profile.** Jobs for zeus/catthew/thor/wiki/etc. live in `~/.hermes/profiles/<p>/cron/jobs.json`. The tool's `list`/`update`/`run` cannot reach them. Use `hermes cron --profile <p> <subcommand>` CLI (supports list/run/edit/pause) or edit the profile's `jobs.json` directly.
+2. **Provider-less jobs are NOT safe.** A job with `provider: null, model: null` still inherits the profile's default provider (config.yaml `model.provider`, often `openai-codex`). It will hit `blocked_config: No Codex credentials stored` at runtime. "Null provider" does NOT dodge a Codex block — you must pin an explicit working provider.
+3. **`cronjob` update rejects provider/model fields** ("No updates provided.") when those are the only changes. Edit `jobs.json` directly (python script) instead.
+4. **`no_agent` script jobs can still fail hard** — not a provider issue. Classic case: `graphify-daily-refresh` (`script=graphify_refresh.py`) dies with `SIGKILL` mid-extract = **cgroup OOM**, not bad cron config. Diagnose via `last_error` + `~/.hermes/cron/output/<job_id>/` + `memory.max`/`free -h`. Fix the **script** (scope workload, fewer workers, soft-fail, keep prior artifacts). Do not “fix” by pinning a model on a `no_agent` job. Details: skill `graphify-hermes-vault-integration` → `references/oom-sigkill-daily-refresh.md`.
+
+## Audit recipe
+- Glob `~/.hermes/cron/jobs.json` + `~/.hermes/profiles/*/cron/jobs.json`. Each file is `{"jobs": [...]}`. A job may key its id as `job_id` or `id`.
+- Find problems:
+  - explicit: `j["provider"] == "openai-codex"` (or any uncredentialed provider)
+  - silent: `j["provider"] is None and j["last_status"] == "blocked_config"` (inherited provider block)
+- Report per profile. Reusable scanner: `references/audit_scan.py`.
+
+## Fix recipe (direct jobs.json edit)
+For each target job set:
+- `provider` = a credentialed provider that serves a model (e.g. `nous`)
+- `model` = a model served by that provider (default profile: `upstage/solar-pro4:free`; other profiles: their `config.yaml` `model.default`, e.g. `tencent/hy3:free`)
+- clear stale block state: `last_status` "blocked_config" → "pending"; `last_error` → None; `preflight_alerted` → False
+- Do NOT touch `no_agent=True` script jobs (they never use an LLM).
+The scheduler reads jobs.json from disk each tick, so edits apply without a dedicated reload. Verify with `hermes cron run --profile <p> <job_id>` (returns "Ran now: succeeded") or re-scan for zero `blocked_config`.
+
+## Telegram delivery failures (separate root cause)
+`Unauthorized (target telegram:...)` means the profile's bot token was rejected by Telegram, NOT a provider issue. Check `gateway_state.json` → `platforms.telegram.error_message` ("token ... rejected by the server"). Fix: obtain a fresh token from @BotFather, validate via `GET https://api.telegram.org/bot<TOKEN>/getMe` (must return `ok:true`), write to that profile's `.env` `TELEGRAM_BOT_TOKEN`, restart gateway. Other profiles may be fine — check each `gateway_state.json`. For encrypted storage of the token see the `hermes-encrypted-secrets` skill.

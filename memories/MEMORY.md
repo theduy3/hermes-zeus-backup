@@ -14,6 +14,7 @@ config.yaml/.env write-protected from patch/write_file. config: `hermes config s
 §
 Graphify MCP: default=all 4 vault graphs; named bots 0-1 (vault-core); thor/wiki=0; graphify-hermes off unless debug.
 §
-Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-08-24. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
 §
 Orcarouter free-only; reMarkable MCP RO; X public search=x_search all profiles; AR Twitter cookies live (twitter-ar feed/user/user-posts; search often 404); Reddit rdt cookies live; AR skip bili/xueqiu/linkedin/xhs/xiaoyuzhou; GH+Exa live; FB/IG OpenCLI desktop-only not on VPS. Cookie import: rdt-import-cookies / twitter-ar-import-cookies --from-file. Doc ~/.agent-reach/docs/telegram-platforms.md + agent-reach references/cookie-import-vps.md
+§
+Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-08-30. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

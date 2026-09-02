@@ -1,0 +1,61 @@
+ts 2026-08-31T13:30:00+00:00
+fc err HTTP Error 404: Not Found on Accelerator
+crumb ZBiK9fnRb.d
+AAPL 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":319.7,"fmt":"319.70"},"open":{"raw":319.56,"fmt":"319.56"},"dayLow":{"raw":314.36,"fmt":"314.36"},"dayHigh":{"raw":321.235,"fmt":"321.23"},"regularMarketPreviousClose":{"raw":
+MSFT 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":513.53,"fmt":"513.53"},"open":{"raw":510.325,"fmt":"510.33"},"dayLow":{"raw":507.31,"fmt":"507.31"},"dayHigh":{"raw":512.19,"fmt":"512.19"},"regularMarketPreviousClose":{"raw"
+NVDA 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":217.55,"fmt":"217.55"},"open":{"raw":218.862,"fmt":"218.86"},"dayLow":{"raw":216.21,"fmt":"216.21"},"dayHigh":{"raw":220.6,"fmt":"220.60"},"regularMarketPreviousClose":{"raw":
+META 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":578.02,"fmt":"578.02"},"open":{"raw":576.77,"fmt":"576.77"},"dayLow":{"raw":569.1386,"fmt":"569.14"},"dayHigh":{"raw":578.675,"fmt":"578.67"},"regularMarketPreviousClose":{"ra
+GOOG 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":342.88,"fmt":"342.88"},"open":{"raw":339.99,"fmt":"339.99"},"dayLow":{"raw":333.43,"fmt":"333.43"},"dayHigh":{"raw":340.63,"fmt":"340.63"},"regularMarketPreviousClose":{"raw":
+AMZN 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":266.43,"fmt":"266.43"},"open":{"raw":263.825,"fmt":"263.83"},"dayLow":{"raw":259.716,"fmt":"259.72"},"dayHigh":{"raw":264.36,"fmt":"264.36"},"regularMarketPreviousClose":{"raw
+AVGO 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":368.79,"fmt":"368.79"},"open":{"raw":369.455,"fmt":"369.45"},"dayLow":{"raw":366.5,"fmt":"366.50"},"dayHigh":{"raw":372.75,"fmt":"372.75"},"regularMarketPreviousClose":{"raw":
+AMD 200 {"quoteSummary":{"result":[{"summaryDetail":{"maxAge":1,"priceHint":{"raw":2,"fmt":"2","longFmt":"2"},"previousClose":{"raw":465.58,"fmt":"465.58"},"open":{"raw":466.22,"fmt":"466.22"},"dayLow":{"raw":463.7,"fmt":"463.70"},"dayHigh":{"raw":475.8099,"fmt":"475.81"},"regularMarketPreviousClose":{"raw"
+WROTE 49
+{"t": "MSFT", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "AMZN", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "GOOG", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "META", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "AAPL", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "CRM", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "DELL", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "PLTR", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "ORCL", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "CRWV", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "INFY", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "NBIS", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "TSLA", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "NFLX", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "MELI", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "HD", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "LOW", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "WMT", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "TGT", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "ASML", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "AVGO", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "NVDA", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "AMD", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "SNDK", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "MU", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "TSM", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "INTC", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "BE", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "APLD", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "TE", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "PSIX", "fwd_pe": null, "peg": null, "roe": null, "eps_next_y": null, "eps_next_5y": null, "recom": null, "price": null}
+{"t": "GLW", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "BW", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "PUMP", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "IREN", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "CORZ", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "RIOT", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "CLSK", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "BITF", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "BTDR", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "HIVE", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "VFV.TO", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "GLD", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "SMH", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "SPCX", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "RKLB", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "SEI", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "WYFI", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
+{"t": "CRCL", "ok": false, "err": "HTTP Error 429: Too Many Requests"}
