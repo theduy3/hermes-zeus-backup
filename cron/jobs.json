@@ -18,24 +18,24 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 150
+        "completed": 151
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-09-02T09:00:00-04:00",
-      "last_run_at": "2026-09-01T09:02:25.298365-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-03T09:00:00-04:00",
+      "last_run_at": "2026-09-02T09:04:04.124534-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "deliver": "origin",
       "origin": null,
       "last_delivery_error": null,
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 1
     },
     {
       "id": "c9c38ab77915",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 105
+        "completed": 106
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-09-02T18:00:00-04:00",
-      "last_run_at": "2026-09-01T18:02:12.488442-04:00",
+      "next_run_at": "2026-09-03T18:00:00-04:00",
+      "last_run_at": "2026-09-02T18:01:42.188024-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -131,15 +131,15 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 106
+        "completed": 107
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-09-02T18:10:00-04:00",
-      "last_run_at": "2026-09-01T18:12:48.273840-04:00",
+      "next_run_at": "2026-09-03T18:10:00-04:00",
+      "last_run_at": "2026-09-02T18:12:45.590090-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -203,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 111
+        "completed": 112
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-09-03T00:00:00-04:00",
-      "last_run_at": "2026-08-31T00:01:10.811812-07:00",
+      "next_run_at": "2026-09-04T00:00:00-04:00",
+      "last_run_at": "2026-09-02T00:02:29.836163-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-02T00:00:53.188226-04:00",
-        "by": "hal-server-803171.novalocal:2946481:a9e850f3bd16413fb9576d06a1eae3b9"
+        "at": "2026-09-03T00:02:00.302605-04:00",
+        "by": "hal-server-803171.novalocal:2946481:5dda10e4fbfd4e76ae9ffc71d37b4026"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -247,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 3955
+        "completed": 4003
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-09-02T00:16:52.938160-04:00",
-      "last_run_at": "2026-09-01T23:46:52.938160-04:00",
+      "next_run_at": "2026-09-03T00:17:59.737167-04:00",
+      "last_run_at": "2026-09-02T23:47:59.737167-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -294,24 +294,24 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 36
+        "completed": 37
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-09-02T03:30:00-04:00",
-      "last_run_at": "2026-08-31T03:30:33.705023-07:00",
+      "next_run_at": "2026-09-03T03:30:00-04:00",
+      "last_run_at": "2026-09-02T03:30:04.895233-04:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 234, in <module>\n    main()\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 216, in main\n    stats[\"hermes\"] = build_hermes()\n                      ^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 102, in build_hermes\n    run([\n  File \"/home/hermes/.hermes/scripts/graphify_refresh.py\", line 85, in run\n    subprocess.run(cmd, cwd=str(cwd) if cwd else None, env=env, check=True)\n  File \"/home/hermes/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['graphify', 'extract', '/home/hermes/.hermes/hermes-agent', '--code-only', '--out', '/home/hermes/.graphify/hermes', '--force', '--max-workers', '4']' died with <Signals.SIGKILL: 9>.\nstdout:\n$ graphify extract /home/hermes/.hermes/hermes-agent --code-only --out /home/hermes/.graphify/hermes --force --max-workers 4\n[graphify extract] --force: full re-scan, semantic cache reads skipped\n[graphify extract] scanning /home/hermes/.hermes/hermes-agent\n[graphify extract] --code-only: skipping 1854 non-code file(s) (1780 docs, 10 papers, 64 images) — no LLM extraction\n[graphify extract] found 7507 code, 0 docs, 0 papers, 0 images\n[graphify extract] 902 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, .mailmap, .nojekyll (+896 more)\n[graphify extract] 10 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env.example, .envrc, .npmrc, bitwarden.md, command.md, index.md (+4 more)\n[graphify extract] AST extraction on 7507 code files...",
+      "last_error": "Script exited with code -9\nstdout:\n[hermes] .graphifyignore already current at /home/hermes/.hermes/hermes-agent/.graphifyignore",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 1
+      "failure_streak": 2
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-09-02T05:15:00-04:00",
-      "last_run_at": "2026-09-01T05:15:06.970473-04:00",
+      "next_run_at": "2026-09-03T05:15:00-04:00",
+      "last_run_at": "2026-09-02T05:15:07.238860-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -486,15 +486,15 @@
       "schedule_display": "30 20 * * 3",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.762660-04:00",
-      "next_run_at": "2026-09-02T20:30:00-04:00",
-      "last_run_at": "2026-08-26T20:30:17.173553-07:00",
+      "next_run_at": "2026-09-09T20:30:00-04:00",
+      "last_run_at": "2026-09-02T20:31:15.487478-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -536,15 +536,15 @@
       "schedule_display": "0 20 * * 3",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.773308-04:00",
-      "next_run_at": "2026-09-02T20:00:00-04:00",
-      "last_run_at": "2026-08-26T20:00:13.298502-07:00",
+      "next_run_at": "2026-09-09T20:00:00-04:00",
+      "last_run_at": "2026-09-02T20:01:08.939877-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -654,5 +654,5 @@
       "drift_alerted": true
     }
   ],
-  "updated_at": "2026-09-02T00:00:53.188368-04:00"
+  "updated_at": "2026-09-03T00:02:00.302812-04:00"
 }
