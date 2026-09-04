@@ -18,24 +18,24 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 151
+        "completed": 152
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-09-03T09:00:00-04:00",
-      "last_run_at": "2026-09-02T09:04:04.124534-04:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
+      "next_run_at": "2026-09-04T09:00:00-04:00",
+      "last_run_at": "2026-09-03T09:01:02.170426-04:00",
+      "last_status": "ok",
+      "last_error": null,
       "deliver": "origin",
       "origin": null,
       "last_delivery_error": null,
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "c9c38ab77915",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 106
+        "completed": 107
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-09-03T18:00:00-04:00",
-      "last_run_at": "2026-09-02T18:01:42.188024-04:00",
+      "next_run_at": "2026-09-04T18:00:00-04:00",
+      "last_run_at": "2026-09-03T18:01:36.712971-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -131,15 +131,15 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 107
+        "completed": 108
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-09-03T18:10:00-04:00",
-      "last_run_at": "2026-09-02T18:12:45.590090-04:00",
+      "next_run_at": "2026-09-04T18:10:00-04:00",
+      "last_run_at": "2026-09-03T18:12:58.188814-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -203,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 112
+        "completed": 113
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-09-04T00:00:00-04:00",
-      "last_run_at": "2026-09-02T00:02:29.836163-04:00",
+      "next_run_at": "2026-09-05T00:00:00-04:00",
+      "last_run_at": "2026-09-03T00:03:10.068256-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-03T00:02:00.302605-04:00",
-        "by": "hal-server-803171.novalocal:2946481:5dda10e4fbfd4e76ae9ffc71d37b4026"
+        "at": "2026-09-04T00:01:57.508375-04:00",
+        "by": "hal-server-803171.novalocal:1801841:254d535dfbb24833a5371fb45b73e4f8"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -247,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 4003
+        "completed": 4051
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-09-03T00:17:59.737167-04:00",
-      "last_run_at": "2026-09-02T23:47:59.737167-04:00",
+      "next_run_at": "2026-09-04T00:18:56.934530-04:00",
+      "last_run_at": "2026-09-03T23:48:56.934530-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -294,15 +294,15 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 37
+        "completed": 38
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-09-03T03:30:00-04:00",
-      "last_run_at": "2026-09-02T03:30:04.895233-04:00",
+      "next_run_at": "2026-09-04T03:30:00-04:00",
+      "last_run_at": "2026-09-03T03:30:12.388409-04:00",
       "last_status": "error",
       "last_error": "Script exited with code -9\nstdout:\n[hermes] .graphifyignore already current at /home/hermes/.hermes/hermes-agent/.graphifyignore",
       "last_delivery_error": null,
@@ -311,7 +311,7 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 2
+      "failure_streak": 3
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-09-03T05:15:00-04:00",
-      "last_run_at": "2026-09-02T05:15:07.238860-04:00",
+      "next_run_at": "2026-09-04T05:15:00-04:00",
+      "last_run_at": "2026-09-03T05:15:14.457510-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -606,53 +606,7 @@
       "run_claim": null,
       "fire_claim": null,
       "drift_alerted": true
-    },
-    {
-      "id": "4d68d1c54f91",
-      "name": "Revert profiles to xAI Grok (fallback expiry)",
-      "prompt": "You are reverting a temporary model switch. Earlier today all Hermes profiles were switched to hy3-free / nous (the Nous free fallback tier) because xAI Grok was down. Now revert them back to xAI Grok — but ONLY if xAI is actually reachable, otherwise keep the fallback and report.\n\nSteps:\n1. Verify xAI is back. A lightweight reachability check is fine (e.g. confirm the xai-oauth credential pool is non-empty via /home/hermes/.local/bin/hermes config show, or confirm the xai provider resolves). If xAI appears still unavailable, DO NOT revert: leave hy3-free/nous in place, report \"xAI still down — kept hy3-free/nous fallback,\" and stop.\n2. If xAI is reachable, for EACH of these profiles — default, butter, catthew, charles, finance, thor, wiki, zeus — set the model back to Grok:\n   - For the \"default\" profile, omit --profile:\n       /home/hermes/.local/bin/hermes config set model.default grok-4.20-reasoning\n       /home/hermes/.local/bin/hermes config set model.provider xai\n   - For every other profile, add --profile <name>:\n       /home/hermes/.local/bin/hermes config set --profile zeus model.default grok-4.20-reasoning\n       /home/hermes/.local/bin/hermes config set --profile zeus model.provider xai\n3. After setting, verify each with /home/hermes/.local/bin/hermes config get [--profile <p>] model.default and model.provider.\n4. Report a concise table: profile -> model/provider, and whether the revert succeeded. Only change model.default and model.provider — touch nothing else.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "opencode-free",
-      "model_snapshot": "hy3-free",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-08-27T09:00:00-07:00",
-        "display": "once at 2026-08-27 09:00"
-      },
-      "schedule_display": "once at 2026-08-27 09:00",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-26T17:33:22.496129-07:00",
-      "next_run_at": "2026-08-27T09:00:00-07:00",
-      "last_run_at": "2026-08-27T09:00:57.966161-07:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'opencode-free' -> 'xai-oauth'; model 'hy3-free' -> 'grok-4.5'), and this job is unpinned. No inference call was made. This finite one-shot job is consumed by this attempted run; create a new one-shot job at a future time with an explicit provider and model. This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
-      "last_delivery_error": null,
-      "failure_streak": 1,
-      "deliver": "all",
-      "origin": null,
-      "enabled_toolsets": null,
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null,
-      "drift_alerted": true
     }
   ],
-  "updated_at": "2026-09-03T00:02:00.302812-04:00"
+  "updated_at": "2026-09-04T00:01:57.508605-04:00"
 }
