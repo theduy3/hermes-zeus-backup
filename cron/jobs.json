@@ -18,15 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 152
+        "completed": 153
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-09-04T09:00:00-04:00",
-      "last_run_at": "2026-09-03T09:01:02.170426-04:00",
+      "next_run_at": "2026-09-05T09:00:00-04:00",
+      "last_run_at": "2026-09-04T09:03:00.804638-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 107
+        "completed": 108
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-09-04T18:00:00-04:00",
-      "last_run_at": "2026-09-03T18:01:36.712971-04:00",
+      "next_run_at": "2026-09-07T18:00:00-04:00",
+      "last_run_at": "2026-09-04T18:02:08.600484-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -131,15 +131,15 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 108
+        "completed": 109
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-09-04T18:10:00-04:00",
-      "last_run_at": "2026-09-03T18:12:58.188814-04:00",
+      "next_run_at": "2026-09-07T18:10:00-04:00",
+      "last_run_at": "2026-09-04T18:13:30.726898-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -203,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 113
+        "completed": 114
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-09-05T00:00:00-04:00",
-      "last_run_at": "2026-09-03T00:03:10.068256-04:00",
+      "next_run_at": "2026-09-06T00:00:00-04:00",
+      "last_run_at": "2026-09-04T00:02:24.521994-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-04T00:01:57.508375-04:00",
-        "by": "hal-server-803171.novalocal:1801841:254d535dfbb24833a5371fb45b73e4f8"
+        "at": "2026-09-05T00:00:58.569224-04:00",
+        "by": "hal-server-803171.novalocal:1801841:801c6e1c48e74e2ab99176a57b4030b9"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -247,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 4051
+        "completed": 4099
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-09-04T00:18:56.934530-04:00",
-      "last_run_at": "2026-09-03T23:48:56.934530-04:00",
+      "next_run_at": "2026-09-05T00:19:58.472362-04:00",
+      "last_run_at": "2026-09-04T23:49:58.472362-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -294,15 +294,15 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 38
+        "completed": 39
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-09-04T03:30:00-04:00",
-      "last_run_at": "2026-09-03T03:30:12.388409-04:00",
+      "next_run_at": "2026-09-05T03:30:00-04:00",
+      "last_run_at": "2026-09-04T03:30:14.484510-04:00",
       "last_status": "error",
       "last_error": "Script exited with code -9\nstdout:\n[hermes] .graphifyignore already current at /home/hermes/.hermes/hermes-agent/.graphifyignore",
       "last_delivery_error": null,
@@ -311,7 +311,7 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 3
+      "failure_streak": 4
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-09-04T05:15:00-04:00",
-      "last_run_at": "2026-09-03T05:15:14.457510-04:00",
+      "next_run_at": "2026-09-05T05:15:00-04:00",
+      "last_run_at": "2026-09-04T05:15:19.611469-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -560,53 +560,7 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null
-    },
-    {
-      "id": "a5e9804a3168",
-      "name": "ox-alpha-free-expiry-model-switch",
-      "prompt": "One-shot model migration task (self-contained; no prior context).\n\nBackground: The default Hermes model \"stealth/ox-alpha\" on OpenRouter stops being free on 2026-08-28. At this run, switch the DEFAULT profile to the next best FREE model WITH VISION on OpenRouter; if none exists, switch to the Nous provider.\n\nSteps:\n1. Fetch the public model list: curl https://openrouter.ai/api/v1/models (no auth needed for listing). Filter for models where pricing.prompt == \"0\" and pricing.completion == \"0\" (free) AND input modalities include \"image\" (vision-capable).\n2. Rank candidates: prefer recent flagship-family general-purpose chat models with vision input (Gemini, Qwen-VL, Llama vision, Mistral, etc.). Exclude image-generation-only and embedding models.\n3. Verify your top pick actually works by sending a tiny test chat completion through OpenRouter using the OPENROUTER_API_KEY from ~/.hermes/.env (write a small Python or shell snippet in /tmp that loads the key from .env rather than hardcoding anything). Confirm you get an HTTP 200 with a completion before trusting the pick.\n4. Apply via terminal ONLY (config.yaml is write-protected from file-edit tools): hermes config set model.default \"<model-id>\" && hermes config set model.provider openrouter\n5. FALLBACK: if no free vision model passes verification, switch provider to Nous instead (hermes config set model.provider nous, plus a valid Nous-supported model id). Do NOT leave OpenRouter configured pointing at a now-paid-only ox-alpha model.\n6. Only modify the DEFAULT profile config (~/.hermes/config.yaml); never touch other profiles.\n7. Report: chosen model + why, verification outcome, exact config values set. If nothing changed due to failure, say so explicitly.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openrouter",
-      "model_snapshot": "stealth/ox-alpha",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-08-28T13:00:00-07:00",
-        "display": "once at 2026-08-28 13:00"
-      },
-      "schedule_display": "once at 2026-08-28 13:00",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-25T21:23:37.992710-07:00",
-      "next_run_at": "2026-08-28T13:00:00-07:00",
-      "last_run_at": "2026-08-28T13:00:13.407406-07:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'openrouter' -> 'xai-oauth'; model 'stealth/ox-alpha' -> 'grok-4.5'), and this job is unpinned. No inference call was made. This finite one-shot job is consumed by this attempted run; create a new one-shot job at a future time with an explicit provider and model. This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
-      "last_delivery_error": null,
-      "failure_streak": 1,
-      "deliver": "origin",
-      "origin": null,
-      "enabled_toolsets": null,
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null,
-      "drift_alerted": true
     }
   ],
-  "updated_at": "2026-09-04T00:01:57.508605-04:00"
+  "updated_at": "2026-09-05T00:00:58.569390-04:00"
 }

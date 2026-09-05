@@ -487,14 +487,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-27T21:41:52.645223+00:00",
     "last_reused_patch_generation": 2,
-    "last_used_at": "2026-09-02T17:01:03.349197+00:00",
-    "last_viewed_at": "2026-09-02T17:01:03.345913+00:00",
+    "last_used_at": "2026-09-05T00:00:16.130234+00:00",
+    "last_viewed_at": "2026-09-05T00:00:16.125300+00:00",
     "patch_count": 7,
     "patch_generation": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 31,
-    "view_count": 31
+    "use_count": 35,
+    "view_count": 35
   },
   "heartmula": {
     "archived_at": null,
@@ -647,13 +647,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-02T11:00:38.765770+00:00",
+    "last_used_at": "2026-09-04T08:00:34.572658+00:00",
     "last_viewed_at": "2026-07-03T02:58:23.489482+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 73,
+    "use_count": 74,
     "view_count": 1
   },
   "llama-cpp": {
@@ -798,14 +798,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-27T21:41:52.672237+00:00",
     "last_reused_patch_generation": 1,
-    "last_used_at": "2026-09-04T03:00:50.454609+00:00",
-    "last_viewed_at": "2026-09-04T03:00:50.450898+00:00",
+    "last_used_at": "2026-09-05T03:00:18.475828+00:00",
+    "last_viewed_at": "2026-09-05T03:00:18.469557+00:00",
     "patch_count": 17,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 58,
-    "view_count": 58
+    "use_count": 64,
+    "view_count": 64
   },
   "obsidian-wiki-maintenance-patterns": {
     "archived_at": null,
@@ -973,14 +973,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-18T17:07:45.360351+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-04T03:00:31.568455+00:00",
-    "last_viewed_at": "2026-09-04T03:00:31.564623+00:00",
+    "last_used_at": "2026-09-05T03:00:18.428506+00:00",
+    "last_viewed_at": "2026-09-05T03:00:18.421086+00:00",
     "patch_count": 6,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 140,
-    "view_count": 75
+    "use_count": 144,
+    "view_count": 78
   },
   "product-price-monitor": {
     "archived_at": null,
@@ -1215,13 +1215,13 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T13:40:32.242775+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-02T11:00:38.741484+00:00",
+    "last_used_at": "2026-09-04T08:00:34.532444+00:00",
     "last_viewed_at": "2026-08-06T16:39:15.762321+00:00",
     "patch_count": 8,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 78,
+    "use_count": 79,
     "view_count": 12
   },
   "tonight": {
@@ -1230,14 +1230,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-21T06:02:53.477782+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-04T03:00:50.434652+00:00",
-    "last_viewed_at": "2026-09-04T03:00:50.430821+00:00",
+    "last_used_at": "2026-09-05T03:00:18.465168+00:00",
+    "last_viewed_at": "2026-09-05T03:00:18.460058+00:00",
     "patch_count": 29,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 190,
-    "view_count": 59
+    "use_count": 194,
+    "view_count": 61
   },
   "touchdesigner-mcp": {
     "archived_at": null,
@@ -1329,14 +1329,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T15:07:12.534687+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-04T00:00:28.459659+00:00",
-    "last_viewed_at": "2026-09-04T00:00:28.452344+00:00",
+    "last_used_at": "2026-09-05T00:00:16.120833+00:00",
+    "last_viewed_at": "2026-09-05T00:00:16.117775+00:00",
     "patch_count": 150,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 382,
-    "view_count": 184
+    "use_count": 388,
+    "view_count": 187
   },
   "wiki-lint": {
     "archived_at": null,
@@ -1344,14 +1344,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T09:06:00.610974+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-02T09:00:44.967341+00:00",
-    "last_viewed_at": "2026-09-02T09:00:44.960884+00:00",
+    "last_used_at": "2026-09-04T06:00:55.200355+00:00",
+    "last_viewed_at": "2026-09-04T06:00:55.188935+00:00",
     "patch_count": 54,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 231,
-    "view_count": 166
+    "use_count": 239,
+    "view_count": 173
   },
   "xlsx": {
     "archived_at": null,

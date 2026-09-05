@@ -719,5 +719,17 @@
     "status": "sent",
     "message_id": 2588,
     "odds": ""
+  },
+  "b0203006c5da4a41": {
+    "id": "b0203006c5da4a41",
+    "date": "2026-09-04",
+    "due_date": "2026-09-04",
+    "title": "Attend Unity Electro Fest 2026 - Passe 1 jour",
+    "text": "Attend Unity Electro Fest 2026 - Passe 1 jour",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/attend-unity-electro-fest-2026-passe-1-jour.md",
+    "status": "sent",
+    "message_id": 2607,
+    "odds": ""
   }
 }
