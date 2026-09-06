@@ -1,0 +1,58 @@
+{
+  "HIVE": {
+    "price": 3.11,
+    "chg": 1.967,
+    "asof": 1788552000,
+    "currency": "USD",
+    "tz": "EDT"
+  },
+  "VFV.TO": {
+    "price": 189.54,
+    "chg": -0.021,
+    "asof": 1788551969,
+    "currency": "CAD",
+    "tz": "EDT"
+  },
+  "GLD": {
+    "price": 406.77,
+    "chg": -0.841,
+    "asof": 1788552000,
+    "currency": "USD",
+    "tz": "EDT"
+  },
+  "SMH": {
+    "price": 567.01,
+    "chg": 2.608,
+    "asof": 1788552000,
+    "currency": "USD",
+    "tz": "EDT"
+  },
+  "SPCX": {
+    "price": 147.95,
+    "chg": -1.195,
+    "asof": 1788552000,
+    "currency": "USD",
+    "tz": "EDT"
+  },
+  "SEI": {
+    "price": 55.0,
+    "chg": 3.442,
+    "asof": 1788552002,
+    "currency": "USD",
+    "tz": "EDT"
+  },
+  "WYFI": {
+    "price": 19.54,
+    "chg": 4.047,
+    "asof": 1788552000,
+    "currency": "USD",
+    "tz": "EDT"
+  },
+  "CRCL": {
+    "price": 102.05,
+    "chg": -1.143,
+    "asof": 1788552002,
+    "currency": "USD",
+    "tz": "EDT"
+  }
+}

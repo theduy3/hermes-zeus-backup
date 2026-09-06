@@ -18,15 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 153
+        "completed": 154
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-09-05T09:00:00-04:00",
-      "last_run_at": "2026-09-04T09:03:00.804638-04:00",
+      "next_run_at": "2026-09-06T09:00:00-04:00",
+      "last_run_at": "2026-09-05T09:02:06.516690-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -203,15 +203,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 114
+        "completed": 115
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-09-06T00:00:00-04:00",
-      "last_run_at": "2026-09-04T00:02:24.521994-04:00",
+      "next_run_at": "2026-09-07T00:00:00-04:00",
+      "last_run_at": "2026-09-05T00:01:51.791873-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,8 +220,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-05T00:00:58.569224-04:00",
-        "by": "hal-server-803171.novalocal:1801841:801c6e1c48e74e2ab99176a57b4030b9"
+        "at": "2026-09-06T00:00:52.508634-04:00",
+        "by": "hal-server-803171.novalocal:1801841:e937081d32604c949ca8585dc969ef07"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -247,15 +247,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 4099
+        "completed": 4147
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-09-05T00:19:58.472362-04:00",
-      "last_run_at": "2026-09-04T23:49:58.472362-04:00",
+      "next_run_at": "2026-09-06T00:22:52.354646-04:00",
+      "last_run_at": "2026-09-05T23:52:52.354646-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -294,15 +294,15 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 39
+        "completed": 40
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-09-05T03:30:00-04:00",
-      "last_run_at": "2026-09-04T03:30:14.484510-04:00",
+      "next_run_at": "2026-09-06T03:30:00-04:00",
+      "last_run_at": "2026-09-05T03:30:06.398450-04:00",
       "last_status": "error",
       "last_error": "Script exited with code -9\nstdout:\n[hermes] .graphifyignore already current at /home/hermes/.hermes/hermes-agent/.graphifyignore",
       "last_delivery_error": null,
@@ -311,7 +311,7 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 4
+      "failure_streak": 5
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +338,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-09-05T05:15:00-04:00",
-      "last_run_at": "2026-09-04T05:15:19.611469-04:00",
+      "next_run_at": "2026-09-06T05:15:00-04:00",
+      "last_run_at": "2026-09-05T05:15:11.848965-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -562,5 +562,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-05T00:00:58.569390-04:00"
+  "updated_at": "2026-09-06T00:00:52.508825-04:00"
 }

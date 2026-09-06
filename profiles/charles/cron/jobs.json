@@ -367,15 +367,15 @@
       "schedule_display": "0 9 * * 6",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-22T10:58:29.074253-07:00",
-      "next_run_at": "2026-09-05T09:00:00-04:00",
-      "last_run_at": "2026-08-29T09:04:02.672525-07:00",
+      "next_run_at": "2026-09-12T09:00:00-07:00",
+      "last_run_at": "2026-09-05T09:05:47.130225-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -417,17 +417,17 @@
       "schedule_display": "0 9 * * 6",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-22T10:58:47.773319-07:00",
-      "next_run_at": "2026-09-05T09:00:00-04:00",
-      "last_run_at": "2026-08-29T09:05:13.510643-07:00",
+      "next_run_at": "2026-09-12T09:00:00-07:00",
+      "last_run_at": "2026-09-05T09:09:19.590912-07:00",
       "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: Model 'hy3-free' not found. The requested model does not exist in our configuration or OpenRouter catalog.",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -442,7 +442,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 1
+      "failure_streak": 2
     },
     {
       "id": "a592cff295ca",
@@ -467,15 +467,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 79
+        "completed": 80
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-22T11:08:04.949047-07:00",
-      "next_run_at": "2026-09-05T09:00:00-07:00",
-      "last_run_at": "2026-09-04T09:09:19.913553-07:00",
+      "next_run_at": "2026-09-06T09:00:00-07:00",
+      "last_run_at": "2026-09-05T09:17:48.834411-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -547,5 +547,5 @@
       "failure_streak": 1
     }
   ],
-  "updated_at": "2026-09-04T09:09:19.914061-07:00"
+  "updated_at": "2026-09-05T09:17:48.834996-07:00"
 }
