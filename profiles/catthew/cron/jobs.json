@@ -23,17 +23,17 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 110
+        "completed": 111
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-09-07T07:00:00-07:00",
-      "last_run_at": "2026-09-06T07:00:17.298864-07:00",
+      "next_run_at": "2026-09-08T07:00:00-07:00",
+      "last_run_at": "2026-09-07T07:01:04.458416-07:00",
       "last_status": "error",
-      "last_error": "RuntimeError: HTTP 429: rate limited",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
       "deliver": "telegram:-5249331607",
       "origin": {
@@ -49,7 +49,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 7
+      "failure_streak": 8
     },
     {
       "id": "a02e52721326",
@@ -200,15 +200,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 9587
+        "completed": 9683
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-09-06T21:10:00-07:00",
-      "last_run_at": "2026-09-06T21:00:29.193496-07:00",
+      "next_run_at": "2026-09-07T21:10:00-07:00",
+      "last_run_at": "2026-09-07T21:00:26.791280-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -346,15 +346,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 43
+        "completed": 44
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T16:00:45.951943-07:00",
-      "next_run_at": "2026-09-07T15:00:00-07:00",
-      "last_run_at": "2026-09-06T15:00:32.864621-07:00",
+      "next_run_at": "2026-09-08T15:00:00-07:00",
+      "last_run_at": "2026-09-07T15:00:21.451499-07:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
@@ -371,7 +371,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 7
+      "failure_streak": 8
     },
     {
       "id": "2993226070ee",
@@ -521,5 +521,5 @@
       "failure_streak": 1
     }
   ],
-  "updated_at": "2026-09-06T21:00:29.193975-07:00"
+  "updated_at": "2026-09-07T21:00:26.791901-07:00"
 }
