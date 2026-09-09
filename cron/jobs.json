@@ -18,24 +18,24 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 156
+        "completed": 157
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-09-08T09:00:00-04:00",
-      "last_run_at": "2026-09-07T09:05:01.166398-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-09T09:00:00-04:00",
+      "last_run_at": "2026-09-08T09:00:37.682491-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "deliver": "origin",
       "origin": null,
       "last_delivery_error": null,
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 1
     },
     {
       "id": "c9c38ab77915",
@@ -55,15 +55,15 @@
       "schedule_display": "0 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 109
+        "completed": 110
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-09-08T18:00:00-04:00",
-      "last_run_at": "2026-09-07T18:01:43.222310-04:00",
+      "next_run_at": "2026-09-09T18:00:00-04:00",
+      "last_run_at": "2026-09-08T18:03:35.173345-04:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -72,7 +72,13 @@
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-08T18:00:00-04:00",
+        "dispatched_at": "2026-09-08T18:00:29.721202-04:00",
+        "lateness_seconds": 29.7,
+        "kind": "on_time"
+      }
     },
     {
       "id": "8f310c8f4baf",
@@ -131,24 +137,30 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 110
+        "completed": 111
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-09-08T18:10:00-04:00",
-      "last_run_at": "2026-09-07T18:12:53.212670-04:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-09T18:10:00-04:00",
+      "last_run_at": "2026-09-08T18:11:00.674641-04:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Response truncated due to output length limit",
       "deliver": "origin",
       "origin": null,
       "last_delivery_error": null,
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 1,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-08T18:10:00-04:00",
+        "dispatched_at": "2026-09-08T18:10:32.649881-04:00",
+        "lateness_seconds": 32.6,
+        "kind": "on_time"
+      }
     },
     {
       "id": "067ad023e2d9",
@@ -203,15 +215,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 117
+        "completed": 118
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-09-09T00:00:00-04:00",
-      "last_run_at": "2026-09-07T00:02:39.030207-04:00",
+      "next_run_at": "2026-09-10T00:00:00-04:00",
+      "last_run_at": "2026-09-08T00:02:52.621028-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -220,12 +232,18 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-08T00:01:20.688640-04:00",
-        "by": "hal-server-803171.novalocal:1801841:b63446a2d14f4fbf92f547ece7efe195"
+        "at": "2026-09-09T00:00:47.452537-04:00",
+        "by": "hal-server-803171.novalocal:3585523:80432e06cdf745f8be830000828d0a76"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-09T00:00:00-04:00",
+        "dispatched_at": "2026-09-09T00:00:47.422161-04:00",
+        "lateness_seconds": 47.4,
+        "kind": "on_time"
+      }
     },
     {
       "id": "96f28d228fb9",
@@ -247,15 +265,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 4243
+        "completed": 4290
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-09-08T00:25:21.017821-04:00",
-      "last_run_at": "2026-09-07T23:55:21.017821-04:00",
+      "next_run_at": "2026-09-09T00:26:47.562804-04:00",
+      "last_run_at": "2026-09-08T23:56:47.562804-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -270,7 +288,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-08T23:56:46.340493-04:00",
+        "dispatched_at": "2026-09-08T23:56:47.328878-04:00",
+        "lateness_seconds": 1.0,
+        "kind": "on_time"
+      }
     },
     {
       "id": "5a9aa5056402",
@@ -294,15 +318,15 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 42
+        "completed": 43
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-09-08T03:30:00-04:00",
-      "last_run_at": "2026-09-07T03:30:39.903987-04:00",
+      "next_run_at": "2026-09-09T03:30:00-04:00",
+      "last_run_at": "2026-09-08T03:30:10.123271-04:00",
       "last_status": "error",
       "last_error": "Script exited with code -9\nstdout:\n[hermes] .graphifyignore already current at /home/hermes/.hermes/hermes-agent/.graphifyignore",
       "last_delivery_error": null,
@@ -311,7 +335,7 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 1
+      "failure_streak": 2
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -338,15 +362,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-09-08T05:15:00-04:00",
-      "last_run_at": "2026-09-07T05:15:44.051964-04:00",
+      "next_run_at": "2026-09-09T05:15:00-04:00",
+      "last_run_at": "2026-09-08T05:15:12.987298-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -562,5 +586,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-08T00:01:20.689242-04:00"
+  "updated_at": "2026-09-09T00:00:47.452710-04:00"
 }

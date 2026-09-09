@@ -1,52 +1,6 @@
 {
   "jobs": [
     {
-      "id": "2f7884a7f40c",
-      "name": "Close Avion 7760 reminder",
-      "prompt": "Reminder: Close Avion card ending 7760.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-09-01T09:00:00-07:00",
-        "display": "once at 2026-09-01 09:00"
-      },
-      "schedule_display": "once at 2026-09-01 09:00",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-05-19T23:07:16.437668-07:00",
-      "next_run_at": null,
-      "last_run_at": "2026-09-01T09:01:34.222197-07:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
-      "last_delivery_error": null,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "8446251233",
-        "chat_name": "theduy",
-        "thread_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "profile": null,
-      "run_claim": null,
-      "fire_claim": null,
-      "failure_streak": 1
-    },
-    {
       "id": "b9a938586a37",
       "name": "weekly-finance-butter-sync",
       "prompt": "Weekly Sunday 9:00 AM America/Toronto finance sync with Butter for Duy.\n\nRole: Finance profile. Prepare a concise finance sync packet intended for exchange with Butter.\n\nTasks:\n1. Check Obsidian/vault finance-tagged tasks and notes if accessible. Use the obsidian skill instructions; first probe /vault, OBSIDIAN_VAULT_PATH, and /root/theduyvault. If vault access is unavailable, state the exact limitation.\n2. Summarize current known personal-finance state from memory/context: credit card payment obligations, card/churning items, points balances, investment context, recurring income/expense, tax/admin finance tasks.\n3. Identify questions/data needed from Butter for the 10:00 AM weekly personal finance report.\n4. Output a short \"Butter sync packet\" with sections: Bottom line, Changes/flags, Data needed from Butter, Inputs for 10AM report.\n\nConstraints:\n- Numbers-first, terse.\n- Do not invent balances or transactions.\n- Dates in America/Toronto local time.\n- Flag urgent/overdue items with ⚠.\n- This job must not create additional cron jobs.",
@@ -198,5 +152,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-06T20:00:23.033163-04:00"
+  "updated_at": "2026-09-08T12:02:29.357212-04:00"
 }

@@ -23,15 +23,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 111
+        "completed": 112
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T15:23:06.162831+00:00",
-      "next_run_at": "2026-09-08T07:00:00-07:00",
-      "last_run_at": "2026-09-07T07:01:04.458416-07:00",
+      "next_run_at": "2026-09-09T07:00:00-07:00",
+      "last_run_at": "2026-09-08T07:00:31.594562-07:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
@@ -49,7 +49,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 8
+      "failure_streak": 9
     },
     {
       "id": "a02e52721326",
@@ -200,15 +200,15 @@
       "schedule_display": "*/10 8-23 * * *",
       "repeat": {
         "times": null,
-        "completed": 9683
+        "completed": 9774
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-27T10:53:35.743583-07:00",
-      "next_run_at": "2026-09-07T21:10:00-07:00",
-      "last_run_at": "2026-09-07T21:00:26.791280-07:00",
+      "next_run_at": "2026-09-09T08:00:00-04:00",
+      "last_run_at": "2026-09-08T23:50:09.435134-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -226,7 +226,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": null,
-      "failure_streak": 0
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-08T23:50:00-04:00",
+        "dispatched_at": "2026-09-08T23:50:09.249669-04:00",
+        "lateness_seconds": 9.2,
+        "kind": "on_time"
+      }
     },
     {
       "id": "d3bbab6825ff",
@@ -346,15 +352,15 @@
       "schedule_display": "0 15 * * *",
       "repeat": {
         "times": null,
-        "completed": 44
+        "completed": 45
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T16:00:45.951943-07:00",
-      "next_run_at": "2026-09-08T15:00:00-07:00",
-      "last_run_at": "2026-09-07T15:00:21.451499-07:00",
+      "next_run_at": "2026-09-09T15:00:00-04:00",
+      "last_run_at": "2026-09-08T18:00:49.183423-04:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
@@ -371,7 +377,13 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 8
+      "failure_streak": 9,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-08T15:00:00-07:00",
+        "dispatched_at": "2026-09-08T18:00:37.732406-04:00",
+        "lateness_seconds": 37.7,
+        "kind": "on_time"
+      }
     },
     {
       "id": "2993226070ee",
@@ -444,15 +456,15 @@
       "schedule_display": "0 20 * * 2,4",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T09:48:22.249169-07:00",
-      "next_run_at": "2026-09-08T20:00:00-07:00",
-      "last_run_at": "2026-09-03T20:00:51.626846-07:00",
+      "next_run_at": "2026-09-10T20:00:00-04:00",
+      "last_run_at": "2026-09-08T20:00:23.806049-04:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
       "last_delivery_error": null,
@@ -469,7 +481,13 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 2
+      "failure_streak": 3,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-08T20:00:00-04:00",
+        "dispatched_at": "2026-09-08T20:00:12.908284-04:00",
+        "lateness_seconds": 12.9,
+        "kind": "on_time"
+      }
     },
     {
       "id": "2f94a63c501d",
@@ -521,5 +539,5 @@
       "failure_streak": 1
     }
   ],
-  "updated_at": "2026-09-07T21:00:26.791901-07:00"
+  "updated_at": "2026-09-08T23:50:09.435722-04:00"
 }

@@ -50,8 +50,8 @@
       20549
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
-      1787031466234675630,
-      18603
+      1788891762459552168,
+      15819
     ],
     "creative/DESCRIPTION.md": [
       1775843805096651856,
@@ -65,10 +65,6 @@
       1778565357577745237,
       14621
     ],
-    "creative/comfyui/SKILL.md": [
-      1778787422952912100,
-      24287
-    ],
     "creative/creative-artifact-generation/SKILL.md": [
       1780916734330370730,
       3420
@@ -81,10 +77,6 @@
       1778565357579560953,
       7581
     ],
-    "creative/touchdesigner-mcp/SKILL.md": [
-      1785092884121088599,
-      15269
-    ],
     "data-science/DESCRIPTION.md": [
       1775843805114145597,
       137
@@ -94,8 +86,8 @@
       11646
     ],
     "devops/hermes-operations-troubleshooting/SKILL.md": [
-      1787853065706561265,
-      36764
+      1788895764761805447,
+      36854
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -128,10 +120,6 @@
     "diagramming/DESCRIPTION.md": [
       1775843805114670348,
       159
-    ],
-    "dogfood/SKILL.md": [
-      1778565357580987834,
-      6270
     ],
     "domain/DESCRIPTION.md": [
       1775843805115300100,
@@ -377,10 +365,6 @@
       1786469842094393189,
       9655
     ],
-    "productivity/document-to-action-items/SKILL.md": [
-      1786469842087393000,
-      3966
-    ],
     "productivity/meeting-action-items/SKILL.md": [
       1786469842090393081,
       3808
@@ -421,10 +405,6 @@
       1786660592822468505,
       5963
     ],
-    "productivity/pdf/SKILL.md": [
-      1787031466236675684,
-      12244
-    ],
     "productivity/box/SKILL.md": [
       1787031466235675656,
       11697
@@ -449,6 +429,14 @@
       1787354995486393719,
       8632
     ],
+    "productivity/pdf/SKILL.md": [
+      1788891762459552168,
+      12489
+    ],
+    "productivity/document-to-action-items/SKILL.md": [
+      1788891762459552168,
+      3910
+    ],
     "red-teaming/godmode/SKILL.md": [
       1778565357588786324,
       20059
@@ -470,24 +458,16 @@
       4608
     ],
     "research/competitor-news-monitor/SKILL.md": [
-      1786469842098393296,
-      4501
+      1788891762460552195,
+      4619
     ],
     "research/grounded-citations/SKILL.md": [
-      1787031466236675684,
-      11231
-    ],
-    "research/blocked-page-recovery/SKILL.md": [
-      1787031466236675684,
-      5152
+      1788891762460552195,
+      12652
     ],
     "smart-home/DESCRIPTION.md": [
       1775843805167642449,
       123
-    ],
-    "smart-home/openhue/SKILL.md": [
-      1778565357589426535,
-      2713
     ],
     "social-media/DESCRIPTION.md": [
       1775843805167957033,
@@ -537,6 +517,10 @@
       1785556028604935598,
       6204
     ],
+    "software-development/github/SKILL.md": [
+      1788891762460552195,
+      2446
+    ],
     "telegram/SKILL.md": [
       1778644994307587526,
       1696
@@ -572,6 +556,14 @@
     "agent-reach/SKILL.md": [
       1787854430774537598,
       7429
+    ],
+    "web/DESCRIPTION.md": [
+      1788891762462552249,
+      137
+    ],
+    "web/blocked-page-recovery/SKILL.md": [
+      1788891762462552249,
+      5156
     ]
   },
   "skills": [
@@ -585,7 +577,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -598,14 +591,15 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
       "skill_name": "computer-use",
       "category": "autonomous-ai-agents",
       "frontmatter_name": "computer-use",
-      "description": "Drive the desktop in the background without stealing focus.",
+      "description": "Drive the desktop background-first; escalate on signal.",
       "platforms": [
         "macos",
         "windows",
@@ -615,7 +609,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -628,7 +623,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -641,7 +637,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -654,7 +651,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -667,7 +665,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -680,7 +679,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -693,7 +693,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -706,7 +707,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -719,7 +721,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -736,7 +739,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -753,7 +757,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -770,24 +775,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "comfyui",
-      "category": "creative",
-      "frontmatter_name": "comfyui",
-      "description": "Generate images, video, and audio with ComfyUI — install,...",
-      "platforms": [
-        "macos",
-        "linux",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -800,7 +789,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -817,7 +807,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -834,24 +825,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "touchdesigner-mcp",
-      "category": "creative",
-      "frontmatter_name": "touchdesigner-mcp",
-      "description": "Control TouchDesigner via twozero MCP.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -864,7 +839,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -877,7 +853,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -890,7 +867,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -903,7 +881,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -916,7 +895,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -929,14 +909,15 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
       "skill_name": "sdlc-review",
       "category": "devops",
       "frontmatter_name": "sdlc-review",
-      "description": "",
+      "description": "Review Kanban handoffs and route verified outcomes.",
       "platforms": [
         "linux",
         "macos",
@@ -948,7 +929,8 @@
           "kanban"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -961,7 +943,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -978,24 +961,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "dogfood",
-      "category": "dogfood",
-      "frontmatter_name": "dogfood",
-      "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1012,7 +979,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1025,7 +993,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1041,7 +1010,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1058,7 +1028,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1075,7 +1046,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1088,7 +1060,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1101,7 +1074,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1118,7 +1092,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1135,7 +1110,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1148,7 +1124,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1161,7 +1138,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1174,7 +1152,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1187,7 +1166,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1200,7 +1180,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1213,7 +1194,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1226,7 +1208,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1239,7 +1222,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1256,7 +1240,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1269,7 +1254,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1282,7 +1268,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1295,7 +1282,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1308,7 +1296,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1321,7 +1310,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1334,7 +1324,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1347,7 +1338,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1360,7 +1352,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1377,7 +1370,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1390,7 +1384,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1403,7 +1398,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1416,7 +1412,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1429,7 +1426,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1442,7 +1440,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1455,7 +1454,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1468,7 +1468,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1481,7 +1482,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1497,7 +1499,8 @@
           "file"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1510,7 +1513,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1527,7 +1531,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1544,7 +1549,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1561,7 +1567,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1574,7 +1581,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1587,7 +1595,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1600,7 +1609,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1613,7 +1623,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1626,7 +1637,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1643,7 +1655,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1660,14 +1673,15 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
       "skill_name": "pdf",
       "category": "productivity",
       "frontmatter_name": "pdf",
-      "description": "Create, read, merge, fill, and secure PDF files.",
+      "description": "PDF files: create, read, merge, fill, OCR, edit text.",
       "platforms": [
         "linux",
         "macos",
@@ -1677,7 +1691,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1694,7 +1709,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1707,7 +1723,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1724,7 +1741,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1737,7 +1755,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1750,7 +1769,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1763,7 +1783,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1776,7 +1797,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1789,7 +1811,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1806,7 +1829,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1819,7 +1843,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1832,7 +1857,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1845,7 +1871,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1862,7 +1889,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1879,7 +1907,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1896,24 +1925,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "blocked-page-recovery",
-      "category": "research",
-      "frontmatter_name": "blocked-page-recovery",
-      "description": "Recover blocked/paywalled/WAF'd pages via fallbacks.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1930,7 +1943,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1947,7 +1961,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1960,7 +1975,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1973,7 +1989,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1986,24 +2003,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "openhue",
-      "category": "smart-home",
-      "frontmatter_name": "openhue",
-      "description": "Control Philips Hue lights, scenes, rooms via OpenHue CLI.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2016,7 +2017,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2029,7 +2031,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2042,7 +2045,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2058,7 +2062,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2075,7 +2080,26 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
+      }
+    },
+    {
+      "skill_name": "github",
+      "category": "software-development",
+      "frontmatter_name": "github",
+      "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2088,7 +2112,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2105,7 +2130,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2118,7 +2144,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2131,7 +2158,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2148,7 +2176,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2165,7 +2194,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2178,7 +2208,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2194,7 +2225,8 @@
           "file"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2210,7 +2242,26 @@
           "file"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
+      }
+    },
+    {
+      "skill_name": "blocked-page-recovery",
+      "category": "web",
+      "frontmatter_name": "blocked-page-recovery",
+      "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2227,7 +2278,8 @@
           "vision"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2243,7 +2295,8 @@
           "file"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     }
   ],
@@ -2274,6 +2327,7 @@
     "productivity/ocr-and-documents": "Skills for extracting text from PDFs, scanned documents, images, and other file formats using OCR and document parsing tools.",
     "research": "Skills for academic research, paper discovery, literature review, domain reconnaissance, market data, content monitoring, and scientific knowledge retrieval.",
     "smart-home": "Skills for controlling smart home devices — lights, switches, sensors, and home automation systems.",
-    "social-media": "Skills for interacting with social platforms and social-media workflows — posting, reading, monitoring, and account operations."
+    "social-media": "Skills for interacting with social platforms and social-media workflows — posting, reading, monitoring, and account operations.",
+    "web": "Skills for reaching web content when direct access fails — blocked, paywalled, rate-limited, or bot-walled pages."
   }
 }

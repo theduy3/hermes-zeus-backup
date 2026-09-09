@@ -225,6 +225,85 @@
       },
       "installed_at": "2026-07-26T19:08:54.752058+00:00",
       "updated_at": "2026-07-26T19:08:54.752058+00:00"
+    },
+    "pretext": {
+      "source": "official",
+      "identifier": "official/creative/pretext",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:9e2e8f6151b4be1b",
+      "install_path": "creative/pretext",
+      "files": [
+        "SKILL.md",
+        "references/patterns.md",
+        "templates/donut-orbit.html",
+        "templates/hello-orb-flow.html"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-08T18:25:43.297391+00:00",
+      "updated_at": "2026-09-08T18:25:43.297391+00:00"
+    },
+    "touchdesigner-mcp": {
+      "source": "official",
+      "identifier": "official/creative/touchdesigner-mcp",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:0c6b0a3ffb64b73c",
+      "install_path": "creative/touchdesigner-mcp",
+      "files": [
+        "SKILL.md",
+        "references/3d-scene.md",
+        "references/animation.md",
+        "references/audio-reactive.md",
+        "references/dat-scripting.md",
+        "references/external-data.md",
+        "references/geometry-comp.md",
+        "references/glsl.md",
+        "references/layout-compositor.md",
+        "references/mcp-tools.md",
+        "references/midi-osc.md",
+        "references/network-patterns.md",
+        "references/operator-tips.md",
+        "references/operators.md",
+        "references/panel-ui.md",
+        "references/particles.md",
+        "references/pitfalls.md",
+        "references/postfx.md",
+        "references/projection-mapping.md",
+        "references/python-api.md",
+        "references/replicator.md",
+        "references/troubleshooting.md",
+        "scripts/setup.sh"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-08T18:25:43.319702+00:00",
+      "updated_at": "2026-09-08T18:25:43.319702+00:00"
+    },
+    "llama-cpp": {
+      "source": "official",
+      "identifier": "official/mlops/inference/llama-cpp",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:43a4ec8fb07acce8",
+      "install_path": "mlops/inference/llama-cpp",
+      "files": [
+        "SKILL.md",
+        "references/advanced-usage.md",
+        "references/hub-discovery.md",
+        "references/optimization.md",
+        "references/quantization.md",
+        "references/server.md",
+        "references/troubleshooting.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-08T18:25:43.331508+00:00",
+      "updated_at": "2026-09-08T18:25:43.331508+00:00"
     }
   }
 }

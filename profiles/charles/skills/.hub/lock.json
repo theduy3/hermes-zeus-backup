@@ -190,6 +190,22 @@
       },
       "installed_at": "2026-06-07T08:02:30.306546+00:00",
       "updated_at": "2026-06-07T08:02:30.306546+00:00"
+    },
+    "openhue": {
+      "source": "official",
+      "identifier": "official/smart-home/openhue",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:177f4de2ef06e4d9",
+      "install_path": "smart-home/openhue",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-08T18:22:45.698066+00:00",
+      "updated_at": "2026-09-08T18:22:45.698066+00:00"
     }
   }
 }
