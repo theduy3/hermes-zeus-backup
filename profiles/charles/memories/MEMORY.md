@@ -8,6 +8,7 @@ Finance weekly Sep 6 2026 EDT (Charles=triage/watchlist only; Finance=book; fact
 §
 Travel: Vancouver, America/Vancouver PDT (set 2026-08-24) until changed.
 §
-Active travel context: destination Montreal; timezone America/Toronto (EDT); set 2026-08-30. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.
 §
 Baseline shares (last brief): FIG 27, GOOG 15, MPTA 11, NVDA 241, PLTR 3, RACE 21, VFV.TO 33. Cash ~$92.7k CAD reserved unproven free; NVDA ~36% no-add. No-add AI/semi active. Deploy only after Finance recon + explicit risk limits.
+§
+Active travel context: destination Vancouver; timezone America/Vancouver (PDT); set 2026-09-09. Apply trip-sensitive schedules, briefings, reminders, dates, and local-time wording across all profiles until Duy changes it.

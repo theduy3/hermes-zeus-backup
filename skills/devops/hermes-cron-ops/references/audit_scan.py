@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Scan ALL Hermes cron jobs across default + every profile and report
-provider-pin problems. Reusable from any session. Prints a per-profile table
-and a final count of jobs still blocked by a missing provider.
+provider-pin / blocked_config problems only.
 
-Usage: python3 audit_scan.py   (run from ~/.hermes or any cwd)
+For full "are crons working" health (dead free models, OOM, delivery, gateway),
+run fleet_health.py in this directory instead — this scanner alone is not enough.
+
+Usage: python3 audit_scan.py
 """
 import json, glob, os
 
@@ -13,7 +15,7 @@ files += sorted(glob.glob(os.path.join(BASE, 'profiles', '*', 'cron', 'jobs.json
 
 left = 0
 for f in files:
-    scope = 'default' if f.endswith('cron/jobs.json') else f.split('/profiles/')[1].split('/')[0]
+    scope = 'default' if '/profiles/' not in f else f.split('/profiles/')[1].split('/')[0]
     try:
         raw = json.load(open(f))
     except Exception as e:
@@ -29,9 +31,15 @@ for f in files:
         # LLM jobs only (skip script-only)
         if no_agent is True:
             continue
+        # script-shaped without prompt also skip when marked via script-only heuristic
+        if j.get('script') and not j.get('prompt') and no_agent is not False:
+            # leave alone unless explicitly agent
+            if no_agent is True or (j.get('prompt') in (None, '') and j.get('script')):
+                if no_agent is True:
+                    continue
         if prov == 'openai-codex' or (prov is None and j.get('last_status') == 'blocked_config'):
             left += 1
             print(f"  PROBLEM [{scope}] {jid} | {str(j.get('name'))[:40]} | provider={prov} | last_status={j.get('last_status')}")
 
 print(f"\nJobs still blocked by a missing provider: {left}")
-print("0 = clean.")
+print("0 = clean for provider-pin only. Run fleet_health.py for model/OOM/delivery classes.")

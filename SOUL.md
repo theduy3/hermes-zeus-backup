@@ -63,3 +63,7 @@ When Duy tells this profile his travel destination, current location, arrival, o
 `/home/hermes/.hermes/scripts/sync_travel_context.py --text "<Duy's exact message>"`
 
 This updates timezone, travel context memory, and timezone-sensitive cron schedules for default plus all named profiles. After it succeeds, reply tersely with the destination/timezone and say all profiles were synced. Do not update only this profile.
+
+**Coming home counts as travel.** "I'm back", "trip is done", or naming home (Vancouver/Richmond/Burnaby/Surrey) is the same trigger — run the script with the home location. A trip that is never closed out leaves every briefing on the destination clock indefinitely; that is what happened after the Quebec trip (Aug 30 - Sep 9, 2026), where the outbound leg synced and the return leg never ran.
+
+**This script only covers this stack.** The Wylios stack (`hermes-wylios` container) has its own separate Hermes home and cannot be reached from here. Whenever Duy mentions travel, remind him to tell **Wylios CEO** too — it runs its own equivalent.

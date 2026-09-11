@@ -89,3 +89,28 @@ Thumbs.db
 **/*client_secret*.json
 **/*oauth_pending*.json
 shared/nous_auth.json
+
+# === Life OS knowledge base: authoritative data, MUST be backed up ===
+# The generic runtime patterns above (**/logs/, checkpoints/) were written for
+# Hermes runtime noise. They silently excluded Life OS's source-of-truth records
+# while its rebuildable SQLite cache stayed committed - exactly inverted.
+# Re-include them explicitly; parent dirs are not excluded, so these negations bind.
+!projects/life-os/life-knowledge-base/**/logs/
+!projects/life-os/verification/checkpoints/
+# SQLite transients: committing these beside the .sqlite3 yields an inconsistent restore
+*.sqlite3-wal
+*.sqlite3-shm
+# Checkpoint copies of the ledgers carry the same directory names; the negation above is
+# anchored under life-knowledge-base/ only, so cover the checkpointed copies too.
+!projects/life-os/verification/checkpoints/**/logs/
+
+# agentmemory npm cache (re-creatable noise)
+agentmemory/npm-cache/
+**/npm-cache/
+
+# Update mutex / transient locks
+.hermes-update-in-progress.mutex
+*.mutex
+
+# desktop-ssh ephemeral sessions (permission-restricted)
+desktop-ssh/

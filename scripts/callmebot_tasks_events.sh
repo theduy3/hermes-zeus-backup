@@ -1,33 +1,60 @@
 #!/usr/bin/env bash
 # callmebot_tasks_events.sh — daily generator for "tasks & events with a specific time".
 #
-# Runs once each morning (cron: e.g. 5:15 AM Toronto). It scans:
+# Runs once each morning (cron: e.g. 5:15 AM local). It scans:
 #   1) /vault/Tasks/tasks/*.md  for pending/in_progress tasks with BOTH due_date AND due_time
 #   2) /vault/Tasks/calendar/*.md for events with a specific date+start time (not allDay)
-# For each TODAY item it creates TWO one-off Hermes cron jobs that fire callmebot_reminder.sh:
+# For each TODAY item it creates TWO one-off Hermes cron jobs that fire CallMeBot:
 #   - 30 minutes BEFORE the item time
 #   - AT the item time
-# The spoken message is the item title + time.
+#
+# CRITICAL (verified):
+# - Hermes cron `script` is a path only. Args are NOT forwarded (`_run_job_script` argv =
+#   bash + path). Never pass `callmebot_reminder.sh 'msg'` — that becomes Script not found.
+# - Bake the spoken text into a tiny wrapper under scripts/callme_once/.
+# - Emit ISO-8601 *with offset* so `hermes cron create` cannot reinterpret wall time in
+#   another zone (bare `YYYY-MM-DDTHH:MM:00` caused +3h PDT/EDT skew).
 #
 # Skips items already in the past, completed/cancelled, or not dated today.
 # Emits output only if it scheduled something (else the cron delivery stays silent).
 set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CALL_BASENAME="callmebot_reminder.sh"   # CLI resolves under ~/.hermes/scripts/
-TZ="${CALL_TZ:-America/Toronto}"
+CALL_BASE="$SCRIPT_DIR/callmebot_reminder.sh"
+ONCE_DIR="$SCRIPT_DIR/callme_once"
+# Prefer CALL_TZ, then HERMES_TIMEZONE (profile gateway), then America/Toronto.
+TZ="${CALL_TZ:-${HERMES_TIMEZONE:-America/Toronto}}"
 TASKS_DIR="${TASKS_DIR:-/vault/Tasks/tasks}"
 CAL_DIR="${CAL_DIR:-/vault/Tasks/calendar}"
 
+mkdir -p "$ONCE_DIR"
+
 NOW_TS=$(TZ="$TZ" date +%s)
 TODAY=$(TZ="$TZ" date +%Y-%m-%d)
+OFFSET=$(TZ="$TZ" date +%z)  # e.g. -0400
+# ISO offset with colon: -04:00
+OFFSET_ISO="${OFFSET:0:3}:${OFFSET:3:2}"
 
-log() { echo "[tasks-events-gen $(TZ="$TZ" date '+%H:%M')] $*"; }
+log() { echo "[tasks-events-gen $(TZ="$TZ" date '+%H:%M %Z')] $*"; }
 
-# single-quote a message so it is a safe single arg for the script string
-_q() { printf '%s' "$1" | sed "s/'/'\\\\''/g; 1s/^/'/; \$s/\$/'/"; }
+# slug for wrapper filename
+_slug() {
+  printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//; s/-+/-/g' | cut -c1-60
+}
 
-# item epoch seconds
+# write wrapper that calls callmebot_reminder.sh with a fixed message
+write_wrapper() {
+  local file="$1" msg="$2"
+  cat >"$file" <<EOF
+#!/usr/bin/env bash
+set -uo pipefail
+SCRIPT_DIR="\$(cd "\$(dirname "\${BASH_SOURCE[0]}")" && pwd)"
+exec "\$SCRIPT_DIR/../callmebot_reminder.sh" $(printf '%q' "$msg")
+EOF
+  chmod 700 "$file"
+}
+
+# item epoch seconds in TZ
 item_epoch() {
   local d="$1" t="$2"
   TZ="$TZ" date -d "${d} ${t:-00:00}" +%s 2>/dev/null || echo 0
@@ -39,23 +66,37 @@ sched_created=0
 schedule_item() {
   local title="$1" d="$2" t="$3"
   [ "$d" = "$TODAY" ] || { log "skip (not today): $title @ $d $t"; return 0; }
-  local ep at_ep before_ep at_iso before_iso
+  local ep at_ep before_ep at_iso before_iso slug w_before w_at
   ep=$(item_epoch "$d" "$t")
   [ "$ep" -eq 0 ] && return 0
   [ "$ep" -lt "$NOW_TS" ] && { log "skip past: $title @ $d $t"; return 0; }
   at_ep=$ep
   before_ep=$(( ep - 30*60 ))
-  at_iso=$(TZ="$TZ" date -d "@$at_ep" '+%Y-%m-%dT%H:%M:00')
-  before_iso=$(TZ="$TZ" date -d "@$before_ep" '+%Y-%m-%dT%H:%M:00')
+  # ISO with explicit offset — do not omit zone
+  at_iso=$(TZ="$TZ" date -d "@$at_ep" "+%Y-%m-%dT%H:%M:00${OFFSET_ISO}")
+  before_iso=$(TZ="$TZ" date -d "@$before_ep" "+%Y-%m-%dT%H:%M:00${OFFSET_ISO}")
   local msg_at="Reminder: $title at $t."
   local msg_before="Heads up in 30 minutes: $title at $t."
+  slug="$(_slug "$title-$d-$t")"
+  [ -z "$slug" ] && slug="item-$at_ep"
+
   if [ "$before_ep" -gt "$NOW_TS" ]; then
-    hermes cron create "$before_iso" "CALL 30m before: $title ($d $t)" --no-agent --script "$CALL_BASENAME $( _q "$msg_before" )" >/dev/null 2>&1 \
-      && sched_created=$((sched_created+1))
+    w_before="callme_once/${slug}-30m.sh"
+    write_wrapper "$ONCE_DIR/${slug}-30m.sh" "$msg_before"
+    if hermes cron create "$before_iso" "CALL 30m before: $title ($d $t)" --no-agent --script "$w_before" >/dev/null 2>&1; then
+      sched_created=$((sched_created+1))
+    else
+      log "FAILED create 30m job for $title ($before_iso)"
+    fi
   fi
-  hermes cron create "$at_iso" "CALL at time: $title ($d $t)" --no-agent --script "$CALL_BASENAME $( _q "$msg_at" )" >/dev/null 2>&1 \
-    && sched_created=$((sched_created+1))
-  log "scheduled calls for: $title @ $d $t"
+  w_at="callme_once/${slug}-at.sh"
+  write_wrapper "$ONCE_DIR/${slug}-at.sh" "$msg_at"
+  if hermes cron create "$at_iso" "CALL at time: $title ($d $t)" --no-agent --script "$w_at" >/dev/null 2>&1; then
+    sched_created=$((sched_created+1))
+  else
+    log "FAILED create at-time job for $title ($at_iso)"
+  fi
+  log "scheduled calls for: $title @ $d $t ($TZ) at=$at_iso before=$before_iso"
 }
 
 # ---- 1) Tasks with specific due_time ----

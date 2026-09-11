@@ -379,7 +379,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: America/Toronto
+timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''
@@ -488,7 +488,7 @@ x_search:
   model: grok-4.20-reasoning
   timeout_seconds: 180
   retries: 2
-_config_version: 41
+_config_version: 42
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -566,10 +566,6 @@ mcp_servers:
     command: graphify-mcp
     args:
       - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
-    enabled: true
-  remarkable:
-    command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh
-    connect_timeout: 180.0
     enabled: true
 known_builtin_toolsets:
   telegram:

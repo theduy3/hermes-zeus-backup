@@ -46,8 +46,8 @@
       7606
     ],
     "autonomous-ai-agents/hermes-profile-model-config/SKILL.md": [
-      1788059915968613478,
-      20549
+      1789021763246569040,
+      20509
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
       1788891762459552168,
@@ -86,8 +86,8 @@
       11646
     ],
     "devops/hermes-operations-troubleshooting/SKILL.md": [
-      1788895764761805447,
-      36854
+      1788987211755971837,
+      37040
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778565357580872875,
@@ -98,8 +98,8 @@
       9073
     ],
     "devops/hermes-cron-ops/SKILL.md": [
-      1788174970186966378,
-      3543
+      1789088860210112060,
+      7182
     ],
     "devops/hermes-encrypted-secrets/SKILL.md": [
       1786659759618021712,
@@ -108,10 +108,6 @@
     "devops/hermes-custom-endpoint/SKILL.md": [
       1787036395338226237,
       5702
-    ],
-    "devops/remarkable-mcp-integration/SKILL.md": [
-      1787265946981524502,
-      5706
     ],
     "devops/vps-host-ssh-hardening/SKILL.md": [
       1787321619600704773,
@@ -194,8 +190,8 @@
       11140
     ],
     "mcp/external-mcp-integrations/SKILL.md": [
-      1787251660452838729,
-      4691
+      1789021751417234363,
+      4044
     ],
     "mcp/multi-profile-mcp-scoping/SKILL.md": [
       1787325970002134150,
@@ -413,21 +409,13 @@
       1787031466236675684,
       4827
     ],
-    "productivity/remarkable-2026-planner/SKILL.md": [
-      1787286960018392261,
-      9204
-    ],
-    "productivity/remarkable-device-sync/SKILL.md": [
-      1787262954589679366,
-      5552
-    ],
     "productivity/voice-call-reminders/SKILL.md": [
       1787347162132449828,
       5579
     ],
     "productivity/phone-call-reminder/SKILL.md": [
-      1787354995486393719,
-      8632
+      1789088882758722349,
+      9331
     ],
     "productivity/pdf/SKILL.md": [
       1788891762459552168,
@@ -553,10 +541,6 @@
       1785093074256196085,
       40495
     ],
-    "agent-reach/SKILL.md": [
-      1787854430774537598,
-      7429
-    ],
     "web/DESCRIPTION.md": [
       1788891762462552249,
       137
@@ -567,20 +551,6 @@
     ]
   },
   "skills": [
-    {
-      "skill_name": "agent-reach",
-      "category": "agent-reach",
-      "frontmatter_name": "agent-reach",
-      "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/loo...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
     {
       "skill_name": "autonomous-coding-agents",
       "category": "autonomous-ai-agents",
@@ -900,24 +870,10 @@
       }
     },
     {
-      "skill_name": "remarkable-mcp-integration",
-      "category": "devops",
-      "frontmatter_name": "remarkable-mcp-integration",
-      "description": "Wire/debug reMarkable Cloud MCP across Hermes profiles.",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "sdlc-review",
       "category": "devops",
       "frontmatter_name": "sdlc-review",
-      "description": "Review Kanban handoffs and route verified outcomes.",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -1764,34 +1720,6 @@
       "category": "productivity",
       "frontmatter_name": "project-context",
       "description": "Use when maintaining current project context.",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "remarkable-2026-planner",
-      "category": "productivity",
-      "frontmatter_name": "remarkable-2026-planner",
-      "description": "Sync a reMarkable Planner into the vault and Life OS safely.",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "remarkable-device-sync",
-      "category": "productivity",
-      "frontmatter_name": "remarkable-device-sync",
-      "description": "Use when wiring reMarkable MCP or planner habit sync.",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

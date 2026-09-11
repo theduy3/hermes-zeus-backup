@@ -141,7 +141,7 @@ done
 
 ### Vision / image-capable models (auxiliary slot)
 
-When a profile needs to see images (MCP servers with image tools like reMarkable's `remarkable_image`/`remarkable_canvas`, screenshot tasks, scanned-PDF OCR), the default model MUST be vision-capable OR a vision model must be set in the dedicated vision slot. Text-only models (e.g. `tencent/hy3:free`) cannot view images.
+When a profile needs to see images (MCP servers that return page or screen images, screenshot tasks, scanned-PDF OCR), the default model MUST be vision-capable OR a vision model must be set in the dedicated vision slot. Text-only models (e.g. `tencent/hy3:free`) cannot view images.
 
 - **Correct slot:** `model.auxiliary.vision.model` + `model.auxiliary.vision.provider` — NOT the generic `model.auxiliary` key (that is a plain secondary model and is NOT the vision router).
 - Setting it:

@@ -9,8 +9,8 @@
         "last30days"
       ],
       "skill": "today",
-      "model": null,
-      "provider": null,
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -23,15 +23,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 114
+        "completed": 116
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-09-09T04:00:00-04:00",
-      "last_run_at": "2026-09-08T04:04:13.149269-04:00",
+      "next_run_at": "2026-09-11T04:00:00-07:00",
+      "last_run_at": "2026-09-10T04:02:47.195050-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -45,9 +45,15 @@
       "workdir": null,
       "profile": "wiki",
       "fire_claim": null,
-      "provider_snapshot": "xai-oauth",
-      "model_snapshot": "grok-4.5",
-      "failure_streak": 0
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-10T04:00:00-07:00",
+        "dispatched_at": "2026-09-10T04:00:04.868787-07:00",
+        "lateness_seconds": 4.9,
+        "kind": "on_time"
+      }
     },
     {
       "id": "ce61f73456fe",
@@ -57,8 +63,8 @@
         "process"
       ],
       "skill": "process",
-      "model": null,
-      "provider": null,
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -71,15 +77,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 108
+        "completed": 110
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-09-09T10:00:00-04:00",
-      "last_run_at": "2026-09-08T10:00:34.286941-04:00",
+      "next_run_at": "2026-09-11T10:00:00-07:00",
+      "last_run_at": "2026-09-10T10:00:24.237043-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -89,9 +95,15 @@
       "workdir": null,
       "profile": "wiki",
       "fire_claim": null,
-      "provider_snapshot": "xai-oauth",
-      "model_snapshot": "grok-4.5",
-      "failure_streak": 0
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-10T10:00:00-07:00",
+        "dispatched_at": "2026-09-10T10:00:04.859584-07:00",
+        "lateness_seconds": 4.9,
+        "kind": "on_time"
+      }
     },
     {
       "id": "e358e0a4cb18",
@@ -101,8 +113,8 @@
         "wiki-ingest"
       ],
       "skill": "wiki-ingest",
-      "model": null,
-      "provider": null,
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -115,15 +127,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 326
+        "completed": 332
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-09-09T08:00:00-04:00",
-      "last_run_at": "2026-09-08T14:00:45.744043-04:00",
+      "next_run_at": "2026-09-11T08:00:00-07:00",
+      "last_run_at": "2026-09-10T20:00:48.658329-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -132,17 +144,14 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": "wiki",
-      "fire_claim": {
-        "at": "2026-09-08T20:06:29.852897-04:00",
-        "by": "hal-server-803171.novalocal:3578225:070896be4e424ba1b9c4370c590d58d3"
-      },
-      "provider_snapshot": "xai-oauth",
-      "model_snapshot": "grok-4.5",
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-08T20:00:00-04:00",
-        "dispatched_at": "2026-09-08T20:00:29.700861-04:00",
-        "lateness_seconds": 29.7,
+        "scheduled_at": "2026-09-10T20:00:00-07:00",
+        "dispatched_at": "2026-09-10T20:00:35.629630-07:00",
+        "lateness_seconds": 35.6,
         "kind": "on_time"
       }
     },
@@ -154,8 +163,8 @@
         "wiki-lint"
       ],
       "skill": "wiki-lint",
-      "model": null,
-      "provider": null,
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -168,15 +177,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 110
+        "completed": 112
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-09-09T02:00:00-04:00",
-      "last_run_at": "2026-09-08T02:26:53.681625-04:00",
+      "next_run_at": "2026-09-11T02:00:00-07:00",
+      "last_run_at": "2026-09-10T02:25:06.615685-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -186,9 +195,15 @@
       "workdir": null,
       "profile": "wiki",
       "fire_claim": null,
-      "provider_snapshot": "xai-oauth",
-      "model_snapshot": "grok-4.5",
-      "failure_streak": 0
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-10T02:00:00-07:00",
+        "dispatched_at": "2026-09-10T02:00:18.798466-07:00",
+        "lateness_seconds": 18.8,
+        "kind": "on_time"
+      }
     },
     {
       "id": "2f8f46180850",
@@ -198,8 +213,8 @@
         "tonight"
       ],
       "skill": "tonight",
-      "model": null,
-      "provider": null,
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -212,15 +227,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 217
+        "completed": 222
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-09-09T18:00:00-04:00",
-      "last_run_at": "2026-09-08T23:04:30.876404-04:00",
+      "next_run_at": "2026-09-11T18:00:00-07:00",
+      "last_run_at": "2026-09-10T23:01:39.003978-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -230,28 +245,28 @@
       "workdir": null,
       "profile": "wiki",
       "fire_claim": null,
-      "provider_snapshot": "xai-oauth",
-      "model_snapshot": "grok-4.5",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-08T23:00:00-04:00",
-        "dispatched_at": "2026-09-08T23:00:16.623592-04:00",
-        "lateness_seconds": 16.6,
+        "scheduled_at": "2026-09-10T23:00:00-07:00",
+        "dispatched_at": "2026-09-10T23:00:49.170035-07:00",
+        "lateness_seconds": 49.2,
         "kind": "on_time"
       }
     },
     {
       "id": "2346506d909a",
       "name": "stock-watchlist-last30days-weekly",
-      "prompt": "Run the weekly `/last30days` research pass for every company in the stock watchlist and write results into the root-level Stock Watchlist folder.\n\nSchedule/time intent:\n- This job is scheduled as `0 1 * * 6` in the scheduler's local America/Toronto time, which corresponds to Saturday 4:00 AM US Eastern time during both standard and daylight time.\n- Treat the report date in America/Toronto.\n\nVault and files:\n- Vault root: /vault\n- Ticker source: /vault/System/Stock Watchlist.md\n- Company notes folder: /vault/Stock Watchlist/\n- Weekly rollup destination: /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md, where YYYY-MM-DD is the America/Toronto date of the run.\n- Index: /vault/Stock Watchlist/Stock Watchlist Index.md\n\nTask:\n1. Parse all tickers under the `Watchlist:` section of /vault/System/Stock Watchlist.md. Ignore `Indicators:`.\n2. For each ticker/company, follow the loaded `last30days` skill: research important company-specific developments from the last 30 days.\n3. Focus on earnings/guidance, analyst upgrades/downgrades, product/customer news, regulatory/legal issues, M&A, financing/capex, and material stock-moving context.\n4. Avoid generic market-wide headlines unless directly tied to that company.\n5. For each company, produce 2-4 concise source-linked bullets, a `Why it matters` sentence, and a triage implication: `Add`, `Hold`, `Reduce`, or `Watch`.\n6. If research fails for a ticker, do not invent facts; write `Research unavailable` with the reason.\n\nWrite/update outputs:\nA. Weekly rollup file:\n- Create /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md.\n- Include frontmatter:\n  tags: [finance, watchlist, last30days]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  wiki_status: draft\n- Include one section per ticker in the order from Stock Watchlist.md.\n\nB. Individual company notes:\n- For each existing company note in /vault/Stock Watchlist/ matching the ticker prefix, add or replace a section titled exactly:\n  `## Last 30 Days Update`\n- The section must include:\n  - `*Updated: YYYY-MM-DD*`\n  - 2-4 source-linked bullets\n  - `Why it matters:` sentence\n  - `Triage implication:` Add/Hold/Reduce/Watch\n  - link to the weekly rollup file as `[[Weekly Last30days YYYY-MM-DD]]`\n- If the company note does not exist, create it using the same style as existing pages in /vault/Stock Watchlist/.\n- Do not duplicate the section on rerun; replace the existing `## Last 30 Days Update` section.\n\nC. Index/log:\n- Update /vault/Stock Watchlist/Stock Watchlist Index.md with a short line under Maintenance or a new `## Latest Weekly Research` section linking to the weekly rollup.\n- Append a concise entry to /vault/System/wiki-log.md.\n- If System or MOC files are root-owned/unwritable, skip them and report the exact `sudo chown hermes:hermes ...` command needed.\n\nVerification:\n- Verify the weekly rollup exists.\n- Verify a sample of company notes contains exactly one `## Last 30 Days Update` section.\n- Verify no obvious tool error text or uncited invented facts were inserted.\n\nFinal response: concise summary with number of tickers processed, rollup path, company notes updated/created, failed/unavailable tickers, and any permission blockers.",
+      "prompt": "Run the weekly `/last30days` research pass for every company in the stock watchlist and write results into the root-level Stock Watchlist folder.\n\nSchedule/time intent:\n- This job is scheduled as `0 1 * * 6` in the scheduler's local America/Vancouver time, which corresponds to Saturday 4:00 AM US Eastern time during both standard and daylight time.\n- Treat the report date in America/Vancouver.\n\nVault and files:\n- Vault root: /vault\n- Ticker source: /vault/System/Stock Watchlist.md\n- Company notes folder: /vault/Stock Watchlist/\n- Weekly rollup destination: /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md, where YYYY-MM-DD is the America/Vancouver date of the run.\n- Index: /vault/Stock Watchlist/Stock Watchlist Index.md\n\nTask:\n1. Parse all tickers under the `Watchlist:` section of /vault/System/Stock Watchlist.md. Ignore `Indicators:`.\n2. For each ticker/company, follow the loaded `last30days` skill: research important company-specific developments from the last 30 days.\n3. Focus on earnings/guidance, analyst upgrades/downgrades, product/customer news, regulatory/legal issues, M&A, financing/capex, and material stock-moving context.\n4. Avoid generic market-wide headlines unless directly tied to that company.\n5. For each company, produce 2-4 concise source-linked bullets, a `Why it matters` sentence, and a triage implication: `Add`, `Hold`, `Reduce`, or `Watch`.\n6. If research fails for a ticker, do not invent facts; write `Research unavailable` with the reason.\n\nWrite/update outputs:\nA. Weekly rollup file:\n- Create /vault/Stock Watchlist/Weekly Last30days YYYY-MM-DD.md.\n- Include frontmatter:\n  tags: [finance, watchlist, last30days]\n  type: synthesis\n  created: YYYY-MM-DD\n  updated: YYYY-MM-DD\n  wiki_status: draft\n- Include one section per ticker in the order from Stock Watchlist.md.\n\nB. Individual company notes:\n- For each existing company note in /vault/Stock Watchlist/ matching the ticker prefix, add or replace a section titled exactly:\n  `## Last 30 Days Update`\n- The section must include:\n  - `*Updated: YYYY-MM-DD*`\n  - 2-4 source-linked bullets\n  - `Why it matters:` sentence\n  - `Triage implication:` Add/Hold/Reduce/Watch\n  - link to the weekly rollup file as `[[Weekly Last30days YYYY-MM-DD]]`\n- If the company note does not exist, create it using the same style as existing pages in /vault/Stock Watchlist/.\n- Do not duplicate the section on rerun; replace the existing `## Last 30 Days Update` section.\n\nC. Index/log:\n- Update /vault/Stock Watchlist/Stock Watchlist Index.md with a short line under Maintenance or a new `## Latest Weekly Research` section linking to the weekly rollup.\n- Append a concise entry to /vault/System/wiki-log.md.\n- If System or MOC files are root-owned/unwritable, skip them and report the exact `sudo chown hermes:hermes ...` command needed.\n\nVerification:\n- Verify the weekly rollup exists.\n- Verify a sample of company notes contains exactly one `## Last 30 Days Update` section.\n- Verify no obvious tool error text or uncited invented facts were inserted.\n\nFinal response: concise summary with number of tickers processed, rollup path, company notes updated/created, failed/unavailable tickers, and any permission blockers.",
       "skills": [
         "last30days"
       ],
       "skill": "last30days",
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "xai-oauth",
-      "model_snapshot": "grok-4.5",
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
+      "provider_snapshot": null,
+      "model_snapshot": null,
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -271,7 +286,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-02T19:59:20.220655-07:00",
-      "next_run_at": "2026-09-12T01:00:00-04:00",
+      "next_run_at": "2026-09-12T01:00:00-07:00",
       "last_run_at": "2026-09-05T01:02:57.783846-04:00",
       "last_status": "ok",
       "last_error": null,
@@ -309,15 +324,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 5902
+        "completed": 6099
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-09-09T00:08:17.906450-04:00",
-      "last_run_at": "2026-09-08T23:53:17.906450-04:00",
+      "next_run_at": "2026-09-11T00:10:30.763726-07:00",
+      "last_run_at": "2026-09-10T23:55:30.763726-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -334,9 +349,9 @@
       "fire_claim": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-08T23:53:13.917361-04:00",
-        "dispatched_at": "2026-09-08T23:53:15.705162-04:00",
-        "lateness_seconds": 1.8,
+        "scheduled_at": "2026-09-10T23:55:29.406841-07:00",
+        "dispatched_at": "2026-09-10T23:55:29.553772-07:00",
+        "lateness_seconds": 0.1,
         "kind": "on_time"
       }
     },
@@ -369,7 +384,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T11:01:42.863342-07:00",
-      "next_run_at": "2026-09-13T07:13:14.172931-04:00",
+      "next_run_at": "2026-09-23T22:45:49.336592-07:00",
       "last_run_at": "2026-08-20T20:06:39.512253-04:00",
       "last_status": "ok",
       "last_error": null,
@@ -382,5 +397,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-08T23:53:17.907012-04:00"
+  "updated_at": "2026-09-10T23:55:30.763944-07:00"
 }

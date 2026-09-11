@@ -6,29 +6,66 @@ description: Audit and fix Hermes cron jobs across all profiles safely.
 # Hermes cron ops (multi-profile)
 
 ## When to use
-- "Audit all cronjobs / make sure they run with any provider / fix blocked jobs."
-- Fixing `blocked_config` ("No Codex credentials stored") or Telegram `Unauthorized` delivery errors across the fleet.
+- "Audit / verify all cronjobs / make sure they are working" across default + named bots.
+- Fixing `blocked_config`, dead free-model pins, OOM script jobs, or Telegram delivery errors.
 
-## Critical gotchas (verified — cost real debugging time)
-1. **The `cronjob` agent tool only sees the DEFAULT profile.** Jobs for zeus/catthew/thor/wiki/etc. live in `~/.hermes/profiles/<p>/cron/jobs.json`. The tool's `list`/`update`/`run` cannot reach them. Use `hermes cron --profile <p> <subcommand>` CLI (supports list/run/edit/pause) or edit the profile's `jobs.json` directly.
-2. **Provider-less jobs are NOT safe.** A job with `provider: null, model: null` still inherits the profile's default provider (config.yaml `model.provider`, often `openai-codex`). It will hit `blocked_config: No Codex credentials stored` at runtime. "Null provider" does NOT dodge a Codex block — you must pin an explicit working provider.
-3. **`cronjob` update rejects provider/model fields** ("No updates provided.") when those are the only changes. Edit `jobs.json` directly (python script) instead.
-4. **`no_agent` script jobs can still fail hard** — not a provider issue. Classic case: `graphify-daily-refresh` (`script=graphify_refresh.py`) dies with `SIGKILL` mid-extract = **cgroup OOM**, not bad cron config. Diagnose via `last_error` + `~/.hermes/cron/output/<job_id>/` + `memory.max`/`free -h`. Fix the **script** (scope workload, fewer workers, soft-fail, keep prior artifacts). Do not “fix” by pinning a model on a `no_agent` job. See `references/no-agent-script-oom.md` and `references/graphify-daily-refresh-oom.md`.
+## Report style (user preference)
+Lead with a one-line verdict, then a compact health table (counts by class), then only action-worthy failures per profile. Skip healthy inventory unless it clarifies scope. Do not fire household reminder jobs just to prove a pin.
 
-## Audit recipe
-- Glob `~/.hermes/cron/jobs.json` + `~/.hermes/profiles/*/cron/jobs.json`. Each file is `{"jobs": [...]}`. A job may key its id as `job_id` or `id`.
-- Find problems:
-  - explicit: `j["provider"] == "openai-codex"` (or any uncredentialed provider)
-  - silent: `j["provider"] is None and j["last_status"] == "blocked_config"` (inherited provider block)
-- Report per profile. Reusable scanner: `references/audit_scan.py`.
+## Lessons
+- Dead free-model / wrong-slug pins: re-pin agent jobs to standing primary `xai-oauth`/`grok-4.5` (not retired `:free` or stale `grok-4.20-*` / `grok-4.6` slugs). Clear `last_error`/`failure_streak` and reset snapshots after pin.
+- CallMeBot one-shots: cron `script` is path-only — never `callmebot_reminder.sh 'msg'`. Generator must write `scripts/callme_once/<slug>.sh` wrappers and pass ISO times **with offset** (`CALL_TZ`/`HERMES_TIMEZONE`).
+- `STEER_DISPLAY_KIND` ImportError after update is mixed modules; confirm symbol exists in `agent/prompt_builder.py`, restart gateways if still stale, clear job error only after import works. Backup still needs `GITHUB_TOKEN` in `~/.hermes/.env`.
+- Default Telegram `Unauthorized` is token-level delivery failure, not a model pin issue.
+
+## Critical gotchas
+1. **The `cronjob` agent tool only sees the DEFAULT profile.** Named bots live in `~/.hermes/profiles/<p>/cron/jobs.json`. Use `hermes -p <p> cron <subcommand>` or edit that profile's `jobs.json` directly.
+2. **Cron does not fire without a live gateway for that profile.** `hermes -p <p> cron status` saying `Gateway is not running — cron jobs will NOT fire` is decisive. Job `last_status=ok` only proves the *last* run, not that the scheduler is alive now.
+3. **Do not trust `gateway_state.json` `pid` alone.** PIDs get reused by unrelated processes (`hermes serve`, MCP, etc.). Confirm a real adapter with `pgrep -af 'python.*hermes.*gateway'` (or `/proc/<pid>/cmdline` containing `gateway run`/`restart`) **and** `/proc/<pid>/environ` `HERMES_HOME` matching that profile home.
+4. **`profile_gateway_supervisor.sh` has no `status` mode.** Invoking it always enters the start loop. A timed-out "status" call starts gateways then kills the supervisor process group. Check liveness with `pgrep`/`gateway_state` + logs; start the supervisor only when intentionally repairing runtime.
+5. **Provider-less jobs inherit the profile default.** `provider: null, model: null` still uses `config.yaml` `model.provider`/`model.default`. That can be fine (credentialed xAI) or fatal (`openai-codex` without creds → `blocked_config`). Null is not a dodge — pin explicitly when the inherited default is unsafe or when a free-model pin is dead.
+6. **`cronjob` update rejects provider/model-only changes** ("No updates provided."). Edit `jobs.json` directly.
+7. **Dead free-model pins ≠ missing provider.** `last_error` containing `This model's free period has ended` (HTTP 404) means the pinned `provider`/`model` string is retired. Re-pin to a *currently live* credentialed pair from that profile's `config.yaml` (or user standing primary). Do not keep recommending a free slug that already 404s.
+8. **`no_agent` script jobs fail without LLMs.** `SIGKILL` / exit `-9` mid-extract is usually cgroup OOM. Diagnose `last_error` + `cron/output/<job_id>/` + `free -h` / memory.max. Fix the script workload; do not pin a model on `no_agent`. See `references/no-agent-script-oom.md` and `references/graphify-daily-refresh-oom.md`.
+9. **Vault-path jobs need the mount.** If a job sets `workdir: /vault` or prompts write under `/vault/...`, verify `test -d /vault` (or the container's vault mount) before calling the job healthy. Doctor `workdir not found` is a real blocker even when historical `last_status=ok`.
+
+## Full fleet verify (order matters)
+1. **Runtime first** — for default + every profile under `~/.hermes/profiles/*`:
+   - `hermes [-p <p>] cron status` (gateway up? next run?)
+   - live gateway processes + correct `HERMES_HOME` (gotcha 3)
+   - `gateway_state.json` → `platforms.telegram` / delivery fatals (token rejected vs connected)
+   - host pressure: `free -h` (high swap + low available → gateway flapping / OOM jobs)
+2. **Job matrix** — load every `jobs.json` (`id` or `job_id`). Classify each enabled job:
+   - `OK` — `last_status=ok`, no `last_error` / `last_delivery_error`
+   - `MODEL_DEAD` — free-period / model-not-found errors
+   - `BLOCKED_CONFIG` — missing provider creds / inherited codex block
+   - `OOM_KILL` — exit -9 / SIGKILL on scripts
+   - `TRUNCATED` / other `ERROR`
+   - `DELIVERY` — body ok-ish but Telegram unauthorized/rejected
+   - `NEVER/PENDING` — future one-shots with no run yet (usually fine)
+   - `PAUSED` — `enabled=false` or paused
+3. **Doctor + recent runs** — `hermes [-p <p>] cron doctor` and `hermes [-p <p>] cron runs --limit 5` catch failures the matrix status alone can miss.
+4. **Provider-pin pass** — still run `references/audit_scan.py` (Codex / blocked_config only). It is necessary but **not sufficient** for "are all cronjobs working".
+5. **Optional deeper health matrix** — `references/fleet_health.py` prints per-class counts and problem rows across all profiles.
 
 ## Fix recipe (direct jobs.json edit)
-For each target job set:
-- `provider` = a credentialed provider that serves a model (e.g. `nous`)
-- `model` = a model served by that provider (default profile: `upstage/solar-pro4:free`; other profiles: their `config.yaml` `model.default`, e.g. `tencent/hy3:free`)
-- clear stale block state: `last_status` "blocked_config" → "pending"; `last_error` → None; `preflight_alerted` → False
-- Do NOT touch `no_agent=True` script jobs (they never use an LLM).
-The scheduler reads jobs.json from disk each tick, so edits apply without a dedicated reload. Verify with `hermes cron run --profile <p> <job_id>` (returns "Ran now: succeeded") or re-scan for zero `blocked_config`.
+For each broken **agent** job:
+- Set `provider` + `model` to a credentialed pair that **serves that model today**.
+  - Prefer that profile's live `config.yaml` `model.provider` / `model.default` when those credentials work.
+  - Standing user primary when set (often `xai-oauth` / `grok-4.5`); otherwise a working Nous paid/free slug that does not 404.
+  - Never copy an old free slug from this skill or another profile without checking current errors.
+- Clear stale failure display: `last_status` → `pending`; `last_error` → null; `failure_streak` → 0; drop `preflight_alerted` / `drift_alerted` when present.
+- Do **not** touch `no_agent` / script-only jobs for provider pins.
+- Scheduler re-reads disk each tick — no reload required.
+- Verify with `hermes -p <p> cron run <job_id>` only when safe (no noisy household pings); otherwise re-scan + wait for next natural fire after gateways are up.
 
-## Telegram delivery failures (separate root cause)
-`Unauthorized (target telegram:...)` means the profile's bot token was rejected by Telegram, NOT a provider issue. Check `gateway_state.json` → `platforms.telegram.error_message` ("token ... rejected by the server"). Fix: obtain a fresh token from @BotFather, validate via `GET https://api.telegram.org/bot<TOKEN>/getMe` (must return `ok:true`), write to that profile's `.env` `TELEGRAM_BOT_TOKEN`, restart gateway. Other profiles may be fine — check each `gateway_state.json`. For encrypted storage of the token see the `hermes-encrypted-secrets` skill.
+For **runtime-down** fleets: restore profile gateway supervisors / `gateway run` with correct `HERMES_HOME` (see `hermes-operations-troubleshooting` Docker multi-profile hardening). Fixing pins while every gateway is dead does not make cron "working".
+
+For **Telegram token rejected**: not a model issue. Validate `getMe`, replace `TELEGRAM_BOT_TOKEN` on that profile only, restart that gateway. See encrypted-secrets skill when storing tokens.
+
+## References
+- `references/audit_scan.py` — provider / blocked_config scanner
+- `references/fleet_health.py` — multi-class fleet matrix for "are crons working"
+- `references/stale-drift-skip-pin.md` — pinned job vs leftover drift_skip error text
+- `references/timezone-drift-restart.md` — TZ drift after travel sync
+- `references/no-agent-script-oom.md` / `references/graphify-daily-refresh-oom.md` — script OOM

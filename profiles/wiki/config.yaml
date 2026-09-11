@@ -437,7 +437,7 @@ curator:
   backup:
     enabled: true
     keep: 5
-timezone: America/Toronto
+timezone: America/Vancouver
 slack:
   require_mention: true
   free_response_channels: ''
@@ -600,7 +600,7 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
 paste_collapse_char_threshold: 2000
-_config_version: 41
+_config_version: 42
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -668,11 +668,7 @@ plugins:
   enabled:
     - multi-agent-context
 default: gpt-5.5
-mcp_servers:
-  remarkable:
-    command: /home/hermes/.hermes/scripts/run-remarkable-mcp.sh
-    connect_timeout: 180.0
-    enabled: true
+mcp_servers: {}
 known_builtin_toolsets:
   telegram:
     - browser

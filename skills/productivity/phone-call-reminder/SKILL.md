@@ -27,9 +27,11 @@ Telegram bot rings the user (in-app voice call) and speaks the message via TTS.
   - Optional real PSTN call (needs `CALLMEBOT_KEY` + `USER=+CC…`): `https://api.callmebot.com/call.php?phone=USER&text=MSG&lang=LANG&key=KEY`
 - `~/.hermes/scripts/callmebot.conf` — `600` perms; holds `USER=@handle` and
   optional `CALLMEBOT_KEY`. No secrets other than the username/key live here.
-- The dispatch is a one-off Hermes **cron job** (`no_agent: true`,
-  `script: callmebot_reminder.sh "MESSAGE"`) so it runs inside the gateway
-  even with no user present. The default gateway (healthy) runs it.
+- The dispatch is a one-off Hermes **cron job** (`no_agent: true`) whose
+  `script` is a **path only** under `~/.hermes/scripts/`. Cron does **not**
+  forward shell args (`_run_job_script` argv = bash + path). Bake the spoken
+  text into a tiny wrapper (see below), or call `callmebot_reminder.sh` from a
+  fixed wrapper. Never set `script: callmebot_reminder.sh "MESSAGE"`.
 
 The script strips HTML from the CallMeBot response and surfaces the one-time
 authorize link on failure; exits non-zero on rejected dispatch.
@@ -57,9 +59,12 @@ tool with:
 - `schedule` = ISO local timestamp OR cron expr, e.g. `2026-08-22T15:45:00` or `0 15 * * *`
 - `prompt` = empty/short note (the script does the work)
 - `no_agent=true`
-- `script` = **basename only** (relative to `~/.hermes/scripts/`), e.g.
-  `callmebot_reminder.sh "Pick up Victoria at 3:45pm"`
-  — the tool REJECTS absolute paths; use the filename, not `/home/hermes/...`.
+- `script` = **basename only** under `~/.hermes/scripts/` with **no args**.
+  Write a one-line wrapper first, e.g. `scripts/callme_once/pickup.sh` that
+  `exec`s `../callmebot_reminder.sh "Pick up Victoria at 3:45pm"`, then set
+  `script=callme_once/pickup.sh`. Absolute paths are rejected.
+- `schedule` ISO must include an explicit offset (`2026-08-22T15:45:00-07:00`).
+  Bare local stamps can be reinterpreted and skew by hours across PDT/EDT.
 - `deliver=origin` (or the user's telegram) so they also get a written log.
 
 Confirm the job id back to the user. The gateway fires it at the due time.
@@ -87,22 +92,22 @@ A daily generator (`callmebot_tasks_events.sh`, cron `15 5 * * *`) scans
 `/vault/Tasks/tasks/*.md` (tasks with BOTH `due_date` + `due_time`, status not
 completed/cancelled, NOT tagged `catthew`) and `/vault/Tasks/calendar/*.md`
 (events with a real `start` time, `allDay: false`, not completed), and for each
-item DATED TODAY creates two one-off call jobs via
-`hermes cron create "<ISO>" "name" --no-agent --script "callmebot_reminder.sh '<msg>'"`:
-one 30 min before and one at the time. Emits output only if it scheduled something.
+item DATED TODAY creates two one-off call jobs via wrappers under
+`scripts/callme_once/` + `hermes cron create "<ISO-with-offset>" "name"
+--no-agent --script "callme_once/<slug>.sh"` (30m before + at time).
+Emits output only if it scheduled something.
 
-**Scheduling inside a script:** `at` is NOT installed. To schedule future
-calls from a script, shell out to `hermes cron create "<ISO-timestamp>"
-"name" --no-agent --script "callmebot_reminder.sh '<msg>'"`. Verified: it
-accepts ISO `YYYY-MM-DDTHH:MM:SS` and returns `once at ...`.
+**Scheduling inside a script:** `at` is NOT installed. Write a wrapper that
+bakes the message, then `hermes cron create "<ISO-with-offset>" "name"
+--no-agent --script "callme_once/<slug>.sh"`. Do **not** append `'msg'` onto
+the script field — that becomes `Script not found: ...sh '...'`.
 
 **Frontmatter parse gotchas (callmebot_tasks_events.sh):**
 - Use `local` only inside functions; top-level loop vars must be plain.
 - Calendar times are messy: `earnings-*` use `"Aftermarketclose"` / `"Timenotconfirmed"`
   and flights use `"8:35PMEDT"` — none parse as `HH:MM`, so they're safely
   skipped (no false schedule). Only clean `HH:MM`/`HH:MM:SS` times schedule.
-- Pass the message as a single shell-quoted arg to the script inside the
-  `--script` string (use a `_q` helper that single-quotes safely).
+- Use `CALL_TZ` / `HERMES_TIMEZONE` for wall time; always emit ISO **with offset**.
 
 ## Behavior notes
 
@@ -117,7 +122,14 @@ accepts ISO `YYYY-MM-DDTHH:MM:SS` and returns `once at ...`.
 - Voice: default `lang=en-US-Standard-B`. Other `en-*`/regional Standard voices
   are valid (Wavenet/premium voices are NOT supported by the API).
 
-## Pitfalls (learned this session)
+## Pitfalls
+
+- **script path is path-only** — `callmebot_reminder.sh 'msg'` is invalid for
+  Hermes cron; use wrappers under `scripts/callme_once/` or fixed named wrappers.
+- **ISO without offset skews** — bare stamps were observed ~3h late vs PDT intent.
+  Always include zone offset from the intended local TZ.
+
+## Pitfalls (auth / CallMeBot)
 
 - A plain `/start` message to the bot is NOT sufficient — the **browser OAuth**
   at `txt/auth.php` is what registers the username for the call bot

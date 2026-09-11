@@ -255,14 +255,14 @@
     "created_by": null,
     "last_patched_at": "2026-08-17T18:58:32.337303+00:00",
     "last_reused_patch_generation": 1,
-    "last_used_at": "2026-09-08T13:00:42.831316+00:00",
-    "last_viewed_at": "2026-09-08T13:00:42.826563+00:00",
+    "last_used_at": "2026-09-10T06:00:19.028110+00:00",
+    "last_viewed_at": "2026-09-10T06:00:19.001164+00:00",
     "patch_count": 8,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 168,
-    "view_count": 60
+    "use_count": 172,
+    "view_count": 62
   },
   "jupyter-live-kernel": {
     "archived_at": null,
@@ -326,13 +326,13 @@
     "created_by": null,
     "last_patched_at": "2026-06-22T17:50:40.179506+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-08T13:00:19.521561+00:00",
+    "last_used_at": "2026-09-10T06:00:08.496170+00:00",
     "last_viewed_at": "2026-08-27T21:04:00.142014+00:00",
     "patch_count": 1,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 119,
+    "use_count": 121,
     "view_count": 8
   },
   "openhue": {

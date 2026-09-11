@@ -42,19 +42,6 @@ Class-level playbook for connecting **third-party MCP servers** to Hermes so too
 6. Smoke: status/list → targeted read → search → (optional) write in a sandbox folder.
 7. Only then: cron digests or multi-gateway rollout.
 
-## Device / notes: reMarkable
-
-Full notes: `references/remarkable-mcp.md`.
-
-Summary defaults:
-
-- Prefer **SamMorrowDrums/remarkable-mcp** (cloud) on remote Hermes
-- Requires **reMarkable Connect** for cloud; one-time code → `REMARKABLE_TOKEN` / `~/.rmapi`
-- Tools: browse / recent / read / search / image (+ manage in write modes)
-- Handwriting: sampling OCR, Google Vision, Tesseract, or page-image + vision
-- Cron: few planner pages or recent-only — never full-library OCR every tick
-- Avoid Anthropic-hardwired extractors when the user is OpenAI-only (e.g. some "brain" pipelines)
-
 ## Research Fallback When Managed Web Extract Is Unavailable
 
 Still research with primary sources:
@@ -88,4 +75,3 @@ When the user parks the work:
 
 - `native-mcp` — Hermes client config reference (user-owned here; run `hermes curator adopt native-mcp` before curator patches)
 - `mcporter` — ad-hoc CLI calls without permanent config
-- `references/remarkable-mcp.md` — reMarkable deep dive

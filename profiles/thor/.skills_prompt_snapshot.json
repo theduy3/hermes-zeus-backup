@@ -42,8 +42,8 @@
       7606
     ],
     "autonomous-ai-agents/computer-use/SKILL.md": [
-      1787031466234675630,
-      18603
+      1788891762459552168,
+      15819
     ],
     "creative/DESCRIPTION.md": [
       1778644994055514684,
@@ -445,10 +445,6 @@
       1786469842094393189,
       9655
     ],
-    "productivity/document-to-action-items/SKILL.md": [
-      1786469842087393000,
-      3966
-    ],
     "productivity/meeting-action-items/SKILL.md": [
       1786469842090393081,
       3808
@@ -465,10 +461,6 @@
       1787031466235675656,
       11314
     ],
-    "productivity/pdf/SKILL.md": [
-      1787031466236675684,
-      12244
-    ],
     "productivity/box/SKILL.md": [
       1787031466235675656,
       11697
@@ -478,8 +470,16 @@
       4827
     ],
     "productivity/teams-meeting-pipeline/SKILL.md": [
-      1787717347294880478,
-      6953
+      1788891762460552195,
+      7206
+    ],
+    "productivity/pdf/SKILL.md": [
+      1788891762459552168,
+      12489
+    ],
+    "productivity/document-to-action-items/SKILL.md": [
+      1788891762459552168,
+      3910
     ],
     "red-teaming/godmode/SKILL.md": [
       1778644994204541780,
@@ -514,16 +514,12 @@
       103375
     ],
     "research/competitor-news-monitor/SKILL.md": [
-      1786469842098393296,
-      4501
+      1788891762460552195,
+      4619
     ],
     "research/grounded-citations/SKILL.md": [
-      1787031466236675684,
-      11231
-    ],
-    "research/blocked-page-recovery/SKILL.md": [
-      1787031466236675684,
-      5152
+      1788891762460552195,
+      12652
     ],
     "smart-home/DESCRIPTION.md": [
       1778644994240246090,
@@ -581,10 +577,6 @@
       1784392716825460383,
       4405
     ],
-    "software-development/simplify-code/SKILL.md": [
-      1785092884130088840,
-      14702
-    ],
     "software-development/inspecting-hermes-desktop-dom/SKILL.md": [
       1785556028604935598,
       6204
@@ -598,12 +590,20 @@
       13347
     ],
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1787031466236675684,
-      14438
+      1788891762462552249,
+      14432
+    ],
+    "software-development/simplify-code/SKILL.md": [
+      1788891762462552249,
+      14696
     ],
     "software-development/spike/SKILL.md": [
-      1787031466236675684,
-      8729
+      1788891762462552249,
+      8723
+    ],
+    "software-development/github/SKILL.md": [
+      1788891762460552195,
+      2446
     ],
     "telegram/SKILL.md": [
       1778644960025809177,
@@ -629,25 +629,16 @@
       1784734181777533958,
       7119
     ],
-    "agent-reach/SKILL.md": [
-      1787854430774537598,
-      7429
+    "web/DESCRIPTION.md": [
+      1788891762462552249,
+      137
+    ],
+    "web/blocked-page-recovery/SKILL.md": [
+      1788891762462552249,
+      5156
     ]
   },
   "skills": [
-    {
-      "skill_name": "agent-reach",
-      "category": "agent-reach",
-      "frontmatter_name": "agent-reach",
-      "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/loo...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
     {
       "skill_name": "apple-ecosystem",
       "category": "apple",
@@ -658,7 +649,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -671,14 +663,15 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
       "skill_name": "computer-use",
       "category": "autonomous-ai-agents",
       "frontmatter_name": "computer-use",
-      "description": "Drive the desktop in the background without stealing focus.",
+      "description": "Drive the desktop background-first; escalate on signal.",
       "platforms": [
         "macos",
         "windows",
@@ -688,7 +681,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -701,7 +695,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -714,7 +709,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -727,7 +723,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -740,7 +737,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -753,7 +751,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -770,7 +769,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -787,7 +787,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -804,7 +805,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -821,7 +823,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -838,7 +841,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -855,7 +859,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -872,7 +877,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -885,7 +891,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -902,7 +909,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -919,7 +927,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -936,7 +945,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -953,7 +963,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -970,7 +981,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -987,7 +999,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1004,7 +1017,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1021,7 +1035,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1038,7 +1053,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1055,7 +1071,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1068,7 +1085,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1085,7 +1103,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1102,7 +1121,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1115,7 +1135,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1128,7 +1149,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1147,7 +1169,8 @@
           "kanban"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1164,7 +1187,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1181,7 +1205,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1198,7 +1223,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1211,7 +1237,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1227,7 +1254,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1244,7 +1272,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1261,7 +1290,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1278,7 +1308,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1295,7 +1326,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1312,7 +1344,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1329,7 +1362,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1346,7 +1380,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1363,7 +1398,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1380,7 +1416,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1393,7 +1430,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1406,7 +1444,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1419,7 +1458,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1436,7 +1476,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1449,7 +1490,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1466,7 +1508,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1483,7 +1526,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1496,7 +1540,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1512,7 +1557,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1529,7 +1575,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1546,7 +1593,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1559,7 +1607,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1572,7 +1621,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1589,7 +1639,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1605,7 +1656,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1618,7 +1670,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1634,7 +1687,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1650,7 +1704,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1663,7 +1718,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1680,7 +1736,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1693,7 +1750,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1706,7 +1764,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1723,7 +1782,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1736,7 +1796,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1749,7 +1810,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1762,7 +1824,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1775,7 +1838,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1788,7 +1852,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1801,7 +1866,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1814,7 +1880,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1827,7 +1894,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1844,7 +1912,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1861,7 +1930,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1878,7 +1948,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1895,7 +1966,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1912,7 +1984,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1929,7 +2002,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1948,7 +2022,8 @@
           "terminal"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1965,7 +2040,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1982,7 +2058,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -1999,7 +2076,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2016,14 +2094,15 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
       "skill_name": "pdf",
       "category": "productivity",
       "frontmatter_name": "pdf",
-      "description": "Create, read, merge, fill, and secure PDF files.",
+      "description": "PDF files: create, read, merge, fill, OCR, edit text.",
       "platforms": [
         "linux",
         "macos",
@@ -2033,7 +2112,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2050,7 +2130,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2067,7 +2148,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2084,7 +2166,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2101,7 +2184,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2118,7 +2202,11 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": [
+          "teams",
+          "cron"
+        ]
       }
     },
     {
@@ -2131,7 +2219,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2148,7 +2237,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2165,7 +2255,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2182,7 +2273,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2199,24 +2291,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "blocked-page-recovery",
-      "category": "research",
-      "frontmatter_name": "blocked-page-recovery",
-      "description": "Recover blocked/paywalled/WAF'd pages via fallbacks.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2233,7 +2309,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2250,7 +2327,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2263,7 +2341,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2280,7 +2359,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2297,7 +2377,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2310,7 +2391,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2329,7 +2411,8 @@
           "files"
         ],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2346,7 +2429,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2362,7 +2446,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2378,7 +2463,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2395,7 +2481,26 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
+      }
+    },
+    {
+      "skill_name": "github",
+      "category": "software-development",
+      "frontmatter_name": "github",
+      "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2412,7 +2517,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2425,7 +2531,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2438,7 +2545,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2455,7 +2563,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2472,7 +2581,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2489,7 +2599,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2505,7 +2616,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2522,7 +2634,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2539,7 +2652,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2556,7 +2670,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2573,7 +2688,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2590,7 +2706,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2607,7 +2724,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2624,7 +2742,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2637,7 +2756,26 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
+      }
+    },
+    {
+      "skill_name": "blocked-page-recovery",
+      "category": "web",
+      "frontmatter_name": "blocked-page-recovery",
+      "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2650,7 +2788,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2663,7 +2802,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     },
     {
@@ -2680,7 +2820,8 @@
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
         "fallback_for_tools": [],
-        "requires_tools": []
+        "requires_tools": [],
+        "session_platforms": []
       }
     }
   ],
@@ -2711,6 +2852,7 @@
     "productivity/ocr-and-documents": "Skills for extracting text from PDFs, scanned documents, images, and other file formats using OCR and document parsing tools.",
     "research": "Skills for academic research, paper discovery, literature review, domain reconnaissance, market data, content monitoring, and scientific knowledge retrieval.",
     "smart-home": "Skills for controlling smart home devices — lights, switches, sensors, and home automation systems.",
-    "social-media": "Skills for interacting with social platforms and social-media workflows — posting, reading, monitoring, and account operations."
+    "social-media": "Skills for interacting with social platforms and social-media workflows — posting, reading, monitoring, and account operations.",
+    "web": "Skills for reaching web content when direct access fails — blocked, paywalled, rate-limited, or bot-walled pages."
   }
 }

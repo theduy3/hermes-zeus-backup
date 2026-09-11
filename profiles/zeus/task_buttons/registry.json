@@ -755,5 +755,20 @@
     "status": "sent",
     "message_id": 2614,
     "odds": ""
+  },
+  "448050cba550bdd6": {
+    "id": "448050cba550bdd6",
+    "date": "2026-09-10",
+    "due_date": "2026-09-10",
+    "title": "Dr. Mark Dickeson in-person consultation",
+    "text": "Dr. Mark Dickeson in-person consultation",
+    "source": "Obsidian",
+    "file_path": "/vault/Tasks/tasks/dr-mark-dickeson-consultation.md",
+    "status": "done",
+    "message_id": 2630,
+    "odds": "",
+    "source_updated": true,
+    "done_at": "2026-09-11T03:32:35.703348+00:00",
+    "done_by": "theduy"
   }
 }

@@ -382,7 +382,7 @@ When cron jobs show `last_status=blocked_config` with `provider credential missi
    - **Silent inheritance:** `provider is None` AND `last_status == "blocked_config"`. A null provider does NOT dodge the block — the job inherits the profile's default provider (openai-codex) at runtime and is blocked. Repoint explicitly.
    - (Jobs with `no_agent=True` and `provider=None` are script-only and were never LLM-blocked — leave them alone.)
 4. **The `cronjob update` agent tool rejects `provider`/`model` arguments** ("No updates provided"). Edit `jobs.json` directly instead:
-   - Set `provider` to a working provider (e.g. `nous`) and `model` to a model that provider actually serves (per-profile default: default→`upstage/solar-pro4:free`, others→`tencent/hy3:free`; check each `config.yaml` `model.default`).
+   - Set `provider` + `model` to a pair that is credentialed **and still serves that model today**. Prefer each profile's live `config.yaml` `model.provider`/`model.default` when those work; never reuse an old `:free` slug that already 404s with “free period has ended”. For full fleet verify (gateway live + MODEL_DEAD/OOM classes), use the `hermes-cron-ops` skill (`fleet_health.py`), not only this blocked_config path.
    - Clear stale block state so the scheduler re-validates: set `last_status="pending"`, `last_error=null`, and `preflight_alerted=false` if present.
    - Write the file back with `json.dump(..., indent=1)`.
 5. **The scheduler reads `jobs.json` from disk each tick** (it runs inside the gateway process, no separate cron binary). Direct edits take effect on the next run without a restart — verify, don't restart.

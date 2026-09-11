@@ -6,8 +6,8 @@
       "prompt": "Run 'hermes status --all' and 'hermes doctor'. Summarize any warnings, failed services, missing credentials, or broken gateways in 5 bullets max. If everything looks healthy, say so briefly.",
       "skills": [],
       "skill": null,
-      "model": "upstage/solar-pro4:free",
-      "provider": "nous",
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "schedule": {
@@ -18,52 +18,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 157
+        "completed": 159
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T01:40:25.907256-04:00",
-      "next_run_at": "2026-09-09T09:00:00-04:00",
-      "last_run_at": "2026-09-08T09:00:37.682491-04:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: This model's free period has ended. Please select a different model to continue!",
-      "deliver": "origin",
-      "origin": null,
-      "last_delivery_error": null,
-      "fire_claim": null,
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "failure_streak": 1
-    },
-    {
-      "id": "c9c38ab77915",
-      "name": "weekday-hermes-recap",
-      "prompt": "Review today's Hermes session history and recent activity. Return: 1) up to 8 bullets on what got done today, 2) any failures or blockers, 3) the top 3 next actions for tomorrow. Keep it concise.",
-      "skills": [],
-      "skill": null,
-      "model": "upstage/solar-pro4:free",
-      "provider": "nous",
-      "base_url": null,
-      "script": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 18 * * 1-5",
-        "display": "0 18 * * 1-5"
-      },
-      "schedule_display": "0 18 * * 1-5",
-      "repeat": {
-        "times": null,
-        "completed": 110
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-04-12T02:39:10.585624-04:00",
-      "next_run_at": "2026-09-09T18:00:00-04:00",
-      "last_run_at": "2026-09-08T18:03:35.173345-04:00",
+      "next_run_at": "2026-09-11T09:00:00-07:00",
+      "last_run_at": "2026-09-10T09:02:06.979542-07:00",
       "last_status": "ok",
       "last_error": null,
       "deliver": "origin",
@@ -74,11 +37,57 @@
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-08T18:00:00-04:00",
-        "dispatched_at": "2026-09-08T18:00:29.721202-04:00",
-        "lateness_seconds": 29.7,
+        "scheduled_at": "2026-09-10T09:00:00-07:00",
+        "dispatched_at": "2026-09-10T09:00:25.821084-07:00",
+        "lateness_seconds": 25.8,
         "kind": "on_time"
       }
+    },
+    {
+      "id": "c9c38ab77915",
+      "name": "weekday-hermes-recap",
+      "prompt": "Review today's Hermes session history and recent activity. Return: 1) up to 8 bullets on what got done today, 2) any failures or blockers, 3) the top 3 next actions for tomorrow. Keep it concise.",
+      "skills": [],
+      "skill": null,
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 1-5",
+        "display": "0 18 * * 1-5"
+      },
+      "schedule_display": "0 18 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 113
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-12T02:39:10.585624-04:00",
+      "next_run_at": "2026-09-11T18:00:00-07:00",
+      "last_run_at": "2026-09-10T18:08:19.287081-07:00",
+      "last_status": "pending",
+      "last_error": null,
+      "deliver": "bot-chat",
+      "origin": null,
+      "last_delivery_error": null,
+      "fire_claim": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-10T18:00:00-07:00",
+        "dispatched_at": "2026-09-10T18:00:38.972870-07:00",
+        "lateness_seconds": 39.0,
+        "kind": "on_time"
+      },
+      "context_from": [
+        "self"
+      ]
     },
     {
       "id": "8f310c8f4baf",
@@ -86,8 +95,8 @@
       "prompt": "Audit Hermes operational health for the week: gateways, MCP servers, cron jobs, and obvious configuration drift. Return a concise weekly ops report with only action-worthy findings.",
       "skills": [],
       "skill": null,
-      "model": "upstage/solar-pro4:free",
-      "provider": "nous",
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "schedule": {
@@ -105,7 +114,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:39:10.805996-04:00",
-      "next_run_at": "2026-09-14T09:15:00-04:00",
+      "next_run_at": "2026-09-14T09:15:00-07:00",
       "last_run_at": "2026-09-07T09:29:02.192646-04:00",
       "last_status": "ok",
       "last_error": null,
@@ -115,7 +124,10 @@
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 0
+      "failure_streak": 0,
+      "context_from": [
+        "self"
+      ]
     },
     {
       "id": "67d44bd30291",
@@ -125,8 +137,8 @@
         "obsidian"
       ],
       "skill": "obsidian",
-      "model": "upstage/solar-pro4:free",
-      "provider": "nous",
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "schedule": {
@@ -137,72 +149,39 @@
       "schedule_display": "10 18 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 111
+        "completed": 113
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-12T02:57:22.586188-04:00",
-      "next_run_at": "2026-09-09T18:10:00-04:00",
-      "last_run_at": "2026-09-08T18:11:00.674641-04:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Response truncated due to output length limit",
-      "deliver": "origin",
+      "next_run_at": "2026-09-11T18:10:00-07:00",
+      "last_run_at": "2026-09-10T18:14:04.606833-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "deliver": "bot-chat",
       "origin": null,
       "last_delivery_error": null,
       "fire_claim": null,
       "provider_snapshot": null,
       "model_snapshot": null,
-      "failure_streak": 1,
+      "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-08T18:10:00-04:00",
-        "dispatched_at": "2026-09-08T18:10:32.649881-04:00",
-        "lateness_seconds": 32.6,
+        "scheduled_at": "2026-09-10T18:10:00-07:00",
+        "dispatched_at": "2026-09-10T18:10:39.886134-07:00",
+        "lateness_seconds": 39.9,
         "kind": "on_time"
       }
     },
     {
-      "id": "067ad023e2d9",
-      "name": "ensure-telegram-profile-gateways",
-      "prompt": "Check Hermes Telegram profile gateways for profiles maily, charlesbourg, 3r, and ss on this host. Use terminal commands to inspect `hermes -p <profile> gateway status` for each. For any profile that is not running, start it with a tracked background process using `hermes -p <profile> gateway run`. After starting any missing gateways, verify status again and summarize which were already running vs restarted. Do not create or modify any additional cron jobs.",
-      "skills": [],
-      "skill": null,
-      "model": "upstage/solar-pro4:free",
-      "provider": "nous",
-      "base_url": null,
-      "script": null,
-      "schedule": {
-        "kind": "interval",
-        "minutes": 2,
-        "display": "every 2m"
-      },
-      "schedule_display": "every 2m",
-      "repeat": {
-        "times": null,
-        "completed": 13328
-      },
-      "enabled": false,
-      "state": "paused",
-      "paused_at": "2026-05-21T10:15:51.020999-07:00",
-      "paused_reason": null,
-      "created_at": "2026-04-24T03:31:55.186592+00:00",
-      "next_run_at": "2026-08-30T07:15:13.969246-04:00",
-      "last_run_at": "2026-05-21T10:14:07.648088-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "origin",
-      "origin": null
-    },
-    {
       "id": "12e5ce30563d",
       "name": "nightly-hermes-github-backup",
-      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync — push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n── SELF-CHECK: IS IT MIDNIGHT VANCOUVER? ──\n\nThis cron is scheduled for 00:00 America/Toronto local time. Do this check first:\n\n1. Determine the current hour in America/Toronto timezone. Use `python3` if available, otherwise `TZ=America/Toronto date +%H`.\n2. If the hour is 00 (midnight) → proceed to the sync steps below.\n3. For any other hour, do not run the backup; report the current America/Toronto time and say the schedule may need adjustment.\n\n── SYNC STEPS ──\n\nOnce midnight Vancouver is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) — must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message — include a timestamp (America/Toronto) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n── FAILURE HANDLING ──\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n── IMPORTANT ──\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` — if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
+      "prompt": "Perform the nightly Hermes backup to GitHub. This is a disaster-recovery sync — push skills, memory, config templates, and other durable Hermes state to the private GitHub repo so a fresh Hermes can be rebuilt from scratch if the VPS is corrupted.\n\nTARGET REPO: https://github.com/theduy3/hermes-zeus-backup\nAUTH: GITHUB_TOKEN from ~/.hermes/.env (scoped to repo, read+write contents)\n\n── SELF-CHECK: IS IT MIDNIGHT VANCOUVER? ──\n\nThis cron is scheduled for 00:00 America/Vancouver local time. Do this check first:\n\n1. Determine the current hour in America/Vancouver timezone. Use `python3` if available, otherwise `TZ=America/Vancouver date +%H`.\n2. If the hour is 00 (midnight) → proceed to the sync steps below.\n3. For any other hour, do not run the backup; report the current America/Vancouver time and say the schedule may need adjustment.\n\n── SYNC STEPS ──\n\nOnce midnight Vancouver is confirmed:\n\n1. cd ~/.hermes/\n\n2. Verify the repo is initialized:\n   - Check for .git directory. If missing, run: git init && git remote add origin https://$(grep GITHUB_TOKEN .env | cut -d= -f2)@github.com/theduy3/hermes-zeus-backup.git\n   - Verify remote exists.\n\n3. Ensure .gitignore exists (create it if missing) — must exclude at minimum: .env, auth.json, logs/, sessions/, audio_cache/, hermes-agent/, .git-credentials\n\n4. Set git identity if not configured:\n   git config user.name \"Hermes Agent\" && git config user.email \"hermes@vps\"\n\n5. Stage all changes:\n   git add -A\n\n6. Check if there are any changes to commit (git diff --cached --quiet). If no changes, report \"No changes to sync\" and exit. If there are changes:\n\n7. Generate a meaningful commit message — include a timestamp (America/Vancouver) and a summary of what changed (e.g., \"nightly sync: updated 3 skills, 1 memory entry\"). Use `git diff --cached --stat` to see what files changed.\n\n8. Commit and push:\n   git commit -m \"nightly sync: ...\"\n   git push origin main\n\n9. Report: commit hash, files changed, push status.\n\n── FAILURE HANDLING ──\n\nIf any step fails (no network, token expired, etc.):\n- Report the specific failure clearly\n- Do NOT retry more than once on network errors\n- If the token appears expired or invalid, say so explicitly\n\n── IMPORTANT ──\n\nNEVER commit .env, auth.json, or any file containing API keys/tokens/secrets. If git add -A somehow stages a secret file, unstage it before committing. The .gitignore should prevent this, but double-check: `git diff --cached --name-only | grep -E '\\.env$|auth\\.json|\\.pem$|\\.key$'` — if anything matches, unstage those files with `git reset HEAD -- <file>` before committing.",
       "skills": [],
       "skill": null,
-      "model": "upstage/solar-pro4:free",
-      "provider": "nous",
+      "model": "grok-4.5",
+      "provider": "xai-oauth",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -215,16 +194,16 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": null,
-        "completed": 118
+        "completed": 121
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T09:23:56.400293+00:00",
-      "next_run_at": "2026-09-10T00:00:00-04:00",
-      "last_run_at": "2026-09-08T00:02:52.621028-04:00",
-      "last_status": "ok",
+      "next_run_at": "2026-09-12T00:00:00-07:00",
+      "last_run_at": "2026-09-10T00:01:00.811364-07:00",
+      "last_status": "pending",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -232,16 +211,16 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-09T00:00:47.452537-04:00",
-        "by": "hal-server-803171.novalocal:3585523:80432e06cdf745f8be830000828d0a76"
+        "at": "2026-09-11T00:00:28.925801-07:00",
+        "by": "hal-server-803171.novalocal:118:6687198079174945a6f69e3aacfdc17f"
       },
       "provider_snapshot": null,
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-09T00:00:00-04:00",
-        "dispatched_at": "2026-09-09T00:00:47.422161-04:00",
-        "lateness_seconds": 47.4,
+        "scheduled_at": "2026-09-11T00:00:00-07:00",
+        "dispatched_at": "2026-09-11T00:00:28.751890-07:00",
+        "lateness_seconds": 28.8,
         "kind": "on_time"
       }
     },
@@ -265,15 +244,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 4290
+        "completed": 4391
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T08:06:41.724367-07:00",
-      "next_run_at": "2026-09-09T00:26:47.562804-04:00",
-      "last_run_at": "2026-09-08T23:56:47.562804-04:00",
+      "next_run_at": "2026-09-11T00:30:29.316104-07:00",
+      "last_run_at": "2026-09-11T00:00:29.316104-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -290,9 +269,9 @@
       "fire_claim": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-08T23:56:46.340493-04:00",
-        "dispatched_at": "2026-09-08T23:56:47.328878-04:00",
-        "lateness_seconds": 1.0,
+        "scheduled_at": "2026-09-11T00:00:13.762285-07:00",
+        "dispatched_at": "2026-09-11T00:00:28.751890-07:00",
+        "lateness_seconds": 15.0,
         "kind": "on_time"
       }
     },
@@ -307,7 +286,7 @@
       "provider_snapshot": null,
       "model_snapshot": null,
       "base_url": null,
-      "script": "graphify_refresh.py",
+      "script": "graphify_refresh_vault.sh",
       "no_agent": true,
       "context_from": null,
       "schedule": {
@@ -318,24 +297,30 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 43
+        "completed": 45
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:24:06.463702-07:00",
-      "next_run_at": "2026-09-09T03:30:00-04:00",
-      "last_run_at": "2026-09-08T03:30:10.123271-04:00",
-      "last_status": "error",
-      "last_error": "Script exited with code -9\nstdout:\n[hermes] .graphifyignore already current at /home/hermes/.hermes/hermes-agent/.graphifyignore",
+      "next_run_at": "2026-09-11T03:30:00-07:00",
+      "last_run_at": "2026-09-10T03:31:13.136910-07:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 2
+      "failure_streak": 0,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-10T03:30:00-07:00",
+        "dispatched_at": "2026-09-10T03:30:13.018336-07:00",
+        "lateness_seconds": 13.0,
+        "kind": "on_time"
+      }
     },
     {
       "id": "dbb2f0fbb3b9",
@@ -362,15 +347,15 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.724079-04:00",
-      "next_run_at": "2026-09-09T05:15:00-04:00",
-      "last_run_at": "2026-09-08T05:15:12.987298-04:00",
+      "next_run_at": "2026-09-11T05:15:00-07:00",
+      "last_run_at": "2026-09-10T05:15:33.979097-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -385,7 +370,13 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-10T05:15:00-07:00",
+        "dispatched_at": "2026-09-10T05:15:29.666953-07:00",
+        "lateness_seconds": 29.7,
+        "kind": "on_time"
+      }
     },
     {
       "id": "627ca64c6c8d",
@@ -419,7 +410,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.742726-04:00",
-      "next_run_at": "2026-12-30T09:30:00-05:00",
+      "next_run_at": "2026-12-30T09:30:00-08:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -468,7 +459,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.752745-04:00",
-      "next_run_at": "2026-12-30T10:00:00-05:00",
+      "next_run_at": "2026-12-30T10:00:00-08:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -510,15 +501,15 @@
       "schedule_display": "30 20 * * 3",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.762660-04:00",
-      "next_run_at": "2026-09-09T20:30:00-04:00",
-      "last_run_at": "2026-09-02T20:31:15.487478-04:00",
+      "next_run_at": "2026-09-16T20:30:00-07:00",
+      "last_run_at": "2026-09-09T20:31:21.019744-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -533,7 +524,13 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-09T20:30:00-04:00",
+        "dispatched_at": "2026-09-09T20:30:50.400290-04:00",
+        "lateness_seconds": 50.4,
+        "kind": "on_time"
+      }
     },
     {
       "id": "0c2a800fe2b5",
@@ -560,15 +557,15 @@
       "schedule_display": "0 20 * * 3",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-21T19:25:40.773308-04:00",
-      "next_run_at": "2026-09-09T20:00:00-04:00",
-      "last_run_at": "2026-09-02T20:01:08.939877-04:00",
+      "next_run_at": "2026-09-16T20:00:00-07:00",
+      "last_run_at": "2026-09-09T20:01:19.285194-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -583,8 +580,238 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
+      "fire_claim": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-09-09T20:00:00-04:00",
+        "dispatched_at": "2026-09-09T20:00:48.589681-04:00",
+        "lateness_seconds": 48.6,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "7d7e0df990ae",
+      "name": "CALL 30m before: dr-mark-dickeson-consultation (20",
+      "prompt": "CALL 30m before: dr-mark-dickeson-consultation (2026-09-10 10:00PDT)",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "callmebot_reminder.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-10T12:30:00-07:00",
+        "display": "once at 2026-09-10 12:30"
+      },
+      "schedule_display": "once at 2026-09-10 12:30",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-10T05:15:30.799264-07:00",
+      "next_run_at": null,
+      "last_run_at": "2026-09-10T12:30:39.226739-07:00",
+      "last_status": "pending",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "run_claim": null,
       "fire_claim": null
+    },
+    {
+      "id": "22b337e917ce",
+      "name": "CALL at time: dr-mark-dickeson-consultation (2026-",
+      "prompt": "CALL at time: dr-mark-dickeson-consultation (2026-09-10 10:00PDT)",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "callmebot_reminder.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-10T13:00:00-07:00",
+        "display": "once at 2026-09-10 13:00"
+      },
+      "schedule_display": "once at 2026-09-10 13:00",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-10T05:15:31.248706-07:00",
+      "next_run_at": null,
+      "last_run_at": "2026-09-10T13:00:40.846307-07:00",
+      "last_status": "pending",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null
+    },
+    {
+      "id": "9e7e43faca3b",
+      "name": "Sunday Telegram button audit",
+      "prompt": "Script-only weekly audit of Zeus, Catthew, and Thor Telegram task and wellness buttons. Stdout is the report.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "audit_telegram_buttons.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * 0",
+        "display": "0 23 * * 0"
+      },
+      "schedule_display": "0 23 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-10T20:37:24.517395-07:00",
+      "next_run_at": "2026-09-13T23:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:8446251233",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "9667dcd923ab",
+      "name": "Daily Hermes version update",
+      "prompt": "Skip if already current. Pull Hermes at 1:20am Vancouver, restore Telegram Done-button handlers, Telegram only on actual update or failure.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "daily_hermes_update.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "20 1 * * *",
+        "display": "20 1 * * *"
+      },
+      "schedule_display": "20 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-10T21:00:54.574312-07:00",
+      "next_run_at": "2026-09-11T01:20:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:8446251233",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "f2c20fb03505",
+      "name": "Daily Hermes button restore backstop",
+      "prompt": "Script-only 1:40am backstop: daily_hermes_update.py --restore-only. Silent when buttons are intact.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "daily_hermes_button_restore.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "40 1 * * *",
+        "display": "40 1 * * *"
+      },
+      "schedule_display": "40 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-10T21:00:57.313052-07:00",
+      "next_run_at": "2026-09-11T01:40:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:8446251233",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-09-09T00:00:47.452710-04:00"
+  "updated_at": "2026-09-11T00:00:29.316482-07:00"
 }
