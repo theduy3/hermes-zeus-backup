@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-import json, urllib.request, urllib.parse, ssl, time, sys
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+import json, urllib.request, urllib.parse, ssl, time, concurrent.futures, datetime, sys
+
+ctx = ssl.create_default_context()
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
 
 tickers = [
 "MSFT","AMZN","GOOG","META","AAPL",
@@ -15,135 +16,105 @@ tickers = [
 "SPCX","RKLB","SEI","WYFI","CRCL"
 ]
 
-ctx = ssl.create_default_context()
-headers = {"User-Agent": "Mozilla/5.0 (compatible; research/1.0)"}
-
 def fetch_chart(t):
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?range=5d&interval=1d"
-    req = urllib.request.Request(url, headers=headers)
+    req = urllib.request.Request(url, headers=UA)
     try:
         with urllib.request.urlopen(req, context=ctx, timeout=20) as r:
             data = json.loads(r.read().decode())
-        if not data.get("chart") or not data["chart"].get("result"):
-            return {"t": t, "ok": False, "err": "no result"}
         result = data["chart"]["result"][0]
         meta = result["meta"]
-        ts = result.get("timestamp") or []
-        quote = (result.get("indicators") or {}).get("quote") or [{}]
-        closes = quote[0].get("close") or []
-        pairs = [(ts[i], closes[i]) for i in range(len(closes)) if i < len(ts) and closes[i] is not None]
-        # Prefer meta regular market when available for latest
-        last = meta.get("regularMarketPrice")
-        prev = meta.get("chartPreviousClose") or meta.get("previousClose")
-        last_ts = meta.get("regularMarketTime")
-        chg_meta = meta.get("regularMarketChangePercent")
-        if last is None and pairs:
-            last = pairs[-1][1]
-            last_ts = pairs[-1][0]
-        if prev is None and len(pairs) >= 2:
-            prev = pairs[-2][1]
-        if chg_meta is not None:
-            chg = float(chg_meta)
-        elif last is not None and prev not in (None, 0):
-            chg = (last - prev) / prev * 100.0
+        quotes = result["indicators"]["quote"][0]
+        closes = [c for c in quotes["close"] if c is not None]
+        price = meta.get("regularMarketPrice") or (closes[-1] if closes else None)
+        prev_close = meta.get("regularMarketPreviousClose") or meta.get("chartPreviousClose") or meta.get("previousClose")
+        if prev_close is None and len(closes) >= 2:
+            prev_close = closes[-2]
+        if price is not None and prev_close:
+            chg_pct = (price - prev_close) / prev_close * 100
         else:
-            chg = None
+            chg_pct = None
         return {
-            "t": t,
-            "price": last,
-            "prev": prev,
-            "chg": chg,
-            "currency": meta.get("currency"),
-            "exchange": meta.get("exchangeName"),
-            "last_ts": last_ts,
-            "symbol": meta.get("symbol"),
-            "name": meta.get("shortName") or meta.get("longName"),
-            "ok": True,
+            "t": t, "price": price, "prev": prev_close, "chg": chg_pct,
+            "ccy": meta.get("currency"), "ex": meta.get("exchangeName"),
+            "ts": meta.get("regularMarketTime"), "ok": True
         }
     except Exception as e:
-        return {"t": t, "ok": False, "err": str(e)}
+        return {"t": t, "ok": False, "err": str(e)[:200]}
 
 def fetch_quote_summary(t):
-    """Try modules for forwardPE, trailingPE, peg, etc."""
-    modules = "defaultKeyStatistics,summaryDetail,financialData,price"
-    url = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{urllib.parse.quote(t)}?modules={modules}"
-    req = urllib.request.Request(url, headers=headers)
+    mods = "defaultKeyStatistics,summaryDetail,financialData"
+    url = f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{urllib.parse.quote(t)}?modules={mods}"
+    req = urllib.request.Request(url, headers=UA)
     try:
         with urllib.request.urlopen(req, context=ctx, timeout=20) as r:
             data = json.loads(r.read().decode())
-        res = data.get("quoteSummary", {}).get("result")
-        if not res:
-            return {"t": t, "ok": False, "err": "no qs"}
-        r0 = res[0]
-        dks = r0.get("defaultKeyStatistics") or {}
-        sd = r0.get("summaryDetail") or {}
-        fd = r0.get("financialData") or {}
-        def raw(x):
-            if x is None:
-                return None
-            if isinstance(x, dict):
-                return x.get("raw", x.get("fmt"))
-            return x
+        res = data["quoteSummary"]["result"][0]
+        dks = res.get("defaultKeyStatistics") or {}
+        sd = res.get("summaryDetail") or {}
+        fd = res.get("financialData") or {}
+        def gv(d, k):
+            v = d.get(k)
+            if isinstance(v, dict):
+                return v.get("raw", v.get("fmt"))
+            return v
         return {
             "t": t,
-            "ok": True,
-            "forwardPE": raw(dks.get("forwardPE")) or raw(sd.get("forwardPE")),
-            "trailingPE": raw(dks.get("trailingPE")) or raw(sd.get("trailingPE")),
-            "peg": raw(dks.get("pegRatio")),
-            "enterpriseToEbitda": raw(dks.get("enterpriseToEbitda")),
-            "profitMargins": raw(fd.get("profitMargins")),
-            "revenueGrowth": raw(fd.get("revenueGrowth")),
-            "freeCashflow": raw(fd.get("freeCashflow")),
-            "operatingCashflow": raw(fd.get("operatingCashflow")),
-            "returnOnEquity": raw(fd.get("returnOnEquity")),
-            "returnOnAssets": raw(fd.get("returnOnAssets")),
-            "recommendationKey": (fd.get("recommendationKey") if isinstance(fd.get("recommendationKey"), str) else raw(fd.get("recommendationKey"))),
-            "targetMeanPrice": raw(fd.get("targetMeanPrice")),
-            "currentPrice": raw(fd.get("currentPrice")),
+            "fwdPE": gv(dks, "forwardPE") or gv(sd, "forwardPE"),
+            "trailPE": gv(dks, "trailingPE") or gv(sd, "trailingPE"),
+            "peg": gv(dks, "pegRatio"),
+            "fcf": gv(fd, "freeCashflow"),
+            "roe": gv(fd, "returnOnEquity"),
+            "ok": True
         }
     except Exception as e:
-        return {"t": t, "ok": False, "err": str(e)}
+        return {"t": t, "ok": False, "err": str(e)[:200]}
 
-results = {}
-with ThreadPoolExecutor(max_workers=6) as ex:
-    futs = {ex.submit(fetch_chart, t): t for t in tickers}
-    for f in as_completed(futs):
-        r = f.result()
-        results[r["t"]] = r
+def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else "all"
+    subset = tickers
+    if mode != "all":
+        # mode is comma-separated tickers
+        subset = mode.split(",")
 
-qs = {}
-with ThreadPoolExecutor(max_workers=4) as ex:
-    futs = {ex.submit(fetch_quote_summary, t): t for t in tickers}
-    for f in as_completed(futs):
-        r = f.result()
-        qs[r["t"]] = r
-        time.sleep(0.05)
+    charts = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+        for r in ex.map(fetch_chart, subset):
+            charts[r["t"]] = r
 
-out = []
-for t in tickers:
-    r = results.get(t, {})
-    q = qs.get(t, {})
-    row = {
-        "t": t,
-        "price": r.get("price"),
-        "chg": r.get("chg"),
-        "currency": r.get("currency"),
-        "last_ts": r.get("last_ts"),
-        "chart_ok": r.get("ok"),
-        "chart_err": r.get("err"),
-        "forwardPE": q.get("forwardPE"),
-        "trailingPE": q.get("trailingPE"),
-        "peg": q.get("peg"),
-        "freeCashflow": q.get("freeCashflow"),
-        "returnOnEquity": q.get("returnOnEquity"),
-        "returnOnAssets": q.get("returnOnAssets"),
-        "revenueGrowth": q.get("revenueGrowth"),
-        "recommendationKey": q.get("recommendationKey"),
-        "targetMeanPrice": q.get("targetMeanPrice"),
-        "qs_ok": q.get("ok"),
-        "qs_err": q.get("err"),
-        "name": r.get("name"),
-    }
-    out.append(row)
+    time.sleep(0.3)
+    quotes = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
+        for r in ex.map(fetch_quote_summary, subset):
+            quotes[r["t"]] = r
 
-print(json.dumps({"asof_utc": datetime.now(timezone.utc).isoformat(), "rows": out}, indent=2, default=str))
+    out = []
+    for t in subset:
+        c = charts.get(t, {})
+        q = quotes.get(t, {})
+        row = {"ticker": t}
+        if c.get("ok"):
+            row.update({k: c.get(k) for k in ("price","prev","chg","ccy","ex","ts")})
+            row["chart_ok"] = True
+        else:
+            row["chart_ok"] = False
+            row["chart_err"] = c.get("err")
+        if q.get("ok"):
+            row.update({k: q.get(k) for k in ("fwdPE","trailPE","peg","fcf","roe")})
+            row["quote_ok"] = True
+        else:
+            row["quote_ok"] = False
+            row["quote_err"] = q.get("err")
+        out.append(row)
+
+    print(json.dumps(out, indent=None, default=str))
+    okc = sum(1 for r in out if r.get("chart_ok"))
+    okq = sum(1 for r in out if r.get("quote_ok"))
+    print(f"\n# charts_ok={okc}/{len(subset)} quotes_ok={okq}/{len(subset)}", file=sys.stderr)
+    for r in out:
+        if r.get("ts"):
+            print(f"# sample_ts {r['ticker']} {datetime.datetime.utcfromtimestamp(r['ts']).isoformat()}Z", file=sys.stderr)
+            break
+
+if __name__ == "__main__":
+    main()

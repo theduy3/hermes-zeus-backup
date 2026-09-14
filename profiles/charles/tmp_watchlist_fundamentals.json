@@ -1,0 +1,255 @@
+{
+ "finviz": {},
+ "stockanalysis": {
+  "MSFT": {
+   "src": "stockanalysis",
+   "forwardPE": "25.09",
+   "pe": "27.61",
+   "peg": "1.56",
+   "title": "Microsoft (MSFT) Statistics &amp; Valuation"
+  },
+  "AMZN": {
+   "src": "stockanalysis",
+   "forwardPE": "27.72",
+   "pe": "20.65",
+   "peg": "1.33",
+   "title": "Amazon.com (AMZN) Statistics &amp; Valuation"
+  },
+  "GOOG": {
+   "src": "stockanalysis",
+   "forwardPE": "24.89",
+   "pe": "16.89",
+   "title": "Alphabet (GOOG) Statistics &amp; Valuation"
+  },
+  "META": {
+   "src": "stockanalysis",
+   "forwardPE": "20.02",
+   "pe": "24.42",
+   "peg": "1.00",
+   "title": "Meta Platforms (META) Statistics &amp; Valuation"
+  },
+  "AAPL": {
+   "src": "stockanalysis",
+   "forwardPE": "36.10",
+   "pe": "38.12",
+   "peg": "3.24",
+   "title": "Apple (AAPL) Statistics &amp; Valuation"
+  },
+  "CRM": {
+   "src": "stockanalysis",
+   "forwardPE": "16.91",
+   "pe": "22.96",
+   "peg": "1.04",
+   "title": "Salesforce (CRM) Statistics &amp; Valuation"
+  },
+  "DELL": {
+   "src": "stockanalysis",
+   "forwardPE": "20.18",
+   "pe": "33.10",
+   "peg": "0.53",
+   "title": "Dell Technologies (DELL) Statistics &amp; Valuation"
+  },
+  "PLTR": {
+   "src": "stockanalysis",
+   "forwardPE": "87.86",
+   "pe": "143.03",
+   "peg": "1.64",
+   "title": "Palantir Technologies (PLTR) Statistics &amp; Valuation"
+  },
+  "ORCL": {
+   "src": "stockanalysis",
+   "forwardPE": "17.63",
+   "pe": "23.56",
+   "peg": "0.58",
+   "title": "Oracle (ORCL) Statistics &amp; Valuation"
+  },
+  "CRWV": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "CoreWeave (CRWV) Statistics &amp; Valuation"
+  },
+  "INFY": {
+   "src": "stockanalysis",
+   "forwardPE": "13.26",
+   "pe": "13.24",
+   "title": "Infosys (INFY) Statistics &amp; Valuation"
+  },
+  "NBIS": {
+   "src": "stockanalysis",
+   "forwardPE": null,
+   "pe": null,
+   "title": "Nebius Group (NBIS) Statistics &amp; Valuation"
+  },
+  "TSLA": {
+   "src": "stockanalysis",
+   "forwardPE": "191.97",
+   "pe": "379.22",
+   "peg": "7.09",
+   "title": "Tesla (TSLA) Statistics &amp; Valuation"
+  },
+  "NFLX": {
+   "src": "stockanalysis",
+   "forwardPE": "22.34",
+   "pe": "24.38",
+   "peg": "1.05",
+   "title": "Netflix (NFLX) Statistics &amp; Valuation"
+  },
+  "MELI": {
+   "src": "stockanalysis",
+   "forwardPE": "45.05",
+   "pe": "51.63",
+   "peg": "1.60",
+   "title": "MercadoLibre (MELI) Statistics &amp; Valuation"
+  },
+  "HD": {
+   "src": "stockanalysis",
+   "forwardPE": "20.02",
+   "pe": "21.60",
+   "peg": "3.96",
+   "title": "The Home Depot (HD) Statistics &amp; Valuation"
+  },
+  "LOW": {
+   "src": "stockanalysis",
+   "forwardPE": "15.70",
+   "pe": "16.64",
+   "peg": "3.80",
+   "title": "Lowe's Companies (LOW) Statistics &amp; Valuation"
+  },
+  "WMT": {
+   "src": "stockanalysis",
+   "forwardPE": "35.74",
+   "pe": "38.83",
+   "peg": "3.48",
+   "title": "Walmart (WMT) Statistics &amp; Valuation"
+  },
+  "TGT": {
+   "src": "stockanalysis",
+   "forwardPE": "16.78",
+   "pe": "16.16",
+   "peg": "2.93",
+   "title": "Target (TGT) Statistics &amp; Valuation"
+  },
+  "ASML": {
+   "src": "stockanalysis",
+   "forwardPE": "30.27",
+   "pe": "54.31",
+   "title": "ASML Holding (ASML) Statistics &amp; Valuation"
+  },
+  "AVGO": {
+   "src": "stockanalysis",
+   "forwardPE": "20.91",
+   "pe": "46.21",
+   "peg": "0.38",
+   "title": "Broadcom (AVGO) Statistics &amp; Valuation"
+  },
+  "NVDA": {
+   "src": "stockanalysis",
+   "forwardPE": "18.12",
+   "pe": "27.60",
+   "peg": "0.35",
+   "title": "NVIDIA (NVDA) Statistics &amp; Valuation"
+  },
+  "AMD": {
+   "src": "stockanalysis",
+   "forwardPE": "46.65",
+   "pe": "131.74",
+   "peg": "0.71",
+   "title": "Advanced Micro Devices (AMD) Statistics &amp; Valuation"
+  },
+  "SNDK": {
+   "src": "stockanalysis",
+   "forwardPE": "7.63",
+   "pe": "22.14",
+   "peg": "0.19",
+   "title": "Sandisk (SNDK) Statistics &amp; Valuation"
+  },
+  "MU": {
+   "src": "stockanalysis",
+   "forwardPE": "6.76",
+   "pe": "22.01",
+   "peg": "0.04",
+   "title": "Micron Technology (MU) Statistics &amp; Valuation"
+  },
+  "TSM": {
+   "src": "stockanalysis",
+   "forwardPE": "19.33",
+   "pe": "28.36",
+   "title": "Taiwan Semiconductor Manufacturing Company (TSM) Statistics &amp; Valuation"
+  },
+  "INTC": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "Intel (INTC) Statistics &amp; Valuation"
+  },
+  "BE": {
+   "src": "stockanalysis",
+   "forwardPE": "78.08",
+   "pe": "331.57",
+   "title": "Bloom Energy (BE) Statistics &amp; Valuation"
+  },
+  "APLD": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "Applied Digital (APLD) Statistics &amp; Valuation"
+  },
+  "GLW": {
+   "src": "stockanalysis",
+   "forwardPE": "44.94",
+   "pe": "76.76",
+   "peg": "1.36",
+   "title": "Corning (GLW) Statistics &amp; Valuation"
+  },
+  "IREN": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "IREN Limited (IREN) Statistics &amp; Valuation"
+  },
+  "CORZ": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "Core Scientific (CORZ) Statistics &amp; Valuation"
+  },
+  "RIOT": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "Riot Platforms (RIOT) Statistics &amp; Valuation"
+  },
+  "CLSK": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "CleanSpark (CLSK) Statistics &amp; Valuation"
+  },
+  "BTDR": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "Bitdeer Technologies Group (BTDR) Statistics &amp; Valuation"
+  },
+  "HIVE": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "HIVE Digital Technologies (HIVE) Statistics &amp; Valuation"
+  },
+  "RKLB": {
+   "src": "stockanalysis",
+   "forwardPE": "1",
+   "title": "Rocket Lab (RKLB) Statistics &amp; Valuation"
+  },
+  "SEI": {
+   "src": "stockanalysis",
+   "forwardPE": "51.32",
+   "pe": "77.54",
+   "title": "Solaris Energy Infrastructure (SEI) Statistics &amp; Valuation"
+  },
+  "CRCL": {
+   "src": "stockanalysis",
+   "forwardPE": "68.45",
+   "pe": "50.32",
+   "title": "Circle Internet Group (CRCL) Statistics &amp; Valuation"
+  },
+  "PSIX": {
+   "forwardPE": "13.14",
+   "peg": "2.27",
+   "pe": "14.32"
+  }
+ }
+}
