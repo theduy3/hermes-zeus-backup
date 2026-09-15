@@ -988,14 +988,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-18T17:07:45.360351+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T17:00:25.270229+00:00",
-    "last_viewed_at": "2026-09-14T17:00:25.253237+00:00",
+    "last_used_at": "2026-09-15T06:00:37.962193+00:00",
+    "last_viewed_at": "2026-09-15T06:00:37.953643+00:00",
     "patch_count": 6,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 184,
-    "view_count": 108
+    "use_count": 186,
+    "view_count": 110
   },
   "product-price-monitor": {
     "archived_at": null,
@@ -1245,14 +1245,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-21T06:02:53.477782+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T06:00:57.480180+00:00",
-    "last_viewed_at": "2026-09-14T06:00:57.477369+00:00",
+    "last_used_at": "2026-09-15T06:00:37.966799+00:00",
+    "last_viewed_at": "2026-09-15T06:00:37.957866+00:00",
     "patch_count": 29,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 232,
-    "view_count": 80
+    "use_count": 236,
+    "view_count": 82
   },
   "touchdesigner-mcp": {
     "archived_at": null,
@@ -1344,14 +1344,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-22T15:07:12.534687+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T15:00:26.593639+00:00",
-    "last_viewed_at": "2026-09-14T15:00:26.589642+00:00",
+    "last_used_at": "2026-09-15T03:00:51.121271+00:00",
+    "last_viewed_at": "2026-09-15T03:00:51.115921+00:00",
     "patch_count": 150,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 451,
-    "view_count": 222
+    "use_count": 455,
+    "view_count": 224
   },
   "wiki-lint": {
     "archived_at": null,
