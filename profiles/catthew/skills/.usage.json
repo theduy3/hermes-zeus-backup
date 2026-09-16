@@ -357,13 +357,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T14:00:20.071433+00:00",
+    "last_used_at": "2026-09-15T14:00:50.467727+00:00",
     "last_viewed_at": "2026-08-29T20:02:10.198597+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 111,
+    "use_count": 112,
     "view_count": 18
   },
   "grounded-citations": {
@@ -491,14 +491,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-06T16:48:50.027832+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T14:00:28.468912+00:00",
-    "last_viewed_at": "2026-09-14T14:00:28.465854+00:00",
+    "last_used_at": "2026-09-15T14:00:58.687333+00:00",
+    "last_viewed_at": "2026-09-15T14:00:58.682915+00:00",
     "patch_count": 34,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 183,
-    "view_count": 79
+    "use_count": 186,
+    "view_count": 81
   },
   "humanizer": {
     "archived_at": "2026-09-14T16:35:43.963637+00:00",

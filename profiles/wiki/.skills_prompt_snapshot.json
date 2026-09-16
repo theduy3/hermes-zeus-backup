@@ -309,6 +309,10 @@
       1784734181777533958,
       7119
     ],
+    "agent-reach/SKILL.md": [
+      1789409895687850757,
+      6802
+    ],
     "web/DESCRIPTION.md": [
       1788891762462552249,
       137
@@ -319,6 +323,20 @@
     ]
   },
   "skills": [
+    {
+      "skill_name": "agent-reach",
+      "category": "agent-reach",
+      "frontmatter_name": "agent-reach",
+      "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/loo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": [],
+        "session_platforms": []
+      }
+    },
     {
       "skill_name": "macos-computer-use",
       "category": "apple",

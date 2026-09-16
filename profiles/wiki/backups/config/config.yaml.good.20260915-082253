@@ -1,14 +1,21 @@
 model:
   default: grok-4.5
   provider: xai-oauth
+  auxiliary:
+    provider: xai-oauth
+    vision:
+      model: grok-4.5
+      provider: xai-oauth
+  max_output_tokens: 32768
   parameters:
     reasoning_effort: max
-  auxiliary: grok-4.5
-  max_output_tokens: 8192
-fallback_providers: []
+fallback_providers:
+  - provider: nous
+    model: tencent/hy3:free
 credential_pool_strategies:
-  nous: fill_first
+  openai-codex: fill_first
   xai-oauth: fill_first
+  nous: fill_first
 toolsets:
   - hermes-cli
 agent:
@@ -22,7 +29,6 @@ agent:
   environment_probe: true
   environment_hint: ''
   coding_context: auto
-  verify_on_stop: false
   gateway_timeout_warning: 900
   clarify_timeout: 600
   gateway_notify_interval: 600
@@ -95,10 +101,9 @@ terminal:
   persistent_shell: true
   lifetime_seconds: 300
 web:
-  backend: firecrawl
+  backend: ''
   search_backend: ''
   extract_backend: ''
-  use_gateway: false
 browser:
   inactivity_timeout: 120
   command_timeout: 30
@@ -116,8 +121,6 @@ browser:
     adopt_existing_tab: false
     rewrite_loopback_urls: false
     loopback_host_alias: host.docker.internal
-  cloud_provider: camofox
-  use_gateway: false
 checkpoints:
   enabled: true
   max_snapshots: 50
@@ -250,8 +253,8 @@ auxiliary:
     api_key: ''
     timeout: 360
   session_search:
-    provider: xai-oauth
-    model: grok-4.5
+    provider: openai-codex
+    model: gpt-5.5
     base_url: ''
     api_key: ''
     timeout: 30
@@ -323,9 +326,10 @@ dashboard:
     client_id: ''
     portal_url: ''
   basic_auth:
-    username: admin
-    password_hash: scrypt$16384$8$1$AJ2aNUvUlFmAxPfksvUEgw==$tH71hLfV400FzdzNC1Zf979Fhyd9t/WePkezo47mtjU=
-    secret: ulfyLI6gYxmPujxGWUQOTdYPco3DkXJY
+    username: ''
+    password_hash: ''
+    password: ''
+    secret: ''
     session_ttl_seconds: 0
   public_url: ''
 privacy:
@@ -426,8 +430,8 @@ curator:
   enabled: true
   interval_hours: 168
   min_idle_hours: 2
-  stale_after_days: 30
-  archive_after_days: 90
+  stale_after_days: 14
+  archive_after_days: 30
   consolidate: false
   prune_builtins: true
   backup:
@@ -486,14 +490,10 @@ approvals:
   destructive_slash_confirm: true
 command_allowlist:
   - delete in root path
-  - script execution via -e/-c flag
   - script execution via heredoc
-  - execute_code
   - stop/restart hermes gateway (kills running agents)
-plugins:
-  enabled:
-    - herdr-agent-state
-    - multi-agent-context
+  - execute_code
+  - script execution via -e/-c flag
 hooks_auto_accept: false
 security:
   allow_private_urls: false
@@ -518,7 +518,6 @@ kanban:
   worker_log_backup_count: 1
   orchestrator_profile: ''
   default_assignee: ''
-  max_in_progress: 1
   auto_decompose: true
   auto_decompose_per_tick: 3
   dispatch_stale_timeout_seconds: 14400
@@ -574,6 +573,7 @@ onboarding:
   seen:
     tool_progress_prompt: true
     busy_input_prompt: true
+    profile_build_offered: true
   profile_build: ask
 updates:
   pre_update_backup: false
@@ -597,15 +597,10 @@ secrets:
     override_existing: true
     auto_install: true
     server_url: ''
-  command:
-    enabled: true
-    command: /bin/bash /home/hermes/.hermes/secrets/telegram_decrypt.sh
-    helper_timeout_seconds: 3
-    override_existing: false
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 0
 paste_collapse_char_threshold: 2000
-_config_version: 43
+_config_version: 44
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -616,7 +611,7 @@ platform_toolsets:
     - browser
     - clarify
     - code_execution
-    - context_engine
+    - connections
     - cronjob
     - delegation
     - file
@@ -629,8 +624,6 @@ platform_toolsets:
     - terminal
     - todo
     - tts
-    - video
-    - video_gen
     - vision
     - web
     - x_search
@@ -638,7 +631,7 @@ platform_toolsets:
     - browser
     - clarify
     - code_execution
-    - context_engine
+    - connections
     - cronjob
     - delegation
     - file
@@ -651,8 +644,6 @@ platform_toolsets:
     - terminal
     - todo
     - tts
-    - video
-    - video_gen
     - vision
     - web
     - x_search
@@ -675,47 +666,46 @@ known_plugin_toolsets:
   telegram:
     - a2a
     - spotify
-default: grok-4.5
-mcp_servers:
-  graphify-hermes:
-    command: graphify-mcp
-    args:
-      - /home/hermes/.graphify/hermes/graphify-out/graph.json
-    enabled: false
-  graphify-vault:
-    command: /home/hermes/.local/bin/graphify-mcp
-    args:
-      - /home/hermes/.graphify/theduyvault/graphify-out/graph.json
-    enabled: true
-  graphify-vault-core:
-    command: /home/hermes/.local/bin/graphify-mcp
-    args:
-      - /home/hermes/.graphify/theduyvault-core/graphify-out/graph.json
-    enabled: true
-  graphify-vault-sources:
-    command: /home/hermes/.local/bin/graphify-mcp
-    args:
-      - /home/hermes/.graphify/theduyvault-sources/graphify-out/graph.json
-    enabled: true
-  graphify-vault-daily:
-    command: /home/hermes/.local/bin/graphify-mcp
-    args:
-      - /home/hermes/.graphify/theduyvault-daily/graphify-out/graph.json
-    enabled: true
-video_gen:
-  provider: xai
-  use_gateway: false
-  model: grok-imagine-video
-  xai:
-    storage:
-      enabled: true
-      public_url: true
+plugins:
+  enabled:
+    - multi-agent-context
+default: gpt-5.5
+mcp_servers: {}
 known_builtin_toolsets:
+  telegram:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - connections
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
   cli:
     - browser
     - clarify
     - code_execution
     - computer_use
+    - connections
     - context_engine
     - cronjob
     - delegation
@@ -738,41 +728,6 @@ known_builtin_toolsets:
     - web
     - x_search
     - yuanbao
-  telegram:
-    - browser
-    - clarify
-    - code_execution
-    - computer_use
-    - context_engine
-    - cronjob
-    - delegation
-    - discord
-    - discord_admin
-    - file
-    - homeassistant
-    - image_gen
-    - memory
-    - session_search
-    - skills
-    - spotify
-    - stt
-    - terminal
-    - todo
-    - tts
-    - video
-    - video_gen
-    - vision
-    - web
-    - x_search
-    - yuanbao
-platforms:
-  telegram:
-    enabled: true
-    home_channel:
-      platform: telegram
-      chat_id: '8446251233'
-      name: theduy
-      user_id: '8446251233'
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

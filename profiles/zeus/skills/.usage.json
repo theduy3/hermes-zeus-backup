@@ -314,14 +314,14 @@
     "created_by": "agent",
     "last_patched_at": "2026-08-07T17:08:23.121684+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-14T04:00:37.174194+00:00",
-    "last_viewed_at": "2026-09-14T04:00:37.170280+00:00",
+    "last_used_at": "2026-09-15T13:15:38.267006+00:00",
+    "last_viewed_at": "2026-09-15T13:15:38.250394+00:00",
     "patch_count": 1,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 17,
-    "view_count": 17
+    "use_count": 18,
+    "view_count": 18
   },
   "email-inbox-triage": {
     "archived_at": null,
@@ -889,14 +889,14 @@
     "created_by": null,
     "last_patched_at": "2026-07-21T17:14:42.244039+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-15T04:00:42.017543+00:00",
-    "last_viewed_at": "2026-09-15T04:00:42.013667+00:00",
+    "last_used_at": "2026-09-16T04:00:52.541557+00:00",
+    "last_viewed_at": "2026-09-16T04:00:52.533562+00:00",
     "patch_count": 45,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 339,
-    "view_count": 87
+    "use_count": 344,
+    "view_count": 90
   },
   "ocr-and-documents": {
     "archived_at": null,

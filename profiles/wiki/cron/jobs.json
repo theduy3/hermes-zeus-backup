@@ -23,15 +23,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 120
+        "completed": 121
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:00.314751-07:00",
-      "next_run_at": "2026-09-15T04:00:00-07:00",
-      "last_run_at": "2026-09-14T04:03:57.837233-07:00",
+      "next_run_at": "2026-09-16T04:00:00-07:00",
+      "last_run_at": "2026-09-15T04:05:45.594767-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -49,9 +49,9 @@
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-14T04:00:00-07:00",
-        "dispatched_at": "2026-09-14T04:00:05.197814-07:00",
-        "lateness_seconds": 5.2,
+        "scheduled_at": "2026-09-15T04:00:00-07:00",
+        "dispatched_at": "2026-09-15T04:00:40.796655-07:00",
+        "lateness_seconds": 40.8,
         "kind": "on_time"
       }
     },
@@ -77,15 +77,15 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 114
+        "completed": 115
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:01.065063-07:00",
-      "next_run_at": "2026-09-15T10:00:00-07:00",
-      "last_run_at": "2026-09-14T10:00:31.871219-07:00",
+      "next_run_at": "2026-09-16T10:00:00-07:00",
+      "last_run_at": "2026-09-15T10:01:01.683374-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -99,9 +99,9 @@
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-14T10:00:00-07:00",
-        "dispatched_at": "2026-09-14T10:00:11.605401-07:00",
-        "lateness_seconds": 11.6,
+        "scheduled_at": "2026-09-15T10:00:00-07:00",
+        "dispatched_at": "2026-09-15T10:00:52.457605-07:00",
+        "lateness_seconds": 52.5,
         "kind": "on_time"
       }
     },
@@ -127,15 +127,15 @@
       "schedule_display": "0 8,14,20 * * *",
       "repeat": {
         "times": null,
-        "completed": 344
+        "completed": 347
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:02.458886-07:00",
-      "next_run_at": "2026-09-15T08:00:00-07:00",
-      "last_run_at": "2026-09-14T20:01:06.496173-07:00",
+      "next_run_at": "2026-09-16T08:00:00-07:00",
+      "last_run_at": "2026-09-15T20:00:59.568241-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -149,9 +149,9 @@
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-14T20:00:00-07:00",
-        "dispatched_at": "2026-09-14T20:00:45.033854-07:00",
-        "lateness_seconds": 45.0,
+        "scheduled_at": "2026-09-15T20:00:00-07:00",
+        "dispatched_at": "2026-09-15T20:00:50.207521-07:00",
+        "lateness_seconds": 50.2,
         "kind": "on_time"
       }
     },
@@ -177,15 +177,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 116
+        "completed": 117
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:03.129100-07:00",
-      "next_run_at": "2026-09-15T02:00:00-07:00",
-      "last_run_at": "2026-09-14T02:22:02.148247-07:00",
+      "next_run_at": "2026-09-16T02:00:00-07:00",
+      "last_run_at": "2026-09-15T02:45:41.485028-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -199,9 +199,9 @@
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-14T02:00:00-07:00",
-        "dispatched_at": "2026-09-14T02:00:54.356599-07:00",
-        "lateness_seconds": 54.4,
+        "scheduled_at": "2026-09-15T02:00:00-07:00",
+        "dispatched_at": "2026-09-15T02:00:50.908980-07:00",
+        "lateness_seconds": 50.9,
         "kind": "on_time"
       }
     },
@@ -227,15 +227,15 @@
       "schedule_display": "0 18,23 * * *",
       "repeat": {
         "times": null,
-        "completed": 230
+        "completed": 232
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-20T01:29:13.959934-07:00",
-      "next_run_at": "2026-09-15T18:00:00-07:00",
-      "last_run_at": "2026-09-14T23:01:37.529612-07:00",
+      "next_run_at": "2026-09-16T18:00:00-07:00",
+      "last_run_at": "2026-09-15T23:03:49.229613-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -249,9 +249,9 @@
       "model_snapshot": null,
       "failure_streak": 0,
       "last_dispatch": {
-        "scheduled_at": "2026-09-14T23:00:00-07:00",
-        "dispatched_at": "2026-09-14T23:00:31.620895-07:00",
-        "lateness_seconds": 31.6,
+        "scheduled_at": "2026-09-15T23:00:00-07:00",
+        "dispatched_at": "2026-09-15T23:00:34.127329-07:00",
+        "lateness_seconds": 34.1,
         "kind": "on_time"
       }
     },
@@ -330,17 +330,17 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 6470
+        "completed": 6563
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-05T10:52:43.305709-07:00",
-      "next_run_at": "2026-09-15T00:05:18.174653-07:00",
-      "last_run_at": "2026-09-14T23:50:18.174653-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-16T00:12:38.188550-07:00",
+      "last_run_at": "2026-09-15T23:57:38.188550-07:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/hermes/.hermes/profiles/wiki/scripts/newsletter_imap_capture.py\", line 259, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/hermes/.hermes/profiles/wiki/scripts/newsletter_imap_capture.py\", line 194, in main\n    imap.login(addr, pw)\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 619, in login\n    typ, dat = self._simple_command('LOGIN', user, self._quote(password))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 1239, in _simple_command\n    return self._command_complete(name, self._command(name, *args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 1056, in _command_complete\n    typ, data = self._get_tagged_response(tag, expect_bye=logout)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 1182, in _get_tagged_response\n    self._get_response()\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 1084, in _get_response\n    resp = self._get_line()\n           ^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 1192, in _get_line\n    line = self.readline()\n           ^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/imaplib.py\", line 332, in readline\n    line = self.file.readline(_MAXLINE + 1)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/socket.py\", line 718, in readinto\n    return self._sock.recv_into(b)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/ssl.py\", line 1326, in recv_into\n    return self.read(nbytes, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/hermes/.hermes/hermes-agent/.hermes-runtime/python/generation-1785092888-1403941-bd0f5ed4/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/ssl.py\", line 1178, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -353,11 +353,11 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "last_dispatch": {
-        "scheduled_at": "2026-09-14T23:49:27.432835-07:00",
-        "dispatched_at": "2026-09-14T23:49:45.735789-07:00",
-        "lateness_seconds": 18.3,
+        "scheduled_at": "2026-09-15T23:56:48.851578-07:00",
+        "dispatched_at": "2026-09-15T23:57:05.901569-07:00",
+        "lateness_seconds": 17.0,
         "kind": "on_time"
       }
     },
@@ -403,5 +403,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-14T23:50:18.175799-07:00"
+  "updated_at": "2026-09-15T23:57:38.189090-07:00"
 }

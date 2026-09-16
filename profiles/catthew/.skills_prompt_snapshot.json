@@ -37,10 +37,6 @@
       1786469842083392892,
       7606
     ],
-    "autonomous-ai-agents/computer-use/SKILL.md": [
-      1788891762459552168,
-      15819
-    ],
     "creative/DESCRIPTION.md": [
       1775843805096651856,
       116
@@ -49,10 +45,6 @@
       1778565357577443278,
       10556
     ],
-    "creative/ascii-video/SKILL.md": [
-      1778565357577592154,
-      14864
-    ],
     "creative/baoyu-article-illustrator/SKILL.md": [
       1779252798243558402,
       10131
@@ -60,10 +52,6 @@
     "creative/baoyu-comic/SKILL.md": [
       1778565357577745237,
       14621
-    ],
-    "creative/baoyu-infographic/SKILL.md": [
-      1778565357577893363,
-      10434
     ],
     "creative/comfyui/SKILL.md": [
       1778787422952912100,
@@ -77,17 +65,9 @@
       1778565357578383615,
       6318
     ],
-    "creative/manim-video/SKILL.md": [
-      1778565357579143118,
-      12023
-    ],
     "creative/pixel-art/SKILL.md": [
       1778565357579560953,
       7581
-    ],
-    "creative/humanizer/SKILL.md": [
-      1784175066020257584,
-      34463
     ],
     "creative/touchdesigner-mcp/SKILL.md": [
       1785092884121088599,
@@ -120,10 +100,6 @@
     "diagramming/DESCRIPTION.md": [
       1775843805114670348,
       159
-    ],
-    "dogfood/SKILL.md": [
-      1778565357580987834,
-      6270
     ],
     "domain/DESCRIPTION.md": [
       1775843805115300100,
@@ -201,21 +177,9 @@
       1781520802409764436,
       2413
     ],
-    "media/gif-search/SKILL.md": [
-      1778565357583113926,
-      2704
-    ],
     "media/spotify/SKILL.md": [
       1778490391621044058,
       6319
-    ],
-    "media/video-product-extraction/SKILL.md": [
-      1781496866007144277,
-      3661
-    ],
-    "media/youtube-content/SKILL.md": [
-      1778565357584848850,
-      3218
     ],
     "mlops/DESCRIPTION.md": [
       1775843805122554071,
@@ -345,17 +309,9 @@
       1778565357587617111,
       14782
     ],
-    "productivity/maps/SKILL.md": [
-      1778565357587843987,
-      6726
-    ],
     "productivity/nano-pdf/SKILL.md": [
       1778565357588015279,
       1414
-    ],
-    "productivity/notion/SKILL.md": [
-      1778906853692002411,
-      14597
     ],
     "productivity/ocr-and-documents/SKILL.md": [
       1778725078070110224,
@@ -364,10 +320,6 @@
     "productivity/ocr-and-documents/DESCRIPTION.md": [
       1775843805145356032,
       147
-    ],
-    "productivity/powerpoint/SKILL.md": [
-      1778565357588406114,
-      9298
     ],
     "productivity/theduylifeos-filing/SKILL.md": [
       1778644994307384401,
@@ -381,14 +333,6 @@
       1784734181783534118,
       6672
     ],
-    "productivity/docx/SKILL.md": [
-      1786469842088393027,
-      10395
-    ],
-    "productivity/xlsx/SKILL.md": [
-      1786469842094393189,
-      9655
-    ],
     "productivity/meeting-action-items/SKILL.md": [
       1786469842090393081,
       3808
@@ -401,10 +345,6 @@
       1786469842094393189,
       3975
     ],
-    "productivity/airtable/SKILL.md": [
-      1787031466235675656,
-      11314
-    ],
     "productivity/box/SKILL.md": [
       1787031466235675656,
       11697
@@ -412,14 +352,6 @@
     "productivity/session-librarian/SKILL.md": [
       1787031466236675684,
       4827
-    ],
-    "productivity/teams-meeting-pipeline/SKILL.md": [
-      1788891762460552195,
-      7206
-    ],
-    "productivity/pdf/SKILL.md": [
-      1788891762459552168,
-      12489
     ],
     "productivity/document-to-action-items/SKILL.md": [
       1788891762459552168,
@@ -433,10 +365,6 @@
       1775843805155132592,
       179
     ],
-    "research/arxiv/SKILL.md": [
-      1778565357588927533,
-      10085
-    ],
     "research/blogwatcher/SKILL.md": [
       1778565357589037492,
       5111
@@ -444,10 +372,6 @@
     "research/last30days/SKILL.md": [
       1780819766039568949,
       130813
-    ],
-    "research/llm-wiki/SKILL.md": [
-      1778565357589204951,
-      20113
     ],
     "research/polymarket/SKILL.md": [
       1778565357589312243,
@@ -481,10 +405,6 @@
       1778644994307488109,
       6140
     ],
-    "social-media/xurl/SKILL.md": [
-      1777843113920823487,
-      13993
-    ],
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778490391625044033,
       7910
@@ -497,49 +417,13 @@
       1778565357589904495,
       2016
     ],
-    "software-development/requesting-code-review/SKILL.md": [
-      1778565357591027125,
-      8483
-    ],
     "software-development/subagent-driven-development/SKILL.md": [
       1778565357591313168,
       10742
     ],
-    "software-development/systematic-debugging/SKILL.md": [
-      1778565357591458835,
-      10480
-    ],
-    "software-development/test-driven-development/SKILL.md": [
-      1778565357591598710,
-      9573
-    ],
     "software-development/writing-plans/SKILL.md": [
       1778565357591729503,
       7229
-    ],
-    "software-development/inspecting-hermes-desktop-dom/SKILL.md": [
-      1785556028604935598,
-      6204
-    ],
-    "software-development/node-inspect-debugger/SKILL.md": [
-      1786469842108393566,
-      10894
-    ],
-    "software-development/python-debugpy/SKILL.md": [
-      1786469842108393566,
-      13347
-    ],
-    "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1788891762462552249,
-      14432
-    ],
-    "software-development/simplify-code/SKILL.md": [
-      1788891762462552249,
-      14696
-    ],
-    "software-development/spike/SKILL.md": [
-      1788891762462552249,
-      8723
     ],
     "software-development/github/SKILL.md": [
       1788891762460552195,
@@ -561,6 +445,10 @@
       1784734181777533958,
       7119
     ],
+    "agent-reach/SKILL.md": [
+      1789409895687850757,
+      6802
+    ],
     "web/DESCRIPTION.md": [
       1788891762462552249,
       137
@@ -572,10 +460,10 @@
   },
   "skills": [
     {
-      "skill_name": "coding-agent-delegation",
-      "category": "autonomous-ai-agents",
-      "frontmatter_name": "coding-agent-delegation",
-      "description": "Use when delegating coding, review, refactor, or PR tasks...",
+      "skill_name": "agent-reach",
+      "category": "agent-reach",
+      "frontmatter_name": "agent-reach",
+      "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/loo...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -586,15 +474,11 @@
       }
     },
     {
-      "skill_name": "computer-use",
+      "skill_name": "coding-agent-delegation",
       "category": "autonomous-ai-agents",
-      "frontmatter_name": "computer-use",
-      "description": "Drive the desktop background-first; escalate on signal.",
-      "platforms": [
-        "macos",
-        "windows",
-        "linux"
-      ],
+      "frontmatter_name": "coding-agent-delegation",
+      "description": "Use when delegating coding, review, refactor, or PR tasks...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -710,24 +594,6 @@
       }
     },
     {
-      "skill_name": "ascii-video",
-      "category": "creative",
-      "frontmatter_name": "ascii-video",
-      "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "baoyu-article-illustrator",
       "category": "creative",
       "frontmatter_name": "baoyu-article-illustrator",
@@ -750,24 +616,6 @@
       "category": "creative",
       "frontmatter_name": "baoyu-comic",
       "description": "Knowledge comics (知识漫画): educational, biography, tutorial.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "baoyu-infographic",
-      "category": "creative",
-      "frontmatter_name": "baoyu-infographic",
-      "description": "Infographics: 21 layouts x 21 styles (信息图, 可视化).",
       "platforms": [
         "linux",
         "macos",
@@ -818,42 +666,6 @@
       "category": "creative",
       "frontmatter_name": "ideation",
       "description": "Generate project ideas via creative constraints.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "humanizer",
-      "category": "creative",
-      "frontmatter_name": "humanizer",
-      "description": "Humanize text: strip AI-isms and add real voice.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "manim-video",
-      "category": "creative",
-      "frontmatter_name": "manim-video",
-      "description": "Manim CE animations: 3Blue1Brown math/algo videos.",
       "platforms": [
         "linux",
         "macos",
@@ -953,7 +765,7 @@
       "skill_name": "sdlc-review",
       "category": "devops",
       "frontmatter_name": "sdlc-review",
-      "description": "",
+      "description": "Review Kanban handoffs and route verified outcomes.",
       "platforms": [
         "linux",
         "macos",
@@ -974,24 +786,6 @@
       "category": "devops",
       "frontmatter_name": "webhook-subscriptions",
       "description": "Webhook subscriptions: event-driven agent runs.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "dogfood",
-      "category": "dogfood",
-      "frontmatter_name": "dogfood",
-      "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
       "platforms": [
         "linux",
         "macos",
@@ -1197,60 +991,10 @@
       }
     },
     {
-      "skill_name": "gif-search",
-      "category": "media",
-      "frontmatter_name": "gif-search",
-      "description": "Search/download GIFs from Tenor via curl + jq.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "spotify",
       "category": "media",
       "frontmatter_name": "spotify",
       "description": "Spotify: play, search, queue, manage playlists and devices.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "video-product-extraction",
-      "category": "media",
-      "frontmatter_name": "video-product-extraction",
-      "description": "Extract visible products, brands, labels, ingredients, or...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "youtube-content",
-      "category": "media",
-      "frontmatter_name": "youtube-content",
-      "description": "YouTube transcripts to summaries, threads, blogs.",
       "platforms": [
         "linux",
         "macos",
@@ -1524,24 +1268,6 @@
       }
     },
     {
-      "skill_name": "airtable",
-      "category": "productivity",
-      "frontmatter_name": "airtable",
-      "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "apple-ecosystem",
       "category": "productivity",
       "frontmatter_name": "apple-ecosystem",
@@ -1578,24 +1304,6 @@
       "category": "productivity",
       "frontmatter_name": "document-to-action-items",
       "description": "Extract cited obligations, deadlines, tasks from documents.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "docx",
-      "category": "productivity",
-      "frontmatter_name": "docx",
-      "description": "Create, read, edit, template, and review Word .docx files.",
       "platforms": [
         "linux",
         "macos",
@@ -1660,26 +1368,6 @@
       }
     },
     {
-      "skill_name": "maps",
-      "category": "productivity",
-      "frontmatter_name": "maps",
-      "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [
-          "terminal"
-        ],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "meeting-action-items",
       "category": "productivity",
       "frontmatter_name": "meeting-action-items",
@@ -1716,24 +1404,6 @@
       }
     },
     {
-      "skill_name": "notion",
-      "category": "productivity",
-      "frontmatter_name": "notion",
-      "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "ocr-and-documents",
       "category": "productivity",
       "frontmatter_name": "ocr-and-documents",
@@ -1752,46 +1422,10 @@
       }
     },
     {
-      "skill_name": "pdf",
-      "category": "productivity",
-      "frontmatter_name": "pdf",
-      "description": "PDF files: create, read, merge, fill, OCR, edit text.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "petdex",
       "category": "productivity",
       "frontmatter_name": "petdex",
       "description": "Install and select animated petdex mascots for Hermes.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "powerpoint",
-      "category": "productivity",
-      "frontmatter_name": "powerpoint",
-      "description": "Create, read, edit .pptx decks, slides, notes, templates.",
       "platforms": [
         "linux",
         "macos",
@@ -1842,27 +1476,6 @@
       }
     },
     {
-      "skill_name": "teams-meeting-pipeline",
-      "category": "productivity",
-      "frontmatter_name": "teams-meeting-pipeline",
-      "description": "Teams meeting summaries, job replay, Graph subscriptions.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": [
-          "teams",
-          "cron"
-        ]
-      }
-    },
-    {
       "skill_name": "theduylifeos-filing",
       "category": "productivity",
       "frontmatter_name": "theduylifeos-filing",
@@ -1909,46 +1522,10 @@
       }
     },
     {
-      "skill_name": "xlsx",
-      "category": "productivity",
-      "frontmatter_name": "xlsx",
-      "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "godmode",
       "category": "red-teaming",
       "frontmatter_name": "godmode",
       "description": "Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "arxiv",
-      "category": "research",
-      "frontmatter_name": "arxiv",
-      "description": "Search arXiv papers by keyword, author, category, or ID.",
       "platforms": [
         "linux",
         "macos",
@@ -2031,24 +1608,6 @@
       }
     },
     {
-      "skill_name": "llm-wiki",
-      "category": "research",
-      "frontmatter_name": "llm-wiki",
-      "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "polymarket",
       "category": "research",
       "frontmatter_name": "polymarket",
@@ -2122,23 +1681,6 @@
       }
     },
     {
-      "skill_name": "xurl",
-      "category": "social-media",
-      "frontmatter_name": "xurl",
-      "description": "X/Twitter via xurl CLI: post, search, DM, media, v2 API.",
-      "platforms": [
-        "linux",
-        "macos"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "debugging-hermes-tui-commands",
       "category": "software-development",
       "frontmatter_name": "debugging-hermes-tui-commands",
@@ -2175,65 +1717,11 @@
       }
     },
     {
-      "skill_name": "hermes-agent-skill-authoring",
-      "category": "software-development",
-      "frontmatter_name": "hermes-agent-skill-authoring",
-      "description": "Author in-repo SKILL.md files: frontmatter and structure.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "hermes-s6-container-supervision",
       "category": "software-development",
       "frontmatter_name": "hermes-s6-container-supervision",
       "description": "Modify, debug, or extend the s6-overlay supervision tree ...",
       "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "inspecting-hermes-desktop-dom",
-      "category": "software-development",
-      "frontmatter_name": "inspecting-hermes-desktop-dom",
-      "description": "Read the live Hermes desktop DOM/CSS over CDP.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "node-inspect-debugger",
-      "category": "software-development",
-      "frontmatter_name": "node-inspect-debugger",
-      "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -2261,117 +1749,10 @@
       }
     },
     {
-      "skill_name": "python-debugpy",
-      "category": "software-development",
-      "frontmatter_name": "python-debugpy",
-      "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
-      "platforms": [
-        "linux",
-        "macos"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "requesting-code-review",
-      "category": "software-development",
-      "frontmatter_name": "requesting-code-review",
-      "description": "Pre-commit review: security scan, quality gates, auto-fix.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "simplify-code",
-      "category": "software-development",
-      "frontmatter_name": "simplify-code",
-      "description": "Parallel 4-agent cleanup of recent code changes.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "spike",
-      "category": "software-development",
-      "frontmatter_name": "spike",
-      "description": "Throwaway experiments to validate an idea before build.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
       "skill_name": "subagent-driven-development",
       "category": "software-development",
       "frontmatter_name": "subagent-driven-development",
       "description": "Execute plans via delegate_task subagents (2-stage review).",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "systematic-debugging",
-      "category": "software-development",
-      "frontmatter_name": "systematic-debugging",
-      "description": "4-phase root cause debugging: understand bugs before fixing.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": [],
-        "session_platforms": []
-      }
-    },
-    {
-      "skill_name": "test-driven-development",
-      "category": "software-development",
-      "frontmatter_name": "test-driven-development",
-      "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
       "platforms": [
         "linux",
         "macos",

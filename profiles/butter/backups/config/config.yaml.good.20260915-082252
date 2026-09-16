@@ -452,7 +452,7 @@ lsp:
   wait_mode: document
   wait_timeout: 5.0
   install_strategy: auto
-_config_version: 45
+_config_version: 44
 session_reset:
   mode: both
   idle_minutes: 1440
