@@ -1,7 +1,11 @@
 from pathlib import Path
 from textwrap import dedent
 R=Path('/home/hermes/.hermes/projects/life-os'); K=R/'life-knowledge-base'; T=R/'tracker'
-def w(p,s): p.parent.mkdir(parents=True,exist_ok=True); p.write_text(dedent(s).lstrip(),encoding='utf8')
+def w(p,s):
+    p.parent.mkdir(parents=True,exist_ok=True)
+    if p.exists():
+        raise FileExistsError(f'refusing to overwrite existing file: {p}')
+    p.write_text(dedent(s).lstrip(),encoding='utf8')
 for d in '00-index 01-inbox 10-profile 20-timeline/events/2026 30-health/conditions 30-health/medications 30-health/procedures 30-health/tests 30-health/logs 40-nutrition/logs 50-projects/projects 60-finance 70-goals/goals 75-ideas/ideas 80-interests 85-resources 90-sources/records 90-sources/files 95-system/templates'.split(): (K/d).mkdir(parents=True,exist_ok=True)
 w(K/'README.md',f'''# Life Knowledge Base\n\nPortable, private, Markdown-first source of truth. Created 2026-08-12. Dates use America/Toronto. Existing `/vault` is a read-only legacy/source corpus: its `AgentMemory` export is explicitly excluded. See [rules](agent_rules.md) and [index](00-index/master_index.md). No personal histories were imported during setup.\n''')
 w(K/'agent_rules.md',f'''# Agent Rules\n\n## Authority\n`{K}` is the detailed personal context authority. Before a personal answer or substantial capture: read this file; lexical-search this directory; read the canonical summary and newer events/entity notes; follow sources for consequential claims. Conversation history and `/vault` are secondary only. Never use `/vault/AgentMemory`.\n\n## Capture and correction\nUse America/Toronto for selected dates; exact ISO date when known, otherwise `date_precision: approximate`. Label claims `fact`, `self_report`, `observation`, `hypothesis`, or `preference`. A correction creates/preserves a superseded record and links it; summaries show only current supported state. Never invent missing facts. Routine capture is one targeted write, one search verification, one concise acknowledgement.\n\n## Privacy\nNever store or send passwords, credentials, cookies, recovery codes, keys, seed phrases, payment authentication, or portal credentials. Do not transmit private KB material to third parties without explicit approval. Resources require inspecting their original URL before a summary.\n''')
